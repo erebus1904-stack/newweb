@@ -433,6 +433,7 @@ let questionIndex = 0;
 let answered = false;
 let mode = "study";
 let examAnswers = [];
+const storageKey = "licenseAtlasLocalProgress";
 
 const elements = {
   answers: document.querySelector("#answers"),
@@ -448,8 +449,68 @@ const elements = {
   catalog: document.querySelector("#catalog-grid"),
   resultCount: document.querySelector("#result-count"),
   report: document.querySelector("#report-panel"),
-  language: document.querySelector("#language-select")
+  language: document.querySelector("#language-select"),
+  clearLocalButton: document.querySelector("#clear-local-button")
 };
+
+function readProgressStore() {
+  try {
+    return JSON.parse(localStorage.getItem(storageKey)) || {};
+  } catch {
+    return {};
+  }
+}
+
+function writeProgressStore(store) {
+  localStorage.setItem(storageKey, JSON.stringify(store));
+}
+
+function getExamProgress(examId = currentExamId) {
+  const store = readProgressStore();
+  return store[examId] || {
+    answered: 0,
+    correct: 0,
+    wrongQuestionKeys: [],
+    lastScore: null,
+    lastStudiedAt: null
+  };
+}
+
+function saveExamProgress(examId, updater) {
+  const store = readProgressStore();
+  const current = getExamProgress(examId);
+  store[examId] = updater(current);
+  writeProgressStore(store);
+  renderLocalProgress();
+}
+
+function questionKey(exam, index) {
+  return `${exam.id}:${index}`;
+}
+
+function formatLocalDate(value) {
+  if (!value) return currentLanguage === "zh" ? "从未" : "Never";
+  return new Intl.DateTimeFormat(document.documentElement.lang || currentLanguage, {
+    month: "short",
+    day: "numeric"
+  }).format(new Date(value));
+}
+
+function renderLocalProgress() {
+  const progress = getExamProgress();
+  const accuracy = progress.answered ? Math.round((progress.correct / progress.answered) * 100) : 0;
+  document.querySelector("#local-answered").textContent = progress.answered;
+  document.querySelector("#local-accuracy").textContent = `${accuracy}%`;
+  document.querySelector("#local-wrong").textContent = progress.wrongQuestionKeys.length;
+  document.querySelector("#local-score").textContent = progress.lastScore === null ? (currentLanguage === "zh" ? "暂无" : "None") : `${progress.lastScore}%`;
+  document.querySelector("#local-title").textContent = currentLanguage === "zh" ? "本地学习数据" : "Local study data";
+  document.querySelector("#local-subtitle").textContent = currentLanguage === "zh" ? "只保存在当前浏览器" : `Saved in this browser · ${formatLocalDate(progress.lastStudiedAt)}`;
+  document.querySelector("#local-answered-label").textContent = currentLanguage === "zh" ? "本地已答" : "Answered";
+  document.querySelector("#local-accuracy-label").textContent = currentLanguage === "zh" ? "本地正确率" : "Accuracy";
+  document.querySelector("#local-wrong-label").textContent = currentLanguage === "zh" ? "错题数" : "Mistakes";
+  document.querySelector("#local-score-label").textContent = currentLanguage === "zh" ? "最近成绩" : "Last score";
+  document.querySelector("#clear-local-button").textContent = currentLanguage === "zh" ? "清除本地数据" : "Clear local data";
+}
 
 function t(key, ...args) {
   const value = i18n[currentLanguage][key] || i18n.zh[key] || key;
@@ -578,6 +639,7 @@ function renderExam() {
   document.querySelector(".ring").style.background = `conic-gradient(var(--green) ${exam.readiness}%, #e2e8df 0)`;
   document.querySelector("#daily-goal").textContent = mode === "exam" ? t("dailyExam") : t("dailyStudy");
   renderStudyPlan(exam, coverage);
+  renderLocalProgress();
   renderQuestion();
 }
 
@@ -615,8 +677,10 @@ function renderQuestion() {
 function selectAnswer(index) {
   if (answered) return;
   answered = true;
-  const question = getCurrentExam().questions[questionIndex];
+  const exam = getCurrentExam();
+  const question = exam.questions[questionIndex];
   examAnswers[questionIndex] = index;
+  const isCorrect = index === question.correct;
 
   Array.from(elements.answers.children).forEach((button, buttonIndex) => {
     if (mode === "study" && buttonIndex === question.correct) button.classList.add("correct");
@@ -625,6 +689,18 @@ function selectAnswer(index) {
   });
 
   if (mode === "study") {
+    saveExamProgress(exam.id, (progress) => {
+      const wrongSet = new Set(progress.wrongQuestionKeys || []);
+      if (isCorrect) wrongSet.delete(questionKey(exam, questionIndex));
+      else wrongSet.add(questionKey(exam, questionIndex));
+      return {
+        ...progress,
+        answered: progress.answered + 1,
+        correct: progress.correct + (isCorrect ? 1 : 0),
+        wrongQuestionKeys: Array.from(wrongSet),
+        lastStudiedAt: new Date().toISOString()
+      };
+    });
     elements.explanation.textContent = question.explanation;
     elements.explanation.classList.remove("hidden");
   }
@@ -655,6 +731,21 @@ function showReport() {
     wrongQuestions.length === 0
       ? t("perfectReport")
       : t("wrongReport", wrongQuestions.map(({ question }) => question.tag).join(listSeparator()));
+  saveExamProgress(exam.id, (progress) => {
+    const wrongSet = new Set(progress.wrongQuestionKeys || []);
+    exam.questions.forEach((question, index) => {
+      if (examAnswers[index] === question.correct) wrongSet.delete(questionKey(exam, index));
+      else wrongSet.add(questionKey(exam, index));
+    });
+    return {
+      ...progress,
+      answered: progress.answered + exam.questions.length,
+      correct: progress.correct + correctCount,
+      wrongQuestionKeys: Array.from(wrongSet),
+      lastScore: score,
+      lastStudiedAt: new Date().toISOString()
+    };
+  });
   elements.report.classList.remove("hidden");
 }
 
@@ -690,7 +781,15 @@ function setLanguage(language) {
   document.documentElement.lang = language === "zh" ? "zh-CN" : language;
   applyStaticTranslations();
   populateFilters(true);
+  renderLocalProgress();
   refreshForFilters();
+}
+
+function clearCurrentLocalProgress() {
+  const store = readProgressStore();
+  delete store[currentExamId];
+  writeProgressStore(store);
+  renderLocalProgress();
 }
 
 document.querySelectorAll(".nav-item").forEach((button) => {
@@ -718,6 +817,7 @@ elements.startExamButton.addEventListener("click", () => setMode("exam"));
 elements.nextButton.addEventListener("click", advanceQuestion);
 elements.skipButton.addEventListener("click", advanceQuestion);
 elements.resetButton.addEventListener("click", resetSession);
+elements.clearLocalButton.addEventListener("click", clearCurrentLocalProgress);
 
 populateFilters(false);
 applyStaticTranslations();

@@ -524,12 +524,49 @@ h3 {
   display: block;
 }
 
+.local-card,
 .plan-card,
 .report-panel {
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: 8px;
   padding: 18px;
+}
+
+.section-mini span {
+  color: var(--muted);
+  display: block;
+  font-size: 13px;
+  margin-top: -5px;
+}
+
+.local-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin: 14px 0;
+}
+
+.local-grid div {
+  background: #f7f8f4;
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.local-grid span {
+  color: var(--muted);
+  display: block;
+  font-size: 12px;
+}
+
+.local-grid strong {
+  display: block;
+  margin-top: 6px;
+  font-size: 21px;
+}
+
+.local-clear {
+  width: 100%;
 }
 
 .section-mini h3 {
