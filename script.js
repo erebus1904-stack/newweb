@@ -481,6 +481,9 @@ function saveExamProgress(examId, updater) {
   const current = getExamProgress(examId);
   store[examId] = updater(current);
   writeProgressStore(store);
+  if (examId === currentExamId) {
+    renderLearningStats(getCurrentExam());
+  }
   renderLocalProgress();
 }
 
@@ -510,6 +513,38 @@ function renderLocalProgress() {
   document.querySelector("#local-wrong-label").textContent = currentLanguage === "zh" ? "错题数" : "Mistakes";
   document.querySelector("#local-score-label").textContent = currentLanguage === "zh" ? "最近成绩" : "Last score";
   document.querySelector("#clear-local-button").textContent = currentLanguage === "zh" ? "清除本地数据" : "Clear local data";
+}
+
+function getLocalWeakArea(exam, progress) {
+  if (!progress.wrongQuestionKeys.length) {
+    return currentLanguage === "zh" ? "暂无" : "None";
+  }
+  const wrongTags = progress.wrongQuestionKeys
+    .map((key) => Number(key.split(":").pop()))
+    .map((index) => exam.questions[index]?.tag)
+    .filter(Boolean);
+  return wrongTags[0] || (currentLanguage === "zh" ? "暂无" : "None");
+}
+
+function renderLearningStats(exam) {
+  const progress = getExamProgress(exam.id);
+  const accuracy = progress.answered ? Math.round((progress.correct / progress.answered) * 100) : 0;
+  const volumeBonus = Math.min(20, Math.floor(progress.answered / 3) * 5);
+  const readiness = progress.answered ? Math.min(99, Math.round(accuracy * 0.8 + volumeBonus)) : 0;
+  const eta = progress.answered
+    ? currentLanguage === "zh"
+      ? `${Math.max(1, Math.ceil((30 - Math.min(progress.answered, 30)) / 5))} 天`
+      : `${Math.max(1, Math.ceil((30 - Math.min(progress.answered, 30)) / 5))} days`
+    : currentLanguage === "zh"
+      ? "开始后估算"
+      : "Start to estimate";
+
+  document.querySelector("#readiness").textContent = `${readiness}%`;
+  document.querySelector("#questions-done").textContent = progress.answered;
+  document.querySelector("#accuracy").textContent = `${accuracy}%`;
+  document.querySelector("#weak-area").textContent = getLocalWeakArea(exam, progress);
+  document.querySelector("#eta").textContent = eta;
+  document.querySelector(".ring").style.background = `conic-gradient(var(--green) ${readiness}%, #e2e8df 0)`;
 }
 
 function t(key, ...args) {
@@ -631,13 +666,8 @@ function renderExam() {
   document.querySelector("#source-name").textContent = exam.source;
   document.querySelector("#source-coverage").textContent = coverage.join(listSeparator());
   document.querySelector("#source-updated").textContent = exam.updated;
-  document.querySelector("#readiness").textContent = `${exam.readiness}%`;
-  document.querySelector("#questions-done").textContent = exam.done;
-  document.querySelector("#accuracy").textContent = `${exam.accuracy}%`;
-  document.querySelector("#weak-area").textContent = exam.weak;
-  document.querySelector("#eta").textContent = exam.eta;
-  document.querySelector(".ring").style.background = `conic-gradient(var(--green) ${exam.readiness}%, #e2e8df 0)`;
   document.querySelector("#daily-goal").textContent = mode === "exam" ? t("dailyExam") : t("dailyStudy");
+  renderLearningStats(exam);
   renderStudyPlan(exam, coverage);
   renderLocalProgress();
   renderQuestion();
@@ -789,6 +819,7 @@ function clearCurrentLocalProgress() {
   const store = readProgressStore();
   delete store[currentExamId];
   writeProgressStore(store);
+  renderLearningStats(getCurrentExam());
   renderLocalProgress();
 }
 
