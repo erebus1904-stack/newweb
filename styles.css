@@ -708,6 +708,106 @@ h3 {
   border-top: 1px solid var(--line);
 }
 
+.site-footer {
+  margin-top: 30px;
+  padding: 18px 0 4px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+  font-size: 14px;
+}
+
+.site-footer nav {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.site-footer a,
+.legal-page a {
+  color: var(--green-deep);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.site-footer a:hover,
+.legal-page a:hover {
+  text-decoration: underline;
+}
+
+.legal-page {
+  background: var(--bg);
+}
+
+.legal-shell {
+  width: min(920px, calc(100% - 36px));
+  margin: 0 auto;
+  padding: 24px 0 56px;
+}
+
+.legal-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 28px;
+}
+
+.legal-nav div {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.brand-link {
+  color: var(--ink);
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.legal-hero,
+.legal-section {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.legal-hero {
+  padding: 30px;
+  margin-bottom: 16px;
+}
+
+.legal-hero h1 {
+  max-width: 780px;
+  margin-bottom: 12px;
+}
+
+.legal-hero p,
+.legal-section p {
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.legal-section {
+  padding: 24px;
+  margin-top: 14px;
+}
+
+.legal-section h2 {
+  margin-bottom: 10px;
+}
+
+.legal-section code {
+  background: #eef3ec;
+  border-radius: 6px;
+  padding: 2px 6px;
+}
+
 @media (max-width: 1100px) {
   .app-shell {
     grid-template-columns: 1fr;
@@ -740,7 +840,9 @@ h3 {
   .topbar,
   .panel-header,
   .section-heading,
-  .finder {
+  .finder,
+  .legal-nav,
+  .site-footer {
     flex-direction: column;
     align-items: stretch;
   }
@@ -764,5 +866,10 @@ h3 {
 
   #question-text {
     font-size: 22px;
+  }
+
+  .legal-hero,
+  .legal-section {
+    padding: 20px;
   }
 }

@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LicenseAtlas - Overseas Exam Prep</title>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5018342016303677"
+     crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
@@ -21,8 +23,8 @@
           <button class="nav-item active" data-track="all">
             <span class="nav-icon">ALL</span>
             <span>
-              <strong data-i18n="navAll">全部考试</strong>
-              <small data-i18n="navAllSmall">跨国家、州、省和证照类型</small>
+              <strong data-i18n="navAll">全部项目</strong>
+              <small data-i18n="navAllSmall">按行业、证照和训练重点筛选</small>
             </span>
           </button>
           <button class="nav-item" data-track="medical">
@@ -65,7 +67,7 @@
         <header class="topbar">
           <div>
             <p class="eyebrow" data-i18n="heroEyebrow">Practice-first exam platform</p>
-            <h1 data-i18n="heroTitle">海外证件与执照考试，一站式刷题学习</h1>
+            <h1 data-i18n="heroTitle">海外证照短期训练，一站式章节刷题</h1>
           </div>
           <div class="top-actions">
             <label class="language-picker" aria-label="选择语言">
@@ -79,7 +81,7 @@
                 <option value="fr">Français</option>
               </select>
             </label>
-            <button class="primary-button" id="start-exam-button" data-i18n="startMock">开始模拟考</button>
+            <button class="primary-button" id="start-exam-button" data-i18n="startMock">开始短训</button>
           </div>
         </header>
 
@@ -106,23 +108,23 @@
           <div class="practice-panel">
             <div class="panel-header">
               <div>
-                <p class="eyebrow" id="track-region">United States / California</p>
-                <h2 id="track-title">California DMV Permit Test</h2>
+                <p class="eyebrow" id="track-region">United States / Nursing</p>
+                <h2 id="track-title">NCLEX-RN题库</h2>
               </div>
               <div class="mode-toggle" role="group" aria-label="练习模式">
                 <button class="mode active" data-mode="study" data-i18n="studyMode">学习</button>
-                <button class="mode" data-mode="exam" data-i18n="examMode">考试</button>
+                <button class="mode" data-mode="exam" data-i18n="examMode">短训</button>
               </div>
             </div>
 
             <div class="source-strip" aria-label="题库可信来源">
               <div>
                 <span data-i18n="sourceLabel">来源依据</span>
-                <strong id="source-name">California Driver Handbook</strong>
+                <strong id="source-name">NCLEX-RN test plan</strong>
               </div>
               <div>
                 <span data-i18n="coverageLabel">覆盖章节</span>
-                <strong id="source-coverage">交通标志、路权、安全驾驶</strong>
+                <strong id="source-coverage">成人护理、药理、母婴、儿科、安全</strong>
               </div>
               <div>
                 <span data-i18n="updatedLabel">更新时间</span>
@@ -132,10 +134,10 @@
 
             <div class="question-card">
               <div class="question-meta">
-                <span id="question-tag">Rules of road</span>
+                <span id="question-tag">Prioritization</span>
                 <span id="question-progress">第 1 / 3 题</span>
               </div>
-              <h3 id="question-text">When approaching a flashing red traffic signal, what should you do?</h3>
+              <h3 id="question-text">A client reports shortness of breath and chest tightness. What is the nurse's priority action?</h3>
               <div class="answers" id="answers"></div>
               <div class="explanation hidden" id="explanation"></div>
               <div class="question-actions">
@@ -148,7 +150,7 @@
             <div class="report-panel hidden" id="report-panel" aria-live="polite">
               <div>
                 <p class="eyebrow">Exam report</p>
-                <h2 id="report-title" data-i18n="reportTitle">模拟考结果</h2>
+                <h2 id="report-title" data-i18n="reportTitle">短训结果</h2>
               </div>
               <div class="report-grid">
                 <div><span data-i18n="scoreLabel">得分</span><strong id="report-score">0%</strong></div>
@@ -220,13 +222,22 @@
           <div class="section-heading">
             <div>
               <p class="eyebrow">Exam catalog</p>
-              <h2 data-i18n="catalogTitle">按国家、州和证照类型组织题库</h2>
+              <h2 data-i18n="catalogTitle">按行业、证照和训练重点组织题库</h2>
             </div>
-            <span class="result-count" id="result-count">5 个考试</span>
+            <span class="result-count" id="result-count">9 个训练项目</span>
           </div>
 
           <div class="catalog-grid" id="catalog-grid"></div>
         </section>
+
+        <footer class="site-footer">
+          <nav aria-label="Legal links">
+            <a href="./about.html">About Us</a>
+            <a href="./privacy.html">Privacy Policy</a>
+            <a href="./terms.html">Terms of Use</a>
+          </nav>
+          <span>Contact: <a href="mailto:Erebus11@163.com">Erebus11@163.com</a></span>
+        </footer>
       </main>
     </div>
 

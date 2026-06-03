@@ -1,5 +1,6 @@
-const i18n = {
+const uiText = {
   zh: {
+    htmlLang: "zh-CN",
     heroEyebrow: "Practice-first exam platform",
     heroTitle: "海外证照短期训练，一站式章节刷题",
     brandSubtitle: "海外证照学习库",
@@ -40,13 +41,13 @@ const i18n = {
     nextStep: "下一步建议",
     catalogTitle: "按行业、证照和训练重点组织题库",
     all: "全部",
-    exams: "个训练项目",
+    programs: "个训练项目",
     source: "来源",
     coverage: "覆盖",
     questions: "题",
     updated: "更新",
     dailyStudy: "30 题 + 1 套错题复盘",
-    dailyExam: "完成 1 组短训并复盘错题",
+    dailyDrill: "完成 1 组短训并复盘错题",
     progress: (index, total) => `第 ${index} / ${total} 题`,
     hiddenExplanation: "短训模式下，解析会在完成后显示。",
     advicePass: "接近通过",
@@ -56,12 +57,24 @@ const i18n = {
     wrongReport: (tags) => `优先复盘：${tags}。建议切回学习模式逐题看解析。`,
     planWeak: (weak) => `先复习弱项：${weak}`,
     planPractice: (topic, count) => `完成 ${count} 道 ${topic} 相关练习`,
-    planExam: "短训结束后复盘所有错题解析",
-    planStudy: "学习模式下每题读完解析再进入下一题"
+    planDrill: "短训结束后复盘所有错题解析",
+    planStudy: "学习模式下每题读完解析再进入下一题",
+    localTitle: "本地学习数据",
+    localSubtitle: "只保存在当前浏览器",
+    localAnswered: "本地已答",
+    localAccuracy: "本地正确率",
+    localWrong: "错题数",
+    localScore: "最近成绩",
+    localNone: "暂无",
+    localClear: "清除本地数据",
+    weakNone: "暂无",
+    etaStart: "开始后估算",
+    etaDays: (days) => `${days} 天`
   },
   en: {
-    heroEyebrow: "Practice-first exam platform",
-    heroTitle: "One free study hub for overseas licenses and credential exams",
+    htmlLang: "en",
+    heroEyebrow: "Practice-first training platform",
+    heroTitle: "Short drills for overseas credentials and license prep",
     brandSubtitle: "Overseas credential study library",
     navAll: "All programs",
     navAllSmall: "Filter by industry, credential, and training focus",
@@ -78,8 +91,8 @@ const i18n = {
     startMock: "Start short drill",
     searchLabel: "Search",
     countryLabel: "Country",
-    regionLabel: "Region",
-    typeLabel: "Type",
+    regionLabel: "Area",
+    typeLabel: "Category",
     studyMode: "Study",
     examMode: "Drill",
     sourceLabel: "Source",
@@ -100,13 +113,13 @@ const i18n = {
     nextStep: "Next steps",
     catalogTitle: "Question banks organized by industry, credential, and training focus",
     all: "All",
-    exams: "programs",
+    programs: "programs",
     source: "Source",
     coverage: "Covers",
     questions: "questions",
     updated: "updated",
-    dailyStudy: "30 questions + one review session",
-    dailyExam: "Finish one short drill and review mistakes",
+    dailyStudy: "30 questions + one mistake review",
+    dailyDrill: "Finish one short drill and review mistakes",
     progress: (index, total) => `${index} / ${total}`,
     hiddenExplanation: "In drill mode, explanations appear after completion.",
     advicePass: "Nearly ready",
@@ -116,100 +129,124 @@ const i18n = {
     wrongReport: (tags) => `Review first: ${tags}. Switch to study mode to read each explanation.`,
     planWeak: (weak) => `Review weak area first: ${weak}`,
     planPractice: (topic, count) => `Complete ${count} practice questions on ${topic}`,
-    planExam: "After the drill, review every missed explanation",
-    planStudy: "Read each explanation before moving to the next question"
+    planDrill: "After the drill, review every missed explanation",
+    planStudy: "Read each explanation before moving to the next question",
+    localTitle: "Local study data",
+    localSubtitle: "Saved only in this browser",
+    localAnswered: "Answered",
+    localAccuracy: "Accuracy",
+    localWrong: "Mistakes",
+    localScore: "Last score",
+    localNone: "None",
+    localClear: "Clear local data",
+    weakNone: "None",
+    etaStart: "Start to estimate",
+    etaDays: (days) => `${days} days`
   },
   ja: {
-    heroEyebrow: "Practice-first exam platform",
-    heroTitle: "海外の免許・資格試験を無料で学べる学習ハブ",
-    brandSubtitle: "海外資格の学習ライブラリ",
-    navAll: "すべての試験",
-    navAllSmall: "国・地域・資格タイプ別",
-    navDmv: "運転免許 / CDL",
-    navDmvSmall: "米国 DMV・商用運転免許",
-    navRealEstate: "不動産免許",
-    navRealEstateSmall: "州別セールスパーソン試験",
-    navCitizenship: "市民権試験",
-    navCitizenshipSmall: "カナダ / 英国 / 米国",
-    navFinance: "金融資格",
-    navHealth: "看護 / 食品安全",
+    htmlLang: "ja",
+    heroEyebrow: "Practice-first training platform",
+    heroTitle: "海外資格のための短期ドリル学習",
+    brandSubtitle: "海外資格学習ライブラリ",
+    navAll: "すべてのプログラム",
+    navAllSmall: "業界・資格・学習重点で絞り込み",
+    navMedical: "医療・看護",
+    navMedicalSmall: "NCLEX-RN, USMLE",
+    navFinance: "会計・金融",
+    navFinanceSmall: "USCPA, CFA, FINRA",
+    navEngineering: "工学・IT",
+    navEngineeringSmall: "FE/PE, AWS, GCP",
+    navLaw: "法律・公共サービス",
+    navLawSmall: "Bar, Real Estate",
     todayGoal: "今日の目標",
     languageLabel: "言語",
-    startMock: "模擬試験を開始",
+    startMock: "短期ドリル開始",
     searchLabel: "検索",
     countryLabel: "国",
-    regionLabel: "地域",
-    typeLabel: "種類",
+    regionLabel: "領域",
+    typeLabel: "カテゴリ",
     studyMode: "学習",
-    examMode: "試験",
+    examMode: "ドリル",
     sourceLabel: "参照元",
     coverageLabel: "範囲",
     updatedLabel: "更新",
     restart: "最初から",
     skip: "スキップ",
     next: "次へ",
-    submit: "提出",
-    reportTitle: "模擬試験結果",
+    submit: "完了",
+    reportTitle: "ドリル結果",
     scoreLabel: "得点",
     correctLabel: "正解",
     adviceLabel: "提案",
-    doneLabel: "完了",
+    doneLabel: "完了数",
     accuracyLabel: "正答率",
     weakLabel: "弱点",
     etaLabel: "目安",
     nextStep: "次の学習",
-    catalogTitle: "国・地域・資格タイプ別の問題バンク",
+    catalogTitle: "業界・資格・学習重点別の問題バンク",
     all: "すべて",
-    exams: "件の試験",
+    programs: "件のプログラム",
     source: "参照元",
     coverage: "範囲",
     questions: "問",
     updated: "更新",
     dailyStudy: "30問 + 間違い復習",
-    dailyExam: "模擬試験を1回完了し、間違いを復習",
+    dailyDrill: "短期ドリルを1回完了し、間違いを復習",
     progress: (index, total) => `${index} / ${total} 問`,
-    hiddenExplanation: "試験モードでは、解説は提出後に表示されます。",
+    hiddenExplanation: "ドリルモードでは、解説は完了後に表示されます。",
     advicePass: "合格圏に近い",
     advicePractice: "さらに強化",
     adviceStudy: "学習モードへ",
     perfectReport: "全問正解です。別のセットでも確認しましょう。",
-    wrongReport: (tags) => `まず復習：${tags}。学習モードで解説を確認しましょう。`,
-    planWeak: (weak) => `弱点を先に復習：${weak}`,
+    wrongReport: (tags) => `まず復習: ${tags}。学習モードで解説を確認しましょう。`,
+    planWeak: (weak) => `弱点を先に復習: ${weak}`,
     planPractice: (topic, count) => `${topic} の練習を ${count} 問解く`,
-    planExam: "試験後に間違えた問題の解説を復習",
-    planStudy: "各問題の解説を読んでから次へ進む"
+    planDrill: "ドリル後に間違えた問題の解説を復習",
+    planStudy: "各問題の解説を読んでから次へ進む",
+    localTitle: "ローカル学習データ",
+    localSubtitle: "このブラウザにのみ保存",
+    localAnswered: "回答済み",
+    localAccuracy: "正答率",
+    localWrong: "ミス",
+    localScore: "直近スコア",
+    localNone: "なし",
+    localClear: "ローカルデータを削除",
+    weakNone: "なし",
+    etaStart: "開始後に推定",
+    etaDays: (days) => `${days} 日`
   },
   ko: {
-    heroEyebrow: "Practice-first exam platform",
-    heroTitle: "해외 면허와 자격시험을 무료로 준비하는 학습 허브",
+    htmlLang: "ko",
+    heroEyebrow: "Practice-first training platform",
+    heroTitle: "해외 자격을 위한 단기 드릴 학습",
     brandSubtitle: "해외 자격 학습 라이브러리",
-    navAll: "전체 시험",
-    navAllSmall: "국가, 지역, 자격 유형별",
-    navDmv: "운전면허 / CDL",
-    navDmvSmall: "미국 DMV와 상업 운전면허",
-    navRealEstate: "부동산 면허",
-    navRealEstateSmall: "주별 영업사원 시험",
-    navCitizenship: "시민권 시험",
-    navCitizenshipSmall: "캐나다 / 영국 / 미국",
-    navFinance: "금융 자격",
-    navHealth: "간호 / 식품안전",
+    navAll: "전체 프로그램",
+    navAllSmall: "산업, 자격, 학습 초점별 필터",
+    navMedical: "의료 및 간호",
+    navMedicalSmall: "NCLEX-RN, USMLE",
+    navFinance: "회계 및 금융",
+    navFinanceSmall: "USCPA, CFA, FINRA",
+    navEngineering: "공학 및 IT",
+    navEngineeringSmall: "FE/PE, AWS, GCP",
+    navLaw: "법률 및 공공 서비스",
+    navLawSmall: "Bar, Real Estate",
     todayGoal: "오늘 목표",
     languageLabel: "언어",
-    startMock: "모의고사 시작",
+    startMock: "단기 드릴 시작",
     searchLabel: "검색",
     countryLabel: "국가",
-    regionLabel: "지역",
-    typeLabel: "유형",
+    regionLabel: "영역",
+    typeLabel: "분류",
     studyMode: "학습",
-    examMode: "시험",
+    examMode: "드릴",
     sourceLabel: "출처",
     coverageLabel: "범위",
     updatedLabel: "업데이트",
     restart: "다시 시작",
     skip: "건너뛰기",
     next: "다음",
-    submit: "제출",
-    reportTitle: "모의고사 결과",
+    submit: "완료",
+    reportTitle: "드릴 결과",
     scoreLabel: "점수",
     correctLabel: "정답",
     adviceLabel: "제안",
@@ -218,58 +255,70 @@ const i18n = {
     weakLabel: "약점",
     etaLabel: "예상",
     nextStep: "다음 학습",
-    catalogTitle: "국가, 지역, 자격 유형별 문제 은행",
+    catalogTitle: "산업, 자격, 학습 초점별 문제 은행",
     all: "전체",
-    exams: "개 시험",
+    programs: "개 프로그램",
     source: "출처",
     coverage: "범위",
     questions: "문항",
     updated: "업데이트",
     dailyStudy: "30문항 + 오답 복습 1회",
-    dailyExam: "모의고사 1회 완료 후 오답 복습",
+    dailyDrill: "단기 드릴 1회 완료 후 오답 복습",
     progress: (index, total) => `${index} / ${total} 문항`,
-    hiddenExplanation: "시험 모드에서는 제출 후 해설이 표시됩니다.",
+    hiddenExplanation: "드릴 모드에서는 완료 후 해설이 표시됩니다.",
     advicePass: "합격에 가까움",
     advicePractice: "계속 강화",
     adviceStudy: "학습 모드로",
-    perfectReport: "모든 문항을 맞혔습니다. 다른 세트로 다시 확인해 보세요.",
+    perfectReport: "모든 문항을 맞혔습니다. 다른 세트로 확인해 보세요.",
     wrongReport: (tags) => `우선 복습: ${tags}. 학습 모드에서 해설을 확인하세요.`,
     planWeak: (weak) => `약점 먼저 복습: ${weak}`,
     planPractice: (topic, count) => `${topic} 관련 ${count}문항 풀기`,
-    planExam: "시험 후 틀린 문항 해설 복습",
-    planStudy: "각 문항의 해설을 읽고 다음으로 이동"
+    planDrill: "드릴 후 틀린 문항 해설 복습",
+    planStudy: "각 문항의 해설을 읽고 다음으로 이동",
+    localTitle: "로컬 학습 데이터",
+    localSubtitle: "이 브라우저에만 저장됨",
+    localAnswered: "답변 수",
+    localAccuracy: "정답률",
+    localWrong: "오답",
+    localScore: "최근 점수",
+    localNone: "없음",
+    localClear: "로컬 데이터 삭제",
+    weakNone: "없음",
+    etaStart: "시작 후 예상",
+    etaDays: (days) => `${days}일`
   },
   es: {
-    heroEyebrow: "Practice-first exam platform",
-    heroTitle: "Preparación gratuita para licencias y credenciales internacionales",
+    htmlLang: "es",
+    heroEyebrow: "Practice-first training platform",
+    heroTitle: "Entrenamiento breve para credenciales internacionales",
     brandSubtitle: "Biblioteca de estudio para credenciales internacionales",
-    navAll: "Todos los exámenes",
-    navAllSmall: "Países, regiones y tipos de credencial",
-    navDmv: "Conducir / CDL",
-    navDmvSmall: "DMV de EE. UU. y licencia comercial",
-    navRealEstate: "Licencia inmobiliaria",
-    navRealEstateSmall: "Exámenes estatales de vendedor",
-    navCitizenship: "Ciudadanía",
-    navCitizenshipSmall: "Canadá / Reino Unido / EE. UU.",
-    navFinance: "Licencias financieras",
-    navHealth: "Enfermería / alimentos",
+    navAll: "Todos los programas",
+    navAllSmall: "Filtra por industria, credencial y enfoque",
+    navMedical: "Medicina y enfermería",
+    navMedicalSmall: "NCLEX-RN, USMLE",
+    navFinance: "Contabilidad y finanzas",
+    navFinanceSmall: "USCPA, CFA, FINRA",
+    navEngineering: "Ingeniería y TI",
+    navEngineeringSmall: "FE/PE, AWS, GCP",
+    navLaw: "Ley y servicio público",
+    navLawSmall: "Bar, Real Estate",
     todayGoal: "Meta de hoy",
     languageLabel: "Idioma",
-    startMock: "Iniciar simulacro",
+    startMock: "Iniciar práctica",
     searchLabel: "Buscar",
     countryLabel: "País",
-    regionLabel: "Región",
-    typeLabel: "Tipo",
+    regionLabel: "Área",
+    typeLabel: "Categoría",
     studyMode: "Estudio",
-    examMode: "Examen",
+    examMode: "Práctica",
     sourceLabel: "Fuente",
     coverageLabel: "Cobertura",
     updatedLabel: "Actualizado",
     restart: "Reiniciar",
     skip: "Saltar",
     next: "Siguiente",
-    submit: "Enviar",
-    reportTitle: "Resultado del simulacro",
+    submit: "Finalizar",
+    reportTitle: "Resultado de práctica",
     scoreLabel: "Puntaje",
     correctLabel: "Correctas",
     adviceLabel: "Consejo",
@@ -278,58 +327,70 @@ const i18n = {
     weakLabel: "Área débil",
     etaLabel: "Tiempo",
     nextStep: "Próximos pasos",
-    catalogTitle: "Bancos de preguntas por país, región y tipo de credencial",
+    catalogTitle: "Bancos de preguntas por industria, credencial y enfoque",
     all: "Todos",
-    exams: "exámenes",
+    programs: "programas",
     source: "Fuente",
     coverage: "Cubre",
     questions: "preguntas",
     updated: "actualizado",
-    dailyStudy: "30 preguntas + una revisión de errores",
-    dailyExam: "Completa un simulacro y revisa errores",
+    dailyStudy: "30 preguntas + revisión de errores",
+    dailyDrill: "Completa una práctica breve y revisa errores",
     progress: (index, total) => `${index} / ${total}`,
-    hiddenExplanation: "En modo examen, las explicaciones aparecen después de enviar.",
+    hiddenExplanation: "En modo práctica, las explicaciones aparecen al finalizar.",
     advicePass: "Casi listo",
     advicePractice: "Seguir reforzando",
     adviceStudy: "Volver a estudiar",
     perfectReport: "Respondiste todo correctamente. Prueba otro set para confirmar dominio.",
-    wrongReport: (tags) => `Revisa primero: ${tags}. Cambia a modo estudio para leer cada explicación.`,
+    wrongReport: (tags) => `Revisa primero: ${tags}. Cambia a estudio para leer cada explicación.`,
     planWeak: (weak) => `Repasa primero el área débil: ${weak}`,
     planPractice: (topic, count) => `Completa ${count} preguntas sobre ${topic}`,
-    planExam: "Después del examen, revisa todas las explicaciones falladas",
-    planStudy: "Lee cada explicación antes de pasar a la siguiente pregunta"
+    planDrill: "Después de la práctica, revisa todas las explicaciones falladas",
+    planStudy: "Lee cada explicación antes de pasar a la siguiente pregunta",
+    localTitle: "Datos locales de estudio",
+    localSubtitle: "Guardado solo en este navegador",
+    localAnswered: "Respondidas",
+    localAccuracy: "Precisión",
+    localWrong: "Errores",
+    localScore: "Último puntaje",
+    localNone: "Ninguno",
+    localClear: "Borrar datos locales",
+    weakNone: "Ninguna",
+    etaStart: "Empieza para estimar",
+    etaDays: (days) => `${days} días`
   },
   fr: {
-    heroEyebrow: "Practice-first exam platform",
-    heroTitle: "Préparation gratuite aux permis et certifications à l'international",
+    htmlLang: "fr",
+    heroEyebrow: "Practice-first training platform",
+    heroTitle: "Entraînement court pour certifications internationales",
     brandSubtitle: "Bibliothèque d'étude des certifications internationales",
-    navAll: "Tous les examens",
-    navAllSmall: "Pays, régions et types de certification",
-    navDmv: "Permis / CDL",
-    navDmvSmall: "DMV américain et permis commercial",
-    navRealEstate: "Licence immobilière",
-    navRealEstateSmall: "Examens d'agent par État",
-    navCitizenship: "Citoyenneté",
-    navCitizenshipSmall: "Canada / Royaume-Uni / États-Unis",
-    navFinance: "Licences financières",
-    navHealth: "Soins / alimentaire",
+    navAll: "Tous les programmes",
+    navAllSmall: "Filtrer par secteur, certification et objectif",
+    navMedical: "Médecine et soins",
+    navMedicalSmall: "NCLEX-RN, USMLE",
+    navFinance: "Comptabilité et finance",
+    navFinanceSmall: "USCPA, CFA, FINRA",
+    navEngineering: "Ingénierie et IT",
+    navEngineeringSmall: "FE/PE, AWS, GCP",
+    navLaw: "Droit et service public",
+    navLawSmall: "Bar, Real Estate",
     todayGoal: "Objectif du jour",
     languageLabel: "Langue",
-    startMock: "Lancer l'examen blanc",
+    startMock: "Lancer l'entraînement",
     searchLabel: "Recherche",
     countryLabel: "Pays",
-    regionLabel: "Région",
-    typeLabel: "Type",
+    regionLabel: "Domaine",
+    typeLabel: "Catégorie",
     studyMode: "Étude",
-    examMode: "Examen",
+    examMode: "Entraînement",
     sourceLabel: "Source",
     coverageLabel: "Couverture",
     updatedLabel: "Mis à jour",
     restart: "Recommencer",
     skip: "Passer",
     next: "Suivant",
-    submit: "Soumettre",
-    reportTitle: "Résultat de l'examen blanc",
+    submit: "Terminer",
+    reportTitle: "Résultat d'entraînement",
     scoreLabel: "Score",
     correctLabel: "Correctes",
     adviceLabel: "Conseil",
@@ -338,17 +399,17 @@ const i18n = {
     weakLabel: "Point faible",
     etaLabel: "Délai",
     nextStep: "Prochaines étapes",
-    catalogTitle: "Banques de questions par pays, région et type de certification",
+    catalogTitle: "Banques de questions par secteur, certification et objectif",
     all: "Tous",
-    exams: "examens",
+    programs: "programmes",
     source: "Source",
     coverage: "Couvre",
     questions: "questions",
     updated: "mis à jour",
     dailyStudy: "30 questions + une révision des erreurs",
-    dailyExam: "Terminer un examen blanc et revoir les erreurs",
+    dailyDrill: "Terminer un entraînement court et revoir les erreurs",
     progress: (index, total) => `${index} / ${total}`,
-    hiddenExplanation: "En mode examen, les explications apparaissent après la soumission.",
+    hiddenExplanation: "En mode entraînement, les explications apparaissent à la fin.",
     advicePass: "Presque prêt",
     advicePractice: "Continuer à renforcer",
     adviceStudy: "Revenir au mode étude",
@@ -356,73 +417,88 @@ const i18n = {
     wrongReport: (tags) => `À revoir en priorité : ${tags}. Passez en mode étude pour lire les explications.`,
     planWeak: (weak) => `Revoir d'abord le point faible : ${weak}`,
     planPractice: (topic, count) => `Faire ${count} questions sur ${topic}`,
-    planExam: "Après l'examen, revoir toutes les explications des erreurs",
-    planStudy: "Lire chaque explication avant de passer à la question suivante"
+    planDrill: "Après l'entraînement, revoir toutes les explications des erreurs",
+    planStudy: "Lire chaque explication avant de passer à la question suivante",
+    localTitle: "Données locales d'étude",
+    localSubtitle: "Enregistré uniquement dans ce navigateur",
+    localAnswered: "Répondues",
+    localAccuracy: "Précision",
+    localWrong: "Erreurs",
+    localScore: "Dernier score",
+    localNone: "Aucun",
+    localClear: "Effacer les données locales",
+    weakNone: "Aucun",
+    etaStart: "Commencez pour estimer",
+    etaDays: (days) => `${days} jours`
   }
 };
 
-const localizedExamText = {
+const programText = {
   zh: {
-    "ca-dmv": {
-      badge: "热门",
-      description: "手册章节、交通标志、路权、安全驾驶与模拟考试。",
-      coverage: ["交通标志", "路权", "安全驾驶", "违规与处罚"]
-    },
-    "ny-realestate": {
-      badge: "执照",
-      description: "州法、合同、估价、产权、代理关系与联邦法规。",
-      coverage: ["代理关系", "合同", "产权", "估价", "联邦法规"]
-    },
-    "can-citizenship": {
-      badge: "入籍",
-      description: "官方指南章节学习、历史、地理、政府制度和权利义务。",
-      coverage: ["政府制度", "历史", "地理", "权利义务"]
-    },
-    "sie-series": {
-      badge: "金融",
-      description: "产品知识、交易市场、客户账户、监管和适当性原则。",
-      coverage: ["产品知识", "交易市场", "客户账户", "监管"]
-    },
-    "nclex-servsafe": {
-      badge: "护理",
-      description: "护理安全、感染控制、食品处理和优先级判断基础。",
-      coverage: ["患者安全", "感染控制", "食品安全", "优先级判断"]
-    }
+    "nclex-rn": { title: "NCLEX-RN题库", subtitle: "美国护士题库", badge: "护理", description: "CAT自适应训练、错题集、全英文病例解析，适合海外护士短期冲刺。", coverage: ["成人护理", "药理", "母婴", "儿科", "安全"] },
+    usmle: { title: "USMLE执医", subtitle: "美国医生Step1-3", badge: "医学", description: "高分案例分析、解剖/病理高频图谱刷题，适合医学生和外籍医生冲刺。", coverage: ["病理", "生理", "药理", "生物统计", "临床病例"] },
+    uscpa: { title: "USCPA财会", subtitle: "美国CPA四科", badge: "财会", description: "FAR/AUD/REG/ISC 分科训练，加入TBS大题和手写板模拟思路。", coverage: ["FAR", "AUD", "REG", "ISC", "TBS大题"] },
+    cfa: { title: "CFA金融圈", subtitle: "CFA一级/二级/三级", badge: "金融", description: "公式表在线查询、限时训练、打卡抱团班式刷题路径。", coverage: ["职业伦理", "数量", "组合管理", "权益", "固收"] },
+    finra: { title: "FINRA证券牌照", subtitle: "SIE & Series 7", badge: "证券", description: "法规常识快速判断、合规陷阱题专项，适合证券牌照短训。", coverage: ["SIE", "Series 7", "法规", "适当性", "产品"] },
+    "fe-pe": { title: "FE/PE工程师", subtitle: "美国注册工程师", badge: "工程", description: "工程经济学计算器、参考手册检索练习、公式型题目短训。", coverage: ["工程经济", "静力学", "流体", "伦理", "手册检索"] },
+    "cloud-architect": { title: "云架构师认证", subtitle: "AWS & GCP题库", badge: "云", description: "场景选择题快速解析、架构图识别、云服务组合训练。", coverage: ["架构", "安全", "网络", "可靠性", "成本"] },
+    bar: { title: "美国律考Bar", subtitle: "NY & CA Bar", badge: "法律", description: "MBE多选倒计时严训、MEE范文对比、长文阅读夜间模式。", coverage: ["MBE", "MEE", "证据法", "合同", "宪法"] },
+    "real-estate": { title: "美国地产经纪人", subtitle: "房产执照训练", badge: "地产", description: "各州法律切换、房产计算专项题、经纪人执照短期训练。", coverage: ["代理", "合同", "产权", "州法", "地产计算"] }
   },
   en: {
-    "ca-dmv": { badge: "Popular", description: "Handbook chapters, traffic signs, right-of-way, safe driving, and mock tests.", coverage: ["Traffic signs", "Right-of-way", "Safe driving", "Violations"] },
-    "ny-realestate": { badge: "License", description: "State law, contracts, valuation, property rights, agency, and federal rules.", coverage: ["Agency", "Contracts", "Property rights", "Valuation", "Federal rules"] },
-    "can-citizenship": { badge: "Citizenship", description: "Official guide chapters, history, geography, government, rights, and responsibilities.", coverage: ["Government", "History", "Geography", "Rights"] },
-    "sie-series": { badge: "Finance", description: "Product knowledge, markets, customer accounts, regulation, and suitability.", coverage: ["Products", "Markets", "Customer accounts", "Regulation"] },
-    "nclex-servsafe": { badge: "Health", description: "Nursing safety, infection control, food handling, and priority judgment.", coverage: ["Patient safety", "Infection control", "Food safety", "Priority"] }
+    "nclex-rn": { title: "NCLEX-RN Question Bank", subtitle: "US nursing license drills", badge: "Nursing", description: "CAT-style adaptive drills, mistake review, and English case explanations for short nursing prep.", coverage: ["Adult health", "Pharmacology", "Maternal newborn", "Pediatrics", "Safety"] },
+    usmle: { title: "USMLE Medical Drills", subtitle: "US physician Step 1-3", badge: "Medicine", description: "High-yield case analysis plus anatomy and pathology image-style practice.", coverage: ["Pathology", "Physiology", "Pharmacology", "Biostatistics", "Clinical cases"] },
+    uscpa: { title: "USCPA Accounting Drills", subtitle: "US CPA four sections", badge: "Accounting", description: "FAR/AUD/REG/ISC section practice with task-based simulation training ideas.", coverage: ["FAR", "AUD", "REG", "ISC", "TBS simulations"] },
+    cfa: { title: "CFA Finance Drills", subtitle: "CFA Level I/II/III", badge: "Finance", description: "Formula lookup, timed drills, and structured practice for finance candidates.", coverage: ["Ethics", "Quant", "Portfolio", "Equity", "Fixed income"] },
+    finra: { title: "FINRA Securities License", subtitle: "SIE & Series 7", badge: "Securities", description: "Fast regulation checks and compliance trap questions for securities license prep.", coverage: ["SIE", "Series 7", "Regulation", "Suitability", "Products"] },
+    "fe-pe": { title: "FE/PE Engineer Drills", subtitle: "US professional engineer prep", badge: "Engineering", description: "Engineering economics, handbook lookup, and formula-driven short drills.", coverage: ["Engineering economics", "Statics", "Fluids", "Ethics", "Handbook lookup"] },
+    "cloud-architect": { title: "Cloud Architect Certification", subtitle: "AWS & GCP question bank", badge: "Cloud", description: "Scenario questions, architecture diagram recognition, and cloud service selection practice.", coverage: ["Architecture", "Security", "Networking", "Reliability", "Cost"] },
+    bar: { title: "US Bar Law Drills", subtitle: "NY & CA Bar", badge: "Law", description: "Timed MBE practice, MEE model-answer comparison, and long-reading training.", coverage: ["MBE", "MEE", "Evidence", "Contracts", "Constitutional law"] },
+    "real-estate": { title: "US Real Estate Agent", subtitle: "Real estate license drills", badge: "Real estate", description: "State-specific law switching, real estate math, and license-focused short drills.", coverage: ["Agency", "Contracts", "Property rights", "State law", "Real estate math"] }
   },
   ja: {
-    "ca-dmv": { badge: "人気", description: "ハンドブック、標識、優先権、安全運転、模擬試験。", coverage: ["交通標識", "優先権", "安全運転", "違反と罰則"] },
-    "ny-realestate": { badge: "免許", description: "州法、契約、評価、権利、代理関係、連邦規則。", coverage: ["代理関係", "契約", "所有権", "評価", "連邦規則"] },
-    "can-citizenship": { badge: "市民権", description: "公式ガイド、歴史、地理、政府制度、権利と義務。", coverage: ["政府制度", "歴史", "地理", "権利と義務"] },
-    "sie-series": { badge: "金融", description: "商品知識、市場、顧客口座、規制、適合性。", coverage: ["商品知識", "市場", "顧客口座", "規制"] },
-    "nclex-servsafe": { badge: "医療", description: "看護安全、感染管理、食品安全、優先順位判断。", coverage: ["患者安全", "感染管理", "食品安全", "優先順位"] }
+    "nclex-rn": { title: "NCLEX-RN問題バンク", subtitle: "米国看護師ドリル", badge: "看護", description: "CAT風の適応型ドリル、間違い復習、英語ケース解説。", coverage: ["成人看護", "薬理", "母子", "小児", "安全"] },
+    usmle: { title: "USMLE医師ドリル", subtitle: "米国医師 Step 1-3", badge: "医学", description: "高頻度ケース分析と解剖・病理画像型の練習。", coverage: ["病理", "生理", "薬理", "生物統計", "臨床ケース"] },
+    uscpa: { title: "USCPA会計ドリル", subtitle: "米国CPA四科目", badge: "会計", description: "FAR/AUD/REG/ISC別の練習とTBS対策。", coverage: ["FAR", "AUD", "REG", "ISC", "TBS"] },
+    cfa: { title: "CFA金融ドリル", subtitle: "CFAレベルI/II/III", badge: "金融", description: "公式確認、時間制限ドリル、体系的な金融練習。", coverage: ["倫理", "数量", "ポートフォリオ", "株式", "債券"] },
+    finra: { title: "FINRA証券ライセンス", subtitle: "SIE & Series 7", badge: "証券", description: "規制判断とコンプライアンスの落とし穴問題。", coverage: ["SIE", "Series 7", "規制", "適合性", "商品"] },
+    "fe-pe": { title: "FE/PEエンジニア", subtitle: "米国登録技術者対策", badge: "工学", description: "工学経済、ハンドブック検索、公式型問題の短期ドリル。", coverage: ["工学経済", "静力学", "流体", "倫理", "手冊検索"] },
+    "cloud-architect": { title: "クラウドアーキテクト認定", subtitle: "AWS & GCP問題バンク", badge: "クラウド", description: "シナリオ問題、構成図認識、クラウドサービス選択練習。", coverage: ["アーキテクチャ", "セキュリティ", "ネットワーク", "信頼性", "コスト"] },
+    bar: { title: "米国Bar法律ドリル", subtitle: "NY & CA Bar", badge: "法律", description: "MBE時間制限練習、MEE答案比較、長文読解トレーニング。", coverage: ["MBE", "MEE", "証拠法", "契約", "憲法"] },
+    "real-estate": { title: "米国不動産エージェント", subtitle: "不動産免許ドリル", badge: "不動産", description: "州別法規、不動産計算、免許向け短期練習。", coverage: ["代理", "契約", "所有権", "州法", "不動産計算"] }
   },
   ko: {
-    "ca-dmv": { badge: "인기", description: "핸드북, 교통 표지, 통행 우선권, 안전 운전, 모의고사.", coverage: ["교통 표지", "통행 우선권", "안전 운전", "위반과 벌칙"] },
-    "ny-realestate": { badge: "면허", description: "주 법률, 계약, 평가, 재산권, 대리 관계, 연방 규정.", coverage: ["대리 관계", "계약", "재산권", "평가", "연방 규정"] },
-    "can-citizenship": { badge: "시민권", description: "공식 가이드, 역사, 지리, 정부 제도, 권리와 의무.", coverage: ["정부 제도", "역사", "지리", "권리와 의무"] },
-    "sie-series": { badge: "금융", description: "상품 지식, 거래 시장, 고객 계좌, 규제와 적합성.", coverage: ["상품 지식", "거래 시장", "고객 계좌", "규제"] },
-    "nclex-servsafe": { badge: "의료", description: "간호 안전, 감염 관리, 식품 안전, 우선순위 판단.", coverage: ["환자 안전", "감염 관리", "식품 안전", "우선순위"] }
+    "nclex-rn": { title: "NCLEX-RN 문제은행", subtitle: "미국 간호사 드릴", badge: "간호", description: "CAT식 적응형 드릴, 오답 복습, 영어 사례 해설.", coverage: ["성인 간호", "약리", "모성/신생아", "소아", "안전"] },
+    usmle: { title: "USMLE 의사 드릴", subtitle: "미국 의사 Step 1-3", badge: "의학", description: "고빈도 사례 분석과 해부/병리 이미지형 연습.", coverage: ["병리", "생리", "약리", "생물통계", "임상 사례"] },
+    uscpa: { title: "USCPA 회계 드릴", subtitle: "미국 CPA 네 과목", badge: "회계", description: "FAR/AUD/REG/ISC 과목별 연습과 TBS 대비.", coverage: ["FAR", "AUD", "REG", "ISC", "TBS"] },
+    cfa: { title: "CFA 금융 드릴", subtitle: "CFA Level I/II/III", badge: "금융", description: "공식 확인, 시간 제한 드릴, 체계적 금융 연습.", coverage: ["윤리", "퀀트", "포트폴리오", "주식", "채권"] },
+    finra: { title: "FINRA 증권 라이선스", subtitle: "SIE & Series 7", badge: "증권", description: "규정 판단과 컴플라이언스 함정 문제 훈련.", coverage: ["SIE", "Series 7", "규정", "적합성", "상품"] },
+    "fe-pe": { title: "FE/PE 엔지니어 드릴", subtitle: "미국 전문 엔지니어 대비", badge: "공학", description: "공학경제, 핸드북 검색, 공식형 문제 단기 드릴.", coverage: ["공학경제", "정역학", "유체", "윤리", "핸드북 검색"] },
+    "cloud-architect": { title: "클라우드 아키텍트 인증", subtitle: "AWS & GCP 문제은행", badge: "클라우드", description: "시나리오 문제, 아키텍처 도식 인식, 클라우드 서비스 선택 연습.", coverage: ["아키텍처", "보안", "네트워킹", "신뢰성", "비용"] },
+    bar: { title: "미국 Bar 법률 드릴", subtitle: "NY & CA Bar", badge: "법률", description: "MBE 시간 제한 연습, MEE 모범 답안 비교, 장문 독해 훈련.", coverage: ["MBE", "MEE", "증거법", "계약", "헌법"] },
+    "real-estate": { title: "미국 부동산 중개인", subtitle: "부동산 면허 드릴", badge: "부동산", description: "주별 법규, 부동산 계산, 면허 중심 단기 훈련.", coverage: ["대리", "계약", "재산권", "주법", "부동산 계산"] }
   },
   es: {
-    "ca-dmv": { badge: "Popular", description: "Manual, señales, derecho de paso, conducción segura y simulacros.", coverage: ["Señales", "Derecho de paso", "Conducción segura", "Infracciones"] },
-    "ny-realestate": { badge: "Licencia", description: "Leyes estatales, contratos, tasación, propiedad, agencia y normas federales.", coverage: ["Agencia", "Contratos", "Propiedad", "Tasación", "Normas federales"] },
-    "can-citizenship": { badge: "Ciudadanía", description: "Guía oficial, historia, geografía, gobierno, derechos y responsabilidades.", coverage: ["Gobierno", "Historia", "Geografía", "Derechos"] },
-    "sie-series": { badge: "Finanzas", description: "Productos, mercados, cuentas de clientes, regulación e idoneidad.", coverage: ["Productos", "Mercados", "Cuentas", "Regulación"] },
-    "nclex-servsafe": { badge: "Salud", description: "Seguridad clínica, control de infecciones, alimentos y prioridades.", coverage: ["Seguridad", "Infecciones", "Alimentos", "Prioridad"] }
+    "nclex-rn": { title: "Banco NCLEX-RN", subtitle: "Drills de enfermería de EE. UU.", badge: "Enfermería", description: "Práctica adaptativa tipo CAT, revisión de errores y casos en inglés.", coverage: ["Salud adulta", "Farmacología", "Materno neonatal", "Pediatría", "Seguridad"] },
+    usmle: { title: "Drills médicos USMLE", subtitle: "Médico de EE. UU. Step 1-3", badge: "Medicina", description: "Casos de alto rendimiento y práctica de anatomía/patología visual.", coverage: ["Patología", "Fisiología", "Farmacología", "Bioestadística", "Casos clínicos"] },
+    uscpa: { title: "Drills USCPA", subtitle: "Cuatro secciones CPA", badge: "Contabilidad", description: "Práctica FAR/AUD/REG/ISC con enfoque en simulaciones TBS.", coverage: ["FAR", "AUD", "REG", "ISC", "TBS"] },
+    cfa: { title: "Drills financieros CFA", subtitle: "CFA Nivel I/II/III", badge: "Finanzas", description: "Consulta de fórmulas, práctica cronometrada y ruta estructurada.", coverage: ["Ética", "Cuantitativo", "Portafolio", "Renta variable", "Renta fija"] },
+    finra: { title: "Licencia FINRA", subtitle: "SIE & Series 7", badge: "Valores", description: "Regulación rápida y preguntas trampa de cumplimiento.", coverage: ["SIE", "Series 7", "Regulación", "Idoneidad", "Productos"] },
+    "fe-pe": { title: "Drills FE/PE", subtitle: "Ingeniero profesional de EE. UU.", badge: "Ingeniería", description: "Economía de ingeniería, búsqueda en manual y problemas con fórmulas.", coverage: ["Economía", "Estática", "Fluidos", "Ética", "Manual"] },
+    "cloud-architect": { title: "Arquitecto cloud", subtitle: "Banco AWS & GCP", badge: "Cloud", description: "Escenarios, diagramas de arquitectura y selección de servicios cloud.", coverage: ["Arquitectura", "Seguridad", "Redes", "Confiabilidad", "Costo"] },
+    bar: { title: "Drills US Bar", subtitle: "NY & CA Bar", badge: "Derecho", description: "MBE cronometrado, comparación MEE y entrenamiento de lectura larga.", coverage: ["MBE", "MEE", "Evidencia", "Contratos", "Constitucional"] },
+    "real-estate": { title: "Agente inmobiliario EE. UU.", subtitle: "Drills de licencia inmobiliaria", badge: "Inmobiliario", description: "Leyes estatales, matemáticas inmobiliarias y entrenamiento breve.", coverage: ["Agencia", "Contratos", "Propiedad", "Ley estatal", "Matemática inmobiliaria"] }
   },
   fr: {
-    "ca-dmv": { badge: "Populaire", description: "Manuel, panneaux, priorité, conduite sûre et examens blancs.", coverage: ["Panneaux", "Priorité", "Conduite sûre", "Infractions"] },
-    "ny-realestate": { badge: "Licence", description: "Droit de l'État, contrats, évaluation, propriété, agence et règles fédérales.", coverage: ["Agence", "Contrats", "Propriété", "Évaluation", "Règles fédérales"] },
-    "can-citizenship": { badge: "Citoyenneté", description: "Guide officiel, histoire, géographie, gouvernement, droits et devoirs.", coverage: ["Gouvernement", "Histoire", "Géographie", "Droits"] },
-    "sie-series": { badge: "Finance", description: "Produits, marchés, comptes clients, réglementation et adéquation.", coverage: ["Produits", "Marchés", "Comptes", "Réglementation"] },
-    "nclex-servsafe": { badge: "Santé", description: "Sécurité des soins, infections, sécurité alimentaire et priorités.", coverage: ["Sécurité", "Infections", "Aliments", "Priorité"] }
+    "nclex-rn": { title: "Banque NCLEX-RN", subtitle: "Entraînement infirmier US", badge: "Soins", description: "Drills adaptatifs type CAT, révision des erreurs et cas en anglais.", coverage: ["Santé adulte", "Pharmacologie", "Mère nouveau-né", "Pédiatrie", "Sécurité"] },
+    usmle: { title: "Drills médicaux USMLE", subtitle: "Médecin US Step 1-3", badge: "Médecine", description: "Cas à haut rendement et pratique visuelle anatomie/pathologie.", coverage: ["Pathologie", "Physiologie", "Pharmacologie", "Biostatistiques", "Cas cliniques"] },
+    uscpa: { title: "Drills USCPA", subtitle: "Quatre sections CPA", badge: "Comptabilité", description: "Pratique FAR/AUD/REG/ISC avec préparation aux simulations TBS.", coverage: ["FAR", "AUD", "REG", "ISC", "TBS"] },
+    cfa: { title: "Drills finance CFA", subtitle: "CFA niveau I/II/III", badge: "Finance", description: "Formules, drills chronométrés et parcours structuré.", coverage: ["Éthique", "Quant", "Portefeuille", "Actions", "Obligations"] },
+    finra: { title: "Licence FINRA", subtitle: "SIE & Series 7", badge: "Titres", description: "Jugement réglementaire rapide et pièges de conformité.", coverage: ["SIE", "Series 7", "Réglementation", "Adéquation", "Produits"] },
+    "fe-pe": { title: "Drills FE/PE", subtitle: "Ingénieur professionnel US", badge: "Ingénierie", description: "Économie d'ingénierie, recherche manuel et problèmes de formules.", coverage: ["Économie", "Statique", "Fluides", "Éthique", "Manuel"] },
+    "cloud-architect": { title: "Architecte cloud", subtitle: "Banque AWS & GCP", badge: "Cloud", description: "Scénarios, diagrammes d'architecture et choix de services cloud.", coverage: ["Architecture", "Sécurité", "Réseaux", "Fiabilité", "Coût"] },
+    bar: { title: "Drills US Bar", subtitle: "NY & CA Bar", badge: "Droit", description: "MBE chronométré, comparaison MEE et entraînement à la lecture longue.", coverage: ["MBE", "MEE", "Preuve", "Contrats", "Constitutionnel"] },
+    "real-estate": { title: "Agent immobilier US", subtitle: "Drills licence immobilière", badge: "Immobilier", description: "Lois par État, calcul immobilier et entraînement court.", coverage: ["Agence", "Contrats", "Propriété", "Loi d'État", "Calcul immobilier"] }
   }
 };
 
@@ -432,7 +508,7 @@ let currentExamId = examCatalog[0].id;
 let questionIndex = 0;
 let answered = false;
 let mode = "study";
-let examAnswers = [];
+let drillAnswers = [];
 const storageKey = "licenseAtlasLocalProgress";
 
 const elements = {
@@ -441,7 +517,7 @@ const elements = {
   nextButton: document.querySelector("#next-button"),
   skipButton: document.querySelector("#skip-button"),
   resetButton: document.querySelector("#reset-button"),
-  startExamButton: document.querySelector("#start-exam-button"),
+  startDrillButton: document.querySelector("#start-exam-button"),
   search: document.querySelector("#exam-search"),
   country: document.querySelector("#country-filter"),
   region: document.querySelector("#region-filter"),
@@ -452,6 +528,23 @@ const elements = {
   language: document.querySelector("#language-select"),
   clearLocalButton: document.querySelector("#clear-local-button")
 };
+
+function t(key, ...args) {
+  const value = uiText[currentLanguage][key] || uiText.en[key] || key;
+  return typeof value === "function" ? value(...args) : value;
+}
+
+function p(exam) {
+  return programText[currentLanguage]?.[exam.id] || programText.en[exam.id] || exam;
+}
+
+function getCurrentExam() {
+  return examCatalog.find((exam) => exam.id === currentExamId) || examCatalog[0];
+}
+
+function listSeparator() {
+  return currentLanguage === "zh" || currentLanguage === "ja" || currentLanguage === "ko" ? "、" : ", ";
+}
 
 function readProgressStore() {
   try {
@@ -466,8 +559,7 @@ function writeProgressStore(store) {
 }
 
 function getExamProgress(examId = currentExamId) {
-  const store = readProgressStore();
-  return store[examId] || {
+  return readProgressStore()[examId] || {
     answered: 0,
     correct: 0,
     wrongQuestionKeys: [],
@@ -476,92 +568,16 @@ function getExamProgress(examId = currentExamId) {
   };
 }
 
-function saveExamProgress(examId, updater) {
-  const store = readProgressStore();
-  const current = getExamProgress(examId);
-  store[examId] = updater(current);
-  writeProgressStore(store);
-  if (examId === currentExamId) {
-    renderLearningStats(getCurrentExam());
-  }
-  renderLocalProgress();
-}
-
 function questionKey(exam, index) {
   return `${exam.id}:${index}`;
 }
 
-function formatLocalDate(value) {
-  if (!value) return currentLanguage === "zh" ? "从未" : "Never";
-  return new Intl.DateTimeFormat(document.documentElement.lang || currentLanguage, {
-    month: "short",
-    day: "numeric"
-  }).format(new Date(value));
-}
-
-function renderLocalProgress() {
-  const progress = getExamProgress();
-  const accuracy = progress.answered ? Math.round((progress.correct / progress.answered) * 100) : 0;
-  document.querySelector("#local-answered").textContent = progress.answered;
-  document.querySelector("#local-accuracy").textContent = `${accuracy}%`;
-  document.querySelector("#local-wrong").textContent = progress.wrongQuestionKeys.length;
-  document.querySelector("#local-score").textContent = progress.lastScore === null ? (currentLanguage === "zh" ? "暂无" : "None") : `${progress.lastScore}%`;
-  document.querySelector("#local-title").textContent = currentLanguage === "zh" ? "本地学习数据" : "Local study data";
-  document.querySelector("#local-subtitle").textContent = currentLanguage === "zh" ? "只保存在当前浏览器" : `Saved in this browser · ${formatLocalDate(progress.lastStudiedAt)}`;
-  document.querySelector("#local-answered-label").textContent = currentLanguage === "zh" ? "本地已答" : "Answered";
-  document.querySelector("#local-accuracy-label").textContent = currentLanguage === "zh" ? "本地正确率" : "Accuracy";
-  document.querySelector("#local-wrong-label").textContent = currentLanguage === "zh" ? "错题数" : "Mistakes";
-  document.querySelector("#local-score-label").textContent = currentLanguage === "zh" ? "最近成绩" : "Last score";
-  document.querySelector("#clear-local-button").textContent = currentLanguage === "zh" ? "清除本地数据" : "Clear local data";
-}
-
-function getLocalWeakArea(exam, progress) {
-  if (!progress.wrongQuestionKeys.length) {
-    return currentLanguage === "zh" ? "暂无" : "None";
-  }
-  const wrongTags = progress.wrongQuestionKeys
-    .map((key) => Number(key.split(":").pop()))
-    .map((index) => exam.questions[index]?.tag)
-    .filter(Boolean);
-  return wrongTags[0] || (currentLanguage === "zh" ? "暂无" : "None");
-}
-
-function renderLearningStats(exam) {
-  const progress = getExamProgress(exam.id);
-  const accuracy = progress.answered ? Math.round((progress.correct / progress.answered) * 100) : 0;
-  const volumeBonus = Math.min(20, Math.floor(progress.answered / 3) * 5);
-  const readiness = progress.answered ? Math.min(99, Math.round(accuracy * 0.8 + volumeBonus)) : 0;
-  const eta = progress.answered
-    ? currentLanguage === "zh"
-      ? `${Math.max(1, Math.ceil((30 - Math.min(progress.answered, 30)) / 5))} 天`
-      : `${Math.max(1, Math.ceil((30 - Math.min(progress.answered, 30)) / 5))} days`
-    : currentLanguage === "zh"
-      ? "开始后估算"
-      : "Start to estimate";
-
-  document.querySelector("#readiness").textContent = `${readiness}%`;
-  document.querySelector("#questions-done").textContent = progress.answered;
-  document.querySelector("#accuracy").textContent = `${accuracy}%`;
-  document.querySelector("#weak-area").textContent = getLocalWeakArea(exam, progress);
-  document.querySelector("#eta").textContent = eta;
-  document.querySelector(".ring").style.background = `conic-gradient(var(--green) ${readiness}%, #e2e8df 0)`;
-}
-
-function t(key, ...args) {
-  const value = i18n[currentLanguage][key] || i18n.zh[key] || key;
-  return typeof value === "function" ? value(...args) : value;
-}
-
-function getExamText(exam) {
-  return localizedExamText[currentLanguage]?.[exam.id] || localizedExamText.zh[exam.id] || {};
-}
-
-function getCurrentExam() {
-  return examCatalog.find((exam) => exam.id === currentExamId) || examCatalog[0];
-}
-
-function listSeparator() {
-  return currentLanguage === "zh" || currentLanguage === "ja" ? "、" : ", ";
+function saveExamProgress(examId, updater) {
+  const store = readProgressStore();
+  store[examId] = updater(getExamProgress(examId));
+  writeProgressStore(store);
+  if (examId === currentExamId) renderLearningStats(getCurrentExam());
+  renderLocalProgress();
 }
 
 function uniqueValues(key) {
@@ -572,15 +588,13 @@ function populateFilters(preserve = true) {
   const previous = preserve
     ? { country: elements.country.value, region: elements.region.value, type: elements.type.value }
     : {};
-  const filterMap = [
+  [
     [elements.country, uniqueValues("country"), previous.country],
     [elements.region, uniqueValues("region"), previous.region],
     [elements.type, uniqueValues("examType"), previous.type]
-  ];
-
-  filterMap.forEach(([select, values, previousValue]) => {
+  ].forEach(([select, values, oldValue]) => {
     select.innerHTML = values.map((value) => `<option value="${value}">${value}</option>`).join("");
-    select.value = values.includes(previousValue) ? previousValue : t("all");
+    select.value = values.includes(oldValue) ? oldValue : t("all");
   });
 }
 
@@ -591,57 +605,52 @@ function getFilterValue(select) {
 function getFilteredExams() {
   const query = elements.search.value.trim().toLowerCase();
   return examCatalog.filter((exam) => {
-    const text = getExamText(exam);
+    const text = p(exam);
     const haystack = [
-      exam.title,
-      exam.subtitle,
+      text.title,
+      text.subtitle,
+      text.description,
+      text.coverage.join(" "),
       exam.country,
       exam.region,
       exam.examType,
-      exam.source,
-      exam.coverage.join(" "),
-      text.description,
-      (text.coverage || []).join(" ")
+      exam.source
     ].join(" ").toLowerCase();
-    const matchesQuery = !query || haystack.includes(query);
-    const matchesTrack = selectedTrack === "all" || exam.track === selectedTrack;
-    const matchesCountry = getFilterValue(elements.country) === "all" || exam.country === elements.country.value;
-    const matchesRegion = getFilterValue(elements.region) === "all" || exam.region === elements.region.value;
-    const matchesType = getFilterValue(elements.type) === "all" || exam.examType === elements.type.value;
-    return matchesQuery && matchesTrack && matchesCountry && matchesRegion && matchesType;
+    return (!query || haystack.includes(query)) &&
+      (selectedTrack === "all" || exam.track === selectedTrack) &&
+      (getFilterValue(elements.country) === "all" || exam.country === elements.country.value) &&
+      (getFilterValue(elements.region) === "all" || exam.region === elements.region.value) &&
+      (getFilterValue(elements.type) === "all" || exam.examType === elements.type.value);
   });
 }
 
 function applyStaticTranslations() {
+  document.documentElement.lang = t("htmlLang");
   document.querySelectorAll("[data-i18n]").forEach((node) => {
     node.textContent = t(node.dataset.i18n);
   });
-  document.querySelector("#exam-search").placeholder = "California DMV, Series 7, Canada citizenship...";
-  document.querySelector("#daily-goal").textContent = mode === "exam" ? t("dailyExam") : t("dailyStudy");
+  elements.search.placeholder = "NCLEX-RN, USMLE, USCPA, CFA, FINRA...";
+  document.querySelector("#daily-goal").textContent = mode === "exam" ? t("dailyDrill") : t("dailyStudy");
 }
 
 function renderCatalog() {
   const exams = getFilteredExams();
-  elements.resultCount.textContent = `${exams.length} ${t("exams")}`;
-  elements.catalog.innerHTML = exams
-    .map((exam) => {
-      const text = getExamText(exam);
-      const coverage = text.coverage || exam.coverage;
-      return `
-        <article class="exam-card ${exam.id === currentExamId ? "selected" : ""}" data-exam-id="${exam.id}">
-          <span class="card-badge">${text.badge || exam.badge}</span>
-          <h3>${exam.title}</h3>
-          <p>${text.description || exam.description}</p>
-          <dl class="cred-list">
-            <div><dt>${t("source")}</dt><dd>${exam.source}</dd></div>
-            <div><dt>${t("coverage")}</dt><dd>${coverage.slice(0, 3).join(listSeparator())}</dd></div>
-          </dl>
-          <div class="card-footer"><span>${exam.questionCount} ${t("questions")}</span><span>${exam.updated} ${t("updated")}</span></div>
-        </article>
-      `;
-    })
-    .join("");
-
+  elements.resultCount.textContent = `${exams.length} ${t("programs")}`;
+  elements.catalog.innerHTML = exams.map((exam) => {
+    const text = p(exam);
+    return `
+      <article class="exam-card ${exam.id === currentExamId ? "selected" : ""}" data-exam-id="${exam.id}">
+        <span class="card-badge">${text.badge}</span>
+        <h3>${text.title}</h3>
+        <p>${text.description}</p>
+        <dl class="cred-list">
+          <div><dt>${t("source")}</dt><dd>${exam.source}</dd></div>
+          <div><dt>${t("coverage")}</dt><dd>${text.coverage.slice(0, 3).join(listSeparator())}</dd></div>
+        </dl>
+        <div class="card-footer"><span>${exam.questionCount} ${t("questions")}</span><span>${exam.updated} ${t("updated")}</span></div>
+      </article>
+    `;
+  }).join("");
   document.querySelectorAll(".exam-card").forEach((card) => {
     card.addEventListener("click", () => selectExam(card.dataset.examId));
   });
@@ -650,36 +659,75 @@ function renderCatalog() {
 function selectExam(examId) {
   currentExamId = examId;
   questionIndex = 0;
-  examAnswers = [];
+  drillAnswers = [];
   answered = false;
   elements.report.classList.add("hidden");
   renderExam();
   renderCatalog();
 }
 
-function renderExam() {
-  const exam = getCurrentExam();
-  const text = getExamText(exam);
-  const coverage = text.coverage || exam.coverage;
-  document.querySelector("#track-region").textContent = `${exam.country} / ${exam.region}`;
-  document.querySelector("#track-title").textContent = exam.title;
-  document.querySelector("#source-name").textContent = exam.source;
-  document.querySelector("#source-coverage").textContent = coverage.join(listSeparator());
-  document.querySelector("#source-updated").textContent = exam.updated;
-  document.querySelector("#daily-goal").textContent = mode === "exam" ? t("dailyExam") : t("dailyStudy");
-  renderLearningStats(exam);
-  renderStudyPlan(exam, coverage);
-  renderLocalProgress();
-  renderQuestion();
+function getLocalWeakArea(exam, progress) {
+  if (!progress.wrongQuestionKeys.length) return t("weakNone");
+  const tag = progress.wrongQuestionKeys
+    .map((key) => Number(key.split(":").pop()))
+    .map((index) => exam.questions[index]?.tag)
+    .find(Boolean);
+  return tag || t("weakNone");
 }
 
-function renderStudyPlan(exam, coverage) {
+function renderLearningStats(exam) {
+  const progress = getExamProgress(exam.id);
+  const accuracy = progress.answered ? Math.round((progress.correct / progress.answered) * 100) : 0;
+  const volumeBonus = Math.min(20, Math.floor(progress.answered / 3) * 5);
+  const readiness = progress.answered ? Math.min(99, Math.round(accuracy * 0.8 + volumeBonus)) : 0;
+  const days = Math.max(1, Math.ceil((30 - Math.min(progress.answered, 30)) / 5));
+  document.querySelector("#readiness").textContent = `${readiness}%`;
+  document.querySelector("#questions-done").textContent = progress.answered;
+  document.querySelector("#accuracy").textContent = `${accuracy}%`;
+  document.querySelector("#weak-area").textContent = getLocalWeakArea(exam, progress);
+  document.querySelector("#eta").textContent = progress.answered ? t("etaDays", days) : t("etaStart");
+  document.querySelector(".ring").style.background = `conic-gradient(var(--green) ${readiness}%, #e2e8df 0)`;
+}
+
+function renderLocalProgress() {
+  const progress = getExamProgress();
+  const accuracy = progress.answered ? Math.round((progress.correct / progress.answered) * 100) : 0;
+  document.querySelector("#local-answered").textContent = progress.answered;
+  document.querySelector("#local-accuracy").textContent = `${accuracy}%`;
+  document.querySelector("#local-wrong").textContent = progress.wrongQuestionKeys.length;
+  document.querySelector("#local-score").textContent = progress.lastScore === null ? t("localNone") : `${progress.lastScore}%`;
+  document.querySelector("#local-title").textContent = t("localTitle");
+  document.querySelector("#local-subtitle").textContent = t("localSubtitle");
+  document.querySelector("#local-answered-label").textContent = t("localAnswered");
+  document.querySelector("#local-accuracy-label").textContent = t("localAccuracy");
+  document.querySelector("#local-wrong-label").textContent = t("localWrong");
+  document.querySelector("#local-score-label").textContent = t("localScore");
+  document.querySelector("#clear-local-button").textContent = t("localClear");
+}
+
+function renderStudyPlan(exam) {
+  const text = p(exam);
   const plan = [
-    t("planWeak", exam.weak),
-    t("planPractice", coverage[0], Math.min(30, exam.questions.length * 10)),
-    mode === "exam" ? t("planExam") : t("planStudy")
+    t("planWeak", getLocalWeakArea(exam, getExamProgress(exam.id))),
+    t("planPractice", text.coverage[0], Math.min(30, exam.questions.length * 10)),
+    mode === "exam" ? t("planDrill") : t("planStudy")
   ];
   document.querySelector("#study-plan").innerHTML = plan.map((item) => `<li>${item}</li>`).join("");
+}
+
+function renderExam() {
+  const exam = getCurrentExam();
+  const text = p(exam);
+  document.querySelector("#track-region").textContent = `${exam.country} / ${exam.region}`;
+  document.querySelector("#track-title").textContent = text.title;
+  document.querySelector("#source-name").textContent = exam.source;
+  document.querySelector("#source-coverage").textContent = text.coverage.join(listSeparator());
+  document.querySelector("#source-updated").textContent = exam.updated;
+  document.querySelector("#daily-goal").textContent = mode === "exam" ? t("dailyDrill") : t("dailyStudy");
+  renderLearningStats(exam);
+  renderStudyPlan(exam);
+  renderLocalProgress();
+  renderQuestion();
 }
 
 function renderQuestion() {
@@ -694,7 +742,6 @@ function renderQuestion() {
   elements.answers.innerHTML = "";
   elements.skipButton.hidden = mode === "exam";
   elements.nextButton.textContent = mode === "exam" && questionIndex === exam.questions.length - 1 ? t("submit") : t("next");
-
   question.choices.forEach((choice, index) => {
     const button = document.createElement("button");
     button.className = "answer";
@@ -709,15 +756,13 @@ function selectAnswer(index) {
   answered = true;
   const exam = getCurrentExam();
   const question = exam.questions[questionIndex];
-  examAnswers[questionIndex] = index;
   const isCorrect = index === question.correct;
-
+  drillAnswers[questionIndex] = index;
   Array.from(elements.answers.children).forEach((button, buttonIndex) => {
     if (mode === "study" && buttonIndex === question.correct) button.classList.add("correct");
-    if (mode === "study" && buttonIndex === index && index !== question.correct) button.classList.add("wrong");
+    if (mode === "study" && buttonIndex === index && !isCorrect) button.classList.add("wrong");
     if (mode === "exam" && buttonIndex === index) button.classList.add("selected-answer");
   });
-
   if (mode === "study") {
     saveExamProgress(exam.id, (progress) => {
       const wrongSet = new Set(progress.wrongQuestionKeys || []);
@@ -748,23 +793,21 @@ function advanceQuestion() {
 
 function showReport() {
   const exam = getCurrentExam();
-  const correctCount = exam.questions.reduce((total, question, index) => total + (examAnswers[index] === question.correct ? 1 : 0), 0);
+  const correctCount = exam.questions.reduce((total, question, index) => total + (drillAnswers[index] === question.correct ? 1 : 0), 0);
   const score = Math.round((correctCount / exam.questions.length) * 100);
   const wrongQuestions = exam.questions
     .map((question, index) => ({ question, index }))
-    .filter(({ question, index }) => examAnswers[index] !== question.correct);
-
+    .filter(({ question, index }) => drillAnswers[index] !== question.correct);
   document.querySelector("#report-score").textContent = `${score}%`;
   document.querySelector("#report-correct").textContent = `${correctCount} / ${exam.questions.length}`;
   document.querySelector("#report-advice").textContent = score >= 80 ? t("advicePass") : score >= 60 ? t("advicePractice") : t("adviceStudy");
-  document.querySelector("#report-detail").textContent =
-    wrongQuestions.length === 0
-      ? t("perfectReport")
-      : t("wrongReport", wrongQuestions.map(({ question }) => question.tag).join(listSeparator()));
+  document.querySelector("#report-detail").textContent = wrongQuestions.length === 0
+    ? t("perfectReport")
+    : t("wrongReport", wrongQuestions.map(({ question }) => question.tag).join(listSeparator()));
   saveExamProgress(exam.id, (progress) => {
     const wrongSet = new Set(progress.wrongQuestionKeys || []);
     exam.questions.forEach((question, index) => {
-      if (examAnswers[index] === question.correct) wrongSet.delete(questionKey(exam, index));
+      if (drillAnswers[index] === question.correct) wrongSet.delete(questionKey(exam, index));
       else wrongSet.add(questionKey(exam, index));
     });
     return {
@@ -781,7 +824,7 @@ function showReport() {
 
 function resetSession() {
   questionIndex = 0;
-  examAnswers = [];
+  drillAnswers = [];
   answered = false;
   elements.report.classList.add("hidden");
   renderQuestion();
@@ -808,10 +851,8 @@ function refreshForFilters() {
 
 function setLanguage(language) {
   currentLanguage = language;
-  document.documentElement.lang = language === "zh" ? "zh-CN" : language;
   applyStaticTranslations();
   populateFilters(true);
-  renderLocalProgress();
   refreshForFilters();
 }
 
@@ -820,6 +861,7 @@ function clearCurrentLocalProgress() {
   delete store[currentExamId];
   writeProgressStore(store);
   renderLearningStats(getCurrentExam());
+  renderStudyPlan(getCurrentExam());
   renderLocalProgress();
 }
 
@@ -830,8 +872,7 @@ document.querySelectorAll(".nav-item").forEach((button) => {
     button.classList.add("active");
     const firstMatch = getFilteredExams()[0];
     if (firstMatch) currentExamId = firstMatch.id;
-    renderExam();
-    renderCatalog();
+    refreshForFilters();
   });
 });
 
@@ -844,7 +885,7 @@ document.querySelectorAll(".mode").forEach((button) => {
 });
 
 elements.language.addEventListener("change", () => setLanguage(elements.language.value));
-elements.startExamButton.addEventListener("click", () => setMode("exam"));
+elements.startDrillButton.addEventListener("click", () => setMode("exam"));
 elements.nextButton.addEventListener("click", advanceQuestion);
 elements.skipButton.addEventListener("click", advanceQuestion);
 elements.resetButton.addEventListener("click", resetSession);
