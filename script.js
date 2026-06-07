@@ -84,6 +84,8 @@ const uiText = {
     navFinanceSmall: "USCPA, CFA, FINRA",
     navEngineering: "Engineering & IT",
     navEngineeringSmall: "FE/PE, AWS, GCP",
+    navProject: "Project management",
+    navProjectSmall: "PMP, agile, hybrid delivery",
     navLaw: "Law & public service",
     navLawSmall: "Bar, Real Estate",
     todayGoal: "Today",
@@ -452,6 +454,7 @@ const programText = {
     cfa: { title: "CFA Finance Drills", subtitle: "CFA Level I/II/III", badge: "Finance", description: "Formula lookup, timed drills, and structured practice for finance candidates.", coverage: ["Ethics", "Quant", "Portfolio", "Equity", "Fixed income"] },
     finra: { title: "FINRA Securities License", subtitle: "SIE & Series 7", badge: "Securities", description: "Fast regulation checks and compliance trap questions for securities license prep.", coverage: ["SIE", "Series 7", "Regulation", "Suitability", "Products"] },
     "fe-pe": { title: "FE/PE Engineer Drills", subtitle: "US professional engineer prep", badge: "Engineering", description: "Engineering economics, handbook lookup, and formula-driven short drills.", coverage: ["Engineering economics", "Statics", "Fluids", "Ethics", "Handbook lookup"] },
+    pmp: { title: "PMP Project Management Drills", subtitle: "PMI project management certification", badge: "PMP", description: "Scenario-based PMP practice for people, process, business environment, agile, hybrid, and predictive delivery.", coverage: ["People", "Process", "Business environment", "Agile", "Hybrid delivery"] },
     "cloud-architect": { title: "Cloud Architect Certification", subtitle: "AWS & GCP question bank", badge: "Cloud", description: "Scenario questions, architecture diagram recognition, and cloud service selection practice.", coverage: ["Architecture", "Security", "Networking", "Reliability", "Cost"] },
     bar: { title: "US Bar Law Drills", subtitle: "NY & CA Bar", badge: "Law", description: "Timed MBE practice, MEE model-answer comparison, and long-reading training.", coverage: ["MBE", "MEE", "Evidence", "Contracts", "Constitutional law"] },
     "real-estate": { title: "US Real Estate Agent", subtitle: "Real estate license drills", badge: "Real estate", description: "State-specific law switching, real estate math, and license-focused short drills.", coverage: ["Agency", "Contracts", "Property rights", "State law", "Real estate math"] }

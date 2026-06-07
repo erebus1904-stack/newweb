@@ -301,6 +301,63 @@ const examCatalog = [
     ]
   },
   {
+    id: "pmp",
+    track: "project",
+    country: "Global",
+    region: "Project Management",
+    examType: "Project Management",
+    title: "PMP Project Management",
+    subtitle: "PMI project management certification",
+    badge: "PMP",
+    questionCount: 1200,
+    updated: "2026",
+    source: "PMI PMP Examination Content Outline",
+    coverage: ["People", "Process", "Business environment", "Agile", "Hybrid delivery"],
+    readiness: 0,
+    done: 0,
+    accuracy: 0,
+    weak: "None",
+    eta: "Start to estimate",
+    description: "Scenario-based PMP practice for people, process, business environment, agile, hybrid, and predictive delivery.",
+    questions: [
+      {
+        tag: "People",
+        text: "A key stakeholder repeatedly bypasses the project manager and gives conflicting direction to team members. What should the project manager do first?",
+        choices: ["Escalate the stakeholder to the sponsor immediately", "Meet with the stakeholder to clarify expectations and communication channels", "Tell the team to ignore all stakeholder requests", "Update the schedule baseline to absorb the disruption"],
+        correct: 1,
+        explanation: "PMP situational questions often expect collaboration and direct communication before escalation when the issue can still be resolved by the project manager."
+      },
+      {
+        tag: "Process",
+        text: "A customer requests a new feature after the project scope baseline has been approved. What is the best next step?",
+        choices: ["Add the feature because the customer requested it", "Reject the request because the baseline is approved", "Submit the request through the integrated change control process", "Ask the team to complete it only if there is extra time"],
+        correct: 2,
+        explanation: "A scope change after baseline approval should be evaluated through formal change control before implementation."
+      },
+      {
+        tag: "Agile",
+        text: "During a sprint, the product owner asks the team to add urgent work that would replace committed sprint items. What should the Scrum Master do?",
+        choices: ["Protect the sprint goal and facilitate a discussion with the product owner and team", "Accept the change and assign overtime", "Cancel the retrospective", "Move the request directly to done"],
+        correct: 0,
+        explanation: "Agile PMP questions emphasize servant leadership, protecting the team, and facilitating tradeoff discussions rather than forcing unplanned work."
+      },
+      {
+        tag: "Risk",
+        text: "A previously identified risk has occurred and is now affecting project delivery. Which document should be updated first to manage the active situation?",
+        choices: ["Issue log", "Risk register only", "Lessons learned register only", "Procurement statement of work"],
+        correct: 0,
+        explanation: "Once a risk occurs, it becomes an issue. The issue log tracks ownership, actions, and status for active problems."
+      },
+      {
+        tag: "Business Environment",
+        text: "A project deliverable meets technical requirements, but the business sponsor says it no longer supports the organization's strategic objective. What should the project manager focus on?",
+        choices: ["Completing the remaining tasks exactly as planned", "Confirming business value and alignment with the sponsor", "Reducing quality standards to finish faster", "Removing the sponsor from the stakeholder register"],
+        correct: 1,
+        explanation: "The PMP exam includes business environment questions where project success depends on delivering business value, not only technical completion."
+      }
+    ]
+  },
+  {
     id: "bar",
     track: "law",
     country: "United States",
