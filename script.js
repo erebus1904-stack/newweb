@@ -502,7 +502,7 @@ const programText = {
   }
 };
 
-let currentLanguage = "zh";
+let currentLanguage = "en";
 let selectedTrack = "all";
 let currentExamId = examCatalog[0].id;
 let questionIndex = 0;
@@ -639,7 +639,7 @@ function renderCatalog() {
   elements.catalog.innerHTML = exams.map((exam) => {
     const text = p(exam);
     return `
-      <article class="exam-card ${exam.id === currentExamId ? "selected" : ""}" data-exam-id="${exam.id}">
+      <a class="exam-card ${exam.id === currentExamId ? "selected" : ""}" data-exam-id="${exam.id}" href="./programs/${exam.id}.html">
         <span class="card-badge">${text.badge}</span>
         <h3>${text.title}</h3>
         <p>${text.description}</p>
@@ -648,11 +648,15 @@ function renderCatalog() {
           <div><dt>${t("coverage")}</dt><dd>${text.coverage.slice(0, 3).join(listSeparator())}</dd></div>
         </dl>
         <div class="card-footer"><span>${exam.questionCount} ${t("questions")}</span><span>${exam.updated} ${t("updated")}</span></div>
-      </article>
+      </a>
     `;
   }).join("");
   document.querySelectorAll(".exam-card").forEach((card) => {
-    card.addEventListener("click", () => selectExam(card.dataset.examId));
+    card.addEventListener("click", (event) => {
+      if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+      event.preventDefault();
+      selectExam(card.dataset.examId);
+    });
   });
 }
 
