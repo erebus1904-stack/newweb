@@ -1018,7 +1018,13 @@ document.querySelectorAll(".mode").forEach((button) => {
 });
 
 elements.language.addEventListener("change", () => setLanguage(elements.language.value));
-elements.startDrillButton.addEventListener("click", () => setMode("exam"));
+elements.startDrillButton.addEventListener("click", () => {
+  setMode("exam");
+  document.querySelector("#practice-workspace")?.scrollIntoView({
+    behavior: "smooth",
+    block: "start"
+  });
+});
 elements.nextButton.addEventListener("click", advanceQuestion);
 elements.skipButton.addEventListener("click", advanceQuestion);
 elements.resetButton.addEventListener("click", resetSession);
