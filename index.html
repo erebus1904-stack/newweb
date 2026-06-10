@@ -19,7 +19,26 @@
      crossorigin="anonymous"></script>
     <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
     <link rel="manifest" href="./site.webmanifest" />
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./styles.css?v=20260610-ui2" />
+    <style>
+      .skip-link {
+        position: fixed;
+        left: 18px;
+        top: 14px;
+        z-index: 20;
+        transform: translateY(-140%);
+        border-radius: 8px;
+        background: #174f49;
+        color: #fff;
+        padding: 10px 14px;
+        font-weight: 800;
+        text-decoration: none;
+      }
+
+      .skip-link:focus {
+        transform: translateY(0);
+      }
+    </style>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -290,7 +309,7 @@
       </main>
     </div>
 
-    <script src="./data.js"></script>
-    <script src="./script.js"></script>
+    <script src="./data.js?v=20260610-ui2"></script>
+    <script src="./script.js?v=20260610-ui2"></script>
   </body>
 </html>
