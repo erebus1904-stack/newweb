@@ -16,6 +16,12 @@ const types = {
   ".webmanifest": "application/manifest+json; charset=utf-8"
 };
 
+const securityHeaders = {
+  "X-Content-Type-Options": "nosniff",
+  "Referrer-Policy": "strict-origin-when-cross-origin",
+  "Permissions-Policy": "camera=(), microphone=(), geolocation=()"
+};
+
 function resolvePath(urlPath) {
   const cleanPath = decodeURIComponent(urlPath.split("?")[0]);
   const requested = cleanPath === "/" ? "/index.html" : cleanPath;
@@ -27,13 +33,14 @@ http
   .createServer((req, res) => {
     const filePath = resolvePath(req.url || "/");
     if (!existsSync(filePath) || statSync(filePath).isDirectory()) {
-      res.writeHead(404, { "Content-Type": "text/plain; charset=utf-8" });
+      res.writeHead(404, { "Content-Type": "text/plain; charset=utf-8", ...securityHeaders });
       res.end("Not found");
       return;
     }
 
     res.writeHead(200, {
-      "Content-Type": types[extname(filePath)] || "application/octet-stream"
+      "Content-Type": types[extname(filePath)] || "application/octet-stream",
+      ...securityHeaders
     });
     createReadStream(filePath).pipe(res);
   })

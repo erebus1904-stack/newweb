@@ -8,7 +8,7 @@ const examCatalog = [
     title: "NCLEX-RN题库",
     subtitle: "美国护士题库",
     badge: "护理",
-    questionCount: 1280,
+    questionCount: 8,
     updated: "2026",
     source: "NCLEX-RN test plan",
     coverage: ["Adult health", "Pharmacology", "Maternal newborn", "Pediatrics", "Safety"],
@@ -39,6 +39,41 @@ const examCatalog = [
         choices: ["A client requesting pain medication", "A client with new confusion after surgery", "A client awaiting discharge paperwork", "A client asking about diet instructions"],
         correct: 1,
         explanation: "New confusion can signal hypoxia, infection, bleeding, or neurologic change and requires prompt assessment."
+      },
+      {
+        tag: "Infection control",
+        text: "Which action best reduces transmission risk before entering a room under contact precautions?",
+        choices: ["Apply gown and gloves", "Wear only a surgical mask", "Keep the door open", "Use sterile gloves only"],
+        correct: 0,
+        explanation: "Contact precautions generally require gown and gloves to reduce spread through direct contact and contaminated surfaces."
+      },
+      {
+        tag: "Maternal newborn",
+        text: "Which postpartum finding should be reported promptly?",
+        choices: ["Firm fundus at the umbilicus", "Saturating one pad in 15 minutes", "Mild uterine cramping during breastfeeding", "Lochia rubra on day one"],
+        correct: 1,
+        explanation: "Heavy bleeding can indicate postpartum hemorrhage and requires prompt assessment."
+      },
+      {
+        tag: "Pediatrics",
+        text: "Which statement by a parent shows correct understanding of oral rehydration therapy?",
+        choices: ["I will give small frequent sips", "I will stop all fluids for a full day", "I will use only diet soda", "I will give anti-diarrheal medicine first"],
+        correct: 0,
+        explanation: "Small frequent amounts of oral rehydration solution can help prevent dehydration."
+      },
+      {
+        tag: "Delegation",
+        text: "Which task is most appropriate to delegate to assistive personnel?",
+        choices: ["Assess new chest pain", "Teach insulin injection", "Record routine vital signs", "Evaluate wound healing"],
+        correct: 2,
+        explanation: "Routine vital signs for a stable client are commonly delegable; assessment, teaching, and evaluation remain nursing responsibilities."
+      },
+      {
+        tag: "Mental health",
+        text: "A client says, \"I do not want to live anymore.\" What is the nurse's priority response?",
+        choices: ["Ask directly about suicide plans", "Change the subject", "Leave the client alone to rest", "Tell the client things will improve"],
+        correct: 0,
+        explanation: "Directly assessing suicidal intent and plan is a priority safety intervention."
       }
     ]
   },
@@ -51,7 +86,7 @@ const examCatalog = [
     title: "USMLE执医",
     subtitle: "美国医生Step1-3",
     badge: "医学",
-    questionCount: 2100,
+    questionCount: 8,
     updated: "2026",
     source: "USMLE content outline",
     coverage: ["Pathology", "Physiology", "Pharmacology", "Biostatistics", "Clinical cases"],
@@ -82,6 +117,41 @@ const examCatalog = [
         choices: ["Beta blockers", "ACE inhibitors", "Calcium channel blockers", "Thiazide diuretics"],
         correct: 1,
         explanation: "ACE inhibitors reduce bradykinin breakdown, which can cause dry cough and angioedema."
+      },
+      {
+        tag: "Physiology",
+        text: "Which chamber pumps blood into the pulmonary artery?",
+        choices: ["Left atrium", "Left ventricle", "Right atrium", "Right ventricle"],
+        correct: 3,
+        explanation: "The right ventricle pumps deoxygenated blood through the pulmonary artery to the lungs."
+      },
+      {
+        tag: "Microbiology",
+        text: "A Gram-positive organism in clusters most strongly suggests which organism?",
+        choices: ["Staphylococcus species", "Streptococcus species", "Neisseria species", "Vibrio species"],
+        correct: 0,
+        explanation: "Staphylococci classically appear as Gram-positive cocci in clusters."
+      },
+      {
+        tag: "Immunology",
+        text: "Which immunoglobulin is most associated with mucosal secretions?",
+        choices: ["IgA", "IgE", "IgG", "IgM"],
+        correct: 0,
+        explanation: "IgA is the dominant immunoglobulin in many mucosal secretions."
+      },
+      {
+        tag: "Anatomy",
+        text: "Which nerve is primarily responsible for diaphragm motor function?",
+        choices: ["Vagus nerve", "Phrenic nerve", "Accessory nerve", "Hypoglossal nerve"],
+        correct: 1,
+        explanation: "The phrenic nerve, from C3-C5 roots, provides motor innervation to the diaphragm."
+      },
+      {
+        tag: "Ethics",
+        text: "A patient with decision-making capacity refuses a recommended procedure. Which principle is most relevant?",
+        choices: ["Autonomy", "Justice only", "Nonmaleficence only", "Confidentiality only"],
+        correct: 0,
+        explanation: "Respect for autonomy supports a competent patient's right to refuse treatment."
       }
     ]
   },
@@ -94,7 +164,7 @@ const examCatalog = [
     title: "USCPA财会",
     subtitle: "美国CPA四科",
     badge: "财会",
-    questionCount: 1650,
+    questionCount: 8,
     updated: "2026",
     source: "AICPA CPA exam blueprint",
     coverage: ["FAR", "AUD", "REG", "ISC", "TBS simulations"],
@@ -125,6 +195,41 @@ const examCatalog = [
         choices: ["C corporation", "S corporation", "Public corporation", "Municipal corporation"],
         correct: 1,
         explanation: "An S corporation is typically a pass-through entity for federal income tax purposes."
+      },
+      {
+        tag: "FAR",
+        text: "Which account is normally classified as a current asset?",
+        choices: ["Accounts receivable", "Bonds payable", "Common stock", "Accumulated depreciation"],
+        correct: 0,
+        explanation: "Accounts receivable is generally expected to be collected within the operating cycle and is a current asset."
+      },
+      {
+        tag: "AUD",
+        text: "Which procedure most directly tests whether recorded sales actually occurred?",
+        choices: ["Trace shipping documents to sales invoices", "Vouch sales entries to supporting customer orders and shipping records", "Recalculate depreciation", "Inspect board minutes for dividends"],
+        correct: 1,
+        explanation: "Vouching from recorded entries to source documents helps test occurrence."
+      },
+      {
+        tag: "BEC",
+        text: "A favorable variance generally means what?",
+        choices: ["Actual results improved income compared with budget", "Actual costs always increased", "The budget was not approved", "Controls failed automatically"],
+        correct: 0,
+        explanation: "A favorable variance improves operating income relative to the flexible budget or standard."
+      },
+      {
+        tag: "ISC",
+        text: "Which control helps ensure only authorized users access an accounting system?",
+        choices: ["Role-based access control", "Unrestricted shared passwords", "Disabling audit logs", "Posting credentials in the office"],
+        correct: 0,
+        explanation: "Role-based access control limits access based on job responsibilities."
+      },
+      {
+        tag: "Tax",
+        text: "Which item is generally included in gross income unless a specific exclusion applies?",
+        choices: ["Compensation for services", "Municipal bond interest only", "Qualified gift from a parent only", "Return of capital only"],
+        correct: 0,
+        explanation: "Compensation for services is generally included in gross income."
       }
     ]
   },
@@ -137,7 +242,7 @@ const examCatalog = [
     title: "CFA金融圈",
     subtitle: "CFA一级/二级/三级",
     badge: "金融",
-    questionCount: 1400,
+    questionCount: 8,
     updated: "2026",
     source: "CFA program curriculum",
     coverage: ["Ethics", "Quant", "Portfolio", "Equity", "Fixed income"],
@@ -168,6 +273,41 @@ const examCatalog = [
         choices: ["Rises", "Falls", "Stays unchanged", "Becomes par immediately"],
         correct: 1,
         explanation: "Bond prices and yields generally move inversely."
+      },
+      {
+        tag: "Portfolio",
+        text: "Diversification primarily reduces which type of risk?",
+        choices: ["Unsystematic risk", "Market risk", "Inflation risk", "Interest rate risk for all assets"],
+        correct: 0,
+        explanation: "Diversification can reduce asset-specific unsystematic risk, but not broad market risk."
+      },
+      {
+        tag: "Equity",
+        text: "In a constant-growth dividend discount model, value increases when which input increases, all else equal?",
+        choices: ["Required return", "Expected dividend", "Risk premium only", "Discount rate"],
+        correct: 1,
+        explanation: "A higher expected dividend raises estimated value when other inputs are unchanged."
+      },
+      {
+        tag: "Derivatives",
+        text: "A call option gives the holder the right to do what?",
+        choices: ["Buy the underlying asset", "Sell the underlying asset", "Receive coupon payments", "Vote shares without ownership"],
+        correct: 0,
+        explanation: "A call option gives the holder the right, not the obligation, to buy the underlying asset."
+      },
+      {
+        tag: "Economics",
+        text: "If demand increases while supply is unchanged, equilibrium price usually does what?",
+        choices: ["Falls", "Rises", "Must stay unchanged", "Becomes negative"],
+        correct: 1,
+        explanation: "An increase in demand shifts the demand curve right, generally increasing equilibrium price."
+      },
+      {
+        tag: "Financial reporting",
+        text: "Which ratio is most directly related to short-term liquidity?",
+        choices: ["Current ratio", "Gross margin", "Debt-to-equity only", "Return on equity"],
+        correct: 0,
+        explanation: "The current ratio compares current assets with current liabilities."
       }
     ]
   },
@@ -180,7 +320,7 @@ const examCatalog = [
     title: "FINRA证券牌照",
     subtitle: "SIE & Series 7",
     badge: "证券",
-    questionCount: 920,
+    questionCount: 8,
     updated: "2026",
     source: "FINRA exam content outline",
     coverage: ["SIE", "Series 7", "Regulation", "Suitability", "Products"],
@@ -211,6 +351,41 @@ const examCatalog = [
         choices: ["Secondary market", "Primary market", "Auction market only", "Money market only"],
         correct: 1,
         explanation: "New issues are sold in the primary market; later trading happens in the secondary market."
+      },
+      {
+        tag: "Orders",
+        text: "Which order type is designed to execute immediately at the best available price?",
+        choices: ["Market order", "Limit order", "Stop limit order", "Good-till-canceled order only"],
+        correct: 0,
+        explanation: "A market order prioritizes immediate execution at the best available market price."
+      },
+      {
+        tag: "Regulation",
+        text: "Which activity is generally prohibited for a registered representative?",
+        choices: ["Making unsuitable recommendations", "Documenting customer objectives", "Explaining product risks", "Following firm procedures"],
+        correct: 0,
+        explanation: "Recommendations must be suitable based on the customer's profile and investment objectives."
+      },
+      {
+        tag: "Products",
+        text: "Common stockholders generally have which right?",
+        choices: ["Voting for directors", "Guaranteed dividends", "Priority over bondholders in liquidation", "Fixed coupon payments"],
+        correct: 0,
+        explanation: "Common shareholders often have voting rights, including voting for directors."
+      },
+      {
+        tag: "Options",
+        text: "Buying a put option is most consistent with which market view?",
+        choices: ["Bearish on the underlying", "Neutral only", "Expecting no volatility", "Guaranteed income"],
+        correct: 0,
+        explanation: "A put option increases in value when the underlying generally falls, all else equal."
+      },
+      {
+        tag: "Customer accounts",
+        text: "Which account allows borrowing from a broker-dealer to purchase securities?",
+        choices: ["Margin account", "Cash account only", "Custodial savings account", "Transfer agent account"],
+        correct: 0,
+        explanation: "A margin account permits borrowing subject to regulatory and firm requirements."
       }
     ]
   },
@@ -223,7 +398,7 @@ const examCatalog = [
     title: "FE/PE工程师",
     subtitle: "美国注册工程师",
     badge: "工程",
-    questionCount: 1180,
+    questionCount: 8,
     updated: "2026",
     source: "NCEES exam specifications",
     coverage: ["Engineering economics", "Statics", "Fluids", "Ethics", "Handbook lookup"],
@@ -254,6 +429,41 @@ const examCatalog = [
         choices: ["Maximum", "Minimum", "Zero", "Equal to weight only"],
         correct: 2,
         explanation: "Static equilibrium requires net force and net moment to be zero."
+      },
+      {
+        tag: "Fluids",
+        text: "For steady incompressible flow, the continuity equation primarily conserves what?",
+        choices: ["Mass", "Temperature", "Entropy only", "Voltage"],
+        correct: 0,
+        explanation: "Continuity for incompressible flow is based on conservation of mass."
+      },
+      {
+        tag: "Materials",
+        text: "Stress is commonly calculated as force divided by what?",
+        choices: ["Area", "Volume", "Density", "Time"],
+        correct: 0,
+        explanation: "Normal stress is force divided by cross-sectional area."
+      },
+      {
+        tag: "Electrical",
+        text: "Ohm's law relates voltage, current, and what other quantity?",
+        choices: ["Resistance", "Mass", "Frequency only", "Pressure"],
+        correct: 0,
+        explanation: "Ohm's law is V = IR, relating voltage, current, and resistance."
+      },
+      {
+        tag: "Thermodynamics",
+        text: "Which law of thermodynamics is commonly associated with conservation of energy?",
+        choices: ["First law", "Second law", "Third law only", "Zeroth law only"],
+        correct: 0,
+        explanation: "The first law of thermodynamics expresses conservation of energy."
+      },
+      {
+        tag: "Probability",
+        text: "If two independent events have probabilities 0.5 and 0.2, their joint probability is what?",
+        choices: ["0.1", "0.3", "0.7", "1.0"],
+        correct: 0,
+        explanation: "For independent events, multiply probabilities: 0.5 x 0.2 = 0.1."
       }
     ]
   },
@@ -266,7 +476,7 @@ const examCatalog = [
     title: "云架构师认证",
     subtitle: "AWS & GCP题库",
     badge: "云",
-    questionCount: 860,
+    questionCount: 8,
     updated: "2026",
     source: "AWS and Google Cloud exam guides",
     coverage: ["Architecture", "Security", "Networking", "Reliability", "Cost"],
@@ -297,6 +507,41 @@ const examCatalog = [
         choices: ["Use only on-demand instances", "Purchase reserved or committed capacity", "Disable monitoring", "Duplicate all resources"],
         correct: 1,
         explanation: "Reserved or committed usage discounts are useful for predictable sustained workloads."
+      },
+      {
+        tag: "Networking",
+        text: "Which component commonly controls inbound and outbound traffic at an instance or workload level?",
+        choices: ["Security group or firewall rule", "Billing export", "Object lifecycle policy only", "Tagging policy only"],
+        correct: 0,
+        explanation: "Security groups and firewall rules are used to control network access."
+      },
+      {
+        tag: "Storage",
+        text: "Which storage type is usually best for static website assets and backups?",
+        choices: ["Object storage", "CPU cache", "Ephemeral process memory", "Single local temp file only"],
+        correct: 0,
+        explanation: "Object storage is commonly used for durable static assets, backups, and unstructured data."
+      },
+      {
+        tag: "Identity",
+        text: "Which practice best supports least privilege in cloud IAM?",
+        choices: ["Grant only required permissions", "Use one shared admin account", "Disable logs", "Make all resources public"],
+        correct: 0,
+        explanation: "Least privilege means granting only the permissions required for a task."
+      },
+      {
+        tag: "Reliability",
+        text: "Which design improves recovery after a regional outage?",
+        choices: ["Cross-region backup or replication", "Single-zone deployment only", "Manual notes only", "No health checks"],
+        correct: 0,
+        explanation: "Cross-region backup or replication can support recovery when one region is unavailable."
+      },
+      {
+        tag: "Operations",
+        text: "Which tool category helps detect service errors and latency changes?",
+        choices: ["Monitoring and logging", "Logo generator", "Static color palette", "Manual billing notes only"],
+        correct: 0,
+        explanation: "Monitoring and logging help teams observe errors, latency, and service health."
       }
     ]
   },
@@ -309,7 +554,7 @@ const examCatalog = [
     title: "PMP Project Management",
     subtitle: "PMI project management certification",
     badge: "PMP",
-    questionCount: 1200,
+    questionCount: 8,
     updated: "2026",
     source: "PMI PMP Examination Content Outline",
     coverage: ["People", "Process", "Business environment", "Agile", "Hybrid delivery"],
@@ -354,6 +599,27 @@ const examCatalog = [
         choices: ["Completing the remaining tasks exactly as planned", "Confirming business value and alignment with the sponsor", "Reducing quality standards to finish faster", "Removing the sponsor from the stakeholder register"],
         correct: 1,
         explanation: "The PMP exam includes business environment questions where project success depends on delivering business value, not only technical completion."
+      },
+      {
+        tag: "Stakeholders",
+        text: "A stakeholder has high influence but low interest in the project. What is usually the best engagement approach?",
+        choices: ["Keep satisfied", "Ignore completely", "Manage only at closure", "Assign all tasks to the stakeholder"],
+        correct: 0,
+        explanation: "High influence and low interest stakeholders are commonly kept satisfied with appropriate communication."
+      },
+      {
+        tag: "Quality",
+        text: "A team finds repeated defects from the same process step. What should the project manager encourage first?",
+        choices: ["Root cause analysis", "Hide the defects until delivery", "Remove quality checks", "Skip retrospectives"],
+        correct: 0,
+        explanation: "Root cause analysis helps identify and address the underlying source of recurring defects."
+      },
+      {
+        tag: "Agile",
+        text: "During a retrospective, team members identify an improvement action. What should happen next?",
+        choices: ["Track the action in the next iteration", "Discard it after the meeting", "Send it only to procurement", "Add it to the product backlog as a user feature automatically"],
+        correct: 0,
+        explanation: "Retrospective improvements should be made visible and tracked in upcoming work."
       }
     ]
   },
@@ -366,7 +632,7 @@ const examCatalog = [
     title: "美国律考Bar",
     subtitle: "NY & CA Bar",
     badge: "法律",
-    questionCount: 1350,
+    questionCount: 8,
     updated: "2026",
     source: "UBE and state bar outlines",
     coverage: ["MBE", "MEE", "Evidence", "Contracts", "Constitutional law"],
@@ -397,6 +663,41 @@ const examCatalog = [
         choices: ["Any rational interest", "A compelling government interest", "A private business interest", "A speculative interest"],
         correct: 1,
         explanation: "Strict scrutiny requires a compelling government interest and narrow tailoring."
+      },
+      {
+        tag: "Torts",
+        text: "Negligence generally requires duty, breach, causation, and what other element?",
+        choices: ["Damages", "A written contract", "Criminal intent", "Strict scrutiny"],
+        correct: 0,
+        explanation: "A negligence claim generally requires duty, breach, causation, and damages."
+      },
+      {
+        tag: "Criminal law",
+        text: "Burglary at common law traditionally required breaking and entering a dwelling at night with what intent?",
+        choices: ["Intent to commit a felony inside", "Intent to pay rent", "Intent to create a contract", "Intent to vote"],
+        correct: 0,
+        explanation: "Traditional burglary includes intent to commit a felony within the dwelling."
+      },
+      {
+        tag: "Property",
+        text: "A leasehold estate primarily gives the tenant what right?",
+        choices: ["Possession for a period of time", "Automatic ownership forever", "Power to tax land", "Right to ignore all covenants"],
+        correct: 0,
+        explanation: "A leasehold gives possessory rights for the lease term, subject to the lease."
+      },
+      {
+        tag: "Civil procedure",
+        text: "Personal jurisdiction is mainly concerned with what?",
+        choices: ["A court's power over a party", "The spelling of pleadings", "The jury's verdict form only", "The color of exhibits"],
+        correct: 0,
+        explanation: "Personal jurisdiction concerns whether a court has authority over the parties."
+      },
+      {
+        tag: "Contracts",
+        text: "A material breach generally gives the nonbreaching party which remedy?",
+        choices: ["Suspend performance and seek damages", "Must continue without objection", "Lose all rights automatically", "Become a criminal defendant"],
+        correct: 0,
+        explanation: "A material breach can excuse further performance and support a claim for damages."
       }
     ]
   },
@@ -409,7 +710,7 @@ const examCatalog = [
     title: "美国地产经纪人",
     subtitle: "房产执照模考",
     badge: "地产",
-    questionCount: 980,
+    questionCount: 8,
     updated: "2026",
     source: "State real estate licensing outlines",
     coverage: ["Agency", "Contracts", "Property rights", "State law", "Real estate math"],
@@ -440,6 +741,41 @@ const examCatalog = [
         choices: ["$12,000", "$18,000", "$24,000", "$30,000"],
         correct: 2,
         explanation: "$400,000 multiplied by 6% equals $24,000."
+      },
+      {
+        tag: "Licensing",
+        text: "A salesperson generally performs licensed real estate activities under whose supervision?",
+        choices: ["A licensed broker", "Any home seller", "A county recorder only", "A mortgage borrower"],
+        correct: 0,
+        explanation: "A real estate salesperson typically acts under the supervision of a licensed broker."
+      },
+      {
+        tag: "Disclosure",
+        text: "Which action best supports proper disclosure practice?",
+        choices: ["Disclose known material facts", "Hide defects until closing", "Avoid written records", "Tell only the buyer's lender"],
+        correct: 0,
+        explanation: "Known material facts should be disclosed according to applicable real estate law and duties."
+      },
+      {
+        tag: "Fair housing",
+        text: "Which statement best reflects fair housing compliance?",
+        choices: ["Apply qualification standards consistently", "Steer buyers based on protected class", "Refuse families with children automatically", "Advertise a preference for one religion"],
+        correct: 0,
+        explanation: "Consistent, lawful standards help avoid discriminatory housing practices."
+      },
+      {
+        tag: "Property rights",
+        text: "An easement most commonly gives a person what right?",
+        choices: ["Use another person's land for a specific purpose", "Own all minerals automatically", "Cancel a deed at will", "Avoid property taxes forever"],
+        correct: 0,
+        explanation: "An easement is a nonpossessory right to use land for a defined purpose."
+      },
+      {
+        tag: "Finance",
+        text: "In a mortgage loan, the principal balance refers to what?",
+        choices: ["The unpaid loan amount", "The broker's commission", "The property tax rate", "The appraisal license number"],
+        correct: 0,
+        explanation: "Principal is the amount borrowed that remains unpaid, excluding interest."
       }
     ]
   }

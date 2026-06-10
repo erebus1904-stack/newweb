@@ -67,6 +67,12 @@ const uiText = {
     localScore: "最近成绩",
     localNone: "暂无",
     localClear: "清除本地数据",
+    reviewMistakes: "复习错题",
+    clearMistakes: "清空错题",
+    noMistakes: "当前项目暂无错题。",
+    noMistakesDetail: "答错题目后，会在这里生成错题复习队列。",
+    practiceAction: "练习",
+    detailsAction: "详情",
     weakNone: "暂无",
     etaStart: "开始后估算",
     etaDays: (days) => `${days} 天`
@@ -141,6 +147,12 @@ const uiText = {
     localScore: "Last score",
     localNone: "None",
     localClear: "Clear local data",
+    reviewMistakes: "Review mistakes",
+    clearMistakes: "Clear mistakes",
+    noMistakes: "No mistakes for this program yet.",
+    noMistakesDetail: "Missed questions will appear here for focused review.",
+    practiceAction: "Practice",
+    detailsAction: "Details",
     weakNone: "None",
     etaStart: "Start to estimate",
     etaDays: (days) => `${days} days`
@@ -512,6 +524,7 @@ let questionIndex = 0;
 let answered = false;
 let mode = "study";
 let drillAnswers = [];
+let mistakeMode = false;
 const storageKey = "licenseAtlasLocalProgress";
 
 const elements = {
@@ -529,7 +542,9 @@ const elements = {
   resultCount: document.querySelector("#result-count"),
   report: document.querySelector("#report-panel"),
   language: document.querySelector("#language-select"),
-  clearLocalButton: document.querySelector("#clear-local-button")
+  clearLocalButton: document.querySelector("#clear-local-button"),
+  reviewMistakesButton: document.querySelector("#review-mistakes-button"),
+  clearMistakesButton: document.querySelector("#clear-mistakes-button")
 };
 
 function t(key, ...args) {
@@ -575,6 +590,11 @@ function questionKey(exam, index) {
   return `${exam.id}:${index}`;
 }
 
+function parseQuestionKey(key) {
+  const [examId, index] = key.split(":");
+  return { examId, index: Number(index) };
+}
+
 function saveExamProgress(examId, updater) {
   const store = readProgressStore();
   store[examId] = updater(getExamProgress(examId));
@@ -587,6 +607,17 @@ function uniqueValues(key) {
   return [t("all"), ...new Set(examCatalog.map((exam) => exam[key]))];
 }
 
+function replaceChildren(node, children) {
+  node.replaceChildren(...children);
+}
+
+function createTextNode(tagName, text, className) {
+  const node = document.createElement(tagName);
+  if (className) node.className = className;
+  node.textContent = text;
+  return node;
+}
+
 function populateFilters(preserve = true) {
   const previous = preserve
     ? { country: elements.country.value, region: elements.region.value, type: elements.type.value }
@@ -596,7 +627,12 @@ function populateFilters(preserve = true) {
     [elements.region, uniqueValues("region"), previous.region],
     [elements.type, uniqueValues("examType"), previous.type]
   ].forEach(([select, values, oldValue]) => {
-    select.innerHTML = values.map((value) => `<option value="${value}">${value}</option>`).join("");
+    replaceChildren(select, values.map((value) => {
+      const option = document.createElement("option");
+      option.value = value;
+      option.textContent = value;
+      return option;
+    }));
     select.value = values.includes(oldValue) ? oldValue : t("all");
   });
 }
@@ -639,28 +675,51 @@ function applyStaticTranslations() {
 function renderCatalog() {
   const exams = getFilteredExams();
   elements.resultCount.textContent = `${exams.length} ${t("programs")}`;
-  elements.catalog.innerHTML = exams.map((exam) => {
+  replaceChildren(elements.catalog, exams.map((exam) => {
     const text = p(exam);
-    return `
-      <a class="exam-card ${exam.id === currentExamId ? "selected" : ""}" data-exam-id="${exam.id}" href="./programs/${exam.id}.html">
-        <span class="card-badge">${text.badge}</span>
-        <h3>${text.title}</h3>
-        <p>${text.description}</p>
-        <dl class="cred-list">
-          <div><dt>${t("source")}</dt><dd>${exam.source}</dd></div>
-          <div><dt>${t("coverage")}</dt><dd>${text.coverage.slice(0, 3).join(listSeparator())}</dd></div>
-        </dl>
-        <div class="card-footer"><span>${exam.questionCount} ${t("questions")}</span><span>${exam.updated} ${t("updated")}</span></div>
-      </a>
-    `;
-  }).join("");
-  document.querySelectorAll(".exam-card").forEach((card) => {
-    card.addEventListener("click", (event) => {
-      if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
-      event.preventDefault();
-      selectExam(card.dataset.examId);
+    const card = document.createElement("article");
+    card.className = `exam-card ${exam.id === currentExamId ? "selected" : ""}`;
+    card.dataset.examId = exam.id;
+    card.append(
+      createTextNode("span", text.badge, "card-badge"),
+      createTextNode("h3", text.title),
+      createTextNode("p", text.description)
+    );
+
+    const list = document.createElement("dl");
+    list.className = "cred-list";
+    [
+      [t("source"), exam.source],
+      [t("coverage"), text.coverage.slice(0, 3).join(listSeparator())]
+    ].forEach(([label, value]) => {
+      const row = document.createElement("div");
+      row.append(createTextNode("dt", label), createTextNode("dd", value));
+      list.appendChild(row);
     });
-  });
+
+    const footer = document.createElement("div");
+    footer.className = "card-footer";
+    footer.append(
+      createTextNode("span", `${exam.questionCount} ${t("questions")}`),
+      createTextNode("span", `${exam.updated} ${t("updated")}`)
+    );
+
+    const actions = document.createElement("div");
+    actions.className = "exam-card-actions";
+    const practiceButton = document.createElement("button");
+    practiceButton.className = "ghost-button";
+    practiceButton.type = "button";
+    practiceButton.textContent = t("practiceAction");
+    practiceButton.addEventListener("click", () => selectExam(exam.id));
+    const detailsLink = document.createElement("a");
+    detailsLink.className = "text-button";
+    detailsLink.href = `./programs/${exam.id}.html`;
+    detailsLink.textContent = t("detailsAction");
+    actions.append(practiceButton, detailsLink);
+
+    card.append(list, footer, actions);
+    return card;
+  }));
 }
 
 function selectExam(examId) {
@@ -668,9 +727,22 @@ function selectExam(examId) {
   questionIndex = 0;
   drillAnswers = [];
   answered = false;
+  mistakeMode = false;
   elements.report.classList.add("hidden");
   renderExam();
   renderCatalog();
+}
+
+function getActiveQuestions(exam = getCurrentExam()) {
+  if (!mistakeMode || mode === "exam") {
+    return exam.questions.map((question, index) => ({ question, index }));
+  }
+  const wrongIndexes = getExamProgress(exam.id).wrongQuestionKeys
+    .map(parseQuestionKey)
+    .filter((entry) => entry.examId === exam.id && Number.isInteger(entry.index))
+    .map((entry) => entry.index)
+    .filter((index) => exam.questions[index]);
+  return [...new Set(wrongIndexes)].map((index) => ({ question: exam.questions[index], index }));
 }
 
 function getLocalWeakArea(exam, progress) {
@@ -699,9 +771,10 @@ function renderLearningStats(exam) {
 function renderLocalProgress() {
   const progress = getExamProgress();
   const accuracy = progress.answered ? Math.round((progress.correct / progress.answered) * 100) : 0;
+  const wrongCount = progress.wrongQuestionKeys.length;
   document.querySelector("#local-answered").textContent = progress.answered;
   document.querySelector("#local-accuracy").textContent = `${accuracy}%`;
-  document.querySelector("#local-wrong").textContent = progress.wrongQuestionKeys.length;
+  document.querySelector("#local-wrong").textContent = wrongCount;
   document.querySelector("#local-score").textContent = progress.lastScore === null ? t("localNone") : `${progress.lastScore}%`;
   document.querySelector("#local-title").textContent = t("localTitle");
   document.querySelector("#local-subtitle").textContent = t("localSubtitle");
@@ -710,6 +783,10 @@ function renderLocalProgress() {
   document.querySelector("#local-wrong-label").textContent = t("localWrong");
   document.querySelector("#local-score-label").textContent = t("localScore");
   document.querySelector("#clear-local-button").textContent = t("localClear");
+  elements.reviewMistakesButton.textContent = t("reviewMistakes");
+  elements.reviewMistakesButton.disabled = wrongCount === 0;
+  elements.clearMistakesButton.textContent = t("clearMistakes");
+  elements.clearMistakesButton.disabled = wrongCount === 0;
 }
 
 function renderStudyPlan(exam) {
@@ -719,7 +796,7 @@ function renderStudyPlan(exam) {
     t("planPractice", text.coverage[0], Math.min(30, exam.questions.length * 10)),
     mode === "exam" ? t("planDrill") : t("planStudy")
   ];
-  document.querySelector("#study-plan").innerHTML = plan.map((item) => `<li>${item}</li>`).join("");
+  replaceChildren(document.querySelector("#study-plan"), plan.map((item) => createTextNode("li", item)));
 }
 
 function renderExam() {
@@ -740,19 +817,38 @@ function renderExam() {
 function renderQuestion() {
   answered = false;
   const exam = getCurrentExam();
-  const question = exam.questions[questionIndex];
+  const activeQuestions = getActiveQuestions(exam);
+  if (questionIndex >= activeQuestions.length) questionIndex = 0;
+  if (!activeQuestions.length) {
+    document.querySelector("#question-tag").textContent = t("reviewMistakes");
+    document.querySelector("#question-progress").textContent = "0 / 0";
+    document.querySelector("#question-text").textContent = t("noMistakes");
+    elements.explanation.textContent = t("noMistakesDetail");
+    elements.explanation.classList.remove("hidden");
+    elements.answers.replaceChildren();
+    elements.skipButton.hidden = true;
+    elements.nextButton.disabled = true;
+    elements.nextButton.textContent = t("next");
+    return;
+  }
+  elements.nextButton.disabled = false;
+  const { question } = activeQuestions[questionIndex];
   document.querySelector("#question-tag").textContent = question.tag;
-  document.querySelector("#question-progress").textContent = t("progress", questionIndex + 1, exam.questions.length);
+  document.querySelector("#question-progress").textContent = t("progress", questionIndex + 1, activeQuestions.length);
   document.querySelector("#question-text").textContent = question.text;
   elements.explanation.classList.add("hidden");
   elements.explanation.textContent = mode === "exam" ? t("hiddenExplanation") : "";
-  elements.answers.innerHTML = "";
+  elements.answers.replaceChildren();
   elements.skipButton.hidden = mode === "exam";
-  elements.nextButton.textContent = mode === "exam" && questionIndex === exam.questions.length - 1 ? t("submit") : t("next");
+  elements.nextButton.textContent = mode === "exam" && questionIndex === activeQuestions.length - 1 ? t("submit") : t("next");
   question.choices.forEach((choice, index) => {
     const button = document.createElement("button");
     button.className = "answer";
-    button.innerHTML = `<span class="answer-key">${String.fromCharCode(65 + index)}</span><span>${choice}</span>`;
+    button.type = "button";
+    button.append(
+      createTextNode("span", String.fromCharCode(65 + index), "answer-key"),
+      createTextNode("span", choice)
+    );
     button.addEventListener("click", () => selectAnswer(index));
     elements.answers.appendChild(button);
   });
@@ -762,9 +858,11 @@ function selectAnswer(index) {
   if (answered) return;
   answered = true;
   const exam = getCurrentExam();
-  const question = exam.questions[questionIndex];
+  const activeQuestion = getActiveQuestions(exam)[questionIndex];
+  if (!activeQuestion) return;
+  const { question, index: originalIndex } = activeQuestion;
   const isCorrect = index === question.correct;
-  drillAnswers[questionIndex] = index;
+  drillAnswers[originalIndex] = index;
   Array.from(elements.answers.children).forEach((button, buttonIndex) => {
     if (mode === "study" && buttonIndex === question.correct) button.classList.add("correct");
     if (mode === "study" && buttonIndex === index && !isCorrect) button.classList.add("wrong");
@@ -773,8 +871,8 @@ function selectAnswer(index) {
   if (mode === "study") {
     saveExamProgress(exam.id, (progress) => {
       const wrongSet = new Set(progress.wrongQuestionKeys || []);
-      if (isCorrect) wrongSet.delete(questionKey(exam, questionIndex));
-      else wrongSet.add(questionKey(exam, questionIndex));
+      if (isCorrect) wrongSet.delete(questionKey(exam, originalIndex));
+      else wrongSet.add(questionKey(exam, originalIndex));
       return {
         ...progress,
         answered: progress.answered + 1,
@@ -790,36 +888,38 @@ function selectAnswer(index) {
 
 function advanceQuestion() {
   const exam = getCurrentExam();
-  if (mode === "exam" && questionIndex === exam.questions.length - 1) {
+  const activeQuestions = getActiveQuestions(exam);
+  if (!activeQuestions.length) return;
+  if (mode === "exam" && questionIndex === activeQuestions.length - 1) {
     showReport();
     return;
   }
-  questionIndex = (questionIndex + 1) % exam.questions.length;
+  questionIndex = (questionIndex + 1) % activeQuestions.length;
   renderQuestion();
 }
 
 function showReport() {
   const exam = getCurrentExam();
-  const correctCount = exam.questions.reduce((total, question, index) => total + (drillAnswers[index] === question.correct ? 1 : 0), 0);
-  const score = Math.round((correctCount / exam.questions.length) * 100);
-  const wrongQuestions = exam.questions
-    .map((question, index) => ({ question, index }))
+  const activeQuestions = getActiveQuestions(exam);
+  const correctCount = activeQuestions.reduce((total, { question, index }) => total + (drillAnswers[index] === question.correct ? 1 : 0), 0);
+  const score = Math.round((correctCount / activeQuestions.length) * 100);
+  const wrongQuestions = activeQuestions
     .filter(({ question, index }) => drillAnswers[index] !== question.correct);
   document.querySelector("#report-score").textContent = `${score}%`;
-  document.querySelector("#report-correct").textContent = `${correctCount} / ${exam.questions.length}`;
+  document.querySelector("#report-correct").textContent = `${correctCount} / ${activeQuestions.length}`;
   document.querySelector("#report-advice").textContent = score >= 80 ? t("advicePass") : score >= 60 ? t("advicePractice") : t("adviceStudy");
   document.querySelector("#report-detail").textContent = wrongQuestions.length === 0
     ? t("perfectReport")
     : t("wrongReport", wrongQuestions.map(({ question }) => question.tag).join(listSeparator()));
   saveExamProgress(exam.id, (progress) => {
     const wrongSet = new Set(progress.wrongQuestionKeys || []);
-    exam.questions.forEach((question, index) => {
+    activeQuestions.forEach(({ question, index }) => {
       if (drillAnswers[index] === question.correct) wrongSet.delete(questionKey(exam, index));
       else wrongSet.add(questionKey(exam, index));
     });
     return {
       ...progress,
-      answered: progress.answered + exam.questions.length,
+      answered: progress.answered + activeQuestions.length,
       correct: progress.correct + correctCount,
       wrongQuestionKeys: Array.from(wrongSet),
       lastScore: score,
@@ -833,12 +933,14 @@ function resetSession() {
   questionIndex = 0;
   drillAnswers = [];
   answered = false;
+  if (mode === "exam") mistakeMode = false;
   elements.report.classList.add("hidden");
   renderQuestion();
 }
 
 function setMode(nextMode) {
   mode = nextMode;
+  if (mode === "exam") mistakeMode = false;
   document.querySelectorAll(".mode").forEach((button) => {
     button.classList.toggle("active", button.dataset.mode === mode);
   });
@@ -867,9 +969,33 @@ function clearCurrentLocalProgress() {
   const store = readProgressStore();
   delete store[currentExamId];
   writeProgressStore(store);
+  mistakeMode = false;
   renderLearningStats(getCurrentExam());
   renderStudyPlan(getCurrentExam());
   renderLocalProgress();
+  resetSession();
+}
+
+function reviewMistakes() {
+  if (!getExamProgress().wrongQuestionKeys.length) return;
+  mode = "study";
+  mistakeMode = true;
+  questionIndex = 0;
+  drillAnswers = [];
+  elements.report.classList.add("hidden");
+  document.querySelectorAll(".mode").forEach((button) => {
+    button.classList.toggle("active", button.dataset.mode === mode);
+  });
+  renderExam();
+}
+
+function clearCurrentMistakes() {
+  saveExamProgress(currentExamId, (progress) => ({
+    ...progress,
+    wrongQuestionKeys: []
+  }));
+  mistakeMode = false;
+  resetSession();
 }
 
 document.querySelectorAll(".nav-item").forEach((button) => {
@@ -897,6 +1023,8 @@ elements.nextButton.addEventListener("click", advanceQuestion);
 elements.skipButton.addEventListener("click", advanceQuestion);
 elements.resetButton.addEventListener("click", resetSession);
 elements.clearLocalButton.addEventListener("click", clearCurrentLocalProgress);
+elements.reviewMistakesButton.addEventListener("click", reviewMistakes);
+elements.clearMistakesButton.addEventListener("click", clearCurrentMistakes);
 
 populateFilters(false);
 applyStaticTranslations();
