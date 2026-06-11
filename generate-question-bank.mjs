@@ -17,6 +17,8 @@ const fallbackWrongs = [
   "Delay the decision until unrelated information is gathered",
   "Choose the option only because it sounds familiar",
   "Ignore the constraint stated in the scenario",
+  "Select the most extreme response without checking the facts",
+  "Use the same action for every situation",
 ];
 
 function makeQuestions(prefix, items) {
@@ -24,9 +26,21 @@ function makeQuestions(prefix, items) {
     const item = items[index % items.length];
     const slot = index % 4;
     const wrongs = item.wrongs || fallbackWrongs;
-    const choices = Array.from({ length: 4 }, (_, choiceIndex) =>
-      choiceIndex === slot ? item.answer : wrongs[(index + choiceIndex) % wrongs.length]
-    );
+    const choices = [];
+    let wrongIndex = index;
+    for (let choiceIndex = 0; choiceIndex < 4; choiceIndex += 1) {
+      if (choiceIndex === slot) {
+        choices.push(item.answer);
+      } else {
+        let candidate = wrongs[wrongIndex % wrongs.length];
+        while (choices.includes(candidate) || candidate === item.answer) {
+          wrongIndex += 1;
+          candidate = wrongs[wrongIndex % wrongs.length];
+        }
+        choices.push(candidate);
+        wrongIndex += 1;
+      }
+    }
 
     return {
       tag: item.tag,
