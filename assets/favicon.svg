@@ -1,4 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="LicenseAtlas logo">
-  <rect width="64" height="64" rx="12" fill="#f3c766"/>
-  <text x="32" y="39" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="800" fill="#17211d">LA</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="LicenseAtlas PMP logo">
+  <rect width="64" height="64" rx="14" fill="#134e48"/>
+  <circle cx="49" cy="15" r="5" fill="#d6b25e"/>
+  <rect x="14" y="48" width="36" height="4" rx="2" fill="#d6b25e"/>
+  <text x="32" y="39" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="800" fill="#ffffff">PM</text>
 </svg>

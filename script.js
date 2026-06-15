@@ -96,63 +96,63 @@ const uiText = {
     navLawSmall: "Bar, Real Estate",
     todayGoal: "Today",
     languageLabel: "Language",
-    startMock: "Start short drill",
+    startMock: "Start mock exam",
     searchLabel: "Search",
     countryLabel: "Country",
     regionLabel: "Area",
     typeLabel: "Category",
-    studyMode: "Study",
-    examMode: "Drill",
+    studyMode: "Practice",
+    examMode: "Mock Exam",
     sourceLabel: "Source",
     coverageLabel: "Coverage",
     updatedLabel: "Updated",
     restart: "Restart",
     skip: "Skip",
     next: "Next",
-    submit: "Finish drill",
-    reportTitle: "Drill report",
+    submit: "Finish mock exam",
+    reportTitle: "Session results",
     scoreLabel: "Score",
     correctLabel: "Correct",
-    adviceLabel: "Advice",
+    adviceLabel: "Next action",
     doneLabel: "Done",
     accuracyLabel: "Accuracy",
     weakLabel: "Weak area",
     etaLabel: "ETA",
     nextStep: "Next steps",
-    catalogTitle: "Question banks organized by industry, credential, and training focus",
+    catalogTitle: "PMP and CAPM question banks",
     all: "All",
-    programs: "programs",
+    programs: "question banks",
     source: "Source",
     coverage: "Covers",
     questions: "questions",
     updated: "updated",
-    dailyStudy: "30 questions + one mistake review",
-    dailyDrill: "Finish one short drill and review mistakes",
+    dailyStudy: "Study explanations as you answer",
+    dailyDrill: "Finish one mock exam and review missed questions",
     progress: (index, total) => `${index} / ${total}`,
-    hiddenExplanation: "In drill mode, explanations appear after completion.",
-    advicePass: "Nearly ready",
-    advicePractice: "Keep strengthening",
-    adviceStudy: "Return to study mode",
-    perfectReport: "You answered every drill question correctly. Try another set to confirm mastery.",
-    wrongReport: (tags) => `Review first: ${tags}. Switch to study mode to read each explanation.`,
-    planWeak: (weak) => `Review weak area first: ${weak}`,
-    planPractice: (topic, count) => `Complete ${count} practice questions on ${topic}`,
-    planDrill: "After the drill, review every missed explanation",
-    planStudy: "Read each explanation before moving to the next question",
-    localTitle: "Local study data",
-    localSubtitle: "Saved only in this browser",
+    hiddenExplanation: "Mock Exam mode hides explanations until the session report.",
+    advicePass: "Review missed items",
+    advicePractice: "Rebuild weak domains",
+    adviceStudy: "Return to Practice mode",
+    perfectReport: "You answered every mock exam question correctly. Review the domain mix before starting another session.",
+    wrongReport: (tags) => `Review these patterns first: ${tags}. Switch to Practice mode to read each explanation.`,
+    planWeak: (weak) => `Current weak area: ${weak}`,
+    planPractice: (topic, count) => `Study ${count} questions and read each explanation`,
+    planDrill: "After the mock exam, review missed explanations before retesting",
+    planStudy: "Practice mode shows the explanation immediately after each answer",
+    localTitle: "Study record",
+    localSubtitle: "Stored only on this device",
     localAnswered: "Answered",
     localAccuracy: "Accuracy",
     localWrong: "Mistakes",
     localScore: "Last score",
     localNone: "None",
-    localClear: "Clear local data",
+    localClear: "Reset browser progress",
     reviewMistakes: "Review mistakes",
     clearMistakes: "Clear mistakes",
-    noMistakes: "No mistakes for this program yet.",
+    noMistakes: "No missed questions for this bank yet.",
     noMistakesDetail: "Missed questions will appear here for focused review.",
-    practiceAction: "Practice",
-    detailsAction: "Details",
+    practiceAction: "Use this bank",
+    detailsAction: "Study center",
     weakNone: "None",
     etaStart: "Start to estimate",
     etaDays: (days) => `${days} days`
@@ -466,7 +466,8 @@ const programText = {
     cfa: { title: "CFA Finance Drills", subtitle: "CFA Level I/II/III", badge: "Finance", description: "Formula lookup, timed drills, and structured practice for finance candidates.", coverage: ["Ethics", "Quant", "Portfolio", "Equity", "Fixed income"] },
     finra: { title: "FINRA Securities License", subtitle: "SIE & Series 7", badge: "Securities", description: "Fast regulation checks and compliance trap questions for securities license prep.", coverage: ["SIE", "Series 7", "Regulation", "Suitability", "Products"] },
     "fe-pe": { title: "FE/PE Engineer Drills", subtitle: "US professional engineer prep", badge: "Engineering", description: "Engineering economics, handbook lookup, and formula-driven short drills.", coverage: ["Engineering economics", "Statics", "Fluids", "Ethics", "Handbook lookup"] },
-    pmp: { title: "PMP Project Management Drills", subtitle: "PMI project management certification", badge: "PMP", description: "Scenario-based PMP practice for people, process, business environment, agile, hybrid, and predictive delivery.", coverage: ["People", "Process", "Business environment", "Agile", "Hybrid delivery"] },
+    pmp: { title: "PMP Practice and Mock Exam", subtitle: "For experienced project leaders", badge: "PMP", description: "Study all 250 questions, then run a 180-question mock exam by PMP domain weight.", coverage: ["People", "Process", "Business environment", "Agile", "Hybrid delivery"] },
+    capm: { title: "CAPM Practice and Mock Exam", subtitle: "For project management beginners", badge: "CAPM", description: "Study all 200 questions, then run a 150-question mock exam by CAPM domain weight.", coverage: ["Fundamentals", "Predictive", "Agile", "Business analysis"] },
     "cloud-architect": { title: "Cloud Architect Certification", subtitle: "AWS & GCP question bank", badge: "Cloud", description: "Scenario questions, architecture diagram recognition, and cloud service selection practice.", coverage: ["Architecture", "Security", "Networking", "Reliability", "Cost"] },
     bar: { title: "US Bar Law Drills", subtitle: "NY & CA Bar", badge: "Law", description: "Timed MBE practice, MEE model-answer comparison, and long-reading training.", coverage: ["MBE", "MEE", "Evidence", "Contracts", "Constitutional law"] },
     "real-estate": { title: "US Real Estate Agent", subtitle: "Real estate license drills", badge: "Real estate", description: "State-specific law switching, real estate math, and license-focused short drills.", coverage: ["Agency", "Contracts", "Property rights", "State law", "Real estate math"] }
@@ -518,13 +519,16 @@ const programText = {
 };
 
 let currentLanguage = "en";
-let selectedTrack = "all";
-let currentExamId = examCatalog[0].id;
+const pmpExam = examCatalog.find((exam) => exam.id === "pmp") || examCatalog[0];
+const visibleExamCatalog = examCatalog.filter((exam) => ["pmp", "capm"].includes(exam.id));
+const requestedExamId = new URLSearchParams(window.location.search).get("exam");
+let currentExamId = visibleExamCatalog.some((exam) => exam.id === requestedExamId) ? requestedExamId : pmpExam.id;
 let questionIndex = 0;
 let answered = false;
 let mode = "study";
 let drillAnswers = [];
 let mistakeMode = false;
+let examSessionQuestionIndexes = [];
 const storageKey = "licenseAtlasLocalProgress";
 
 const elements = {
@@ -534,12 +538,9 @@ const elements = {
   skipButton: document.querySelector("#skip-button"),
   resetButton: document.querySelector("#reset-button"),
   startDrillButton: document.querySelector("#start-exam-button"),
-  search: document.querySelector("#exam-search"),
-  country: document.querySelector("#country-filter"),
-  region: document.querySelector("#region-filter"),
-  type: document.querySelector("#type-filter"),
   catalog: document.querySelector("#catalog-grid"),
   resultCount: document.querySelector("#result-count"),
+  modeHelp: document.querySelector("#mode-help"),
   report: document.querySelector("#report-panel"),
   language: document.querySelector("#language-select"),
   clearLocalButton: document.querySelector("#clear-local-button"),
@@ -557,7 +558,7 @@ function p(exam) {
 }
 
 function getCurrentExam() {
-  return examCatalog.find((exam) => exam.id === currentExamId) || examCatalog[0];
+  return visibleExamCatalog.find((exam) => exam.id === currentExamId) || pmpExam;
 }
 
 function listSeparator() {
@@ -603,10 +604,6 @@ function saveExamProgress(examId, updater) {
   renderLocalProgress();
 }
 
-function uniqueValues(key) {
-  return [t("all"), ...new Set(examCatalog.map((exam) => exam[key]))];
-}
-
 function replaceChildren(node, children) {
   node.replaceChildren(...children);
 }
@@ -618,49 +615,8 @@ function createTextNode(tagName, text, className) {
   return node;
 }
 
-function populateFilters(preserve = true) {
-  const previous = preserve
-    ? { country: elements.country.value, region: elements.region.value, type: elements.type.value }
-    : {};
-  [
-    [elements.country, uniqueValues("country"), previous.country],
-    [elements.region, uniqueValues("region"), previous.region],
-    [elements.type, uniqueValues("examType"), previous.type]
-  ].forEach(([select, values, oldValue]) => {
-    replaceChildren(select, values.map((value) => {
-      const option = document.createElement("option");
-      option.value = value;
-      option.textContent = value;
-      return option;
-    }));
-    select.value = values.includes(oldValue) ? oldValue : t("all");
-  });
-}
-
-function getFilterValue(select) {
-  return select.value === t("all") ? "all" : select.value;
-}
-
 function getFilteredExams() {
-  const query = elements.search.value.trim().toLowerCase();
-  return examCatalog.filter((exam) => {
-    const text = p(exam);
-    const haystack = [
-      text.title,
-      text.subtitle,
-      text.description,
-      text.coverage.join(" "),
-      exam.country,
-      exam.region,
-      exam.examType,
-      exam.source
-    ].join(" ").toLowerCase();
-    return (!query || haystack.includes(query)) &&
-      (selectedTrack === "all" || exam.track === selectedTrack) &&
-      (getFilterValue(elements.country) === "all" || exam.country === elements.country.value) &&
-      (getFilterValue(elements.region) === "all" || exam.region === elements.region.value) &&
-      (getFilterValue(elements.type) === "all" || exam.examType === elements.type.value);
-  });
+  return visibleExamCatalog;
 }
 
 function applyStaticTranslations() {
@@ -668,15 +624,16 @@ function applyStaticTranslations() {
   document.querySelectorAll("[data-i18n]").forEach((node) => {
     node.textContent = t(node.dataset.i18n);
   });
-  elements.search.placeholder = "NCLEX-RN, USMLE, USCPA, CFA, FINRA...";
-  document.querySelector("#daily-goal").textContent = mode === "exam" ? t("dailyDrill") : t("dailyStudy");
+  const dailyGoal = document.querySelector("#daily-goal");
+  if (dailyGoal) dailyGoal.textContent = mode === "exam" ? t("dailyDrill") : t("dailyStudy");
 }
 
 function renderCatalog() {
   const exams = getFilteredExams();
-  elements.resultCount.textContent = `${exams.length} ${t("programs")}`;
+  elements.resultCount.textContent = `${exams.length} ${t("programs")} available`;
   replaceChildren(elements.catalog, exams.map((exam) => {
     const text = p(exam);
+    const examConfig = exam.examConfig || {};
     const card = document.createElement("article");
     card.className = `exam-card ${exam.id === currentExamId ? "selected" : ""}`;
     card.dataset.examId = exam.id;
@@ -700,8 +657,8 @@ function renderCatalog() {
     const footer = document.createElement("div");
     footer.className = "card-footer";
     footer.append(
-      createTextNode("span", `${exam.questionCount} ${t("questions")}`),
-      createTextNode("span", `${exam.updated} ${t("updated")}`)
+      createTextNode("span", `Practice ${examConfig.practiceQuestionCount || exam.questionCount}`),
+      createTextNode("span", `Mock ${examConfig.examQuestionCount || exam.questionCount}`)
     );
 
     const actions = document.createElement("div");
@@ -709,7 +666,7 @@ function renderCatalog() {
     const practiceButton = document.createElement("button");
     practiceButton.className = "ghost-button";
     practiceButton.type = "button";
-    practiceButton.textContent = t("practiceAction");
+    practiceButton.textContent = `Use ${text.badge} bank`;
     practiceButton.addEventListener("click", () => selectExam(exam.id));
     const detailsLink = document.createElement("a");
     detailsLink.className = "text-button";
@@ -726,6 +683,7 @@ function selectExam(examId) {
   currentExamId = examId;
   questionIndex = 0;
   drillAnswers = [];
+  examSessionQuestionIndexes = [];
   answered = false;
   mistakeMode = false;
   elements.report.classList.add("hidden");
@@ -734,7 +692,15 @@ function selectExam(examId) {
 }
 
 function getActiveQuestions(exam = getCurrentExam()) {
-  if (!mistakeMode || mode === "exam") {
+  if (mode === "exam") {
+    if (!examSessionQuestionIndexes.length) {
+      examSessionQuestionIndexes = buildExamQuestionIndexes(exam);
+    }
+    return examSessionQuestionIndexes
+      .map((index) => ({ question: exam.questions[index], index }))
+      .filter((entry) => entry.question);
+  }
+  if (!mistakeMode) {
     return exam.questions.map((question, index) => ({ question, index }));
   }
   const wrongIndexes = getExamProgress(exam.id).wrongQuestionKeys
@@ -743,6 +709,39 @@ function getActiveQuestions(exam = getCurrentExam()) {
     .map((entry) => entry.index)
     .filter((index) => exam.questions[index]);
   return [...new Set(wrongIndexes)].map((index) => ({ question: exam.questions[index], index }));
+}
+
+function buildExamQuestionIndexes(exam) {
+  const targets = exam.examConfig?.domainTargets;
+  const fallbackCount = exam.examConfig?.examQuestionCount || exam.questions.length;
+  if (!targets?.length) {
+    return exam.questions.map((_, index) => index).slice(0, fallbackCount);
+  }
+
+  const buckets = targets.map((target) => ({
+    domain: target.domain,
+    indexes: exam.questions
+      .map((question, index) => ({ question, index }))
+      .filter(({ question }) => question.domain === target.domain)
+      .slice(0, target.mockCount)
+      .map(({ index }) => index)
+  }));
+
+  const interleaved = [];
+  let offset = 0;
+  let hasMore = true;
+  while (hasMore) {
+    hasMore = false;
+    for (const bucket of buckets) {
+      if (bucket.indexes[offset] !== undefined) {
+        interleaved.push(bucket.indexes[offset]);
+        hasMore = true;
+      }
+    }
+    offset += 1;
+  }
+
+  return interleaved.slice(0, fallbackCount);
 }
 
 function getLocalWeakArea(exam, progress) {
@@ -789,11 +788,25 @@ function renderLocalProgress() {
   elements.clearMistakesButton.disabled = wrongCount === 0;
 }
 
+function getModeHelp(exam) {
+  const config = exam.examConfig || {};
+  const practiceCount = config.practiceQuestionCount || exam.questions.length;
+  const mockCount = config.examQuestionCount || exam.questions.length;
+  if (mode === "exam") {
+    return `Mock Exam: ${mockCount} questions selected by blueprint weight. Explanations appear after the session report.`;
+  }
+  return `Practice: study all ${practiceCount} questions with immediate explanations after each answer.`;
+}
+
 function renderStudyPlan(exam) {
-  const text = p(exam);
+  const config = exam.examConfig || {};
+  const practiceCount = config.practiceQuestionCount || exam.questions.length;
+  const mockCount = config.examQuestionCount || exam.questions.length;
   const plan = [
     t("planWeak", getLocalWeakArea(exam, getExamProgress(exam.id))),
-    t("planPractice", text.coverage[0], Math.min(30, exam.questions.length * 10)),
+    mode === "exam"
+      ? `Complete the ${mockCount}-question mock, then review every missed explanation.`
+      : `Work through the ${practiceCount}-question bank before starting a mock exam.`,
     mode === "exam" ? t("planDrill") : t("planStudy")
   ];
   replaceChildren(document.querySelector("#study-plan"), plan.map((item) => createTextNode("li", item)));
@@ -807,7 +820,9 @@ function renderExam() {
   document.querySelector("#source-name").textContent = exam.source;
   document.querySelector("#source-coverage").textContent = text.coverage.join(listSeparator());
   document.querySelector("#source-updated").textContent = exam.updated;
-  document.querySelector("#daily-goal").textContent = mode === "exam" ? t("dailyDrill") : t("dailyStudy");
+  if (elements.modeHelp) elements.modeHelp.textContent = getModeHelp(exam);
+  const dailyGoal = document.querySelector("#daily-goal");
+  if (dailyGoal) dailyGoal.textContent = mode === "exam" ? t("dailyDrill") : t("dailyStudy");
   renderLearningStats(exam);
   renderStudyPlan(exam);
   renderLocalProgress();
@@ -932,6 +947,9 @@ function showReport() {
 function resetSession() {
   questionIndex = 0;
   drillAnswers = [];
+  if (mode === "exam" && !examSessionQuestionIndexes.length) {
+    examSessionQuestionIndexes = buildExamQuestionIndexes(getCurrentExam());
+  }
   answered = false;
   if (mode === "exam") mistakeMode = false;
   elements.report.classList.add("hidden");
@@ -941,6 +959,7 @@ function resetSession() {
 function setMode(nextMode) {
   mode = nextMode;
   if (mode === "exam") mistakeMode = false;
+  examSessionQuestionIndexes = mode === "exam" ? buildExamQuestionIndexes(getCurrentExam()) : [];
   document.querySelectorAll(".mode").forEach((button) => {
     button.classList.toggle("active", button.dataset.mode === mode);
   });
@@ -953,6 +972,7 @@ function refreshForFilters() {
   if (matches[0] && !matches.some((exam) => exam.id === currentExamId)) {
     currentExamId = matches[0].id;
     questionIndex = 0;
+    examSessionQuestionIndexes = [];
   }
   renderExam();
   renderCatalog();
@@ -961,7 +981,6 @@ function refreshForFilters() {
 function setLanguage(language) {
   currentLanguage = language;
   applyStaticTranslations();
-  populateFilters(true);
   refreshForFilters();
 }
 
@@ -998,26 +1017,13 @@ function clearCurrentMistakes() {
   resetSession();
 }
 
-document.querySelectorAll(".nav-item").forEach((button) => {
-  button.addEventListener("click", () => {
-    selectedTrack = button.dataset.track;
-    document.querySelectorAll(".nav-item").forEach((item) => item.classList.remove("active"));
-    button.classList.add("active");
-    const firstMatch = getFilteredExams()[0];
-    if (firstMatch) currentExamId = firstMatch.id;
-    refreshForFilters();
-  });
-});
-
 document.querySelectorAll(".mode").forEach((button) => {
   button.addEventListener("click", () => setMode(button.dataset.mode));
 });
 
-[elements.search, elements.country, elements.region, elements.type].forEach((control) => {
-  control.addEventListener("input", refreshForFilters);
-});
-
-elements.language.addEventListener("change", () => setLanguage(elements.language.value));
+if (elements.language) {
+  elements.language.addEventListener("change", () => setLanguage(elements.language.value));
+}
 elements.startDrillButton.addEventListener("click", () => {
   setMode("exam");
   document.querySelector("#practice-workspace")?.scrollIntoView({
@@ -1341,7 +1347,6 @@ cleanProgramText.fr = programText.en;
 Object.assign(uiText, cleanUiText);
 Object.assign(programText, cleanProgramText);
 
-populateFilters(false);
 applyStaticTranslations();
 renderExam();
 renderCatalog();

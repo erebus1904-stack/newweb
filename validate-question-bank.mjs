@@ -3,9 +3,6 @@ import vm from "node:vm";
 
 const args = new Set(process.argv.slice(2));
 const ciMode = args.has("--ci");
-const expectedExamCount = 10;
-const expectedQuestionsPerExam = 100;
-const expectedTotalQuestions = expectedExamCount * expectedQuestionsPerExam;
 const mojibakePatterns = [/�/, /銆/, /娴/, /鐭/, /鞚/, /茅/, /谩/, /脡/, /锚/];
 const answerLabels = ["A", "B", "C", "D"];
 
@@ -60,8 +57,8 @@ function validateExam(exam) {
   const tagDistribution = {};
   const answerDistribution = { A: 0, B: 0, C: 0, D: 0 };
 
-  if (exam.questionCount !== questions.length || questions.length !== expectedQuestionsPerExam) {
-    addIssue(errors, "count_mismatch", `${exam.id} has ${exam.questionCount}/${questions.length} questions; expected ${expectedQuestionsPerExam}.`);
+  if (exam.questionCount !== questions.length) {
+    addIssue(errors, "count_mismatch", `${exam.id} declares ${exam.questionCount} questions but contains ${questions.length}.`);
   }
 
   questions.forEach((question, index) => {
@@ -146,13 +143,11 @@ function validateExam(exam) {
 function buildReport(examCatalog) {
   const exams = examCatalog.map(validateExam);
   const totalQuestions = examCatalog.reduce((sum, exam) => sum + (Array.isArray(exam.questions) ? exam.questions.length : 0), 0);
+  const declaredTotalQuestions = examCatalog.reduce((sum, exam) => sum + (Number.isInteger(exam.questionCount) ? exam.questionCount : 0), 0);
   const globalErrors = [];
 
-  if (examCatalog.length !== expectedExamCount) {
-    addIssue(globalErrors, "exam_count_mismatch", `Expected ${expectedExamCount} exams, found ${examCatalog.length}.`);
-  }
-  if (totalQuestions !== expectedTotalQuestions) {
-    addIssue(globalErrors, "total_count_mismatch", `Expected ${expectedTotalQuestions} total questions, found ${totalQuestions}.`);
+  if (totalQuestions !== declaredTotalQuestions) {
+    addIssue(globalErrors, "total_count_mismatch", `Declared ${declaredTotalQuestions} total questions but found ${totalQuestions}.`);
   }
 
   const totalErrors = globalErrors.length + exams.reduce((sum, exam) => sum + exam.errors.length, 0);
@@ -164,9 +159,7 @@ function buildReport(examCatalog) {
     generatedAt: new Date().toISOString(),
     status,
     overallScore,
-    expectedExamCount,
-    expectedQuestionsPerExam,
-    expectedTotalQuestions,
+    declaredTotalQuestions,
     totalExams: examCatalog.length,
     totalQuestions,
     totalErrors,
@@ -242,7 +235,7 @@ writeFileSync("reports/question-bank-report.md", toMarkdown(report), "utf8");
 printSummary(report);
 
 const ciFailure = report.totalErrors > 0 ||
-  report.totalQuestions !== expectedTotalQuestions ||
+  report.totalQuestions !== report.declaredTotalQuestions ||
   report.exams.some((exam) => exam.score < 60 || exam.warnings.some((warning) => warning.code === "mojibake" || warning.code === "duplicate_text"));
 
 if (ciMode && ciFailure) {
