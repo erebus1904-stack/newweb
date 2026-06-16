@@ -19,6 +19,7 @@ const capmGuides = [
   "guides/capm-exam-timing-strategy.html",
   "guides/capm-core-concepts.html",
   "guides/capm-predictive-project-management.html",
+  "guides/capm-agile-scrum-kanban.html",
 ];
 
 const allGuides = [...pmpGuides, ...capmGuides];
