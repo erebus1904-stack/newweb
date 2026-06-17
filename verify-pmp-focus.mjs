@@ -29,6 +29,7 @@ const capmArticlePaths = [
   "guides/capm-core-concepts.html",
   "guides/capm-predictive-project-management.html",
   "guides/capm-agile-scrum-kanban.html",
+  "guides/capm-business-analysis-study.html",
 ];
 
 const guideFiles = guidePaths.map((path) => ({
@@ -131,8 +132,8 @@ const checks = [
     pass: articlePaths.every((path) => files.sitemap.includes(`https://starrycesium.com/${path}`)),
   },
   {
-    name: "five CAPM long guides exist with visuals",
-    pass: capmArticleFiles.length === 5 &&
+    name: "six CAPM long guides exist with visuals",
+    pass: capmArticleFiles.length === 6 &&
       capmArticleFiles.every((article) => /<article class="guide-article article-page">/.test(article.content)) &&
       capmArticleFiles.every((article) => /<figure class="article-visual"/.test(article.content)),
   },

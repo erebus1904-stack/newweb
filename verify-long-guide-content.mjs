@@ -20,6 +20,7 @@ const capmGuides = [
   "guides/capm-core-concepts.html",
   "guides/capm-predictive-project-management.html",
   "guides/capm-agile-scrum-kanban.html",
+  "guides/capm-business-analysis-study.html",
 ];
 
 const allGuides = [...pmpGuides, ...capmGuides];
