@@ -81,13 +81,13 @@ checkExam(
 
 checkExam(
   "capm",
-  200,
+  1000,
   150,
   {
-    "Project Management Fundamentals and Core Concepts": 72,
-    "Predictive, Plan-Based Methodologies": 34,
-    "Agile Frameworks and Methodologies": 40,
-    "Business Analysis Frameworks": 54,
+    "Project Management Fundamentals and Core Concepts": 360,
+    "Predictive, Plan-Based Methodologies": 170,
+    "Agile Frameworks and Methodologies": 200,
+    "Business Analysis Frameworks": 270,
   },
   {
     "Project Management Fundamentals and Core Concepts": 54,

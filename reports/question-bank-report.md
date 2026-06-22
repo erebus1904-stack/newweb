@@ -1,10 +1,10 @@
 # Question Bank Quality Report
 
-Generated: 2026-06-15T07:52:22.427Z
+Generated: 2026-06-22T14:31:43.363Z
 Status: PASS
 Overall score: 100/100
 Total exams: 2
-Total questions: 450
+Total questions: 1250
 Errors: 0
 Warnings: 0
 
@@ -13,7 +13,7 @@ Warnings: 0
 | Exam | Score | Status | Questions | Errors | Warnings |
 |---|---:|---|---:|---:|---:|
 | pmp | 100 | PASS | 250 | 0 | 0 |
-| capm | 100 | PASS | 200 | 0 | 0 |
+| capm | 100 | PASS | 1000 | 0 | 0 |
 
 ## Lowest Scores
 
