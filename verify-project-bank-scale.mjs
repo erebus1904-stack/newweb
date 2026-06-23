@@ -41,7 +41,7 @@ function checkQuestionQuality(exam) {
   });
 }
 
-function checkExam(id, expectedQuestionCount, expectedMockCount, expectedDomainCounts, expectedMockCounts) {
+function checkExam(id, expectedQuestionCount, expectedDomainCounts) {
   const exam = getExam(id);
   expect(Boolean(exam), `${id} exam exists`);
   if (!exam) return;
@@ -49,51 +49,41 @@ function checkExam(id, expectedQuestionCount, expectedMockCount, expectedDomainC
   expect(exam.questionCount === expectedQuestionCount, `${id} questionCount is ${expectedQuestionCount}`);
   expect(exam.questions.length === expectedQuestionCount, `${id} has ${expectedQuestionCount} practice questions`);
   expect(exam.examConfig?.practiceQuestionCount === expectedQuestionCount, `${id} practiceQuestionCount config is ${expectedQuestionCount}`);
-  expect(exam.examConfig?.examQuestionCount === expectedMockCount, `${id} examQuestionCount config is ${expectedMockCount}`);
   expect(Array.isArray(exam.examConfig?.domainTargets), `${id} has domain target config`);
 
   const counts = countByDomain(exam);
   for (const [domain, count] of Object.entries(expectedDomainCounts)) {
     expect(counts[domain] === count, `${id} practice bank has ${count} ${domain} questions`);
   }
-  for (const [domain, count] of Object.entries(expectedMockCounts)) {
+  for (const [domain, count] of Object.entries(expectedDomainCounts)) {
     const target = exam.examConfig?.domainTargets?.find((item) => item.domain === domain);
-    expect(target?.mockCount === count, `${id} mock target has ${count} ${domain} questions`);
+    expect(target?.practiceCount === count, `${id} practice target has ${count} ${domain} questions`);
+    expect(!("mockCount" in (target || {})), `${id} ${domain} target does not retain mockCount`);
   }
+  expect(!("examQuestionCount" in exam.examConfig), `${id} config does not retain examQuestionCount`);
+  expect(!("examDurationMinutes" in exam.examConfig), `${id} config does not retain examDurationMinutes`);
+  expect(!("modeLabels" in exam.examConfig), `${id} config does not retain modeLabels`);
   checkQuestionQuality(exam);
 }
 
 checkExam(
   "pmp",
   250,
-  180,
   {
     People: 105,
     Process: 125,
     "Business Environment": 20,
-  },
-  {
-    People: 76,
-    Process: 90,
-    "Business Environment": 14,
   }
 );
 
 checkExam(
   "capm",
   1000,
-  150,
   {
     "Project Management Fundamentals and Core Concepts": 360,
     "Predictive, Plan-Based Methodologies": 170,
     "Agile Frameworks and Methodologies": 200,
     "Business Analysis Frameworks": 270,
-  },
-  {
-    "Project Management Fundamentals and Core Concepts": 54,
-    "Predictive, Plan-Based Methodologies": 26,
-    "Agile Frameworks and Methodologies": 30,
-    "Business Analysis Frameworks": 40,
   }
 );
 
@@ -101,10 +91,9 @@ const script = readFileSync("script.js", "utf8");
 const home = readFileSync("index.html", "utf8");
 const capmPage = readFileSync("programs/capm.html", "utf8");
 expect(/visibleExamCatalog = examCatalog\.filter\(\(exam\) => \["pmp", "capm"\]\.includes\(exam\.id\)\)/.test(script), "front end exposes PMP and CAPM");
-expect(/buildExamQuestionIndexes/.test(script), "front end builds blueprint-based mock exam indexes");
-expect(/examConfig\??\.domainTargets/.test(script), "front end reads domain target config");
+expect(!/buildExamQuestionIndexes/.test(script), "front end does not retain mock exam index builder");
 expect(/URLSearchParams\(window\.location\.search\)/.test(script), "front end can deep-link into a selected question bank");
-expect(/Practice/.test(home) && /Mock Exam/.test(home), "home separates Practice and Mock Exam labels");
+expect(/Practice/.test(home) && !/Mock Exam/i.test(home), "home only presents practice mode");
 expect(/index\.html\?exam=capm#practice-workspace/.test(capmPage), "CAPM page links directly to CAPM practice bank");
 
 if (failures.length) {
@@ -113,4 +102,4 @@ if (failures.length) {
   process.exit(1);
 }
 
-console.log("PASS PMP and CAPM bank scale, mock exam targets, and mode separation checks.");
+console.log("PASS PMP and CAPM bank scale and practice-only checks.");

@@ -32,6 +32,7 @@ const capmArticlePaths = [
   "guides/capm-business-analysis-study.html",
   "guides/capm-next-step-scenario-questions.html",
   "guides/capm-study-materials-plan.html",
+  "guides/capm-mistake-review-method.html",
 ];
 
 const guideFiles = guidePaths.map((path) => ({
@@ -61,8 +62,8 @@ function visibleWordCount(html) {
 
 const checks = [
   {
-    name: "home title presents PMP and CAPM practice exams",
-    pass: /<title>PMP & CAPM Practice Exams \| LicenseAtlas<\/title>/.test(files.home),
+    name: "home title presents PassGrid PMP and CAPM practice questions",
+    pass: /<title>PMP & CAPM Practice Questions \| PassGrid<\/title>/.test(files.home),
   },
   {
     name: "home no longer markets a broad credential catalog",
@@ -77,8 +78,8 @@ const checks = [
     pass: !/id="language-select"/.test(files.home) && !/Language<\/span>/.test(files.home),
   },
   {
-    name: "home defaults to a practice-first workspace",
-    pass: /id="practice-workspace"/.test(files.home) && /Choose PMP or CAPM/.test(files.home),
+    name: "home defaults to a CAPM-first practice workspace",
+    pass: /id="practice-workspace"/.test(files.home) && /Choose your exam track/.test(files.home),
   },
   {
     name: "PMP page contains learning-center sections",
@@ -134,8 +135,8 @@ const checks = [
     pass: articlePaths.every((path) => files.sitemap.includes(`https://starrycesium.com/${path}`)),
   },
   {
-    name: "eight CAPM long guides exist with visuals",
-    pass: capmArticleFiles.length === 8 &&
+    name: "nine CAPM long guides exist with visuals",
+    pass: capmArticleFiles.length === 9 &&
       capmArticleFiles.every((article) => /<article class="guide-article article-page">/.test(article.content)) &&
       capmArticleFiles.every((article) => /<figure class="article-visual"/.test(article.content)),
   },

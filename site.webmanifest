@@ -1,10 +1,10 @@
 {
-  "name": "LicenseAtlas",
-  "short_name": "LicenseAtlas",
+  "name": "PassGrid",
+  "short_name": "PassGrid",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#f5f6f1",
-  "theme_color": "#1d4d38",
+  "theme_color": "#064e45",
   "icons": [
     {
       "src": "/assets/favicon.svg",

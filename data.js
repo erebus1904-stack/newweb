@@ -24,7 +24,7 @@ const examCatalog = [
     "accuracy": 0,
     "weak": "None",
     "eta": "Start to estimate",
-    "description": "250-question PMP practice bank with a 180-question mock exam drawn by domain weight.",
+    "description": "250-question PMP practice bank with immediate explanations and local mistake review.",
     "questions": [
       {
         "tag": "Stakeholders",
@@ -4279,30 +4279,21 @@ const examCatalog = [
     ],
     "examConfig": {
       "practiceQuestionCount": 250,
-      "examQuestionCount": 180,
-      "examDurationMinutes": 230,
-      "modeLabels": {
-        "practice": "Practice",
-        "exam": "Mock Exam"
-      },
       "domainTargets": [
         {
           "domain": "People",
           "weight": 42,
-          "practiceCount": 105,
-          "mockCount": 76
+          "practiceCount": 105
         },
         {
           "domain": "Process",
           "weight": 50,
-          "practiceCount": 125,
-          "mockCount": 90
+          "practiceCount": 125
         },
         {
           "domain": "Business Environment",
           "weight": 8,
-          "practiceCount": 20,
-          "mockCount": 14
+          "practiceCount": 20
         }
       ]
     }
@@ -4330,39 +4321,29 @@ const examCatalog = [
     "accuracy": 0,
     "weak": "None",
     "eta": "Start to estimate",
-    "description": "1000-question CAPM fundamentals practice bank with a 150-question mock exam drawn by domain weight.",
+    "description": "1000-question CAPM fundamentals practice bank with immediate explanations and local mistake review.",
     "examConfig": {
       "practiceQuestionCount": 1000,
-      "examQuestionCount": 150,
-      "examDurationMinutes": 180,
-      "modeLabels": {
-        "practice": "Practice",
-        "exam": "Mock Exam"
-      },
       "domainTargets": [
         {
           "domain": "Project Management Fundamentals and Core Concepts",
           "weight": 36,
-          "practiceCount": 360,
-          "mockCount": 54
+          "practiceCount": 360
         },
         {
           "domain": "Predictive, Plan-Based Methodologies",
           "weight": 17,
-          "practiceCount": 170,
-          "mockCount": 26
+          "practiceCount": 170
         },
         {
           "domain": "Agile Frameworks and Methodologies",
           "weight": 20,
-          "practiceCount": 200,
-          "mockCount": 30
+          "practiceCount": 200
         },
         {
           "domain": "Business Analysis Frameworks",
           "weight": 27,
-          "practiceCount": 270,
-          "mockCount": 40
+          "practiceCount": 270
         }
       ]
     },

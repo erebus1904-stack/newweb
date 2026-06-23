@@ -45,5 +45,5 @@ http
     createReadStream(filePath).pipe(res);
   })
   .listen(port, "127.0.0.1", () => {
-    console.log(`LicenseAtlas preview running at http://127.0.0.1:${port}`);
+    console.log(`PassGrid preview running at http://127.0.0.1:${port}`);
   });

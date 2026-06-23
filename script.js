@@ -96,20 +96,20 @@ const uiText = {
     navLawSmall: "Bar, Real Estate",
     todayGoal: "Today",
     languageLabel: "Language",
-    startMock: "Start mock exam",
+    startMock: "Choose practice track",
     searchLabel: "Search",
     countryLabel: "Country",
     regionLabel: "Area",
     typeLabel: "Category",
     studyMode: "Practice",
-    examMode: "Mock Exam",
+    examMode: "Practice",
     sourceLabel: "Source",
     coverageLabel: "Coverage",
     updatedLabel: "Updated",
     restart: "Restart",
     skip: "Skip",
     next: "Next",
-    submit: "Finish mock exam",
+    submit: "Finish practice",
     reportTitle: "Session results",
     scoreLabel: "Score",
     correctLabel: "Correct",
@@ -127,17 +127,17 @@ const uiText = {
     questions: "questions",
     updated: "updated",
     dailyStudy: "Study explanations as you answer",
-    dailyDrill: "Finish one mock exam and review missed questions",
+    dailyDrill: "Finish one practice set and review missed questions",
     progress: (index, total) => `${index} / ${total}`,
-    hiddenExplanation: "Mock Exam mode hides explanations until the session report.",
+    hiddenExplanation: "Practice shows explanations after each answer.",
     advicePass: "Review missed items",
     advicePractice: "Rebuild weak domains",
     adviceStudy: "Return to Practice mode",
-    perfectReport: "You answered every mock exam question correctly. Review the domain mix before starting another session.",
+    perfectReport: "You answered every practice question correctly. Review the domain mix before starting another session.",
     wrongReport: (tags) => `Review these patterns first: ${tags}. Switch to Practice mode to read each explanation.`,
     planWeak: (weak) => `Current weak area: ${weak}`,
     planPractice: (topic, count) => `Study ${count} questions and read each explanation`,
-    planDrill: "After the mock exam, review missed explanations before retesting",
+    planDrill: "After practice, review missed explanations before retesting",
     planStudy: "Practice mode shows the explanation immediately after each answer",
     localTitle: "Study record",
     localSubtitle: "Stored only on this device",
@@ -466,8 +466,8 @@ const programText = {
     cfa: { title: "CFA Finance Drills", subtitle: "CFA Level I/II/III", badge: "Finance", description: "Formula lookup, timed drills, and structured practice for finance candidates.", coverage: ["Ethics", "Quant", "Portfolio", "Equity", "Fixed income"] },
     finra: { title: "FINRA Securities License", subtitle: "SIE & Series 7", badge: "Securities", description: "Fast regulation checks and compliance trap questions for securities license prep.", coverage: ["SIE", "Series 7", "Regulation", "Suitability", "Products"] },
     "fe-pe": { title: "FE/PE Engineer Drills", subtitle: "US professional engineer prep", badge: "Engineering", description: "Engineering economics, handbook lookup, and formula-driven short drills.", coverage: ["Engineering economics", "Statics", "Fluids", "Ethics", "Handbook lookup"] },
-    pmp: { title: "PMP Practice and Mock Exam", subtitle: "For experienced project leaders", badge: "PMP", description: "Study all 250 questions, then run a 180-question mock exam by PMP domain weight.", coverage: ["People", "Process", "Business environment", "Agile", "Hybrid delivery"] },
-    capm: { title: "CAPM Practice and Mock Exam", subtitle: "For project management beginners", badge: "CAPM", description: "Study all 1000 questions, then run a 150-question mock exam by CAPM domain weight.", coverage: ["Fundamentals", "Predictive", "Agile", "Business analysis"] },
+    pmp: { title: "PMP knowledge-point practice", subtitle: "For experienced project leaders", badge: "PMP", description: "Practice 250 PMP scenario questions with immediate explanations and local mistake review.", coverage: ["People", "Process", "Business environment", "Agile", "Hybrid delivery"] },
+    capm: { title: "CAPM knowledge-point practice", subtitle: "For project management beginners", badge: "CAPM", description: "Practice 1000 CAPM foundation questions with explanations, saved misses, and structured guide review.", coverage: ["Fundamentals", "Predictive", "Agile", "Business analysis"] },
     "cloud-architect": { title: "Cloud Architect Certification", subtitle: "AWS & GCP question bank", badge: "Cloud", description: "Scenario questions, architecture diagram recognition, and cloud service selection practice.", coverage: ["Architecture", "Security", "Networking", "Reliability", "Cost"] },
     bar: { title: "US Bar Law Drills", subtitle: "NY & CA Bar", badge: "Law", description: "Timed MBE practice, MEE model-answer comparison, and long-reading training.", coverage: ["MBE", "MEE", "Evidence", "Contracts", "Constitutional law"] },
     "real-estate": { title: "US Real Estate Agent", subtitle: "Real estate license drills", badge: "Real estate", description: "State-specific law switching, real estate math, and license-focused short drills.", coverage: ["Agency", "Contracts", "Property rights", "State law", "Real estate math"] }
@@ -519,16 +519,17 @@ const programText = {
 };
 
 let currentLanguage = "en";
-const pmpExam = examCatalog.find((exam) => exam.id === "pmp") || examCatalog[0];
 const visibleExamCatalog = examCatalog.filter((exam) => ["pmp", "capm"].includes(exam.id));
+const pmpExam = visibleExamCatalog.find((exam) => exam.id === "pmp") || visibleExamCatalog[0] || examCatalog[0];
+const defaultExam = visibleExamCatalog.find((exam) => exam.id === "capm") || pmpExam;
 const requestedExamId = new URLSearchParams(window.location.search).get("exam");
-let currentExamId = visibleExamCatalog.some((exam) => exam.id === requestedExamId) ? requestedExamId : pmpExam.id;
+let currentExamId = visibleExamCatalog.some((exam) => exam.id === requestedExamId) ? requestedExamId : defaultExam.id;
 let questionIndex = 0;
 let answered = false;
-let mode = "study";
+const mode = "study";
 let drillAnswers = [];
 let mistakeMode = false;
-let examSessionQuestionIndexes = [];
+let currentChoiceOrder = [];
 const storageKey = "licenseAtlasLocalProgress";
 
 const elements = {
@@ -541,7 +542,6 @@ const elements = {
   catalog: document.querySelector("#catalog-grid"),
   resultCount: document.querySelector("#result-count"),
   modeHelp: document.querySelector("#mode-help"),
-  report: document.querySelector("#report-panel"),
   language: document.querySelector("#language-select"),
   clearLocalButton: document.querySelector("#clear-local-button"),
   reviewMistakesButton: document.querySelector("#review-mistakes-button"),
@@ -615,6 +615,26 @@ function createTextNode(tagName, text, className) {
   return node;
 }
 
+function setPressLabel(node, text) {
+  node.replaceChildren(createTextNode("span", text, "press-label"));
+}
+
+function hydratePressLabels() {
+  document.querySelectorAll(".primary-button, .ghost-button, .text-button, .header-cta").forEach((node) => {
+    if (node.children.length === 1 && node.firstElementChild?.classList.contains("press-label")) return;
+    setPressLabel(node, node.textContent.trim());
+  });
+}
+
+function shuffleIndexes(length) {
+  const indexes = Array.from({ length }, (_, index) => index);
+  for (let index = indexes.length - 1; index > 0; index -= 1) {
+    const swapIndex = Math.floor(Math.random() * (index + 1));
+    [indexes[index], indexes[swapIndex]] = [indexes[swapIndex], indexes[index]];
+  }
+  return indexes;
+}
+
 function getFilteredExams() {
   return visibleExamCatalog;
 }
@@ -625,12 +645,12 @@ function applyStaticTranslations() {
     node.textContent = t(node.dataset.i18n);
   });
   const dailyGoal = document.querySelector("#daily-goal");
-  if (dailyGoal) dailyGoal.textContent = mode === "exam" ? t("dailyDrill") : t("dailyStudy");
+  if (dailyGoal) dailyGoal.textContent = t("dailyStudy");
 }
 
 function renderCatalog() {
   const exams = getFilteredExams();
-  elements.resultCount.textContent = `${exams.length} ${t("programs")} available`;
+  elements.resultCount.textContent = `${exams.length} practice tracks available`;
   replaceChildren(elements.catalog, exams.map((exam) => {
     const text = p(exam);
     const examConfig = exam.examConfig || {};
@@ -657,8 +677,8 @@ function renderCatalog() {
     const footer = document.createElement("div");
     footer.className = "card-footer";
     footer.append(
-      createTextNode("span", `Practice ${examConfig.practiceQuestionCount || exam.questionCount}`),
-      createTextNode("span", `Mock ${examConfig.examQuestionCount || exam.questionCount}`)
+      createTextNode("span", `${examConfig.practiceQuestionCount || exam.questionCount} practice questions`),
+      createTextNode("span", `${text.coverage.length} focus areas`)
     );
 
     const actions = document.createElement("div");
@@ -666,12 +686,12 @@ function renderCatalog() {
     const practiceButton = document.createElement("button");
     practiceButton.className = "ghost-button";
     practiceButton.type = "button";
-    practiceButton.textContent = `Use ${text.badge} bank`;
-    practiceButton.addEventListener("click", () => selectExam(exam.id));
+    setPressLabel(practiceButton, exam.id === currentExamId ? `Selected ${text.badge}` : `Choose ${text.badge}`);
+    practiceButton.addEventListener("click", () => selectExam(exam.id, true));
     const detailsLink = document.createElement("a");
     detailsLink.className = "text-button";
     detailsLink.href = `./programs/${exam.id}.html`;
-    detailsLink.textContent = t("detailsAction");
+    setPressLabel(detailsLink, t("detailsAction"));
     actions.append(practiceButton, detailsLink);
 
     card.append(list, footer, actions);
@@ -679,27 +699,27 @@ function renderCatalog() {
   }));
 }
 
-function selectExam(examId) {
+function selectExam(examId, shouldScroll = false) {
   currentExamId = examId;
   questionIndex = 0;
   drillAnswers = [];
-  examSessionQuestionIndexes = [];
   answered = false;
   mistakeMode = false;
-  elements.report.classList.add("hidden");
+  const url = new URL(window.location.href);
+  url.searchParams.set("exam", examId);
+  url.hash = shouldScroll ? "practice-workspace" : window.location.hash.replace("#", "");
+  window.history.replaceState(null, "", url);
   renderExam();
   renderCatalog();
+  if (shouldScroll) {
+    document.querySelector(".question-card")?.scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
+  }
 }
 
 function getActiveQuestions(exam = getCurrentExam()) {
-  if (mode === "exam") {
-    if (!examSessionQuestionIndexes.length) {
-      examSessionQuestionIndexes = buildExamQuestionIndexes(exam);
-    }
-    return examSessionQuestionIndexes
-      .map((index) => ({ question: exam.questions[index], index }))
-      .filter((entry) => entry.question);
-  }
   if (!mistakeMode) {
     return exam.questions.map((question, index) => ({ question, index }));
   }
@@ -709,39 +729,6 @@ function getActiveQuestions(exam = getCurrentExam()) {
     .map((entry) => entry.index)
     .filter((index) => exam.questions[index]);
   return [...new Set(wrongIndexes)].map((index) => ({ question: exam.questions[index], index }));
-}
-
-function buildExamQuestionIndexes(exam) {
-  const targets = exam.examConfig?.domainTargets;
-  const fallbackCount = exam.examConfig?.examQuestionCount || exam.questions.length;
-  if (!targets?.length) {
-    return exam.questions.map((_, index) => index).slice(0, fallbackCount);
-  }
-
-  const buckets = targets.map((target) => ({
-    domain: target.domain,
-    indexes: exam.questions
-      .map((question, index) => ({ question, index }))
-      .filter(({ question }) => question.domain === target.domain)
-      .slice(0, target.mockCount)
-      .map(({ index }) => index)
-  }));
-
-  const interleaved = [];
-  let offset = 0;
-  let hasMore = true;
-  while (hasMore) {
-    hasMore = false;
-    for (const bucket of buckets) {
-      if (bucket.indexes[offset] !== undefined) {
-        interleaved.push(bucket.indexes[offset]);
-        hasMore = true;
-      }
-    }
-    offset += 1;
-  }
-
-  return interleaved.slice(0, fallbackCount);
 }
 
 function getLocalWeakArea(exam, progress) {
@@ -781,35 +768,36 @@ function renderLocalProgress() {
   document.querySelector("#local-accuracy-label").textContent = t("localAccuracy");
   document.querySelector("#local-wrong-label").textContent = t("localWrong");
   document.querySelector("#local-score-label").textContent = t("localScore");
-  document.querySelector("#clear-local-button").textContent = t("localClear");
-  elements.reviewMistakesButton.textContent = t("reviewMistakes");
+  setPressLabel(document.querySelector("#clear-local-button"), t("localClear"));
+  setPressLabel(elements.reviewMistakesButton, t("reviewMistakes"));
   elements.reviewMistakesButton.disabled = wrongCount === 0;
-  elements.clearMistakesButton.textContent = t("clearMistakes");
+  setPressLabel(elements.clearMistakesButton, t("clearMistakes"));
   elements.clearMistakesButton.disabled = wrongCount === 0;
 }
 
 function getModeHelp(exam) {
   const config = exam.examConfig || {};
   const practiceCount = config.practiceQuestionCount || exam.questions.length;
-  const mockCount = config.examQuestionCount || exam.questions.length;
-  if (mode === "exam") {
-    return `Mock Exam: ${mockCount} questions selected by blueprint weight. Explanations appear after the session report.`;
-  }
-  return `Practice: study all ${practiceCount} questions with immediate explanations after each answer.`;
+  return `${p(exam).badge}: practice ${practiceCount} questions in short knowledge-point sessions. Explanations appear immediately after each answer.`;
 }
 
 function renderStudyPlan(exam) {
   const config = exam.examConfig || {};
   const practiceCount = config.practiceQuestionCount || exam.questions.length;
-  const mockCount = config.examQuestionCount || exam.questions.length;
   const plan = [
     t("planWeak", getLocalWeakArea(exam, getExamProgress(exam.id))),
-    mode === "exam"
-      ? `Complete the ${mockCount}-question mock, then review every missed explanation.`
-      : `Work through the ${practiceCount}-question bank before starting a mock exam.`,
-    mode === "exam" ? t("planDrill") : t("planStudy")
+    `Work through the ${practiceCount}-question bank in short sessions.`,
+    "Read each explanation before moving to the next knowledge point."
   ];
   replaceChildren(document.querySelector("#study-plan"), plan.map((item) => createTextNode("li", item)));
+}
+
+function renderGuideVisibility() {
+  const pmpGuides = document.querySelector(".pmp-guide-section");
+  const capmGuides = document.querySelector(".capm-guide-section");
+  const showCapm = currentExamId === "capm";
+  if (pmpGuides) pmpGuides.hidden = showCapm;
+  if (capmGuides) capmGuides.hidden = !showCapm;
 }
 
 function renderExam() {
@@ -822,10 +810,11 @@ function renderExam() {
   document.querySelector("#source-updated").textContent = exam.updated;
   if (elements.modeHelp) elements.modeHelp.textContent = getModeHelp(exam);
   const dailyGoal = document.querySelector("#daily-goal");
-  if (dailyGoal) dailyGoal.textContent = mode === "exam" ? t("dailyDrill") : t("dailyStudy");
+  if (dailyGoal) dailyGoal.textContent = t("dailyStudy");
   renderLearningStats(exam);
   renderStudyPlan(exam);
   renderLocalProgress();
+  renderGuideVisibility();
   renderQuestion();
 }
 
@@ -843,7 +832,7 @@ function renderQuestion() {
     elements.answers.replaceChildren();
     elements.skipButton.hidden = true;
     elements.nextButton.disabled = true;
-    elements.nextButton.textContent = t("next");
+    setPressLabel(elements.nextButton, t("next"));
     return;
   }
   elements.nextButton.disabled = false;
@@ -852,19 +841,21 @@ function renderQuestion() {
   document.querySelector("#question-progress").textContent = t("progress", questionIndex + 1, activeQuestions.length);
   document.querySelector("#question-text").textContent = question.text;
   elements.explanation.classList.add("hidden");
-  elements.explanation.textContent = mode === "exam" ? t("hiddenExplanation") : "";
+  elements.explanation.textContent = "";
   elements.answers.replaceChildren();
-  elements.skipButton.hidden = mode === "exam";
-  elements.nextButton.textContent = mode === "exam" && questionIndex === activeQuestions.length - 1 ? t("submit") : t("next");
-  question.choices.forEach((choice, index) => {
+  elements.skipButton.hidden = false;
+  setPressLabel(elements.nextButton, t("next"));
+  hydratePressLabels();
+  currentChoiceOrder = shuffleIndexes(question.choices.length);
+  currentChoiceOrder.forEach((choiceIndex, index) => {
     const button = document.createElement("button");
     button.className = "answer";
     button.type = "button";
     button.append(
       createTextNode("span", String.fromCharCode(65 + index), "answer-key"),
-      createTextNode("span", choice)
+      createTextNode("span", question.choices[choiceIndex], "answer-text")
     );
-    button.addEventListener("click", () => selectAnswer(index));
+    button.addEventListener("click", () => selectAnswer(choiceIndex));
     elements.answers.appendChild(button);
   });
 }
@@ -879,92 +870,39 @@ function selectAnswer(index) {
   const isCorrect = index === question.correct;
   drillAnswers[originalIndex] = index;
   Array.from(elements.answers.children).forEach((button, buttonIndex) => {
-    if (mode === "study" && buttonIndex === question.correct) button.classList.add("correct");
-    if (mode === "study" && buttonIndex === index && !isCorrect) button.classList.add("wrong");
-    if (mode === "exam" && buttonIndex === index) button.classList.add("selected-answer");
+    const originalChoiceIndex = currentChoiceOrder[buttonIndex];
+    if (originalChoiceIndex === question.correct) button.classList.add("correct");
+    if (originalChoiceIndex === index && !isCorrect) button.classList.add("wrong");
   });
-  if (mode === "study") {
-    saveExamProgress(exam.id, (progress) => {
-      const wrongSet = new Set(progress.wrongQuestionKeys || []);
-      if (isCorrect) wrongSet.delete(questionKey(exam, originalIndex));
-      else wrongSet.add(questionKey(exam, originalIndex));
-      return {
-        ...progress,
-        answered: progress.answered + 1,
-        correct: progress.correct + (isCorrect ? 1 : 0),
-        wrongQuestionKeys: Array.from(wrongSet),
-        lastStudiedAt: new Date().toISOString()
-      };
-    });
-    elements.explanation.textContent = question.explanation;
-    elements.explanation.classList.remove("hidden");
-  }
+  saveExamProgress(exam.id, (progress) => {
+    const wrongSet = new Set(progress.wrongQuestionKeys || []);
+    if (isCorrect) wrongSet.delete(questionKey(exam, originalIndex));
+    else wrongSet.add(questionKey(exam, originalIndex));
+    return {
+      ...progress,
+      answered: progress.answered + 1,
+      correct: progress.correct + (isCorrect ? 1 : 0),
+      wrongQuestionKeys: Array.from(wrongSet),
+      lastStudiedAt: new Date().toISOString()
+    };
+  });
+  elements.explanation.textContent = question.explanation;
+  elements.explanation.classList.remove("hidden");
 }
 
 function advanceQuestion() {
   const exam = getCurrentExam();
   const activeQuestions = getActiveQuestions(exam);
   if (!activeQuestions.length) return;
-  if (mode === "exam" && questionIndex === activeQuestions.length - 1) {
-    showReport();
-    return;
-  }
   questionIndex = (questionIndex + 1) % activeQuestions.length;
   renderQuestion();
-}
-
-function showReport() {
-  const exam = getCurrentExam();
-  const activeQuestions = getActiveQuestions(exam);
-  const correctCount = activeQuestions.reduce((total, { question, index }) => total + (drillAnswers[index] === question.correct ? 1 : 0), 0);
-  const score = Math.round((correctCount / activeQuestions.length) * 100);
-  const wrongQuestions = activeQuestions
-    .filter(({ question, index }) => drillAnswers[index] !== question.correct);
-  document.querySelector("#report-score").textContent = `${score}%`;
-  document.querySelector("#report-correct").textContent = `${correctCount} / ${activeQuestions.length}`;
-  document.querySelector("#report-advice").textContent = score >= 80 ? t("advicePass") : score >= 60 ? t("advicePractice") : t("adviceStudy");
-  document.querySelector("#report-detail").textContent = wrongQuestions.length === 0
-    ? t("perfectReport")
-    : t("wrongReport", wrongQuestions.map(({ question }) => question.tag).join(listSeparator()));
-  saveExamProgress(exam.id, (progress) => {
-    const wrongSet = new Set(progress.wrongQuestionKeys || []);
-    activeQuestions.forEach(({ question, index }) => {
-      if (drillAnswers[index] === question.correct) wrongSet.delete(questionKey(exam, index));
-      else wrongSet.add(questionKey(exam, index));
-    });
-    return {
-      ...progress,
-      answered: progress.answered + activeQuestions.length,
-      correct: progress.correct + correctCount,
-      wrongQuestionKeys: Array.from(wrongSet),
-      lastScore: score,
-      lastStudiedAt: new Date().toISOString()
-    };
-  });
-  elements.report.classList.remove("hidden");
 }
 
 function resetSession() {
   questionIndex = 0;
   drillAnswers = [];
-  if (mode === "exam" && !examSessionQuestionIndexes.length) {
-    examSessionQuestionIndexes = buildExamQuestionIndexes(getCurrentExam());
-  }
   answered = false;
-  if (mode === "exam") mistakeMode = false;
-  elements.report.classList.add("hidden");
   renderQuestion();
-}
-
-function setMode(nextMode) {
-  mode = nextMode;
-  if (mode === "exam") mistakeMode = false;
-  examSessionQuestionIndexes = mode === "exam" ? buildExamQuestionIndexes(getCurrentExam()) : [];
-  document.querySelectorAll(".mode").forEach((button) => {
-    button.classList.toggle("active", button.dataset.mode === mode);
-  });
-  resetSession();
-  renderExam();
 }
 
 function refreshForFilters() {
@@ -972,7 +910,6 @@ function refreshForFilters() {
   if (matches[0] && !matches.some((exam) => exam.id === currentExamId)) {
     currentExamId = matches[0].id;
     questionIndex = 0;
-    examSessionQuestionIndexes = [];
   }
   renderExam();
   renderCatalog();
@@ -997,14 +934,9 @@ function clearCurrentLocalProgress() {
 
 function reviewMistakes() {
   if (!getExamProgress().wrongQuestionKeys.length) return;
-  mode = "study";
   mistakeMode = true;
   questionIndex = 0;
   drillAnswers = [];
-  elements.report.classList.add("hidden");
-  document.querySelectorAll(".mode").forEach((button) => {
-    button.classList.toggle("active", button.dataset.mode === mode);
-  });
   renderExam();
 }
 
@@ -1017,16 +949,11 @@ function clearCurrentMistakes() {
   resetSession();
 }
 
-document.querySelectorAll(".mode").forEach((button) => {
-  button.addEventListener("click", () => setMode(button.dataset.mode));
-});
-
 if (elements.language) {
   elements.language.addEventListener("change", () => setLanguage(elements.language.value));
 }
 elements.startDrillButton.addEventListener("click", () => {
-  setMode("exam");
-  document.querySelector("#practice-workspace")?.scrollIntoView({
+  document.querySelector("#bank-selector-title")?.scrollIntoView({
     behavior: "smooth",
     block: "start"
   });
@@ -1347,6 +1274,7 @@ cleanProgramText.fr = programText.en;
 Object.assign(uiText, cleanUiText);
 Object.assign(programText, cleanProgramText);
 
+hydratePressLabels();
 applyStaticTranslations();
 renderExam();
 renderCatalog();
