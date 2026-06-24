@@ -33,6 +33,7 @@ const capmArticlePaths = [
   "guides/capm-next-step-scenario-questions.html",
   "guides/capm-study-materials-plan.html",
   "guides/capm-mistake-review-method.html",
+  "guides/capm-online-vs-test-center.html",
 ];
 
 const guideFiles = guidePaths.map((path) => ({
@@ -135,8 +136,8 @@ const checks = [
     pass: articlePaths.every((path) => files.sitemap.includes(`https://starrycesium.com/${path}`)),
   },
   {
-    name: "nine CAPM long guides exist with visuals",
-    pass: capmArticleFiles.length === 9 &&
+    name: "ten CAPM long guides exist with visuals",
+    pass: capmArticleFiles.length === 10 &&
       capmArticleFiles.every((article) => /<article class="guide-article article-page">/.test(article.content)) &&
       capmArticleFiles.every((article) => /<figure class="article-visual"/.test(article.content)),
   },

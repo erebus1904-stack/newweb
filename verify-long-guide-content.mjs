@@ -24,6 +24,7 @@ const capmGuides = [
   "guides/capm-next-step-scenario-questions.html",
   "guides/capm-study-materials-plan.html",
   "guides/capm-mistake-review-method.html",
+  "guides/capm-online-vs-test-center.html",
 ];
 
 const allGuides = [...pmpGuides, ...capmGuides];
