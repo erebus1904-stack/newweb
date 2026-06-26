@@ -19,6 +19,13 @@ const bannedChoicePatterns = [
   /choose the option only because/i,
   /use the same action for every situation/i,
 ];
+const bannedContentPatterns = [
+  /This item is unique to/i,
+  /domain pattern \d+/i,
+  /The team has documented/i,
+  /practice item \d+/i,
+  /project context as irrelevant/i,
+];
 
 const requiredMeta = ["domain", "topic", "approach", "difficulty", "decisionRule"];
 const failures = [];
@@ -40,6 +47,15 @@ questionsToCheck.forEach((question, index) => {
   if (wordCount(question.text) < 18) {
     failures.push(`PMP#${number} scenario is too short.`);
   }
+
+  bannedContentPatterns.forEach((pattern) => {
+    if (pattern.test(String(question.text || ""))) {
+      failures.push(`PMP#${number} scenario uses template wording: ${pattern}.`);
+    }
+    if (pattern.test(String(question.explanation || ""))) {
+      failures.push(`PMP#${number} explanation uses template wording: ${pattern}.`);
+    }
+  });
 
   if (!Array.isArray(question.choices) || question.choices.length !== 4) {
     failures.push(`PMP#${number} must have four choices.`);

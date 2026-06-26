@@ -3,6 +3,7 @@ import { existsSync, readFileSync } from "node:fs";
 const files = {
   home: readFileSync("index.html", "utf8"),
   pmp: readFileSync("programs/pmp.html", "utf8"),
+  capm: readFileSync("programs/capm.html", "utf8"),
   sitemap: readFileSync("sitemap.xml", "utf8"),
 };
 
@@ -84,16 +85,43 @@ const checks = [
   },
   {
     name: "PMP page contains learning-center sections",
-    pass: /30-day PMP study path/.test(files.pmp) &&
+    pass: /PMP Study Hub/.test(files.pmp) &&
+      /Official exam anchors to verify first/.test(files.pmp) &&
+      /30-day and 45-day study paths/.test(files.pmp) &&
+      /How to use Practice and Mock Exam/.test(files.pmp) &&
+      /PMP study guides/.test(files.pmp) &&
       /How to answer PMP situational questions/.test(files.pmp) &&
-      /Latest PMP articles/.test(files.pmp),
+      /Updated outline from July 9, 2026/.test(files.pmp),
   },
   {
     name: "sitemap focuses on project management pages for this phase",
     pass: /programs\/pmp\.html/.test(files.sitemap) &&
       /programs\/capm\.html/.test(files.sitemap) &&
+      /editorial-policy\.html/.test(files.sitemap) &&
       !/programs\/nclex-rn\.html/.test(files.sitemap) &&
       !/programs\/usmle\.html/.test(files.sitemap),
+  },
+  {
+    name: "retired broad-credential pages are removed",
+    pass: [
+      "programs/bar.html",
+      "programs/cfa.html",
+      "programs/cloud-architect.html",
+      "programs/fe-pe.html",
+      "programs/finra.html",
+      "programs/nclex-rn.html",
+      "programs/real-estate.html",
+      "programs/uscpa.html",
+      "programs/usmle.html",
+      "seo-changes.html",
+    ].every((path) => !existsSync(path)),
+  },
+  {
+    name: "CAPM page is a study hub with domain weights and paths",
+    pass: /CAPM Study Hub/.test(files.capm) &&
+      /CAPM domain weights/.test(files.capm) &&
+      /30-day and 45-day study paths/.test(files.capm) &&
+      /How to use Practice and Mock Exam/.test(files.capm),
   },
   {
     name: "six PMP guide pages exist with article-page structure",

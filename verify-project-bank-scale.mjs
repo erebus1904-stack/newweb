@@ -23,12 +23,24 @@ function countByDomain(exam) {
 
 function checkQuestionQuality(exam) {
   const explanations = new Set();
+  const bannedContentPatterns = [
+    /This item is unique to/i,
+    /domain pattern \d+/i,
+    /The team has documented/i,
+    /practice item \d+/i,
+    /needs a CAPM-level decision/i,
+    /project context as irrelevant/i,
+  ];
   exam.questions.forEach((question, index) => {
     const number = index + 1;
     for (const field of ["domain", "topic", "approach", "difficulty", "decisionRule"]) {
       expect(Boolean(question[field]), `${exam.id}#${number} missing ${field}`);
     }
     expect(String(question.text || "").split(/\s+/).filter(Boolean).length >= 18, `${exam.id}#${number} scenario is too short`);
+    for (const pattern of bannedContentPatterns) {
+      expect(!pattern.test(String(question.text || "")), `${exam.id}#${number} scenario uses template wording: ${pattern}`);
+      expect(!pattern.test(String(question.explanation || "")), `${exam.id}#${number} explanation uses template wording: ${pattern}`);
+    }
     expect(Array.isArray(question.choices) && question.choices.length === 4, `${exam.id}#${number} must have four choices`);
     if (Array.isArray(question.choices)) {
       expect(question.choices.every((choice) => String(choice).split(/\s+/).filter(Boolean).length >= 4), `${exam.id}#${number} has thin choices`);

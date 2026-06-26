@@ -9,6 +9,7 @@ const assert = (condition, message) => {
 const projectPages = [
   "index.html",
   "about.html",
+  "editorial-policy.html",
   "privacy.html",
   "terms.html",
   "programs/pmp.html",
@@ -35,6 +36,7 @@ const retiredProgramPages = [
 
 const sitemap = read("sitemap.xml");
 const privacy = read("privacy.html");
+const adsTxt = read("ads.txt");
 
 for (const page of projectPages) {
   assert(existsSync(page), `${page} exists`);
@@ -55,10 +57,7 @@ for (const page of indexablePages) {
 }
 
 for (const page of retiredProgramPages) {
-  assert(existsSync(page), `${page} exists for retirement handling`);
-  const content = read(page);
-  assert(/<meta name="robots" content="noindex, nofollow"/i.test(content), `${page} is noindex,nofollow`);
-  assert(!/pagead2\.googlesyndication\.com\/pagead\/js\/adsbygoogle\.js/i.test(content), `${page} does not load AdSense`);
+  assert(!existsSync(page), `${page} has been removed from the public site`);
   assert(!sitemap.includes(`https://starrycesium.com/${page}`), `${page} is absent from sitemap`);
 }
 
@@ -80,13 +79,20 @@ for (const pattern of privacyExpectations) {
 
 assert(sitemap.includes("https://starrycesium.com/programs/pmp.html"), "sitemap includes PMP page");
 assert(sitemap.includes("https://starrycesium.com/programs/capm.html"), "sitemap includes CAPM page");
+assert(sitemap.includes("https://starrycesium.com/editorial-policy.html"), "sitemap includes Editorial Policy page");
 assert(!/programs\/(nclex-rn|usmle|uscpa|cfa|finra|fe-pe|cloud-architect|bar|real-estate)\.html/.test(sitemap), "sitemap excludes retired non-project-management pages");
+assert(!existsSync("seo-changes.html"), "local SEO change log page has been removed from public site");
+assert(/google\.com,\s*pub-5018342016303677,\s*DIRECT,\s*f08c47fec0942fa0/i.test(adsTxt), "ads.txt authorizes the AdSense publisher ID");
 
 const combinedProjectContent = projectPages
   .map(read)
   .join("\n")
   .replace(/\splaceholder="[^"]*"/gi, "");
 assert(!/under construction|coming soon|lorem ipsum|placeholder/i.test(combinedProjectContent), "project pages do not contain placeholder wording");
+assert(/Practice Question Standards/i.test(read("editorial-policy.html")), "editorial policy explains practice question standards");
+assert(/CAPM Study Hub/i.test(read("programs/capm.html")), "CAPM page is positioned as a study hub");
+assert(/PMP Study Hub/i.test(read("programs/pmp.html")), "PMP page is positioned as a study hub");
+assert(/Official exam anchors to verify first/i.test(read("programs/pmp.html")), "PMP page includes official verification guidance");
 
 if (failures.length) {
   failures.forEach((failure) => console.error(`FAIL ${failure}`));
