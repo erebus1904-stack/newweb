@@ -1,0 +1,9 @@
+include:
+  - ads.txt
+
+exclude:
+  - _private/
+  - reports/
+  - "*.mjs"
+  - "*.log"
+  - "*.md"

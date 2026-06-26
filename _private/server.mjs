@@ -1,9 +1,10 @@
 import http from "node:http";
 import { createReadStream, existsSync, statSync } from "node:fs";
-import { extname, join, normalize, resolve } from "node:path";
+import { basename, dirname, extname, join, normalize, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
-const root = resolve(fileURLToPath(new URL(".", import.meta.url)));
+const scriptDir = resolve(fileURLToPath(new URL(".", import.meta.url)));
+const root = basename(scriptDir) === "_private" ? dirname(scriptDir) : scriptDir;
 const port = Number(process.env.PORT || 4173);
 
 const types = {
@@ -24,6 +25,9 @@ const securityHeaders = {
 
 function resolvePath(urlPath) {
   const cleanPath = decodeURIComponent(urlPath.split("?")[0]);
+  if (cleanPath === "/_private" || cleanPath.startsWith("/_private/")) {
+    return "";
+  }
   const requested = cleanPath === "/" ? "/index.html" : cleanPath;
   const fullPath = resolve(normalize(join(root, requested)));
   return fullPath.startsWith(root) ? fullPath : join(root, "index.html");
