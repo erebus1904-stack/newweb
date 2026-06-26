@@ -24,6 +24,7 @@ function visibleWordCount(html) {
   return html
     .replace(/<script[\s\S]*?<\/script>/g, " ")
     .replace(/<style[\s\S]*?<\/style>/g, " ")
+    .replace(/<([a-z0-9-]+)(?=[^>]*\shidden\b)[^>]*>[\s\S]*?<\/\1>/gi, " ")
     .replace(/<[^>]+>/g, " ")
     .replace(/&[a-z0-9#]+;/gi, " ")
     .split(/\s+/)

@@ -368,9 +368,8 @@ function renderStudyPlan(exam) {
 function renderGuideVisibility() {
   const pmpGuides = document.querySelector(".pmp-guide-section");
   const capmGuides = document.querySelector(".capm-guide-section");
-  const showCapm = currentExamId === "capm";
-  if (pmpGuides) pmpGuides.hidden = showCapm;
-  if (capmGuides) capmGuides.hidden = !showCapm;
+  if (pmpGuides) pmpGuides.hidden = false;
+  if (capmGuides) capmGuides.hidden = false;
 }
 
 function renderExam() {
