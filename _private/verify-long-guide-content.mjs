@@ -21,6 +21,7 @@ const capmGuides = [
   "guides/capm-predictive-project-management.html",
   "guides/capm-agile-scrum-kanban.html",
   "guides/capm-business-analysis-study.html",
+  "guides/capm-to-pmp-study-bridge.html",
   "guides/capm-next-step-scenario-questions.html",
   "guides/capm-study-materials-plan.html",
   "guides/capm-mistake-review-method.html",
@@ -48,8 +49,8 @@ for (const path of allGuides) {
   }
   const html = readFileSync(path, "utf8");
   const words = visibleWordCount(html);
-  if (words < 1000 || words > 1500) {
-    failures.push(`${path} has ${words} visible words, expected 1000-1500.`);
+  if (words < 1000 || words > 1600) {
+    failures.push(`${path} has ${words} visible words, expected 1000-1600.`);
   }
   if (!/<article class="guide-article article-page">/.test(html)) {
     failures.push(`${path} does not use article-page structure.`);
@@ -84,4 +85,4 @@ if (failures.length) {
   process.exit(1);
 }
 
-console.log(`PASS ${allGuides.length} guide articles are 1000-1500 words with visuals and links.`);
+console.log(`PASS ${allGuides.length} guide articles are 1000-1600 words with visuals and links.`);

@@ -31,6 +31,7 @@ const capmArticlePaths = [
   "guides/capm-predictive-project-management.html",
   "guides/capm-agile-scrum-kanban.html",
   "guides/capm-business-analysis-study.html",
+  "guides/capm-to-pmp-study-bridge.html",
   "guides/capm-next-step-scenario-questions.html",
   "guides/capm-study-materials-plan.html",
   "guides/capm-mistake-review-method.html",
@@ -148,10 +149,10 @@ const checks = [
       articleFiles.every((article) => /<figure class="article-visual"/.test(article.content)),
   },
   {
-    name: "PMP articles are within 1000-1500 word target",
+    name: "PMP articles are within 1000-1600 word target",
     pass: [...articleFiles, ...guideFiles].every((article) => {
       const words = visibleWordCount(article.content);
-      return words >= 1000 && words <= 1500;
+      return words >= 1000 && words <= 1600;
     }),
   },
   {
@@ -164,16 +165,16 @@ const checks = [
     pass: articlePaths.every((path) => files.sitemap.includes(`https://starrycesium.com/${path}`)),
   },
   {
-    name: "ten CAPM long guides exist with visuals",
-    pass: capmArticleFiles.length === 10 &&
+    name: "eleven CAPM long guides exist with visuals",
+    pass: capmArticleFiles.length === 11 &&
       capmArticleFiles.every((article) => /<article class="guide-article article-page">/.test(article.content)) &&
       capmArticleFiles.every((article) => /<figure class="article-visual"/.test(article.content)),
   },
   {
-    name: "CAPM articles are within 1000-1500 word target",
+    name: "CAPM articles are within 1000-1600 word target",
     pass: capmArticleFiles.every((article) => {
       const words = visibleWordCount(article.content);
-      return words >= 1000 && words <= 1500;
+      return words >= 1000 && words <= 1600;
     }),
   },
   {

@@ -1790,6 +1790,39 @@ input:focus-visible {
   text-decoration: underline;
 }
 
+.comparison-table {
+  display: grid;
+  gap: 1px;
+  overflow: hidden;
+  border: 1px solid rgba(61, 116, 86, 0.18);
+  border-radius: 14px;
+  background: rgba(61, 116, 86, 0.18);
+}
+
+.comparison-table [role="row"] {
+  display: grid;
+  grid-template-columns: 0.8fr 1.35fr 1.45fr;
+  gap: 1px;
+}
+
+.comparison-table [role="row"] > * {
+  padding: 14px;
+  background: #fffdf8;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.comparison-table [role="row"]:first-child > * {
+  background: #e8f5ef;
+  color: var(--green-deep);
+  font-weight: 900;
+}
+
+.comparison-table span:first-child {
+  color: var(--ink);
+  font-weight: 900;
+}
+
 .article-page .legal-hero {
   margin-bottom: 14px;
 }
@@ -2011,6 +2044,14 @@ input:focus-visible {
   .exam-card-actions .ghost-button,
   .exam-card-actions .text-button {
     width: 100%;
+  }
+
+  .comparison-table [role="row"] {
+    grid-template-columns: 1fr;
+  }
+
+  .comparison-table [role="row"] > * {
+    padding: 12px;
   }
 }
 

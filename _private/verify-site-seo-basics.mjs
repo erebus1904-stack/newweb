@@ -20,6 +20,11 @@ function getMatch(content, pattern) {
   return match ? match[1].trim() : "";
 }
 
+function extractRelatedGuideSection(content) {
+  const match = content.match(/<section class="legal-section related-guides" aria-labelledby="related-guides-title">([\s\S]*?)<\/section>/i);
+  return match ? match[1] : "";
+}
+
 function visibleWordCount(html) {
   return html
     .replace(/<script[\s\S]*?<\/script>/g, " ")
@@ -45,10 +50,55 @@ for (const file of htmlFiles) {
   const canonical = getMatch(html, /<link rel="canonical" href="([^"]+)"/i);
   const words = visibleWordCount(html);
 
+  if (/LicenseAtlas/i.test(html)) failures.push(`${file} contains retired LicenseAtlas brand`);
   if (title.length < 20 || title.length > 90) failures.push(`${file} title length ${title.length}`);
   if (description.length < 70 || description.length > 180) failures.push(`${file} description length ${description.length}`);
   if (words < 300) failures.push(`${file} visible words ${words}`);
   if (!/^https:\/\/starrycesium\.com\//.test(canonical)) failures.push(`${file} canonical is not on starrycesium.com`);
+
+  if (file.startsWith("guides/")) {
+    const exam = file.includes("/capm-") ? "capm" : "pmp";
+    const relatedSection = extractRelatedGuideSection(html);
+    const requiredGuidePatterns = [
+      ["Open Graph site name", /<meta property="og:site_name" content="PassGrid" \/>/i],
+      ["Open Graph type", /<meta property="og:type" content="article" \/>/i],
+      ["Open Graph title", /<meta property="og:title" content="[^"]+" \/>/i],
+      ["Open Graph description", /<meta property="og:description" content="[^"]+" \/>/i],
+      ["Open Graph url", /<meta property="og:url" content="https:\/\/starrycesium\.com\/guides\/[^"]+\.html" \/>/i],
+      ["Twitter card", /<meta name="twitter:card" content="summary" \/>/i],
+      ["Twitter title", /<meta name="twitter:title" content="[^"]+" \/>/i],
+      ["Twitter description", /<meta name="twitter:description" content="[^"]+" \/>/i],
+      ["JSON-LD", /<script type="application\/ld\+json">/i],
+      ["Article or LearningResource schema", /"@type": "(Article|LearningResource)"/i],
+      ["BreadcrumbList schema", /"@type": "BreadcrumbList"/i]
+    ];
+
+    for (const [label, pattern] of requiredGuidePatterns) {
+      if (!pattern.test(html)) failures.push(`${file} missing ${label}`);
+    }
+
+    if (!relatedSection) {
+      failures.push(`${file} missing related guide section`);
+    } else {
+      const sameClusterLinks = [...relatedSection.matchAll(/href="\.\.\/guides\/([^"]+\.html)"/g)]
+        .map((match) => `guides/${match[1]}`)
+        .filter((href) => href.startsWith(`guides/${exam}-`));
+      const uniqueSameClusterLinks = new Set(sameClusterLinks);
+
+      if (!new RegExp(`href="\\.\\.\\/programs\\/${exam}\\.html"`).test(relatedSection)) {
+        failures.push(`${file} related section missing ${exam.toUpperCase()} hub link`);
+      }
+      if (!new RegExp(`href="\\.\\.\\/index\\.html\\?exam=${exam}#practice-workspace"`).test(relatedSection)) {
+        failures.push(`${file} related section missing ${exam.toUpperCase()} practice link`);
+      }
+      if (uniqueSameClusterLinks.size < 3) {
+        failures.push(`${file} related section has ${uniqueSameClusterLinks.size} same-cluster article links`);
+      }
+      if (uniqueSameClusterLinks.has(file)) {
+        failures.push(`${file} related section links to itself`);
+      }
+    }
+  }
 
   titles.set(title, [...(titles.get(title) || []), file]);
   descriptions.set(description, [...(descriptions.get(description) || []), file]);
