@@ -79,13 +79,18 @@
     </script>
     <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
     <link rel="manifest" href="../site.webmanifest" />
-    <link rel="stylesheet" href="../styles.css?v=20260623-rounded3" />
+    <link rel="stylesheet" href="../styles.css?v=20260701-color1" />
   </head>
   <body class="legal-page">
     <main class="legal-shell">
       <nav class="legal-nav" aria-label="Site navigation">
         <a class="brand-link" href="../index.html"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 64 64" focusable="false"><rect x="8" y="8" width="48" height="48" rx="13"></rect><path d="M18 22c5-2 10-2 14 1v24c-4-3-9-3-14-1V22Z"></path><path d="M32 23c5-3 10-3 14-1v24c-5-2-10-2-14 1V23Z"></path><path d="M22 30h6M22 37h6M36 30h5"></path><circle cx="48" cy="18" r="7"></circle><path d="M44.5 18.2l2.4 2.4 5-5.4"></path></svg></span><strong>PassGrid</strong></a>
-        <div><a href="../index.html">Practice</a><a href="../programs/pmp.html">PMP</a><a href="../programs/capm.html">CAPM</a><a href="../privacy.html">Privacy</a></div>
+        <button class="mobile-nav-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="legal-nav-menu"><a href="../index.html">Practice</a><a href="../programs/pmp.html">PMP</a><a href="../programs/capm.html">CAPM</a><a href="../privacy.html">Privacy</a></div>
       </nav>
       <article class="guide-article article-page">
         <header class="legal-hero">
@@ -93,25 +98,17 @@
           <h1>Why Business Analysis Is 27% of CAPM and How to Study It</h1>
           <p class="hero-copy">Business Analysis Frameworks is 27% of CAPM, and many candidates underestimate it. The domain is not only about gathering requirements. It tests whether you understand how needs become traceable, testable, and acceptable project outcomes.</p>
         </header>
-        <figure class="article-visual" aria-label="CAPM business analysis study diagram">
-          <svg viewBox="0 0 760 260" role="img">
-            <rect x="42" y="58" width="150" height="68" rx="12"></rect>
-            <rect x="222" y="58" width="150" height="68" rx="12"></rect>
-            <rect x="402" y="58" width="150" height="68" rx="12"></rect>
-            <rect x="582" y="58" width="136" height="68" rx="12"></rect>
-            <line x1="192" y1="92" x2="222" y2="92"></line>
-            <line x1="372" y1="92" x2="402" y2="92"></line>
-            <line x1="552" y1="92" x2="582" y2="92"></line>
-            <text x="68" y="98" data-fit="label">Stakeholders</text>
-            <text x="256" y="98" data-fit="label">Needs</text>
-            <text x="420" y="98" data-fit="label">Requirements</text>
-            <text x="604" y="98" data-fit="label">Acceptance</text>
-            <rect x="138" y="166" width="210" height="54" rx="10"></rect>
-            <rect x="412" y="166" width="210" height="54" rx="10"></rect>
-            <text x="168" y="198" data-fit="label">Product scope</text>
-            <text x="444" y="198" data-fit="label">Project scope</text>
-          </svg>
-          <figcaption>For CAPM, study business analysis as a chain from stakeholder need to requirement, traceability, acceptance, and controlled scope.</figcaption>
+        <figure class="article-visual" aria-label="Business analysis thread study diagram">
+          <div class="article-diagram">
+            <p class="diagram-kicker">BA map</p>
+            <h2>Business analysis thread</h2>
+            <div class="diagram-grid">
+              <div class="diagram-card"><span>Elicit</span><strong>Collect needs</strong><p>Use interviews, workshops, observation, and stakeholder analysis.</p></div>
+              <div class="diagram-card"><span>Trace</span><strong>Connect requirements</strong><p>Link requirements to value, scope, tests, and acceptance.</p></div>
+              <div class="diagram-card"><span>Validate</span><strong>Confirm fit</strong><p>Use acceptance criteria and feedback before delivery is treated as done.</p></div>
+            </div>
+          </div>
+          <figcaption>Business analysis is not a side topic; it connects needs to accepted value.</figcaption>
         </figure>
         <section class="legal-section">
           <h2>Why this domain is larger than candidates expect</h2>
@@ -158,7 +155,7 @@
           <h2 id="related-guides-title">Related study path</h2>
           <ul class="guide-link-list">
             <li><a href="../programs/capm.html">CAPM Study Hub</a></li>
-            <li><a href="../index.html?exam=capm#practice-workspace">Practice CAPM questions</a></li>
+            <li><a href="../capm-questions.html">Practice CAPM questions</a></li>
             <li><a href="../guides/capm-core-concepts.html">20 project management concepts CAPM beginners confuse most</a></li>
             <li><a href="../guides/capm-agile-scrum-kanban.html">CAPM agile questions: Scrum, Kanban, iterations, and retrospectives</a></li>
             <li><a href="../guides/capm-next-step-scenario-questions.html">CAPM scenario questions: how to answer what should be done next</a></li>
@@ -167,5 +164,6 @@
         </section>
       </article>
     </main>
+    <script src="../nav.js"></script>
   </body>
 </html>

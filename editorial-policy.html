@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -25,16 +25,21 @@
     </script>
     <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
     <link rel="manifest" href="./site.webmanifest" />
-    <link rel="stylesheet" href="./styles.css?v=20260623-rounded3" />
+    <link rel="stylesheet" href="./styles.css?v=20260701-color1" />
   </head>
   <body class="legal-page">
     <main class="legal-shell">
       <nav class="legal-nav" aria-label="Site navigation">
         <a class="brand-link" href="./index.html"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 64 64" focusable="false"><rect x="8" y="8" width="48" height="48" rx="13"></rect><path d="M18 22c5-2 10-2 14 1v24c-4-3-9-3-14-1V22Z"></path><path d="M32 23c5-3 10-3 14-1v24c-5-2-10-2-14 1V23Z"></path><path d="M22 30h6M22 37h6M36 30h5"></path><circle cx="48" cy="18" r="7"></circle><path d="M44.5 18.2l2.4 2.4 5-5.4"></path></svg></span><strong>PassGrid</strong></a>
-        <div>
-          <a href="./index.html">Practice</a>
-          <a href="./programs/capm.html">CAPM</a>
+        <button class="mobile-nav-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="legal-nav-menu">
+          <a href="./practice.html">Free Questions</a>
           <a href="./programs/pmp.html">PMP</a>
+          <a href="./blog.html">Blog</a>
           <a href="./about.html">About</a>
           <a href="./privacy.html">Privacy</a>
           <a href="./terms.html">Terms</a>
@@ -76,5 +81,6 @@
         <p>PassGrid is an independent learning aid. CAPM, PMP, PMI, PMBOK, Pearson VUE, and related names are used only to identify exam categories, study topics, and official sources that candidates should check directly.</p>
       </section>
     </main>
+    <script src="./nav.js"></script>
   </body>
 </html>

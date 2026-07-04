@@ -4,7 +4,7 @@ import vm from "node:vm";
 const args = new Set(process.argv.slice(2));
 const ciMode = args.has("--ci");
 const mojibakePatterns = [/�/, /銆/, /娴/, /鐭/, /鞚/, /茅/, /谩/, /脡/, /锚/];
-const answerLabels = ["A", "B", "C", "D"];
+const answerLabels = ["A", "B", "C", "D", "E"];
 
 function loadExamCatalog() {
   const code = readFileSync("data.js", "utf8");
@@ -52,17 +52,19 @@ function validateExam(exam) {
   const errors = [];
   const warnings = [];
   const questions = Array.isArray(exam.questions) ? exam.questions : [];
+  const practiceQuestions = questions.filter((question) => question.bankType !== "exam");
   const textSeen = new Map();
   const explanationSeen = new Map();
   const tagDistribution = {};
   const answerDistribution = { A: 0, B: 0, C: 0, D: 0 };
 
-  if (exam.questionCount !== questions.length) {
-    addIssue(errors, "count_mismatch", `${exam.id} declares ${exam.questionCount} questions but contains ${questions.length}.`);
+  if (exam.questionCount !== practiceQuestions.length) {
+    addIssue(errors, "count_mismatch", `${exam.id} declares ${exam.questionCount} practice questions but contains ${practiceQuestions.length}.`);
   }
 
   questions.forEach((question, index) => {
     const location = `${exam.id}#${index + 1}`;
+    const isExamBankQuestion = question.bankType === "exam";
     const required = ["tag", "text", "choices", "correct", "explanation"];
     for (const field of required) {
       if (question[field] === undefined || question[field] === null || question[field] === "") {
@@ -70,11 +72,12 @@ function validateExam(exam) {
       }
     }
 
-    if (!Array.isArray(question.choices) || question.choices.length !== 4) {
-      addIssue(errors, "bad_choices", `${location} must have exactly 4 choices.`, { examId: exam.id, index: index + 1 });
+    const expectedChoiceCounts = question.questionType === "multiple" ? [4, 5] : [4];
+    if (!Array.isArray(question.choices) || !expectedChoiceCounts.includes(question.choices.length)) {
+      addIssue(errors, "bad_choices", `${location} has an invalid choice count.`, { examId: exam.id, index: index + 1 });
     }
 
-    if (!Number.isInteger(question.correct) || question.correct < 0 || question.correct > 3) {
+    if (!Number.isInteger(question.correct) || question.correct < 0 || question.correct >= (question.choices || []).length) {
       addIssue(errors, "bad_correct", `${location} has invalid correct index.`, { examId: exam.id, index: index + 1 });
     } else {
       answerDistribution[answerLabels[question.correct]] += 1;
@@ -94,9 +97,9 @@ function validateExam(exam) {
     if (normalizedExplanation.length < 35) {
       addIssue(warnings, "short_explanation", `${location} explanation is short.`, { examId: exam.id, index: index + 1 });
     }
-    if (explanationSeen.has(normalizedExplanation)) {
+    if (!isExamBankQuestion && explanationSeen.has(normalizedExplanation)) {
       addIssue(warnings, "duplicate_explanation", `${location} duplicates explanation ${explanationSeen.get(normalizedExplanation)}.`, { examId: exam.id, index: index + 1 });
-    } else {
+    } else if (!isExamBankQuestion) {
       explanationSeen.set(normalizedExplanation, index + 1);
     }
 
@@ -143,7 +146,11 @@ function validateExam(exam) {
 function buildReport(examCatalog) {
   const exams = examCatalog.map(validateExam);
   const totalQuestions = examCatalog.reduce((sum, exam) => sum + (Array.isArray(exam.questions) ? exam.questions.length : 0), 0);
-  const declaredTotalQuestions = examCatalog.reduce((sum, exam) => sum + (Number.isInteger(exam.questionCount) ? exam.questionCount : 0), 0);
+  const declaredTotalQuestions = examCatalog.reduce((sum, exam) => {
+    const practiceCount = Number.isInteger(exam.questionCount) ? exam.questionCount : 0;
+    const examCount = Number.isInteger(exam.bankConfig?.examQuestionCount) ? exam.bankConfig.examQuestionCount : 0;
+    return sum + practiceCount + examCount;
+  }, 0);
   const globalErrors = [];
 
   if (totalQuestions !== declaredTotalQuestions) {

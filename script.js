@@ -79,7 +79,7 @@ const programText = {
       title: "PMP knowledge-point practice",
       subtitle: "For experienced project leaders",
       badge: "PMP",
-      description: "Practice 250 PMP scenario questions with immediate explanations and local mistake review.",
+      description: "Practice 839 PMP domain and chapter questions with immediate explanations and local mistake review.",
       coverage: ["People", "Process", "Business environment", "Agile", "Hybrid delivery"]
     },
     capm: {
@@ -95,30 +95,53 @@ let currentLanguage = "en";
 const visibleExamCatalog = examCatalog.filter((exam) => ["pmp", "capm"].includes(exam.id));
 const pmpExam = visibleExamCatalog.find((exam) => exam.id === "pmp") || visibleExamCatalog[0] || examCatalog[0];
 const defaultExam = visibleExamCatalog.find((exam) => exam.id === "capm") || pmpExam;
-const requestedExamId = new URLSearchParams(window.location.search).get("exam");
+const pageExamId = document.body.dataset.exam || "";
+const requestedExamId = new URLSearchParams(window.location.search).get("exam") || pageExamId;
+const requestedDomain = new URLSearchParams(window.location.search).get("domain");
+const requestedChapter = new URLSearchParams(window.location.search).get("chapter");
+const requestedMode = new URLSearchParams(window.location.search).get("mode");
 let currentExamId = visibleExamCatalog.some((exam) => exam.id === requestedExamId) ? requestedExamId : defaultExam.id;
 let questionIndex = 0;
 let answered = false;
 const mode = "study";
 let drillAnswers = [];
 let mistakeMode = false;
+let selectedDomain = null;
+let selectedChapter = null;
 let currentChoiceOrder = [];
 const storageKey = "licenseAtlasLocalProgress";
 
 const elements = {
   answers: document.querySelector("#answers"),
   explanation: document.querySelector("#explanation"),
+  previousButton: document.querySelector("#previous-button"),
   nextButton: document.querySelector("#next-button"),
   skipButton: document.querySelector("#skip-button"),
   resetButton: document.querySelector("#reset-button"),
   startDrillButton: document.querySelector("#start-exam-button"),
+  trackRegion: document.querySelector("#track-region"),
+  trackTitle: document.querySelector("#track-title"),
   catalog: document.querySelector("#catalog-grid"),
   resultCount: document.querySelector("#result-count"),
   modeHelp: document.querySelector("#mode-help"),
   language: document.querySelector("#language-select"),
+  domainOutline: document.querySelector("#domain-outline"),
+  domainList: document.querySelector("#domain-list"),
+  domainOutlineCount: document.querySelector("#domain-outline-count"),
+  drillBreadcrumb: document.querySelector(".drill-breadcrumb"),
+  breadcrumbExamLink: document.querySelector("#breadcrumb-exam-link"),
+  breadcrumbDomain: document.querySelector("#breadcrumb-domain"),
+  sourceStrip: document.querySelector(".source-strip"),
+  questionCard: document.querySelector(".question-card"),
   clearLocalButton: document.querySelector("#clear-local-button"),
   reviewMistakesButton: document.querySelector("#review-mistakes-button"),
-  clearMistakesButton: document.querySelector("#clear-mistakes-button")
+  clearMistakesButton: document.querySelector("#clear-mistakes-button"),
+  bankCompletion: document.querySelector("#bank-completion"),
+  bankAnswered: document.querySelector("#bank-answered"),
+  bankAccuracy: document.querySelector("#bank-accuracy"),
+  bankMistakes: document.querySelector("#bank-mistakes"),
+  outlineResetButton: document.querySelector("#outline-reset-progress"),
+  outlineReviewMistakesButton: document.querySelector("#outline-review-mistakes")
 };
 
 function t(key, ...args) {
@@ -132,6 +155,85 @@ function p(exam) {
 
 function getCurrentExam() {
   return visibleExamCatalog.find((exam) => exam.id === currentExamId) || pmpExam;
+}
+
+function isPracticeQuestion(question) {
+  return question.bankType !== "exam";
+}
+
+function getPracticeQuestions(exam = getCurrentExam()) {
+  return exam.questions.filter(isPracticeQuestion);
+}
+
+function getPracticeQuestionCount(exam = getCurrentExam()) {
+  return exam.bankConfig?.practiceQuestionCount
+    || exam.examConfig?.practiceQuestionCount
+    || getPracticeQuestions(exam).length;
+}
+
+function getExamQuestionCount(exam = getCurrentExam()) {
+  return exam.bankConfig?.examQuestionCount || 0;
+}
+
+function getPracticeOutlineType(exam = getCurrentExam()) {
+  return exam.bankConfig?.practiceOutlineType || "domains";
+}
+
+function getDomainTargets(exam = getCurrentExam()) {
+  const practiceQuestions = getPracticeQuestions(exam);
+  return (exam.examConfig?.domainTargets || []).map((target) => ({
+    name: target.domain,
+    weight: target.weight,
+    count: practiceQuestions.filter((question) => question.domain === target.domain).length
+  }));
+}
+
+function getChapterTargets(exam = getCurrentExam()) {
+  const practiceQuestions = getPracticeQuestions(exam);
+  return (exam.examConfig?.chapterTargets || []).map((target) => ({
+    ...target,
+    count: practiceQuestions.filter((question) => question.chapterId === target.chapterId).length
+  }));
+}
+
+function renderDrillBreadcrumb(exam) {
+  if (!elements.drillBreadcrumb) return;
+  if (!selectedDomain && !selectedChapter && !mistakeMode) {
+    elements.drillBreadcrumb.hidden = true;
+    return;
+  }
+  const examLabel = exam.id.toUpperCase();
+  if (elements.breadcrumbExamLink) {
+    elements.breadcrumbExamLink.textContent = examLabel;
+    elements.breadcrumbExamLink.href = `./${exam.id}-questions.html`;
+  }
+  if (elements.breadcrumbDomain) {
+    const chapter = getChapterTargets(exam).find((target) => target.chapterId === selectedChapter);
+    elements.breadcrumbDomain.textContent = mistakeMode
+      ? "Mistake review"
+      : chapter?.chapterTitle || selectedDomain;
+  }
+  elements.drillBreadcrumb.hidden = false;
+}
+
+function isValidDomain(exam, domainName) {
+  return Boolean(domainName) && getDomainTargets(exam).some((domain) => domain.name === domainName);
+}
+
+function isValidChapter(exam, chapterId) {
+  return Boolean(chapterId) && getChapterTargets(exam).some((chapter) => chapter.chapterId === chapterId);
+}
+
+if (isValidDomain(getCurrentExam(), requestedDomain)) {
+  selectedDomain = requestedDomain;
+}
+
+if (isValidChapter(getCurrentExam(), requestedChapter)) {
+  selectedChapter = requestedChapter;
+}
+
+if (requestedMode === "mistakes") {
+  mistakeMode = true;
 }
 
 function listSeparator() {
@@ -154,7 +256,10 @@ function getExamProgress(examId = currentExamId) {
   return readProgressStore()[examId] || {
     answered: 0,
     correct: 0,
+    answeredQuestionKeys: [],
+    correctQuestionKeys: [],
     wrongQuestionKeys: [],
+    selectedAnswerByKey: {},
     lastScore: null,
     lastStudiedAt: null
   };
@@ -162,6 +267,12 @@ function getExamProgress(examId = currentExamId) {
 
 function questionKey(exam, index) {
   return `${exam.id}:${index}`;
+}
+
+function getStoredAnswer(exam, originalIndex) {
+  if (drillAnswers[originalIndex] !== undefined) return drillAnswers[originalIndex];
+  const selectedAnswerByKey = getExamProgress(exam.id).selectedAnswerByKey || {};
+  return selectedAnswerByKey[questionKey(exam, originalIndex)];
 }
 
 function parseQuestionKey(key) {
@@ -189,6 +300,7 @@ function createTextNode(tagName, text, className) {
 }
 
 function setPressLabel(node, text) {
+  if (!node) return;
   node.replaceChildren(createTextNode("span", text, "press-label"));
 }
 
@@ -209,7 +321,9 @@ function shuffleIndexes(length) {
 }
 
 function getFilteredExams() {
-  return visibleExamCatalog;
+  return ["capm", "pmp"]
+    .map((id) => visibleExamCatalog.find((exam) => exam.id === id))
+    .filter(Boolean);
 }
 
 function applyStaticTranslations() {
@@ -222,86 +336,63 @@ function applyStaticTranslations() {
 }
 
 function renderCatalog() {
+  if (!elements.catalog || !elements.resultCount) return;
   const exams = getFilteredExams();
-  elements.resultCount.textContent = `${exams.length} practice tracks available`;
-  replaceChildren(elements.catalog, exams.map((exam) => {
+  const totalQuestions = exams.reduce((sum, exam) => sum + getPracticeQuestionCount(exam), 0);
+  elements.resultCount.textContent = `Prepare for PMP and CAPM with ${totalQuestions.toLocaleString("en-US")} free practice questions and detailed explanations.`;
+  const cards = exams.map((exam) => {
     const text = p(exam);
-    const examConfig = exam.examConfig || {};
-    const card = document.createElement("article");
-    card.className = `exam-card ${exam.id === currentExamId ? "selected" : ""}`;
+    const practiceCount = getPracticeQuestionCount(exam);
+    const card = document.createElement("a");
+    card.className = `exam-card ${requestedExamId && exam.id === currentExamId ? "selected" : ""}`;
     card.dataset.examId = exam.id;
+    card.href = `./${exam.id}-questions.html`;
+
+    const meta = document.createElement("div");
+    meta.className = "exam-card-meta";
+    meta.append(
+      createTextNode("span", "FREE", `free-badge ${exam.id === "capm" ? "capm-free" : "pmp-free"}`),
+      createTextNode("span", `${practiceCount.toLocaleString("en-US")} practice questions`, "question-count-label")
+    );
+
+    const title = exam.id === "capm" ? "CAPM Practice Questions" : "PMP Practice Questions";
+    const description = exam.id === "capm"
+      ? "Certified Associate in Project Management practice covering project management fundamentals, predictive methods, agile, and business analysis."
+      : "Project Management Professional practice organized by PMBOK chapter with scenario-based explanations.";
+
     card.append(
-      createTextNode("span", text.badge, "card-badge"),
-      createTextNode("h3", text.title),
-      createTextNode("p", text.description)
+      meta,
+      createTextNode("h3", title),
+      createTextNode("p", description)
     );
-
-    const list = document.createElement("dl");
-    list.className = "cred-list";
-    [
-      [t("source"), exam.source],
-      [t("coverage"), text.coverage.slice(0, 3).join(listSeparator())]
-    ].forEach(([label, value]) => {
-      const row = document.createElement("div");
-      row.append(createTextNode("dt", label), createTextNode("dd", value));
-      list.appendChild(row);
-    });
-
-    const footer = document.createElement("div");
-    footer.className = "card-footer";
-    footer.append(
-      createTextNode("span", `${examConfig.practiceQuestionCount || exam.questionCount} practice questions`),
-      createTextNode("span", `${text.coverage.length} focus areas`)
-    );
-
-    const actions = document.createElement("div");
-    actions.className = "exam-card-actions";
-    const practiceButton = document.createElement("button");
-    practiceButton.className = "ghost-button";
-    practiceButton.type = "button";
-    setPressLabel(practiceButton, exam.id === currentExamId ? `Selected ${text.badge}` : `Choose ${text.badge}`);
-    practiceButton.addEventListener("click", () => selectExam(exam.id, true));
-    const detailsLink = document.createElement("a");
-    detailsLink.className = "text-button";
-    detailsLink.href = `./programs/${exam.id}.html`;
-    setPressLabel(detailsLink, t("detailsAction"));
-    actions.append(practiceButton, detailsLink);
-
-    card.append(list, footer, actions);
     return card;
-  }));
+  });
+
+  replaceChildren(elements.catalog, cards);
 }
 
 function selectExam(examId, shouldScroll = false) {
-  currentExamId = examId;
-  questionIndex = 0;
-  drillAnswers = [];
-  answered = false;
-  mistakeMode = false;
-  const url = new URL(window.location.href);
-  url.searchParams.set("exam", examId);
-  url.hash = shouldScroll ? "practice-workspace" : window.location.hash.replace("#", "");
-  window.history.replaceState(null, "", url);
-  renderExam();
-  renderCatalog();
-  if (shouldScroll) {
-    document.querySelector(".question-card")?.scrollIntoView({
-      behavior: "smooth",
-      block: "start"
-    });
-  }
+  window.location.href = `./${examId}-questions.html`;
 }
 
 function getActiveQuestions(exam = getCurrentExam()) {
+  const filterEntries = (entries) => entries.filter(({ question }) => {
+    if (!isPracticeQuestion(question)) return false;
+    if (selectedDomain && question.domain !== selectedDomain) return false;
+    if (selectedChapter && question.chapterId !== selectedChapter) return false;
+    return true;
+  });
+
   if (!mistakeMode) {
-    return exam.questions.map((question, index) => ({ question, index }));
+    return filterEntries(exam.questions.map((question, index) => ({ question, index })));
   }
+
   const wrongIndexes = getExamProgress(exam.id).wrongQuestionKeys
     .map(parseQuestionKey)
     .filter((entry) => entry.examId === exam.id && Number.isInteger(entry.index))
     .map((entry) => entry.index)
     .filter((index) => exam.questions[index]);
-  return [...new Set(wrongIndexes)].map((index) => ({ question: exam.questions[index], index }));
+  return filterEntries([...new Set(wrongIndexes)].map((index) => ({ question: exam.questions[index], index })));
 }
 
 function getLocalWeakArea(exam, progress) {
@@ -314,6 +405,7 @@ function getLocalWeakArea(exam, progress) {
 }
 
 function renderLearningStats(exam) {
+  if (!document.querySelector("#readiness")) return;
   const progress = getExamProgress(exam.id);
   const accuracy = progress.answered ? Math.round((progress.correct / progress.answered) * 100) : 0;
   const volumeBonus = Math.min(20, Math.floor(progress.answered / 3) * 5);
@@ -324,10 +416,12 @@ function renderLearningStats(exam) {
   document.querySelector("#accuracy").textContent = `${accuracy}%`;
   document.querySelector("#weak-area").textContent = getLocalWeakArea(exam, progress);
   document.querySelector("#eta").textContent = progress.answered ? t("etaDays", days) : t("etaStart");
-  document.querySelector(".ring").style.background = `conic-gradient(var(--green) ${readiness}%, #e2e8df 0)`;
+  const ring = document.querySelector(".ring");
+  if (ring) ring.style.background = `conic-gradient(var(--green) ${readiness}%, #e2e8df 0)`;
 }
 
 function renderLocalProgress() {
+  if (!document.querySelector("#local-answered")) return;
   const progress = getExamProgress();
   const accuracy = progress.answered ? Math.round((progress.correct / progress.answered) * 100) : 0;
   const wrongCount = progress.wrongQuestionKeys.length;
@@ -349,20 +443,110 @@ function renderLocalProgress() {
 }
 
 function getModeHelp(exam) {
-  const config = exam.examConfig || {};
-  const practiceCount = config.practiceQuestionCount || exam.questions.length;
+  const practiceCount = getPracticeQuestionCount(exam);
   return `${p(exam).badge}: practice ${practiceCount} questions in short knowledge-point sessions. Explanations appear immediately after each answer.`;
 }
 
 function renderStudyPlan(exam) {
-  const config = exam.examConfig || {};
-  const practiceCount = config.practiceQuestionCount || exam.questions.length;
+  const studyPlan = document.querySelector("#study-plan");
+  if (!studyPlan) return;
+  const practiceCount = getPracticeQuestionCount(exam);
   const plan = [
     t("planWeak", getLocalWeakArea(exam, getExamProgress(exam.id))),
     `Work through the ${practiceCount}-question bank in short sessions.`,
     "Read each explanation before moving to the next knowledge point."
   ];
-  replaceChildren(document.querySelector("#study-plan"), plan.map((item) => createTextNode("li", item)));
+  replaceChildren(studyPlan, plan.map((item) => createTextNode("li", item)));
+}
+
+function renderBankProgress(exam) {
+  if (!elements.bankCompletion) return;
+  const progress = getExamProgress(exam.id);
+  const totalQuestions = exam.examConfig?.practiceQuestionCount || exam.questions.length;
+  const answeredCount = progress.answered || 0;
+  const accuracy = answeredCount ? Math.round((progress.correct / answeredCount) * 100) : 0;
+  const completion = totalQuestions ? Math.min(100, Math.round((answeredCount / totalQuestions) * 100)) : 0;
+  const mistakeCount = (progress.wrongQuestionKeys || [])
+    .map(parseQuestionKey)
+    .filter((entry) => entry.examId === exam.id && Number.isInteger(entry.index))
+    .length;
+
+  elements.bankCompletion.textContent = `${completion}%`;
+  elements.bankAnswered.textContent = answeredCount.toLocaleString("en-US");
+  elements.bankAccuracy.textContent = `${accuracy}%`;
+  elements.bankMistakes.textContent = mistakeCount.toLocaleString("en-US");
+  if (elements.outlineReviewMistakesButton) elements.outlineReviewMistakesButton.disabled = mistakeCount === 0;
+}
+
+function getDomainProgress(exam, domainName) {
+  const progress = getExamProgress(exam.id);
+  const domainIndexes = new Set(exam.questions
+    .map((question, index) => ({ question, index }))
+    .filter(({ question }) => question.domain === domainName)
+    .map(({ index }) => index));
+  const belongsToDomain = (key) => {
+    const parsed = parseQuestionKey(key);
+    return parsed.examId === exam.id && domainIndexes.has(parsed.index);
+  };
+  const answeredCount = (progress.answeredQuestionKeys || []).filter(belongsToDomain).length;
+  const correctCount = (progress.correctQuestionKeys || []).filter(belongsToDomain).length;
+  const mistakeCount = (progress.wrongQuestionKeys || []).filter(belongsToDomain).length;
+  const totalCount = domainIndexes.size;
+
+  return {
+    answeredCount,
+    correctCount,
+    mistakeCount,
+    completion: totalCount ? Math.min(100, Math.round((answeredCount / totalCount) * 100)) : 0,
+    accuracy: answeredCount ? Math.round((correctCount / answeredCount) * 100) : 0
+  };
+}
+
+function resetDomainProgress(domainName) {
+  const exam = getCurrentExam();
+  const domainIndexes = new Set(exam.questions
+    .map((question, index) => ({ question, index }))
+    .filter(({ question }) => question.domain === domainName)
+    .map(({ index }) => index));
+  const outsideDomain = (key) => {
+    const parsed = parseQuestionKey(key);
+    return parsed.examId !== exam.id || !domainIndexes.has(parsed.index);
+  };
+
+  saveExamProgress(exam.id, (progress) => {
+    const answeredQuestionKeys = (progress.answeredQuestionKeys || []).filter(outsideDomain);
+    const correctQuestionKeys = (progress.correctQuestionKeys || []).filter(outsideDomain);
+    const selectedAnswerByKey = Object.fromEntries(
+      Object.entries(progress.selectedAnswerByKey || {}).filter(([key]) => outsideDomain(key))
+    );
+    return {
+      ...progress,
+      answered: answeredQuestionKeys.length,
+      correct: correctQuestionKeys.length,
+      answeredQuestionKeys,
+      correctQuestionKeys,
+      wrongQuestionKeys: (progress.wrongQuestionKeys || []).filter(outsideDomain),
+      selectedAnswerByKey,
+      lastScore: null,
+      lastStudiedAt: new Date().toISOString()
+    };
+  });
+  renderDomainOutline(exam);
+}
+
+function reviewDomainMistakes(domainName) {
+  const exam = getCurrentExam();
+  const domainProgress = getDomainProgress(exam, domainName);
+  if (!domainProgress.mistakeCount) return;
+  const params = new URLSearchParams({ exam: exam.id, domain: domainName, mode: "mistakes" });
+  window.location.href = `./drill.html?${params.toString()}`;
+}
+
+function selectChapter(chapterId) {
+  const exam = getCurrentExam();
+  if (!isValidChapter(exam, chapterId)) return;
+  const params = new URLSearchParams({ exam: exam.id, chapter: chapterId });
+  window.location.href = `./drill.html?${params.toString()}`;
 }
 
 function renderGuideVisibility() {
@@ -372,27 +556,119 @@ function renderGuideVisibility() {
   if (capmGuides) capmGuides.hidden = false;
 }
 
+function renderDomainOutline(exam) {
+  if (!elements.domainList || !elements.domainOutline) return;
+  const domains = getDomainTargets(exam);
+  const text = p(exam);
+  elements.domainOutline.hidden = false;
+  if (elements.domainOutlineCount) {
+    elements.domainOutlineCount.textContent = exam.id === "pmp"
+      ? "2026 official PMP exam outline: 839 practice questions across People 33%, Process 41%, and Business Environment 26%."
+      : `${text.badge}: ${domains.reduce((sum, domain) => sum + domain.count, 0)} practice questions across ${domains.length} domains.`;
+  }
+
+  replaceChildren(elements.domainList, domains.map((domain) => {
+    const card = document.createElement("article");
+    card.className = `domain-card domain-unit-card ${selectedDomain === domain.name ? "selected" : ""}`;
+    card.dataset.unit = domain.name;
+    const progress = getDomainProgress(exam, domain.name);
+
+    const content = document.createElement("span");
+    content.className = "domain-card-copy";
+    content.append(
+      createTextNode("span", `${text.badge} domain`, "domain-card-kicker"),
+      createTextNode("strong", domain.name, "domain-card-title"),
+      createTextNode("span", exam.id === "pmp" ? `${domain.weight}% of the 2026 official PMP exam outline` : `${domain.weight}% of this exam outline`, "domain-card-note")
+    );
+
+    const count = document.createElement("span");
+    count.className = "domain-card-count";
+    count.append(
+      createTextNode("strong", String(domain.count)),
+      createTextNode("span", "questions")
+    );
+
+    const metrics = document.createElement("dl");
+    metrics.className = "domain-progress-grid";
+    [
+      ["Complete", `${progress.completion}%`],
+      ["Answered", String(progress.answeredCount)],
+      ["Accuracy", `${progress.accuracy}%`],
+      ["Mistakes", String(progress.mistakeCount)]
+    ].forEach(([label, value]) => {
+      const item = document.createElement("div");
+      item.append(createTextNode("dt", label), createTextNode("dd", value));
+      metrics.appendChild(item);
+    });
+
+    const actions = document.createElement("div");
+    actions.className = "domain-card-actions";
+    const practiceButton = document.createElement("button");
+    practiceButton.className = "primary-button";
+    practiceButton.type = "button";
+    setPressLabel(practiceButton, "Practice this unit");
+    practiceButton.addEventListener("click", () => selectDomain(domain.name));
+    const reviewButton = document.createElement("button");
+    reviewButton.className = "ghost-button";
+    reviewButton.type = "button";
+    reviewButton.disabled = progress.mistakeCount === 0;
+    setPressLabel(reviewButton, "Review mistakes");
+    reviewButton.addEventListener("click", () => reviewDomainMistakes(domain.name));
+    const resetButton = document.createElement("button");
+    resetButton.className = "text-button domain-reset-button";
+    resetButton.type = "button";
+    setPressLabel(resetButton, "Reset unit progress");
+    resetButton.addEventListener("click", () => resetDomainProgress(domain.name));
+    actions.append(practiceButton, reviewButton, resetButton);
+
+    card.append(content, count, metrics, actions);
+    return card;
+  }));
+}
+
+function selectDomain(domainName) {
+  const exam = getCurrentExam();
+  if (!isValidDomain(exam, domainName)) return;
+  const params = new URLSearchParams({ exam: exam.id, domain: domainName });
+  window.location.href = `./drill.html?${params.toString()}`;
+}
+
 function renderExam() {
   const exam = getCurrentExam();
   const text = p(exam);
-  document.querySelector("#track-region").textContent = `${exam.country} / ${exam.region}`;
-  document.querySelector("#track-title").textContent = text.title;
-  document.querySelector("#source-name").textContent = exam.source;
-  document.querySelector("#source-coverage").textContent = text.coverage.join(listSeparator());
-  document.querySelector("#source-updated").textContent = exam.updated;
+  if (elements.trackRegion) elements.trackRegion.textContent = `${exam.country} / ${exam.region}`;
+  if (elements.trackTitle) elements.trackTitle.textContent = text.title;
+  const sourceName = document.querySelector("#source-name");
+  const sourceCoverage = document.querySelector("#source-coverage");
+  const sourceUpdated = document.querySelector("#source-updated");
+  if (sourceName) sourceName.textContent = exam.source;
+  if (sourceCoverage) sourceCoverage.textContent = text.coverage.join(listSeparator());
+  if (sourceUpdated) sourceUpdated.textContent = exam.updated;
   if (elements.modeHelp) elements.modeHelp.textContent = getModeHelp(exam);
   const dailyGoal = document.querySelector("#daily-goal");
   if (dailyGoal) dailyGoal.textContent = t("dailyStudy");
   renderLearningStats(exam);
   renderStudyPlan(exam);
   renderLocalProgress();
+  renderBankProgress(exam);
   renderGuideVisibility();
+  renderDomainOutline(exam);
   renderQuestion();
 }
 
 function renderQuestion() {
+  if (!elements.questionCard || !elements.answers || !elements.explanation) return;
   answered = false;
   const exam = getCurrentExam();
+  if (!selectedDomain && !selectedChapter && !mistakeMode) {
+    renderDrillBreadcrumb(exam);
+    if (elements.sourceStrip) elements.sourceStrip.hidden = true;
+    if (elements.questionCard) elements.questionCard.hidden = true;
+    return;
+  }
+  renderDrillBreadcrumb(exam);
+  if (elements.sourceStrip) elements.sourceStrip.hidden = false;
+  if (elements.questionCard) elements.questionCard.hidden = false;
   const activeQuestions = getActiveQuestions(exam);
   if (questionIndex >= activeQuestions.length) questionIndex = 0;
   if (!activeQuestions.length) {
@@ -402,23 +678,25 @@ function renderQuestion() {
     elements.explanation.textContent = t("noMistakesDetail");
     elements.explanation.classList.remove("hidden");
     elements.answers.replaceChildren();
-    elements.skipButton.hidden = true;
+    if (elements.previousButton) elements.previousButton.disabled = true;
+    if (elements.skipButton) elements.skipButton.hidden = true;
     elements.nextButton.disabled = true;
-    setPressLabel(elements.nextButton, t("next"));
+    setPressLabel(elements.nextButton, "Next \u2192");
     return;
   }
   elements.nextButton.disabled = false;
-  const { question } = activeQuestions[questionIndex];
+  if (elements.previousButton) elements.previousButton.disabled = questionIndex === 0;
+  const { question, index: originalIndex } = activeQuestions[questionIndex];
   document.querySelector("#question-tag").textContent = question.tag;
   document.querySelector("#question-progress").textContent = t("progress", questionIndex + 1, activeQuestions.length);
   document.querySelector("#question-text").textContent = question.text;
   elements.explanation.classList.add("hidden");
   elements.explanation.textContent = "";
   elements.answers.replaceChildren();
-  elements.skipButton.hidden = false;
-  setPressLabel(elements.nextButton, t("next"));
+  if (elements.skipButton) elements.skipButton.hidden = false;
+  setPressLabel(elements.nextButton, "Next \u2192");
   hydratePressLabels();
-  currentChoiceOrder = shuffleIndexes(question.choices.length);
+  currentChoiceOrder = question.choices.map((_, index) => index);
   currentChoiceOrder.forEach((choiceIndex, index) => {
     const button = document.createElement("button");
     button.className = "answer";
@@ -430,6 +708,24 @@ function renderQuestion() {
     button.addEventListener("click", () => selectAnswer(choiceIndex));
     elements.answers.appendChild(button);
   });
+  const storedAnswer = getStoredAnswer(exam, originalIndex);
+  if (storedAnswer !== undefined) {
+    showAnsweredQuestion(question, storedAnswer);
+  }
+}
+
+function showAnsweredQuestion(question, selectedIndex) {
+  answered = true;
+  const isCorrect = selectedIndex === question.correct;
+  Array.from(elements.answers.children).forEach((button, buttonIndex) => {
+    const originalChoiceIndex = currentChoiceOrder[buttonIndex];
+    button.disabled = true;
+    if (originalChoiceIndex === question.correct) button.classList.add("correct");
+    if (originalChoiceIndex === selectedIndex) button.classList.add("selected-answer");
+    if (originalChoiceIndex === selectedIndex && !isCorrect) button.classList.add("wrong");
+  });
+  elements.explanation.textContent = question.explanation;
+  elements.explanation.classList.remove("hidden");
 }
 
 function selectAnswer(index) {
@@ -441,25 +737,33 @@ function selectAnswer(index) {
   const { question, index: originalIndex } = activeQuestion;
   const isCorrect = index === question.correct;
   drillAnswers[originalIndex] = index;
-  Array.from(elements.answers.children).forEach((button, buttonIndex) => {
-    const originalChoiceIndex = currentChoiceOrder[buttonIndex];
-    if (originalChoiceIndex === question.correct) button.classList.add("correct");
-    if (originalChoiceIndex === index && !isCorrect) button.classList.add("wrong");
-  });
   saveExamProgress(exam.id, (progress) => {
     const wrongSet = new Set(progress.wrongQuestionKeys || []);
-    if (isCorrect) wrongSet.delete(questionKey(exam, originalIndex));
-    else wrongSet.add(questionKey(exam, originalIndex));
+    const answeredSet = new Set(progress.answeredQuestionKeys || []);
+    const correctSet = new Set(progress.correctQuestionKeys || []);
+    const key = questionKey(exam, originalIndex);
+    const wasAnswered = answeredSet.has(key);
+    const selectedAnswerByKey = {
+      ...(progress.selectedAnswerByKey || {}),
+      [key]: index
+    };
+    answeredSet.add(key);
+    if (isCorrect) wrongSet.delete(key);
+    else wrongSet.add(key);
+    if (isCorrect) correctSet.add(key);
+    else correctSet.delete(key);
     return {
       ...progress,
-      answered: progress.answered + 1,
-      correct: progress.correct + (isCorrect ? 1 : 0),
+      answered: wasAnswered ? progress.answered : progress.answered + 1,
+      correct: wasAnswered ? correctSet.size : progress.correct + (isCorrect ? 1 : 0),
+      answeredQuestionKeys: Array.from(answeredSet),
+      correctQuestionKeys: Array.from(correctSet),
       wrongQuestionKeys: Array.from(wrongSet),
+      selectedAnswerByKey,
       lastStudiedAt: new Date().toISOString()
     };
   });
-  elements.explanation.textContent = question.explanation;
-  elements.explanation.classList.remove("hidden");
+  showAnsweredQuestion(question, index);
 }
 
 function advanceQuestion() {
@@ -467,6 +771,14 @@ function advanceQuestion() {
   const activeQuestions = getActiveQuestions(exam);
   if (!activeQuestions.length) return;
   questionIndex = (questionIndex + 1) % activeQuestions.length;
+  renderQuestion();
+}
+
+function previousQuestion() {
+  const exam = getCurrentExam();
+  const activeQuestions = getActiveQuestions(exam);
+  if (!activeQuestions.length || questionIndex === 0) return;
+  questionIndex -= 1;
   renderQuestion();
 }
 
@@ -501,15 +813,28 @@ function clearCurrentLocalProgress() {
   renderLearningStats(getCurrentExam());
   renderStudyPlan(getCurrentExam());
   renderLocalProgress();
+  renderBankProgress(getCurrentExam());
   resetSession();
 }
 
 function reviewMistakes() {
   if (!getExamProgress().wrongQuestionKeys.length) return;
   mistakeMode = true;
+  selectedDomain = null;
+  selectedChapter = null;
   questionIndex = 0;
   drillAnswers = [];
+  const url = new URL(window.location.href);
+  url.searchParams.set("exam", currentExamId);
+  url.searchParams.delete("domain");
+  url.searchParams.delete("chapter");
+  url.hash = "practice-workspace";
+  window.history.replaceState(null, "", url);
   renderExam();
+  elements.questionCard?.scrollIntoView({
+    behavior: "smooth",
+    block: "start"
+  });
 }
 
 function clearCurrentMistakes() {
@@ -518,24 +843,37 @@ function clearCurrentMistakes() {
     wrongQuestionKeys: []
   }));
   mistakeMode = false;
+  renderBankProgress(getCurrentExam());
   resetSession();
+}
+
+function reviewOutlineMistakes() {
+  const progress = getExamProgress(currentExamId);
+  if (!progress.wrongQuestionKeys.length) return;
+  const params = new URLSearchParams({ exam: currentExamId, mode: "mistakes" });
+  window.location.href = `./drill.html?${params.toString()}`;
 }
 
 if (elements.language) {
   elements.language.addEventListener("change", () => setLanguage(elements.language.value));
 }
-elements.startDrillButton.addEventListener("click", () => {
-  document.querySelector("#bank-selector-title")?.scrollIntoView({
-    behavior: "smooth",
-    block: "start"
+if (elements.startDrillButton) {
+  elements.startDrillButton.addEventListener("click", () => {
+    document.querySelector("#bank-selector-title")?.scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
   });
-});
-elements.nextButton.addEventListener("click", advanceQuestion);
-elements.skipButton.addEventListener("click", advanceQuestion);
-elements.resetButton.addEventListener("click", resetSession);
-elements.clearLocalButton.addEventListener("click", clearCurrentLocalProgress);
-elements.reviewMistakesButton.addEventListener("click", reviewMistakes);
-elements.clearMistakesButton.addEventListener("click", clearCurrentMistakes);
+}
+if (elements.previousButton) elements.previousButton.addEventListener("click", previousQuestion);
+if (elements.nextButton) elements.nextButton.addEventListener("click", advanceQuestion);
+if (elements.skipButton) elements.skipButton.addEventListener("click", advanceQuestion);
+if (elements.resetButton) elements.resetButton.addEventListener("click", resetSession);
+if (elements.clearLocalButton) elements.clearLocalButton.addEventListener("click", clearCurrentLocalProgress);
+if (elements.reviewMistakesButton) elements.reviewMistakesButton.addEventListener("click", reviewMistakes);
+if (elements.clearMistakesButton) elements.clearMistakesButton.addEventListener("click", clearCurrentMistakes);
+if (elements.outlineResetButton) elements.outlineResetButton.addEventListener("click", clearCurrentLocalProgress);
+if (elements.outlineReviewMistakesButton) elements.outlineReviewMistakesButton.addEventListener("click", reviewOutlineMistakes);
 
 hydratePressLabels();
 applyStaticTranslations();

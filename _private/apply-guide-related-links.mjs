@@ -169,7 +169,7 @@ function relatedSection(file) {
   const label = exam.toUpperCase();
   const links = [
     `<li><a href="../programs/${exam}.html">${label} Study Hub</a></li>`,
-    `<li><a href="../index.html?exam=${exam}#practice-workspace">Practice ${label} questions</a></li>`,
+    `<li><a href="../${exam}-questions.html">Practice ${label} questions</a></li>`,
     ...relatedPaths[file].map((path) => `<li><a href="${relativeGuideHref(path)}">${guideTitles[path]}</a></li>`)
   ];
 

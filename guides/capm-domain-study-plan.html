@@ -79,13 +79,18 @@
     </script>
     <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
     <link rel="manifest" href="../site.webmanifest" />
-    <link rel="stylesheet" href="../styles.css?v=20260623-rounded3" />
+    <link rel="stylesheet" href="../styles.css?v=20260701-color1" />
   </head>
   <body class="legal-page">
     <main class="legal-shell">
       <nav class="legal-nav" aria-label="Site navigation">
         <a class="brand-link" href="../index.html"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 64 64" focusable="false"><rect x="8" y="8" width="48" height="48" rx="13"></rect><path d="M18 22c5-2 10-2 14 1v24c-4-3-9-3-14-1V22Z"></path><path d="M32 23c5-3 10-3 14-1v24c-5-2-10-2-14 1V23Z"></path><path d="M22 30h6M22 37h6M36 30h5"></path><circle cx="48" cy="18" r="7"></circle><path d="M44.5 18.2l2.4 2.4 5-5.4"></path></svg></span><strong>PassGrid</strong></a>
-        <div><a href="../index.html">Practice</a><a href="../programs/pmp.html">PMP</a><a href="../programs/capm.html">CAPM</a><a href="../privacy.html">Privacy</a></div>
+        <button class="mobile-nav-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="legal-nav-menu"><a href="../index.html">Practice</a><a href="../programs/pmp.html">PMP</a><a href="../programs/capm.html">CAPM</a><a href="../privacy.html">Privacy</a></div>
       </nav>
       <article class="guide-article article-page">
         <header class="legal-hero">
@@ -93,18 +98,30 @@
           <h1>How to Split CAPM Study Time Across the Four Exam Domains</h1>
           <p class="hero-copy">CAPM preparation works better when the calendar follows the exam weight. This guide turns the four official domains into a realistic 30-day or 45-day plan.</p>
         </header>
-        <figure class="article-visual" aria-label="CAPM exam domain weights">
-          <svg viewBox="0 0 760 260" role="img">
-            <rect x="44" y="42" width="220" height="44" rx="8"></rect>
-            <rect x="44" y="96" width="104" height="44" rx="8"></rect>
-            <rect x="44" y="150" width="122" height="44" rx="8"></rect>
-            <rect x="44" y="204" width="166" height="44" rx="8"></rect>
-            <text x="288" y="71" data-fit="wide" textLength="432" lengthAdjust="spacingAndGlyphs">Project Management Fundamentals and Core Concepts 36%</text>
-            <text x="172" y="125" data-fit="label">Predictive, Plan-Based Methodologies 17%</text>
-            <text x="190" y="179" data-fit="label">Agile Frameworks and Methodologies 20%</text>
-            <text x="234" y="233" data-fit="label">Business Analysis Frameworks 27%</text>
-          </svg>
-          <figcaption>The CAPM outline is not evenly weighted. Use the percentages to shape study time, not just chapter order.</figcaption>
+        <figure class="article-visual" aria-label="CAPM domain weights diagram">
+          <div class="article-diagram">
+            <p class="diagram-kicker">CAPM weights</p>
+            <h2>CAPM domain weights</h2>
+            <div class="weight-list">
+              <div class="weight-row" style="--bar:36%">
+                <div><strong>Project Management Fundamentals and Core Concepts</strong><span>Start with roles, life cycles, and core terms.</span></div>
+                <b>36%</b>
+              </div>
+              <div class="weight-row" style="--bar:17%">
+                <div><strong>Predictive, Plan-Based Methodologies</strong><span>Review scope, schedule, cost, and quality planning.</span></div>
+                <b>17%</b>
+              </div>
+              <div class="weight-row" style="--bar:20%">
+                <div><strong>Agile Frameworks and Methodologies</strong><span>Know roles, events, backlog flow, and retrospectives.</span></div>
+                <b>20%</b>
+              </div>
+              <div class="weight-row" style="--bar:27%">
+                <div><strong>Business Analysis Frameworks</strong><span>Study requirements, traceability, stakeholders, and acceptance.</span></div>
+                <b>27%</b>
+              </div>
+            </div>
+          </div>
+          <figcaption>The CAPM outline is uneven; study time should follow the domain weights.</figcaption>
         </figure>
         <section class="legal-section">
           <h2>Start with the weights, not the table of contents</h2>
@@ -140,7 +157,7 @@
           <h2 id="related-guides-title">Related study path</h2>
           <ul class="guide-link-list">
             <li><a href="../programs/capm.html">CAPM Study Hub</a></li>
-            <li><a href="../index.html?exam=capm#practice-workspace">Practice CAPM questions</a></li>
+            <li><a href="../capm-questions.html">Practice CAPM questions</a></li>
             <li><a href="../guides/capm-core-concepts.html">20 project management concepts CAPM beginners confuse most</a></li>
             <li><a href="../guides/capm-predictive-project-management.html">How to study predictive project management for CAPM</a></li>
             <li><a href="../guides/capm-agile-scrum-kanban.html">CAPM agile questions: Scrum, Kanban, iterations, and retrospectives</a></li>
@@ -149,5 +166,6 @@
         </section>
       </article>
     </main>
+    <script src="../nav.js"></script>
   </body>
 </html>

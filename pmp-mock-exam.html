@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PMP Mock Exam | PassGrid</title>
+    <meta name="description" content="Take a timed 180-question PMP mock exam with a four-hour countdown, question navigation, saved choices, and final accuracy after submission." />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://starrycesium.com/pmp-mock-exam.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="PassGrid" />
+    <meta property="og:title" content="PMP Mock Exam | PassGrid" />
+    <meta property="og:description" content="A timed PMP mock exam using 180 exam-bank questions. Submit at the end to see accuracy." />
+    <meta property="og:url" content="https://starrycesium.com/pmp-mock-exam.html" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="PMP Mock Exam | PassGrid" />
+    <meta name="twitter:description" content="Take a 180-question PMP mock exam with a four-hour countdown and final score." />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5018342016303677" crossorigin="anonymous"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B2HW123JTE"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-B2HW123JTE');
+    </script>
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+    <link rel="manifest" href="./site.webmanifest" />
+    <link rel="stylesheet" href="./styles.css?v=20260703-mock1" />
+  </head>
+  <body class="pmp-home practice-page drill-page mock-exam-page">
+    <a class="skip-link" href="#mock-exam-workspace">Skip to mock exam</a>
+
+    <header class="pmp-site-header">
+      <a class="brand-link" href="./index.html" aria-label="PassGrid home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 64 64" focusable="false">
+            <rect x="8" y="8" width="48" height="48" rx="13"></rect>
+            <path d="M18 22c5-2 10-2 14 1v24c-4-3-9-3-14-1V22Z"></path>
+            <path d="M32 23c5-3 10-3 14-1v24c-5-2-10-2-14 1V23Z"></path>
+            <path d="M22 30h6M22 37h6M36 30h5"></path>
+            <circle cx="48" cy="18" r="7"></circle>
+            <path d="M44.5 18.2l2.4 2.4 5-5.4"></path>
+          </svg>
+        </span>
+        <strong>PassGrid</strong>
+      </a>
+      <button class="mobile-nav-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="pmp-top-nav" aria-label="Primary navigation">
+        <a href="./practice.html" aria-current="page">Free Questions</a>
+        <a href="./programs/pmp.html">PMP</a>
+        <a href="./blog.html">Blog</a>
+        <a href="./about.html">About</a>
+      </nav>
+    </header>
+
+    <main class="pmp-shell">
+      <section class="workspace mock-workspace" id="mock-exam-workspace">
+        <nav class="question-breadcrumb drill-breadcrumb" aria-label="Breadcrumb">
+          <a href="./practice.html">Free Questions</a>
+          <span>/</span>
+          <span>PMP Mock Exam</span>
+        </nav>
+
+        <section class="mock-exam-header" aria-labelledby="mock-exam-title">
+          <div>
+            <p class="mock-kicker">Timed PMP simulation</p>
+            <h1 id="mock-exam-title">PMP Mock Exam</h1>
+            <p>Answer 180 questions from the PMP exam bank. Choices can be changed before submission. Explanations and accuracy appear only after you submit.</p>
+          </div>
+          <div class="mock-timer-card" aria-live="polite">
+            <span>Time remaining</span>
+            <strong id="mock-timer">04:00:00</strong>
+          </div>
+        </section>
+
+        <section class="mock-result-panel" id="mock-result-panel" hidden>
+          <div>
+            <p class="mock-kicker">Submitted result</p>
+            <h2 id="mock-result-title">Accuracy: 0%</h2>
+            <p id="mock-result-detail">0 correct out of 180 questions.</p>
+          </div>
+          <button class="ghost-button" id="restart-mock-button" type="button"><span>Restart exam</span></button>
+        </section>
+
+        <div class="practice-panel">
+          <div class="question-card mock-question-card">
+            <div class="question-meta">
+              <span id="mock-question-tag">PMP</span>
+              <span id="mock-question-progress">1 / 180</span>
+            </div>
+            <h1 id="mock-question-text">Loading question...</h1>
+            <div class="answers" id="mock-answers"></div>
+            <div class="explanation hidden" id="mock-explanation"></div>
+            <div class="question-actions mock-question-actions">
+              <button class="ghost-button" id="mock-next-button" type="button"><span>Next &rarr;</span></button>
+              <button class="ghost-button mock-submit-button" id="mock-submit-button" type="button"><span>Submit exam</span></button>
+            </div>
+          </div>
+        </div>
+
+        <section class="question-number-panel" aria-labelledby="question-number-title">
+          <div class="mock-panel-heading">
+            <h2 id="question-number-title">Question list</h2>
+            <p id="mock-progress-summary">0 answered / 180 questions</p>
+          </div>
+          <div class="question-number-grid" id="question-number-grid" aria-label="Jump to question"></div>
+        </section>
+      </section>
+
+      <section class="guide-section" aria-labelledby="mock-use-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Mock exam method</p>
+            <h2 id="mock-use-title">Use the mock exam after chapter practice, not before it.</h2>
+            <p class="section-note">This timed PMP mock exam is meant to test exam rhythm after you have already reviewed the major PMP reference topics, practiced chapter-level questions, and corrected repeated mistakes.</p>
+          </div>
+        </div>
+        <div class="guide-grid">
+          <article class="guide-card">
+            <h3>Work under the four-hour limit</h3>
+            <p>The timer continues from the moment the exam session starts. If you leave the page and return later in the same browser, the saved start time is used, so the remaining time reflects the real elapsed time.</p>
+          </article>
+          <article class="guide-card">
+            <h3>Change answers before submission</h3>
+            <p>Use the question list to return to marked or uncertain questions. The exam does not reveal correctness while you are answering, because the point is to practice pacing, review discipline, and final decision confidence.</p>
+          </article>
+          <article class="guide-card">
+            <h3>Review results by pattern</h3>
+            <p>After submission, compare misses by topic and decision type: stakeholder communication, change control, risk response, agile roles, business environment, procurement, and next-best-action judgment.</p>
+          </article>
+          <article class="guide-card">
+            <h3>Do not treat one score as the whole story</h3>
+            <p>A single mock result is useful only when it tells you what to review next. If the score is weak, return to the PMP Study Hub, rebuild the matching reference topic, and repeat smaller question sets before starting another full simulation. Save the full mock for moments when you can protect uninterrupted review time and focused scoring review.</p>
+          </article>
+        </div>
+      </section>
+
+      <footer class="site-footer">
+        <nav aria-label="Legal links">
+          <a href="./index.html">Home</a>
+          <a href="./about.html">About Us</a>
+          <a href="./editorial-policy.html">Editorial Policy</a>
+          <a href="./privacy.html">Privacy Policy</a>
+          <a href="./terms.html">Terms of Use</a>
+        </nav>
+        <span>PassGrid is independent and is not affiliated with or endorsed by PMI.</span>
+      </footer>
+    </main>
+
+    <script src="./data.js?v=20260703-mock1"></script>
+    <script src="./mock-exam.js?v=20260703-mock1"></script>
+    <script src="./nav.js"></script>
+  </body>
+</html>

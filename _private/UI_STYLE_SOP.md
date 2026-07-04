@@ -336,7 +336,7 @@ node verify-adsense-readiness.mjs
 
 当前加载策略：
 
-- `data.js` 只允许在首页练习工作区加载。
+- `data.js` 只允许在练习选择/大纲/答题页加载：`practice.html`、`pmp-questions.html`、`capm-questions.html`、`drill.html`。
 - 普通文章页、项目页不得加载 `data.js` 或 `script.js`。
 - Google scripts 必须使用 `async`。
 - CSS / JS / data 修改后要更新 query version，避免本地或线上缓存旧资源。
@@ -344,7 +344,7 @@ node verify-adsense-readiness.mjs
 新增功能后检查：
 
 ```powershell
-Select-String -Path index.html -Pattern "data.js|script.js|styles.css"
+Select-String -Path practice.html,pmp-questions.html,capm-questions.html,drill.html -Pattern "data.js|script.js|styles.css"
 ```
 
 体积参考：

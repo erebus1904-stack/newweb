@@ -79,13 +79,18 @@
     </script>
     <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
     <link rel="manifest" href="../site.webmanifest" />
-    <link rel="stylesheet" href="../styles.css?v=20260623-rounded3" />
+    <link rel="stylesheet" href="../styles.css?v=20260701-color1" />
   </head>
   <body class="legal-page">
     <main class="legal-shell">
       <nav class="legal-nav" aria-label="Site navigation">
         <a class="brand-link" href="../index.html"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 64 64" focusable="false"><rect x="8" y="8" width="48" height="48" rx="13"></rect><path d="M18 22c5-2 10-2 14 1v24c-4-3-9-3-14-1V22Z"></path><path d="M32 23c5-3 10-3 14-1v24c-5-2-10-2-14 1V23Z"></path><path d="M22 30h6M22 37h6M36 30h5"></path><circle cx="48" cy="18" r="7"></circle><path d="M44.5 18.2l2.4 2.4 5-5.4"></path></svg></span><strong>PassGrid</strong></a>
-        <div><a href="../index.html">Practice</a><a href="../programs/pmp.html">PMP</a><a href="../programs/capm.html">CAPM</a><a href="../privacy.html">Privacy</a></div>
+        <button class="mobile-nav-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="legal-nav-menu"><a href="../index.html">Practice</a><a href="../programs/pmp.html">PMP</a><a href="../programs/capm.html">CAPM</a><a href="../privacy.html">Privacy</a></div>
       </nav>
       <article class="guide-article article-page">
         <header class="legal-hero">
@@ -93,19 +98,17 @@
           <h1>30-Day PMP Study Plan</h1>
           <p class="hero-copy">Use this plan when you already know project management vocabulary and need a structured final month of scenario-based PMP preparation.</p>
         </header>
-        <figure class="article-visual" aria-label="30-Day PMP Study Plan study diagram">
-          <svg viewBox="0 0 760 240" role="img">
-            <rect x="42" y="42" width="190" height="72" rx="12"></rect>
-            <rect x="286" y="42" width="190" height="72" rx="12"></rect>
-            <rect x="530" y="42" width="190" height="72" rx="12"></rect>
-            <line x1="232" y1="78" x2="286" y2="78"></line>
-            <line x1="476" y1="78" x2="530" y2="78"></line>
-            <text x="76" y="84" data-fit="label">Map</text>
-            <text x="318" y="84" data-fit="label">Drill</text>
-            <text x="558" y="84" data-fit="label">Review</text>
-            <text x="54" y="176" data-fit="wide" textLength="650" lengthAdjust="spacingAndGlyphs">The final month should move from domain mapping to decision practice and then to mistake-driven review.</text>
-          </svg>
-          <figcaption>The final month should move from domain mapping to decision practice and then to mistake-driven review.</figcaption>
+        <figure class="article-visual" aria-label="30-day review loop study diagram">
+          <div class="article-diagram diagram-flow">
+            <p class="diagram-kicker">PMP study plan</p>
+            <h2>30-day review loop</h2>
+            <div class="diagram-steps">
+            <div class="diagram-step"><span>1</span><strong>Map</strong><p>Separate People, Process, and Business Environment misses.</p></div>
+            <div class="diagram-step"><span>2</span><strong>Drill</strong><p>Practice scenario sets and write one rule for each miss.</p></div>
+            <div class="diagram-step"><span>3</span><strong>Review</strong><p>Retest weak patterns instead of rereading everything.</p></div>
+            </div>
+          </div>
+          <figcaption>The final month should move from domain mapping to decision practice and mistake-driven review.</figcaption>
         </figure>
         <section class="legal-section">
           <h2>Use the month to build judgment, not a larger pile of notes</h2>
@@ -147,7 +150,7 @@
           <h2 id="related-guides-title">Related study path</h2>
           <ul class="guide-link-list">
             <li><a href="../programs/pmp.html">PMP Study Hub</a></li>
-            <li><a href="../index.html?exam=pmp#practice-workspace">Practice PMP questions</a></li>
+            <li><a href="../pmp-questions.html">Practice PMP questions</a></li>
             <li><a href="../guides/pmp-2026-exam-version.html">Which PMP exam version should you study for in July 2026?</a></li>
             <li><a href="../guides/pmp-next-best-action.html">PMP situational question thinking</a></li>
             <li><a href="../guides/pmp-delivery-approaches.html">Agile, hybrid, or predictive? How to recognize the PMP scenario</a></li>
@@ -156,5 +159,6 @@
         </section>
       </article>
     </main>
+    <script src="../nav.js"></script>
   </body>
 </html>

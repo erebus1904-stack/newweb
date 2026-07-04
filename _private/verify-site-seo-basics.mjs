@@ -6,7 +6,7 @@ const htmlFiles = [];
 function walk(dir) {
   for (const entry of readdirSync(dir, { withFileTypes: true })) {
     const fullPath = path.join(dir, entry.name);
-    if (entry.isDirectory() && ![".git", "reports"].includes(entry.name)) {
+    if (entry.isDirectory() && ![".git", ".superpowers", "reports"].includes(entry.name)) {
       walk(fullPath);
     }
     if (entry.isFile() && entry.name.endsWith(".html")) {
@@ -49,11 +49,12 @@ for (const file of htmlFiles) {
   const description = getMatch(html, /<meta name="description" content="([^"]+)"/i);
   const canonical = getMatch(html, /<link rel="canonical" href="([^"]+)"/i);
   const words = visibleWordCount(html);
+  const isFunctionalPracticePage = ["practice.html", "pmp-questions.html", "capm-questions.html", "drill.html"].includes(file);
 
   if (/LicenseAtlas/i.test(html)) failures.push(`${file} contains retired LicenseAtlas brand`);
   if (title.length < 20 || title.length > 90) failures.push(`${file} title length ${title.length}`);
   if (description.length < 70 || description.length > 180) failures.push(`${file} description length ${description.length}`);
-  if (words < 300) failures.push(`${file} visible words ${words}`);
+  if (!isFunctionalPracticePage && words < 300) failures.push(`${file} visible words ${words}`);
   if (!/^https:\/\/starrycesium\.com\//.test(canonical)) failures.push(`${file} canonical is not on starrycesium.com`);
 
   if (file.startsWith("guides/")) {
@@ -88,7 +89,7 @@ for (const file of htmlFiles) {
       if (!new RegExp(`href="\\.\\.\\/programs\\/${exam}\\.html"`).test(relatedSection)) {
         failures.push(`${file} related section missing ${exam.toUpperCase()} hub link`);
       }
-      if (!new RegExp(`href="\\.\\.\\/index\\.html\\?exam=${exam}#practice-workspace"`).test(relatedSection)) {
+      if (!new RegExp(`href="\\.\\.\\/${exam}-questions\\.html"`).test(relatedSection)) {
         failures.push(`${file} related section missing ${exam.toUpperCase()} practice link`);
       }
       if (uniqueSameClusterLinks.size < 3) {

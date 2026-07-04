@@ -79,13 +79,18 @@
     </script>
     <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
     <link rel="manifest" href="../site.webmanifest" />
-    <link rel="stylesheet" href="../styles.css?v=20260623-rounded3" />
+    <link rel="stylesheet" href="../styles.css?v=20260701-color1" />
   </head>
   <body class="legal-page">
     <main class="legal-shell">
       <nav class="legal-nav" aria-label="Site navigation">
         <a class="brand-link" href="../index.html"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 64 64" focusable="false"><rect x="8" y="8" width="48" height="48" rx="13"></rect><path d="M18 22c5-2 10-2 14 1v24c-4-3-9-3-14-1V22Z"></path><path d="M32 23c5-3 10-3 14-1v24c-5-2-10-2-14 1V23Z"></path><path d="M22 30h6M22 37h6M36 30h5"></path><circle cx="48" cy="18" r="7"></circle><path d="M44.5 18.2l2.4 2.4 5-5.4"></path></svg></span><strong>PassGrid</strong></a>
-        <div><a href="../index.html">Practice</a><a href="../programs/pmp.html">PMP</a><a href="../programs/capm.html">CAPM</a><a href="../privacy.html">Privacy</a></div>
+        <button class="mobile-nav-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="legal-nav-menu"><a href="../index.html">Practice</a><a href="../programs/pmp.html">PMP</a><a href="../programs/capm.html">CAPM</a><a href="../privacy.html">Privacy</a></div>
       </nav>
       <article class="guide-article article-page">
         <header class="legal-hero">
@@ -93,24 +98,17 @@
           <h1>CAPM Agile Questions: Scrum, Kanban, Iterations, and Retrospectives</h1>
           <p class="hero-copy">Agile frameworks and methodologies make up 20% of CAPM. The exam does not expect you to run a perfect Scrum team on paper, but it does expect you to recognize roles, events, flow, feedback, and backlog priority in plain scenarios.</p>
         </header>
-        <figure class="article-visual" aria-label="CAPM agile study diagram">
-          <svg viewBox="0 0 760 260" role="img">
-            <rect x="52" y="52" width="170" height="72" rx="12"></rect>
-            <rect x="294" y="52" width="170" height="72" rx="12"></rect>
-            <rect x="536" y="52" width="170" height="72" rx="12"></rect>
-            <line x1="222" y1="88" x2="294" y2="88"></line>
-            <line x1="464" y1="88" x2="536" y2="88"></line>
-            <text x="86" y="94" data-fit="label">Backlog</text>
-            <text x="318" y="94" data-fit="label">Iteration</text>
-            <text x="570" y="94" data-fit="label">Review</text>
-            <rect x="96" y="164" width="150" height="50" rx="10"></rect>
-            <rect x="306" y="164" width="150" height="50" rx="10"></rect>
-            <rect x="516" y="164" width="150" height="50" rx="10"></rect>
-            <text x="126" y="196" data-fit="label">Product Owner</text>
-            <text x="340" y="196" data-fit="label">Scrum Master</text>
-            <text x="562" y="196" data-fit="label">Team</text>
-          </svg>
-          <figcaption>Most CAPM agile questions can be reduced to role ownership, team feedback, flow limits, or the next event in the learning loop.</figcaption>
+        <figure class="article-visual" aria-label="Agile exam anchors study diagram">
+          <div class="article-diagram">
+            <p class="diagram-kicker">Agile map</p>
+            <h2>Agile exam anchors</h2>
+            <div class="diagram-grid">
+              <div class="diagram-card"><span>Scrum</span><strong>Roles and events</strong><p>Product Owner, Scrum Master, Daily Scrum, review, retrospective.</p></div>
+              <div class="diagram-card"><span>Kanban</span><strong>Flow and WIP</strong><p>Visualize work, limit work in progress, improve throughput.</p></div>
+              <div class="diagram-card"><span>Backlog</span><strong>Priority and value</strong><p>Order work by value, feedback, and readiness.</p></div>
+            </div>
+          </div>
+          <figcaption>Most CAPM agile questions reduce to role ownership, feedback, or flow.</figcaption>
         </figure>
         <section class="legal-section">
           <h2>Why agile needs its own study block</h2>
@@ -163,7 +161,7 @@
           <h2 id="related-guides-title">Related study path</h2>
           <ul class="guide-link-list">
             <li><a href="../programs/capm.html">CAPM Study Hub</a></li>
-            <li><a href="../index.html?exam=capm#practice-workspace">Practice CAPM questions</a></li>
+            <li><a href="../capm-questions.html">Practice CAPM questions</a></li>
             <li><a href="../guides/capm-core-concepts.html">20 project management concepts CAPM beginners confuse most</a></li>
             <li><a href="../guides/capm-business-analysis-study.html">Why business analysis is 27% of CAPM and how to study it</a></li>
             <li><a href="../guides/capm-next-step-scenario-questions.html">CAPM scenario questions: how to answer what should be done next</a></li>
@@ -172,5 +170,6 @@
         </section>
       </article>
     </main>
+    <script src="../nav.js"></script>
   </body>
 </html>

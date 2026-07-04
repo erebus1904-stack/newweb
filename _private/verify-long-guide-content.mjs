@@ -63,19 +63,20 @@ for (const path of allGuides) {
   }
 }
 
-const home = readFileSync("index.html", "utf8");
+const blog = readFileSync("blog.html", "utf8");
 const pmp = readFileSync("programs/pmp.html", "utf8");
 const capm = readFileSync("programs/capm.html", "utf8");
 const sitemap = readFileSync("sitemap.xml", "utf8");
 
 for (const path of pmpGuides) {
   if (!pmp.includes(`../${path}`)) failures.push(`PMP center does not link ${path}.`);
+  if (!blog.includes(`./${path}`)) failures.push(`blog does not link ${path}.`);
   if (!sitemap.includes(`https://starrycesium.com/${path}`)) failures.push(`sitemap does not include ${path}.`);
 }
 
 for (const path of capmGuides) {
   if (!capm.includes(`../${path}`)) failures.push(`CAPM page does not link ${path}.`);
-  if (!home.includes(`./${path}`)) failures.push(`home does not link ${path}.`);
+  if (!blog.includes(`./${path}`)) failures.push(`blog does not link ${path}.`);
   if (!sitemap.includes(`https://starrycesium.com/${path}`)) failures.push(`sitemap does not include ${path}.`);
 }
 

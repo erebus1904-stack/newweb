@@ -79,13 +79,18 @@
     </script>
     <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
     <link rel="manifest" href="../site.webmanifest" />
-    <link rel="stylesheet" href="../styles.css?v=20260623-rounded3" />
+    <link rel="stylesheet" href="../styles.css?v=20260701-color1" />
   </head>
   <body class="legal-page">
     <main class="legal-shell">
       <nav class="legal-nav" aria-label="Site navigation">
         <a class="brand-link" href="../index.html"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 64 64" focusable="false"><rect x="8" y="8" width="48" height="48" rx="13"></rect><path d="M18 22c5-2 10-2 14 1v24c-4-3-9-3-14-1V22Z"></path><path d="M32 23c5-3 10-3 14-1v24c-5-2-10-2-14 1V23Z"></path><path d="M22 30h6M22 37h6M36 30h5"></path><circle cx="48" cy="18" r="7"></circle><path d="M44.5 18.2l2.4 2.4 5-5.4"></path></svg></span><strong>PassGrid</strong></a>
-        <div><a href="../index.html">Practice</a><a href="../programs/pmp.html">PMP</a><a href="../programs/capm.html">CAPM</a><a href="../privacy.html">Privacy</a></div>
+        <button class="mobile-nav-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="legal-nav-menu"><a href="../index.html">Practice</a><a href="../programs/pmp.html">PMP</a><a href="../programs/capm.html">CAPM</a><a href="../privacy.html">Privacy</a></div>
       </nav>
       <article class="guide-article article-page">
         <header class="legal-hero">
@@ -93,20 +98,18 @@
           <h1>CAPM Mistake Review Method: Find the Cause, Not the Answer</h1>
           <p class="hero-copy">Missed questions are useful only when they change how you answer the next one. Do not memorize the correct option. Classify the reason you missed it, then write a short rule you can reuse.</p>
         </header>
-        <figure class="article-visual" aria-label="CAPM mistake review diagram">
-          <svg viewBox="0 0 760 260" role="img">
-            <rect x="54" y="50" width="132" height="62" rx="12"></rect>
-            <rect x="214" y="50" width="132" height="62" rx="12"></rect>
-            <rect x="374" y="50" width="132" height="62" rx="12"></rect>
-            <rect x="534" y="50" width="132" height="62" rx="12"></rect>
-            <text x="82" y="86" data-fit="label">Concept</text>
-            <text x="242" y="86" data-fit="label">Keyword</text>
-            <text x="404" y="86" data-fit="label">Approach</text>
-            <text x="568" y="86" data-fit="label">Language</text>
-            <rect x="120" y="160" width="520" height="56" rx="10"></rect>
-            <text x="156" y="194" data-fit="wide" textLength="564" lengthAdjust="spacingAndGlyphs">Missed answer -> cause category -> reusable rule -> retest</text>
-          </svg>
-          <figcaption>A useful mistake log explains why the miss happened, not only which answer was correct.</figcaption>
+        <figure class="article-visual" aria-label="Mistake categories study diagram">
+          <div class="article-diagram">
+            <p class="diagram-kicker">Review map</p>
+            <h2>Mistake categories</h2>
+            <div class="diagram-grid">
+              <div class="diagram-card"><span>Concept</span><strong>Term not clear</strong><p>Rewrite the definition in plain English.</p></div>
+              <div class="diagram-card"><span>Keyword</span><strong>Trigger missed</strong><p>Mark the phrase that changed the answer.</p></div>
+              <div class="diagram-card"><span>Method</span><strong>Agile vs predictive mix-up</strong><p>Label the delivery approach before choosing.</p></div>
+              <div class="diagram-card"><span>Language</span><strong>English term confusion</strong><p>Add the official term to your review list.</p></div>
+            </div>
+          </div>
+          <figcaption>A missed question is useful only when you name the reason it was missed.</figcaption>
         </figure>
         <section class="legal-section">
           <h2>Why answer memorization fails</h2>
@@ -145,7 +148,7 @@
         <section class="legal-section">
           <h2>Category five: English terminology misunderstood</h2>
           <p>For many candidates, the problem is not project management knowledge but English wording. Terms like constraint, assumption, issue, baseline, deliverable, acceptance, validate, verify, facilitate, escalate, and tailor can be easy to confuse. CAPM answer choices also use soft verbs. Assess, review, analyze, update, document, communicate, and approve are not interchangeable.</p>
-          <p>If English caused the miss, create a small bilingual or plain-English glossary. Do not translate only the word. Translate the exam behavior. Escalate means raise to a higher authority when the team cannot resolve it or when the plan requires it. Validate means check that something meets stakeholder need or intended use. Verify often means check against requirements or criteria. Facilitate means help a group discuss and reach alignment, not command the answer.</p>
+          <p>If English caused the miss, create a small personal glossary in plain English. Do not translate only the word. Translate the exam behavior. Escalate means raise to a higher authority when the team cannot resolve it or when the plan requires it. Validate means check that something meets stakeholder need or intended use. Verify often means check against requirements or criteria. Facilitate means help a group discuss and reach alignment, not command the answer.</p>
           <p>Retest terminology with short mixed sets. If the same word causes two misses, it belongs on your final review sheet.</p>
         </section>
         <section class="legal-section">
@@ -158,7 +161,7 @@
           <h2 id="related-guides-title">Related study path</h2>
           <ul class="guide-link-list">
             <li><a href="../programs/capm.html">CAPM Study Hub</a></li>
-            <li><a href="../index.html?exam=capm#practice-workspace">Practice CAPM questions</a></li>
+            <li><a href="../capm-questions.html">Practice CAPM questions</a></li>
             <li><a href="../guides/capm-next-step-scenario-questions.html">CAPM scenario questions: how to answer what should be done next</a></li>
             <li><a href="../guides/capm-core-concepts.html">20 project management concepts CAPM beginners confuse most</a></li>
             <li><a href="../guides/capm-business-analysis-study.html">Why business analysis is 27% of CAPM and how to study it</a></li>
@@ -167,5 +170,6 @@
         </section>
       </article>
     </main>
+    <script src="../nav.js"></script>
   </body>
 </html>

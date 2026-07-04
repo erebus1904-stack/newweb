@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -25,7 +25,7 @@
     </script>
     <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
     <link rel="manifest" href="./site.webmanifest" />
-    <link rel="stylesheet" href="./styles.css?v=20260623-rounded3" />
+    <link rel="stylesheet" href="./styles.css?v=20260701-color1" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -59,7 +59,7 @@
     </script>
   </head>
   <body class="pmp-home">
-    <a class="skip-link" href="#practice-workspace">Skip to practice</a>
+    <a class="skip-link" href="#home-title">Skip to content</a>
 
     <header class="pmp-site-header">
       <a class="brand-link" href="./index.html" aria-label="PassGrid PMP and CAPM practice home">
@@ -75,40 +75,48 @@
         </span>
         <strong>PassGrid</strong>
       </a>
+      <button class="mobile-nav-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
       <nav class="pmp-top-nav" aria-label="Primary navigation">
-        <a href="#practice-workspace">Practice</a>
+        <a href="./practice.html">Free Questions</a>
         <a href="./programs/pmp.html">PMP</a>
-        <a href="./programs/capm.html">CAPM</a>
-        <a href="#study-guides">Guides</a>
+        <a href="./blog.html">Blog</a>
         <a href="./about.html">About</a>
       </nav>
-      <a class="header-cta primary-button" href="#practice-workspace"><span>Start practice</span></a>
     </header>
 
     <main class="pmp-shell">
       <section class="pmp-hero" aria-labelledby="home-title">
         <div class="hero-content">
-          <p class="eyebrow">New: short certification study sprints</p>
-          <h1 id="home-title">Build exam readiness, <span class="hero-highlight">one point</span> at a time.</h1>
-          <p class="hero-copy">Choose CAPM or PMP first, then work through short practice sessions with immediate explanations and local mistake review.</p>
+          <h1 id="home-title"><span class="hero-highlight">Free PMP and CAPM</span> study paths, practice questions, and exam materials.</h1>
+          <p class="hero-copy">Use free chapter-based learning paths, study schedules, practice questions, missed-question review, and downloadable study forms for PMP or CAPM preparation.</p>
           <div class="hero-actions">
-            <button class="primary-button" id="start-exam-button"><span>Choose PMP or CAPM</span></button>
-            <a class="text-button" href="#study-guides"><span>Read structured guides</span></a>
+            <a class="primary-button" href="./practice.html" data-analytics-event="cta_start_practice" data-analytics-label="home_hero_start_practice"><span>Start free practice</span></a>
+            <a class="text-button" href="#free-study-materials" data-analytics-event="cta_get_materials" data-analytics-label="home_hero_get_materials"><span>Get free materials</span></a>
           </div>
-          <dl class="hero-metrics" aria-label="Available PMP and CAPM practice volume">
-            <div>
-              <dt>PMP bank</dt>
-              <dd>250 questions</dd>
-            </div>
-            <div>
-              <dt>CAPM bank</dt>
-              <dd>1000 questions</dd>
-            </div>
-            <div>
-              <dt>Study loop</dt>
-              <dd>Explain, review, repeat</dd>
-            </div>
-          </dl>
+          <p class="hero-note">Practice does not require an account. Materials are optional by email. Progress is stored locally in your browser.</p>
+        <dl class="hero-metrics" aria-label="PassGrid free study coverage">
+          <div>
+            <dd>1,839 questions</dd>
+            <dt>Total practice bank</dt>
+          </div>
+          <div>
+            <dd>22 articles</dd>
+            <dt>Blog study guides</dt>
+          </div>
+          <div>
+            <dd>7 AI prompts</dd>
+            <dt>PMP study prompts</dt>
+          </div>
+          <div>
+            <dd>2 paths</dd>
+            <dt>PMP and CAPM routes</dt>
+          </div>
+        </dl>
         </div>
         <aside class="hero-brief" aria-label="PMP study preview">
           <div class="study-phone" aria-hidden="true">
@@ -134,181 +142,110 @@
         </aside>
       </section>
 
-      <section class="quick-study-row" aria-label="Quick project management study options">
-        <a href="#practice-workspace">
-          <span>Step 1</span>
-          <strong>Choose PMP or CAPM</strong>
-          <p>Set the exam track first so questions, progress, and articles stay aligned.</p>
+      <section class="quick-study-row" aria-label="Free PMP and CAPM study options">
+        <a href="#choose-path">
+          <span>Free path</span>
+          <strong>Study by chapter first</strong>
+          <p>Start with chapter-based learning, then practice questions tied to the same topic.</p>
         </a>
-        <a href="#practice-workspace">
-          <span>Step 2</span>
-          <strong>Practice a knowledge point</strong>
-          <p>Answer scenario questions in short sessions and read each explanation.</p>
+        <a href="./programs/pmp.html">
+          <span>Free prompts</span>
+          <strong>Use chapter prompts</strong>
+          <p>Copy the prepared PMP prompts to turn each reference topic into a clear review outline.</p>
         </a>
-        <a href="#study-guides">
-          <span>Step 3</span>
-          <strong>Review mistakes and guides</strong>
-          <p>Use saved misses and track-specific articles to rebuild weak areas.</p>
+        <a href="./practice.html">
+          <span>Free questions</span>
+          <strong>Finish with practice</strong>
+          <p>Move from topic drills into broader question review and exam-style preparation.</p>
         </a>
       </section>
 
-      <section class="workspace" id="practice-workspace">
-        <div class="practice-panel">
-          <div class="panel-header">
-            <div>
-              <p class="eyebrow" id="track-region">Global / Project Management</p>
-              <h2 id="track-title">PMP scenario practice</h2>
-              <p class="mode-help" id="mode-help">Choose PMP or CAPM first. Practice mode shows explanations immediately for every question.</p>
-            </div>
-          </div>
-
-          <section class="exam-selector" aria-labelledby="bank-selector-title">
-            <div class="section-mini">
-              <p class="eyebrow">Step 1</p>
-              <h3 id="bank-selector-title">Choose your exam track</h3>
-              <span id="result-count">2 question banks available</span>
-            </div>
-            <div class="catalog-grid pmp-catalog" id="catalog-grid"></div>
-          </section>
-
-          <div class="source-strip" aria-label="Question source details">
-            <div>
-              <span>Blueprint</span>
-              <strong id="source-name">PMI PMP Examination Content Outline</strong>
-            </div>
-            <div>
-              <span>Focus areas</span>
-              <strong id="source-coverage">People, Process, Business Environment, Agile, Hybrid delivery</strong>
-            </div>
-            <div>
-              <span>Updated</span>
-              <strong id="source-updated">2026</strong>
-            </div>
-          </div>
-
-          <div class="question-card">
-            <div class="question-meta">
-              <span id="question-tag">People</span>
-              <span id="question-progress">1 / 250</span>
-            </div>
-            <h3 id="question-text">A stakeholder gives conflicting direction outside the agreed communication path. What should the project manager do first?</h3>
-            <div class="answers" id="answers"></div>
-            <div class="explanation hidden" id="explanation"></div>
-            <div class="question-actions">
-              <button class="ghost-button" id="reset-button"><span>Reset session</span></button>
-              <button class="ghost-button" id="skip-button"><span>Skip question</span></button>
-              <button class="primary-button" id="next-button"><span>Next</span></button>
-            </div>
+      <section class="prototype-section value-comparison" aria-labelledby="value-title">
+        <div class="section-heading centered-heading">
+          <div>
+            <p class="eyebrow">Free study support</p>
+            <h2 id="value-title">Free study support starts with chapters, prompts, then practice.</h2>
+            <p class="section-note">PassGrid is an independent PMP and CAPM study site. The goal is to help you move from scattered review to a clear study route: learn the chapter, use prepared AI prompts to organize the topic, answer related questions, review misses, and collect the materials you need.</p>
           </div>
         </div>
-
-        <aside class="study-panel" aria-label="Study progress">
-          <div class="score-card">
-            <div>
-              <span>Readiness</span>
-              <strong id="readiness">0%</strong>
-            </div>
-            <div class="ring" aria-hidden="true"></div>
+        <div class="comparison-list" aria-label="PassGrid study coverage">
+          <div>
+            <strong>Chapter-based learning</strong>
+            <span>Study topics in a book-like sequence before jumping into answer memorization</span>
           </div>
-
-          <div class="stats-grid">
-            <div>
-              <span>Done</span>
-              <strong id="questions-done">0</strong>
-            </div>
-            <div>
-              <span>Accuracy</span>
-              <strong id="accuracy">0%</strong>
-            </div>
-            <div>
-              <span>Weak area</span>
-              <strong id="weak-area">None</strong>
-            </div>
-            <div>
-              <span>ETA</span>
-              <strong id="eta">Start to estimate</strong>
-            </div>
+          <div>
+            <strong>AI study prompts</strong>
+            <span>Use copyable PMP prompts to build a logic tree, identify core processes, and compare predictive, agile, and hybrid handling</span>
           </div>
-
-          <div class="local-card">
-            <div class="section-mini">
-              <p class="eyebrow">Browser progress</p>
-              <h3 id="local-title">Study record</h3>
-              <span id="local-subtitle">Stored only on this device</span>
-            </div>
-            <div class="local-grid">
-              <div><span id="local-answered-label">Answered</span><strong id="local-answered">0</strong></div>
-              <div><span id="local-accuracy-label">Accuracy</span><strong id="local-accuracy">0%</strong></div>
-              <div><span id="local-wrong-label">Mistakes</span><strong id="local-wrong">0</strong></div>
-              <div><span id="local-score-label">Last score</span><strong id="local-score">None</strong></div>
-            </div>
-            <div class="mistake-tools">
-              <button class="primary-button" id="review-mistakes-button"><span>Review mistakes</span></button>
-              <button class="ghost-button" id="clear-mistakes-button"><span>Clear mistakes</span></button>
-            </div>
-            <button class="ghost-button local-clear" id="clear-local-button"><span>Reset browser progress</span></button>
+          <div>
+            <strong>Question bank practice</strong>
+            <span>839 PMP questions and 1000 CAPM questions organized by exam focus area, with explanations and local mistake review</span>
           </div>
-
-          <div class="plan-card">
-            <div class="section-mini">
-              <p class="eyebrow">Recommendation</p>
-              <h3>What to do next</h3>
-            </div>
-            <ul id="study-plan"></ul>
+          <div>
+            <strong>Final exam preparation</strong>
+            <span>Use missed-question review, broader practice sets, and later mock-style preparation after the topic pass</span>
           </div>
-        </aside>
+        </div>
       </section>
 
-      <section class="pmp-domain-strip" aria-label="PMP and CAPM study focus">
-        <article>
-          <span>Track first</span>
-          <strong>Keep PMP and CAPM separate</strong>
-          <p>Your selected exam controls the question bank, progress, and article list.</p>
-        </article>
-        <article>
-          <span>Knowledge points</span>
-          <strong>Practice in short sessions</strong>
-          <p>Use spare minutes to answer questions and read the reasoning immediately.</p>
-        </article>
-        <article>
-          <span>Structure</span>
-          <strong>Return to missed questions</strong>
-          <p>Saved mistakes and focused guides turn scattered practice into a study path.</p>
-        </article>
+      <section class="prototype-section how-it-works" aria-labelledby="how-title">
+        <div class="section-heading centered-heading">
+          <div>
+            <p class="eyebrow">How PassGrid works</p>
+            <h2 id="how-title">Study by chapter, use the prompt, then move into exam practice.</h2>
+          </div>
+        </div>
+        <div class="step-row">
+          <article>
+            <span>1</span>
+            <h3>Learn the chapter</h3>
+            <p>Start with the book-style topic sequence. Read the explanation, understand the terms, and connect the topic to the exam domain.</p>
+          </article>
+          <article>
+            <span>2</span>
+            <h3>Use the prompt</h3>
+            <p>Copy the matching PMP prompt after a topic pass so the chapter becomes a structured outline instead of scattered notes.</p>
+          </article>
+          <article>
+            <span>3</span>
+            <h3>Practice and simulate</h3>
+            <p>After the topic pass, use focused question sets, missed-question review, and later mock-style practice to prepare for exam pressure.</p>
+          </article>
+        </div>
       </section>
 
       <section class="guide-section" aria-labelledby="quality-title">
         <div class="section-heading">
           <div>
-            <p class="eyebrow">Study method</p>
-            <h2 id="quality-title">A practice bank built around review, not answer memorization</h2>
-            <p class="section-note">PassGrid is organized so a learner can see the exam track, study the relevant concepts, answer a focused question set, and return to missed items with a reason for each answer.</p>
+            <p class="eyebrow">Study guides and practice</p>
+            <h2 id="quality-title">Free content is organized around how people actually review.</h2>
+            <p class="section-note">The site is not only a question list. It connects learning paths, knowledge-point explanations, copyable PMP prompts, practice questions, missed-question review, and study articles into one repeatable study loop.</p>
           </div>
         </div>
         <div class="guide-grid">
           <article class="guide-card">
-            <span>Question bank</span>
-            <h3>Every question connects to a domain and decision rule</h3>
-            <p>PMP items emphasize next-best-action judgment across people, process, and business environment scenarios. CAPM items emphasize fundamentals, predictive planning, agile, and business analysis.</p>
+            <span>Learning path</span>
+            <h3>Know what to study before opening the question bank</h3>
+            <p>CAPM review starts with definitions and foundations. PMP review starts with situational judgment, stakeholder choices, change control, delivery approach signals, and next-step decisions.</p>
           </article>
           <article class="guide-card">
-            <span>Explanations</span>
-            <h3>The review step explains why the better answer comes first</h3>
-            <p>Explanations point to the clue in the scenario, the project role involved, and the reason a tempting answer moves too quickly, skips analysis, or uses the wrong authority.</p>
+            <span>Question practice</span>
+            <h3>Use questions to test the topic, not replace the topic</h3>
+            <p>Each practice session should confirm whether you understood the concept, the role involved, and the reason a tempting answer moves too quickly or uses the wrong authority.</p>
           </article>
           <article class="guide-card">
-            <span>Study guides</span>
-            <h3>Long-form guides support the same topics as practice</h3>
-            <p>CAPM guides build vocabulary and exam rhythm. PMP guides focus on version timing, delivery approach signals, agile roles, change control, risk, and stakeholder communication.</p>
+            <span>AI prompts</span>
+            <h3>Turn each PMP reference topic into a review outline</h3>
+            <p>The PMP study hub includes copyable prompts for chapters that have related practice, so you can ask for a process tree, key inputs and outputs, tools, and agile or hybrid differences before drilling questions.</p>
           </article>
         </div>
       </section>
 
-      <section class="guide-section certification-pathways" aria-labelledby="pathway-title">
+      <section class="guide-section certification-pathways" id="choose-path" aria-labelledby="pathway-title">
         <div class="section-heading">
           <div>
             <p class="eyebrow">Choose your path</p>
-            <h2 id="pathway-title">CAPM for fundamentals, PMP for leadership scenarios</h2>
+            <h2 id="pathway-title">Choose the free path that matches your exam.</h2>
             <p class="section-note">Use CAPM when you are new to project management. Use PMP when you already lead or manage project work and need scenario judgment practice.</p>
           </div>
         </div>
@@ -326,96 +263,92 @@
         </div>
       </section>
 
-      <div class="guide-anchor" id="study-guides" aria-hidden="true"></div>
 
-      <section class="guide-section capm-guide-section" aria-labelledby="capm-guides-title">
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow">CAPM Guides</p>
-            <h2 id="capm-guides-title">Beginner project management study guides</h2>
-            <p class="section-note">Use these CAPM articles when you are building the foundation before PMP-level scenario practice.</p>
+      <section class="prototype-section review-system" aria-labelledby="review-system-title">
+        <div class="review-panel">
+          <div class="section-heading centered-heading">
+            <div>
+              <p class="eyebrow">Review system</p>
+              <h2 id="review-system-title">Missed questions become a study list, not a score to forget.</h2>
+              <p class="section-note">The site stores local progress in your browser, then lets you revisit missed items without creating an account.</p>
+            </div>
           </div>
-          <a class="text-button" href="./programs/capm.html"><span>Open CAPM path</span></a>
-        </div>
-        <div class="guide-grid">
-          <a class="guide-card" href="./guides/capm-domain-study-plan.html">
-            <h3>How to split CAPM study time across the four exam domains</h3>
-            <p>Use the official 36 / 17 / 20 / 27 weighting to plan 30 or 45 days.</p>
-          </a>
-          <a class="guide-card" href="./guides/capm-exam-timing-strategy.html">
-            <h3>CAPM 150 questions, 180 minutes: how to practice timing</h3>
-            <p>Average time, marked questions, review rhythm, and final sweep strategy.</p>
-          </a>
-          <a class="guide-card" href="./guides/capm-core-concepts.html">
-            <h3>20 project management concepts CAPM beginners confuse most</h3>
-            <p>Project, program, portfolio, deliverable, milestone, risk, issue, and more.</p>
-          </a>
-          <a class="guide-card" href="./guides/capm-predictive-project-management.html">
-            <h3>How to study predictive project management for CAPM</h3>
-            <p>Scope, schedule, cost, quality, WBS, baselines, and change control.</p>
-          </a>
-          <a class="guide-card" href="./guides/capm-agile-scrum-kanban.html">
-            <h3>CAPM agile questions: Scrum, Kanban, iterations, and retrospectives</h3>
-            <p>Product Owner, Scrum Master, Daily Scrum, Sprint Review, retrospective, and backlog priority.</p>
-          </a>
-          <a class="guide-card" href="./guides/capm-business-analysis-study.html">
-            <h3>Why business analysis is 27% of CAPM and how to study it</h3>
-            <p>Requirements, traceability, acceptance criteria, stakeholder analysis, and product versus project scope.</p>
-          </a>
-          <a class="guide-card" href="./guides/capm-to-pmp-study-bridge.html">
-            <h3>CAPM to PMP study bridge: topics that help both exams</h3>
-            <p>Compare how charter, stakeholders, risk, change, agile, and business value appear in CAPM and PMP.</p>
-          </a>
-          <a class="guide-card" href="./guides/capm-next-step-scenario-questions.html">
-            <h3>CAPM scenario questions: how to answer "what should be done next?"</h3>
-            <p>Practice analysis, communication, plan checks, and impact assessment before action or escalation.</p>
-          </a>
-          <a class="guide-card" href="./guides/capm-study-materials-plan.html">
-            <h3>How to choose CAPM study materials: PMBOK, courses, question banks, and video lessons</h3>
-            <p>Compare low-budget, safer, and fast-sprint resource mixes for U.S. candidates.</p>
-          </a>
-          <a class="guide-card" href="./guides/capm-mistake-review-method.html">
-            <h3>CAPM mistake review method: find the cause, not the answer</h3>
-            <p>Sort misses by concept gaps, keywords, delivery approach, business analysis, and English terms.</p>
-          </a>
-          <a class="guide-card" href="./guides/capm-online-vs-test-center.html">
-            <h3>CAPM online exam vs Pearson VUE test center: which should you choose?</h3>
-            <p>Compare ID, network, room checks, interruption risk, and test-center stability.</p>
-          </a>
+          <div class="review-steps">
+            <article>
+              <span>1</span>
+              <h3>Capture the miss</h3>
+              <p>Wrong answers are saved locally with their question context.</p>
+            </article>
+            <article>
+              <span>2</span>
+              <h3>Read the reason</h3>
+              <p>Explanations focus on the clue, the role, and the first sensible action.</p>
+            </article>
+            <article>
+              <span>3</span>
+              <h3>Return later</h3>
+              <p>Use the mistake review button when you need a focused recovery session.</p>
+            </article>
+          </div>
         </div>
       </section>
 
-      <section class="guide-section pmp-guide-section" id="pmp-guides" aria-labelledby="guides-title">
-        <div class="section-heading">
+      <section class="prototype-section faq-section" aria-labelledby="faq-title">
+        <div class="section-heading centered-heading">
           <div>
-            <p class="eyebrow">Study Guides</p>
-            <h2 id="guides-title">Latest PMP articles</h2>
-            <p class="section-note">This article module is updated regularly with focused PMP review notes.</p>
+            <p class="eyebrow">Common questions</p>
+            <h2 id="faq-title">What to know before using PassGrid.</h2>
           </div>
-          <a class="text-button" href="./programs/pmp.html"><span>Open PMP study center</span></a>
         </div>
-        <div class="guide-grid">
-          <a class="guide-card" href="./guides/pmp-2026-exam-version.html">
-            <h3>Which PMP exam version should you study for in July 2026?</h3>
-            <p>Current exam before 8 July; refreshed exam from 9 July onward.</p>
-          </a>
-          <a class="guide-card" href="./guides/pmp-next-best-action.html">
-            <h3>PMP situational question thinking</h3>
-            <p>Choose the project manager's next step, not just the right concept.</p>
-          </a>
-          <a class="guide-card" href="./guides/pmp-delivery-approaches.html">
-            <h3>Agile, hybrid, or predictive?</h3>
-            <p>A keyword table for recognizing the delivery approach in a question.</p>
-          </a>
-          <a class="guide-card" href="./guides/pmp-agile-roles.html">
-            <h3>Scrum Master, Product Owner, and team roles</h3>
-            <p>Servant leadership, blockers, backlog priority, reviews, and retrospectives.</p>
-          </a>
-          <a class="guide-card" href="./guides/pmp-process-map.html">
-            <h3>PMP process review map</h3>
-            <p>Risk, change, stakeholders, and communication as scenario chains.</p>
-          </a>
+        <div class="faq-list">
+          <details open>
+            <summary>Do I need to sign up to try the questions?</summary>
+            <p>No. Practice questions do not require a login. Progress is stored in your browser, so it may not transfer to another device. The free study-material request only asks for email because the materials need to be sent to you.</p>
+          </details>
+          <details>
+            <summary>What does PassGrid provide for PMP and CAPM study?</summary>
+            <p>PassGrid supports more than question practice. It includes PMP and CAPM learning paths, knowledge-point explanations, focused practice under each knowledge area, answer explanations, mistake review, and study-guide articles. It is built for exam review and self-study, not for issuing official PMI education credits.</p>
+          </details>
+          <details>
+            <summary>Why is PassGrid free?</summary>
+            <p>PassGrid is free because we want more PMP and CAPM candidates to have access to useful practice, study guidance, and review materials without paying before they know what they need. To keep the site available and maintained, we may use advertising to help cover operating costs. Thank you for using the site and supporting that model.</p>
+          </details>
+          <details>
+            <summary>How should I use PMP and CAPM together?</summary>
+            <p>Start with CAPM if you need definitions and foundations. Use PMP practice when you need judgment-heavy scenario decisions.</p>
+          </details>
+          <details>
+            <summary>Is PassGrid affiliated with PMI?</summary>
+            <p>No. PassGrid is independent and is not affiliated with, endorsed by, or operated by PMI.</p>
+          </details>
         </div>
+      </section>
+
+      <section class="final-cta" id="free-study-materials" aria-labelledby="final-cta-title">
+        <p class="hero-pill"><span></span>Free study materials</p>
+        <h2 id="final-cta-title">Get free PMP study materials.</h2>
+        <p>Enter your email and I'll send you a free PMP study pack, including polished study forms, domain checklists, and review sheets.</p>
+        <form
+          class="resource-signup-form"
+          id="resource-signup-form"
+          action="https://script.google.com/macros/s/AKfycbxS65zP7LHjN-hc7rasCTWrgncPtQrHr4T2Lu_D0oZPqn4EQ1vwkjEucX76AfAwbJEQWQ/exec"
+          method="POST"
+          target="resource-signup-frame"
+        >
+          <label class="resource-form-label" for="resource-email">Email address</label>
+          <div class="resource-form-row">
+            <input id="resource-email" name="email" type="email" autocomplete="email" placeholder="your@email.com" required />
+            <button class="primary-button" type="submit"><span>Send me the study pack</span></button>
+          </div>
+          <input type="hidden" name="track" value="PMP" />
+          <input type="hidden" name="source" value="homepage-final-cta" />
+          <input type="hidden" name="resource" value="PMP study materials with polished study forms" />
+          <input id="resource-user-agent" type="hidden" name="userAgent" value="" />
+          <p class="resource-form-note">No account needed. Your email is used to send the requested study materials.</p>
+          <p class="resource-form-note resource-trust-note">No spam. You can submit with confidence.</p>
+          <p class="resource-form-status" id="resource-form-status" aria-live="polite"></p>
+        </form>
+        <iframe class="hidden" name="resource-signup-frame" title="Study materials request submission"></iframe>
       </section>
 
       <footer class="site-footer">
@@ -428,8 +361,64 @@
         <span>PassGrid is independent and is not affiliated with or endorsed by PMI.</span>
       </footer>
     </main>
+    <script>
+      const resourceSignupForm = document.querySelector("#resource-signup-form");
+      const resourceFormStatus = document.querySelector("#resource-form-status");
+      const resourceUserAgent = document.querySelector("#resource-user-agent");
+      const resourceSubmitButton = resourceSignupForm?.querySelector("button[type='submit']");
+      const resourceRequestStoreKey = "passgridSubmittedResourceRequests";
+      let latestSubmittedResourceKey = "";
 
-    <script src="./data.js?v=20260623-practice1"></script>
-    <script src="./script.js?v=20260623-passgrid4"></script>
+      if (resourceSignupForm && resourceFormStatus) {
+        if (resourceUserAgent) resourceUserAgent.value = navigator.userAgent;
+
+        const readSubmittedResourceKeys = () => {
+          try {
+            return JSON.parse(localStorage.getItem(resourceRequestStoreKey)) || [];
+          } catch {
+            return [];
+          }
+        };
+
+        const writeSubmittedResourceKey = (key) => {
+          const keys = new Set(readSubmittedResourceKeys());
+          keys.add(key);
+          localStorage.setItem(resourceRequestStoreKey, JSON.stringify(Array.from(keys)));
+        };
+
+        const getResourceRequestKey = () => {
+          const formData = new FormData(resourceSignupForm);
+          const email = String(formData.get("email") || "").trim().toLowerCase();
+          const track = String(formData.get("track") || "PMP").trim().toUpperCase();
+          return email ? `${email}|${track}` : "";
+        };
+
+        const updateResourceSubmitState = () => {
+          if (!resourceSubmitButton) return;
+          const key = getResourceRequestKey();
+          resourceSubmitButton.disabled = Boolean(key && key === latestSubmittedResourceKey);
+        };
+
+        resourceSignupForm.addEventListener("input", updateResourceSubmitState);
+        resourceSignupForm.addEventListener("change", updateResourceSubmitState);
+
+        resourceSignupForm.addEventListener("submit", (event) => {
+          const requestKey = getResourceRequestKey();
+          if (readSubmittedResourceKeys().includes(requestKey)) {
+            event.preventDefault();
+            resourceFormStatus.textContent = "You already requested this study pack.";
+            resourceSignupForm.classList.add("is-duplicate");
+            return;
+          }
+
+          writeSubmittedResourceKey(requestKey);
+          latestSubmittedResourceKey = requestKey;
+          resourceFormStatus.textContent = "Request submitted.";
+          resourceSignupForm.classList.add("is-submitted");
+          updateResourceSubmitState();
+        });
+      }
+    </script>
+    <script src="./nav.js"></script>
   </body>
 </html>

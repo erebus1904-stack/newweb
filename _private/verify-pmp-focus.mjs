@@ -2,6 +2,10 @@ import { existsSync, readFileSync } from "node:fs";
 
 const files = {
   home: readFileSync("index.html", "utf8"),
+  practice: readFileSync("practice.html", "utf8"),
+  pmpQuestions: readFileSync("pmp-questions.html", "utf8"),
+  capmQuestions: readFileSync("capm-questions.html", "utf8"),
+  blog: readFileSync("blog.html", "utf8"),
   pmp: readFileSync("programs/pmp.html", "utf8"),
   capm: readFileSync("programs/capm.html", "utf8"),
   sitemap: readFileSync("sitemap.xml", "utf8"),
@@ -73,26 +77,38 @@ const checks = [
     pass: !/NCLEX-RN, USMLE, USCPA, CFA, FINRA, FE\/PE/.test(files.home),
   },
   {
-    name: "home includes study guide section",
-    pass: /id="study-guides"/.test(files.home) && /Latest PMP articles/.test(files.home),
+    name: "home links to a dedicated blog page for articles",
+    pass: /href="\.\/blog\.html"/.test(files.home) &&
+      !/id="study-guides"/.test(files.home) &&
+      /id="blog-guides"/.test(files.blog) &&
+      /PMP and CAPM study guides/.test(files.blog) &&
+      !/PMP Blog/.test(files.blog) &&
+      !/CAPM Blog/.test(files.blog) &&
+      !/class="pmp-hero blog-hero"/.test(files.blog),
   },
   {
     name: "home removes single-language selector",
     pass: !/id="language-select"/.test(files.home) && !/Language<\/span>/.test(files.home),
   },
   {
-    name: "home defaults to a CAPM-first practice workspace",
-    pass: /id="practice-workspace"/.test(files.home) && /Choose your exam track/.test(files.home),
+    name: "home sends question practice through a dedicated selection flow",
+    pass: !/id="practice-workspace"/.test(files.home) &&
+      /href="\.\/practice\.html"/.test(files.home) &&
+      /id="practice-workspace"/.test(files.practice) &&
+      /Free PMP &amp; CAPM Practice Questions/.test(files.practice) &&
+      /pmp-questions\.html/.test(files.practice + files.pmpQuestions) &&
+      /capm-questions\.html/.test(files.practice + files.capmQuestions),
   },
   {
     name: "PMP page contains learning-center sections",
     pass: /PMP Study Hub/.test(files.pmp) &&
+      /PMBOK-based PMP learning path/.test(files.pmp) &&
       /Official exam anchors to verify first/.test(files.pmp) &&
-      /30-day and 45-day study paths/.test(files.pmp) &&
-      /How to use Practice and Mock Exam/.test(files.pmp) &&
       /PMP study guides/.test(files.pmp) &&
-      /How to answer PMP situational questions/.test(files.pmp) &&
-      /Updated outline from July 9, 2026/.test(files.pmp),
+      (files.pmp.match(/class="domain-card learning-outline-card"/g) || []).length >= 8 &&
+      /Knowledge points/.test(files.pmp) &&
+      /Key focus/.test(files.pmp) &&
+      /Related practice/.test(files.pmp),
   },
   {
     name: "sitemap focuses on project management pages for this phase",
@@ -156,9 +172,9 @@ const checks = [
     }),
   },
   {
-    name: "home and PMP center link current PMP articles",
+    name: "blog and PMP center link current PMP articles",
     pass: articlePaths.every((path) => files.pmp.includes(`../${path}`)) &&
-      articlePaths.slice(0, 5).every((path) => files.home.includes(`./${path}`)),
+      articlePaths.slice(0, 5).every((path) => files.blog.includes(`./${path}`)),
   },
   {
     name: "sitemap includes current PMP articles",
@@ -178,8 +194,8 @@ const checks = [
     }),
   },
   {
-    name: "home CAPM page and sitemap link CAPM articles",
-    pass: capmArticlePaths.every((path) => files.home.includes(`./${path}`)) &&
+    name: "blog and sitemap link CAPM articles",
+    pass: capmArticlePaths.every((path) => files.blog.includes(`./${path}`)) &&
       capmArticlePaths.every((path) => readFileSync("programs/capm.html", "utf8").includes(`../${path}`)) &&
       capmArticlePaths.every((path) => files.sitemap.includes(`https://starrycesium.com/${path}`)),
   },
