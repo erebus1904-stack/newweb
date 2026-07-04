@@ -15,7 +15,13 @@ const pmp = context.examCatalog.find((exam) => exam.id === "pmp");
 
 expect(Boolean(pmp), "PMP exam exists in data.js");
 if (pmp) {
-  pmp.questions.forEach((question, index) => {
+  const practiceQuestions = pmp.questions.filter((question) => question.bankType !== "exam");
+  const examQuestions = pmp.questions.filter((question) => question.bankType === "exam");
+
+  expect(practiceQuestions.length === pmp.bankConfig?.practiceQuestionCount, "PMP practice question count matches bankConfig");
+  expect(examQuestions.length === pmp.bankConfig?.examQuestionCount, "PMP mock exam question count matches bankConfig");
+
+  practiceQuestions.forEach((question, index) => {
     const number = index + 1;
     expect(Boolean(question.domain), `pmp#${number} has domain metadata`);
     expect(Boolean(question.topic), `pmp#${number} has topic metadata`);

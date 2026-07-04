@@ -1,0 +1,45 @@
+export const siteOrigin = "https://starrycesium.com";
+
+export const seoPages = [
+  { path: "index.html", lastmod: "2026-07-04", index: true, schema: ["LearningResource"] },
+  { path: "practice.html", lastmod: "2026-07-04", index: true, schema: ["LearningResource", "BreadcrumbList", "ItemList"] },
+  { path: "pmp-questions.html", lastmod: "2026-07-04", index: true, schema: ["LearningResource", "BreadcrumbList", "ItemList"] },
+  { path: "pmp-mock-exam.html", lastmod: "2026-07-04", index: true, schema: ["LearningResource", "BreadcrumbList"] },
+  { path: "capm-questions.html", lastmod: "2026-07-04", index: true, schema: ["LearningResource", "BreadcrumbList", "ItemList"] },
+  { path: "blog.html", lastmod: "2026-07-04", index: true, schema: [] },
+  { path: "about.html", lastmod: "2026-07-04", index: true, schema: [] },
+  { path: "editorial-policy.html", lastmod: "2026-07-04", index: true, schema: [] },
+  { path: "privacy.html", lastmod: "2026-07-04", index: true, schema: [] },
+  { path: "terms.html", lastmod: "2026-07-04", index: true, schema: [] },
+  { path: "programs/pmp.html", lastmod: "2026-07-04", index: true, schema: ["LearningResource", "BreadcrumbList", "ItemList"] },
+  { path: "programs/capm.html", lastmod: "2026-07-04", index: true, schema: ["LearningResource", "BreadcrumbList", "ItemList"] },
+  { path: "programs/pmp-chapter-practice.html", lastmod: "2026-07-04", index: true, schema: ["LearningResource", "BreadcrumbList", "ItemList"] },
+  { path: "drill.html", lastmod: "2026-07-04", index: false, schema: [] },
+  { path: "guides/pmp-study-plan.html", lastmod: "2026-06-15", index: true, schema: ["Article", "BreadcrumbList"] },
+  { path: "guides/pmp-situational-questions.html", lastmod: "2026-06-15", index: true, schema: ["Article", "BreadcrumbList"] },
+  { path: "guides/pmp-agile-hybrid-predictive.html", lastmod: "2026-06-15", index: true, schema: ["Article", "BreadcrumbList"] },
+  { path: "guides/pmp-change-control.html", lastmod: "2026-06-15", index: true, schema: ["Article", "BreadcrumbList"] },
+  { path: "guides/pmp-risk-issues.html", lastmod: "2026-06-15", index: true, schema: ["Article", "BreadcrumbList"] },
+  { path: "guides/pmp-stakeholder-communication.html", lastmod: "2026-06-15", index: true, schema: ["Article", "BreadcrumbList"] },
+  { path: "guides/pmp-2026-exam-version.html", lastmod: "2026-06-15", index: true, schema: ["Article", "BreadcrumbList"] },
+  { path: "guides/pmp-next-best-action.html", lastmod: "2026-06-15", index: true, schema: ["Article", "BreadcrumbList"] },
+  { path: "guides/pmp-delivery-approaches.html", lastmod: "2026-06-15", index: true, schema: ["Article", "BreadcrumbList"] },
+  { path: "guides/pmp-agile-roles.html", lastmod: "2026-06-15", index: true, schema: ["Article", "BreadcrumbList"] },
+  { path: "guides/pmp-process-map.html", lastmod: "2026-06-15", index: true, schema: ["Article", "BreadcrumbList"] },
+  { path: "guides/capm-domain-study-plan.html", lastmod: "2026-06-15", index: true, schema: ["Article", "BreadcrumbList"] },
+  { path: "guides/capm-exam-timing-strategy.html", lastmod: "2026-06-15", index: true, schema: ["Article", "BreadcrumbList"] },
+  { path: "guides/capm-core-concepts.html", lastmod: "2026-06-15", index: true, schema: ["Article", "BreadcrumbList"] },
+  { path: "guides/capm-predictive-project-management.html", lastmod: "2026-06-15", index: true, schema: ["Article", "BreadcrumbList"] },
+  { path: "guides/capm-agile-scrum-kanban.html", lastmod: "2026-06-16", index: true, schema: ["Article", "BreadcrumbList"] },
+  { path: "guides/capm-business-analysis-study.html", lastmod: "2026-06-17", index: true, schema: ["Article", "BreadcrumbList"] },
+  { path: "guides/capm-next-step-scenario-questions.html", lastmod: "2026-06-18", index: true, schema: ["Article", "BreadcrumbList"] },
+  { path: "guides/capm-study-materials-plan.html", lastmod: "2026-06-22", index: true, schema: ["Article", "BreadcrumbList"] },
+  { path: "guides/capm-mistake-review-method.html", lastmod: "2026-06-23", index: true, schema: ["Article", "BreadcrumbList"] },
+  { path: "guides/capm-online-vs-test-center.html", lastmod: "2026-06-24", index: true, schema: ["Article", "BreadcrumbList"] },
+  { path: "guides/capm-to-pmp-study-bridge.html", lastmod: "2026-06-29", index: true, schema: ["Article", "BreadcrumbList"] }
+];
+
+export function publicUrl(pagePath) {
+  const normalizedPath = pagePath === "index.html" ? "" : pagePath;
+  return `${siteOrigin}/${normalizedPath}`;
+}
