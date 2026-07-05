@@ -4901,6 +4901,35 @@ body.prompt-page .prompt-next-steps {
   gap: 16px;
 }
 
+body.prompt-page .workspace {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+body.prompt-page .pmp-shell,
+body.prompt-page .workspace,
+body.prompt-page .practice-panel,
+body.prompt-page .domain-outline,
+body.prompt-page .practice-bank-heading,
+body.prompt-page .domain-bank-heading,
+body.prompt-page .domain-bank-heading h1,
+body.prompt-page .domain-bank-heading p,
+body.prompt-page .prompt-category-nav,
+body.prompt-page .prompt-card-grid,
+body.prompt-page .prompt-card,
+body.prompt-page .prompt-category-nav .guide-card {
+  box-sizing: border-box;
+  max-width: 100%;
+  min-width: 0;
+}
+
+body.prompt-page .domain-bank-heading h1,
+body.prompt-page .domain-bank-heading p,
+body.prompt-page .prompt-category-nav .guide-card,
+body.prompt-page .prompt-card,
+body.prompt-page .prompt-card .learning-prompt-text {
+  overflow-wrap: anywhere;
+}
+
 body.prompt-page .prompt-category-nav {
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   margin-top: 22px;
@@ -4966,6 +4995,20 @@ body.prompt-page .prompt-card h3 {
 body.prompt-page .prompt-card ul {
   margin: 0;
   padding-left: 20px;
+}
+
+@media (max-width: 680px) {
+  body.prompt-page .prompt-category-nav,
+  body.prompt-page .prompt-card-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  body.prompt-page .prompt-card,
+  body.prompt-page .prompt-card .learning-prompt-text,
+  body.prompt-page .prompt-category-nav .guide-card {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
 }
 
 body.learning-outline-page .learning-practice-link {

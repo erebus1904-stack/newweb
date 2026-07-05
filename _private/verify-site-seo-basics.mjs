@@ -6,7 +6,7 @@ const htmlFiles = [];
 function walk(dir) {
   for (const entry of readdirSync(dir, { withFileTypes: true })) {
     const fullPath = path.join(dir, entry.name);
-    if (entry.isDirectory() && ![".git", ".superpowers", "reports"].includes(entry.name)) {
+    if (entry.isDirectory() && ![".git", ".superpowers", "reports", "tmp", "output"].includes(entry.name)) {
       walk(fullPath);
     }
     if (entry.isFile() && entry.name.endsWith(".html")) {
