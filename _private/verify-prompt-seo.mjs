@@ -4,6 +4,9 @@ const promptPages = [
   "pmp-ai-prompts.html",
   "prompts/pmp-study-prompts.html",
   "prompts/pmp-mistake-review-prompts.html",
+  "prompts/pmp-exam-operations-prompts.html",
+  "prompts/pmp-research-prompts.html",
+  "prompts/pmp-career-value-prompts.html",
 ];
 
 const sitemap = readFileSync("sitemap.xml", "utf8");
