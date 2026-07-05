@@ -499,6 +499,18 @@
             </div>
           </section>
 
+          <section class="domain-outline pmp-learning-outline secondary-outline" aria-labelledby="pmp-prompts-title">
+            <div class="practice-bank-heading domain-bank-heading">
+              <h2 id="pmp-prompts-title">PMP AI prompts for study and review.</h2>
+              <p>Use prompts after reading a topic, before chapter practice, and after missed-question review. The prompt pages keep AI support inside the PMP study loop rather than turning PassGrid into a generic prompt collection.</p>
+            </div>
+            <div class="learning-guide-grid">
+              <a href="../pmp-ai-prompts.html">PMP AI prompts hub</a>
+              <a href="../prompts/pmp-study-prompts.html">PMP study planning prompts</a>
+              <a href="../prompts/pmp-mistake-review-prompts.html">PMP mistake review prompts</a>
+            </div>
+          </section>
+
           <section class="domain-outline pmp-learning-outline secondary-outline" aria-labelledby="pmp-guides-title">
             <div class="practice-bank-heading domain-bank-heading">
               <h2 id="pmp-guides-title">PMP study guides.</h2>
@@ -555,50 +567,6 @@
         <span>PassGrid is independent and is not affiliated with or endorsed by PMI.</span>
       </footer>
     </main>
-    <script>
-      document.querySelectorAll("[data-copy-prompt]").forEach((button) => {
-        button.addEventListener("click", async () => {
-          const block = button.closest(".learning-prompt-block");
-          const promptText = block?.querySelector(".learning-prompt-text")?.innerText.trim();
-          if (!promptText) return;
-
-          const originalLabel = button.dataset.defaultLabel || button.textContent;
-          button.dataset.defaultLabel = originalLabel;
-
-          const copyWithFallback = () => {
-            const textarea = document.createElement("textarea");
-            textarea.value = promptText;
-            textarea.setAttribute("readonly", "");
-            textarea.style.position = "fixed";
-            textarea.style.opacity = "0";
-            document.body.appendChild(textarea);
-            textarea.select();
-            document.execCommand("copy");
-            textarea.remove();
-          };
-
-          try {
-            if (navigator.clipboard?.writeText) {
-              await navigator.clipboard.writeText(promptText);
-            } else {
-              copyWithFallback();
-            }
-            button.textContent = "Copied";
-          } catch (error) {
-            try {
-              copyWithFallback();
-              button.textContent = "Copied";
-            } catch (fallbackError) {
-              button.textContent = "Copy failed";
-            }
-          }
-
-          window.setTimeout(() => {
-            button.textContent = originalLabel;
-          }, 1800);
-        });
-      });
-    </script>
     <script src="../nav.js"></script>
   </body>
 </html>

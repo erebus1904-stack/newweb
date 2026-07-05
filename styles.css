@@ -4894,6 +4894,80 @@ body.learning-outline-page .copy-prompt-button:hover {
   background: var(--pg-blue-soft);
 }
 
+body.prompt-page .prompt-category-nav,
+body.prompt-page .prompt-card-grid,
+body.prompt-page .prompt-next-steps {
+  display: grid;
+  gap: 16px;
+}
+
+body.prompt-page .prompt-category-nav {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  margin-top: 22px;
+}
+
+body.prompt-page .prompt-category-nav .guide-card {
+  min-height: 100%;
+}
+
+body.prompt-page .prompt-future-card {
+  opacity: 0.86;
+}
+
+body.prompt-page .prompt-card-grid {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+body.prompt-page .prompt-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  border: 1px solid rgba(24, 28, 34, 0.12);
+  border-radius: 8px;
+  background: #ffffff;
+  padding: 20px;
+}
+
+body.prompt-page .prompt-use-case {
+  margin: 0;
+  font-weight: 700;
+}
+
+body.prompt-page .prompt-card .learning-prompt-text {
+  width: 100%;
+  border-radius: 8px;
+  background: #f5f7f9;
+  padding: 16px;
+}
+
+body.prompt-page .prompt-card .copy-prompt-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 0 14px;
+  border: 1px solid #c9d7ff;
+  border-radius: 8px;
+  background: #ffffff;
+  color: var(--pg-blue);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+body.prompt-page .prompt-card .copy-prompt-button:hover {
+  background: var(--pg-blue-soft);
+}
+
+body.prompt-page .prompt-card h3 {
+  margin: 8px 0 0;
+}
+
+body.prompt-page .prompt-card ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
 body.learning-outline-page .learning-practice-link {
   display: inline-flex;
   align-items: center;

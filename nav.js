@@ -36,6 +36,46 @@
     wireMenu(header, nav, toggle, index + 100);
   });
 
+  document.querySelectorAll("[data-copy-prompt]").forEach((button) => {
+    button.addEventListener("click", async () => {
+      const block = button.closest(".learning-prompt-block, .prompt-card");
+      const promptText = block?.querySelector(".learning-prompt-text, [data-prompt-text]")?.innerText.trim();
+      if (!promptText) return;
+
+      const previousLabel = button.textContent;
+      const markCopied = () => {
+        button.textContent = "Copied";
+        window.setTimeout(() => {
+          button.textContent = previousLabel || "Copy prompt";
+        }, 1800);
+      };
+
+      const copyWithFallback = () => {
+        const textarea = document.createElement("textarea");
+        textarea.value = promptText;
+        textarea.setAttribute("readonly", "");
+        textarea.style.position = "fixed";
+        textarea.style.opacity = "0";
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand("copy");
+        textarea.remove();
+      };
+
+      try {
+        if (navigator.clipboard?.writeText) {
+          await navigator.clipboard.writeText(promptText);
+        } else {
+          copyWithFallback();
+        }
+        markCopied();
+      } catch {
+        copyWithFallback();
+        markCopied();
+      }
+    });
+  });
+
   document.addEventListener("click", (event) => {
     const target = event.target.closest("[data-analytics-event]");
     if (!target || typeof window.gtag !== "function") return;
