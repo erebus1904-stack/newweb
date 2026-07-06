@@ -1,7 +1,7 @@
 (() => {
   const EXAM_ID = "pmp";
   const MOCK_SIZE = 180;
-  const DURATION_SECONDS = 4 * 60 * 60;
+  const DURATION_SECONDS = 230 * 60;
   const STORAGE_KEY = "passGridPmpMockExamState";
 
   const pmpExam = examCatalog.find((exam) => exam.id === EXAM_ID);
