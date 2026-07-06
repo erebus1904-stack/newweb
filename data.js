@@ -8,7 +8,7 @@ const examCatalog = [
     "title": "PMP scenario practice bank",
     "subtitle": "PMI project management certification",
     "badge": "PMP",
-    "questionCount": 839,
+    "questionCount": 1069,
     "updated": "2026",
     "source": "PMI PMP Examination Content Outline",
     "coverage": [
@@ -24,7 +24,7 @@ const examCatalog = [
     "accuracy": 0,
     "weak": "None",
     "eta": "Start to estimate",
-    "description": "839-question PMP practice bank with domain questions, PMBOK chapter drills, immediate explanations, and local mistake review.",
+    "description": "1069-question PMP practice bank with domain questions, PMBOK chapter drills, immediate explanations, and local mistake review.",
     "questions": [
       {
         "tag": "Stakeholders",
@@ -21966,25 +21966,4625 @@ const examCatalog = [
           "C"
         ],
         "explanation": "Correct answer: BC. Choose the option that best follows PMP exam logic: understand the situation, use the relevant project artifact or accountable role, communicate before escalating when appropriate, and avoid jumping directly to execution without analysis."
+      },
+      {
+        "tag": "Project Charter",
+        "domain": "Process",
+        "topic": "High-level scope",
+        "approach": "Agile",
+        "difficulty": "Medium",
+        "decisionRule": "Use the project charter for high-level project scope and authorization.",
+        "chapterId": "pmbok-ch04-integration-management",
+        "sourceSet": "pmp-agile-core-50",
+        "sourceQuestionNumber": 1,
+        "text": "A new project manager on an agile project is looking for the document that describes the project at a high level, including the initial high-level scope. Where should the project manager look first?",
+        "choices": [
+          "Project charter",
+          "Work breakdown structure",
+          "User stories",
+          "Epics"
+        ],
+        "correct": 0,
+        "explanation": "The project charter authorizes the project and documents high-level information, including high-level scope, objectives, and key stakeholders. User stories and epics describe product needs, but they do not replace the charter for overall project authorization and initial scope context."
+      },
+      {
+        "tag": "Transparency",
+        "domain": "People",
+        "topic": "Team communication",
+        "approach": "Agile",
+        "difficulty": "Medium",
+        "decisionRule": "Encourage open sharing to support transparency, inspection, and adaptation.",
+        "chapterId": "pmbok-ch09-resource-management",
+        "sourceSet": "pmp-agile-core-50",
+        "sourceQuestionNumber": 2,
+        "text": "A new agile team lead notices that team members are reluctant to express their views. What advice should the agile leader give the team to improve communication?",
+        "choices": [
+          "Focus only on results",
+          "Follow one common strategy without discussion",
+          "Share ideas freely and transparently",
+          "Use a shared workspace"
+        ],
+        "correct": 2,
+        "explanation": "Scrum relies on transparency, inspection, and adaptation. The first problem is that team members are not openly sharing views. The leader should create psychological safety and encourage transparent communication, not simply add a workspace or impose a strategy."
+      },
+      {
+        "tag": "Estimation",
+        "domain": "Process",
+        "topic": "Ideal time",
+        "approach": "Agile",
+        "difficulty": "Medium",
+        "decisionRule": "Use ideal time as another relative sizing technique when story points are not used.",
+        "chapterId": "pmbok-ch06-schedule-management",
+        "sourceSet": "pmp-agile-core-50",
+        "sourceQuestionNumber": 3,
+        "text": "Besides story points, which method can an agile team use to estimate the relative size of user stories?",
+        "choices": [
+          "Precise timeboxes",
+          "Ideal time",
+          "Heuristics only",
+          "Ideal velocity"
+        ],
+        "correct": 1,
+        "explanation": "Agile teams may estimate stories with story points or ideal time. Ideal time estimates the effort needed if the work could be completed without interruptions, meetings, delays, or distractions."
+      },
+      {
+        "tag": "Information Radiator",
+        "domain": "People",
+        "topic": "Status communication",
+        "approach": "Agile",
+        "difficulty": "Medium",
+        "decisionRule": "Make visual status signals explicit so stakeholders interpret them consistently.",
+        "chapterId": "pmbok-ch10-communications-management",
+        "sourceSet": "pmp-agile-core-50",
+        "sourceQuestionNumber": 4,
+        "text": "An agile practitioner notices that an information radiator uses red, yellow, and green traffic-light colors to communicate project progress. What should the practitioner do to improve the status communication?",
+        "choices": [
+          "Ask the sponsor what the colors mean",
+          "Replace the colors with a fixed numerical system",
+          "Define a clear meaning for each color on the information radiator",
+          "Create a new information radiator using only quantitative metrics"
+        ],
+        "correct": 2,
+        "explanation": "Information radiators are useful only when the team and stakeholders understand the signals. Defining the meaning of each color creates shared interpretation without replacing the current communication tool unnecessarily."
+      },
+      {
+        "tag": "Impediment Removal",
+        "domain": "People",
+        "topic": "Team problem solving",
+        "approach": "Agile",
+        "difficulty": "Medium",
+        "decisionRule": "Work with the team to remove impediments rather than directing a solution alone.",
+        "chapterId": "pmbok-ch09-resource-management",
+        "sourceSet": "pmp-agile-core-50",
+        "sourceQuestionNumber": 5,
+        "text": "An agile team is developing features planned for the current iteration. One team member has encountered an impediment that blocks story progress. What should the agile lead do to help the team move forward?",
+        "choices": [
+          "Use personal technical expertise to define a solution and direct the team to follow it",
+          "Facilitate a team discussion to identify and agree on a solution",
+          "Assign the issue to another team without discussion",
+          "Replace the story with a new story"
+        ],
+        "correct": 1,
+        "explanation": "The agile lead or Scrum Master helps remove impediments by facilitating team ownership and collaboration. The leader should not impose a solution when the team can inspect the problem and decide how to resolve it."
+      },
+      {
+        "tag": "Value and Risk",
+        "domain": "Business Environment",
+        "topic": "Risk-value prioritization",
+        "approach": "Agile",
+        "difficulty": "Medium",
+        "decisionRule": "Prioritize work that delivers value while reducing important risks early.",
+        "chapterId": "pmbok-ch04-integration-management",
+        "sourceSet": "pmp-agile-core-50",
+        "sourceQuestionNumber": 6,
+        "text": "An agile practitioner is concerned about high-risk parts of a project and wants to ensure that both risk and value are considered when prioritizing the solution. What should the practitioner do?",
+        "choices": [
+          "Use a risk-value matrix and address high-risk, high-value items first",
+          "Use a risk-value matrix and address high-risk, low-value items first",
+          "Use an information radiator and tell the team to focus only on high-risk development items",
+          "Use a fishbone diagram to compare schedule, cost, and functional risks"
+        ],
+        "correct": 0,
+        "explanation": "Agile delivery favors early value and early risk reduction. A risk-value matrix helps the team select items that both matter to the business and reduce uncertainty."
+      },
+      {
+        "tag": "Iteration Planning",
+        "domain": "Process",
+        "topic": "Iteration planning timing",
+        "approach": "Agile",
+        "difficulty": "Medium",
+        "decisionRule": "Hold iteration planning at the start of the iteration.",
+        "chapterId": "pmbok-ch06-schedule-management",
+        "sourceSet": "pmp-agile-core-50",
+        "sourceQuestionNumber": 7,
+        "text": "When is iteration planning normally held?",
+        "choices": [
+          "On the first day of the iteration",
+          "On the last day of the previous iteration",
+          "The day before the iteration starts",
+          "Whenever the team happens to be available"
+        ],
+        "correct": 0,
+        "explanation": "Iteration or sprint planning is held at the beginning of the iteration so the team can agree on the goal and select the work for that iteration."
+      },
+      {
+        "tag": "Scrum of Scrums",
+        "domain": "People",
+        "topic": "Multi-team coordination",
+        "approach": "Agile",
+        "difficulty": "Medium",
+        "decisionRule": "Use Scrum of Scrums to coordinate dependencies among multiple Scrum teams.",
+        "chapterId": "pmbok-ch10-communications-management",
+        "sourceSet": "pmp-agile-core-50",
+        "sourceQuestionNumber": 8,
+        "text": "What is a Scrum of Scrums meeting?",
+        "choices": [
+          "Another name for a daily scrum within one Scrum team",
+          "A coordination mechanism for multiple Scrum teams working on the same initiative",
+          "A meeting held every two weeks within one Scrum team",
+          "An occasional leadership meeting used to direct different Scrum teams"
+        ],
+        "correct": 1,
+        "explanation": "Scrum of Scrums is commonly used when multiple Scrum teams must coordinate dependencies, impediments, and integration work across a larger product or project."
+      },
+      {
+        "tag": "Agile Mindset",
+        "domain": "People",
+        "topic": "Adaptation",
+        "approach": "Agile",
+        "difficulty": "Medium",
+        "decisionRule": "Value responding to change over rigidly following a plan.",
+        "chapterId": "pmbok-ch09-resource-management",
+        "sourceSet": "pmp-agile-core-50",
+        "sourceQuestionNumber": 9,
+        "text": "Although an agile team is self-managing, it still needs basic principles to guide behavior. Which principle is most important for the team?",
+        "choices": [
+          "Follow the plan",
+          "Negotiate the contract",
+          "Strengthen team discipline only",
+          "Adapt to change"
+        ],
+        "correct": 3,
+        "explanation": "Responding to change is central to the agile mindset. Plans, contracts, and discipline matter, but they do not replace the need to inspect, adapt, and respond to changing information."
+      },
+      {
+        "tag": "Story Points",
+        "domain": "Process",
+        "topic": "Zero-point story",
+        "approach": "Agile",
+        "difficulty": "Medium",
+        "decisionRule": "Interpret a zero-point story as very small effort, not zero value.",
+        "chapterId": "pmbok-ch06-schedule-management",
+        "sourceSet": "pmp-agile-core-50",
+        "sourceQuestionNumber": 10,
+        "text": "What does it usually mean when a user story is estimated at zero story points?",
+        "choices": [
+          "The story has zero cost",
+          "The story has no value",
+          "The story is an impediment to progress",
+          "The story can be designed, built, and tested with minimal effort"
+        ],
+        "correct": 3,
+        "explanation": "A zero-point estimate usually means the team considers the work extremely small relative to other stories. It does not mean the story has no value or no cost."
+      },
+      {
+        "tag": "Agile Risk",
+        "domain": "Process",
+        "topic": "Risk burndown chart",
+        "approach": "Agile",
+        "difficulty": "Medium",
+        "decisionRule": "Use a risk burndown chart to track whether technical risk is being reduced.",
+        "chapterId": "pmbok-ch11-risk-management",
+        "sourceSet": "pmp-agile-core-50",
+        "sourceQuestionNumber": 11,
+        "text": "In agile risk management, what is a risk burndown chart used for?",
+        "choices": [
+          "Qualitatively analyzing risk probability",
+          "Tracking the reduction of technical risk",
+          "Documenting external risks that may affect the project",
+          "Showing the project risk profile and newly changed risks"
+        ],
+        "correct": 1,
+        "explanation": "A risk burndown chart tracks remaining risk over time. It helps the team see whether risk exposure is decreasing or increasing as work progresses."
+      },
+      {
+        "tag": "Team Learning",
+        "domain": "People",
+        "topic": "Recurring defect",
+        "approach": "Agile",
+        "difficulty": "Medium",
+        "decisionRule": "Let the team inspect recurring problems and agree on a shared working agreement.",
+        "chapterId": "pmbok-ch09-resource-management",
+        "sourceSet": "pmp-agile-core-50",
+        "sourceQuestionNumber": 12,
+        "text": "A defect that was previously fixed by one team member appears again in the latest iteration. Another team member says they never received the solution. What should the agile practitioner do?",
+        "choices": [
+          "Work with the whole team to inspect and resolve the problem",
+          "Create a standardized sharing method without team input",
+          "Report the team member to the functional manager",
+          "Speak privately with the second team member only"
+        ],
+        "correct": 0,
+        "explanation": "A recurring defect points to a team working-agreement or knowledge-sharing problem. The agile practitioner should facilitate team inspection and a shared solution rather than blame one person or escalate first."
+      },
+      {
+        "tag": "User Story",
+        "domain": "Process",
+        "topic": "Story card information",
+        "approach": "Agile",
+        "difficulty": "Medium",
+        "decisionRule": "Distinguish story card information from team-level velocity.",
+        "chapterId": "pmbok-ch05-scope-management",
+        "sourceSet": "pmp-agile-core-50",
+        "sourceQuestionNumber": 13,
+        "text": "Which item is not normally part of the information on a story card?",
+        "choices": [
+          "Estimate points",
+          "Story description",
+          "Story dependencies",
+          "Velocity"
+        ],
+        "correct": 3,
+        "explanation": "A story card may include description, estimates, acceptance criteria, and dependencies. Velocity is a team-level measure of completed work over time, not an individual story-card field."
+      },
+      {
+        "tag": "Velocity",
+        "domain": "Process",
+        "topic": "Velocity stability",
+        "approach": "Agile",
+        "difficulty": "Medium",
+        "decisionRule": "Use velocity for stable forecasting, not comparison or forced improvement.",
+        "chapterId": "pmbok-ch06-schedule-management",
+        "sourceSet": "pmp-agile-core-50",
+        "sourceQuestionNumber": 14,
+        "text": "An agile leader is reviewing charts that track team velocity. Which goal is most appropriate for the team?",
+        "choices": [
+          "Make team velocity higher than the industry average",
+          "Increase velocity by 10% after each iteration",
+          "Stop tracking velocity because the team is self-managing",
+          "Keep velocity reasonably consistent so forecasting is reliable"
+        ],
+        "correct": 3,
+        "explanation": "Velocity is useful for forecasting a team's own future capacity. It should not be compared across teams or forced upward every iteration because teams size stories differently and work under different conditions."
+      },
+      {
+        "tag": "Sprint Execution",
+        "domain": "People",
+        "topic": "Self-organizing work",
+        "approach": "Agile",
+        "difficulty": "Medium",
+        "decisionRule": "Let team members pull and complete work collaboratively during the sprint.",
+        "chapterId": "pmbok-ch09-resource-management",
+        "sourceSet": "pmp-agile-core-50",
+        "sourceQuestionNumber": 15,
+        "text": "An agile team has finished sprint planning and is on day six of a two-week sprint. What should the team focus on?",
+        "choices": [
+          "Completing only each person's individually assigned tasks",
+          "Discussing escalation items only with the Scrum Master",
+          "Planning detailed architecture and design documents",
+          "Voluntarily pulling and completing work as the sprint progresses"
+        ],
+        "correct": 3,
+        "explanation": "During the sprint, the team self-organizes around the sprint goal and collaborates to finish committed work. Agile teams do not limit themselves to isolated individual tasks when team ownership is needed."
+      },
+      {
+        "tag": "Agile Estimation",
+        "domain": "Process",
+        "topic": "Story estimate disagreement",
+        "approach": "Agile",
+        "difficulty": "Medium",
+        "decisionRule": "Use team-based estimation and respect the experience closest to the work.",
+        "chapterId": "pmbok-ch06-schedule-management",
+        "sourceSet": "pmp-agile-core-50",
+        "sourceQuestionNumber": 16,
+        "text": "During iteration planning, three participants cannot agree on a story estimate: the Product Owner, a development lead with experience on similar work, and a senior team member who has previously done this type of work. Whose estimate should carry the most weight?",
+        "choices": [
+          "The senior team member",
+          "The development lead",
+          "The Product Owner",
+          "The average of all three estimates"
+        ],
+        "correct": 0,
+        "explanation": "Estimation belongs to the development team, not the Product Owner. The team should discuss differences and seek consensus, but experience closest to the work deserves serious consideration during estimation."
+      },
+      {
+        "tag": "Agile Team",
+        "domain": "People",
+        "topic": "Adaptability",
+        "approach": "Agile",
+        "difficulty": "Medium",
+        "decisionRule": "Agile teams need flexibility and adaptability.",
+        "chapterId": "pmbok-ch09-resource-management",
+        "sourceSet": "pmp-agile-core-50",
+        "sourceQuestionNumber": 17,
+        "text": "Which characteristic is most necessary for an agile team?",
+        "choices": [
+          "The ability to create and manage personal work schedules",
+          "The ability to plan the entire project in detail",
+          "High flexibility and adaptability",
+          "The ability to handle many tasks at the same time"
+        ],
+        "correct": 2,
+        "explanation": "Inspection and adaptation are core agile behaviors. Detailed up-front planning and multitasking do not matter as much as the team's ability to learn and adapt."
+      },
+      {
+        "tag": "Working Agreements",
+        "domain": "People",
+        "topic": "Team ground rules",
+        "approach": "Agile",
+        "difficulty": "Medium",
+        "decisionRule": "Team working agreements should be created with the team, not imposed by the coach.",
+        "chapterId": "pmbok-ch09-resource-management",
+        "sourceSet": "pmp-agile-core-50",
+        "sourceQuestionNumber": 18,
+        "text": "Which statement about team ground rules is incorrect?",
+        "choices": [
+          "They may address any aspect of the project",
+          "They are written by the coach and approved by the project team",
+          "They apply to all team members",
+          "They express team expectations"
+        ],
+        "correct": 1,
+        "explanation": "Ground rules or working agreements should be developed with the team. A coach or servant leader may facilitate, but should not impose the rules unilaterally."
+      },
+      {
+        "tag": "Refactoring",
+        "domain": "Process",
+        "topic": "Technical debt",
+        "approach": "Agile",
+        "difficulty": "Medium",
+        "decisionRule": "Use refactoring to improve design and reduce technical debt without changing behavior.",
+        "chapterId": "pmbok-ch08-quality-management",
+        "sourceSet": "pmp-agile-core-50",
+        "sourceQuestionNumber": 19,
+        "text": "Why is refactoring important?",
+        "choices": [
+          "It allows the team to improve design and reduce technical debt",
+          "It allows the team to change task priority between iterations",
+          "It allows the team to change project scope between iterations",
+          "It verifies that the customer receives maximum value"
+        ],
+        "correct": 0,
+        "explanation": "Refactoring improves internal design, maintainability, and code quality without changing external functionality. It is a technical-debt reduction practice, not a scope or prioritization technique."
+      },
+      {
+        "tag": "Velocity Forecasting",
+        "domain": "Process",
+        "topic": "Iteration capacity",
+        "approach": "Agile",
+        "difficulty": "Medium",
+        "decisionRule": "Use actual velocity to forecast future capacity without destabilizing the current iteration.",
+        "chapterId": "pmbok-ch06-schedule-management",
+        "sourceSet": "pmp-agile-core-50",
+        "sourceQuestionNumber": 20,
+        "text": "A team estimated that it could complete 30 story points in the current iteration. During the iteration, it realizes that its current velocity may support 50 story points. What should the team do?",
+        "choices": [
+          "Shorten the iteration to match the estimated rate",
+          "Continue working only at the originally estimated rate",
+          "Increase its forecast based on the observed velocity after team discussion",
+          "Release team members to keep the original estimate"
+        ],
+        "correct": 2,
+        "explanation": "Velocity is empirical. If the team learns that capacity is higher than forecast, it should inspect the situation and update its forecast responsibly. The team should not remove capacity or force the original estimate to be true."
+      },
+      {
+        "tag": "Cross-functional Team",
+        "domain": "People",
+        "topic": "Skill development",
+        "approach": "Agile",
+        "difficulty": "Medium",
+        "decisionRule": "Build cross-functional skills to reduce bottleneck risk.",
+        "chapterId": "pmbok-ch09-resource-management",
+        "sourceSet": "pmp-agile-core-50",
+        "sourceQuestionNumber": 21,
+        "text": "A team invests in training new members to broaden individual skills and strengthen cross-functional capability. What is the main purpose?",
+        "choices": [
+          "Reduce bottleneck risk",
+          "Increase stakeholder acceptance of risk",
+          "Increase the frequency of cross-functional communication only",
+          "Use new tools to track progress"
+        ],
+        "correct": 0,
+        "explanation": "Cross-functional capability reduces dependency on a small number of specialists. This lowers bottleneck risk and helps the team deliver increments more reliably."
+      },
+      {
+        "tag": "Progressive Elaboration",
+        "domain": "Process",
+        "topic": "Backlog refinement",
+        "approach": "Agile",
+        "difficulty": "Medium",
+        "decisionRule": "Use progressive elaboration to split large stories into smaller, manageable items.",
+        "chapterId": "pmbok-ch05-scope-management",
+        "sourceSet": "pmp-agile-core-50",
+        "sourceQuestionNumber": 22,
+        "text": "An agile team receives a product backlog for project sizing and agrees to use progressive elaboration. What is a key benefit of this approach?",
+        "choices": [
+          "It always takes less time than other estimation techniques",
+          "It forces the team to split large stories into smaller, more manageable pieces",
+          "It makes velocity easier to show on a cumulative flow diagram",
+          "It lets inexperienced teams avoid participation"
+        ],
+        "correct": 1,
+        "explanation": "Progressive elaboration means details are refined as more information becomes available. Large backlog items can be split into smaller, clearer, and more estimable stories."
+      },
+      {
+        "tag": "Kanban",
+        "domain": "Process",
+        "topic": "Kanban system",
+        "approach": "Agile",
+        "difficulty": "Medium",
+        "decisionRule": "Understand Kanban as a flow system, not simply a task board.",
+        "chapterId": "pmbok-ch08-quality-management",
+        "sourceSet": "pmp-agile-core-50",
+        "sourceQuestionNumber": 23,
+        "text": "Which statement about Kanban is incorrect?",
+        "choices": [
+          "A Kanban system visualizes units of value such as user stories, minimum marketable features, and legacy requirements",
+          "A Kanban system manages the value stream through WIP limits",
+          "Kanban is identical to a task board",
+          "Kanban is an important lean tool"
+        ],
+        "correct": 2,
+        "explanation": "Kanban uses visualization, WIP limits, and flow management. A task board may be one visible element, but Kanban is not identical to a simple task board."
+      },
+      {
+        "tag": "Servant Leadership",
+        "domain": "People",
+        "topic": "Self-organization",
+        "approach": "Agile",
+        "difficulty": "Medium",
+        "decisionRule": "Use facilitation and powerful questions to build a supportive environment.",
+        "chapterId": "pmbok-ch09-resource-management",
+        "sourceSet": "pmp-agile-core-50",
+        "sourceQuestionNumber": 24,
+        "text": "To cultivate self-organization in an agile team, what should a servant leader do during meetings?",
+        "choices": [
+          "Use the Delphi technique to question people",
+          "Use a burndown chart so progress can be measured",
+          "Stay silent as an observer and only record observations during the retrospective",
+          "Ask thoughtful questions and create an environment that helps the team participate"
+        ],
+        "correct": 3,
+        "explanation": "A servant leader facilitates, protects the team, removes impediments, and creates an environment where the team can solve problems. The leader should guide through questions rather than command the answer."
+      },
+      {
+        "tag": "Empowerment",
+        "domain": "People",
+        "topic": "Team motivation",
+        "approach": "Agile",
+        "difficulty": "Medium",
+        "decisionRule": "Empower the team to increase motivation and ownership.",
+        "chapterId": "pmbok-ch09-resource-management",
+        "sourceSet": "pmp-agile-core-50",
+        "sourceQuestionNumber": 25,
+        "text": "Team motivation is a critical success factor in agile and other project management approaches. Which action is one effective way to improve motivation?",
+        "choices": [
+          "Create an environment where team members make every possible decision without boundaries",
+          "Empower the team",
+          "Ensure the development team strictly follows the project plan",
+          "Use strong leadership that makes all team decisions so the team can focus on productivity"
+        ],
+        "correct": 1,
+        "explanation": "Empowered teams have ownership and decision authority within appropriate boundaries. This increases motivation more effectively than command-and-control decision making."
+      },
+      {
+        "tag": "Sprint Scope",
+        "domain": "Process",
+        "topic": "Adding work during sprint",
+        "approach": "Agile",
+        "difficulty": "Medium",
+        "decisionRule": "Protect the sprint goal and support completion before pulling additional work.",
+        "chapterId": "pmbok-ch04-integration-management",
+        "sourceSet": "pmp-agile-core-50",
+        "sourceQuestionNumber": 26,
+        "text": "After completing a task, an agile practitioner suggests adding a new story to the current sprint while other committed sprint stories remain unfinished. What should the practitioner do?",
+        "choices": [
+          "Ask the Product Owner to provide and prioritize the new story outside the current sprint commitment",
+          "Complete the new story independently because team quality is low",
+          "Wait until the retrospective and ask the team to approve starting the new story",
+          "Support the team in completing the remaining committed sprint stories"
+        ],
+        "correct": 3,
+        "explanation": "The current sprint goal and committed work should be protected. New work can be discussed with the Product Owner and backlog, but the team should first help finish the work already selected for the sprint."
+      },
+      {
+        "tag": "User Story",
+        "domain": "Process",
+        "topic": "Clarifying user intent",
+        "approach": "Agile",
+        "difficulty": "Medium",
+        "decisionRule": "Clarify story intent collaboratively with the customer or Product Owner.",
+        "chapterId": "pmbok-ch05-scope-management",
+        "sourceSet": "pmp-agile-core-50",
+        "sourceQuestionNumber": 27,
+        "text": "During iteration planning, the team is struggling to understand the customer's intent for a user story. What should the team do?",
+        "choices": [
+          "Collaborate with the customer to clarify the user story",
+          "Discuss the issue only inside the development team",
+          "Perform multiple experimental tasks without clarification",
+          "Investigate the entire scope of customer intent independently"
+        ],
+        "correct": 0,
+        "explanation": "User stories are refined through conversation. When intent is unclear, the team should collaborate with the customer or Product Owner to clarify value, acceptance criteria, and expected behavior."
+      },
+      {
+        "tag": "Story Points",
+        "domain": "Process",
+        "topic": "Estimation baseline",
+        "approach": "Agile",
+        "difficulty": "Medium",
+        "decisionRule": "Define the estimation standard before estimating stories.",
+        "chapterId": "pmbok-ch06-schedule-management",
+        "sourceSet": "pmp-agile-core-50",
+        "sourceQuestionNumber": 28,
+        "text": "What should an agile team do first when estimating user stories?",
+        "choices": [
+          "Classify user stories by priority",
+          "Schedule a team meeting to understand user stories",
+          "Define the basis or standard for story-point estimation",
+          "Estimate using function point analysis"
+        ],
+        "correct": 2,
+        "explanation": "Before estimating, the team needs a shared understanding of the scale or reference standard. This makes story-point estimates more consistent across the team."
+      },
+      {
+        "tag": "Risk Visibility",
+        "domain": "Process",
+        "topic": "Risk information radiator",
+        "approach": "Agile",
+        "difficulty": "Medium",
+        "decisionRule": "Make major risks visible so management can focus mitigation resources.",
+        "chapterId": "pmbok-ch11-risk-management",
+        "sourceSet": "pmp-agile-core-50",
+        "sourceQuestionNumber": 29,
+        "text": "A company president is concerned about the impact of a natural disaster. How should management identify where to apply resources and reduce potential impact?",
+        "choices": [
+          "Create and maintain an active risk register with mitigation strategies and cost-benefit analysis",
+          "Create and maintain an active risk register based only on qualitative analysis and expected loss",
+          "Have each development team post its highest-risk development items on an information radiator",
+          "Split development teams into two locations to avoid risk and maintain knowledge continuity"
+        ],
+        "correct": 2,
+        "explanation": "In an agile environment, visible risk information helps teams and leaders inspect exposure and act early. Information radiators such as risk boards or risk burndown charts can expose the most important risks for attention."
+      },
+      {
+        "tag": "Pair Programming",
+        "domain": "People",
+        "topic": "Knowledge sharing",
+        "approach": "Agile",
+        "difficulty": "Medium",
+        "decisionRule": "Use pair programming to support knowledge sharing and collaborative quality.",
+        "chapterId": "pmbok-ch09-resource-management",
+        "sourceSet": "pmp-agile-core-50",
+        "sourceQuestionNumber": 30,
+        "text": "Which technique promotes knowledge sharing in an agile team?",
+        "choices": [
+          "Mob programming",
+          "Group programming",
+          "Pair programming",
+          "Dual programming"
+        ],
+        "correct": 2,
+        "explanation": "Pair programming is a recognized agile engineering practice in which two people work together on the same work item, improving shared understanding and knowledge transfer."
+      },
+      {
+        "tag": "Cross-functional Team",
+        "domain": "People",
+        "topic": "Team organization",
+        "approach": "Agile",
+        "difficulty": "Medium",
+        "decisionRule": "Organize agile teams as cross-functional teams.",
+        "chapterId": "pmbok-ch09-resource-management",
+        "sourceSet": "pmp-agile-core-50",
+        "sourceQuestionNumber": 31,
+        "text": "A company decides to use agile for a new project and creates an agile team. How should the agile team be organized to improve the chance of success?",
+        "choices": [
+          "By skill silo",
+          "As a cross-functional team",
+          "As a spontaneous informal group",
+          "By project phase"
+        ],
+        "correct": 1,
+        "explanation": "Agile teams should be cross-functional so they contain the skills needed to deliver value. Self-organization describes how the team manages work, not how the initial capability mix is structured."
+      },
+      {
+        "tag": "Self-organizing Team",
+        "domain": "People",
+        "topic": "Constructive disagreement",
+        "approach": "Agile",
+        "difficulty": "Medium",
+        "decisionRule": "Expect empowered, self-organizing teams to use constructive disagreement.",
+        "chapterId": "pmbok-ch09-resource-management",
+        "sourceSet": "pmp-agile-core-50",
+        "sourceQuestionNumber": 32,
+        "text": "Which statement best describes an effective agile team?",
+        "choices": [
+          "The team is committed to success while respecting formal roles and titles",
+          "The team owns all decisions and commitments and ensures success at any cost",
+          "The team is self-organizing, empowered to make decisions, aligned, and able to use constructive disagreement",
+          "The team avoids conflict to maximize collaboration and business value"
+        ],
+        "correct": 2,
+        "explanation": "Agile teams are self-organizing and empowered. Constructive disagreement can improve decisions. Agile does not depend on formal titles, perfection, or avoiding all conflict."
+      },
+      {
+        "tag": "Facilitation",
+        "domain": "People",
+        "topic": "Stakeholder disagreement",
+        "approach": "Agile",
+        "difficulty": "Medium",
+        "decisionRule": "Facilitate collaboration between stakeholders and the team to reach shared understanding.",
+        "chapterId": "pmbok-ch13-stakeholder-management",
+        "sourceSet": "pmp-agile-core-50",
+        "sourceQuestionNumber": 33,
+        "text": "During a planning meeting, an agile practitioner asks a stakeholder to clarify requirements and notices disagreement between the stakeholder and the team. What should the practitioner do?",
+        "choices": [
+          "Collaborate with the stakeholder and the team to reach agreement",
+          "Remind the team of a previous agreement only",
+          "Ask the sponsor to define the stakeholder's role in the planning meeting",
+          "Control the meeting by asking each team member for a view and then making the decision"
+        ],
+        "correct": 0,
+        "explanation": "The agile practitioner should facilitate collaboration and shared understanding. Escalating to the sponsor or controlling the decision conflicts with self-organization and servant leadership."
+      },
+      {
+        "tag": "Definition of Ready",
+        "domain": "Process",
+        "topic": "User story clarity",
+        "approach": "Agile",
+        "difficulty": "Medium",
+        "decisionRule": "Work with the Product Owner and team to make user stories clear enough for delivery.",
+        "chapterId": "pmbok-ch05-scope-management",
+        "sourceSet": "pmp-agile-core-50",
+        "sourceQuestionNumber": 34,
+        "text": "An agile coach notices that team velocity is affected because the Product Owner's requirement definitions are unclear. What should the coach do?",
+        "choices": [
+          "Work with the Product Owner and team to clearly define user stories",
+          "Require the Product Owner to attend training before writing user stories",
+          "Tell the team to take responsibility for all clarification",
+          "Authorize team members to provide clarification themselves"
+        ],
+        "correct": 0,
+        "explanation": "Unclear user stories should be refined collaboratively. The Product Owner and team should clarify acceptance criteria and readiness instead of shifting all responsibility to one side."
+      },
+      {
+        "tag": "Empowered Team",
+        "domain": "People",
+        "topic": "Agile team attribute",
+        "approach": "Agile",
+        "difficulty": "Medium",
+        "decisionRule": "Empowered teams need minimal management interference and focus on delivering value.",
+        "chapterId": "pmbok-ch09-resource-management",
+        "sourceSet": "pmp-agile-core-50",
+        "sourceQuestionNumber": 35,
+        "text": "Why is an empowered team considered an important agile team attribute?",
+        "choices": [
+          "Because empowered teams require broad management participation to clarify customer needs",
+          "Because empowered teams need minimal management involvement so they can lead their work and deliver value rather than being directed",
+          "Because empowered teams adapt slowly to changing requirements to reduce scope creep",
+          "Because empowered teams remain flexible to changing customer needs while still focusing on specific requirements"
+        ],
+        "correct": 1,
+        "explanation": "Agile teams need enough authority to organize their work and deliver value. Management should set context and boundaries, not direct every action."
+      },
+      {
+        "tag": "Cross-functional Team",
+        "domain": "People",
+        "topic": "Testing bottleneck",
+        "approach": "Agile",
+        "difficulty": "Medium",
+        "decisionRule": "Build cross-functional capability to remove recurring bottlenecks.",
+        "chapterId": "pmbok-ch09-resource-management",
+        "sourceSet": "pmp-agile-core-50",
+        "sourceQuestionNumber": 36,
+        "text": "During the last three iterations, the team completed all planned development tasks, but testing consistently lagged behind. What should be done now?",
+        "choices": [
+          "Add more testers to the team immediately",
+          "Encourage the team to develop cross-functional capability",
+          "Reduce the number of developers on the team",
+          "Plan one iteration for testing after development"
+        ],
+        "correct": 1,
+        "explanation": "A recurring testing bottleneck should be addressed by helping the team become more cross-functional. Adding or removing people may not solve the system problem and may create new handoffs."
+      },
+      {
+        "tag": "Value and Risk",
+        "domain": "Business Environment",
+        "topic": "Backlog priority",
+        "approach": "Agile",
+        "difficulty": "Medium",
+        "decisionRule": "Prioritize high-value work first and defer low-value, high-risk items unless their value can be improved or risk reduced.",
+        "chapterId": "pmbok-ch04-integration-management",
+        "sourceSet": "pmp-agile-core-50",
+        "sourceQuestionNumber": 37,
+        "text": "The Product Owner and team classify product backlog items by value and risk. They will handle high-value/high-risk items first, then high-value/low-risk items, and low-value/low-risk items last. What should they do with low-value/high-risk items?",
+        "choices": [
+          "Handle them last",
+          "Look for ways to increase value or reduce risk before committing to them",
+          "Never handle them",
+          "Use experiments to validate their value and risk immediately"
+        ],
+        "correct": 1,
+        "explanation": "Low-value/high-risk items are poor candidates for early delivery. The better agile response is to inspect whether value can be increased or risk can be reduced before deciding to implement them."
+      },
+      {
+        "tag": "Minimum Marketable Feature",
+        "domain": "Business Environment",
+        "topic": "Value delivery",
+        "approach": "Agile",
+        "difficulty": "Medium",
+        "decisionRule": "Define an MMF as the smallest set of functionality that delivers market value.",
+        "chapterId": "pmbok-ch04-integration-management",
+        "sourceSet": "pmp-agile-core-50",
+        "sourceQuestionNumber": 38,
+        "text": "How is a minimum marketable feature best defined?",
+        "choices": [
+          "By writing user stories that can be sold first in the market",
+          "By the smallest approved product increment",
+          "By the smallest set of functionality that adds value in the market",
+          "By prioritizing the product backlog to deliver the most important feature"
+        ],
+        "correct": 2,
+        "explanation": "A minimum marketable feature is the smallest coherent feature set that can deliver market value. It is smaller than a full release but still valuable to customers or users."
+      },
+      {
+        "tag": "Backlog Priority",
+        "domain": "Process",
+        "topic": "Mid-iteration change",
+        "approach": "Agile",
+        "difficulty": "Medium",
+        "decisionRule": "Work with the Product Owner to reprioritize when new work must enter the iteration.",
+        "chapterId": "pmbok-ch05-scope-management",
+        "sourceSet": "pmp-agile-core-50",
+        "sourceQuestionNumber": 39,
+        "text": "During an iteration, the Product Owner tells the team that some features not originally included in the iteration now need to be added. What should the team do?",
+        "choices": [
+          "Tell the Product Owner to wait until the next iteration planning meeting",
+          "Work with the Product Owner to reprioritize and remove lower-priority work of comparable size from the current iteration",
+          "Include all requested features",
+          "Reject the new features because no change is allowed once an iteration starts"
+        ],
+        "correct": 1,
+        "explanation": "Agile welcomes change, but capacity is still limited. If new work must enter the current iteration, the Product Owner and team should reprioritize and remove lower-priority work to protect flow and quality."
+      },
+      {
+        "tag": "Backlog Priority",
+        "domain": "Business Environment",
+        "topic": "New requirement",
+        "approach": "Agile",
+        "difficulty": "Medium",
+        "decisionRule": "Use the Product Owner and backlog priority to handle new requirements.",
+        "chapterId": "pmbok-ch04-integration-management",
+        "sourceSet": "pmp-agile-core-50",
+        "sourceQuestionNumber": 40,
+        "text": "An agile project has internal and external stakeholders. During the project, a new requirement is identified that may delay delivery by two months. What should the team do?",
+        "choices": [
+          "Deliver the planned items first and handle the new requirement later",
+          "Work with the Product Owner to update and prioritize the backlog",
+          "Add the new requirement directly to the upcoming release",
+          "Notify stakeholders and work backward from a new delivery date"
+        ],
+        "correct": 1,
+        "explanation": "New requirements should flow through the Product Owner and backlog. The team should update priority based on value, risk, and impact before changing release commitments."
+      },
+      {
+        "tag": "Team Space",
+        "domain": "People",
+        "topic": "Colocation",
+        "approach": "Agile",
+        "difficulty": "Medium",
+        "decisionRule": "Use colocation for people working on the same project or product.",
+        "chapterId": "pmbok-ch09-resource-management",
+        "sourceSet": "pmp-agile-core-50",
+        "sourceQuestionNumber": 41,
+        "text": "For a shared team room to be useful, the people in the room should be working on what?",
+        "choices": [
+          "Whatever they choose",
+          "Different projects",
+          "The same module across different projects",
+          "The same project"
+        ],
+        "correct": 3,
+        "explanation": "A shared team space or war room is most useful when people are working on the same project or product and need fast communication and collaboration."
+      },
+      {
+        "tag": "Empirical Process Control",
+        "domain": "Process",
+        "topic": "Scrum pillars",
+        "approach": "Agile",
+        "difficulty": "Medium",
+        "decisionRule": "Use transparency, inspection, and adaptation to support agile process control.",
+        "chapterId": "pmbok-ch08-quality-management",
+        "sourceSet": "pmp-agile-core-50",
+        "sourceQuestionNumber": 42,
+        "text": "Which set of concepts supports empirical process control in agile approaches?",
+        "choices": [
+          "Testing, requirements, adaptation",
+          "Testing, requirements, change",
+          "Transparency, retrospective, testing",
+          "Transparency, inspection, adaptation"
+        ],
+        "correct": 3,
+        "explanation": "Scrum is based on empirical process control through transparency, inspection, and adaptation. These pillars allow teams to make decisions from observed reality."
+      },
+      {
+        "tag": "Cumulative Flow Diagram",
+        "domain": "Process",
+        "topic": "Tracking and forecasting",
+        "approach": "Agile",
+        "difficulty": "Medium",
+        "decisionRule": "Use a cumulative flow diagram to track and forecast agile flow.",
+        "chapterId": "pmbok-ch06-schedule-management",
+        "sourceSet": "pmp-agile-core-50",
+        "sourceQuestionNumber": 43,
+        "text": "Which tool is used to track and forecast an agile project?",
+        "choices": [
+          "Cumulative flow diagram",
+          "Burnup chart",
+          "Burndown chart",
+          "Charts and curves in general"
+        ],
+        "correct": 0,
+        "explanation": "A cumulative flow diagram helps teams inspect work in progress, flow, cycle time, bottlenecks, and likely completion trends."
+      },
+      {
+        "tag": "Product Backlog",
+        "domain": "Business Environment",
+        "topic": "Backlog ownership",
+        "approach": "Agile",
+        "difficulty": "Medium",
+        "decisionRule": "The Product Owner owns and maintains the product backlog.",
+        "chapterId": "pmbok-ch04-integration-management",
+        "sourceSet": "pmp-agile-core-50",
+        "sourceQuestionNumber": 44,
+        "text": "If the product backlog is outdated, who should resolve the issue?",
+        "choices": [
+          "Sponsor",
+          "Product Owner",
+          "Scrum Master",
+          "Development team"
+        ],
+        "correct": 1,
+        "explanation": "The Product Owner is accountable for the product backlog, including ordering, clarity, and alignment with value."
+      },
+      {
+        "tag": "Scrum Team",
+        "domain": "People",
+        "topic": "Scrum roles",
+        "approach": "Agile",
+        "difficulty": "Medium",
+        "decisionRule": "Recognize the Product Owner, Scrum Master, and development team as core Scrum roles.",
+        "chapterId": "pmbok-ch09-resource-management",
+        "sourceSet": "pmp-agile-core-50",
+        "sourceQuestionNumber": 45,
+        "text": "Which roles are included in a Scrum team?",
+        "choices": [
+          "Development team, Scrum Master, and customer",
+          "Development team, project manager, and customer",
+          "Development team, leader, and architect",
+          "Development team, Scrum Master, and Product Owner"
+        ],
+        "correct": 3,
+        "explanation": "A Scrum team consists of the Product Owner, Scrum Master, and Developers. Customers and managers may be stakeholders, but they are not the three core Scrum roles."
+      },
+      {
+        "tag": "Story Points",
+        "domain": "Process",
+        "topic": "Velocity comparison",
+        "approach": "Agile",
+        "difficulty": "Medium",
+        "decisionRule": "Do not compare story points across teams.",
+        "chapterId": "pmbok-ch06-schedule-management",
+        "sourceSet": "pmp-agile-core-50",
+        "sourceQuestionNumber": 46,
+        "text": "Team A completed 43 story points in the last two-week iteration. Team B works on a separate project, has twice as many developers, and also completed 43 story points. What can be inferred?",
+        "choices": [
+          "One team's story points cannot be directly compared with another team's story points",
+          "Team A is twice as efficient as Team B",
+          "Team A should add more people",
+          "Team B has management support"
+        ],
+        "correct": 0,
+        "explanation": "Story points are relative to a team. Because teams define and estimate points differently, velocity should not be used to compare performance across teams."
+      },
+      {
+        "tag": "Cumulative Flow Diagram",
+        "domain": "Process",
+        "topic": "WIP limits",
+        "approach": "Agile",
+        "difficulty": "Medium",
+        "decisionRule": "Use WIP data and limits to make cumulative flow information useful.",
+        "chapterId": "pmbok-ch06-schedule-management",
+        "sourceSet": "pmp-agile-core-50",
+        "sourceQuestionNumber": 47,
+        "text": "An agile team wants to use a cumulative flow diagram to communicate predictable delivery to stakeholders. What data is needed to use the diagram effectively?",
+        "choices": [
+          "The number of work items in development",
+          "The number of annual steps used on the Kanban board",
+          "The number of sprints required by the development team",
+          "Work-in-progress limits on the team's Kanban system"
+        ],
+        "correct": 3,
+        "explanation": "A cumulative flow diagram is most useful when flow and WIP are visible. WIP limits help the team understand queue size, bottlenecks, cycle time, and delivery predictability."
+      },
+      {
+        "tag": "Sprint Review",
+        "domain": "People",
+        "topic": "Stakeholder feedback",
+        "approach": "Agile",
+        "difficulty": "Medium",
+        "decisionRule": "Use sprint reviews to demonstrate the increment and gather feedback.",
+        "chapterId": "pmbok-ch13-stakeholder-management",
+        "sourceSet": "pmp-agile-core-50",
+        "sourceQuestionNumber": 48,
+        "text": "Why is the iteration review important in agile development?",
+        "choices": [
+          "The Scrum Master reviews progress and gives corrective-action direction",
+          "The team demonstrates the working product and asks for feedback",
+          "Customers and stakeholders evaluate team member performance and give feedback to the manager",
+          "Team members reflect on the sprint process and take corrective action"
+        ],
+        "correct": 1,
+        "explanation": "The sprint or iteration review is used to inspect the product increment with stakeholders and gather feedback. Process improvement belongs mainly in the retrospective."
+      },
+      {
+        "tag": "Planning Poker",
+        "domain": "Process",
+        "topic": "Wideband Delphi",
+        "approach": "Agile",
+        "difficulty": "Medium",
+        "decisionRule": "Use Wideband Delphi or planning poker for team-based estimation and discussion.",
+        "chapterId": "pmbok-ch06-schedule-management",
+        "sourceSet": "pmp-agile-core-50",
+        "sourceQuestionNumber": 49,
+        "text": "Which statement best describes Wideband Delphi estimation, such as planning poker?",
+        "choices": [
+          "Team members independently estimate a story, discuss their reasoning, and work toward agreement",
+          "The team analyzes prior performance to determine actual duration for similar stories",
+          "Team members assign similar task sizes and base story points on triangular estimating",
+          "Team members give optimistic and pessimistic estimates and average them as story points"
+        ],
+        "correct": 0,
+        "explanation": "Wideband Delphi and planning poker use independent estimates followed by discussion, especially around high and low estimates, until the team reaches an acceptable level of agreement."
+      },
+      {
+        "tag": "Product Value",
+        "domain": "Business Environment",
+        "topic": "Business value ownership",
+        "approach": "Agile",
+        "difficulty": "Medium",
+        "decisionRule": "The Product Owner defines and orders business value for product features.",
+        "chapterId": "pmbok-ch04-integration-management",
+        "sourceSet": "pmp-agile-core-50",
+        "sourceQuestionNumber": 50,
+        "text": "Who is responsible for defining the business value of each feature?",
+        "choices": [
+          "Product Owner",
+          "Steering committee",
+          "Scrum Master",
+          "Development team"
+        ],
+        "correct": 0,
+        "explanation": "The Product Owner is accountable for maximizing product value and ordering the product backlog. The Scrum Master facilitates the process, and the team delivers the work, but the Product Owner owns value decisions."
+      },
+      {
+        "tag": "Define Scope",
+        "topic": "Project scope statement and boundaries",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Use the project scope statement to define project boundaries, deliverables, exclusions, assumptions, and constraints.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 1,
+        "text": "Which of the following baselines can be used to assess whether the requested changes or additional work are included within the project boundary?",
+        "choices": [
+          "Project management plan",
+          "Project scope statement",
+          "scope management plan",
+          "WBS dictionary"
+        ],
+        "correct": 1,
+        "explanation": "Correct answer: B. The project boundary normally identifies what is included in the project and clearly indicates what is not included in the project where the stakeholder may assume that a particular product, service or outcome will be part of the project. The project boundary is described as part of a detailed project scope statement."
+      },
+      {
+        "tag": "Define Scope",
+        "topic": "Project scope statement and boundaries",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Use the project scope statement to define project boundaries, deliverables, exclusions, assumptions, and constraints.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 2,
+        "text": "During the execution phase of the project, you realized the subcontractors are working with incomplete and different scope statements. As the project manager, what should you do FIRST?",
+        "choices": [
+          "Check the work completed against the correct scope statements",
+          "Review the scope of work with the stakeholders",
+          "Document the inconsistencies to management, calculating the cost of non-conformance",
+          "Stops all activities until the scope of the work is complete"
+        ],
+        "correct": 1,
+        "explanation": "Correct answer: B. First, there was a need for a consensus among stakeholders on the scope of the project."
+      },
+      {
+        "tag": "Create WBS",
+        "topic": "WBS and decomposition",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 3,
+        "text": "Here's what's wrong with decomposition.?",
+        "choices": [
+          "Workbags are the bottom of the work breakdown structure",
+          "Disaggregated to work carried out for the submission of the required deliverables",
+          "The work breakdown structure is a hierarchy of deliverables-oriented work",
+          "\"Work\" in the \"work breakdown structure\" refers to the effort to complete the work itself (this is active)"
+        ],
+        "correct": 3,
+        "explanation": "Correct answer: D. See PMBOK Guide (version 4), chap. 5, sect. 5.3 foreword: In the term “work breakdown structure”, “work” refers to results achieved through effort, such as work products or deliverables, rather than “work” itself."
+      },
+      {
+        "tag": "Define Scope",
+        "topic": "Project scope statement and boundaries",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Use the project scope statement to define project boundaries, deliverables, exclusions, assumptions, and constraints.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 4,
+        "text": "Which of the following statements on product and project scopes is correct? ( )?",
+        "choices": [
+          "Project scope services to product range",
+          "Changes in the scope of the project necessarily result in changes in the range of products",
+          "Changes in product ranges are bound to result in changes in project scopes",
+          "Product range for project encirclement"
+        ],
+        "correct": 0,
+        "explanation": "Correct answer: A. A. Correct answers. Once product ranges have been clarified, the work required to submit the product can be identified to ensure submission of the required product. It is not inevitable that changes will occur, for example, by adding a supplementary project work that may have no impact on the functioning of the product. C. Change is not inevitable, although it is likely to occur. That's not logical. Tests and answer techniques: Project scope and product range."
+      },
+      {
+        "tag": "Create WBS",
+        "topic": "WBS and decomposition",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 5,
+        "text": "You're the project manager of a major subcontractor. The General Contractor has asked you to manage it in a specific and detailed manner. Your first step is...?",
+        "choices": [
+          "Follow the work breakdown structure developed by the general contractor for the project and utilize the work identified in your proposal work package",
+          "To develop a sub-project work breakdown structure for your work package",
+          "Establishment of a coding structure similar to that used by the general contractor to facilitate access to the generic project management information system",
+          "Development of a work breakdown structure dictionary to illustrate specific staffing allocations"
+        ],
+        "correct": 1,
+        "explanation": "Correct answer: B. The development of a sub-project break-down structure for the work packages that your company is responsible for is the lowest level of the work break-up structure. The sub-project work breakdown structure breaks down work packages into more detailed elements. When the project manager assigns a range of jobs to another organization, the sub-project work break-down structure is usually used, and the project manager of another organization must plan and manage the range of jobs in a more detailed manner."
+      },
+      {
+        "tag": "Create WBS",
+        "topic": "WBS and decomposition",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 6,
+        "text": "Which of the following documents describes in detail the deliverables of the project and the work that must be done to present them?",
+        "choices": [
+          "Project management plan",
+          "project charter",
+          "work breakdown structure",
+          "Project scope statement"
+        ],
+        "correct": 3,
+        "explanation": "Correct answer: D. Analysis: In the output of the defined scope, the description of the scope of the project is important, and the candidates should have the definition, role and content of the description of the scope of the project (see PMBOK (version 4), chapter 5, section 5.2.3.1, the description of the scope of the project). 1) project scope statement: A detailed description of the deliverables of the project, as well as the work to be undertaken in order to submit these deliverables 2) The preparation of a detailed project scope statement is essential to the success of the project. Impact 1: Demon Engineering o role 2: to enable the project team to undertake more detailed planning (WBS, cost, progress and quality planning). ? Definition ranges ahead of cost, progress, quality, risk planning, followed by project scope statements for many process inputs. ? You have to clarify the scope of the project, develop a detailed description of the scope of the project and write it down! Role 3: To guide the work of the project team as a basis for future project decision-making. Impact 4: Provide a baseline for evaluating whether the change request or additional work exceeds the project boundary (Project's Boundaries). See which document makes it clear whether the work requested by the client is beyond the scope (project boundary) — the scope statement. Role 5: Better definition of scope prevents change in scope. ? The more carefully the scope is defined, the less likely it is to be changed. ? In defining the scope, the needs and expectations of all stakeholders are fully taken into account. Note: Changes in circumstances (e.g., project allocations reduced) will also affect the scope of the project, resulting in a revision of the scope of the project. The idea of scope management is how much, how little, and how much to prevent spread and gold plating.) The detailed project scope statement includes the following: ? ? product scope description (Procedition Scope Defense o ? product acceptance standard (Procedition Access Crimea o ? project deliverables o ? project exclusions o ? project constraints o ? project assumptions (Project Projects Projects Projects o ) : In order to facilitate the management of the expectations of stakeholders, the item scope statement clearly indicates which tasks fall outside the scope of the project. This is the exclusive responsibility of the project. Note 2: In {PMBOK(version 3) the project scope statement includes the project objective, but in Release 4, the project scope."
+      },
+      {
+        "tag": "Collect Requirements",
+        "topic": "Requirements documentation and traceability",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Elicit, document, and trace stakeholder requirements before defining scope or building the WBS.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 7,
+        "text": "What is the process for the project team to learn about the needs of the faculty by enabling the stakeholders to fill out the questionnaire?",
+        "choices": [
+          "Collect Requirements",
+          "Define Scope",
+          "Validate Scope",
+          "Control Scope"
+        ],
+        "correct": 0,
+        "explanation": "Correct answer: A. See the preamble to chapter 5, section 5.1, of the PMBOK Guide (version 4): Collect Requirements is the process of defining and documenting the needs of stakeholders in order to achieve project objectives."
+      },
+      {
+        "tag": "Control Scope",
+        "topic": "Scope baseline and change control",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Compare work against the scope baseline, analyze variance, and route changes through integrated change control.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 8,
+        "text": "Here's a mistake about the change request:?",
+        "choices": [
+          "Change requests need to be reviewed and processed through the implementation of the overall change control process",
+          "A range performance analysis may result in a change request",
+          "Change requests include changes to scope and other baselines",
+          "Requests for change do not include precautionary measures"
+        ],
+        "correct": 3,
+        "explanation": "Correct answer: D. See chapter 5, section 5.5.3.3 of the PMBOK Guide (version 4): A request for change may include preventive measures, corrective measures or remedy for defects."
+      },
+      {
+        "tag": "Collect Requirements",
+        "topic": "Requirements documentation and traceability",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Elicit, document, and trace stakeholder requirements before defining scope or building the WBS.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 9,
+        "text": "What file is directly exported from collection requirement to control?",
+        "choices": [
+          "project charter",
+          "Request File",
+          "Demand files, requirements traceability matrix",
+          "Project scope statement"
+        ],
+        "correct": 2,
+        "explanation": "Correct answer: C. The best answer is Demand files, requirements traceability matrix, based on the PMP scope-management logic tested in this question."
+      },
+      {
+        "tag": "Create WBS",
+        "topic": "WBS and decomposition",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 10,
+        "text": "The work breakdown structure can BEST be thought of as an effective aid for____communications.",
+        "choices": [
+          "Team",
+          "Project Manager",
+          "Customer",
+          "Stakeholder"
+        ],
+        "correct": 3,
+        "explanation": "Correct answer: D. The best answer is Stakeholder, based on the PMP scope-management logic tested in this question."
+      },
+      {
+        "tag": "Create WBS",
+        "topic": "WBS and decomposition",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 11,
+        "text": "You are taking over a project to develop software for a major hospital chain. After understanding the project requirements, you feel that they should have selected a different technology for this work. Ideally this approach should have been considered in which process?",
+        "choices": [
+          "Creating WBS",
+          "Activity Definition",
+          "Develop Project Management Plan",
+          "Define Scope"
+        ],
+        "correct": 3,
+        "explanation": "Correct answer: D. This tool is a tool for defining the scope process. Reference: PMBOK2008 P114."
+      },
+      {
+        "tag": "Scope Management",
+        "topic": "PMP scope-management scenario",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 12,
+        "text": "As an effective output of the start-up process, all assumptions must be clear or defined before the project is implemented?",
+        "choices": [
+          "Constraints",
+          "Risk",
+          "Outcome",
+          "Problem"
+        ],
+        "correct": 1,
+        "explanation": "Correct answer: B. Assumptions usually involve a certain level of risk."
+      },
+      {
+        "tag": "Create WBS",
+        "topic": "WBS and decomposition",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 13,
+        "text": "Which statement best describes the work breakdown structure (WBS)?",
+        "choices": [
+          "The WBS is a hierarchical decomposition of work results and deliverables",
+          "The WBS is a hierarchical decomposition of the effort itself",
+          "The WBS is a hierarchical decomposition of the project product only",
+          "The WBS is a hierarchical decomposition of project activities"
+        ],
+        "correct": 0,
+        "explanation": "Correct answer: A. In the WBS, work means the work products or deliverables produced by effort, not the effort itself. A WBS is deliverable-oriented and should not be a simple activity list."
+      },
+      {
+        "tag": "Scope Management",
+        "topic": "PMP scope-management scenario",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 14,
+        "text": "Maintenance is critical to the project and?",
+        "choices": [
+          "Work to be performed at the end of the project",
+          "There is a separate stage in the life cycle of the information systems project because most of the life-cycle costs of 60-70 per cent of the computer system are from maintenance",
+          "Not as part of the life cycle of the project",
+          "Always considered as a separate project"
+        ],
+        "correct": 2,
+        "explanation": "Correct answer: C. The best answer is Not as part of the life cycle of the project, based on the PMP scope-management logic tested in this question."
+      },
+      {
+        "tag": "Create WBS",
+        "topic": "WBS and decomposition",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 15,
+        "text": "In which process must project needs be determined?",
+        "choices": [
+          "Project audit",
+          "Range control",
+          "Create WBS",
+          "Collect Requirements"
+        ],
+        "correct": 3,
+        "explanation": "Correct answer: D. PMBOK2008 P105。."
+      },
+      {
+        "tag": "Scope Management",
+        "topic": "PMP scope-management scenario",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 16,
+        "text": "Which of the following tools and techniques are not defined?",
+        "choices": [
+          "Expert judgement",
+          "Option identification",
+          "Lead seminar",
+          "Focus group meetings"
+        ],
+        "correct": 3,
+        "explanation": "Correct answer: D. See PMBOK (4th ed.), Definition Scope in Chapter 5, Section 5.2.2: Tools and Technologies."
+      },
+      {
+        "tag": "Scope Management",
+        "topic": "PMP scope-management scenario",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 17,
+        "text": "Which of the following are the results of work performance measurements?",
+        "choices": [
+          "Comparison of plans with actual technical performance",
+          "Information on progress of projects",
+          "What deliverables have started",
+          "Some deliverables have been completed"
+        ],
+        "correct": 0,
+        "explanation": "Correct answer: A. See section 5.5.3.1 of chapter 5 of the PMBOK Guide (version 4) for work performance measurement, with attention to distinguishing between job performance information and work performance measurements."
+      },
+      {
+        "tag": "Scope Management",
+        "topic": "PMP scope-management scenario",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 18,
+        "text": "Your company is about to start a new project. Initiating a project normally takes into account financial indicators such as the investment recovery period, return on investment, net present value of investments, etc. Which of the following four projects should you choose? ( )?",
+        "choices": [
+          "Project A, 2 years of construction, with a net present value of $1.1 million",
+          "Project B, 1 year of construction, with a net present value of $1.0 million",
+          "Project C, one-year investment recovery period with a net present value of $0.95 million",
+          "Project D, investment recovery period of 8 months with a net present value of $0.94 million"
+        ],
+        "correct": 0,
+        "explanation": "Correct answer: A. A is the right answer. Any item whose net present value is high is chosen. Since the NPV approach already takes into account time factors, time factors such as construction periods, investment recovery periods are no longer considered separately. Tests and answer techniques: Financial indicators for project selection."
+      },
+      {
+        "tag": "Project Charter",
+        "topic": "Charter and early planning inputs",
+        "chapterId": "pmbok-ch04-integration-management",
+        "domain": "Process",
+        "decisionRule": "Use the project charter and stakeholder register as key inputs before requirements and scope planning.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 19,
+        "text": "A project manager has just been assigned to a new project and has been given the project charter. The FIRST thing the project manager must do is:",
+        "choices": [
+          "Create a project scope statement",
+          "Confirm that all the stakeholders have had input into the scope",
+          "Analyze project risk",
+          "Begin work on a project management plan"
+        ],
+        "correct": 1,
+        "explanation": "Correct answer: B. Option B equals the identification of the dryer."
+      },
+      {
+        "tag": "Validate Scope",
+        "topic": "Formal acceptance of deliverables",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Validate completed deliverables with the customer or appropriate stakeholders after quality control.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 20,
+        "text": "Verify Scope the process of obtaining stakeholder's formal acceptance of the completed project scope and associated deliverables. In this context, which statement related to Verify Scope correct?",
+        "choices": [
+          "Verify Scope similar to Quality Control",
+          "Quality",
+          "Ontrol is generally pertormed before Validate Scope, but these two processes may also be",
+          "One in parallel. C.Verify Scopeindicates the end of a project. D.Verify Scope the final sign-off from the sponsor and customer"
+        ],
+        "correct": 1,
+        "explanation": "Correct answer: B. Validate Scope and quality control are different; Validate Scope is the process by which the results are endorsed by the client or by the stakeholder and the project is closed. Reference: PMBOK2008 P123."
+      },
+      {
+        "tag": "Create WBS",
+        "topic": "WBS and decomposition",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 21,
+        "text": "This tool and technology should be used in developing the work breakdown structure. In decomposition, the first layer of the work breakdown structure can be broken down into all except ().?",
+        "choices": [
+          "Phases of the project life cycle",
+          "Key deliverables",
+          "Sub-projects",
+          "Project activities"
+        ],
+        "correct": 3,
+        "explanation": "Correct answer: D. The first tier of the break-down structure could be the project phases. The first tier of the work breakdown structure could be the main deliverables. C. The first tier of the break-down structure could be a sub-project (e.g. work to be outsourced). D. Positive answer. There are no project activities in the work breakdown structure. Disaggregating work packages into activities is the process of defining activities (time management areas of knowledge). See: Guide, p. 118. Tests and answer techniques: Job work breakdown structure. Note: The top layer of the work breakdown structure is the zero."
+      },
+      {
+        "tag": "Collect Requirements",
+        "topic": "Requirements documentation and traceability",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Elicit, document, and trace stakeholder requirements before defining scope or building the WBS.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 22,
+        "text": "What are the characteristics and functions of the product?",
+        "choices": [
+          "Product range",
+          "Project scope",
+          "Scope baseline",
+          "Neither"
+        ],
+        "correct": 0,
+        "explanation": "Correct answer: A. In the project environment, the term scope has two meanings (see chapter 5, first part, of the PMBOK Guide (version 4): ?product scope. Characteristics and functions of a product, service or outcome. ♪ Project Scope. Work that must be done to deliver a product, service or result with specified characteristics and functions. Project scope is measured against the project management plan and product range is measured against product requirement. The relationship between product and project scope is that, in order for project results to meet the requirements of the product scope, project work needs to be made to meet the requirements of the project scope. The basis for defining the scope of the project is product scope. So the answer is A."
+      },
+      {
+        "tag": "Validate Scope",
+        "topic": "Formal acceptance of deliverables",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Validate completed deliverables with the customer or appropriate stakeholders after quality control.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 23,
+        "text": "What is the process of reviewing deliverables to ensure satisfaction and formal acceptance?",
+        "choices": [
+          "Control Scope",
+          "Quality control",
+          "Change control",
+          "Validate Scope"
+        ],
+        "correct": 3,
+        "explanation": "Correct answer: D. See PMBOK (version 4), chap. 5, sect. 5.4, foreword: Verification is the process of formal acceptance of deliverables that have been completed. The scope of verification includes reviewing deliverables with clients or sponsors to ensure that deliverables are fully completed and obtain formal acceptances from clients or sponsors."
+      },
+      {
+        "tag": "Collect Requirements",
+        "topic": "Requirements documentation and traceability",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Elicit, document, and trace stakeholder requirements before defining scope or building the WBS.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 24,
+        "text": "The Control Scope process is intended ().?",
+        "choices": [
+          "Oversight of project scope status, change of management scope baseline",
+          "Make sure all the work is done, and on that basis, do as much as you can",
+          "Possible impact of changes in monitoring scope on project progress, cost and quality",
+          "Ensure that only authorized persons are eligible to submit requests for scope changes"
+        ],
+        "correct": 0,
+        "explanation": "Correct answer: A. A. Correct answers. The control scope is designed to compare the actual situation of the scope with the planned requirements, to detect and analyse deviations and to request necessary changes. The ultimate aim is to effectively manage the scope benchmark changes. There's a logical error in the last half of this statement. C. This is part of the overall change control process. Any person may submit a request for a change of scope. See: PMBOK Guide, p. 125. Tests and answer techniques: Control Scope process."
+      },
+      {
+        "tag": "Scope Management",
+        "topic": "PMP scope-management scenario",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 25,
+        "text": "Both departments often clash over conflicting objectives in order to identify conflicting needs and objectives. The project manager should?",
+        "choices": [
+          "Standard quality control process implemented for all sectors",
+          "Identification of standard conflict resolution plans to be implemented throughout the project period",
+          "Executing of changes",
+          "Understanding the interests and priorities of stakeholders, recording needs in writing and issuing notifications"
+        ],
+        "correct": 3,
+        "explanation": "Correct answer: D. See PMBOK Guide (version 4), chap. 5, sect. 5.1 foreword: Collection of requirement is the process of defining and documenting the needs of the stakeholders in order to achieve the project objectives. The solution to the targeted conflict is to identify the needs of the constituents."
+      },
+      {
+        "tag": "Project Charter",
+        "topic": "Charter and early planning inputs",
+        "chapterId": "pmbok-ch04-integration-management",
+        "domain": "Process",
+        "decisionRule": "Use the project charter and stakeholder register as key inputs before requirements and scope planning.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 26,
+        "text": "Which of the following inputs into the requirement collection process? ( )?",
+        "choices": [
+          "Project statement of work",
+          "scope management plan",
+          "Register of stakeholders",
+          "Managerial strategy"
+        ],
+        "correct": 2,
+        "explanation": "Correct answer: C. A. This is an input into the project charter development process. Despite the fact that the project scope management plan is to be used, this input did not appear in the PMBOK guidelines. C. Correct answer. Collect Requirements refers to collecting the needs of the dryers, who need to be consulted in the register. D. The collection of requirement process is primarily about understanding the needs of the stakeholders, who are not yet required to manage them. See: PMBOK Guide, p. 105. Tests and answer techniques: input into the process of Collect Requirements."
+      },
+      {
+        "tag": "Define Scope",
+        "topic": "Project scope statement and boundaries",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Use the project scope statement to define project boundaries, deliverables, exclusions, assumptions, and constraints.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 27,
+        "text": "Project deliverables include the product, service or outcome of the project and the output of subordinate results. This subsidiary result should be recorded as?",
+        "choices": [
+          "Needs management plan",
+          "Scope management plan",
+          "Project scope statement",
+          "Project acceptance standards"
+        ],
+        "correct": 2,
+        "explanation": "Correct answer: C. The project scope statement details deliverables and the work required to create them. Results are also seen as deliverables and included in project scope statements. It includes matters such as project management reports and documents. The deliverables in the project scope statement could be described either in summary or in detail."
+      },
+      {
+        "tag": "Scope Management",
+        "topic": "PMP scope-management scenario",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 28,
+        "text": "At what stage of the project is the least costly change to take place?",
+        "choices": [
+          "Starting phase",
+          "Organization and preparation phase",
+          "Executing phase",
+          "Closure phase"
+        ],
+        "correct": 0,
+        "explanation": "Correct answer: A. See section 2.2.1 of chapter 2 of the PMBOK Guide (version 4) on knowledge of the characteristics of the life cycle of the project: The cost of change and correction of errors is usually significantly higher when the project is nearing completion."
+      },
+      {
+        "tag": "Create WBS",
+        "topic": "WBS and decomposition",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 29,
+        "text": "A project manager has just been assigned to a new project and has received a project scope statement. What should the project manager do first?",
+        "choices": [
+          "Create the WBS and WBS dictionary and establish the scope baseline",
+          "Confirm that all stakeholder requirements are included in the project scope",
+          "Establish the project management team",
+          "Develop the project management plan"
+        ],
+        "correct": 1,
+        "explanation": "Correct answer: B. Because the project manager did not lead the creation of the scope statement, the first step is to confirm its quality and make sure stakeholder requirements have been considered before creating the WBS."
+      },
+      {
+        "tag": "Collect Requirements",
+        "topic": "Requirements documentation and traceability",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Elicit, document, and trace stakeholder requirements before defining scope or building the WBS.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 30,
+        "text": "A parking lot can accommodate 1,000 vehicles. The owner of the garage has just initiated a retrofit project to upgrade the vehicle access management system and the parking guide system. In order to ensure the successful implementation of projects, detailed requirements must be documented. As project manager, what should you do? ( )?",
+        "choices": [
+          "Encourage early involvement of project managers",
+          "Project objectives based on needs",
+          "Real-time monitoring of changes in requirement",
+          "Regular project progress review meetings"
+        ],
+        "correct": 0,
+        "explanation": "Correct answer: A. A. Correct answers. An important input into the process of Collect Requirements is the register of stakeholders. Only early involvement of those involved can effectively Collect Requirements. The objectives of the project are defined in the project charter, while the process of developing the project charter precedes the collection of needs. C. The concept does not address requirement change management. D. It is irrelevant. See: PMBOK Guide, p. 106. Tests and answer techniques: input into the process of Collect Requirements. Although B makes sense, A is closer to what is contained in the PMBOK Guide. As the point of knowledge examined was input into the process of Collect Requirements, option A was selected. For some topics, it's important to judge the points of knowledge."
+      },
+      {
+        "tag": "Collect Requirements",
+        "topic": "Requirements documentation and traceability",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Elicit, document, and trace stakeholder requirements before defining scope or building the WBS.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 31,
+        "text": "As an expert, Wang was invited to respond to the questionnaire, and his reply could only be given to the moderator to remain anonymous.?",
+        "choices": [
+          "Brainstorms",
+          "Delphi technology",
+          "Compassion",
+          "Nominal group technology"
+        ],
+        "correct": 1,
+        "explanation": "Correct answer: B. See chapter 5.1.2.4 of the P MlBOK Guide (version 4): Delphi technology is answered by a group of selected experts who will provide feedback on the results of each round of requirement collection. The expert's answer can only be given to the moderator to keep it anonymous."
+      },
+      {
+        "tag": "Create WBS",
+        "topic": "WBS and decomposition",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 32,
+        "text": "Control accounts used mainly for?",
+        "choices": [
+          "Allocation of resources",
+          "General",
+          "Elements in work breakdown structure",
+          "Decomposition"
+        ],
+        "correct": 2,
+        "explanation": "Correct answer: C. See chapter 5.5.3.3.1 of PMBOK (4th ed.): Control accounts are placed at the specified management nodes in the work breakdown structure."
+      },
+      {
+        "tag": "Create WBS",
+        "topic": "WBS and decomposition",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 33,
+        "text": "Which of the following items relates the work packages to organizational units and describes the project organization?",
+        "choices": [
+          "work breakdown structure",
+          "Responsibilities distribution matrix",
+          "List of materials",
+          "Organization breakdown structure"
+        ],
+        "correct": 3,
+        "explanation": "Correct answer: D. See the glossary of terms in the PMBOK Guide (version 4): Organizational work breakdown structure is a hierarchical description of the project organization in order to link the work package to the corresponding implementing department."
+      },
+      {
+        "tag": "Control Scope",
+        "topic": "Scope baseline and change control",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Compare work against the scope baseline, analyze variance, and route changes through integrated change control.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 34,
+        "text": "Which statement is false? Progressive elaboration of project scope...",
+        "choices": [
+          "is a characteristic of projects that accompanies the concepts of temporary and unique",
+          "means developing in steps. It not should be",
+          "Onfused with scope creep. C. ...signals a weak spot in the scope",
+          "Efinition process, caused by incomplete contracts and specifications. D.. ...when properly managed, integrates elaboration of project and deliverable specifications"
+        ],
+        "correct": 2,
+        "explanation": "Correct answer: C. PMBOK2008 P112。."
+      },
+      {
+        "tag": "Collect Requirements",
+        "topic": "Requirements documentation and traceability",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Elicit, document, and trace stakeholder requirements before defining scope or building the WBS.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 35,
+        "text": "Which of the following techniques is the BEST way to determine project objectives？",
+        "choices": [
+          "Delphi",
+          "Earned value",
+          "Expert interviews",
+          "Pareto"
+        ],
+        "correct": 0,
+        "explanation": "Correct answer: A. Option A is a method that is judged by specific experts and can be used during the project start-up process to obtain the expectations of the project manager regarding the project objectives."
+      },
+      {
+        "tag": "Control Scope",
+        "topic": "Scope baseline and change control",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Compare work against the scope baseline, analyze variance, and route changes through integrated change control.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 36,
+        "text": "Which of the following processes will be directly input into the Control Scope?",
+        "choices": [
+          "Collect Requirements",
+          "Validate Scope",
+          "Reporting on performance",
+          "Development of project charters"
+        ],
+        "correct": 0,
+        "explanation": "Correct answer: A. The best answer is Collect Requirements, based on the PMP scope-management logic tested in this question."
+      },
+      {
+        "tag": "Create WBS",
+        "topic": "WBS and decomposition",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 37,
+        "text": "Your have prepared the scope statement and the WBS for your project. You also have an approved project plan. Your project is now under way, but you recognize that, given the nature of project work, scope change is inevitable. You also are aware of the danger of scope creep, having suffered the consequences of it recently. To avoid a similar experience, you meet with your team and decide to establish a project scope change control system. This is –",
+        "choices": [
+          "A collection of formal, documented procedures to define the steps",
+          "Y which official project documents may be",
+          "Hanged B. A",
+          "Ocumented process used to apply technical and administrative direction and surveillance to identify and document functional and physical characteristics of items, record and report change, control change, and audit the items and system to verify conformance to requirements C. A set of procedures by which project scope may be changed, including the paperwork, tracking systems, and approval levels necessary for authorizing change D. Mandatory for use on projects so that the scope management plan cannot be changed without prior review and sign-off"
+        ],
+        "correct": 2,
+        "explanation": "Correct answer: C. Explanation: Option C is the definition of a range change control procedure. Reference: PMBOK2004 CH P104 5.5.2.1."
+      },
+      {
+        "tag": "Scope Management",
+        "topic": "PMP scope-management scenario",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 38,
+        "text": "Demand analysis is often difficult in R & D projects. Clients may not really know what they want, and their ideas may change over time and over time. Faced with greater uncertainty about the needs of clients, what would be the preferred approach for project managers of R & D projects to Collect Requirements? ( )?",
+        "choices": [
+          "Brainstorms",
+          "Observation",
+          "Prototype",
+          "Nominal group technology"
+        ],
+        "correct": 2,
+        "explanation": "Correct answer: C. A. Although the Brainstorm method is used as a group innovative technology for Collect Requirements processes, it is irrelevant. B. While observation is a tool for Collect Requirements, it is irrelevant. C. Correct answer. Prototypes are used to create a functional prototype of a product before it is actually manufactured and to obtain feedback on the requirement in order to gradually identify the needs of the client. D. While notional group technology is used as a group innovative technology for Collect Requirements, it is irrelevant. See pp. 108-109 of the PMBOK Guide. Tests and answer techniques: Tools and techniques for Collect Requirements: Prototype."
+      },
+      {
+        "tag": "Define Scope",
+        "topic": "Project scope statement and boundaries",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Use the project scope statement to define project boundaries, deliverables, exclusions, assumptions, and constraints.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 39,
+        "text": "A complete and thorough product description is critical to the development of a concise scope statement. This description should include all but which of the following:",
+        "choices": [
+          "Detailed enough to support later project planning",
+          "Detailed budget and functionality information",
+          "Relationship between the product/service being created and the business need",
+          "Strategic alignment with corporate objectives"
+        ],
+        "correct": 1,
+        "explanation": "Correct answer: B. Explanation: The subject is the content of the project statement of work: business needs, strategic plan, product scope description. Reference: PMBOK2008 P75."
+      },
+      {
+        "tag": "Collect Requirements",
+        "topic": "Requirements documentation and traceability",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Elicit, document, and trace stakeholder requirements before defining scope or building the WBS.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 40,
+        "text": "What is the process for the project team to learn about the needs of the faculty by enabling the stakeholders to fill out the questionnaire?",
+        "choices": [
+          "Collect Requirements",
+          "Define Scope",
+          "Validate Scope",
+          "Control Scope"
+        ],
+        "correct": 0,
+        "explanation": "Correct answer: A. See the preamble to chapter 5, section 5.1, of the PMBOK Guide (version 4): Collect Requirements is the process of defining and documenting the needs of stakeholders in order to achieve project objectives."
+      },
+      {
+        "tag": "Scope Management",
+        "topic": "PMP scope-management scenario",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 41,
+        "text": "Which statement describes best why you should document assumptions?",
+        "choices": [
+          "Assumptions might prove to",
+          "E wrong. Knowing which assumptions were incorrect allows baseline adjustments in",
+          "Ase of project crisis. B. Assumption analysis is a valuable tool and technique of Risk Identification",
+          "Uring documentation review in a risk identification workshop. C.Assumptions limit the project management team s options for decision making because they can not be controlled by the team. D. In case of schedule or budget overruns, the documentation of assumptions supports a clear assignment of responsibility"
+        ],
+        "correct": 1,
+        "explanation": "Correct answer: B. Hypothetical analysis is a tool for the risk identification process; option C is about constraints; option D is about ex post facto responsibilities, not good. Reference: PMBOK2008 P419."
+      },
+      {
+        "tag": "Scope Management",
+        "topic": "PMP scope-management scenario",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 42,
+        "text": "Systems engineering, value engineering, value analysis and system analysis are frequently used ().?",
+        "choices": [
+          "Option identification",
+          "Identification of deliverables",
+          "Analysis of project constraints",
+          "Product analysis"
+        ],
+        "correct": 3,
+        "explanation": "Correct answer: D. A. Not related to the subject matter, the option is to identify different implementation options for the project, i.e. more than two options available for the submission of the project product. It is irrelevant and does not have the term “deliverable identification”. C. Systems General Engineering, Value Engineering etc. are techniques for product analysis and are not relevant to project constraint analysis. D. Correct answer. The purpose of the analysis is to clarify the scope of the product and the techniques for analysing the product, such as system engineering, value engineering, value analysis, etc. See: PMBOK Guide, p. 114. Tests and answer techniques: Product analysis techniques. Value engineering, value analysis, etc. are technologies related to the range of products, and the best is the pursuit of value for money. Only D is directly related to the range of products."
+      },
+      {
+        "tag": "Scope Management",
+        "topic": "PMP scope-management scenario",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 43,
+        "text": "The time required to complete a project is often called a project.?",
+        "choices": [
+          "Executing time",
+          "Life cycle",
+          "Operation Time",
+          "Key Path"
+        ],
+        "correct": 1,
+        "explanation": "Correct answer: B. The best answer is Life cycle, based on the PMP scope-management logic tested in this question."
+      },
+      {
+        "tag": "Create WBS",
+        "topic": "WBS and decomposition",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 44,
+        "text": "The definition of activities is the process of identifying specific actions to be taken in order to complete .?",
+        "choices": [
+          "Project deliverables",
+          "work breakdown structure",
+          "Work Pack",
+          "WBS Dictionary"
+        ],
+        "correct": 0,
+        "explanation": "Correct answer: A. The best answer is Project deliverables, based on the PMP scope-management logic tested in this question."
+      },
+      {
+        "tag": "Scope Management",
+        "topic": "PMP scope-management scenario",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 45,
+        "text": "Zhang, the project manager for a project, was confronted with the fact that the performance of the product did not meet the expected quality standards but was accepted by the client, indicating what activities had been carried out?",
+        "choices": [
+          "Offset Analysis",
+          "Return to work",
+          "Quality audit",
+          "Validate Scope"
+        ],
+        "correct": 3,
+        "explanation": "Correct answer: D. See PMBOK Guide (version 4), chap. 5, sect. 5.4, foreword: Verification is the process of formal acceptance of deliverables completed by the project. Client acceptance implies verification coverage."
+      },
+      {
+        "tag": "Define Scope",
+        "topic": "Project scope statement and boundaries",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Use the project scope statement to define project boundaries, deliverables, exclusions, assumptions, and constraints.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 46,
+        "text": "Option identification is usually useful in defining project scope. One of the technologies available is?",
+        "choices": [
+          "Sensitivity analysis",
+          "Decision Tree",
+          "Mathematical Model",
+          "Horizontal thinking"
+        ],
+        "correct": 3,
+        "explanation": "Correct answer: D. Horizontal thinking, brainstorms and twinning are examples of generic management techniques that can be used to generate different approaches to project implementation and implementation."
+      },
+      {
+        "tag": "Scope Management",
+        "topic": "PMP scope-management scenario",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 47,
+        "text": "As a project manager, you are aware that project information can be presented using different kinds of breakdown structures. In this context, all the following statements are correct EXCEPT:",
+        "choices": [
+          "Resource",
+          "Reakdown Structure provides hierarchically organized depiction of resources to be used on the project. B. Organization Breakdown Structure provides a hierarchically organized depiction of the project organization",
+          "Bill of Materials presents a hierarchical tabulation of financial bills and other project financials",
+          "Risk Breakdown Structure is a hierarchically organized depiction of the identified project risks arranged by risk category"
+        ],
+        "correct": 2,
+        "explanation": "Correct answer: C. BOM is a list of elements used to show a product, excluding financial information. The other three options are right. Reference: PMBOK2008 P280 RBS; P220 0BS Resource Disaggregation Structure."
+      },
+      {
+        "tag": "Project Charter",
+        "topic": "Charter and early planning inputs",
+        "chapterId": "pmbok-ch04-integration-management",
+        "domain": "Process",
+        "decisionRule": "Use the project charter and stakeholder register as key inputs before requirements and scope planning.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 48,
+        "text": "Which of the following are not inputs for project initiation?",
+        "choices": [
+          "Description of the product or service",
+          "Organizational strategic plan",
+          "Project selection plan",
+          "project charter"
+        ],
+        "correct": 3,
+        "explanation": "Correct answer: D. The project charter is output."
+      },
+      {
+        "tag": "Scope Management",
+        "topic": "PMP scope-management scenario",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 49,
+        "text": "While there are different tools and technologies available to inform your collection of project needs, the method of supporting progressive detail is:?",
+        "choices": [
+          "Concept/thinking guide",
+          "Compassion",
+          "Prototype",
+          "Joint application design anchor meeting"
+        ],
+        "correct": 2,
+        "explanation": "Correct answer: C. The prototype captures early feedback on requirement by providing a practical model of the product prior to its manufacture. Thereafter, stakeholders can experience this model rather than explore abstract requirement statements. This approach supports progressive detail as it is used in modelling, user experience, feedback generation, and the iterative cycle of prototype amendments."
+      },
+      {
+        "tag": "Create WBS",
+        "topic": "WBS and decomposition",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 50,
+        "text": "Environmental factors include:?",
+        "choices": [
+          "Organizational culture",
+          "Infrastructure",
+          "Political atmosphere and stakeholder risk tolerance",
+          "All the above"
+        ],
+        "correct": 3,
+        "explanation": "Correct answer: D. See chapter 1, section 1.8, of the PMBOK Guide (version 4): enterprise environmental factors (enterprise environmental factors): Any internal or external environmental factors surrounding the project or affecting its success or failure; from any or all of the project participants. Environmental factors can be divided into two main categories, internal and external. Internal (6): Organizationalization, structure and processes, infrastructure; current human resources situation, personnel management system, corporate work authorization system, communication channels available in the organization. External (6): Government or industry standards, market conditions, political atmosphere, human exposure, business database, project management information system. The answer is therefore D. Relevant knowledge points: see chapter 2, section 2.4.3 of the PMBOK Guide (version 4), organizational process assets: Any or all process-related assets can come from any or all participating organizations and can be used to help the project succeed. Including formal and informal plans, policies, procedures and guidance, complete schedules, risk data and earned value data, and project team members usually have the responsibility to update and supplement the assets of the organizational process as necessary throughout the project. This can be summarized in two main categories. 1) Processes and Procedures: Templates, processes, standards, policies, procedures, including safety and health policies, quality policies and procedures, standard process definitions, work guide manuals, financial control procedures, change control procedures, risk control procedures, work authorization procedures, work breakdown structure templates, risk templates, contract templates, etc. 2) Knowledge sharing: historical information and lessons learned, archives, including project files, financial databases, problem and deficiency management data Library."
+      },
+      {
+        "tag": "Scope Management",
+        "topic": "PMP scope-management scenario",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 51,
+        "text": "You are working on a new drug development project that has the effect of improving human sleep and promoting height growth. New drug products are about to be clinically tested. At that time, product tests were divided into three stages in greater detail, namely three first-stage and four second-stage and five third-stage tests. What is the example of this practice? ( )?",
+        "choices": [
+          "Quality function expansion in product life cycle",
+          "Definition of project activities based on a broken down structure",
+          "Careful risk management",
+          "Progressive detail in the project life cycle"
+        ],
+        "correct": 3,
+        "explanation": "Correct answer: D. The idea is not directly related to the function that the analytical product should have. B. Irrelevance of the title. C. It can be a manifestation of prudent risk management, but this option is less targeted than D. D. Correct answer. Initially, the product testing was an overall phase, then subdivided into three stages. This is in line with the incremental and detailed approach (rolling planning approach). Tests and answer techniques: Progressive fine-tuning of the project, rolling approach to planning."
+      },
+      {
+        "tag": "Scope Management",
+        "topic": "PMP scope-management scenario",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 52,
+        "text": "Here's what's wrong with requirement.?",
+        "choices": [
+          "Demand can be qualitative or quantitative",
+          "Needs need to be endorsed by key stakeholders to be used as a baseline",
+          "Need to be recorded",
+          "Only clear needs can serve as benchmarks"
+        ],
+        "correct": 0,
+        "explanation": "Correct answer: A. The needs in scope management differ from the concept of needs in general and should focus on the following points (see, for example, PMBOK Guide, 4th ed., chap. 5, sect. 5.1, foreword, and sect. 5.1.3.1, requirement paper)."
+      },
+      {
+        "tag": "Scope Management",
+        "topic": "PMP scope-management scenario",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 53,
+        "text": "Which of the following items is not the point where the project and operation intersect with the product life cycle?",
+        "choices": [
+          "At the end of the project",
+          "Developing, upgrading or increasing production of new products Time",
+          "In improving the operation or product development process",
+          "When appointing the operations manager as project manager"
+        ],
+        "correct": 3,
+        "explanation": "Correct answer: D. See chapter 1, section 1.5 of the PMBOK Guide (version 4): Projects and operations can intersect at different points in the life cycle of the product, including the end of the project, improvements in the operation or product development process when new products are developed, the product upgrades or increases production, before the product is out of operation (product life cycle end)."
+      },
+      {
+        "tag": "Define Scope",
+        "topic": "Project scope statement and boundaries",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Use the project scope statement to define project boundaries, deliverables, exclusions, assumptions, and constraints.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 54,
+        "text": "Which of the following baselines can be used to assess whether the requested changes or additional work are included within the project boundary?",
+        "choices": [
+          "Project management plan",
+          "Project scope statement",
+          "scope management plan",
+          "WBS dictionary"
+        ],
+        "correct": 1,
+        "explanation": "Correct answer: B. The project boundary normally identifies what is included in the project and clearly indicates what is not included in the project where the stakeholder may assume that a particular product, service or outcome will be part of the project. The project boundary is described as part of a detailed project scope statement."
+      },
+      {
+        "tag": "Create WBS",
+        "topic": "WBS and decomposition",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 55,
+        "text": "You work in the pharmaceutical industry. Your project involves clinical trials of a drug called Fentastic, which is used to raise high memory and stimulate hair growth. During the implementation of the project, the pilot process of the product was further defined into three phases, four tests in the first phase, five tests in the second phase and six tests in the third phase. This is one of the following jobs.?",
+        "choices": [
+          "Quality extension",
+          "Matching of the break-up structure (WBS) with project activities",
+          "Value analysis",
+          "Step into the description of the product"
+        ],
+        "correct": 3,
+        "explanation": "Correct answer: D. The best answer is Step into the description of the product, based on the PMP scope-management logic tested in this question."
+      },
+      {
+        "tag": "Create WBS",
+        "topic": "WBS and decomposition",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 56,
+        "text": "When you started creating a work breakdown structure for your project, you soon realized that it was too complicated to be done on a single piece of paper. You then started using a work breakdown structure numbering system to",
+        "choices": [
+          "Determine the complexity of the project",
+          "Determine the level at which individual WBS elements are found",
+          "Help in automating the WBS using appropriate software",
+          "Present justification for the project"
+        ],
+        "correct": 1,
+        "explanation": "Correct answer: B. Code of accounts, the code system used for each component of the single identification work breakdown structure, shows intuitively the level of a WBS element. Reference: PMBOK2008 P421."
+      },
+      {
+        "tag": "Create WBS",
+        "topic": "WBS and decomposition",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 57,
+        "text": "What can be produced by the process of creating a work breakdown structure?",
+        "choices": [
+          "Project schedule",
+          "Team outsourcing",
+          "Project completion date",
+          "Risk list"
+        ],
+        "correct": 1,
+        "explanation": "Correct answer: B. The elements in the WBS include all the scope of work of the project, which is not necessarily homemade, and some require outsourcing."
+      },
+      {
+        "tag": "Scope Management",
+        "topic": "PMP scope-management scenario",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 58,
+        "text": "Which of the following knowledge areas will affect scope management?",
+        "choices": [
+          "Integrated management",
+          "Quality management",
+          "Communications management",
+          "Procurement management"
+        ],
+        "correct": 3,
+        "explanation": "Correct answer: D. The best answer is Procurement management, based on the PMP scope-management logic tested in this question."
+      },
+      {
+        "tag": "Validate Scope",
+        "topic": "Formal acceptance of deliverables",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Validate completed deliverables with the customer or appropriate stakeholders after quality control.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 59,
+        "text": "A key feature of the Validate Scope is:?",
+        "choices": [
+          "Improved cost estimates",
+          "Client acceptance of project work",
+          "Improved planned estimates of progress",
+          "Improved project management information systems"
+        ],
+        "correct": 1,
+        "explanation": "Correct answer: B. The scope of verification is to be accepted by the client or sponsor."
+      },
+      {
+        "tag": "Create WBS",
+        "topic": "WBS and decomposition",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 60,
+        "text": "Construction 1.1.0 Excavation 1.1.1 Detection 1.1.2 Digging pit 1.2.0 Preparation of foundation 1.2.1 Framework for construction of work packages in the WBS List?",
+        "choices": [
+          "Construction",
+          "Digging",
+          "Base preparation",
+          "None of them"
+        ],
+        "correct": 3,
+        "explanation": "Correct answer: D. The best answer is None of them, based on the PMP scope-management logic tested in this question."
+      },
+      {
+        "tag": "Create WBS",
+        "topic": "WBS and decomposition",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 61,
+        "text": "A new project manager is being mentored by a more experienced certified project management professional (PMP). The new project manager is finding it difficult to find enough time to manage the project because the product and project scope are being progressively elaborated. The PMP mentions that the basic tools for project management, such as a work breakdown structure, can be used during project executing to assist the project. For which of the following can a work breakdown structure be used?",
+        "choices": [
+          "Communicating with the customer",
+          "Showing calendar dates for each work package",
+          "Showing the functional managers for each team member",
+          "Showing the business need for the project"
+        ],
+        "correct": 0,
+        "explanation": "Correct answer: A. The WBS visually organizes project deliverables and can support communication with customers and stakeholders about what the project includes."
+      },
+      {
+        "tag": "Create WBS",
+        "topic": "WBS and decomposition",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 62,
+        "text": "A large project was broken down into 10 sub-projects, and the project manager collected specific information on all the work packages of the 10 sub-projects, which constituted?",
+        "choices": [
+          "Project scope statement",
+          "Scope baseline",
+          "WBS dictionary",
+          "work breakdown structure"
+        ],
+        "correct": 2,
+        "explanation": "Correct answer: C. See the PMBOK Guide section on the WBS dictionary. The WBS dictionary provides detailed information about each work package, including description, responsible organization, and control account informationtructure is a document produced in the creation of the work breakdown structure and used to support the work breakdown structure. The Dictionary of the work breakdown structure provides a more detailed description of the work decomposition components (including work packages and control accounts)."
+      },
+      {
+        "tag": "Scope Management",
+        "topic": "PMP scope-management scenario",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 63,
+        "text": "You led a team to develop a methodology for project selection and prioritization. The team is considering various management issues, including financial returns, market shares and public awareness. The most important criteria for establishing project selection models are:?",
+        "choices": [
+          "Capacity",
+          "Realistic",
+          "Easy to use",
+          "Cost"
+        ],
+        "correct": 1,
+        "explanation": "Correct answer: B. The model should reflect the objectives of the company and its managers; take into account the availability of the organization's equipment, funds and personnel constraints; incorporate risk factors — the technical risks of performance, cost and time, and the market risk of the customer returning the goods."
+      },
+      {
+        "tag": "Scope Management",
+        "topic": "PMP scope-management scenario",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 64,
+        "text": "While there are different tools and technologies available to inform your collection of project needs, the method of supporting progressive detail is:?",
+        "choices": [
+          "Concept/thinking guide",
+          "Compassion",
+          "Prototype",
+          "Joint application design anchor meeting"
+        ],
+        "correct": 2,
+        "explanation": "Correct answer: C. The prototype captures early feedback on requirement by providing a practical model of the product prior to its manufacture. Thereafter, stakeholders can experience this model rather than explore abstract requirement statements. This approach supports progressive detail as it is used in modelling, user experience, feedback generation, and the iterative cycle of prototype amendments."
+      },
+      {
+        "tag": "Scope Management",
+        "topic": "PMP scope-management scenario",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 65,
+        "text": "One project is an ideal environment for the implementation of targeted management techniques, as?",
+        "choices": [
+          "Project management includes setting organizational objectives",
+          "A matrix management environment is usually used for projects",
+          "The responsibility of the project manager is defined by corporate objectives",
+          "All projects should be goal-oriented"
+        ],
+        "correct": 3,
+        "explanation": "Correct answer: D. The best answer is All projects should be goal-oriented, based on the PMP scope-management logic tested in this question."
+      },
+      {
+        "tag": "Control Scope",
+        "topic": "Scope baseline and change control",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Compare work against the scope baseline, analyze variance, and route changes through integrated change control.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 66,
+        "text": "What is the process of monitoring the scope status of projects and products, changes in managing changes to the scope baseline?",
+        "choices": [
+          "Project quality management",
+          "Define Scope",
+          "Validate Scope",
+          "Control Scope"
+        ],
+        "correct": 3,
+        "explanation": "Correct answer: D. See the preamble to chapter 5.5 of the PMBOK Guide (version 4): Control is the process of monitoring the scope status of projects and products, management scope baseline changes."
+      },
+      {
+        "tag": "Create WBS",
+        "topic": "WBS and decomposition",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 67,
+        "text": "Which of the following items defines the work packages?",
+        "choices": [
+          "work breakdown structure",
+          "project charter",
+          "Scope statement",
+          "schedule"
+        ],
+        "correct": 0,
+        "explanation": "Correct answer: A. See chapter 5, section 5.3.2.1 of the PMBOK Guide (version 4): “work packages are the bottom layer of the work breakdown structure.”."
+      },
+      {
+        "tag": "Scope Management",
+        "topic": "PMP scope-management scenario",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 68,
+        "text": "You are the project manager for the development of a new type of power plant. Your project is making fast progress, and it is getting nearer to the day of product acceptance. Which technique will be most important for product acceptance?",
+        "choices": [
+          "Inspection",
+          "Audit",
+          "Impact analysis",
+          "Team review"
+        ],
+        "correct": 0,
+        "explanation": "Correct answer: A. Inspection is a tool for verifying the scope and the process is used to obtain acceptance of results from stakeholders. Reference: PMBOK2008 P124."
+      },
+      {
+        "tag": "Collect Requirements",
+        "topic": "Requirements documentation and traceability",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Elicit, document, and trace stakeholder requirements before defining scope or building the WBS.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 69,
+        "text": "Which of the following statements is false",
+        "choices": [
+          "If the project is terminated early, the Verify Scope is not necessary",
+          "Quality",
+          "Ontrol is primarily concerned with meeting the quality requirements specified for the",
+          "Eliverables C. Verify Scope primarily concerned with Acceptance of the deliverables D. Quality control is generally performed before Verify Scope"
+        ],
+        "correct": 0,
+        "explanation": "Correct answer: A. “If the project is terminated earlier, the project Validate Scope process shall identify and document the level and extent of completion.” Reference: PMBOK2008 P123."
+      },
+      {
+        "tag": "Project Charter",
+        "topic": "Charter and early planning inputs",
+        "chapterId": "pmbok-ch04-integration-management",
+        "domain": "Process",
+        "decisionRule": "Use the project charter and stakeholder register as key inputs before requirements and scope planning.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 70,
+        "text": "Which of the following processes will not be directly exported from the project scope statement?",
+        "choices": [
+          "Development of project charters",
+          "Development of schedules",
+          "Planning risk management",
+          "Order of activities"
+        ],
+        "correct": 0,
+        "explanation": "Correct answer: A. The best answer is Development of project charters, based on the PMP scope-management logic tested in this question."
+      },
+      {
+        "tag": "Scope Management",
+        "topic": "PMP scope-management scenario",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 71,
+        "text": "The project was going well when all of a sudden there were changes to the project coming from multiple stakeholders. After all the changes were determined, the project manager spent time with all the stakeholders to find out why there were changes and to discover any more. The project work has quieted down when a team member casually mentions to the project manager that the team member added functionality to a product of the project. Do not worry they say, \"I did not impact time, cost or quality!\" What should a project manager do FIRST?",
+        "choices": [
+          "Ask the team member how the need for the functionality was determined",
+          "Hold a meeting to review the team member’s",
+          "Ompleted work. C. Look for other added functionality",
+          "Ask the team member how he knows there is no time, cost or quality impact"
+        ],
+        "correct": 3,
+        "explanation": "Correct answer: D. This is about gold plating, which means \"a small increase in scale, initiated by team members,\" and the project manager needs to avoid it. Closer to it is the spread of scope: uncontrolled changes, usually from customers. Reference: PMBOK2008 P125."
+      },
+      {
+        "tag": "Define Scope",
+        "topic": "Project scope statement and boundaries",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Use the project scope statement to define project boundaries, deliverables, exclusions, assumptions, and constraints.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 72,
+        "text": "In your project, you are in the process of defining the project scope. You will be using all the following tool:",
+        "choices": [
+          "Expert Judgment - to determine the details to",
+          "E included in the scope statement. B. Project Management Methodology - to aid in developing and",
+          "Ontrolling the changes to the preliminary project plan. C. Project Management Information System - to support generation of a preliminary project scope statement",
+          "Earned Value Technique - to measure performance of the project as it moves from project initiation through project closure"
+        ],
+        "correct": 0,
+        "explanation": "Correct answer: A. PMBOK2008 114。."
+      },
+      {
+        "tag": "Define Scope",
+        "topic": "Project scope statement and boundaries",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Use the project scope statement to define project boundaries, deliverables, exclusions, assumptions, and constraints.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 73,
+        "text": "Which of the following statements on product and project scopes is correct? ( )?",
+        "choices": [
+          "Project scope services to product range",
+          "Changes in the scope of the project necessarily result in changes in the range of products",
+          "Changes in product ranges are bound to result in changes in project scopes",
+          "Product range for project encirclement"
+        ],
+        "correct": 0,
+        "explanation": "Correct answer: A. A. Correct answers. Once product ranges have been clarified, the work required to submit the product can be identified to ensure submission of the required product. It is not inevitable that changes will occur, for example, by adding a supplementary project work that may have no impact on the functioning of the product. C. Change is not inevitable, although it is likely to occur. That's not logical. Tests and answer techniques: Project scope and product range."
+      },
+      {
+        "tag": "Scope Management",
+        "topic": "PMP scope-management scenario",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 74,
+        "text": "Demand analysis is often difficult in R & D projects. Clients may not really know what they want, and their ideas may change over time and over time. Faced with greater uncertainty about client needs, what would be the preferred approach for project managers of R & D projects to Collect Requirements? ( )?",
+        "choices": [
+          "Brainstorms",
+          "Observation",
+          "Prototype",
+          "Nominal group technology"
+        ],
+        "correct": 2,
+        "explanation": "Correct answer: C. A. Although the Brainstorm method is used as a group innovative technology for Collect Requirements processes, it is irrelevant. B. While observation is a tool for Collect Requirements, it is irrelevant. C. Correct answer. Prototypes are used to create a functional prototype of a product before it is actually manufactured and to obtain feedback on the requirement in order to gradually identify the needs of the client. D. While notional group technology is used as a group innovative technology for Collect Requirements, it is irrelevant. See pp. 108-109 of the PMBOK Guide. Tests and answer techniques: Tools and techniques for Collect Requirements: Prototype."
+      },
+      {
+        "tag": "Define Scope",
+        "topic": "Project scope statement and boundaries",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Use the project scope statement to define project boundaries, deliverables, exclusions, assumptions, and constraints.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 75,
+        "text": "Which of the following examples of requests for change arising from external events?",
+        "choices": [
+          "Wrong definition of project scope due to government regulation of old versions of documents",
+          "Secondary risks associated with the implementation of the programme of change measures",
+          "Changes in the environment applicable to the current project",
+          "Because the suppliers have developed new technologies that allow us to replace the original three sets with individual components"
+        ],
+        "correct": 2,
+        "explanation": "Correct answer: C. The best answer is Changes in the environment applicable to the current project, based on the PMP scope-management logic tested in this question."
+      },
+      {
+        "tag": "Scope Management",
+        "topic": "PMP scope-management scenario",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 76,
+        "text": "The construction phase of a new software product is near completion. The next phase is testing and implementation. The project is two weeks ahead of schedule. What should the project manager be MOST concerned with before moving on to the final phase?",
+        "choices": [
+          "Verify Scope",
+          "Quality",
+          "Ontrol C. Performance reports",
+          "Cost control"
+        ],
+        "correct": 0,
+        "explanation": "Correct answer: A. The Validate Scope is carried out before the end of each phase of the project. Reference: PMBOK2008 P123."
+      },
+      {
+        "tag": "Create WBS",
+        "topic": "WBS and decomposition",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 77,
+        "text": "You want to structure the project into an independent work package to be implemented by the members of the team on each date. The bag is...?",
+        "choices": [
+          "Deliverables at the lowest level of the work breakdown structure",
+          "Tasks with unique symbols",
+          "Level of reporting requested",
+          "Tasks assigned to more than one organizational unit"
+        ],
+        "correct": 0,
+        "explanation": "Correct answer: A. A deliverable work package at the lowest level of the work breakdown structure is the lowest or smallest unit in which work is divided in the project or work breakdown structure. work packages can be scheduled, costed and monitored."
+      },
+      {
+        "tag": "Control Scope",
+        "topic": "Scope baseline and change control",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Compare work against the scope baseline, analyze variance, and route changes through integrated change control.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 78,
+        "text": "Which of the following is CORRECT in regard to the Control Scope Process?",
+        "choices": [
+          "Effective scope definition can lead to a more complete project scope statement",
+          "The Control Scope process must be done before scope planning",
+          "The Control Scope process must be integrated with other control processes",
+          "Controlling the schedule is the most effective way of controlling scope"
+        ],
+        "correct": 2,
+        "explanation": "Correct answer: C. Control Scope should be integrated with other control processes because scope, schedule, cost, quality, and change control affect one another."
+      },
+      {
+        "tag": "Collect Requirements",
+        "topic": "Requirements documentation and traceability",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Elicit, document, and trace stakeholder requirements before defining scope or building the WBS.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 79,
+        "text": "The main reason for project failure?",
+        "choices": [
+          "Lack of project-type or strong matrix structure, poor definition of scope and lack of project plans",
+          "Lack of support and commitment from line managers, disharmony of project teams and lack of leadership on the part of project managers",
+          "Poor targeting of clients, fragmentation of project teams and lack of communication with clients throughout the project process",
+          "Organizational structure factors, poor targeting of clients, inappropriate project-specific requirements, and poor planning and control"
+        ],
+        "correct": 3,
+        "explanation": "Correct answer: D. The organizational structure of the item in option A, the disharmony of the team in option B and the fragmentation of the work position in option C are not necessary causes for the project to fail."
+      },
+      {
+        "tag": "Scope Management",
+        "topic": "PMP scope-management scenario",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 80,
+        "text": "All of the following are tools for scope verification except:",
+        "choices": [
+          "Product reviews",
+          "Audits",
+          "Walkthroughs",
+          "Sensitivity analysis"
+        ],
+        "correct": 3,
+        "explanation": "Correct answer: D. Product reviews, audits, and walkthroughs are inspection-oriented techniques used for scope verification or Validate Scope. Sensitivity analysis is a quantitative risk analysis tool."
+      },
+      {
+        "tag": "Create WBS",
+        "topic": "WBS and decomposition",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 81,
+        "text": "Which product analysis techniques are not included?",
+        "choices": [
+          "Value engineering",
+          "Value analysis",
+          "System analysis",
+          "List of materials"
+        ],
+        "correct": 3,
+        "explanation": "Correct answer: D. Product analysis technologies vary according to the area of application, and each area of application usually has a well-established methodology for translating project objectives into tangible deliverables and needs. Other product analysis techniques include product decomposition, requirement analysis, and systems engineering. Project Management Association, Project Management Knowledge System Guide, 2008, p. 114."
+      },
+      {
+        "tag": "Project Charter",
+        "topic": "Charter and early planning inputs",
+        "chapterId": "pmbok-ch04-integration-management",
+        "domain": "Process",
+        "decisionRule": "Use the project charter and stakeholder register as key inputs before requirements and scope planning.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 82,
+        "text": "Which of the following inputs is the collection of requirement? ( )?",
+        "choices": [
+          "Project statement of work",
+          "project charter",
+          "Managerial strategy",
+          "Procurement statement of work"
+        ],
+        "correct": 1,
+        "explanation": "Correct answer: B. A. Project statement of work is an input for the development of the project charter. B. Correct answer. Project managers Collect Requirements according to the project charter and the register of stakeholders and form requirements documentation, requirements management plans and requirement tracking matrices. C. The people management strategy is not input to the collection of requirement, but to manage the expectations of the people involved. The statement of procurement activities is intended to plan the output of the procurement process and to be used in the implementation of the procurement process as part of the procurement documents. See: PMBOK Guide, p. 105. Tests and answer techniques: input into the process of Collect Requirements."
+      },
+      {
+        "tag": "Create WBS",
+        "topic": "WBS and decomposition",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 83,
+        "text": "Li has taken over an information system project that has just entered development and finds that the project has no work breakdown structure. What is the best choice?",
+        "choices": [
+          "Continue the project while starting to develop the WBS",
+          "Stop the project until the WBS is completed",
+          "Refer to the WBS dictionary for detailed support",
+          "Escalate the issue to senior management"
+        ],
+        "correct": 1,
+        "explanation": "Correct answer: B. Without a WBS, the team lacks the basis for scheduling, cost estimating, and control at the work-package level. The WBS should be completed before continuing detailed execution work."
+      },
+      {
+        "tag": "Define Scope",
+        "topic": "Project scope statement and boundaries",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Use the project scope statement to define project boundaries, deliverables, exclusions, assumptions, and constraints.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 84,
+        "text": "What should be done before undertaking the five processes of project scope management?",
+        "choices": [
+          "Planning risk management",
+          "Project quality management",
+          "Project cost management",
+          "Develop a scope management plan"
+        ],
+        "correct": 3,
+        "explanation": "Correct answer: D. The five project scope management processes should be preceded by scope planning. This planning process is part of the process of developing a project management plan (Develop Project Management Plan), which will produce a scope management plan (Scope Management Plan) to guide the definition, recording, verification, management and control of the scope of the project. See chapter 5, chapeau of the PMBOK Guide (version 4). So the answer is D."
+      },
+      {
+        "tag": "Collect Requirements",
+        "topic": "Requirements documentation and traceability",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Elicit, document, and trace stakeholder requirements before defining scope or building the WBS.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 85,
+        "text": "The function of the request document is?",
+        "choices": [
+          "Describe how needs are analysed, documented and managed",
+          "Describe how changes in products, services or outcomes are initiated",
+          "Describe how the needs of the various singles will meet the operational needs associated with the project",
+          "Tracking needs throughout the project life cycle"
+        ],
+        "correct": 2,
+        "explanation": "Correct answer: C. Analysis: The knowledge points related to the requirements documentation are described below (see the PMBOK Guide (version 4), chapter 5, section 5.1.3.1, for the needs paper). 1) Demand documents: Describe how individual needs will meet the operational needs associated with the project (BusinnessNeed). 2) The content of the request document is gradually refined. At first, there might be only general requirements, and then, as information increases, it will be refined. 3) More important elements of the request document are: . ? trackable operational objectives and objectives (Businness and Project, Projects for Traceability). #Functionual Requirements It can be a list of needs for text or a model. #Quality requests #Acceptance test. Impacts to other entities inside or outside the executing organization So the answer is c."
+      },
+      {
+        "tag": "Scope Management",
+        "topic": "PMP scope-management scenario",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 86,
+        "text": "The time required to complete a project is often called a project.?",
+        "choices": [
+          "Executing time",
+          "Life cycle",
+          "Operation Time",
+          "Key Path"
+        ],
+        "correct": 1,
+        "explanation": "Correct answer: B. The best answer is Life cycle, based on the PMP scope-management logic tested in this question."
+      },
+      {
+        "tag": "Scope Management",
+        "topic": "PMP scope-management scenario",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 87,
+        "text": "Validate Scope?",
+        "choices": [
+          "Improving cost and programme accuracy is particularly important for projects using innovative technologies and processes",
+          "It was the last activity of the client before the project was handed over",
+          "Document the characteristics of the products and services produced during project implementation",
+          "There are areas for quality control"
+        ],
+        "correct": 3,
+        "explanation": "Correct answer: D. The best answer is There are areas for quality control, based on the PMP scope-management logic tested in this question."
+      },
+      {
+        "tag": "Scope Management",
+        "topic": "PMP scope-management scenario",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 88,
+        "text": "An example of value-added change for an environmental governance project is:?",
+        "choices": [
+          "Re-engineering projects forced by a new or revised government rule",
+          "Using a technology that didn't appear at the time of the initial setting, it could reduce the cost of the project",
+          "Defines the scope of the project using a material list, which includes all parts and components",
+          "An essential feature missing from the rectification design system"
+        ],
+        "correct": 1,
+        "explanation": "Correct answer: B. Change in value added means beneficial change."
+      },
+      {
+        "tag": "Collect Requirements",
+        "topic": "Requirements documentation and traceability",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Elicit, document, and trace stakeholder requirements before defining scope or building the WBS.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 89,
+        "text": "What is the process for the project team to learn about the needs of the faculty by enabling the stakeholders to fill out the questionnaire?",
+        "choices": [
+          "Collect Requirements",
+          "Define Scope",
+          "Validate Scope",
+          "Control Scope"
+        ],
+        "correct": 0,
+        "explanation": "Correct answer: A. See the preamble to chapter 5, section 5.1, of the PMBOK Guide (version 4): Collect Requirements is the process of defining and documenting the needs of stakeholders in order to achieve project objectives."
+      },
+      {
+        "tag": "Create WBS",
+        "topic": "WBS and decomposition",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 90,
+        "text": "A new project manager has asked you for advice on creating a work breakdown structure. After you explain the process to her, she asks you what software she should use to create the WBS and what she should do with it when she is finished creating it. You might respond that it is not the picture that is the most valuable result of creating a WBS. It is:",
+        "choices": [
+          "A bar chart",
+          "Team buy-in",
+          "Activities",
+          "A list of risks"
+        ],
+        "correct": 1,
+        "explanation": "Correct answer: B. The value of creating the WBS is not just the diagram. The collaborative process helps the team reach shared understanding and buy-in around project deliverables."
+      },
+      {
+        "tag": "Collect Requirements",
+        "topic": "Requirements documentation and traceability",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Elicit, document, and trace stakeholder requirements before defining scope or building the WBS.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 91,
+        "text": "The following statement of the requirements traceability matrix is incorrect:?",
+        "choices": [
+          "Helps to ensure that each need is met at the end of the project",
+          "Only needs are tracked in planning and implementation",
+          "Provide a framework for managing product scope changes",
+          "Linked requirement to requirement source"
+        ],
+        "correct": 1,
+        "explanation": "Correct answer: B. See chapter 5, section 5.1.3-3 of the PM:BOK Guide (version 4): The requirements traceability matrix is a table linking requirement to requirement source to track requirement throughout the life cycle of the project."
+      },
+      {
+        "tag": "Create WBS",
+        "topic": "WBS and decomposition",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 92,
+        "text": "Xiao Li is the project manager for a project, and recently he's had a lot of project plating in the project team. Kim's worried, in order to make sure there's no gold plating happening, which documents are the most helpful?",
+        "choices": [
+          "Scope management plan",
+          "project charter",
+          "WBS Dictionary",
+          "Risk management plan"
+        ],
+        "correct": 2,
+        "explanation": "Correct answer: C. See chapter 5, section 5.3.3.2 of the PMBOK Guide (version 4): The Dictionary of work breakdown structures provides a more detailed description of work breakdown structure components (including work packages and control accounts)."
+      },
+      {
+        "tag": "Scope Management",
+        "topic": "PMP scope-management scenario",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 93,
+        "text": "You are the project manager for the development of a new type of power plant. Your project is making fast progress, and it is getting nearer to the day of product acceptance. Which technique will be most important for product acceptance?",
+        "choices": [
+          "Inspection",
+          "Audit",
+          "Impact analysis",
+          "Team review"
+        ],
+        "correct": 0,
+        "explanation": "Correct answer: A. Inspection is a tool for verifying the scope and the process is used to obtain acceptance of results from stakeholders. Reference: PMBOK2008 P124."
+      },
+      {
+        "tag": "Collect Requirements",
+        "topic": "Requirements documentation and traceability",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Elicit, document, and trace stakeholder requirements before defining scope or building the WBS.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 94,
+        "text": "Which document should be consulted in order to develop the project scope statement and to understand the project approval requirements?",
+        "choices": [
+          "project charter",
+          "Organizational process assets",
+          "Request File",
+          "work breakdown structure"
+        ],
+        "correct": 0,
+        "explanation": "Correct answer: A. See chapter 5, section 5.2.1.1 of the PMBOK Guide (version 4): The project charter contains a general description of the characteristics of the project and product, as well as the project approval requirements."
+      },
+      {
+        "tag": "Create WBS",
+        "topic": "WBS and decomposition",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 95,
+        "text": "The result of the process of creating a work breakdown structure is?",
+        "choices": [
+          "Project schedule",
+          "Group unity",
+          "Project completion date",
+          "Risk list"
+        ],
+        "correct": 1,
+        "explanation": "Correct answer: B. The result of creating the WBS process is the PMBOK: WBS, WBS Dictionary, scope baseline, etc. The four options are incorrect. In fact, this is a team-building exercise, a team-building exercise, a tool in the team-building process, with the phrase, \"How to plan an activity that is well organized, while not intended for team-building,\" so the correct answer is B."
+      },
+      {
+        "tag": "Scope Management",
+        "topic": "PMP scope-management scenario",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 96,
+        "text": "Validate Scope?",
+        "choices": [
+          "Improved accuracy of costs and progress arrangements, particularly for projects using innovative technologies",
+          "It's the last activity before it's transferred to the client",
+          "The characteristics of the product or service that the project undertakes to create are documented in writing",
+          "Different from quality control, since verification ranges relate to acceptance of work results rather than correctness"
+        ],
+        "correct": 3,
+        "explanation": "Correct answer: D. The best answer is Different from quality control, since verification ranges relate to acceptance of work results rather than correctness, based on the PMP scope-management logic tested in this question."
+      },
+      {
+        "tag": "Create WBS",
+        "topic": "WBS and decomposition",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 97,
+        "text": "Deliverable oriented hierarchical decomposition of the work to be executed by the project team is called",
+        "choices": [
+          "Project Scope Management Plan",
+          "Requirements",
+          "Work breakdown structure",
+          "Design"
+        ],
+        "correct": 2,
+        "explanation": "Correct answer: C. The WBS (work breakdown structure) is a results-oriented hierarchy of work used to organize and define the scope of projects. Reference: PMBOK2008 P116."
+      },
+      {
+        "tag": "Scope Management",
+        "topic": "PMP scope-management scenario",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 98,
+        "text": "A restriction (e.g. limited budget) that affects the performance of the project is also called a(an):",
+        "choices": [
+          "Constraint",
+          "Assumption",
+          "Kill point",
+          "Risk"
+        ],
+        "correct": 0,
+        "explanation": "Correct answer: A. PMBOK2008 P115。."
+      },
+      {
+        "tag": "Create WBS",
+        "topic": "WBS and decomposition",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 99,
+        "text": "The WBS coding system allows project staff to do which of the following?",
+        "choices": [
+          "Estimate the cost of WBS elements",
+          "Provide project justification",
+          "Identify the level at which a WBS element is located",
+          "Use it directly as the project management plan"
+        ],
+        "correct": 2,
+        "explanation": "Correct answer: C. WBS codes identify components in the work breakdown structure and help the team locate and manage WBS elements at the appropriate level."
+      },
+      {
+        "tag": "Create WBS",
+        "topic": "WBS and decomposition",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 100,
+        "text": "Collect Requirements is crucial in project scope management, as it will form the basis for which?",
+        "choices": [
+          "Scope management plan",
+          "work breakdown structure",
+          "schedule",
+          "Scope change control system"
+        ],
+        "correct": 1,
+        "explanation": "Correct answer: B. Collect Requirements is the process of defining and documenting stakeholder needs to meet project objectives. It also addresses the definition and documentation of the needs of stakeholders to achieve the objectives of the project. Requirements form the basis of the work breakdown structure, and in addition, costs, schedule and quality planning are requirement-based."
+      },
+      {
+        "tag": "Create WBS",
+        "topic": "WBS and decomposition",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 101,
+        "text": "Which of the following is an output of the Collect Requirements process?",
+        "choices": [
+          "Requirements traceability matrix",
+          "Project scope statement",
+          "Work breakdown structure",
+          "Change requests"
+        ],
+        "correct": 0,
+        "explanation": "Correct answer: A. PMBOK2008 P111。."
+      },
+      {
+        "tag": "Collect Requirements",
+        "topic": "Requirements documentation and traceability",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Elicit, document, and trace stakeholder requirements before defining scope or building the WBS.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 102,
+        "text": "Since you have previously been the manager of the software project, you are pleased to be appointed as the project manager of the new system integration project. The project is intended to replace the existing domestic air traffic control system. You found the requirements traceability matrix useful for the software project and decided to use it in this system integration project. Using this matrix helps to ensure that every need is met?",
+        "choices": [
+          "Improving quality and supporting organizational quality policies",
+          "It adds value to business by linking it to operational and project objectives",
+          "Achieving a certain level of service, performance, security, assurance and compliance",
+          "Demonstrated impact on other areas of the organization and external entities of the implementing organization"
+        ],
+        "correct": 1,
+        "explanation": "Correct answer: B. The requirements traceability matrix is a table linking requirement and requirement sources to track requirement throughout the project life cycle. This approach links each requirement to operational and project objectives and helps to ensure that each requirement adds value. It also tracks needs within the life cycle of the project to ensure that the requirements listed in the request document are delivered at the end of the project."
+      },
+      {
+        "tag": "Create WBS",
+        "topic": "WBS and decomposition",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 103,
+        "text": "What is wrong with the extent of the WBS breakdown?",
+        "choices": [
+          "Until the person responsible can be appointed or outsourced",
+          "Until we can reliably estimate progress",
+          "Until it's done by one person",
+          "Straight to a reliable estimate of costs"
+        ],
+        "correct": 2,
+        "explanation": "Correct answer: C. work packages may be assigned to individuals or organizations and may not be performed by one person."
+      },
+      {
+        "tag": "Scope Management",
+        "topic": "PMP scope-management scenario",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 104,
+        "text": "Which of the following is the output of the Validate Scope?",
+        "choices": [
+          "Deliverables from acceptance and inspection",
+          "Scope baseline",
+          "Quality control measurements",
+          "Recognized deliverables"
+        ],
+        "correct": 0,
+        "explanation": "Correct answer: A. See PMBOK Guide (version 4) Chapter 5, Section 5.4.3 Validate Scope: Output."
+      },
+      {
+        "tag": "Project Charter",
+        "topic": "Charter and early planning inputs",
+        "chapterId": "pmbok-ch04-integration-management",
+        "domain": "Process",
+        "decisionRule": "Use the project charter and stakeholder register as key inputs before requirements and scope planning.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 105,
+        "text": "You're a project manager, managing a virtual team in five different countries around the world. Based on past experience, you know, these team members respond to their functional managers' demands much more positively than they do to you. Considering this, you decided to prepare one.?",
+        "choices": [
+          "A memorandum for team members to remind them that they now work for the project manager",
+          "project charter",
+          "A memorandum for functional managers to remind them of your authority over their employees",
+          "Human resources management plan"
+        ],
+        "correct": 1,
+        "explanation": "Correct answer: B. Authority and authority given to project managers in project charters."
+      },
+      {
+        "tag": "Create WBS",
+        "topic": "WBS and decomposition",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 106,
+        "text": "What processes directly affect the creation of work breakdown structures?",
+        "choices": [
+          "Definition Scope, Control Scope",
+          "Scope of definition, Collect Requirements",
+          "Control Scope, check range",
+          "Collect Requirements, Validate Scope"
+        ],
+        "correct": 1,
+        "explanation": "Correct answer: B. The best answer is Scope of definition, Collect Requirements, based on the PMP scope-management logic tested in this question."
+      },
+      {
+        "tag": "Scope Management",
+        "topic": "PMP scope-management scenario",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 107,
+        "text": "Your company is going to the new field. Now the government has issued an invitation to bid on a historic study, and you companies have put in a bid, and the bid has been successful. And you were appointed as the project manager for the first historical research project in the government department. Unfortunately, however, the results of your work do not meet the Government's standards for historic research. The Chairman of the company had just received official notification from the signatories of the government agency and the project would therefore be suspended immediately. Now you have to...?",
+        "choices": [
+          "Hand over to the technical representatives of contract management the results achieved during the period from inception to present",
+          "Record lessons learned and index records",
+          "Identification of the level and extent of work achieved by the project",
+          "Close the project office and reassign all project members to new positions Let's go"
+        ],
+        "correct": 2,
+        "explanation": "Correct answer: C. We'll have to finish the project."
+      },
+      {
+        "tag": "Create WBS",
+        "topic": "WBS and decomposition",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 108,
+        "text": "A new project manager is planning a complex hardware installation project. The team consists of 15people who are experts in their fields. The project manager does not want to manage the project in the detailed level. How far should be decompose the work?",
+        "choices": [
+          "As small as possible",
+          "Ecause the work is",
+          "Omplex B. as large as possible because he is",
+          "Ealing with experts C. to1000-hur tasks because it is proper for check-in period D. to about 80-hour tasks because it is proper for check-in period"
+        ],
+        "correct": 3,
+        "explanation": "Correct answer: D. WBS should be deciphered: costs and time can be reliably estimated, IT industry practice: 80 hours rule."
+      },
+      {
+        "tag": "Define Scope",
+        "topic": "Project scope statement and boundaries",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Use the project scope statement to define project boundaries, deliverables, exclusions, assumptions, and constraints.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 109,
+        "text": "Which of the following is wrong?",
+        "choices": [
+          "Uncontrolled changes are usually called project scope chickens. Delay",
+          "One manifestation of the spread is gold plating",
+          "There's no big difference between spread and gradual refinement",
+          "The spread sometimes reduces client satisfaction. degrees"
+        ],
+        "correct": 2,
+        "explanation": "Correct answer: C. See PMBOK (4th ed.), Chapter 5.5 foreword: Uncontrollable changes are commonly referred to as project scope spreading, detailing is within the range and does not produce scope spreading."
+      },
+      {
+        "tag": "Define Scope",
+        "topic": "Project scope statement and boundaries",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Use the project scope statement to define project boundaries, deliverables, exclusions, assumptions, and constraints.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 110,
+        "text": "Project scope:?",
+        "choices": [
+          "Only important at the beginning of the project",
+          "It doesn't matter when the contract or other documents authorizing the project are approved",
+          "It should be managed and controlled from the conceptual stage to the end of the project",
+          "It is a matter of managing through change control steps during the project implementation phase"
+        ],
+        "correct": 2,
+        "explanation": "Correct answer: C. The project scope is important."
+      },
+      {
+        "tag": "Validate Scope",
+        "topic": "Formal acceptance of deliverables",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Validate completed deliverables with the customer or appropriate stakeholders after quality control.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 111,
+        "text": "What was the result of the verification of the scope?",
+        "choices": [
+          "Improved results of work",
+          "Improved estimates of progress",
+          "Deliverables",
+          "Official acceptance of the project manager"
+        ],
+        "correct": 3,
+        "explanation": "Correct answer: D. See the preamble to chapter 5.4 of the PMBOK Guide (version 4): Verification includes reviewing deliverables with clients or sponsors to ensure that deliverables are successfully achieved and obtain formal acceptances from customers or sponsors."
+      },
+      {
+        "tag": "Control Scope",
+        "topic": "Scope baseline and change control",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Compare work against the scope baseline, analyze variance, and route changes through integrated change control.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 112,
+        "text": "One of the stakeholders on the project contacts the project manager to discuss some additional scope they would like to add to the project. The project manager asks for details in writing and then works through the Control Scope process. What should the project manager do NEXT when the evaluation of the requested scope is completed?",
+        "choices": [
+          "Ask the stakeholder if there are any more changes expected",
+          "Complete integrated",
+          "Hange control. C. Make sure the impact of the change is understood by the stakeholder",
+          "Find out the root cause of why the scope was not discovered during project planning"
+        ],
+        "correct": 1,
+        "explanation": "Correct answer: B. Control scope needs to ensure that all change requests are processed through the implementation of the overall change control process. Reference: PMBOK2008 P125."
+      },
+      {
+        "tag": "Create WBS",
+        "topic": "WBS and decomposition",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 113,
+        "text": "What is the best way to organize and define the overall scope of the project?",
+        "choices": [
+          "Scope statement",
+          "Responsibilities distribution matrix",
+          "project charter",
+          "work breakdown structure"
+        ],
+        "correct": 3,
+        "explanation": "Correct answer: D. See foreword of chapter 5, section 5.3, of the PMBOK Guide (version 4): decomposition of work structure and."
+      },
+      {
+        "tag": "Validate Scope",
+        "topic": "Formal acceptance of deliverables",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Validate completed deliverables with the customer or appropriate stakeholders after quality control.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 114,
+        "text": "Throughout the project process, which of the following processes is the acquisition of a formal acceptance by the client of the completed project scope and the corresponding deliverables? ( )?",
+        "choices": [
+          "Closure of project or phase",
+          "Closure of procurement",
+          "Executing of quality control",
+          "Validate Scope"
+        ],
+        "correct": 3,
+        "explanation": "Correct answer: D. A. The project or phase closure process involves the handover of deliverables that have been accepted and accepted. B. Discrepancies. C. Executing of quality control processes that focus on the correctness of deliverables (meeting quality requirements). Correct response. The Validate Scope process is designed to review deliverables with clients or sponsors to ensure that deliverables are successfully achieved and that they are formally accepted and accepted. See: PMBOK Guide, p. 123. Tests and answer techniques: Verification of scope process."
+      },
+      {
+        "tag": "Define Scope",
+        "topic": "Project scope statement and boundaries",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Use the project scope statement to define project boundaries, deliverables, exclusions, assumptions, and constraints.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 115,
+        "text": "Clients have increased your project scope by 52 per cent, increasing your cost estimates threefold. Now you have to change the planned start and end dates in the approved project plan. The next step should be?",
+        "choices": [
+          "Development of new schedules",
+          "Revise the schedule baseline",
+          "Increased resources",
+          "Revision of the project scope document"
+        ],
+        "correct": 0,
+        "explanation": "Correct answer: A. By scope statement, changes in project scope have led to changes in project start-up end dates, and the development of new schedules is a common way of revising progress. The reformulation of progress benchmarks can only be used as a last resort to control progress."
+      },
+      {
+        "tag": "Create WBS",
+        "topic": "WBS and decomposition",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 116,
+        "text": "Which of the following items does not explain the work breakdown structure used by the project?",
+        "choices": [
+          "Progress schedule",
+          "Cost estimates",
+          "Quality control",
+          "Risk management"
+        ],
+        "correct": 2,
+        "explanation": "Correct answer: C. See the preamble to chapter 5, section 5.3, of the PMBOK Guide (version 4), which provides for scheduling work packages, estimating costs and implementing controls. Progress schedules, cost estimates, risk management, etc. are to be performed according to WBS, while quality controls are not to be performed according to WBS, which is not included in the quality control process input."
+      },
+      {
+        "tag": "Scope Management",
+        "topic": "PMP scope-management scenario",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 117,
+        "text": "One project is an ideal environment for the implementation of targeted management techniques, as?",
+        "choices": [
+          "Project management includes setting organizational objectives",
+          "A matrix management environment is usually used for projects",
+          "The responsibility of the project manager is defined by corporate objectives",
+          "All projects should be goal-oriented"
+        ],
+        "correct": 3,
+        "explanation": "Correct answer: D. The best answer is All projects should be goal-oriented, based on the PMP scope-management logic tested in this question."
+      },
+      {
+        "tag": "Collect Requirements",
+        "topic": "Requirements documentation and traceability",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Elicit, document, and trace stakeholder requirements before defining scope or building the WBS.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 118,
+        "text": "If the scope of the project is to be verified, it must?",
+        "choices": [
+          "Ensure that the definition of scope reflects changes in the project charter",
+          "Defining the causes of identified problems",
+          "Verification of project schedules",
+          "Introduction of regular inspections, reviews and inspections"
+        ],
+        "correct": 3,
+        "explanation": "Correct answer: D. See chapter 5.4.2 of the .PMBOK Guide (version 4): Inspection refers to measurement, review and validation activities to determine whether work and deliverables meet requirements and product acceptance standards. Inspections are sometimes called censorship, product review, auditing and inspection."
+      },
+      {
+        "tag": "Validate Scope",
+        "topic": "Formal acceptance of deliverables",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Validate completed deliverables with the customer or appropriate stakeholders after quality control.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 119,
+        "text": "Which of the following BEST describes the Verify Scope process?",
+        "choices": [
+          "It provides assurances that the deliverable meets the specifications, is an input to the project management plan, and is an output of Perform Quality Control",
+          "It ensures that the deliverable is",
+          "Ompleted on time ensures customer acceptance, and show that the",
+          "Eliverable meets specifications. C. It ensures customer acceptance, shows that the deliverable meets specifications, and provides a chance for differences of opinion to come to light D. It is an output of Perform Quality Control, occurs before Define Scope, and ensures customer acceptance"
+        ],
+        "correct": 2,
+        "explanation": "Correct answer: C. Since the project management plan was completed before the Validate Scope process, option A was not appropriate. The scope of the authentication is not about time, not just acceptance, option B is inappropriate. Option D is clearly wrong. Reference: PMBOK2008 P123."
+      },
+      {
+        "tag": "Define Scope",
+        "topic": "Project scope statement and boundaries",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Use the project scope statement to define project boundaries, deliverables, exclusions, assumptions, and constraints.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 120,
+        "text": "The following tools and techniques could be used to document the project scope statement, except?",
+        "choices": [
+          "Value engineering, value analysis",
+          "Expert judgement",
+          "Templates, tables, standards",
+          "Systems engineering, systems analysis"
+        ],
+        "correct": 2,
+        "explanation": "Correct answer: C. See the scope of definition in chapter 5, section 5.2.2, of the PMBOK Guide (version 4): Tools and techniques."
+      },
+      {
+        "tag": "Define Scope",
+        "topic": "Project scope statement and boundaries",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Use the project scope statement to define project boundaries, deliverables, exclusions, assumptions, and constraints.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 121,
+        "text": "The project scope change control system is:?",
+        "choices": [
+          "A collection of formal steps for defining changes to official project documents",
+          "A documented process for the application of technical or administrative directives and supervision to identify and record mission functions and physical characteristics. And record and report changes, control changes, and audit assignments and systems to review compliance",
+          "A set of steps to change the scope of the project, including the documentation, tracking system and level of approval required to authorize changes",
+          "The scope management plan cannot be changed until the project has been reviewed and approved"
+        ],
+        "correct": 2,
+        "explanation": "Correct answer: C. The best answer is A set of steps to change the scope of the project, including the documentation, tracking system and level of approval required to authorize changes, based on the PMP scope-management logic tested in this question."
+      },
+      {
+        "tag": "Control Scope",
+        "topic": "Scope baseline and change control",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Compare work against the scope baseline, analyze variance, and route changes through integrated change control.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 122,
+        "text": "Which of the following processes will be directly input into the Control Scope?",
+        "choices": [
+          "Project quality management",
+          "Direct and manage project implementation",
+          "Planning risk management",
+          "Project cost management"
+        ],
+        "correct": 1,
+        "explanation": "Correct answer: B. The best answer is Direct and manage project implementation, based on the PMP scope-management logic tested in this question."
+      },
+      {
+        "tag": "Create WBS",
+        "topic": "WBS and decomposition",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 123,
+        "text": "A WBS dictionary is a document which...",
+        "choices": [
+          "describes technical terms used for scope management",
+          "describes the details for each",
+          "Omponent in the WBS. C. ...translates essential NBS terms for global project teams",
+          "helps translating functional into technical requirements. WBS"
+        ],
+        "correct": 1,
+        "explanation": "Correct answer: B. The Dictionary of the work breakdown structure is a supporting document for the work breakdown structure, detailing each component. Reference: PMBOK2008 P121."
+      },
+      {
+        "tag": "Create WBS",
+        "topic": "WBS and decomposition",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 124,
+        "text": "In the top-down breakdown of the work breakdown structure, this will result ().?",
+        "choices": [
+          "Reduced accuracy of estimates",
+          "Increase in estimated accuracy",
+          "Management itself is cheaper",
+          "Missing from certain jobs"
+        ],
+        "correct": 1,
+        "explanation": "Correct answer: B. A. The accuracy of estimates should be increased rather than reduced. B. Correct answer. Job work breakdown structures are the result of the layering of big targets into smaller ones, which improves the accuracy of estimates. C. The breakdown can increase the effectiveness of management, but can increase the volume of management work and lead to increased costs for management itself. Therefore, fragmentation is not as fine as possible. There is no automatic link to the title. See: PMBOK Guide, p. 120. Tests and answer techniques: Job work breakdown structure. Note: Do not confuse “top-down” with “top-down methodologies”."
+      },
+      {
+        "tag": "Control Scope",
+        "topic": "Scope baseline and change control",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Compare work against the scope baseline, analyze variance, and route changes through integrated change control.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 125,
+        "text": "The Validate Scope process is intended ().?",
+        "choices": [
+          "Formal acceptance and acceptance deliverables",
+          "Review of the validity of project scope documents",
+          "Check technical validity of deliverables",
+          "Discrepancies in project scope were identified and changes in project scope baseline managed"
+        ],
+        "correct": 0,
+        "explanation": "Correct answer: A. A. Correct answers. This option is not relevant to the Validate Scope process. This is the implementation of the quality control process. This is the process of control. See: PMBOK Guide, p. 123. Tests and answers Skills: Verification of scope process. Care is taken to distinguish between the Validate Scope process and the implementation of the quality control process and the control scope process."
+      },
+      {
+        "tag": "Scope Management",
+        "topic": "PMP scope-management scenario",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 126,
+        "text": "In a new product R & D project, the R & D team, together with the project manager, lists all the functions that the new product can perform and the potential needs of the target user. Due to limited resources, the R & D team has to prioritize the extent to which functions meet user needs. Which of the following tools should be used by the R & D team? ( )?",
+        "choices": [
+          "Joint application development",
+          "Brainstorms",
+          "Delphi technology",
+          "Quality extension"
+        ],
+        "correct": 3,
+        "explanation": "Correct answer: D. A. Joint application development is a technology that is widely used in the software development industry, emphasizing users and development teams to identify project needs without emphasizing the integration and sequencing of functions. B. Brainstorms should have been completed because all functions and needs had been listed. C. Delphi technology does not emphasize combining functions and needs and sequencing functions. D. Correct answer. Quality function development emphasizes combining functions and needs to determine the extent to which the functions meet the needs in order to prioritize functions. See: PMBOK refers to South 107. Tests and answer techniques: Tools and techniques for Collect Requirements: Quality functions are developed (as part of a pilot workshop)."
+      },
+      {
+        "tag": "Create WBS",
+        "topic": "WBS and decomposition",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 127,
+        "text": "Which of the following processes does not require the use of outputs from any other planning process? ( )?",
+        "choices": [
+          "Collect Requirements",
+          "Define Scope",
+          "Development of schedules",
+          "Budgeting"
+        ],
+        "correct": 0,
+        "explanation": "Correct answer: A. A. Correct answers. The requirement collection process is the first in the planning process group. It needs two outcomes from the start-up process, namely the project charter and the register of stakeholders. B. The scoping process requires the use of the output of the collection requirement process (requirements documentation). C. The progress planning process requires the use of a variety of outputs from other planning processes, such as project scope statements, work breakdown structures, progress network maps, etc. D. The budgeting process also requires outputs from other planning processes, such as scope baseline, project schedules, cost estimates of activities, etc. See: PMBOK Guide, p. 105. Examination and answer techniques: input into the process of Collect Requirements."
+      },
+      {
+        "tag": "Scope Management",
+        "topic": "PMP scope-management scenario",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 128,
+        "text": "The following description of the project is correct except?",
+        "choices": [
+          "Generating unique products",
+          "Unique way of operating",
+          "Cross-functional work",
+          "Phase control"
+        ],
+        "correct": 1,
+        "explanation": "Correct answer: B. Analysis: See chapter 1, section 1.5, of the PMBOK Guide (version 4): Operations are an organizational function that produces the same products through ongoing activities or provides duplicate services, projects require project management, while operations require business process or operations management. Operating is a continuous effort to produce repetitive results, using allocated resources to carry out essentially constant operations in accordance with institutionalized standards throughout the product life cycle. Operating to sustain the organization's long-term operation, it will not end with the achievement of its current objectives, but will continue to support the organization's strategic plan in accordance with the new directives. Unlike the continuity of the camp, projects (with teams and often with opportunities) are temporary and have clear endpoints. In the examination, the equivalent of the words \" operate, operate, and run \" is actually Operation, since in PMBOK, Project, and Operation are two different categories of work. So it can be said that the operation can be managed in a project manner, but it cannot be said that the project is a special form of operation. So answer B. Other knowledge points involved in this question. Common features of the project and operation: - people do it. Constraints, including resource constraints. :: Need to plan, implement and monitor. To achieve the organization ' s objectives or strategic plan. The connection. Projects and operations can intersect at different points in the product life cycle: at the end of the project. When new products are developed, upgraded or increased. In improving the operational or product development process. Before the product is out of operation (product life cycle end). At every point in time, deliverables and knowledge shift between project and operational questions as the related work is completed. Towards the end of the project, resources were transferred from the project to operation and, when the project began, from operation to the project. Different projects require resources of varying magnitude from the operational department. Depending on the nature of the project, its deliverables may change or affect established operations."
+      },
+      {
+        "tag": "Control Scope",
+        "topic": "Scope baseline and change control",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Compare work against the scope baseline, analyze variance, and route changes through integrated change control.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 129,
+        "text": "What documentation should be reviewed before considering the closure of a project to ensure that the scope of the project is met?",
+        "choices": [
+          "Project scope statement",
+          "Project management plan",
+          "Project closure checklist",
+          "Scope management plan"
+        ],
+        "correct": 1,
+        "explanation": "Correct answer: B. The scope of the project is measured according to the project management plan. The project scope statement and scope baseline are a subset of project management plans. However, with the exception of the coverage component, the master plan and all benchmarks (costs and progress) will be fully met."
+      },
+      {
+        "tag": "Scope Management",
+        "topic": "PMP scope-management scenario",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 130,
+        "text": "You are managing a project where you have to deal with team members from different teams. Your observation is some of the team members from sales are aggressive and their thoughts and decisions are Marjory influencing the team decisions. You want to collect the information regarding the project risks and record them in risk register. Which of the following statement is true?",
+        "choices": [
+          "You are doing risk identification process and the",
+          "Est technique to use here is Delphi techniques B. You are in Risk Planning process and the best method technique here is brainstorming",
+          "You are in Risk Identification process and best method technique here is Brainstorming",
+          "You are in Risk Planning process and the best technique here is Nominal group techniques"
+        ],
+        "correct": 0,
+        "explanation": "Correct answer: A. Characteristics of the Delphi approach: back-to-back can avoid being influenced by others. Reference: PMBOK2008 P108."
+      },
+      {
+        "tag": "Project Environment",
+        "topic": "Enterprise environmental factors and organizational process assets",
+        "chapterId": "pmbok-ch02-project-environment",
+        "domain": "Business Environment",
+        "decisionRule": "Use enterprise environmental factors and organizational process assets as context and inputs when planning project work.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 131,
+        "text": "Examples of organizational process assets that affect the management of a given day range are:?",
+        "choices": [
+          "Personnel policy",
+          "Market business",
+          "Project files from previous projects",
+          "Organizational culture"
+        ],
+        "correct": 2,
+        "explanation": "Correct answer: C. organizational process assets include formal and informal policies, procedures and guidance that affect project scope management. One example is the project files originating from previous projects, which may be stored in the knowledge base of lessons learned."
+      },
+      {
+        "tag": "Create WBS",
+        "topic": "WBS and decomposition",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 132,
+        "text": "In addition to which of the following, are the correct descriptions of the “grassroots ESTATE”?",
+        "choices": [
+          "Its accuracy ranges from -5% to +10%",
+          "It's called engineering",
+          "It's mainly for the first level of the work breakdown structure",
+          "It might take months to prepare it"
+        ],
+        "correct": 2,
+        "explanation": "Correct answer: C. Estimates are classified according to correctness and timing of their preparation. Grass-roots or engineering-type estimates are defined estimates, which can be prepared when detailed project information is available. These estimates will use the work package level of the break-down structure."
+      },
+      {
+        "tag": "Create WBS",
+        "topic": "WBS and decomposition",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 133,
+        "text": "A project member has reported to you that the mandate of his terms of reference is no longer valid and suggested that the scope of his work be revised. In order to make this change, which of the following documents should be consulted?",
+        "choices": [
+          "project charter",
+          "Scope management plan",
+          "Cost management plan",
+          "Job work breakdown structure and dictionary"
+        ],
+        "correct": 3,
+        "explanation": "Correct answer: D. work breakdown structures and dictionaries can serve as a frame of reference and as a reference document for changes."
+      },
+      {
+        "tag": "Collect Requirements",
+        "topic": "Requirements documentation and traceability",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Elicit, document, and trace stakeholder requirements before defining scope or building the WBS.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 134,
+        "text": "Which tools reflect progressive and detailed concepts?",
+        "choices": [
+          "Interviews",
+          "Prototype",
+          "Lead seminar",
+          "Questionnaire"
+        ],
+        "correct": 1,
+        "explanation": "Correct answer: B. See chapter 5, section 5.1.2.8 of the PMBOK Guide (version 4), “Prototype approach consistent with the concept of progressive detail”."
+      },
+      {
+        "tag": "Project Charter",
+        "topic": "Charter and early planning inputs",
+        "chapterId": "pmbok-ch04-integration-management",
+        "domain": "Process",
+        "decisionRule": "Use the project charter and stakeholder register as key inputs before requirements and scope planning.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 135,
+        "text": "Which of the following inputs is the collection of requirement? ( )?",
+        "choices": [
+          "Project statement of work",
+          "project charter",
+          "Managerial strategy",
+          "Procurement statement of work"
+        ],
+        "correct": 1,
+        "explanation": "Correct answer: B. A. Project statement of work is an input for the development of the project charter. B. Correct answer. Project managers Collect Requirements according to the project charter and the register of stakeholders and form requirements documentation, requirements management plans and requirement tracking matrices. C. The people management strategy is not input to the collection of requirement, but to manage the expectations of the people involved. The statement of procurement activities is intended to plan the output of the procurement process and to be used in the implementation of the procurement process as part of the procurement documents. See: PMBOK Guide, p. 105. Tests and answer techniques: input into the process of Collect Requirements."
+      },
+      {
+        "tag": "Scope Management",
+        "topic": "PMP scope-management scenario",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 136,
+        "text": "Which of the following criteria needs to be met in order to be clear on project objectives?",
+        "choices": [
+          "Communication by the project manager",
+          "By all members",
+          "Quantifiable",
+          "Inform all project stakeholders"
+        ],
+        "correct": 2,
+        "explanation": "Correct answer: C. See chapter 5, section 5.2.3 of the PMBOK Guide (version 3): Project objectives should be measurable."
+      },
+      {
+        "tag": "Scope Management",
+        "topic": "PMP scope-management scenario",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 137,
+        "text": "You are managing a telecommunications project, and as a result of a new regulation recently introduced by the Government, you have had to change the scope of the original project. Several changes have been made to project objectives. You updated the technical and planning documents used in the project. Your next move is:?",
+        "choices": [
+          "Official notification to the department",
+          "Modification of the corporate knowledge management system",
+          "Formal recognition of scope changes from project sponsors and clients",
+          "Prepare a performance report"
+        ],
+        "correct": 0,
+        "explanation": "Correct answer: A. The process of option C is first notified."
+      },
+      {
+        "tag": "Create WBS",
+        "topic": "WBS and decomposition",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 138,
+        "text": "What is wrong with the extent of the WBS breakdown?",
+        "choices": [
+          "Until the person responsible can be appointed or outsourced",
+          "Until we can reliably estimate progress",
+          "Until it's done by one person",
+          "Straight to a reliable estimate of costs"
+        ],
+        "correct": 2,
+        "explanation": "Correct answer: C. work packages may be assigned to individuals or organizations and may not be performed by one person."
+      },
+      {
+        "tag": "Project Charter",
+        "topic": "Charter and early planning inputs",
+        "chapterId": "pmbok-ch04-integration-management",
+        "domain": "Process",
+        "decisionRule": "Use the project charter and stakeholder register as key inputs before requirements and scope planning.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 139,
+        "text": "Which document states what is to be accomplished and what deliverables need to be produced?",
+        "choices": [
+          "Project management plan",
+          "．Project",
+          "Harter C. project scope statement",
+          "．Performance report"
+        ],
+        "correct": 2,
+        "explanation": "Correct answer: C. The scope statement is used to describe the results of the project and the related work to be accomplished. Reference: PMBOK2008 P115."
+      },
+      {
+        "tag": "Create WBS",
+        "topic": "WBS and decomposition",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 140,
+        "text": "The scoping process is intended ().?",
+        "choices": [
+          "Develop a scope management plan",
+          "Development of project scope statements",
+          "Development of project statement of work",
+          "Development of work breakdown structures"
+        ],
+        "correct": 1,
+        "explanation": "Correct answer: B. A. Scope management plans should be prepared prior to the scoping process. B. Correct answer. The purpose of the process is to determine the product and project scopes and to prepare a project scope statement. C. Project statement of work is the first document to emerge from the project, covering product scope, strategic plan, operational needs, and is used to express the overall requirements of the project by its sponsors. D. Job work breakdown structures are the output of the process of creating work breakdown structures. See: PMBOK Guide page 112. Tests and answer techniques: the output of the scoping process. The scope includes both product and project scopes, not A, C only product ranges, and D works after project scope determination."
+      },
+      {
+        "tag": "Create WBS",
+        "topic": "WBS and decomposition",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 141,
+        "text": "When can the scope benchmark be changed?",
+        "choices": [
+          "Once it's made, it can't change",
+          "When the project manager thinks it can change",
+          "After the request for change is granted",
+          "When clients lower project allocations"
+        ],
+        "correct": 2,
+        "explanation": "Correct answer: C. See chapter 5, section 5.5.3.4 of the PMBOK Guide (version 4): If approved change requests have an impact on the scope of the items, the scope statement, the work breakdown structure and the WBS dictionary will need to be revised and issued to reflect these approved changes. The change is subject to the approval of the change request."
+      },
+      {
+        "tag": "Define Scope",
+        "topic": "Project scope statement and boundaries",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Use the project scope statement to define project boundaries, deliverables, exclusions, assumptions, and constraints.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 142,
+        "text": "Which of the following is the output of the defined range?",
+        "choices": [
+          "project charter",
+          "Request File",
+          "work breakdown structure",
+          "Project scope statement"
+        ],
+        "correct": 3,
+        "explanation": "Correct answer: D. See scope of definition in chapter 5, section 5.2.3 of the PMBOK Guide (version 4): Output."
+      },
+      {
+        "tag": "Create WBS",
+        "topic": "WBS and decomposition",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 143,
+        "text": "Job work breakdown structures can be used?",
+        "choices": [
+          "Communication tools with clients",
+          "Show schedule of work packages",
+          "The status of the team",
+          "Expressing operational requirements"
+        ],
+        "correct": 0,
+        "explanation": "Correct answer: A. WBS can be used as a communication tool to facilitate communication and consensus among team members and stakeholders."
+      },
+      {
+        "tag": "Scope Management",
+        "topic": "PMP scope-management scenario",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 144,
+        "text": "Increasing resources on the critical path activities may not always shorten the length of the project because:",
+        "choices": [
+          "No activities are time-dependent or resource-dependent",
+          "Activities are always scheduled with optimal number of resources",
+          "The Project Manager always selects original resources with the highest skill levels",
+          "Adding more resources may create additional work and produce inefficiencies"
+        ],
+        "correct": 3,
+        "explanation": "Correct answer: D. The best answer is Adding more resources may create additional work and produce inefficiencies, based on the PMP scope-management logic tested in this question."
+      },
+      {
+        "tag": "Scope Management",
+        "topic": "PMP scope-management scenario",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 145,
+        "text": "The most difficult thing for a project team that is both an investor and an implementer at the end-of-stage review meeting is?",
+        "choices": [
+          "Budget allocation for the next phase",
+          "Approval of the next phase of scope changes",
+          "Approval of budget increases for the next phase",
+          "Cancel Item"
+        ],
+        "correct": 3,
+        "explanation": "Correct answer: D. Whether or not to cancel the project is the greatest contradiction between the investor and the project team."
+      },
+      {
+        "tag": "Scope Management",
+        "topic": "PMP scope-management scenario",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 146,
+        "text": "Which of the following is true?",
+        "choices": [
+          "Discounted cash flow analysis is the least precise of the cash flow techniques as it doe not consider the time value of money",
+          "NPV is the least precise of the",
+          "Ash flow analysis techniques as it assumes reinvestment as the",
+          "Iscount rate C. Payback period is the least precise of the cash flow analysis techniques as it does not consider the time value of money D. IRR is the least precise of the cash flow analysis techniques because it assumes reinvestment at the cost of capital"
+        ],
+        "correct": 2,
+        "explanation": "Correct answer: C. The recovery period here is the static recovery period, which analyzes the cost recovery at the end without taking into account the time value of the currency. Payback hands does not consider the time value of money and is somewhere the last promise of all the cash low analytical technologies."
+      },
+      {
+        "tag": "Create WBS",
+        "topic": "WBS and decomposition",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 147,
+        "text": "Except...?",
+        "choices": [
+          "Providing a framework for the organization and implementation of project activities",
+          "Similar to organizational chart",
+          "Stepping up a project in sequence, delineating it",
+          "It's a progress tool"
+        ],
+        "correct": 3,
+        "explanation": "Correct answer: D. The best answer is It's a progress tool, based on the PMP scope-management logic tested in this question."
+      },
+      {
+        "tag": "Define Scope",
+        "topic": "Project scope statement and boundaries",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Use the project scope statement to define project boundaries, deliverables, exclusions, assumptions, and constraints.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 148,
+        "text": "The documents used to describe the objectives, work content, deliverables and final products of the project are:?",
+        "choices": [
+          "project charter",
+          "Product Description",
+          "Scope statement",
+          "work breakdown structure"
+        ],
+        "correct": 2,
+        "explanation": "Correct answer: C. The best answer is Scope statement, based on the PMP scope-management logic tested in this question."
+      },
+      {
+        "tag": "Create WBS",
+        "topic": "WBS and decomposition",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 149,
+        "text": "Scope description:?",
+        "choices": [
+          "Excludes project objectives such as cost, progress, or quality criteria",
+          "A statement of project assumptions and constraints",
+          "Development of documents to serve as the basis for the preparation of the PERT/CPM network",
+          "Description of WBS Structure"
+        ],
+        "correct": 1,
+        "explanation": "Correct answer: B. The best answer is A statement of project assumptions and constraints, based on the PMP scope-management logic tested in this question."
+      },
+      {
+        "tag": "Control Scope",
+        "topic": "Scope baseline and change control",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Compare work against the scope baseline, analyze variance, and route changes through integrated change control.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 150,
+        "text": "It is important in Control Scope to determine the causes of unacceptable deviations for the scope baseline. Which item supports this analysis?",
+        "choices": [
+          "Analysis of root causes",
+          "Control Chart",
+          "Inspection",
+          "Project performance measurement results"
+        ],
+        "correct": 3,
+        "explanation": "Correct answer: D. variance analysis is a tool and technology for Control Scope. The results of the project performance measurement are used to assess the extent of the deviation, to determine the cause of the deviation and to determine whether corrective measures are required."
+      },
+      {
+        "tag": "Scope Management",
+        "topic": "PMP scope-management scenario",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 151,
+        "text": "Which of the following items is not the point where the project and operation intersect with the product life cycle?",
+        "choices": [
+          "At the end of the project",
+          "Developing, upgrading or increasing production of new products Time",
+          "In improving the operation or product development process",
+          "When appointing the operations manager as project manager"
+        ],
+        "correct": 3,
+        "explanation": "Correct answer: D. See chapter 1, section 1.5 of the PMBOK Guide (version 4): Projects and operations can intersect at different points in the life cycle of the product, including the end of the project, improvements in the operation or product development process when new products are developed, the product upgrades or increases production, before the product is out of operation (product life cycle end)."
+      },
+      {
+        "tag": "Create WBS",
+        "topic": "WBS and decomposition",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 152,
+        "text": "All of the following are parts of the scope baseline EXCEPT the:",
+        "choices": [
+          "Scope management plan",
+          "Project scope statement",
+          "Work breakdown structure",
+          "WBS Dictionary"
+        ],
+        "correct": 0,
+        "explanation": "Correct answer: A. PMBOK2008 P122。."
+      },
+      {
+        "tag": "Define Scope",
+        "topic": "Project scope statement and boundaries",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Use the project scope statement to define project boundaries, deliverables, exclusions, assumptions, and constraints.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 153,
+        "text": "It would be helpful to make clear in the project scope statement what is not included in the project ().?",
+        "choices": [
+          "Project completed on time",
+          "Project completed within budget",
+          "Project completed within defined parameters",
+          "Managing the expectations of those involved in the project"
+        ],
+        "correct": 3,
+        "explanation": "Correct answer: D. There is no substantive link to the subject matter. There is no substantive link to the subject. C. There is no substantive link to the title. D. Correct answer. Some jobs should be explicitly excluded from the project scope statement if the stakeholders may mistakenly think they are part of the project, so that they do not have unreasonable expectations about the project. See: PMBOK Guide, page 115. Point of view and answer techniques: exclusionary responsibilities in project scope statements, expectations of managers."
+      },
+      {
+        "tag": "Scope Management",
+        "topic": "PMP scope-management scenario",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 154,
+        "text": "The most difficult thing for a project team that is both an investor and an implementer at the end-of-stage review meeting is?",
+        "choices": [
+          "Budget allocation for the next phase",
+          "Approval of the next phase of scope changes",
+          "Approval of budget increases for the next phase",
+          "Cancel Item"
+        ],
+        "correct": 3,
+        "explanation": "Correct answer: D. Whether or not to cancel the project is the greatest contradiction between the investor and the project team."
+      },
+      {
+        "tag": "Create WBS",
+        "topic": "WBS and decomposition",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 155,
+        "text": "A prerequisite of effective time management is:",
+        "choices": [
+          "Knowing the dictated project completion date",
+          "Having the most advanced software package for project planning, scheduling, and control",
+          "Having a good project WBS that identifies major deliverables, tasks, and responsible people",
+          "Having a well-staffed scheduling department"
+        ],
+        "correct": 2,
+        "explanation": "Correct answer: C. The WBS provides the basis for defining activities, so effective schedule management depends on a sound WBS."
+      },
+      {
+        "tag": "Collect Requirements",
+        "topic": "Requirements documentation and traceability",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Elicit, document, and trace stakeholder requirements before defining scope or building the WBS.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 156,
+        "text": "Which of the following documents defines the content that requires formal change control?",
+        "choices": [
+          "Configuration management plan",
+          "Change management plan",
+          "Scope management plan",
+          "Requirements traceability matrix"
+        ],
+        "correct": 0,
+        "explanation": "Correct answer: A. See chapter 5, section 5.5.1.1, of the PMBOK Guide (version 4). The configuration management plan defines the configuration item, defines the content that requires a formal change control and sets out the change control process for these configuration items and content."
+      },
+      {
+        "tag": "Create WBS",
+        "topic": "WBS and decomposition",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 157,
+        "text": "Which of the following scenarios would require a revision of the work breakdown structure?",
+        "choices": [
+          "Additional resources allocated",
+          "New project product outcomes defined",
+          "Changed project constraints",
+          "Defined dependency level"
+        ],
+        "correct": 1,
+        "explanation": "Correct answer: B. The best answer is New project product outcomes defined, based on the PMP scope-management logic tested in this question."
+      },
+      {
+        "tag": "Control Scope",
+        "topic": "Scope baseline and change control",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Compare work against the scope baseline, analyze variance, and route changes through integrated change control.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 158,
+        "text": "Projects have been completed, but clients are reluctant to approve deliverables and repeated negotiations with clients have been inconclusive. What can the project manager do best?",
+        "choices": [
+          "Analysis of client needs, enhancement of product functionality and negotiation with clients",
+          "Get clients to propose scope changes",
+          "Preparation of an archive of the debate papers for possible legal proceedings",
+          "Re-profiling the acceptance and inspection criteria for deliverables"
+        ],
+        "correct": 1,
+        "explanation": "Correct answer: B. See PMBOK Guide (version 4), chapter 5, section 5.4.3.2. “deliverable results that have been completed but not formally accepted and the reasons for their non-acceptance shall be recorded and appropriate requests for change made.” The first step in the client's change should be a change request."
+      },
+      {
+        "tag": "Define Scope",
+        "topic": "Project scope statement and boundaries",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Use the project scope statement to define project boundaries, deliverables, exclusions, assumptions, and constraints.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 159,
+        "text": "One of the key tools and techniques used in the scope definition is:?",
+        "choices": [
+          "Templates, tables, and standards",
+          "Decomposition",
+          "Expert judgement",
+          "Project management methodology"
+        ],
+        "correct": 2,
+        "explanation": "Correct answer: C. Expert judgement to analyse the information needed to develop the project scope statement. It is used in any technical detail."
+      },
+      {
+        "tag": "Scope Management",
+        "topic": "PMP scope-management scenario",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 160,
+        "text": "Important aspects of products include maintenance and day-to-day operations, which should ()?",
+        "choices": [
+          "Included as an activity in the project ' s break-down structure",
+          "Not as part of the project",
+          "As part of a large project",
+          "Do not separate from the project life cycle into separate phases"
+        ],
+        "correct": 1,
+        "explanation": "Correct answer: B. See section 1.2 of chapter 1 of the PMBOK Guide (version 4), where maintenance and day-to-day operations are operational and not projects, so the answer is B."
+      },
+      {
+        "tag": "Scope Management",
+        "topic": "PMP scope-management scenario",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 161,
+        "text": "Job performance information includes the following, except which ones?",
+        "choices": [
+          "Results of staff training",
+          "Approved and incurred costs",
+          "Resource utilization data",
+          "Deliverables completed"
+        ],
+        "correct": 0,
+        "explanation": "Correct answer: A. Job performance information is any data or information describing work achievements, including costs, quality and performance of progress. The staff training schedule is an administrative service not directly related to the achievement of work."
+      },
+      {
+        "tag": "Create WBS",
+        "topic": "WBS and decomposition",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 162,
+        "text": "The scope baseline consists of the following:?",
+        "choices": [
+          "Request File",
+          "Scope statement",
+          "work breakdown structure",
+          "WBS dictionary"
+        ],
+        "correct": 0,
+        "explanation": "Correct answer: A. Analysis: The scope baseline is an integral part of the project management plan and includes the following (see the scope baseline in chapter 5.3.3 3 of the PMBOK Guidelines (version 4). 1) project scope statement: ? Product scope description. ? Project deliverables. ~Acceptance standards for products. 2) Disaggregation of work (WBS): ? Defines each deliverables. ? Disaggregate deliverables into work packages. 3) WBS dictionary (WBS dictionary): a detailed description of the work and technical documentation of the elements of each work breakdown structure. So the answer is A."
+      },
+      {
+        "tag": "Validate Scope",
+        "topic": "Formal acceptance of deliverables",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Validate completed deliverables with the customer or appropriate stakeholders after quality control.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 163,
+        "text": "You are the project manager for a project to upgrade your human resources benefits system for the past seven months. The programmers on your team are 75 percent of the way through the programming and testing work of this project when the board hires a new Vice President of Human Resources. Within days, the programmers are taken off the project one-by-one to work on the Vice President s new priority Recognition Project. Why would you perform Verify Scope for this scenario?",
+        "choices": [
+          "It determines the correctness and completion of all the work",
+          "It documents the level and degree of",
+          "Ompletion C. It",
+          "Etermines if the project results comply with quality standards D. It documents the correctness of the work according to stakeholder’s expectations"
+        ],
+        "correct": 1,
+        "explanation": "Correct answer: B. The Validate Scope is carried out before the end of the project and, in the case of an irregular closure of the project, the content and extent of the work performed is recorded."
+      },
+      {
+        "tag": "Collect Requirements",
+        "topic": "Requirements documentation and traceability",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Elicit, document, and trace stakeholder requirements before defining scope or building the WBS.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 164,
+        "text": "In addition to which, the following statements dealing with Validate Scope and quality control are correct?",
+        "choices": [
+          "Two processes could be implemented in parallel",
+          "Both processes use inspection as a tool and technology",
+          "Validate Scope is concerned with acceptance of deliverables and quality control is concerned with meeting quality requirements for deliverables",
+          "Validate Scope usually takes place before quality control"
+        ],
+        "correct": 3,
+        "explanation": "Correct answer: D. The Validate Scope focuses on the acceptance and approval of project deliverables, which must be met if they are to be approved. Quality control (QC) is a way of ensuring compliance with the requirement, which is why QC is usually completed before the Validate Scope."
+      },
+      {
+        "tag": "Collect Requirements",
+        "topic": "Requirements documentation and traceability",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Elicit, document, and trace stakeholder requirements before defining scope or building the WBS.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 165,
+        "text": "The deliverables had been completed and what should be done to make the project acceptable to clients?",
+        "choices": [
+          "Conducting measurement, review and verification activities",
+          "Decomposition project deliverables into smaller, more manageable components",
+          "Assess the extent of deviation from the range baseline",
+          "Observe how individuals work and implement processes"
+        ],
+        "correct": 0,
+        "explanation": "Correct answer: A. See chapter 5, section 5.4.2.1 of the PMBOK Guide (version 4), “inspection refers to activities such as measurement, review and verification to determine whether work and deliverables meet requirements and product acceptance standards”."
+      },
+      {
+        "tag": "Define Scope",
+        "topic": "Project scope statement and boundaries",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Use the project scope statement to define project boundaries, deliverables, exclusions, assumptions, and constraints.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 166,
+        "text": "Which of the following items needs to be carefully coordinated in the progressive detail of product characteristics in the project?",
+        "choices": [
+          "Appropriate definition of project scope",
+          "Project stakeholder",
+          "Scope change control system",
+          "Client strategic plan"
+        ],
+        "correct": 0,
+        "explanation": "Correct answer: A. The progressive detail of the project specifications needs to be carefully coordinated with an appropriate definition of scope, especially in the case of project execution under contract. Where the scope of the project (work to be performed) is properly defined, the scope of the project remains unchanged even if the product characteristics are progressively refined. Project Management Association, Project Management Knowledge System Guide, 2008, pp. 7 and 112."
+      },
+      {
+        "tag": "Project Charter",
+        "topic": "Charter and early planning inputs",
+        "chapterId": "pmbok-ch04-integration-management",
+        "domain": "Process",
+        "decisionRule": "Use the project charter and stakeholder register as key inputs before requirements and scope planning.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 167,
+        "text": "At what stage of life did the project charter come up?",
+        "choices": [
+          "Planning",
+          "Feasibility study",
+          "Executing",
+          "Initiating"
+        ],
+        "correct": 3,
+        "explanation": "Correct answer: D. The best answer is Initiating, based on the PMP scope-management logic tested in this question."
+      },
+      {
+        "tag": "Scope Management",
+        "topic": "PMP scope-management scenario",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 168,
+        "text": "As project complexity increases, what happens to the level of scope uncertainty?",
+        "choices": [
+          "It remains unchanged",
+          "It decreases",
+          "It decreases first and then increases",
+          "It increases"
+        ],
+        "correct": 3,
+        "explanation": "Correct answer: D. More complex projects usually carry greater uncertainty, including uncertainty around scope and related risks."
+      },
+      {
+        "tag": "Scope Management",
+        "topic": "PMP scope-management scenario",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 169,
+        "text": "What are the main sources of conflict at the project implementation and completion stages?",
+        "choices": [
+          "schedule",
+          "Technical issues",
+          "Personality",
+          "Cost"
+        ],
+        "correct": 0,
+        "explanation": "Correct answer: A. Analysis: See Dr. Kozna's Project Management: A System Approach to Planning, Progress and Control, the most important source of conflict in each phase of the project: • Initiating-up or concept — project priorities. • Development or planning — project priorities. Executing or enforcement — progress. • End or end — progress. So the answer is A."
+      },
+      {
+        "tag": "Define Scope",
+        "topic": "Project scope statement and boundaries",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Use the project scope statement to define project boundaries, deliverables, exclusions, assumptions, and constraints.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 170,
+        "text": "Which of the following statements on product and project scopes is correct? ( )?",
+        "choices": [
+          "Project scope services to product range",
+          "Changes in the scope of the project necessarily result in changes in the range of products",
+          "Changes in product ranges are bound to result in changes in project scopes",
+          "Product range for project encirclement"
+        ],
+        "correct": 0,
+        "explanation": "Correct answer: A. A. Correct answers. Once product ranges have been clarified, the work required to submit the product can be identified to ensure submission of the required product. It is not inevitable that changes will occur, for example, by adding a supplementary project work that may have no impact on the functioning of the product. C. Change is not inevitable, although it is likely to occur. That's not logical. Tests and answer techniques: Project scope and product range."
+      },
+      {
+        "tag": "Project Charter",
+        "topic": "Charter and early planning inputs",
+        "chapterId": "pmbok-ch04-integration-management",
+        "domain": "Process",
+        "decisionRule": "Use the project charter and stakeholder register as key inputs before requirements and scope planning.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 171,
+        "text": "Which of the following processes will not be directly exported from the project scope statement?",
+        "choices": [
+          "Development of project charters",
+          "Development of schedules",
+          "Planning risk management",
+          "Order of activities"
+        ],
+        "correct": 0,
+        "explanation": "Correct answer: A. The best answer is Development of project charters, based on the PMP scope-management logic tested in this question."
+      },
+      {
+        "tag": "Scope Management",
+        "topic": "PMP scope-management scenario",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 172,
+        "text": "When should Validate Scope be done?",
+        "choices": [
+          "At the end of the project",
+          "At the beginning of the project",
+          "At the end of each phase of the project",
+          "During the planning processes"
+        ],
+        "correct": 2,
+        "explanation": "Correct answer: C. The Validate Scope is a process to obtain recognition of results from stakeholders. The process is different from the stage, and the process needs to take place at each stage. Reference: PMBOK2008 P123."
+      },
+      {
+        "tag": "Define Scope",
+        "topic": "Project scope statement and boundaries",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Use the project scope statement to define project boundaries, deliverables, exclusions, assumptions, and constraints.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 173,
+        "text": "Which process group was the project scope statement created?",
+        "choices": [
+          "Initiating",
+          "Planning",
+          "Executing",
+          "Monitor"
+        ],
+        "correct": 1,
+        "explanation": "Correct answer: B. The best answer is Planning, based on the PMP scope-management logic tested in this question."
+      },
+      {
+        "tag": "Define Scope",
+        "topic": "Project scope statement and boundaries",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Use the project scope statement to define project boundaries, deliverables, exclusions, assumptions, and constraints.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 174,
+        "text": "Your team has been working on a contract for three years. Yesterday you were informed that your client had exhausted all his resources and would terminate the contract because of the buyer's convenience. The first thing you have to do is...?",
+        "choices": [
+          "Submit work products up to then to client representatives",
+          "Document lessons learned",
+          "Level and extent of completed work established and documented",
+          "Closure of the project office and reassignment of all personnel"
+        ],
+        "correct": 2,
+        "explanation": "Correct answer: C. The establishment and written recording of the level and extent of work done is part of the verification of the formal acceptance project scope. If the project is terminated before completion, the degree of completion of the project shall be determined and recorded."
+      },
+      {
+        "tag": "Create WBS",
+        "topic": "WBS and decomposition",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 175,
+        "text": "Which of the following is NOT an input to the initiating process group?",
+        "choices": [
+          "Company processes",
+          "Company",
+          "Ulture C. Historical WBSs",
+          "Project scope statement"
+        ],
+        "correct": 3,
+        "explanation": "Correct answer: D. The scope description is the output of the scope defined by the Planning Process Group. Reference: PMBOK2008 P115."
+      },
+      {
+        "tag": "Collect Requirements",
+        "topic": "Requirements documentation and traceability",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Elicit, document, and trace stakeholder requirements before defining scope or building the WBS.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 176,
+        "text": "The relationship between the Validate Scope process and the implementation of the quality control process is ().?",
+        "choices": [
+          "Qualified deliverables for quality verification",
+          "Quality checks can only be carried out if deliverables are verified by scope to meet requirements",
+          "Quality checks or scope checks should be performed on the basis of specific needs",
+          "Quality checks and scope checks can normally be performed simultaneously"
+        ],
+        "correct": 0,
+        "explanation": "Correct answer: A. A. Correct answers. Executing of the quality control process is `confirmed deliverables' and `confirmed deliverables' are submitted to the Validate Scope process for acceptance. B. Quality control usually followed by Validate Scope. C. Generally perform quality control and then Validate Scope. Quality control is usually followed by Validate Scope; in some cases these two tasks can be performed simultaneously. See: PMBOK Guide, p. 123. Points and answer techniques: The relationship between quality control and Validate Scope."
+      },
+      {
+        "tag": "Create WBS",
+        "topic": "WBS and decomposition",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 177,
+        "text": "Which output of Collect Requirements directly affects the creation of work breakdown structures?",
+        "choices": [
+          "Requirements traceability matrix",
+          "project charter",
+          "Request File",
+          "Needs management plan"
+        ],
+        "correct": 2,
+        "explanation": "Correct answer: C. The best answer is Request File, based on the PMP scope-management logic tested in this question."
+      },
+      {
+        "tag": "Create WBS",
+        "topic": "WBS and decomposition",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 178,
+        "text": "Which of the following documents is not input to the validation scope process?",
+        "choices": [
+          "Project management plan",
+          "Recognized deliverables",
+          "Requirements traceability matrix",
+          "RACI Allocation Matrix"
+        ],
+        "correct": 3,
+        "explanation": "Correct answer: D. The best answer is RACI Allocation Matrix, based on the PMP scope-management logic tested in this question."
+      },
+      {
+        "tag": "Collect Requirements",
+        "topic": "Requirements documentation and traceability",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Elicit, document, and trace stakeholder requirements before defining scope or building the WBS.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 179,
+        "text": "At the conceptual stage of the project life cycle, management expressed the wish that the benefits of each new project should outweigh the development costs. These are the following examples of what:?",
+        "choices": [
+          "Assumptions",
+          "Constraints",
+          "Selection of items by constraint optimization",
+          "A technical requirement"
+        ],
+        "correct": 1,
+        "explanation": "Correct answer: B. The best answer is Constraints, based on the PMP scope-management logic tested in this question."
+      },
+      {
+        "tag": "Create WBS",
+        "topic": "WBS and decomposition",
+        "chapterId": "pmbok-ch05-scope-management",
+        "domain": "Process",
+        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "sourceSet": "pmp-classic-180-scope",
+        "sourceQuestionNumber": 180,
+        "text": "The project manager already has a project charter and a register of stakeholders, and what should be done next?",
+        "choices": [
+          "Develop the project management plan",
+          "Create work breakdown structure",
+          "Control Scope",
+          "Collect Requirements"
+        ],
+        "correct": 3,
+        "explanation": "Correct answer: D. The project charter and stakeholder register are key inputs to Collect Requirements, so the next step is to collect requirements."
       }
     ],
     "examConfig": {
-      "practiceQuestionCount": 839,
+      "practiceQuestionCount": 1069,
       "domainTargets": [
         {
           "domain": "People",
           "weight": 33,
-          "practiceCount": 277
+          "practiceCount": 298
         },
         {
           "domain": "Process",
           "weight": 41,
-          "practiceCount": 344
+          "practiceCount": 546
         },
         {
           "domain": "Business Environment",
           "weight": 26,
-          "practiceCount": 218
+          "practiceCount": 225
         }
       ],
       "chapterTargets": [
@@ -22000,7 +26600,7 @@ const examCatalog = [
           "chapterNumber": 2,
           "chapterTitle": "Project Environment",
           "domain": "Business Environment",
-          "practiceCount": 44
+          "practiceCount": 45
         },
         {
           "chapterId": "pmbok-ch03-project-manager-role",
@@ -22014,21 +26614,21 @@ const examCatalog = [
           "chapterNumber": 4,
           "chapterTitle": "Project Integration Management",
           "domain": "Process",
-          "practiceCount": 117
+          "practiceCount": 135
         },
         {
           "chapterId": "pmbok-ch05-scope-management",
           "chapterNumber": 5,
           "chapterTitle": "Project Scope Management",
           "domain": "Process",
-          "practiceCount": 81
+          "practiceCount": 255
         },
         {
           "chapterId": "pmbok-ch06-schedule-management",
           "chapterNumber": 6,
           "chapterTitle": "Project Schedule Management",
           "domain": "Process",
-          "practiceCount": 70
+          "practiceCount": 81
         },
         {
           "chapterId": "pmbok-ch07-cost-management",
@@ -22042,28 +26642,28 @@ const examCatalog = [
           "chapterNumber": 8,
           "chapterTitle": "Project Quality Management",
           "domain": "Process",
-          "practiceCount": 61
+          "practiceCount": 64
         },
         {
           "chapterId": "pmbok-ch09-resource-management",
           "chapterNumber": 9,
           "chapterTitle": "Project Resource Management",
           "domain": "People",
-          "practiceCount": 82
+          "practiceCount": 99
         },
         {
           "chapterId": "pmbok-ch10-communications-management",
           "chapterNumber": 10,
           "chapterTitle": "Project Communications Management",
           "domain": "People",
-          "practiceCount": 61
+          "practiceCount": 63
         },
         {
           "chapterId": "pmbok-ch11-risk-management",
           "chapterNumber": 11,
           "chapterTitle": "Project Risk Management",
           "domain": "Process",
-          "practiceCount": 61
+          "practiceCount": 63
         },
         {
           "chapterId": "pmbok-ch12-procurement-management",
@@ -22077,12 +26677,12 @@ const examCatalog = [
           "chapterNumber": 13,
           "chapterTitle": "Project Stakeholder Management",
           "domain": "People",
-          "practiceCount": 62
+          "practiceCount": 64
         }
       ]
     },
     "bankConfig": {
-      "practiceQuestionCount": 839,
+      "practiceQuestionCount": 1069,
       "examQuestionCount": 180,
       "practiceOutlineType": "chapters",
       "examAvailable": true
@@ -22110,7 +26710,7 @@ const examCatalog = [
     "done": 0,
     "accuracy": 0,
     "weak": "None",
-    "eta": "Start to estimate",
+    "eta": "Initiating to estimate",
     "description": "1000-question CAPM fundamentals practice bank with immediate explanations and local mistake review.",
     "examConfig": {
       "practiceQuestionCount": 1000,

@@ -17,7 +17,7 @@
 - Create: `_private/verify-question-bank-structure.mjs`
 
 - [ ] Add `bankConfig` metadata to each exam catalog item:
-  - PMP: `practiceQuestionCount: 839`, `examQuestionCount: 0`, `practiceOutlineType: "chapters"`, `examAvailable: false`.
+- PMP: `practiceQuestionCount: 1069`, `examQuestionCount: 0`, `practiceOutlineType: "chapters"`, `examAvailable: false`.
   - CAPM: `practiceQuestionCount: 1000`, `examQuestionCount: 0`, `practiceOutlineType: "domains"`, `examAvailable: false`.
 - [ ] Ensure each current question has `bankType: "practice"` or derive it in validation when absent. Do not create any `bankType: "exam"` records.
 - [ ] Write `_private/verify-question-bank-structure.mjs` to assert:

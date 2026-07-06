@@ -79,7 +79,7 @@ const programText = {
       title: "PMP knowledge-point practice",
       subtitle: "For experienced project leaders",
       badge: "PMP",
-      description: "Practice 839 PMP domain and chapter questions with immediate explanations and local mistake review.",
+    description: "Practice 1069 PMP domain and chapter questions with immediate explanations and local mistake review.",
       coverage: ["People", "Process", "Business environment", "Agile", "Hybrid delivery"]
     },
     capm: {
@@ -563,7 +563,7 @@ function renderDomainOutline(exam) {
   elements.domainOutline.hidden = false;
   if (elements.domainOutlineCount) {
     elements.domainOutlineCount.textContent = exam.id === "pmp"
-      ? "2026 official PMP exam outline: 839 practice questions across People 33%, Process 41%, and Business Environment 26%."
+    ? "2026 official PMP exam outline: 1069 practice questions across People 33%, Process 41%, and Business Environment 26%."
       : `${text.badge}: ${domains.reduce((sum, domain) => sum + domain.count, 0)} practice questions across ${domains.length} domains.`;
   }
 
