@@ -8,6 +8,7 @@ export const seoPages = [
   { path: "prompts/pmp-exam-operations-prompts.html", lastmod: "2026-07-05", index: true, schema: ["LearningResource", "Article", "BreadcrumbList"] },
   { path: "prompts/pmp-research-prompts.html", lastmod: "2026-07-05", index: true, schema: ["LearningResource", "Article", "BreadcrumbList"] },
   { path: "prompts/pmp-career-value-prompts.html", lastmod: "2026-07-05", index: true, schema: ["LearningResource", "Article", "BreadcrumbList"] },
+  { path: "prompts/project-manager-ai-prompts.html", lastmod: "2026-07-06", index: true, schema: ["LearningResource", "Article", "BreadcrumbList"] },
   { path: "practice.html", lastmod: "2026-07-04", index: true, schema: ["LearningResource", "BreadcrumbList", "ItemList"] },
   { path: "pmp-questions.html", lastmod: "2026-07-04", index: true, schema: ["LearningResource", "BreadcrumbList", "ItemList"] },
   { path: "pmp-mock-exam.html", lastmod: "2026-07-04", index: true, schema: ["LearningResource", "BreadcrumbList"] },
