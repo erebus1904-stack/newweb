@@ -10,6 +10,7 @@ const promptPages = [
   "prompts/project-manager-ai-prompts.html",
 ];
 
+const weeklyReviewDoc = "docs/seo/search-console-weekly-review.md";
 const sitemap = readFileSync("sitemap.xml", "utf8");
 const failures = [];
 
@@ -55,9 +56,30 @@ for (const page of promptPages) {
   }
 }
 
+if (!existsSync(weeklyReviewDoc)) {
+  failures.push(`${weeklyReviewDoc} does not exist`);
+} else {
+  const reviewDoc = readFileSync(weeklyReviewDoc, "utf8");
+  for (const page of promptPages) {
+    if (!reviewDoc.includes(page)) failures.push(`${weeklyReviewDoc} missing ${page}`);
+  }
+
+  const requiredReviewSignals = [
+    "High impressions, low CTR",
+    "Average position 8-20",
+    "Indexed but no impressions",
+    "Crawled but not indexed",
+    "Prompt pages with traffic but low conversion",
+  ];
+
+  for (const signal of requiredReviewSignals) {
+    if (!reviewDoc.includes(signal)) failures.push(`${weeklyReviewDoc} missing review signal "${signal}"`);
+  }
+}
+
 if (failures.length) {
   failures.forEach((failure) => console.error(`FAIL ${failure}`));
   process.exit(1);
 }
 
-console.log("PASS prompt SEO pages include required schema, links, prompt cards, and sitemap coverage.");
+console.log("PASS prompt SEO pages and weekly Search Console review process are covered.");
