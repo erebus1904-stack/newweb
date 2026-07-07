@@ -82,9 +82,9 @@ One thing that helped me more than doing more questions was reviewing why I pick
 
 X：
 
-- [ ] 发布下面文案。
-- [ ] 不带链接。
-- [ ] 发布后记录 URL：
+- [x] 发布下面文案。
+- [x] 不带链接。
+- [x] 发布后记录 URL：
 
 ```text
 PMP prep tip: don't just count wrong answers.
@@ -101,9 +101,9 @@ That review is usually worth more than another random quiz set.
 
 Reddit：
 
-- [ ] 找 r/PMP 中关于错题、mock review、Study Hall 分数的帖子。
-- [ ] 评论下面内容，不带链接。
-- [ ] 评论后记录 URL：
+- [x] 找 r/PMP 中关于错题、mock review、Study Hall 分数的帖子。
+- [x] 评论下面内容，不带链接。
+- [x] 评论后记录 URL：
 
 ```text
 I found it more useful to tag the type of miss instead of just counting wrong answers. Some misses are concept gaps, but a lot of PMP misses are decision-order mistakes: acting too early, escalating too soon, or skipping impact analysis.
@@ -111,9 +111,9 @@ I found it more useful to tag the type of miss instead of just counting wrong an
 
 结果记录：
 
-- X URL:
-- Reddit comment URL:
-- 互动/备注:
+- X URL: `https://x.com/xingyunMG/status/2074391868327211060`
+- Reddit comment URL: `https://www.reddit.com/r/pmp/comments/1u6ljkl/how_to_review_wrong_answers/ow1gnga/`
+- 互动/备注: Day 2 已完成：X 发错题分类方法帖；Reddit 在 r/PMP 错题复盘帖下评论，不带链接。
 
 ### Day 3 - 2026-07-08 - AI prompts 首次露出
 
