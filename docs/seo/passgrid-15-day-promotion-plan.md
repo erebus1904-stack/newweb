@@ -121,9 +121,9 @@ I found it more useful to tag the type of miss instead of just counting wrong an
 
 X：
 
-- [ ] 发布下面文案。
-- [ ] 带链接：`https://starrycesium.com/pmp-ai-prompts.html`
-- [ ] 发布后记录 URL：
+- [x] 发布下面文案。
+- [x] 带链接：`https://starrycesium.com/pmp-ai-prompts.html`
+- [x] 发布后记录 URL：
 
 ```text
 I added a small PMP AI prompts hub to PassGrid.
@@ -140,8 +140,8 @@ https://starrycesium.com/pmp-ai-prompts.html
 
 Reddit：
 
-- [ ] 找 1 个提到 ChatGPT、Claude、AI study、review explanations 的帖子。
-- [ ] 评论下面内容，不带链接。
+- [x] 找 1 个提到 ChatGPT、Claude、AI study、review explanations 的帖子。
+- [x] 评论下面内容，不带链接。
 
 ```text
 AI helped me most when I gave it a specific job. "Explain PMP" was too broad. Better prompts were things like: classify this missed question, tell me what clue I missed, and give me one rule to remember next time.
@@ -149,9 +149,9 @@ AI helped me most when I gave it a specific job. "Explain PMP" was too broad. Be
 
 结果记录：
 
-- X URL:
-- Reddit comment URL:
-- 互动/备注:
+- X URL: `https://x.com/xingyunMG/status/2074683970609086790`
+- Reddit comment URL: `https://www.reddit.com/r/pmp/comments/1uoi0rx/passed_pmp_atatat_full_study_timeline_mock_scores/ow7pluj/`
+- 互动/备注: Day 3 已完成：AI prompts 页面返回 200 OK；X 发布 AI prompts hub 链接；Reddit 在 r/PMP 提到 Claude/ChatGPT 复盘错题的帖子下评论，不带链接。
 
 ### Day 4 - 2026-07-09 - PMP timing / mock exam
 
