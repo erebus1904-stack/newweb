@@ -1,22 +1,281 @@
 {
-  "generatedAt": "2026-07-04T14:05:22.511Z",
-  "status": "PASS",
-  "overallScore": 100,
-  "declaredTotalQuestions": 2019,
+  "generatedAt": "2026-07-08T07:20:03.208Z",
+  "status": "PASS_WITH_WARNINGS",
+  "overallScore": 89,
+  "declaredTotalQuestions": 2249,
   "totalExams": 2,
-  "totalQuestions": 2019,
+  "totalQuestions": 2249,
   "totalErrors": 0,
-  "totalWarnings": 0,
+  "totalWarnings": 43,
   "globalErrors": [],
   "exams": [
     {
       "id": "pmp",
-      "questionCount": 839,
-      "actualQuestions": 1019,
-      "score": 100,
-      "status": "PASS",
+      "questionCount": 1069,
+      "actualQuestions": 1249,
+      "score": 78,
+      "status": "PASS_WITH_WARNINGS",
       "errors": [],
-      "warnings": [],
+      "warnings": [
+        {
+          "code": "short_text",
+          "message": "pmp#1027 question text is short.",
+          "examId": "pmp",
+          "index": 1027
+        },
+        {
+          "code": "short_text",
+          "message": "pmp#1038 question text is short.",
+          "examId": "pmp",
+          "index": 1038
+        },
+        {
+          "code": "short_text",
+          "message": "pmp#1101 question text is short.",
+          "examId": "pmp",
+          "index": 1101
+        },
+        {
+          "code": "duplicate_text",
+          "message": "pmp#1109 duplicates question 1076.",
+          "examId": "pmp",
+          "index": 1109
+        },
+        {
+          "code": "duplicate_explanation",
+          "message": "pmp#1109 duplicates explanation 1076.",
+          "examId": "pmp",
+          "index": 1109
+        },
+        {
+          "code": "short_text",
+          "message": "pmp#1119 question text is short.",
+          "examId": "pmp",
+          "index": 1119
+        },
+        {
+          "code": "duplicate_text",
+          "message": "pmp#1123 duplicates question 1070.",
+          "examId": "pmp",
+          "index": 1123
+        },
+        {
+          "code": "duplicate_explanation",
+          "message": "pmp#1123 duplicates explanation 1070.",
+          "examId": "pmp",
+          "index": 1123
+        },
+        {
+          "code": "duplicate_text",
+          "message": "pmp#1133 duplicates question 1118.",
+          "examId": "pmp",
+          "index": 1133
+        },
+        {
+          "code": "duplicate_explanation",
+          "message": "pmp#1133 duplicates explanation 1118.",
+          "examId": "pmp",
+          "index": 1133
+        },
+        {
+          "code": "short_explanation",
+          "message": "pmp#1141 explanation is short.",
+          "examId": "pmp",
+          "index": 1141
+        },
+        {
+          "code": "duplicate_text",
+          "message": "pmp#1142 duplicates question 1073.",
+          "examId": "pmp",
+          "index": 1142
+        },
+        {
+          "code": "duplicate_explanation",
+          "message": "pmp#1142 duplicates explanation 1073.",
+          "examId": "pmp",
+          "index": 1142
+        },
+        {
+          "code": "duplicate_explanation",
+          "message": "pmp#1143 duplicates explanation 1107.",
+          "examId": "pmp",
+          "index": 1143
+        },
+        {
+          "code": "duplicate_text",
+          "message": "pmp#1155 duplicates question 1112.",
+          "examId": "pmp",
+          "index": 1155
+        },
+        {
+          "code": "duplicate_explanation",
+          "message": "pmp#1155 duplicates explanation 1112.",
+          "examId": "pmp",
+          "index": 1155
+        },
+        {
+          "code": "short_text",
+          "message": "pmp#1156 question text is short.",
+          "examId": "pmp",
+          "index": 1156
+        },
+        {
+          "code": "duplicate_text",
+          "message": "pmp#1158 duplicates question 1076.",
+          "examId": "pmp",
+          "index": 1158
+        },
+        {
+          "code": "duplicate_explanation",
+          "message": "pmp#1158 duplicates explanation 1076.",
+          "examId": "pmp",
+          "index": 1158
+        },
+        {
+          "code": "duplicate_text",
+          "message": "pmp#1162 duplicates question 1137.",
+          "examId": "pmp",
+          "index": 1162
+        },
+        {
+          "code": "duplicate_explanation",
+          "message": "pmp#1162 duplicates explanation 1137.",
+          "examId": "pmp",
+          "index": 1162
+        },
+        {
+          "code": "short_text",
+          "message": "pmp#1165 question text is short.",
+          "examId": "pmp",
+          "index": 1165
+        },
+        {
+          "code": "duplicate_text",
+          "message": "pmp#1165 duplicates question 1156.",
+          "examId": "pmp",
+          "index": 1165
+        },
+        {
+          "code": "short_text",
+          "message": "pmp#1178 question text is short.",
+          "examId": "pmp",
+          "index": 1178
+        },
+        {
+          "code": "short_text",
+          "message": "pmp#1179 question text is short.",
+          "examId": "pmp",
+          "index": 1179
+        },
+        {
+          "code": "duplicate_text",
+          "message": "pmp#1186 duplicates question 1134.",
+          "examId": "pmp",
+          "index": 1186
+        },
+        {
+          "code": "duplicate_explanation",
+          "message": "pmp#1186 duplicates explanation 1134.",
+          "examId": "pmp",
+          "index": 1186
+        },
+        {
+          "code": "duplicate_text",
+          "message": "pmp#1191 duplicates question 1105.",
+          "examId": "pmp",
+          "index": 1191
+        },
+        {
+          "code": "duplicate_text",
+          "message": "pmp#1204 duplicates question 1151.",
+          "examId": "pmp",
+          "index": 1204
+        },
+        {
+          "code": "duplicate_explanation",
+          "message": "pmp#1204 duplicates explanation 1151.",
+          "examId": "pmp",
+          "index": 1204
+        },
+        {
+          "code": "duplicate_text",
+          "message": "pmp#1207 duplicates question 1172.",
+          "examId": "pmp",
+          "index": 1207
+        },
+        {
+          "code": "duplicate_explanation",
+          "message": "pmp#1207 duplicates explanation 1172.",
+          "examId": "pmp",
+          "index": 1207
+        },
+        {
+          "code": "short_text",
+          "message": "pmp#1215 question text is short.",
+          "examId": "pmp",
+          "index": 1215
+        },
+        {
+          "code": "short_text",
+          "message": "pmp#1216 question text is short.",
+          "examId": "pmp",
+          "index": 1216
+        },
+        {
+          "code": "short_text",
+          "message": "pmp#1218 question text is short.",
+          "examId": "pmp",
+          "index": 1218
+        },
+        {
+          "code": "duplicate_text",
+          "message": "pmp#1220 duplicates question 1122.",
+          "examId": "pmp",
+          "index": 1220
+        },
+        {
+          "code": "duplicate_explanation",
+          "message": "pmp#1220 duplicates explanation 1122.",
+          "examId": "pmp",
+          "index": 1220
+        },
+        {
+          "code": "duplicate_text",
+          "message": "pmp#1223 duplicates question 1214.",
+          "examId": "pmp",
+          "index": 1223
+        },
+        {
+          "code": "duplicate_explanation",
+          "message": "pmp#1223 duplicates explanation 1214.",
+          "examId": "pmp",
+          "index": 1223
+        },
+        {
+          "code": "duplicate_text",
+          "message": "pmp#1239 duplicates question 1073.",
+          "examId": "pmp",
+          "index": 1239
+        },
+        {
+          "code": "duplicate_explanation",
+          "message": "pmp#1239 duplicates explanation 1073.",
+          "examId": "pmp",
+          "index": 1239
+        },
+        {
+          "code": "duplicate_text",
+          "message": "pmp#1240 duplicates question 1139.",
+          "examId": "pmp",
+          "index": 1240
+        },
+        {
+          "code": "duplicate_explanation",
+          "message": "pmp#1240 duplicates explanation 1139.",
+          "examId": "pmp",
+          "index": 1240
+        }
+      ],
       "tagDistribution": {
         "Stakeholders": 53,
         "Team": 53,
@@ -39,7 +298,7 @@
         "Configuration": 10,
         "Lessons learned": 10,
         "Acceptance": 10,
-        "Estimation": 10,
+        "Estimation": 11,
         "Benefits": 4,
         "Compliance": 4,
         "Strategy": 4,
@@ -127,13 +386,61 @@
         "Chapter 13: Monitor stakeholder engagement": 5,
         "Change Control": 13,
         "Agile": 12,
-        "Project Management": 4
+        "Project Management": 4,
+        "Project Charter": 11,
+        "Transparency": 1,
+        "Information Radiator": 1,
+        "Impediment Removal": 1,
+        "Value and Risk": 2,
+        "Iteration Planning": 1,
+        "Scrum of Scrums": 1,
+        "Agile Mindset": 1,
+        "Story Points": 3,
+        "Agile Risk": 1,
+        "Team Learning": 1,
+        "User Story": 2,
+        "Velocity": 1,
+        "Sprint Execution": 1,
+        "Agile Estimation": 1,
+        "Agile Team": 1,
+        "Working Agreements": 1,
+        "Refactoring": 1,
+        "Velocity Forecasting": 1,
+        "Cross-functional Team": 3,
+        "Progressive Elaboration": 1,
+        "Kanban": 1,
+        "Servant Leadership": 1,
+        "Empowerment": 1,
+        "Sprint Scope": 1,
+        "Risk Visibility": 1,
+        "Pair Programming": 1,
+        "Self-organizing Team": 1,
+        "Facilitation": 1,
+        "Definition of Ready": 1,
+        "Empowered Team": 1,
+        "Minimum Marketable Feature": 1,
+        "Backlog Priority": 2,
+        "Team Space": 1,
+        "Empirical Process Control": 1,
+        "Cumulative Flow Diagram": 2,
+        "Product Backlog": 1,
+        "Scrum Team": 1,
+        "Sprint Review": 1,
+        "Planning Poker": 1,
+        "Product Value": 1,
+        "Define Scope": 24,
+        "Create WBS": 55,
+        "Collect Requirements": 22,
+        "Control Scope": 11,
+        "Scope Management": 50,
+        "Validate Scope": 7,
+        "Project Environment": 1
       },
       "answerDistribution": {
-        "A": 239,
-        "B": 255,
-        "C": 264,
-        "D": 261
+        "A": 298,
+        "B": 313,
+        "C": 314,
+        "D": 324
       }
     },
     {
