@@ -159,10 +159,10 @@ AI helped me most when I gave it a specific job. "Explain PMP" was too broad. Be
 
 X：
 
-- [ ] 发布下面文案。
-- [ ] 可带链接：`https://starrycesium.com/pmp-mock-exam.html`
-- [ ] 发布前确认页面没有明显旧文案或错误计时。
-- [ ] 发布后记录 URL：
+- [x] 发布下面文案。
+- [x] 可带链接：`https://starrycesium.com/pmp-mock-exam.html`
+- [x] 发布前确认页面没有明显旧文案或错误计时。
+- [x] 发布后记录 URL：
 
 ```text
 For PMP mock exams, I prefer rough checkpoints instead of checking the clock after every question.
@@ -176,8 +176,8 @@ https://starrycesium.com/pmp-mock-exam.html
 
 Reddit：
 
-- [ ] 找 r/PMP 中关于 mock exam timing、exam pacing、time pressure 的帖子。
-- [ ] 评论下面内容，不带链接。
+- [x] 找 r/PMP 中关于 mock exam timing、exam pacing、time pressure 的帖子。
+- [x] 评论下面内容，不带链接。
 
 ```text
 For timing, I would avoid checking the clock after every question. It makes the exam feel worse. I would rather use rough checkpoints: after 60 questions, after 120 questions, then leave the last section for flagged items and tired-brain mistakes.
@@ -185,9 +185,9 @@ For timing, I would avoid checking the clock after every question. It makes the 
 
 结果记录：
 
-- X URL:
-- Reddit comment URL:
-- 互动/备注:
+- X URL: `https://x.com/xingyunMG/status/2075396815017693644`
+- Reddit comment URL: `https://www.reddit.com/r/pmp/comments/1l2tx4h/passed_long_and_detailed_walkthrough_for_the/owm5mjk/`
+- 互动/备注: Day 4 已完成：mock exam 页面返回 200 OK，本地内容确认 180 题、230 分钟、60/120 粗检查点一致；X 发布 mock timing 链接；Reddit 在 r/PMP time management / mock exam 相关帖下评论，不带链接。OpenCLI Reddit 搜索当天不稳定，改用已读取且相关的帖子执行。
 
 ### Day 5 - 2026-07-10 - Reddit 第一次软露出
 
@@ -195,9 +195,9 @@ For timing, I would avoid checking the clock after every question. It makes the 
 
 X：
 
-- [ ] 发布下面文案。
-- [ ] 不带链接。
-- [ ] 发布后记录 URL：
+- [x] 发布下面文案。
+- [x] 不带链接。
+- [x] 发布后记录 URL：
 
 ```text
 If your PMP mock score is weak, another full mock may not be the fastest fix.
@@ -214,9 +214,9 @@ Repair that topic first. Then retest with mixed questions.
 
 Reddit：
 
-- [ ] 找 r/PMP 中有人问 extra practice、free questions、domain practice、weak areas 的帖子。
-- [ ] 只有在上下文合适时发下面评论。
-- [ ] 带首页链接。
+- [x] 找 r/PMP 中有人问 extra practice、free questions、domain practice、weak areas 的帖子。
+- [x] 只有在上下文合适时发下面评论。
+- [x] 带首页链接。
 
 ```text
 I have been putting together a free PMP/CAPM practice site mainly for drilling weak areas and reviewing missed questions. It is not meant to replace Study Hall, but it may help if you want extra domain-based practice.
@@ -229,9 +229,9 @@ Would be interested to hear if the domain split or review flow feels useful.
 
 结果记录：
 
-- X URL:
-- Reddit comment URL:
-- 互动/备注:
+- X URL: `https://x.com/xingyunMG/status/2076515644665987152`
+- Reddit comment URL: `https://www.reddit.com/r/pmp/comments/1ukm953/looking_for_free_pmp_updated_study_resources/ox7jipb/`
+- 互动/备注: Day 5 已完成：首页返回 200 OK；X 发布弱项聚类复盘帖，不带链接；Reddit 在 r/PMP 明确询问免费 PMP 资源、roadmap、practice questions 和 mock exams 的帖子下透明说明 PassGrid，带首页链接。
 
 ### Day 6 - 2026-07-11 - CAPM 基础
 
@@ -239,9 +239,9 @@ Would be interested to hear if the domain split or review flow feels useful.
 
 X：
 
-- [ ] 发布下面文案。
-- [ ] 带链接：`https://starrycesium.com/capm-questions.html`
-- [ ] 发布后记录 URL：
+- [x] 发布下面文案。
+- [x] 带链接：`https://starrycesium.com/capm-questions.html`
+- [x] 发布后记录 URL：
 
 ```text
 CAPM prep is mostly foundation repair.
@@ -260,8 +260,8 @@ https://starrycesium.com/capm-questions.html
 
 Reddit：
 
-- [ ] 找 CAPM、beginner、new to project management 相关帖子。
-- [ ] 评论下面内容，不带链接，除非对方明确要免费练习题。
+- [x] 找 CAPM、beginner、new to project management 相关帖子。
+- [x] 评论下面内容，不带链接，除非对方明确要免费练习题。
 
 ```text
 For CAPM, I would start with vocabulary stability before doing mixed practice. If risk vs issue, project vs program, or acceptance criteria vs requirements still feels fuzzy, random question sets can make review messy.
@@ -269,9 +269,9 @@ For CAPM, I would start with vocabulary stability before doing mixed practice. I
 
 结果记录：
 
-- X URL:
-- Reddit comment URL:
-- 互动/备注:
+- X URL: https://x.com/xingyunMG/status/2077229382003986606
+- Reddit comment URL: https://www.reddit.com/r/capm/comments/1tqnxeu/passed_capm_atatatat_study_tips_for_beginners/oxlyboa/
+- 互动/备注: 2026-07-15 补发。X 推广 CAPM questions；Reddit 在 CAPM 初学者学习建议帖下评论，未附链接。
 
 ### Day 7 - 2026-07-12 - Study prompts
 
