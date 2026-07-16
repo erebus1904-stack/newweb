@@ -63,7 +63,7 @@ The synchronization script will:
 1. Load and validate the replacement source module.
 2. Parse the PMP practice-question array boundaries in `data.js` without reformatting unrelated catalog content.
 3. Replace only question elements 840–1069.
-4. Preserve every byte outside the serialized question elements at positions 840–1069.
+4. Preserve every byte outside the serialized question elements at positions 840–1069 and the PMP `domainTargets` / `chapterTargets` count fields that must be synchronized with the new content.
 5. Write deterministic output so a second run produces no diff.
 
 A verification check will compare the deployed segment with the private source records. Any content drift between them is a failure.
@@ -126,6 +126,7 @@ Passing scripts are necessary but not sufficient. A final sampling review will e
 - Positions 840–1069 match the approved 230-record source set.
 - Final domain totals are exactly People 353, Process 438, and Business Environment 278.
 - Replacement-block totals are exactly People 76, Process 94, and Business Environment 60.
+- PMP `domainTargets` and `chapterTargets` counts match the refreshed practice bank.
 - All focused and existing relevant validators exit successfully.
 - The synchronization script is idempotent.
 - The coverage report is generated from current data and reports no required-domain gap.
