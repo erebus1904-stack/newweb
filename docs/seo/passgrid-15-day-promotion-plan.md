@@ -279,9 +279,9 @@ For CAPM, I would start with vocabulary stability before doing mixed practice. I
 
 X：
 
-- [ ] 发布下面文案。
-- [ ] 带链接：`https://starrycesium.com/prompts/pmp-study-prompts.html`
-- [ ] 发布后记录 URL：
+- [x] 发布下面文案。
+- [x] 带链接：`https://starrycesium.com/prompts/pmp-study-prompts.html`
+- [x] 发布后记录 URL：
 
 ```text
 AI is more useful for PMP prep when the prompt is narrow.
@@ -295,8 +295,8 @@ https://starrycesium.com/prompts/pmp-study-prompts.html
 
 Reddit：
 
-- [ ] 只评论，不带链接。
-- [ ] 找 study plan、30-day plan、last week prep 相关帖子。
+- [x] 只评论，不带链接。
+- [x] 找 study plan、30-day plan、last week prep 相关帖子。
 
 ```text
 For a short study window, I would not try to touch everything equally. I would pick the weakest two or three areas, do focused questions, review every miss, then use one mixed set to see whether the weakness still shows up without the topic label.
@@ -304,9 +304,9 @@ For a short study window, I would not try to touch everything equally. I would p
 
 结果记录：
 
-- X URL:
-- Reddit comment URL:
-- 互动/备注:
+- X URL: https://x.com/xingyunMG/status/2077642975849644095
+- Reddit comment URL: https://www.reddit.com/r/pmp/comments/1uljoii/success_story_passed_pmp_with_atatat_after_7/oxu6v41/
+- 互动/备注: 2026-07-16 补发。X 原计划文案为 315 字符，超过单帖限制；已压缩为 273 字符并保留窄提示词、7 天弱项计划、练习/复盘和链接。Reddit 在近期 PMP 复习经验帖下评论，未附链接。
 
 ### Day 8 - 2026-07-13 - Reddit 反馈帖
 

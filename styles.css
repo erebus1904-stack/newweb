@@ -4044,6 +4044,111 @@ body.legal-page .legal-section {
   padding: 30px;
 }
 
+body.legal-page .answer-first {
+  margin-top: 24px;
+  padding: 28px 30px;
+  border: 1px solid #c9d7ff;
+  border-left: 5px solid var(--pg-blue-2);
+  border-radius: 8px;
+  background: var(--pg-blue-soft);
+}
+
+body.legal-page .answer-first h2 {
+  margin: 0 0 10px;
+  color: var(--pg-ink);
+  font-size: clamp(24px, 3vw, 32px);
+}
+
+body.legal-page .answer-first p {
+  margin: 0;
+  color: #344054;
+  font-size: 18px;
+  line-height: 1.65;
+}
+
+body.legal-page .verification-note {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  margin: 16px 0 0;
+  color: #475467;
+  font-size: 14px;
+}
+
+body.legal-page .decision-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 22px;
+}
+
+body.legal-page .decision-card {
+  padding: 22px;
+  border: 1px solid var(--pg-line);
+  border-radius: 8px;
+  background: var(--pg-soft);
+}
+
+body.legal-page .decision-card h3 {
+  margin-top: 0;
+}
+
+body.legal-page .decision-table-wrap {
+  overflow-x: auto;
+  margin-top: 18px;
+}
+
+body.legal-page .decision-table {
+  width: 100%;
+  min-width: 680px;
+  border-collapse: collapse;
+}
+
+body.legal-page .decision-table th,
+body.legal-page .decision-table td {
+  padding: 14px 16px;
+  border: 1px solid var(--pg-line);
+  text-align: left;
+  vertical-align: top;
+}
+
+body.legal-page .decision-table th {
+  background: var(--pg-blue-soft);
+  color: var(--pg-ink);
+}
+
+body.legal-page .source-notes {
+  border-color: #d7dfef;
+  background: #fbfcff;
+}
+
+body.legal-page .source-notes ol {
+  margin: 18px 0 0;
+  padding-left: 22px;
+}
+
+body.legal-page .source-notes li + li {
+  margin-top: 14px;
+}
+
+body.legal-page .source-notes span {
+  display: block;
+  margin-top: 4px;
+  color: #667085;
+  font-size: 14px;
+}
+
+@media (max-width: 760px) {
+  body.legal-page .answer-first,
+  body.legal-page .legal-section {
+    padding: 24px;
+  }
+
+  body.legal-page .decision-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 body.legal-page .legal-section h2,
 body.legal-page .legal-section h3,
 body.legal-page .guide-card h3,
