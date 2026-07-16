@@ -16,6 +16,8 @@ import { refreshQuestions } from "./pmp-2026-refresh/index.mjs";
 
 const EXPECTED_EXAM_COUNT = 180;
 const EXPECTED_PRACTICE_COUNT = REFRESH_START + REFRESH_COUNT;
+const REPORT_ENDORSEMENT =
+  "This is PassGrid's educational mapping, not PMI endorsement of individual questions.";
 const MAX_DETAILED_FAILURES = 60;
 const privateDirectory = dirname(fileURLToPath(import.meta.url));
 const dataPath = resolve(privateDirectory, "..", "data.js");
@@ -57,13 +59,95 @@ function addAllocationFailures(failures, label, actual, expected) {
   }
 }
 
-function verifyReports(failures) {
+function reportCounts(rows) {
+  const counts = {};
+  for (const row of Array.isArray(rows) ? rows : []) {
+    counts[String(row?.name)] = row?.count;
+  }
+  return counts;
+}
+
+function percentage(count, total) {
+  return total === 0 ? 0 : Number(((count / total) * 100).toFixed(2));
+}
+
+function verifyReports(failures, practiceQuestions, refreshedQuestions) {
   if (!process.argv.includes("--require-report")) return;
 
-  for (const filename of ["pmp-2026-eco-coverage.json", "pmp-2026-eco-coverage.md"]) {
-    const reportPath = resolve(privateDirectory, "reports", filename);
-    if (!existsSync(reportPath)) {
-      failures.push(`required coverage report is missing: _private/reports/${filename}.`);
+  const jsonPath = resolve(privateDirectory, "reports", "pmp-2026-eco-coverage.json");
+  const markdownPath = resolve(privateDirectory, "reports", "pmp-2026-eco-coverage.md");
+  const hasJson = existsSync(jsonPath);
+  const hasMarkdown = existsSync(markdownPath);
+
+  if (!hasJson) {
+    failures.push(
+      "required coverage report is missing: _private/reports/pmp-2026-eco-coverage.json.",
+    );
+  }
+  if (!hasMarkdown) {
+    failures.push(
+      "required coverage report is missing: _private/reports/pmp-2026-eco-coverage.md.",
+    );
+  }
+
+  if (!Array.isArray(practiceQuestions) || !Array.isArray(refreshedQuestions)) return;
+
+  const expectedDomains = countBy(practiceQuestions, "domain");
+  const expectedRefreshedDomains = countBy(refreshedQuestions, "domain");
+
+  if (hasJson) {
+    try {
+      const report = JSON.parse(readFileSync(jsonPath, "utf8"));
+      addValueFailure(
+        failures,
+        "coverage report totalPracticeQuestions",
+        report.totalPracticeQuestions,
+        practiceQuestions.length,
+      );
+      addValueFailure(
+        failures,
+        "coverage report refreshedQuestions",
+        report.refreshedQuestions,
+        refreshedQuestions.length,
+      );
+      addValueFailure(
+        failures,
+        "coverage report endorsement",
+        report.endorsement,
+        REPORT_ENDORSEMENT,
+      );
+      addAllocationFailures(
+        failures,
+        "coverage report domain",
+        reportCounts(report.domains),
+        expectedDomains,
+      );
+      addAllocationFailures(
+        failures,
+        "coverage report refreshed domain",
+        reportCounts(report.refreshedDomains),
+        expectedRefreshedDomains,
+      );
+      if (!Array.isArray(report.gaps) || report.gaps.length !== 0) {
+        failures.push("coverage report gaps must be an empty array.");
+      }
+    } catch (error) {
+      failures.push(
+        `coverage JSON report could not be read: ${String(error?.message ?? error)}.`,
+      );
+    }
+  }
+
+  if (hasMarkdown) {
+    const markdown = readFileSync(markdownPath, "utf8");
+    for (const [name, count] of Object.entries(expectedDomains)) {
+      const row = `| ${name} | ${count} | ${percentage(count, practiceQuestions.length).toFixed(2)}% |`;
+      if (!markdown.includes(row)) {
+        failures.push(`coverage Markdown report is missing final domain row: ${row}`);
+      }
+    }
+    if (!markdown.includes(REPORT_ENDORSEMENT)) {
+      failures.push("coverage Markdown report is missing the non-endorsement note.");
     }
   }
 }
@@ -169,7 +253,7 @@ function verify() {
     metadataCounts(pmp.examConfig?.chapterTargets, "chapterId"),
     FINAL_CHAPTER_TARGETS,
   );
-  verifyReports(failures);
+  verifyReports(failures, practiceQuestions, deployedSlice);
 
   failures.push(
     ...validateRefreshSet(deployedSlice).map(

@@ -1,0 +1,485 @@
+{
+  "ecoVersion": "July 2026",
+  "mappingOwner": "PassGrid",
+  "endorsement": "This is PassGrid's educational mapping, not PMI endorsement of individual questions.",
+  "totalPracticeQuestions": 1069,
+  "refreshedQuestions": 230,
+  "domains": [
+    {
+      "name": "Business Environment",
+      "count": 278,
+      "percentage": 26.01
+    },
+    {
+      "name": "People",
+      "count": 353,
+      "percentage": 33.02
+    },
+    {
+      "name": "Process",
+      "count": 438,
+      "percentage": 40.97
+    }
+  ],
+  "refreshedDomains": [
+    {
+      "name": "Business Environment",
+      "count": 60,
+      "percentage": 26.09
+    },
+    {
+      "name": "People",
+      "count": 76,
+      "percentage": 33.04
+    },
+    {
+      "name": "Process",
+      "count": 94,
+      "percentage": 40.87
+    }
+  ],
+  "topics": [
+    {
+      "name": "AI and data governance",
+      "count": 5,
+      "percentage": 0.47
+    },
+    {
+      "name": "Acceptance criteria",
+      "count": 10,
+      "percentage": 0.94
+    },
+    {
+      "name": "Agile flow and backlog",
+      "count": 7,
+      "percentage": 0.65
+    },
+    {
+      "name": "Ambiguity",
+      "count": 10,
+      "percentage": 0.94
+    },
+    {
+      "name": "Authority threshold",
+      "count": 10,
+      "percentage": 0.94
+    },
+    {
+      "name": "Backlog priority",
+      "count": 10,
+      "percentage": 0.94
+    },
+    {
+      "name": "Baselined change",
+      "count": 11,
+      "percentage": 1.03
+    },
+    {
+      "name": "Benefits and value realization",
+      "count": 10,
+      "percentage": 0.94
+    },
+    {
+      "name": "Benefits realization",
+      "count": 4,
+      "percentage": 0.37
+    },
+    {
+      "name": "Coaching and mentoring",
+      "count": 8,
+      "percentage": 0.75
+    },
+    {
+      "name": "Communication",
+      "count": 9,
+      "percentage": 0.84
+    },
+    {
+      "name": "Communication plan mismatch",
+      "count": 11,
+      "percentage": 1.03
+    },
+    {
+      "name": "Competing stakeholder needs",
+      "count": 10,
+      "percentage": 0.94
+    },
+    {
+      "name": "Compliance",
+      "count": 9,
+      "percentage": 0.84
+    },
+    {
+      "name": "Conflict management",
+      "count": 9,
+      "percentage": 0.84
+    },
+    {
+      "name": "Cost",
+      "count": 7,
+      "percentage": 0.65
+    },
+    {
+      "name": "Delivery and acceptance",
+      "count": 9,
+      "percentage": 0.84
+    },
+    {
+      "name": "Distributed collaboration",
+      "count": 10,
+      "percentage": 0.94
+    },
+    {
+      "name": "Emotional intelligence",
+      "count": 8,
+      "percentage": 0.75
+    },
+    {
+      "name": "External environment and market change",
+      "count": 7,
+      "percentage": 0.65
+    },
+    {
+      "name": "Forecasting",
+      "count": 10,
+      "percentage": 0.94
+    },
+    {
+      "name": "Gold plating",
+      "count": 11,
+      "percentage": 1.03
+    },
+    {
+      "name": "Governance",
+      "count": 8,
+      "percentage": 0.75
+    },
+    {
+      "name": "Integration and change control",
+      "count": 10,
+      "percentage": 0.94
+    },
+    {
+      "name": "Introduction",
+      "count": 60,
+      "percentage": 5.61
+    },
+    {
+      "name": "Issue and knowledge management",
+      "count": 5,
+      "percentage": 0.47
+    },
+    {
+      "name": "Issue ownership",
+      "count": 10,
+      "percentage": 0.94
+    },
+    {
+      "name": "Knowledge transfer",
+      "count": 10,
+      "percentage": 0.94
+    },
+    {
+      "name": "Measurement and forecasting",
+      "count": 7,
+      "percentage": 0.65
+    },
+    {
+      "name": "Negotiation and decision making",
+      "count": 6,
+      "percentage": 0.56
+    },
+    {
+      "name": "Organizational change",
+      "count": 8,
+      "percentage": 0.75
+    },
+    {
+      "name": "Planning and adaptation",
+      "count": 8,
+      "percentage": 0.75
+    },
+    {
+      "name": "Procurement",
+      "count": 7,
+      "percentage": 0.65
+    },
+    {
+      "name": "Project Communications Management",
+      "count": 40,
+      "percentage": 3.74
+    },
+    {
+      "name": "Project Cost Management",
+      "count": 50,
+      "percentage": 4.68
+    },
+    {
+      "name": "Project Environment",
+      "count": 40,
+      "percentage": 3.74
+    },
+    {
+      "name": "Project Integration Management",
+      "count": 50,
+      "percentage": 4.68
+    },
+    {
+      "name": "Project Procurement Management",
+      "count": 50,
+      "percentage": 4.68
+    },
+    {
+      "name": "Project Quality Management",
+      "count": 50,
+      "percentage": 4.68
+    },
+    {
+      "name": "Project Resource Management",
+      "count": 50,
+      "percentage": 4.68
+    },
+    {
+      "name": "Project Risk Management",
+      "count": 50,
+      "percentage": 4.68
+    },
+    {
+      "name": "Project Schedule Management",
+      "count": 49,
+      "percentage": 4.58
+    },
+    {
+      "name": "Project Scope Management",
+      "count": 50,
+      "percentage": 4.68
+    },
+    {
+      "name": "Project Stakeholder Management",
+      "count": 30,
+      "percentage": 2.81
+    },
+    {
+      "name": "Quality",
+      "count": 8,
+      "percentage": 0.75
+    },
+    {
+      "name": "Regulatory impact",
+      "count": 4,
+      "percentage": 0.37
+    },
+    {
+      "name": "Resistance to change",
+      "count": 11,
+      "percentage": 1.03
+    },
+    {
+      "name": "Risk and uncertainty",
+      "count": 10,
+      "percentage": 0.94
+    },
+    {
+      "name": "Risk response",
+      "count": 11,
+      "percentage": 1.03
+    },
+    {
+      "name": "Role of the Project Manager",
+      "count": 20,
+      "percentage": 1.87
+    },
+    {
+      "name": "Root cause",
+      "count": 11,
+      "percentage": 1.03
+    },
+    {
+      "name": "Schedule",
+      "count": 8,
+      "percentage": 0.75
+    },
+    {
+      "name": "Schedule compression",
+      "count": 11,
+      "percentage": 1.03
+    },
+    {
+      "name": "Scope and requirements",
+      "count": 8,
+      "percentage": 0.75
+    },
+    {
+      "name": "Servant leadership",
+      "count": 11,
+      "percentage": 1.03
+    },
+    {
+      "name": "Skill gap",
+      "count": 10,
+      "percentage": 0.94
+    },
+    {
+      "name": "Stakeholder conflict",
+      "count": 11,
+      "percentage": 1.03
+    },
+    {
+      "name": "Stakeholder engagement",
+      "count": 10,
+      "percentage": 0.94
+    },
+    {
+      "name": "Strategic alignment",
+      "count": 10,
+      "percentage": 0.94
+    },
+    {
+      "name": "Supplier dispute",
+      "count": 10,
+      "percentage": 0.94
+    },
+    {
+      "name": "Sustainability and social impact",
+      "count": 7,
+      "percentage": 0.65
+    },
+    {
+      "name": "Team conflict",
+      "count": 11,
+      "percentage": 1.03
+    },
+    {
+      "name": "Team leadership",
+      "count": 10,
+      "percentage": 0.94
+    },
+    {
+      "name": "Team performance",
+      "count": 9,
+      "percentage": 0.84
+    },
+    {
+      "name": "Transition readiness",
+      "count": 4,
+      "percentage": 0.37
+    },
+    {
+      "name": "Value trade-off",
+      "count": 4,
+      "percentage": 0.37
+    },
+    {
+      "name": "Version control",
+      "count": 10,
+      "percentage": 0.94
+    },
+    {
+      "name": "Virtual and cross-cultural collaboration",
+      "count": 7,
+      "percentage": 0.65
+    }
+  ],
+  "approaches": [
+    {
+      "name": "Agile",
+      "count": 112,
+      "percentage": 10.48
+    },
+    {
+      "name": "Hybrid",
+      "count": 164,
+      "percentage": 15.34
+    },
+    {
+      "name": "Predictive",
+      "count": 793,
+      "percentage": 74.18
+    }
+  ],
+  "difficulties": [
+    {
+      "name": "Easy",
+      "count": 111,
+      "percentage": 10.38
+    },
+    {
+      "name": "Hard",
+      "count": 86,
+      "percentage": 8.04
+    },
+    {
+      "name": "Medium",
+      "count": 872,
+      "percentage": 81.57
+    }
+  ],
+  "chapters": [
+    {
+      "name": "pmbok-ch01-introduction",
+      "count": 65,
+      "percentage": 6.08
+    },
+    {
+      "name": "pmbok-ch02-project-environment",
+      "count": 84,
+      "percentage": 7.86
+    },
+    {
+      "name": "pmbok-ch03-project-manager-role",
+      "count": 50,
+      "percentage": 4.68
+    },
+    {
+      "name": "pmbok-ch04-integration-management",
+      "count": 142,
+      "percentage": 13.28
+    },
+    {
+      "name": "pmbok-ch05-scope-management",
+      "count": 96,
+      "percentage": 8.98
+    },
+    {
+      "name": "pmbok-ch06-schedule-management",
+      "count": 85,
+      "percentage": 7.95
+    },
+    {
+      "name": "pmbok-ch07-cost-management",
+      "count": 62,
+      "percentage": 5.8
+    },
+    {
+      "name": "pmbok-ch08-quality-management",
+      "count": 73,
+      "percentage": 6.83
+    },
+    {
+      "name": "pmbok-ch09-resource-management",
+      "count": 104,
+      "percentage": 9.73
+    },
+    {
+      "name": "pmbok-ch10-communications-management",
+      "count": 73,
+      "percentage": 6.83
+    },
+    {
+      "name": "pmbok-ch11-risk-management",
+      "count": 81,
+      "percentage": 7.58
+    },
+    {
+      "name": "pmbok-ch12-procurement-management",
+      "count": 72,
+      "percentage": 6.74
+    },
+    {
+      "name": "pmbok-ch13-stakeholder-management",
+      "count": 82,
+      "percentage": 7.67
+    }
+  ],
+  "gaps": []
+}
