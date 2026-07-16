@@ -164,7 +164,7 @@ const PRESERVED_TEMPLATE_TERMS = new Set(
     ...ALLOWED_DIFFICULTIES,
     ...Object.keys(REFRESH_DOMAIN_TARGETS),
     ...Object.values(DOMAIN_CONTENT_TARGETS).flatMap(({ topics }) => Object.keys(topics)),
-    "Scrum Kanban Lean Waterfall SAFe DevOps PMBOK PMP PMI",
+    "Scrum Kanban Lean Waterfall SAFe DevOps PMBOK PMP PMI Manager Sponsor",
   ]
     .flatMap((value) => value.toLowerCase().match(/[a-z0-9]+/g) ?? []),
 );
@@ -173,7 +173,7 @@ const CJK_PATTERN = /[\p{Script=Han}\p{Script=Hiragana}\p{Script=Katakana}\p{Scr
 const ANSWER_KEY_PATTERNS = Object.freeze([
   /\banswer\s+key\b/i,
   /\b(?:correct|preferred)\s+(?:answer|option|choice)\b/i,
-  /\b(?:answer|option|choice|response)\s+(?:is\s+)?[A-D]\b/i,
+  /\b(?:answer|option|choice|response)(?:\s+is\s+|\s*[-:=–—]\s*|\s+)[A-D]\b/i,
   /\b[A-D]\s+is\s+(?:the\s+)?(?:correct|preferred)\b/i,
 ]);
 

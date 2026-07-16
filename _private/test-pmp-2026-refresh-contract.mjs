@@ -324,6 +324,31 @@ for (let index = 0; index < teachingTerms.length - 1; index += 1) {
   );
 }
 
+const projectRolePairs = [
+  ["project manager", "project sponsor"],
+  ["Project manager", "Project sponsor"],
+  ["Project Manager", "Project Sponsor"],
+];
+for (const [managerRole, sponsorRole] of projectRolePairs) {
+  const managerQuestion = {
+    ...validQuestion,
+    text: `The ${managerRole} discovers an unresolved dependency during planning while stakeholders expect a reliable release forecast. What should the delivery team do next to respond?`,
+    explanation: `${validQuestion.explanation} This reasoning keeps delivery coordination with the manager role.`,
+  };
+  const sponsorQuestion = {
+    ...validQuestion,
+    text: `The ${sponsorRole} discovers an unresolved dependency during planning while stakeholders expect a reliable release forecast. What should the delivery team do next to respond?`,
+    explanation: `${validQuestion.explanation} This reasoning keeps governance accountability with the sponsor role.`,
+  };
+  assert.equal(
+    validateRefreshSet([managerQuestion, sponsorQuestion]).filter((message) =>
+      message.includes("duplicate template fingerprint for stem"),
+    ).length,
+    0,
+    `${managerRole} and ${sponsorRole} must remain distinct role semantics`,
+  );
+}
+
 const legacyQuestion = {
   ...validQuestion,
   text: `${validQuestion.text} This is practice item 17 for an initial review.`,
@@ -344,6 +369,24 @@ assert(
   recordFailures(correctResponseLeak).some((message) => message.includes("answer-key leakage")),
   "direct-letter response disclosures must be rejected",
 );
+
+const punctuationDelimitedLeaks = [
+  "The correct response: A.",
+  "The correct response = B.",
+  "The correct response-C.",
+  "The correct response – D.",
+  "The correct response—A.",
+];
+for (const disclosure of punctuationDelimitedLeaks) {
+  const punctuationLeak = {
+    ...validQuestion,
+    explanation: `${validQuestion.explanation} ${disclosure}`,
+  };
+  assert(
+    recordFailures(punctuationLeak).some((message) => message.includes("answer-key leakage")),
+    `${disclosure} must be rejected as direct answer leakage`,
+  );
+}
 
 const selectOptionLeak = {
   ...validQuestion,
