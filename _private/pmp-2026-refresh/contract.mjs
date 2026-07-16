@@ -153,15 +153,27 @@ const SCHEMA_FIELDS = Object.freeze([
   "explanation",
   "chapterId",
 ]);
+const TEXT_SCHEMA_FIELDS = new Set(SCHEMA_FIELDS.filter((field) => !["choices", "correct"].includes(field)));
 const ALLOWED_DOMAINS = new Set(Object.keys(REFRESH_DOMAIN_TARGETS));
 const ALLOWED_APPROACHES = new Set(["Predictive", "Agile", "Hybrid"]);
 const ALLOWED_DIFFICULTIES = new Set(["Easy", "Medium", "Hard"]);
 const ALLOWED_CHAPTERS = new Set(Object.keys(REFRESH_CHAPTER_TARGETS));
-const CJK_PATTERN = /[\u3040-\u30ff\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff\uac00-\ud7af]/u;
+const PRESERVED_TEMPLATE_TERMS = new Set(
+  [
+    ...ALLOWED_APPROACHES,
+    ...ALLOWED_DIFFICULTIES,
+    ...Object.keys(REFRESH_DOMAIN_TARGETS),
+    ...Object.values(DOMAIN_CONTENT_TARGETS).flatMap(({ topics }) => Object.keys(topics)),
+    "Scrum Kanban Lean Waterfall SAFe DevOps PMBOK PMP PMI",
+  ]
+    .flatMap((value) => value.toLowerCase().match(/[a-z0-9]+/g) ?? []),
+);
+const ALWAYS_CONTEXT_LABEL_TYPES = new Set(["scenario", "case", "context"]);
+const CJK_PATTERN = /[\p{Script=Han}\p{Script=Hiragana}\p{Script=Katakana}\p{Script=Hangul}\p{Script=Bopomofo}]/u;
 const ANSWER_KEY_PATTERNS = Object.freeze([
   /\banswer\s+key\b/i,
   /\b(?:correct|preferred)\s+(?:answer|option|choice)\b/i,
-  /\b(?:answer|option|choice)\s+(?:is\s+)?[A-D]\b/i,
+  /\b(?:answer|option|choice|response)\s+(?:is\s+)?[A-D]\b/i,
   /\b[A-D]\s+is\s+(?:the\s+)?(?:correct|preferred)\b/i,
 ]);
 
@@ -206,9 +218,10 @@ function validateQuestion(question, expectedDomain, index) {
 
   for (const field of SCHEMA_FIELDS) {
     const value = question[field];
-    const emptyString = typeof value === "string" && value.trim() === "";
-    if (!Object.hasOwn(question, field) || value === null || value === undefined || emptyString) {
+    if (!Object.hasOwn(question, field) || value === null || value === undefined) {
       failures.push(`${label} missing required field ${field}.`);
+    } else if (TEXT_SCHEMA_FIELDS.has(field) && (typeof value !== "string" || value.trim() === "")) {
+      failures.push(`${label} ${field} must be a non-empty string.`);
     }
   }
 
@@ -236,7 +249,9 @@ function validateQuestion(question, expectedDomain, index) {
       failures.push(`${label} choices must contain four distinct choices.`);
     }
     question.choices.forEach((choice, choiceIndex) => {
-      if (wordCount(choice) < 4) {
+      if (typeof choice !== "string" || choice.trim() === "") {
+        failures.push(`${label} choice ${choiceIndex + 1} must be a non-empty string.`);
+      } else if (wordCount(choice) < 4) {
         failures.push(`${label} choice ${choiceIndex + 1} must contain at least 4 words.`);
       }
     });
@@ -259,7 +274,7 @@ function validateQuestion(question, expectedDomain, index) {
   if (ANSWER_KEY_PATTERNS.some((pattern) => pattern.test(combinedText))) {
     failures.push(`${label} contains answer-key leakage.`);
   }
-  if (CJK_PATTERN.test(combinedText)) {
+  if (CJK_PATTERN.test(combinedText.normalize("NFKC"))) {
     failures.push(`${label} contains CJK text.`);
   }
 
@@ -312,11 +327,22 @@ function templateFingerprint(value) {
   const generalized = String(value ?? "")
     .normalize("NFKC")
     .replace(
-      /\b(scenario|case|context)\s+(?:(?:named|labelled|labeled)\s+)?[\p{L}\p{N}_-]+/giu,
-      "$1 context",
+      /\b(project|program|initiative|product|release|scenario|case|context)\s+((?:(?:named|labelled|labeled)\s+)?)([\p{L}\p{N}_-]+)/giu,
+      (match, contextType, qualifier, entity) => {
+        if (PRESERVED_TEMPLATE_TERMS.has(entity.toLowerCase())) return match;
+        const alwaysLabel = ALWAYS_CONTEXT_LABEL_TYPES.has(contextType.toLowerCase());
+        const looksLikeEntity = qualifier !== "" || /[A-Z\d_-]/.test(entity);
+        return alwaysLabel || looksLikeEntity ? `${contextType} context` : match;
+      },
     )
     .replace(/\b\d+(?:[.,]\d+)?\b/g, " number ")
-    .replace(/\b\p{Lu}\p{Ll}+(?:\s+\p{Lu}\p{Ll}+)*\b/gu, " name ");
+    .replace(/\b\p{Lu}\p{Ll}+(?:\s+\p{Lu}\p{Ll}+)*\b/gu, (name) =>
+      name
+        .split(/\s+/)
+        .map((part) => (PRESERVED_TEMPLATE_TERMS.has(part.toLowerCase()) ? part : "name"))
+        .join(" ")
+        .replace(/\bname(?:\s+name)+\b/g, "name"),
+    );
   return normalizeText(generalized);
 }
 

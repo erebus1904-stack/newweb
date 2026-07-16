@@ -179,6 +179,40 @@ function recordFailures(question) {
 
 assert.deepEqual(recordFailures(validQuestion), []);
 
+const textualFieldTypeCases = [
+  ["tag", ["Team"]],
+  ["domain", { value: "People" }],
+  ["topic", 42],
+  ["approach", ["Agile"]],
+  ["difficulty", { value: "Medium" }],
+  ["decisionRule", 42],
+  ["text", validQuestion.text.split(" ")],
+  ["explanation", { value: validQuestion.explanation }],
+  ["chapterId", 42],
+];
+for (const [field, value] of textualFieldTypeCases) {
+  assert(
+    recordFailures({ ...validQuestion, [field]: value }).some((message) =>
+      message.includes(`${field} must be a non-empty string`),
+    ),
+    `${field} must reject non-string values`,
+  );
+}
+
+const nonStringChoices = [
+  ["Facilitate", "a", "team", "discussion", "before", "escalation"],
+  { value: "Facilitate a team discussion before escalation" },
+  12345,
+];
+for (const choice of nonStringChoices) {
+  assert(
+    recordFailures({ ...validQuestion, choices: [choice, ...validQuestion.choices.slice(1)] }).some(
+      (message) => message.includes("choice 1 must be a non-empty string"),
+    ),
+    "each choice must reject non-string values",
+  );
+}
+
 const missingField = { ...validQuestion };
 delete missingField.decisionRule;
 assert(recordFailures(missingField).some((message) => message.includes("decisionRule")));
@@ -248,6 +282,48 @@ assert(
   ),
 );
 
+const uppercaseContextOne = {
+  ...validQuestion,
+  text: "During Project ALPHA, the delivery team reviews an unresolved dependency before an important release planning meeting with key stakeholders. What should the project manager do next?",
+  explanation: `${validQuestion.explanation} This reasoning applies to the first named delivery context.`,
+};
+const uppercaseContextTwo = {
+  ...validQuestion,
+  text: "During Project BRAVO, the delivery team reviews an unresolved dependency before an important release planning meeting with key stakeholders. What should the project manager do next?",
+  explanation: `${validQuestion.explanation} This reasoning applies to the second named delivery context.`,
+};
+assert(
+  validateRefreshSet([uppercaseContextOne, uppercaseContextTwo]).some((message) =>
+    message.includes("duplicate template fingerprint for stem"),
+  ),
+  "uppercase context entities must be normalized in template fingerprints",
+);
+
+const teachingTerms = ["Agile", "Predictive", "Hybrid", "Risk", "Quality", "Scrum", "Kanban"];
+for (let index = 0; index < teachingTerms.length - 1; index += 1) {
+  const firstTerm = teachingTerms[index];
+  const secondTerm = teachingTerms[index + 1];
+  const firstQuestion = {
+    ...validQuestion,
+    approach: firstTerm,
+    text: `An ${firstTerm} delivery team discovers an unresolved dependency during planning while stakeholders expect a reliable release forecast. What should the project manager do next with the team?`,
+    explanation: `${validQuestion.explanation} This reasoning applies specifically to ${firstTerm} delivery practices.`,
+  };
+  const secondQuestion = {
+    ...validQuestion,
+    approach: secondTerm,
+    text: `An ${secondTerm} delivery team discovers an unresolved dependency during planning while stakeholders expect a reliable release forecast. What should the project manager do next with the team?`,
+    explanation: `${validQuestion.explanation} This reasoning applies specifically to ${secondTerm} delivery practices.`,
+  };
+  assert.equal(
+    validateRefreshSet([firstQuestion, secondQuestion]).filter((message) =>
+      message.includes("duplicate template fingerprint"),
+    ).length,
+    0,
+    `${firstTerm} and ${secondTerm} must remain meaningful in template fingerprints`,
+  );
+}
+
 const legacyQuestion = {
   ...validQuestion,
   text: `${validQuestion.text} This is practice item 17 for an initial review.`,
@@ -260,10 +336,53 @@ const leakingQuestion = {
 };
 assert(recordFailures(leakingQuestion).some((message) => message.includes("answer-key leakage")));
 
+const correctResponseLeak = {
+  ...validQuestion,
+  explanation: `${validQuestion.explanation} The correct response is A.`,
+};
+assert(
+  recordFailures(correctResponseLeak).some((message) => message.includes("answer-key leakage")),
+  "direct-letter response disclosures must be rejected",
+);
+
+const selectOptionLeak = {
+  ...validQuestion,
+  choices: ["Select option A before reviewing any scenario evidence", ...validQuestion.choices.slice(1)],
+};
+assert(
+  recordFailures(selectOptionLeak).some((message) => message.includes("answer-key leakage")),
+  "choice instructions that disclose a letter must be rejected",
+);
+
+const narrativeResponse = {
+  ...validQuestion,
+  explanation: `${validQuestion.explanation} The correct response is to facilitate transparent analysis with the team.`,
+};
+assert(
+  !recordFailures(narrativeResponse).some((message) => message.includes("answer-key leakage")),
+  "a narrative response without a disclosed answer letter must remain valid",
+);
+
 const cjkQuestion = {
   ...validQuestion,
   explanation: `${validQuestion.explanation} 不应包含中文文本。`,
 };
 assert(recordFailures(cjkQuestion).some((message) => message.includes("CJK text")));
+
+const extendedCjkSamples = [
+  "\uFF83\uFF7D\uFF84",
+  "\u3105",
+  "\u{20000}",
+];
+for (const sample of extendedCjkSamples) {
+  const extendedCjkQuestion = {
+    ...validQuestion,
+    explanation: `${validQuestion.explanation} ${sample}`,
+  };
+  assert(
+    recordFailures(extendedCjkQuestion).some((message) => message.includes("CJK text")),
+    `extended CJK sample ${JSON.stringify(sample)} must be rejected`,
+  );
+}
 
 console.log("PASS PMP 2026 refresh contract tests.");
