@@ -249,7 +249,7 @@ export const businessEnvironmentQuestions = [
     ],
     correct: 1,
     explanation: "Early collaboration can embed appropriate evidence in acceptance and reveal gaps while change is less costly. Sprint completion alone does not authorize release, a final control sprint defers essential learning, and written reports remove useful product inspection without solving the evidence timing problem.",
-    chapterId: "pmbok-ch12-procurement-management",
+    chapterId: "pmbok-ch11-risk-management",
   },
   {
     tag: "Compliance",
@@ -267,7 +267,7 @@ export const businessEnvironmentQuestions = [
     ],
     correct: 3,
     explanation: "The scenario gives a specific contractual evidence condition, so a supplier assertion does not satisfy acceptance. Liability language does not replace verification, an independent review adds work before enforcing the evidence obligation, and provisional acceptance moves a known gap into operations contrary to the agreed control point.",
-    chapterId: "pmbok-ch11-risk-management",
+    chapterId: "pmbok-ch12-procurement-management",
   },
   {
     tag: "Compliance",
@@ -303,7 +303,7 @@ export const businessEnvironmentQuestions = [
     ],
     correct: 2,
     explanation: "A missing required record is a factual control gap that should be preserved and routed to the designated authorities. Public information is not equivalent to required screening, prime accountability does not justify ignoring evidence, and immediate termination assumes both breach severity and decision authority.",
-    chapterId: "pmbok-ch02-project-environment",
+    chapterId: "pmbok-ch12-procurement-management",
   },
   {
     tag: "Compliance",
@@ -321,7 +321,7 @@ export const businessEnvironmentQuestions = [
     ],
     correct: 1,
     explanation: "Versioned records created with relevant changes restore traceability between decisions, configuration, and approved evidence. A blanket freeze may be unnecessary, verbal confirmation is not durable evidence, and an isolated assurance backlog weakens collaboration and does not tie documentation to deployed change.",
-    chapterId: "pmbok-ch12-procurement-management",
+    chapterId: "pmbok-ch02-project-environment",
   },
   {
     tag: "Compliance",
@@ -545,16 +545,16 @@ export const businessEnvironmentQuestions = [
     topic: "Governance",
     approach: "Hybrid",
     difficulty: "Hard",
-    decisionRule: "give governance independent evidence before seeking an exception to its own control.",
-    text: "A sponsor wants the project manager to request an investment-gate waiver because a strategic launch date is near. The required resilience test is incomplete, although supplier simulations and the delivery team's internal review are favorable. What should the project manager do first?",
+    decisionRule: "complete designated gate evidence or expose its absence to the named exception authority.",
+    text: "A sponsor wants the project manager to request an investment-gate waiver because a strategic launch date is near. The required resilience test is incomplete, although supplier simulations and the delivery team's internal review are favorable. The governance plan names the investment board as exception authority. What should the project manager do first?",
     choices: [
-      "Complete or independently assess the missing evidence and present residual exposure through the defined exception process",
+      "Complete the required test, or expose its absence and residual risk to the investment board for an exception decision",
       "Defer the gate decision to its next scheduled cycle even if the missing evidence becomes available sooner",
       "Request the waiver now because multiple technical sources indicate acceptable performance",
       "Ask the supplier to certify the product and treat that certification as the gate decision",
     ],
     correct: 0,
-    explanation: "The gate requires evidence that is still incomplete, and favorable sources do not replace the designated resilience assessment. An immediate waiver lacks a complete exposure basis, fixed-cycle deferral ignores the option to complete evidence sooner, and supplier certification cannot substitute for the organization's accountable governance decision.",
+    explanation: "The gate names a required resilience test, and no equivalent evidence path is stated. The project manager should complete that test; if gate timing prevents completion, the missing evidence and residual risk must be explicit to the investment board as exception authority. Immediate waiver relies on incomplete substitutes, fixed-cycle deferral ignores possible earlier completion, and supplier certification replaces neither the required test nor the board's decision.",
     chapterId: "pmbok-ch11-risk-management",
   },
   {
@@ -681,7 +681,7 @@ export const businessEnvironmentQuestions = [
     ],
     correct: 1,
     explanation: "The real-user evidence shows that technical conformance alone has not produced the intended inclusive outcome, so criteria and increments should adapt. Closing ignores evidence, more automation may miss usability barriers, and instructions transfer the burden to affected users instead of improving access.",
-    chapterId: "pmbok-ch12-procurement-management",
+    chapterId: "pmbok-ch02-project-environment",
   },
   {
     tag: "Sustainability and social impact",
@@ -717,7 +717,7 @@ export const businessEnvironmentQuestions = [
     ],
     correct: 3,
     explanation: "The approved social outcome depends on supplier delivery, so procurement must make expectations, evidence, and ownership explicit. Existing employees are not necessarily apprentices, corporate reporting cannot create placements, and post-award voluntary descriptions provide neither comparable selection evidence nor a binding delivery basis.",
-    chapterId: "pmbok-ch02-project-environment",
+    chapterId: "pmbok-ch12-procurement-management",
   },
   {
     tag: "Sustainability and social impact",
@@ -825,7 +825,7 @@ export const businessEnvironmentQuestions = [
     ],
     correct: 1,
     explanation: "Validated behavior has changed a product assumption, so transparent review and backlog adaptation are appropriate. Completing the old roadmap ignores current value evidence, converting every item assumes feature equivalence without learning, and developer preference cannot replace accountable product prioritization.",
-    chapterId: "pmbok-ch12-procurement-management",
+    chapterId: "pmbok-ch11-risk-management",
   },
   {
     tag: "External environment and market change",
@@ -843,7 +843,7 @@ export const businessEnvironmentQuestions = [
     ],
     correct: 0,
     explanation: "The restriction is proposed and its project applicability is unresolved, so qualified interpretation and scenario impacts should precede commitment. Bulk purchase selects one costly response on supplier advice, assumed transition coverage lacks verification, and funded redesign commits contingency before necessity and alternatives are established.",
-    chapterId: "pmbok-ch11-risk-management",
+    chapterId: "pmbok-ch12-procurement-management",
   },
   {
     tag: "External environment and market change",
