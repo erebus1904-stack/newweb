@@ -77,7 +77,13 @@ function verify() {
   try {
     examCatalog = loadExamCatalog();
   } catch (error) {
-    failures.push(`data.js could not be loaded: ${error.message}`);
+    failures.push(`data.js could not be loaded: ${String(error?.message ?? error)}`);
+    verifyReports(failures);
+    return failures;
+  }
+
+  if (!Array.isArray(examCatalog)) {
+    failures.push(`data.js examCatalog must be an array, received ${String(examCatalog)}.`);
     verifyReports(failures);
     return failures;
   }
