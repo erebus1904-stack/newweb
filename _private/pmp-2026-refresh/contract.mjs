@@ -134,7 +134,7 @@ export const BANNED_REFRESH_PATTERNS = Object.freeze([
   /correct answer\s*:/i,
   /answer is\s+[A-D]\b/i,
   /Delphi technology/i,
-  /Ompleted work/i,
+  /\bOmpleted work/i,
   /practice item\s*\d+/i,
   /domain pattern\s*\d+/i,
   /initial review|timed drill|case analysis|readiness check|weak-area review/i,

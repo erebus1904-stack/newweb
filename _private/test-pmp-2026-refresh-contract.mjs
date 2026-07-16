@@ -355,6 +355,28 @@ const legacyQuestion = {
 };
 assert(recordFailures(legacyQuestion).some((message) => message.includes("banned legacy wording")));
 
+const validCompletedWorkQuestion = {
+  ...validQuestion,
+  text: `${validQuestion.text} The team reviews partially completed work before updating the release forecast.`,
+};
+assert(
+  !recordFailures(validCompletedWorkQuestion).some((message) =>
+    message.includes("banned legacy wording"),
+  ),
+  "partially completed work must remain valid",
+);
+
+const malformedCompletedWorkQuestion = {
+  ...validQuestion,
+  text: `${validQuestion.text} Ompleted work.`,
+};
+assert(
+  recordFailures(malformedCompletedWorkQuestion).some((message) =>
+    message.includes("banned legacy wording"),
+  ),
+  "the malformed legacy fragment Ompleted work. must remain banned",
+);
+
 const leakingQuestion = {
   ...validQuestion,
   explanation: `${validQuestion.explanation} The answer key identifies option A as the preferred response.`,
