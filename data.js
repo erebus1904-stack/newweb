@@ -21968,4604 +21968,4144 @@ const examCatalog = [
         "explanation": "Correct answer: BC. Choose the option that best follows PMP exam logic: understand the situation, use the relevant project artifact or accountable role, communicate before escalating when appropriate, and avoid jumping directly to execution without analysis."
       },
       {
-        "tag": "Project Charter",
-        "domain": "Process",
-        "topic": "High-level scope",
-        "approach": "Agile",
-        "difficulty": "Medium",
-        "decisionRule": "Use the project charter for high-level project scope and authorization.",
-        "chapterId": "pmbok-ch04-integration-management",
-        "sourceSet": "pmp-agile-core-50",
-        "sourceQuestionNumber": 1,
-        "text": "A new project manager on an agile project is looking for the document that describes the project at a high level, including the initial high-level scope. Where should the project manager look first?",
+        "tag": "Team leadership",
+        "domain": "People",
+        "topic": "Team leadership",
+        "approach": "Predictive",
+        "difficulty": "Easy",
+        "decisionRule": "clarify authority and reunite the team around accountable ownership.",
+        "text": "During construction planning, two discipline leads issue conflicting instructions because the responsibility matrix was never reviewed with the newly assembled team. What should the project manager do first?",
         "choices": [
-          "Project charter",
-          "Work breakdown structure",
-          "User stories",
-          "Epics"
+          "Review roles and decision authority with the team and update the responsibility matrix",
+          "Ask the discipline leads to reconcile instructions privately and report their direction",
+          "Escalate the conflicting instructions to functional managers for an authority decision",
+          "Issue interim direction and defer the responsibility-matrix update to the next planning cycle"
         ],
         "correct": 0,
-        "explanation": "The project charter authorizes the project and documents high-level information, including high-level scope, objectives, and key stakeholders. User stories and epics describe product needs, but they do not replace the charter for overall project authorization and initial scope context."
+        "explanation": "The confusion comes from unclear authority, so the project manager should make ownership explicit with the assembled team. A private lead agreement may resolve one instruction but not shared understanding, functional escalation is premature, and interim project-manager direction restores speed without closing the responsibility gap that caused the conflict.",
+        "chapterId": "pmbok-ch09-resource-management"
       },
       {
-        "tag": "Transparency",
-        "domain": "People",
-        "topic": "Team communication",
-        "approach": "Agile",
-        "difficulty": "Medium",
-        "decisionRule": "Encourage open sharing to support transparency, inspection, and adaptation.",
-        "chapterId": "pmbok-ch09-resource-management",
-        "sourceSet": "pmp-agile-core-50",
-        "sourceQuestionNumber": 2,
-        "text": "A new agile team lead notices that team members are reluctant to express their views. What advice should the agile leader give the team to improve communication?",
-        "choices": [
-          "Focus only on results",
-          "Follow one common strategy without discussion",
-          "Share ideas freely and transparently",
-          "Use a shared workspace"
-        ],
-        "correct": 2,
-        "explanation": "Scrum relies on transparency, inspection, and adaptation. The first problem is that team members are not openly sharing views. The leader should create psychological safety and encourage transparent communication, not simply add a workspace or impose a strategy."
-      },
-      {
-        "tag": "Estimation",
+        "tag": "Integration and change control",
         "domain": "Process",
-        "topic": "Ideal time",
-        "approach": "Agile",
-        "difficulty": "Medium",
-        "decisionRule": "Use ideal time as another relative sizing technique when story points are not used.",
-        "chapterId": "pmbok-ch06-schedule-management",
-        "sourceSet": "pmp-agile-core-50",
-        "sourceQuestionNumber": 3,
-        "text": "Besides story points, which method can an agile team use to estimate the relative size of user stories?",
+        "topic": "Integration and change control",
+        "approach": "Predictive",
+        "difficulty": "Easy",
+        "decisionRule": "assess an unapproved change before routing it through the defined authority.",
+        "text": "A client requests an additional reporting interface after the scope and schedule baselines have been approved, and no work has started on it. What should the project manager do first?",
         "choices": [
-          "Precise timeboxes",
-          "Ideal time",
-          "Heuristics only",
-          "Ideal velocity"
+          "Document the request and assess its integrated impacts before submitting it for decision",
+          "Ask the team to build a prototype so the change board can see the interface",
+          "Add the interface to the requirements register and revise the schedule baseline",
+          "Decline the request because the baselines have already received formal approval"
         ],
-        "correct": 1,
-        "explanation": "Agile teams may estimate stories with story points or ideal time. Ideal time estimates the effort needed if the work could be completed without interruptions, meetings, delays, or distractions."
+        "correct": 0,
+        "explanation": "The request affects approved baselines and work has not begun, so its scope, schedule, cost, risk, and value impacts should be assessed before the designated authority decides. Prototyping authorizes effort prematurely, revising baselines precedes approval, and automatic rejection bypasses the project's change process.",
+        "chapterId": "pmbok-ch04-integration-management"
       },
       {
-        "tag": "Information Radiator",
-        "domain": "People",
-        "topic": "Status communication",
-        "approach": "Agile",
-        "difficulty": "Medium",
-        "decisionRule": "Make visual status signals explicit so stakeholders interpret them consistently.",
-        "chapterId": "pmbok-ch10-communications-management",
-        "sourceSet": "pmp-agile-core-50",
-        "sourceQuestionNumber": 4,
-        "text": "An agile practitioner notices that an information radiator uses red, yellow, and green traffic-light colors to communicate project progress. What should the practitioner do to improve the status communication?",
-        "choices": [
-          "Ask the sponsor what the colors mean",
-          "Replace the colors with a fixed numerical system",
-          "Define a clear meaning for each color on the information radiator",
-          "Create a new information radiator using only quantitative metrics"
-        ],
-        "correct": 2,
-        "explanation": "Information radiators are useful only when the team and stakeholders understand the signals. Defining the meaning of each color creates shared interpretation without replacing the current communication tool unnecessarily."
-      },
-      {
-        "tag": "Impediment Removal",
-        "domain": "People",
-        "topic": "Team problem solving",
-        "approach": "Agile",
-        "difficulty": "Medium",
-        "decisionRule": "Work with the team to remove impediments rather than directing a solution alone.",
-        "chapterId": "pmbok-ch09-resource-management",
-        "sourceSet": "pmp-agile-core-50",
-        "sourceQuestionNumber": 5,
-        "text": "An agile team is developing features planned for the current iteration. One team member has encountered an impediment that blocks story progress. What should the agile lead do to help the team move forward?",
-        "choices": [
-          "Use personal technical expertise to define a solution and direct the team to follow it",
-          "Facilitate a team discussion to identify and agree on a solution",
-          "Assign the issue to another team without discussion",
-          "Replace the story with a new story"
-        ],
-        "correct": 1,
-        "explanation": "The agile lead or Scrum Master helps remove impediments by facilitating team ownership and collaboration. The leader should not impose a solution when the team can inspect the problem and decide how to resolve it."
-      },
-      {
-        "tag": "Value and Risk",
+        "tag": "Benefits and value realization",
         "domain": "Business Environment",
-        "topic": "Risk-value prioritization",
-        "approach": "Agile",
-        "difficulty": "Medium",
-        "decisionRule": "Prioritize work that delivers value while reducing important risks early.",
-        "chapterId": "pmbok-ch04-integration-management",
-        "sourceSet": "pmp-agile-core-50",
-        "sourceQuestionNumber": 6,
-        "text": "An agile practitioner is concerned about high-risk parts of a project and wants to ensure that both risk and value are considered when prioritizing the solution. What should the practitioner do?",
+        "topic": "Benefits and value realization",
+        "approach": "Predictive",
+        "difficulty": "Easy",
+        "decisionRule": "define measurable ownership for benefits that continue after project delivery.",
+        "text": "A payroll modernization project is nearing closure, but no business manager has agreed to track the expected reduction in correction costs after transition. What should the project manager do?",
         "choices": [
-          "Use a risk-value matrix and address high-risk, high-value items first",
-          "Use a risk-value matrix and address high-risk, low-value items first",
-          "Use an information radiator and tell the team to focus only on high-risk development items",
-          "Use a fishbone diagram to compare schedule, cost, and functional risks"
-        ],
-        "correct": 0,
-        "explanation": "Agile delivery favors early value and early risk reduction. A risk-value matrix helps the team select items that both matter to the business and reduce uncertainty."
-      },
-      {
-        "tag": "Iteration Planning",
-        "domain": "Process",
-        "topic": "Iteration planning timing",
-        "approach": "Agile",
-        "difficulty": "Medium",
-        "decisionRule": "Hold iteration planning at the start of the iteration.",
-        "chapterId": "pmbok-ch06-schedule-management",
-        "sourceSet": "pmp-agile-core-50",
-        "sourceQuestionNumber": 7,
-        "text": "When is iteration planning normally held?",
-        "choices": [
-          "On the first day of the iteration",
-          "On the last day of the previous iteration",
-          "The day before the iteration starts",
-          "Whenever the team happens to be available"
-        ],
-        "correct": 0,
-        "explanation": "Iteration or sprint planning is held at the beginning of the iteration so the team can agree on the goal and select the work for that iteration."
-      },
-      {
-        "tag": "Scrum of Scrums",
-        "domain": "People",
-        "topic": "Multi-team coordination",
-        "approach": "Agile",
-        "difficulty": "Medium",
-        "decisionRule": "Use Scrum of Scrums to coordinate dependencies among multiple Scrum teams.",
-        "chapterId": "pmbok-ch10-communications-management",
-        "sourceSet": "pmp-agile-core-50",
-        "sourceQuestionNumber": 8,
-        "text": "What is a Scrum of Scrums meeting?",
-        "choices": [
-          "Another name for a daily scrum within one Scrum team",
-          "A coordination mechanism for multiple Scrum teams working on the same initiative",
-          "A meeting held every two weeks within one Scrum team",
-          "An occasional leadership meeting used to direct different Scrum teams"
-        ],
-        "correct": 1,
-        "explanation": "Scrum of Scrums is commonly used when multiple Scrum teams must coordinate dependencies, impediments, and integration work across a larger product or project."
-      },
-      {
-        "tag": "Agile Mindset",
-        "domain": "People",
-        "topic": "Adaptation",
-        "approach": "Agile",
-        "difficulty": "Medium",
-        "decisionRule": "Value responding to change over rigidly following a plan.",
-        "chapterId": "pmbok-ch09-resource-management",
-        "sourceSet": "pmp-agile-core-50",
-        "sourceQuestionNumber": 9,
-        "text": "Although an agile team is self-managing, it still needs basic principles to guide behavior. Which principle is most important for the team?",
-        "choices": [
-          "Follow the plan",
-          "Negotiate the contract",
-          "Strengthen team discipline only",
-          "Adapt to change"
-        ],
-        "correct": 3,
-        "explanation": "Responding to change is central to the agile mindset. Plans, contracts, and discipline matter, but they do not replace the need to inspect, adapt, and respond to changing information."
-      },
-      {
-        "tag": "Story Points",
-        "domain": "Process",
-        "topic": "Zero-point story",
-        "approach": "Agile",
-        "difficulty": "Medium",
-        "decisionRule": "Interpret a zero-point story as very small effort, not zero value.",
-        "chapterId": "pmbok-ch06-schedule-management",
-        "sourceSet": "pmp-agile-core-50",
-        "sourceQuestionNumber": 10,
-        "text": "What does it usually mean when a user story is estimated at zero story points?",
-        "choices": [
-          "The story has zero cost",
-          "The story has no value",
-          "The story is an impediment to progress",
-          "The story can be designed, built, and tested with minimal effort"
-        ],
-        "correct": 3,
-        "explanation": "A zero-point estimate usually means the team considers the work extremely small relative to other stories. It does not mean the story has no value or no cost."
-      },
-      {
-        "tag": "Agile Risk",
-        "domain": "Process",
-        "topic": "Risk burndown chart",
-        "approach": "Agile",
-        "difficulty": "Medium",
-        "decisionRule": "Use a risk burndown chart to track whether technical risk is being reduced.",
-        "chapterId": "pmbok-ch11-risk-management",
-        "sourceSet": "pmp-agile-core-50",
-        "sourceQuestionNumber": 11,
-        "text": "In agile risk management, what is a risk burndown chart used for?",
-        "choices": [
-          "Qualitatively analyzing risk probability",
-          "Tracking the reduction of technical risk",
-          "Documenting external risks that may affect the project",
-          "Showing the project risk profile and newly changed risks"
-        ],
-        "correct": 1,
-        "explanation": "A risk burndown chart tracks remaining risk over time. It helps the team see whether risk exposure is decreasing or increasing as work progresses."
-      },
-      {
-        "tag": "Team Learning",
-        "domain": "People",
-        "topic": "Recurring defect",
-        "approach": "Agile",
-        "difficulty": "Medium",
-        "decisionRule": "Let the team inspect recurring problems and agree on a shared working agreement.",
-        "chapterId": "pmbok-ch09-resource-management",
-        "sourceSet": "pmp-agile-core-50",
-        "sourceQuestionNumber": 12,
-        "text": "A defect that was previously fixed by one team member appears again in the latest iteration. Another team member says they never received the solution. What should the agile practitioner do?",
-        "choices": [
-          "Work with the whole team to inspect and resolve the problem",
-          "Create a standardized sharing method without team input",
-          "Report the team member to the functional manager",
-          "Speak privately with the second team member only"
-        ],
-        "correct": 0,
-        "explanation": "A recurring defect points to a team working-agreement or knowledge-sharing problem. The agile practitioner should facilitate team inspection and a shared solution rather than blame one person or escalate first."
-      },
-      {
-        "tag": "User Story",
-        "domain": "Process",
-        "topic": "Story card information",
-        "approach": "Agile",
-        "difficulty": "Medium",
-        "decisionRule": "Distinguish story card information from team-level velocity.",
-        "chapterId": "pmbok-ch05-scope-management",
-        "sourceSet": "pmp-agile-core-50",
-        "sourceQuestionNumber": 13,
-        "text": "Which item is not normally part of the information on a story card?",
-        "choices": [
-          "Estimate points",
-          "Story description",
-          "Story dependencies",
-          "Velocity"
-        ],
-        "correct": 3,
-        "explanation": "A story card may include description, estimates, acceptance criteria, and dependencies. Velocity is a team-level measure of completed work over time, not an individual story-card field."
-      },
-      {
-        "tag": "Velocity",
-        "domain": "Process",
-        "topic": "Velocity stability",
-        "approach": "Agile",
-        "difficulty": "Medium",
-        "decisionRule": "Use velocity for stable forecasting, not comparison or forced improvement.",
-        "chapterId": "pmbok-ch06-schedule-management",
-        "sourceSet": "pmp-agile-core-50",
-        "sourceQuestionNumber": 14,
-        "text": "An agile leader is reviewing charts that track team velocity. Which goal is most appropriate for the team?",
-        "choices": [
-          "Make team velocity higher than the industry average",
-          "Increase velocity by 10% after each iteration",
-          "Stop tracking velocity because the team is self-managing",
-          "Keep velocity reasonably consistent so forecasting is reliable"
-        ],
-        "correct": 3,
-        "explanation": "Velocity is useful for forecasting a team's own future capacity. It should not be compared across teams or forced upward every iteration because teams size stories differently and work under different conditions."
-      },
-      {
-        "tag": "Sprint Execution",
-        "domain": "People",
-        "topic": "Self-organizing work",
-        "approach": "Agile",
-        "difficulty": "Medium",
-        "decisionRule": "Let team members pull and complete work collaboratively during the sprint.",
-        "chapterId": "pmbok-ch09-resource-management",
-        "sourceSet": "pmp-agile-core-50",
-        "sourceQuestionNumber": 15,
-        "text": "An agile team has finished sprint planning and is on day six of a two-week sprint. What should the team focus on?",
-        "choices": [
-          "Completing only each person's individually assigned tasks",
-          "Discussing escalation items only with the Scrum Master",
-          "Planning detailed architecture and design documents",
-          "Voluntarily pulling and completing work as the sprint progresses"
-        ],
-        "correct": 3,
-        "explanation": "During the sprint, the team self-organizes around the sprint goal and collaborates to finish committed work. Agile teams do not limit themselves to isolated individual tasks when team ownership is needed."
-      },
-      {
-        "tag": "Agile Estimation",
-        "domain": "Process",
-        "topic": "Story estimate disagreement",
-        "approach": "Agile",
-        "difficulty": "Medium",
-        "decisionRule": "Use team-based estimation and respect the experience closest to the work.",
-        "chapterId": "pmbok-ch06-schedule-management",
-        "sourceSet": "pmp-agile-core-50",
-        "sourceQuestionNumber": 16,
-        "text": "During iteration planning, three participants cannot agree on a story estimate: the Product Owner, a development lead with experience on similar work, and a senior team member who has previously done this type of work. Whose estimate should carry the most weight?",
-        "choices": [
-          "The senior team member",
-          "The development lead",
-          "The Product Owner",
-          "The average of all three estimates"
-        ],
-        "correct": 0,
-        "explanation": "Estimation belongs to the development team, not the Product Owner. The team should discuss differences and seek consensus, but experience closest to the work deserves serious consideration during estimation."
-      },
-      {
-        "tag": "Agile Team",
-        "domain": "People",
-        "topic": "Adaptability",
-        "approach": "Agile",
-        "difficulty": "Medium",
-        "decisionRule": "Agile teams need flexibility and adaptability.",
-        "chapterId": "pmbok-ch09-resource-management",
-        "sourceSet": "pmp-agile-core-50",
-        "sourceQuestionNumber": 17,
-        "text": "Which characteristic is most necessary for an agile team?",
-        "choices": [
-          "The ability to create and manage personal work schedules",
-          "The ability to plan the entire project in detail",
-          "High flexibility and adaptability",
-          "The ability to handle many tasks at the same time"
+          "Transfer the forecast to finance and remove benefits tracking from project records",
+          "Keep the project open until the full annual cost reduction has been realized",
+          "Confirm a benefits owner, measures, and post-transition review dates with operations",
+          "Report successful delivery because the approved system features are now complete"
         ],
         "correct": 2,
-        "explanation": "Inspection and adaptation are core agile behaviors. Detailed up-front planning and multitasking do not matter as much as the team's ability to learn and adapt."
+        "explanation": "Benefits can emerge after the temporary project ends, but they still need accountable ownership, measures, and review timing. Keeping the project open is unnecessary, transferring a forecast alone leaves ownership unclear, and completed features do not demonstrate that the intended operating benefit was realized.",
+        "chapterId": "pmbok-ch02-project-environment"
       },
       {
-        "tag": "Working Agreements",
+        "tag": "Team leadership",
         "domain": "People",
-        "topic": "Team ground rules",
+        "topic": "Team leadership",
         "approach": "Agile",
         "difficulty": "Medium",
-        "decisionRule": "Team working agreements should be created with the team, not imposed by the coach.",
-        "chapterId": "pmbok-ch09-resource-management",
-        "sourceSet": "pmp-agile-core-50",
-        "sourceQuestionNumber": 18,
-        "text": "Which statement about team ground rules is incorrect?",
+        "decisionRule": "protect team self-management while making the impediment visible.",
+        "text": "A product owner repeatedly assigns tasks directly to developers during the sprint, and team members have stopped volunteering work at daily coordination meetings. What should the scrum master do?",
         "choices": [
-          "They may address any aspect of the project",
-          "They are written by the coach and approved by the project team",
-          "They apply to all team members",
-          "They express team expectations"
+          "Permit direct assignments because the product owner is accountable for product value",
+          "Coach the product owner on role boundaries and help the developers restore self-management",
+          "Cancel the sprint and ask the sponsor to appoint a replacement product owner",
+          "Create individual utilization targets so developers accept assignments more quickly"
         ],
         "correct": 1,
-        "explanation": "Ground rules or working agreements should be developed with the team. A coach or servant leader may facilitate, but should not impose the rules unilaterally."
+        "explanation": "The scrum master should address the role-boundary behavior and rebuild the developers' ownership of how work is selected and performed. Product value accountability does not authorize task assignment, replacing the product owner is premature, and utilization targets would reinforce command-and-control behavior instead of team self-management.",
+        "chapterId": "pmbok-ch09-resource-management"
       },
       {
-        "tag": "Refactoring",
+        "tag": "Integration and change control",
         "domain": "Process",
-        "topic": "Technical debt",
+        "topic": "Integration and change control",
         "approach": "Agile",
-        "difficulty": "Medium",
-        "decisionRule": "Use refactoring to improve design and reduce technical debt without changing behavior.",
-        "chapterId": "pmbok-ch08-quality-management",
-        "sourceSet": "pmp-agile-core-50",
-        "sourceQuestionNumber": 19,
-        "text": "Why is refactoring important?",
+        "difficulty": "Hard",
+        "decisionRule": "integrate a mandatory change through product ordering and explicit compliance evidence.",
+        "text": "Mid-iteration, a regulator publishes an immediately effective rule that changes how customer consent must be recorded. The current increment can still compile, but its existing acceptance tests do not demonstrate compliance. What should the project leader do next?",
         "choices": [
-          "It allows the team to improve design and reduce technical debt",
-          "It allows the team to change task priority between iterations",
-          "It allows the team to change project scope between iterations",
-          "It verifies that the customer receives maximum value"
-        ],
-        "correct": 0,
-        "explanation": "Refactoring improves internal design, maintainability, and code quality without changing external functionality. It is a technical-debt reduction practice, not a scope or prioritization technique."
-      },
-      {
-        "tag": "Velocity Forecasting",
-        "domain": "Process",
-        "topic": "Iteration capacity",
-        "approach": "Agile",
-        "difficulty": "Medium",
-        "decisionRule": "Use actual velocity to forecast future capacity without destabilizing the current iteration.",
-        "chapterId": "pmbok-ch06-schedule-management",
-        "sourceSet": "pmp-agile-core-50",
-        "sourceQuestionNumber": 20,
-        "text": "A team estimated that it could complete 30 story points in the current iteration. During the iteration, it realizes that its current velocity may support 50 story points. What should the team do?",
-        "choices": [
-          "Shorten the iteration to match the estimated rate",
-          "Continue working only at the originally estimated rate",
-          "Increase its forecast based on the observed velocity after team discussion",
-          "Release team members to keep the original estimate"
-        ],
-        "correct": 2,
-        "explanation": "Velocity is empirical. If the team learns that capacity is higher than forecast, it should inspect the situation and update its forecast responsibly. The team should not remove capacity or force the original estimate to be true."
-      },
-      {
-        "tag": "Cross-functional Team",
-        "domain": "People",
-        "topic": "Skill development",
-        "approach": "Agile",
-        "difficulty": "Medium",
-        "decisionRule": "Build cross-functional skills to reduce bottleneck risk.",
-        "chapterId": "pmbok-ch09-resource-management",
-        "sourceSet": "pmp-agile-core-50",
-        "sourceQuestionNumber": 21,
-        "text": "A team invests in training new members to broaden individual skills and strengthen cross-functional capability. What is the main purpose?",
-        "choices": [
-          "Reduce bottleneck risk",
-          "Increase stakeholder acceptance of risk",
-          "Increase the frequency of cross-functional communication only",
-          "Use new tools to track progress"
-        ],
-        "correct": 0,
-        "explanation": "Cross-functional capability reduces dependency on a small number of specialists. This lowers bottleneck risk and helps the team deliver increments more reliably."
-      },
-      {
-        "tag": "Progressive Elaboration",
-        "domain": "Process",
-        "topic": "Backlog refinement",
-        "approach": "Agile",
-        "difficulty": "Medium",
-        "decisionRule": "Use progressive elaboration to split large stories into smaller, manageable items.",
-        "chapterId": "pmbok-ch05-scope-management",
-        "sourceSet": "pmp-agile-core-50",
-        "sourceQuestionNumber": 22,
-        "text": "An agile team receives a product backlog for project sizing and agrees to use progressive elaboration. What is a key benefit of this approach?",
-        "choices": [
-          "It always takes less time than other estimation techniques",
-          "It forces the team to split large stories into smaller, more manageable pieces",
-          "It makes velocity easier to show on a cumulative flow diagram",
-          "It lets inexperienced teams avoid participation"
+          "Finish the iteration under the existing tests and schedule compliance work for the next release",
+          "Engage the product owner and team to assess the rule, revise acceptance evidence, and reorder affected work",
+          "Pause all development until the regulator approves a complete replacement design",
+          "Ask the compliance officer to own the change while the team continues the current plan"
         ],
         "correct": 1,
-        "explanation": "Progressive elaboration means details are refined as more information becomes available. Large backlog items can be split into smaller, clearer, and more estimable stories."
+        "explanation": "The decisive fact is that the rule is already effective and current tests cannot prove compliance, so product ordering and acceptance evidence must be adapted with compliance expertise. Finishing as planned may release noncompliant work, a total pause exceeds the known need, and delegating ownership leaves product and delivery decisions disconnected.",
+        "chapterId": "pmbok-ch04-integration-management"
       },
       {
-        "tag": "Kanban",
-        "domain": "Process",
-        "topic": "Kanban system",
-        "approach": "Agile",
-        "difficulty": "Medium",
-        "decisionRule": "Understand Kanban as a flow system, not simply a task board.",
-        "chapterId": "pmbok-ch08-quality-management",
-        "sourceSet": "pmp-agile-core-50",
-        "sourceQuestionNumber": 23,
-        "text": "Which statement about Kanban is incorrect?",
-        "choices": [
-          "A Kanban system visualizes units of value such as user stories, minimum marketable features, and legacy requirements",
-          "A Kanban system manages the value stream through WIP limits",
-          "Kanban is identical to a task board",
-          "Kanban is an important lean tool"
-        ],
-        "correct": 2,
-        "explanation": "Kanban uses visualization, WIP limits, and flow management. A task board may be one visible element, but Kanban is not identical to a simple task board."
-      },
-      {
-        "tag": "Servant Leadership",
-        "domain": "People",
-        "topic": "Self-organization",
-        "approach": "Agile",
-        "difficulty": "Medium",
-        "decisionRule": "Use facilitation and powerful questions to build a supportive environment.",
-        "chapterId": "pmbok-ch09-resource-management",
-        "sourceSet": "pmp-agile-core-50",
-        "sourceQuestionNumber": 24,
-        "text": "To cultivate self-organization in an agile team, what should a servant leader do during meetings?",
-        "choices": [
-          "Use the Delphi technique to question people",
-          "Use a burndown chart so progress can be measured",
-          "Stay silent as an observer and only record observations during the retrospective",
-          "Ask thoughtful questions and create an environment that helps the team participate"
-        ],
-        "correct": 3,
-        "explanation": "A servant leader facilitates, protects the team, removes impediments, and creates an environment where the team can solve problems. The leader should guide through questions rather than command the answer."
-      },
-      {
-        "tag": "Empowerment",
-        "domain": "People",
-        "topic": "Team motivation",
-        "approach": "Agile",
-        "difficulty": "Medium",
-        "decisionRule": "Empower the team to increase motivation and ownership.",
-        "chapterId": "pmbok-ch09-resource-management",
-        "sourceSet": "pmp-agile-core-50",
-        "sourceQuestionNumber": 25,
-        "text": "Team motivation is a critical success factor in agile and other project management approaches. Which action is one effective way to improve motivation?",
-        "choices": [
-          "Create an environment where team members make every possible decision without boundaries",
-          "Empower the team",
-          "Ensure the development team strictly follows the project plan",
-          "Use strong leadership that makes all team decisions so the team can focus on productivity"
-        ],
-        "correct": 1,
-        "explanation": "Empowered teams have ownership and decision authority within appropriate boundaries. This increases motivation more effectively than command-and-control decision making."
-      },
-      {
-        "tag": "Sprint Scope",
-        "domain": "Process",
-        "topic": "Adding work during sprint",
-        "approach": "Agile",
-        "difficulty": "Medium",
-        "decisionRule": "Protect the sprint goal and support completion before pulling additional work.",
-        "chapterId": "pmbok-ch04-integration-management",
-        "sourceSet": "pmp-agile-core-50",
-        "sourceQuestionNumber": 26,
-        "text": "After completing a task, an agile practitioner suggests adding a new story to the current sprint while other committed sprint stories remain unfinished. What should the practitioner do?",
-        "choices": [
-          "Ask the Product Owner to provide and prioritize the new story outside the current sprint commitment",
-          "Complete the new story independently because team quality is low",
-          "Wait until the retrospective and ask the team to approve starting the new story",
-          "Support the team in completing the remaining committed sprint stories"
-        ],
-        "correct": 3,
-        "explanation": "The current sprint goal and committed work should be protected. New work can be discussed with the Product Owner and backlog, but the team should first help finish the work already selected for the sprint."
-      },
-      {
-        "tag": "User Story",
-        "domain": "Process",
-        "topic": "Clarifying user intent",
-        "approach": "Agile",
-        "difficulty": "Medium",
-        "decisionRule": "Clarify story intent collaboratively with the customer or Product Owner.",
-        "chapterId": "pmbok-ch05-scope-management",
-        "sourceSet": "pmp-agile-core-50",
-        "sourceQuestionNumber": 27,
-        "text": "During iteration planning, the team is struggling to understand the customer's intent for a user story. What should the team do?",
-        "choices": [
-          "Collaborate with the customer to clarify the user story",
-          "Discuss the issue only inside the development team",
-          "Perform multiple experimental tasks without clarification",
-          "Investigate the entire scope of customer intent independently"
-        ],
-        "correct": 0,
-        "explanation": "User stories are refined through conversation. When intent is unclear, the team should collaborate with the customer or Product Owner to clarify value, acceptance criteria, and expected behavior."
-      },
-      {
-        "tag": "Story Points",
-        "domain": "Process",
-        "topic": "Estimation baseline",
-        "approach": "Agile",
-        "difficulty": "Medium",
-        "decisionRule": "Define the estimation standard before estimating stories.",
-        "chapterId": "pmbok-ch06-schedule-management",
-        "sourceSet": "pmp-agile-core-50",
-        "sourceQuestionNumber": 28,
-        "text": "What should an agile team do first when estimating user stories?",
-        "choices": [
-          "Classify user stories by priority",
-          "Schedule a team meeting to understand user stories",
-          "Define the basis or standard for story-point estimation",
-          "Estimate using function point analysis"
-        ],
-        "correct": 2,
-        "explanation": "Before estimating, the team needs a shared understanding of the scale or reference standard. This makes story-point estimates more consistent across the team."
-      },
-      {
-        "tag": "Risk Visibility",
-        "domain": "Process",
-        "topic": "Risk information radiator",
-        "approach": "Agile",
-        "difficulty": "Medium",
-        "decisionRule": "Make major risks visible so management can focus mitigation resources.",
-        "chapterId": "pmbok-ch11-risk-management",
-        "sourceSet": "pmp-agile-core-50",
-        "sourceQuestionNumber": 29,
-        "text": "A company president is concerned about the impact of a natural disaster. How should management identify where to apply resources and reduce potential impact?",
-        "choices": [
-          "Create and maintain an active risk register with mitigation strategies and cost-benefit analysis",
-          "Create and maintain an active risk register based only on qualitative analysis and expected loss",
-          "Have each development team post its highest-risk development items on an information radiator",
-          "Split development teams into two locations to avoid risk and maintain knowledge continuity"
-        ],
-        "correct": 2,
-        "explanation": "In an agile environment, visible risk information helps teams and leaders inspect exposure and act early. Information radiators such as risk boards or risk burndown charts can expose the most important risks for attention."
-      },
-      {
-        "tag": "Pair Programming",
-        "domain": "People",
-        "topic": "Knowledge sharing",
-        "approach": "Agile",
-        "difficulty": "Medium",
-        "decisionRule": "Use pair programming to support knowledge sharing and collaborative quality.",
-        "chapterId": "pmbok-ch09-resource-management",
-        "sourceSet": "pmp-agile-core-50",
-        "sourceQuestionNumber": 30,
-        "text": "Which technique promotes knowledge sharing in an agile team?",
-        "choices": [
-          "Mob programming",
-          "Group programming",
-          "Pair programming",
-          "Dual programming"
-        ],
-        "correct": 2,
-        "explanation": "Pair programming is a recognized agile engineering practice in which two people work together on the same work item, improving shared understanding and knowledge transfer."
-      },
-      {
-        "tag": "Cross-functional Team",
-        "domain": "People",
-        "topic": "Team organization",
-        "approach": "Agile",
-        "difficulty": "Medium",
-        "decisionRule": "Organize agile teams as cross-functional teams.",
-        "chapterId": "pmbok-ch09-resource-management",
-        "sourceSet": "pmp-agile-core-50",
-        "sourceQuestionNumber": 31,
-        "text": "A company decides to use agile for a new project and creates an agile team. How should the agile team be organized to improve the chance of success?",
-        "choices": [
-          "By skill silo",
-          "As a cross-functional team",
-          "As a spontaneous informal group",
-          "By project phase"
-        ],
-        "correct": 1,
-        "explanation": "Agile teams should be cross-functional so they contain the skills needed to deliver value. Self-organization describes how the team manages work, not how the initial capability mix is structured."
-      },
-      {
-        "tag": "Self-organizing Team",
-        "domain": "People",
-        "topic": "Constructive disagreement",
-        "approach": "Agile",
-        "difficulty": "Medium",
-        "decisionRule": "Expect empowered, self-organizing teams to use constructive disagreement.",
-        "chapterId": "pmbok-ch09-resource-management",
-        "sourceSet": "pmp-agile-core-50",
-        "sourceQuestionNumber": 32,
-        "text": "Which statement best describes an effective agile team?",
-        "choices": [
-          "The team is committed to success while respecting formal roles and titles",
-          "The team owns all decisions and commitments and ensures success at any cost",
-          "The team is self-organizing, empowered to make decisions, aligned, and able to use constructive disagreement",
-          "The team avoids conflict to maximize collaboration and business value"
-        ],
-        "correct": 2,
-        "explanation": "Agile teams are self-organizing and empowered. Constructive disagreement can improve decisions. Agile does not depend on formal titles, perfection, or avoiding all conflict."
-      },
-      {
-        "tag": "Facilitation",
-        "domain": "People",
-        "topic": "Stakeholder disagreement",
-        "approach": "Agile",
-        "difficulty": "Medium",
-        "decisionRule": "Facilitate collaboration between stakeholders and the team to reach shared understanding.",
-        "chapterId": "pmbok-ch13-stakeholder-management",
-        "sourceSet": "pmp-agile-core-50",
-        "sourceQuestionNumber": 33,
-        "text": "During a planning meeting, an agile practitioner asks a stakeholder to clarify requirements and notices disagreement between the stakeholder and the team. What should the practitioner do?",
-        "choices": [
-          "Collaborate with the stakeholder and the team to reach agreement",
-          "Remind the team of a previous agreement only",
-          "Ask the sponsor to define the stakeholder's role in the planning meeting",
-          "Control the meeting by asking each team member for a view and then making the decision"
-        ],
-        "correct": 0,
-        "explanation": "The agile practitioner should facilitate collaboration and shared understanding. Escalating to the sponsor or controlling the decision conflicts with self-organization and servant leadership."
-      },
-      {
-        "tag": "Definition of Ready",
-        "domain": "Process",
-        "topic": "User story clarity",
-        "approach": "Agile",
-        "difficulty": "Medium",
-        "decisionRule": "Work with the Product Owner and team to make user stories clear enough for delivery.",
-        "chapterId": "pmbok-ch05-scope-management",
-        "sourceSet": "pmp-agile-core-50",
-        "sourceQuestionNumber": 34,
-        "text": "An agile coach notices that team velocity is affected because the Product Owner's requirement definitions are unclear. What should the coach do?",
-        "choices": [
-          "Work with the Product Owner and team to clearly define user stories",
-          "Require the Product Owner to attend training before writing user stories",
-          "Tell the team to take responsibility for all clarification",
-          "Authorize team members to provide clarification themselves"
-        ],
-        "correct": 0,
-        "explanation": "Unclear user stories should be refined collaboratively. The Product Owner and team should clarify acceptance criteria and readiness instead of shifting all responsibility to one side."
-      },
-      {
-        "tag": "Empowered Team",
-        "domain": "People",
-        "topic": "Agile team attribute",
-        "approach": "Agile",
-        "difficulty": "Medium",
-        "decisionRule": "Empowered teams need minimal management interference and focus on delivering value.",
-        "chapterId": "pmbok-ch09-resource-management",
-        "sourceSet": "pmp-agile-core-50",
-        "sourceQuestionNumber": 35,
-        "text": "Why is an empowered team considered an important agile team attribute?",
-        "choices": [
-          "Because empowered teams require broad management participation to clarify customer needs",
-          "Because empowered teams need minimal management involvement so they can lead their work and deliver value rather than being directed",
-          "Because empowered teams adapt slowly to changing requirements to reduce scope creep",
-          "Because empowered teams remain flexible to changing customer needs while still focusing on specific requirements"
-        ],
-        "correct": 1,
-        "explanation": "Agile teams need enough authority to organize their work and deliver value. Management should set context and boundaries, not direct every action."
-      },
-      {
-        "tag": "Cross-functional Team",
-        "domain": "People",
-        "topic": "Testing bottleneck",
-        "approach": "Agile",
-        "difficulty": "Medium",
-        "decisionRule": "Build cross-functional capability to remove recurring bottlenecks.",
-        "chapterId": "pmbok-ch09-resource-management",
-        "sourceSet": "pmp-agile-core-50",
-        "sourceQuestionNumber": 36,
-        "text": "During the last three iterations, the team completed all planned development tasks, but testing consistently lagged behind. What should be done now?",
-        "choices": [
-          "Add more testers to the team immediately",
-          "Encourage the team to develop cross-functional capability",
-          "Reduce the number of developers on the team",
-          "Plan one iteration for testing after development"
-        ],
-        "correct": 1,
-        "explanation": "A recurring testing bottleneck should be addressed by helping the team become more cross-functional. Adding or removing people may not solve the system problem and may create new handoffs."
-      },
-      {
-        "tag": "Value and Risk",
+        "tag": "Benefits and value realization",
         "domain": "Business Environment",
-        "topic": "Backlog priority",
+        "topic": "Benefits and value realization",
         "approach": "Agile",
         "difficulty": "Medium",
-        "decisionRule": "Prioritize high-value work first and defer low-value, high-risk items unless their value can be improved or risk reduced.",
-        "chapterId": "pmbok-ch04-integration-management",
-        "sourceSet": "pmp-agile-core-50",
-        "sourceQuestionNumber": 37,
-        "text": "The Product Owner and team classify product backlog items by value and risk. They will handle high-value/high-risk items first, then high-value/low-risk items, and low-value/low-risk items last. What should they do with low-value/high-risk items?",
+        "decisionRule": "use outcome evidence to reconsider product ordering when delivered output is not producing value.",
+        "text": "A digital claims team releases requested features every two weeks, yet customer completion rates have remained unchanged for three releases. What should the project leader do next?",
         "choices": [
-          "Handle them last",
-          "Look for ways to increase value or reduce risk before committing to them",
-          "Never handle them",
-          "Use experiments to validate their value and risk immediately"
-        ],
-        "correct": 1,
-        "explanation": "Low-value/high-risk items are poor candidates for early delivery. The better agile response is to inspect whether value can be increased or risk can be reduced before deciding to implement them."
-      },
-      {
-        "tag": "Minimum Marketable Feature",
-        "domain": "Business Environment",
-        "topic": "Value delivery",
-        "approach": "Agile",
-        "difficulty": "Medium",
-        "decisionRule": "Define an MMF as the smallest set of functionality that delivers market value.",
-        "chapterId": "pmbok-ch04-integration-management",
-        "sourceSet": "pmp-agile-core-50",
-        "sourceQuestionNumber": 38,
-        "text": "How is a minimum marketable feature best defined?",
-        "choices": [
-          "By writing user stories that can be sold first in the market",
-          "By the smallest approved product increment",
-          "By the smallest set of functionality that adds value in the market",
-          "By prioritizing the product backlog to deliver the most important feature"
+          "Increase release frequency so customers encounter improvements sooner",
+          "Measure team velocity against other claims products before changing the backlog",
+          "Review outcome data with the product owner and reorder experiments around the benefit hypothesis",
+          "Complete the remaining roadmap because the features were approved by stakeholders"
         ],
         "correct": 2,
-        "explanation": "A minimum marketable feature is the smallest coherent feature set that can deliver market value. It is smaller than a full release but still valuable to customers or users."
+        "explanation": "Stable completion rates challenge the assumed link between delivered features and customer value, so the team and product owner should inspect evidence and adapt. Faster releases repeat an unproven direction, comparative velocity measures output rather than benefit, and roadmap approval does not justify ignoring outcome data.",
+        "chapterId": "pmbok-ch02-project-environment"
       },
       {
-        "tag": "Backlog Priority",
-        "domain": "Process",
-        "topic": "Mid-iteration change",
-        "approach": "Agile",
-        "difficulty": "Medium",
-        "decisionRule": "Work with the Product Owner to reprioritize when new work must enter the iteration.",
-        "chapterId": "pmbok-ch05-scope-management",
-        "sourceSet": "pmp-agile-core-50",
-        "sourceQuestionNumber": 39,
-        "text": "During an iteration, the Product Owner tells the team that some features not originally included in the iteration now need to be added. What should the team do?",
-        "choices": [
-          "Tell the Product Owner to wait until the next iteration planning meeting",
-          "Work with the Product Owner to reprioritize and remove lower-priority work of comparable size from the current iteration",
-          "Include all requested features",
-          "Reject the new features because no change is allowed once an iteration starts"
-        ],
-        "correct": 1,
-        "explanation": "Agile welcomes change, but capacity is still limited. If new work must enter the current iteration, the Product Owner and team should reprioritize and remove lower-priority work to protect flow and quality."
-      },
-      {
-        "tag": "Backlog Priority",
-        "domain": "Business Environment",
-        "topic": "New requirement",
-        "approach": "Agile",
-        "difficulty": "Medium",
-        "decisionRule": "Use the Product Owner and backlog priority to handle new requirements.",
-        "chapterId": "pmbok-ch04-integration-management",
-        "sourceSet": "pmp-agile-core-50",
-        "sourceQuestionNumber": 40,
-        "text": "An agile project has internal and external stakeholders. During the project, a new requirement is identified that may delay delivery by two months. What should the team do?",
-        "choices": [
-          "Deliver the planned items first and handle the new requirement later",
-          "Work with the Product Owner to update and prioritize the backlog",
-          "Add the new requirement directly to the upcoming release",
-          "Notify stakeholders and work backward from a new delivery date"
-        ],
-        "correct": 1,
-        "explanation": "New requirements should flow through the Product Owner and backlog. The team should update priority based on value, risk, and impact before changing release commitments."
-      },
-      {
-        "tag": "Team Space",
+        "tag": "Team leadership",
         "domain": "People",
-        "topic": "Colocation",
-        "approach": "Agile",
-        "difficulty": "Medium",
-        "decisionRule": "Use colocation for people working on the same project or product.",
-        "chapterId": "pmbok-ch09-resource-management",
-        "sourceSet": "pmp-agile-core-50",
-        "sourceQuestionNumber": 41,
-        "text": "For a shared team room to be useful, the people in the room should be working on what?",
+        "topic": "Team leadership",
+        "approach": "Hybrid",
+        "difficulty": "Hard",
+        "decisionRule": "surface the leadership system causing silence before changing personnel or plans.",
+        "text": "In a regulated medical-device program, specialists meet gated approval dates but conceal integration concerns after a workstream director publicly criticizes anyone who reports uncertainty. What should the project manager do first?",
         "choices": [
-          "Whatever they choose",
-          "Different projects",
-          "The same module across different projects",
-          "The same project"
+          "Revise milestone contingencies from current risk data and let the director address reporting behavior",
+          "Introduce a confidential concern channel and review its trends at the next governance meeting",
+          "Gather specific observations privately, then address psychological safety and reporting expectations with the director and team",
+          "Remind specialists of reporting duties and include compliance in upcoming performance discussions"
         ],
-        "correct": 3,
-        "explanation": "A shared team space or war room is most useful when people are working on the same project or product and need fast communication and collaboration."
+        "correct": 2,
+        "explanation": "The pattern indicates a leadership-created threat to truthful reporting, so the project manager needs facts and a direct reset of safe escalation expectations. Revised contingencies address exposure but delegate the behavior problem, a confidential channel delays direct repair, and reminders aimed at specialists place accountability on reporters rather than the leadership environment.",
+        "chapterId": "pmbok-ch09-resource-management"
       },
       {
-        "tag": "Empirical Process Control",
+        "tag": "Integration and change control",
         "domain": "Process",
-        "topic": "Scrum pillars",
-        "approach": "Agile",
-        "difficulty": "Medium",
-        "decisionRule": "Use transparency, inspection, and adaptation to support agile process control.",
-        "chapterId": "pmbok-ch08-quality-management",
-        "sourceSet": "pmp-agile-core-50",
-        "sourceQuestionNumber": 42,
-        "text": "Which set of concepts supports empirical process control in agile approaches?",
+        "topic": "Integration and change control",
+        "approach": "Hybrid",
+        "difficulty": "Hard",
+        "decisionRule": "contain unauthorized work, establish impacts, and obtain the required integrated decision.",
+        "text": "On a hybrid plant upgrade, a field lead has installed an unapproved equipment workaround that helps an iterative controls team meet its demo date but may void the vendor warranty. What should the project manager do first?",
         "choices": [
-          "Testing, requirements, adaptation",
-          "Testing, requirements, change",
-          "Transparency, retrospective, testing",
-          "Transparency, inspection, adaptation"
+          "Let the demo proceed and record the workaround as an as-built condition afterward",
+          "Direct the controls team to reverse the workaround before consulting the vendor",
+          "Contain further use, document the deviation and impacts, then route it through change authority",
+          "Ask the sponsor to accept the warranty exposure so the demo date remains protected"
         ],
-        "correct": 3,
-        "explanation": "Scrum is based on empirical process control through transparency, inspection, and adaptation. These pillars allow teams to make decisions from observed reality."
+        "correct": 2,
+        "explanation": "The installed deviation creates both integration and warranty exposure, so further reliance should be contained while facts are documented for the authorized decision. Recording it afterward normalizes unauthorized scope, immediate reversal selects a solution before impact analysis, and sponsor acceptance alone may not satisfy contractual or technical change authority.",
+        "chapterId": "pmbok-ch04-integration-management"
       },
       {
-        "tag": "Cumulative Flow Diagram",
-        "domain": "Process",
-        "topic": "Tracking and forecasting",
-        "approach": "Agile",
-        "difficulty": "Medium",
-        "decisionRule": "Use a cumulative flow diagram to track and forecast agile flow.",
-        "chapterId": "pmbok-ch06-schedule-management",
-        "sourceSet": "pmp-agile-core-50",
-        "sourceQuestionNumber": 43,
-        "text": "Which tool is used to track and forecast an agile project?",
+        "tag": "Benefits and value realization",
+        "domain": "Business Environment",
+        "topic": "Benefits and value realization",
+        "approach": "Hybrid",
+        "difficulty": "Hard",
+        "decisionRule": "separate delivery success from benefit evidence and test the assumptions connecting them.",
+        "text": "A transit program delivered stations on the approved dates, and early ridership meets the forecast. However, neighborhood access data show that the intended employment benefit is concentrated outside the communities named in the business case. What should the program manager recommend first?",
         "choices": [
-          "Cumulative flow diagram",
-          "Burnup chart",
-          "Burndown chart",
-          "Charts and curves in general"
+          "Present the disaggregated evidence and reassess benefit assumptions, owners, and corrective options",
+          "Extend measurement for another year before sharing the distribution finding with governance",
+          "Declare the benefit achieved because ridership and delivery targets both meet their baselines",
+          "Ask the construction teams to propose additional station features within remaining contingency"
         ],
         "correct": 0,
-        "explanation": "A cumulative flow diagram helps teams inspect work in progress, flow, cycle time, bottlenecks, and likely completion trends."
+        "explanation": "The overall ridership indicator does not establish the stated community employment outcome, so governance needs the disaggregated evidence and an explicit reassessment. Baseline success overlooks benefit distribution, delayed disclosure weakens timely oversight, and construction changes would select a remedy before benefit owners examine causality and options.",
+        "chapterId": "pmbok-ch02-project-environment"
       },
       {
-        "tag": "Product Backlog",
-        "domain": "Business Environment",
-        "topic": "Backlog ownership",
-        "approach": "Agile",
-        "difficulty": "Medium",
-        "decisionRule": "The Product Owner owns and maintains the product backlog.",
-        "chapterId": "pmbok-ch04-integration-management",
-        "sourceSet": "pmp-agile-core-50",
-        "sourceQuestionNumber": 44,
-        "text": "If the product backlog is outdated, who should resolve the issue?",
-        "choices": [
-          "Sponsor",
-          "Product Owner",
-          "Scrum Master",
-          "Development team"
-        ],
-        "correct": 1,
-        "explanation": "The Product Owner is accountable for the product backlog, including ordering, clarity, and alignment with value."
-      },
-      {
-        "tag": "Scrum Team",
+        "tag": "Team leadership",
         "domain": "People",
-        "topic": "Scrum roles",
-        "approach": "Agile",
+        "topic": "Team leadership",
+        "approach": "Predictive",
         "difficulty": "Medium",
-        "decisionRule": "Recognize the Product Owner, Scrum Master, and development team as core Scrum roles.",
-        "chapterId": "pmbok-ch09-resource-management",
-        "sourceSet": "pmp-agile-core-50",
-        "sourceQuestionNumber": 45,
-        "text": "Which roles are included in a Scrum team?",
+        "decisionRule": "establish a shared objective before optimizing separate functional commitments.",
+        "text": "Functional managers have supplied qualified engineers to an airport project, but each engineer protects departmental priorities and cross-discipline design reviews are failing. What should the project manager do next?",
         "choices": [
-          "Development team, Scrum Master, and customer",
-          "Development team, project manager, and customer",
-          "Development team, leader, and architect",
-          "Development team, Scrum Master, and Product Owner"
+          "Replace functional representatives with contractors who report only to the project",
+          "Send unresolved design issues directly to the steering committee after each review",
+          "Reward the department that closes the largest number of its own action items",
+          "Facilitate a team charter session linking shared outcomes, interfaces, and decision responsibilities"
         ],
         "correct": 3,
-        "explanation": "A Scrum team consists of the Product Owner, Scrum Master, and Developers. Customers and managers may be stakeholders, but they are not the three core Scrum roles."
+        "explanation": "A chartering session creates the common purpose and interaction rules missing from this matrix team. Replacing qualified staff is disproportionate, routine escalation weakens team problem solving, and department-based rewards intensify local optimization when the project needs integrated ownership.",
+        "chapterId": "pmbok-ch09-resource-management"
       },
       {
-        "tag": "Story Points",
+        "tag": "Integration and change control",
         "domain": "Process",
-        "topic": "Velocity comparison",
-        "approach": "Agile",
+        "topic": "Integration and change control",
+        "approach": "Predictive",
         "difficulty": "Medium",
-        "decisionRule": "Do not compare story points across teams.",
-        "chapterId": "pmbok-ch06-schedule-management",
-        "sourceSet": "pmp-agile-core-50",
-        "sourceQuestionNumber": 46,
-        "text": "Team A completed 43 story points in the last two-week iteration. Team B works on a separate project, has twice as many developers, and also completed 43 story points. What can be inferred?",
+        "decisionRule": "propagate an approved change consistently across every affected project artifact.",
+        "text": "A change board approves a revised foundation design, but the schedule still reflects the old sequence and the procurement package still references superseded drawings. What should the project manager do next?",
         "choices": [
-          "One team's story points cannot be directly compared with another team's story points",
-          "Team A is twice as efficient as Team B",
-          "Team A should add more people",
-          "Team B has management support"
-        ],
-        "correct": 0,
-        "explanation": "Story points are relative to a team. Because teams define and estimate points differently, velocity should not be used to compare performance across teams."
-      },
-      {
-        "tag": "Cumulative Flow Diagram",
-        "domain": "Process",
-        "topic": "WIP limits",
-        "approach": "Agile",
-        "difficulty": "Medium",
-        "decisionRule": "Use WIP data and limits to make cumulative flow information useful.",
-        "chapterId": "pmbok-ch06-schedule-management",
-        "sourceSet": "pmp-agile-core-50",
-        "sourceQuestionNumber": 47,
-        "text": "An agile team wants to use a cumulative flow diagram to communicate predictable delivery to stakeholders. What data is needed to use the diagram effectively?",
-        "choices": [
-          "The number of work items in development",
-          "The number of annual steps used on the Kanban board",
-          "The number of sprints required by the development team",
-          "Work-in-progress limits on the team's Kanban system"
+          "Allow each workstream manager to update documents when its next activity begins",
+          "Reopen the change decision because not every artifact was attached to the request",
+          "Tell the contractor to follow the newest drawing while leaving the baselines unchanged",
+          "Coordinate updates to affected baselines and documents, then communicate the authorized configuration"
         ],
         "correct": 3,
-        "explanation": "A cumulative flow diagram is most useful when flow and WIP are visible. WIP limits help the team understand queue size, bottlenecks, cycle time, and delivery predictability."
+        "explanation": "The design change is approved, yet schedule and procurement information remain inconsistent, so controlled propagation and communication are now required. Local updates invite configuration drift, reopening the decision is unnecessary, and informal drawing direction leaves contractual and baseline records misaligned.",
+        "chapterId": "pmbok-ch04-integration-management"
       },
       {
-        "tag": "Sprint Review",
+        "tag": "Benefits and value realization",
+        "domain": "Business Environment",
+        "topic": "Benefits and value realization",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "decisionRule": "evaluate a changed benefit forecast through the authorized business-case decision process.",
+        "text": "Halfway through an automation project, a new labor agreement preserves staffing levels, reducing the forecast savings while service-quality gains remain possible. What should the project manager do next?",
+        "choices": [
+          "Revise the cost baseline immediately to remove the savings target",
+          "Continue unchanged because the signed charter established the original business need",
+          "Cancel the project because one quantified benefit is no longer available",
+          "Update the benefit forecast and impacts, then submit the business case for governance review"
+        ],
+        "correct": 3,
+        "explanation": "The agreement changes a major assumption but does not establish whether the remaining value justifies continuation, so the updated business case belongs with its designated authority. A cost-baseline edit is not a benefit decision, the charter is not immune to new facts, and automatic cancellation ignores remaining outcomes.",
+        "chapterId": "pmbok-ch02-project-environment"
+      },
+      {
+        "tag": "Team leadership",
         "domain": "People",
-        "topic": "Stakeholder feedback",
+        "topic": "Team leadership",
         "approach": "Agile",
-        "difficulty": "Medium",
-        "decisionRule": "Use sprint reviews to demonstrate the increment and gather feedback.",
-        "chapterId": "pmbok-ch13-stakeholder-management",
-        "sourceSet": "pmp-agile-core-50",
-        "sourceQuestionNumber": 48,
-        "text": "Why is the iteration review important in agile development?",
+        "difficulty": "Hard",
+        "decisionRule": "use evidence and team dialogue to correct a dependency without taking work ownership away.",
+        "text": "A mature software team finishes stories reliably, but one senior engineer privately rewrites colleagues' code at night to prevent defects. Review quality is high, while learning and ownership are declining. What should the project leader do?",
         "choices": [
-          "The Scrum Master reviews progress and gives corrective-action direction",
-          "The team demonstrates the working product and asks for feedback",
-          "Customers and stakeholders evaluate team member performance and give feedback to the manager",
-          "Team members reflect on the sprint process and take corrective action"
-        ],
-        "correct": 1,
-        "explanation": "The sprint or iteration review is used to inspect the product increment with stakeholders and gather feedback. Process improvement belongs mainly in the retrospective."
-      },
-      {
-        "tag": "Planning Poker",
-        "domain": "Process",
-        "topic": "Wideband Delphi",
-        "approach": "Agile",
-        "difficulty": "Medium",
-        "decisionRule": "Use Wideband Delphi or planning poker for team-based estimation and discussion.",
-        "chapterId": "pmbok-ch06-schedule-management",
-        "sourceSet": "pmp-agile-core-50",
-        "sourceQuestionNumber": 49,
-        "text": "Which statement best describes Wideband Delphi estimation, such as planning poker?",
-        "choices": [
-          "Team members independently estimate a story, discuss their reasoning, and work toward agreement",
-          "The team analyzes prior performance to determine actual duration for similar stories",
-          "Team members assign similar task sizes and base story points on triangular estimating",
-          "Team members give optimistic and pessimistic estimates and average them as story points"
+          "Discuss the observed pattern with the engineer and facilitate stronger shared review and pairing practices",
+          "Ask the engineer to document rewrite standards and present them at the next technical forum",
+          "Make the engineer a required reviewer for high-risk components and monitor defect trends",
+          "Arrange advanced coding training for colleagues identified through the rewrite history"
         ],
         "correct": 0,
-        "explanation": "Wideband Delphi and planning poker use independent estimates followed by discussion, especially around high and low estimates, until the team reaches an acceptable level of agreement."
+        "explanation": "The leader should acknowledge the quality concern while changing the behavior that is eroding collective capability and ownership. Publishing standards transfers some knowledge but leaves covert rewriting intact, a required review role formalizes dependence, and targeted training assumes a capability deficit before the team has examined how review and pairing should work.",
+        "chapterId": "pmbok-ch09-resource-management"
       },
       {
-        "tag": "Product Value",
+        "tag": "Integration and change control",
+        "domain": "Process",
+        "topic": "Integration and change control",
+        "approach": "Agile",
+        "difficulty": "Easy",
+        "decisionRule": "send a new product idea to transparent backlog evaluation rather than starting it informally.",
+        "text": "During a review, a sales director suggests a useful dashboard that is unrelated to the iteration goal, and developers have not begun the work. What should the project leader do?",
+        "choices": [
+          "Ask the product owner to capture and order the dashboard idea in the product backlog",
+          "Add the dashboard to the current iteration because a senior stakeholder requested it",
+          "Reject the idea because it was not included in the original product roadmap",
+          "Ask one developer to explore it privately without changing the team's visible work"
+        ],
+        "correct": 0,
+        "explanation": "The dashboard is a new idea outside the current goal, so transparent product-backlog evaluation preserves prioritization and team focus. Immediate insertion disrupts the iteration, permanent rejection prevents value assessment, and hidden exploration creates untracked work and obscures capacity.",
+        "chapterId": "pmbok-ch04-integration-management"
+      },
+      {
+        "tag": "Benefits and value realization",
         "domain": "Business Environment",
-        "topic": "Business value ownership",
+        "topic": "Benefits and value realization",
+        "approach": "Predictive",
+        "difficulty": "Easy",
+        "decisionRule": "measure business outcomes rather than treating delivery activity as realized value.",
+        "text": "An executive asks how a completed training-platform project created value. The project report currently lists courses uploaded, users registered, and invoices paid. What should the project manager add?",
+        "choices": [
+          "Outcome measures linked to the approved capability and performance benefits",
+          "A longer activity log showing every completed configuration and training task",
+          "A comparison of project spending with the original management reserve",
+          "The total number of stakeholders invited to the final demonstration"
+        ],
+        "correct": 0,
+        "explanation": "Uploaded courses and registrations are useful outputs, but value requires evidence of the intended capability or performance change. More activity detail still measures work, reserve comparison addresses financial control, and invitation counts do not show adoption or benefit realization.",
+        "chapterId": "pmbok-ch02-project-environment"
+      },
+      {
+        "tag": "Team leadership",
+        "domain": "People",
+        "topic": "Team leadership",
+        "approach": "Hybrid",
+        "difficulty": "Easy",
+        "decisionRule": "recognize contribution in the manner the team has agreed will motivate fairly.",
+        "text": "After a difficult data migration, the project team meets its release objective and asks how its extra effort will be acknowledged. What should the project manager do?",
+        "choices": [
+          "Wait until project closure because interim recognition could reduce urgency",
+          "Provide timely recognition aligned with team preferences and organizational policy",
+          "Recognize only the workstream leads because they accepted formal accountability",
+          "Offer unapproved cash bonuses and seek finance authorization afterward"
+        ],
+        "correct": 1,
+        "explanation": "Timely, appropriate recognition reinforces the desired team behavior and should respect both individual preferences and organizational rules. Delaying loses motivational value, recognizing only leaders overlooks collective effort, and promising unauthorized compensation creates an expectation the project manager may not be able to fulfill.",
+        "chapterId": "pmbok-ch09-resource-management"
+      },
+      {
+        "tag": "Integration and change control",
+        "domain": "Process",
+        "topic": "Integration and change control",
+        "approach": "Hybrid",
+        "difficulty": "Medium",
+        "decisionRule": "reconcile evidence and decision rights at the boundary between delivery systems.",
+        "text": "An iterative analytics team considers a feature complete, while the predictive governance office withholds its gate because the benefit assumption was changed without updating the business case. What should the project manager do first?",
+        "choices": [
+          "Ask governance to waive the business-case update because the feature already works",
+          "Reconcile the changed assumption, supporting evidence, and approval path with both groups",
+          "Remove the feature from the release and restore the original benefit assumption",
+          "Let the product owner approve the changed assumption as part of backlog acceptance"
+        ],
+        "correct": 1,
+        "explanation": "The disagreement concerns an unintegrated benefit assumption and its authority, not feature functionality alone. Joint reconciliation identifies the evidence and required decision. A waiver ignores governance, removal chooses a remedy too soon, and product acceptance does not automatically authorize a business-case change.",
+        "chapterId": "pmbok-ch04-integration-management"
+      },
+      {
+        "tag": "Benefits and value realization",
+        "domain": "Business Environment",
+        "topic": "Benefits and value realization",
         "approach": "Agile",
         "difficulty": "Medium",
-        "decisionRule": "The Product Owner defines and orders business value for product features.",
-        "chapterId": "pmbok-ch04-integration-management",
-        "sourceSet": "pmp-agile-core-50",
-        "sourceQuestionNumber": 50,
-        "text": "Who is responsible for defining the business value of each feature?",
+        "decisionRule": "preserve value learning by comparing increments against explicit outcome measures.",
+        "text": "A subscription product has a broad backlog of retention ideas, but stakeholders disagree about which release produced the recent improvement in renewals. What should the product team establish?",
         "choices": [
-          "Product Owner",
-          "Steering committee",
-          "Scrum Master",
-          "Development team"
-        ],
-        "correct": 0,
-        "explanation": "The Product Owner is accountable for maximizing product value and ordering the product backlog. The Scrum Master facilitates the process, and the team delivers the work, but the Product Owner owns value decisions."
-      },
-      {
-        "tag": "Define Scope",
-        "topic": "Project scope statement and boundaries",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Use the project scope statement to define project boundaries, deliverables, exclusions, assumptions, and constraints.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 1,
-        "text": "Which of the following baselines can be used to assess whether the requested changes or additional work are included within the project boundary?",
-        "choices": [
-          "Project management plan",
-          "Project scope statement",
-          "scope management plan",
-          "WBS dictionary"
+          "A fixed annual scope so every approved retention idea is delivered",
+          "Increment-level hypotheses, outcome measures, and review intervals for benefit learning",
+          "Individual productivity targets for developers assigned to retention features",
+          "A policy that attributes any renewal increase to the most recent release"
         ],
         "correct": 1,
-        "explanation": "Correct answer: B. The project boundary normally identifies what is included in the project and clearly indicates what is not included in the project where the stakeholder may assume that a particular product, service or outcome will be part of the project. The project boundary is described as part of a detailed project scope statement."
+        "explanation": "Explicit hypotheses and review intervals make the connection between increments and outcomes testable, supporting responsible product decisions. Fixed scope reduces learning flexibility, developer productivity is not customer retention, and automatic attribution mistakes timing for evidence of causality.",
+        "chapterId": "pmbok-ch02-project-environment"
       },
       {
-        "tag": "Define Scope",
-        "topic": "Project scope statement and boundaries",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Use the project scope statement to define project boundaries, deliverables, exclusions, assumptions, and constraints.",
+        "tag": "Team leadership",
+        "domain": "People",
+        "topic": "Team leadership",
         "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 2,
-        "text": "During the execution phase of the project, you realized the subcontractors are working with incomplete and different scope statements. As the project manager, what should you do FIRST?",
+        "difficulty": "Hard",
+        "decisionRule": "diagnose system constraints before judging an apparently underperforming team.",
+        "text": "A rail-signaling team misses two design milestones despite working overtime. The sponsor wants the project manager to replace the team lead, but approvals arrive unpredictably from three external authorities. What should the project manager do first?",
         "choices": [
-          "Check the work completed against the correct scope statements",
-          "Review the scope of work with the stakeholders",
-          "Document the inconsistencies to management, calculating the cost of non-conformance",
-          "Stops all activities until the scope of the work is complete"
-        ],
-        "correct": 1,
-        "explanation": "Correct answer: B. First, there was a need for a consensus among stakeholders on the scope of the project."
-      },
-      {
-        "tag": "Create WBS",
-        "topic": "WBS and decomposition",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 3,
-        "text": "Here's what's wrong with decomposition.?",
-        "choices": [
-          "Workbags are the bottom of the work breakdown structure",
-          "Disaggregated to work carried out for the submission of the required deliverables",
-          "The work breakdown structure is a hierarchy of deliverables-oriented work",
-          "\"Work\" in the \"work breakdown structure\" refers to the effort to complete the work itself (this is active)"
-        ],
-        "correct": 3,
-        "explanation": "Correct answer: D. See PMBOK Guide (version 4), chap. 5, sect. 5.3 foreword: In the term “work breakdown structure”, “work” refers to results achieved through effort, such as work products or deliverables, rather than “work” itself."
-      },
-      {
-        "tag": "Define Scope",
-        "topic": "Project scope statement and boundaries",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Use the project scope statement to define project boundaries, deliverables, exclusions, assumptions, and constraints.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 4,
-        "text": "Which of the following statements on product and project scopes is correct? ( )?",
-        "choices": [
-          "Project scope services to product range",
-          "Changes in the scope of the project necessarily result in changes in the range of products",
-          "Changes in product ranges are bound to result in changes in project scopes",
-          "Product range for project encirclement"
-        ],
-        "correct": 0,
-        "explanation": "Correct answer: A. A. Correct answers. Once product ranges have been clarified, the work required to submit the product can be identified to ensure submission of the required product. It is not inevitable that changes will occur, for example, by adding a supplementary project work that may have no impact on the functioning of the product. C. Change is not inevitable, although it is likely to occur. That's not logical. Tests and answer techniques: Project scope and product range."
-      },
-      {
-        "tag": "Create WBS",
-        "topic": "WBS and decomposition",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 5,
-        "text": "You're the project manager of a major subcontractor. The General Contractor has asked you to manage it in a specific and detailed manner. Your first step is...?",
-        "choices": [
-          "Follow the work breakdown structure developed by the general contractor for the project and utilize the work identified in your proposal work package",
-          "To develop a sub-project work breakdown structure for your work package",
-          "Establishment of a coding structure similar to that used by the general contractor to facilitate access to the generic project management information system",
-          "Development of a work breakdown structure dictionary to illustrate specific staffing allocations"
-        ],
-        "correct": 1,
-        "explanation": "Correct answer: B. The development of a sub-project break-down structure for the work packages that your company is responsible for is the lowest level of the work break-up structure. The sub-project work breakdown structure breaks down work packages into more detailed elements. When the project manager assigns a range of jobs to another organization, the sub-project work break-down structure is usually used, and the project manager of another organization must plan and manage the range of jobs in a more detailed manner."
-      },
-      {
-        "tag": "Create WBS",
-        "topic": "WBS and decomposition",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 6,
-        "text": "Which of the following documents describes in detail the deliverables of the project and the work that must be done to present them?",
-        "choices": [
-          "Project management plan",
-          "project charter",
-          "work breakdown structure",
-          "Project scope statement"
-        ],
-        "correct": 3,
-        "explanation": "Correct answer: D. Analysis: In the output of the defined scope, the description of the scope of the project is important, and the candidates should have the definition, role and content of the description of the scope of the project (see PMBOK (version 4), chapter 5, section 5.2.3.1, the description of the scope of the project). 1) project scope statement: A detailed description of the deliverables of the project, as well as the work to be undertaken in order to submit these deliverables 2) The preparation of a detailed project scope statement is essential to the success of the project. Impact 1: Demon Engineering o role 2: to enable the project team to undertake more detailed planning (WBS, cost, progress and quality planning). ? Definition ranges ahead of cost, progress, quality, risk planning, followed by project scope statements for many process inputs. ? You have to clarify the scope of the project, develop a detailed description of the scope of the project and write it down! Role 3: To guide the work of the project team as a basis for future project decision-making. Impact 4: Provide a baseline for evaluating whether the change request or additional work exceeds the project boundary (Project's Boundaries). See which document makes it clear whether the work requested by the client is beyond the scope (project boundary) — the scope statement. Role 5: Better definition of scope prevents change in scope. ? The more carefully the scope is defined, the less likely it is to be changed. ? In defining the scope, the needs and expectations of all stakeholders are fully taken into account. Note: Changes in circumstances (e.g., project allocations reduced) will also affect the scope of the project, resulting in a revision of the scope of the project. The idea of scope management is how much, how little, and how much to prevent spread and gold plating.) The detailed project scope statement includes the following: ? ? product scope description (Procedition Scope Defense o ? product acceptance standard (Procedition Access Crimea o ? project deliverables o ? project exclusions o ? project constraints o ? project assumptions (Project Projects Projects Projects o ) : In order to facilitate the management of the expectations of stakeholders, the item scope statement clearly indicates which tasks fall outside the scope of the project. This is the exclusive responsibility of the project. Note 2: In {PMBOK(version 3) the project scope statement includes the project objective, but in Release 4, the project scope."
-      },
-      {
-        "tag": "Collect Requirements",
-        "topic": "Requirements documentation and traceability",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Elicit, document, and trace stakeholder requirements before defining scope or building the WBS.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 7,
-        "text": "What is the process for the project team to learn about the needs of the faculty by enabling the stakeholders to fill out the questionnaire?",
-        "choices": [
-          "Collect Requirements",
-          "Define Scope",
-          "Validate Scope",
-          "Control Scope"
-        ],
-        "correct": 0,
-        "explanation": "Correct answer: A. See the preamble to chapter 5, section 5.1, of the PMBOK Guide (version 4): Collect Requirements is the process of defining and documenting the needs of stakeholders in order to achieve project objectives."
-      },
-      {
-        "tag": "Control Scope",
-        "topic": "Scope baseline and change control",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Compare work against the scope baseline, analyze variance, and route changes through integrated change control.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 8,
-        "text": "Here's a mistake about the change request:?",
-        "choices": [
-          "Change requests need to be reviewed and processed through the implementation of the overall change control process",
-          "A range performance analysis may result in a change request",
-          "Change requests include changes to scope and other baselines",
-          "Requests for change do not include precautionary measures"
-        ],
-        "correct": 3,
-        "explanation": "Correct answer: D. See chapter 5, section 5.5.3.3 of the PMBOK Guide (version 4): A request for change may include preventive measures, corrective measures or remedy for defects."
-      },
-      {
-        "tag": "Collect Requirements",
-        "topic": "Requirements documentation and traceability",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Elicit, document, and trace stakeholder requirements before defining scope or building the WBS.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 9,
-        "text": "What file is directly exported from collection requirement to control?",
-        "choices": [
-          "project charter",
-          "Request File",
-          "Demand files, requirements traceability matrix",
-          "Project scope statement"
+          "Agree a performance improvement plan with the team lead based on the milestone variance",
+          "Rebaseline upcoming design work using the observed duration of external approvals",
+          "Analyze approval wait times and responsibilities with the team before deciding on a leadership change",
+          "Ask the sponsor to escalate the approval delays to the relevant external authorities"
         ],
         "correct": 2,
-        "explanation": "Correct answer: C. The best answer is Demand files, requirements traceability matrix, based on the PMP scope-management logic tested in this question."
+        "explanation": "The available evidence points to an external workflow constraint, so the project manager should separate system delay from leadership performance before acting. A performance plan assumes the lead caused the variance, rebaselining incorporates delay without clarifying responsibility, and sponsor escalation selects a response before the team has measured where approvals actually wait.",
+        "chapterId": "pmbok-ch09-resource-management"
       },
       {
-        "tag": "Create WBS",
-        "topic": "WBS and decomposition",
-        "chapterId": "pmbok-ch05-scope-management",
+        "tag": "Integration and change control",
         "domain": "Process",
-        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
+        "topic": "Integration and change control",
         "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 10,
-        "text": "The work breakdown structure can BEST be thought of as an effective aid for____communications.",
+        "difficulty": "Hard",
+        "decisionRule": "show the integrated consequences of a requested shortcut before seeking authorized disposition.",
+        "text": "A sponsor asks the project manager to bypass change review for a safety-system substitution so a contractual completion date is not missed. Engineering says the substitute is technically acceptable, but certification and insurance impacts are unknown. What should the project manager do?",
         "choices": [
-          "Team",
-          "Project Manager",
-          "Customer",
-          "Stakeholder"
-        ],
-        "correct": 3,
-        "explanation": "Correct answer: D. The best answer is Stakeholder, based on the PMP scope-management logic tested in this question."
-      },
-      {
-        "tag": "Create WBS",
-        "topic": "WBS and decomposition",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 11,
-        "text": "You are taking over a project to develop software for a major hospital chain. After understanding the project requirements, you feel that they should have selected a different technology for this work. Ideally this approach should have been considered in which process?",
-        "choices": [
-          "Creating WBS",
-          "Activity Definition",
-          "Develop Project Management Plan",
-          "Define Scope"
-        ],
-        "correct": 3,
-        "explanation": "Correct answer: D. This tool is a tool for defining the scope process. Reference: PMBOK2008 P114."
-      },
-      {
-        "tag": "Scope Management",
-        "topic": "PMP scope-management scenario",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 12,
-        "text": "As an effective output of the start-up process, all assumptions must be clear or defined before the project is implemented?",
-        "choices": [
-          "Constraints",
-          "Risk",
-          "Outcome",
-          "Problem"
-        ],
-        "correct": 1,
-        "explanation": "Correct answer: B. Assumptions usually involve a certain level of risk."
-      },
-      {
-        "tag": "Create WBS",
-        "topic": "WBS and decomposition",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 13,
-        "text": "Which statement best describes the work breakdown structure (WBS)?",
-        "choices": [
-          "The WBS is a hierarchical decomposition of work results and deliverables",
-          "The WBS is a hierarchical decomposition of the effort itself",
-          "The WBS is a hierarchical decomposition of the project product only",
-          "The WBS is a hierarchical decomposition of project activities"
-        ],
-        "correct": 0,
-        "explanation": "Correct answer: A. In the WBS, work means the work products or deliverables produced by effort, not the effort itself. A WBS is deliverable-oriented and should not be a simple activity list."
-      },
-      {
-        "tag": "Scope Management",
-        "topic": "PMP scope-management scenario",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 14,
-        "text": "Maintenance is critical to the project and?",
-        "choices": [
-          "Work to be performed at the end of the project",
-          "There is a separate stage in the life cycle of the information systems project because most of the life-cycle costs of 60-70 per cent of the computer system are from maintenance",
-          "Not as part of the life cycle of the project",
-          "Always considered as a separate project"
+          "Implement the substitution under sponsor direction and complete certification analysis later",
+          "Reject the substitution because safety-related components cannot be changed after approval",
+          "Quantify certification, insurance, schedule, cost, and risk impacts for an authorized change decision",
+          "Ask engineering to sign a technical waiver and notify the change board after installation"
         ],
         "correct": 2,
-        "explanation": "Correct answer: C. The best answer is Not as part of the life cycle of the project, based on the PMP scope-management logic tested in this question."
+        "explanation": "Technical acceptability does not resolve the explicitly unknown certification and insurance consequences, so an integrated assessment must support the authorized decision. Sponsor direction does not replace controls, automatic rejection ignores a potentially viable option, and an engineering waiver cannot authorize regulatory, commercial, and baseline impacts.",
+        "chapterId": "pmbok-ch04-integration-management"
       },
       {
-        "tag": "Create WBS",
-        "topic": "WBS and decomposition",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 15,
-        "text": "In which process must project needs be determined?",
-        "choices": [
-          "Project audit",
-          "Range control",
-          "Create WBS",
-          "Collect Requirements"
-        ],
-        "correct": 3,
-        "explanation": "Correct answer: D. PMBOK2008 P105。."
-      },
-      {
-        "tag": "Scope Management",
-        "topic": "PMP scope-management scenario",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 16,
-        "text": "Which of the following tools and techniques are not defined?",
-        "choices": [
-          "Expert judgement",
-          "Option identification",
-          "Lead seminar",
-          "Focus group meetings"
-        ],
-        "correct": 3,
-        "explanation": "Correct answer: D. See PMBOK (4th ed.), Definition Scope in Chapter 5, Section 5.2.2: Tools and Technologies."
-      },
-      {
-        "tag": "Scope Management",
-        "topic": "PMP scope-management scenario",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 17,
-        "text": "Which of the following are the results of work performance measurements?",
-        "choices": [
-          "Comparison of plans with actual technical performance",
-          "Information on progress of projects",
-          "What deliverables have started",
-          "Some deliverables have been completed"
-        ],
-        "correct": 0,
-        "explanation": "Correct answer: A. See section 5.5.3.1 of chapter 5 of the PMBOK Guide (version 4) for work performance measurement, with attention to distinguishing between job performance information and work performance measurements."
-      },
-      {
-        "tag": "Scope Management",
-        "topic": "PMP scope-management scenario",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 18,
-        "text": "Your company is about to start a new project. Initiating a project normally takes into account financial indicators such as the investment recovery period, return on investment, net present value of investments, etc. Which of the following four projects should you choose? ( )?",
-        "choices": [
-          "Project A, 2 years of construction, with a net present value of $1.1 million",
-          "Project B, 1 year of construction, with a net present value of $1.0 million",
-          "Project C, one-year investment recovery period with a net present value of $0.95 million",
-          "Project D, investment recovery period of 8 months with a net present value of $0.94 million"
-        ],
-        "correct": 0,
-        "explanation": "Correct answer: A. A is the right answer. Any item whose net present value is high is chosen. Since the NPV approach already takes into account time factors, time factors such as construction periods, investment recovery periods are no longer considered separately. Tests and answer techniques: Financial indicators for project selection."
-      },
-      {
-        "tag": "Project Charter",
-        "topic": "Charter and early planning inputs",
-        "chapterId": "pmbok-ch04-integration-management",
-        "domain": "Process",
-        "decisionRule": "Use the project charter and stakeholder register as key inputs before requirements and scope planning.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 19,
-        "text": "A project manager has just been assigned to a new project and has been given the project charter. The FIRST thing the project manager must do is:",
-        "choices": [
-          "Create a project scope statement",
-          "Confirm that all the stakeholders have had input into the scope",
-          "Analyze project risk",
-          "Begin work on a project management plan"
-        ],
-        "correct": 1,
-        "explanation": "Correct answer: B. Option B equals the identification of the dryer."
-      },
-      {
-        "tag": "Validate Scope",
-        "topic": "Formal acceptance of deliverables",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Validate completed deliverables with the customer or appropriate stakeholders after quality control.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 20,
-        "text": "Verify Scope the process of obtaining stakeholder's formal acceptance of the completed project scope and associated deliverables. In this context, which statement related to Verify Scope correct?",
-        "choices": [
-          "Verify Scope similar to Quality Control",
-          "Quality",
-          "Ontrol is generally pertormed before Validate Scope, but these two processes may also be",
-          "One in parallel. C.Verify Scopeindicates the end of a project. D.Verify Scope the final sign-off from the sponsor and customer"
-        ],
-        "correct": 1,
-        "explanation": "Correct answer: B. Validate Scope and quality control are different; Validate Scope is the process by which the results are endorsed by the client or by the stakeholder and the project is closed. Reference: PMBOK2008 P123."
-      },
-      {
-        "tag": "Create WBS",
-        "topic": "WBS and decomposition",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 21,
-        "text": "This tool and technology should be used in developing the work breakdown structure. In decomposition, the first layer of the work breakdown structure can be broken down into all except ().?",
-        "choices": [
-          "Phases of the project life cycle",
-          "Key deliverables",
-          "Sub-projects",
-          "Project activities"
-        ],
-        "correct": 3,
-        "explanation": "Correct answer: D. The first tier of the break-down structure could be the project phases. The first tier of the work breakdown structure could be the main deliverables. C. The first tier of the break-down structure could be a sub-project (e.g. work to be outsourced). D. Positive answer. There are no project activities in the work breakdown structure. Disaggregating work packages into activities is the process of defining activities (time management areas of knowledge). See: Guide, p. 118. Tests and answer techniques: Job work breakdown structure. Note: The top layer of the work breakdown structure is the zero."
-      },
-      {
-        "tag": "Collect Requirements",
-        "topic": "Requirements documentation and traceability",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Elicit, document, and trace stakeholder requirements before defining scope or building the WBS.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 22,
-        "text": "What are the characteristics and functions of the product?",
-        "choices": [
-          "Product range",
-          "Project scope",
-          "Scope baseline",
-          "Neither"
-        ],
-        "correct": 0,
-        "explanation": "Correct answer: A. In the project environment, the term scope has two meanings (see chapter 5, first part, of the PMBOK Guide (version 4): ?product scope. Characteristics and functions of a product, service or outcome. ♪ Project Scope. Work that must be done to deliver a product, service or result with specified characteristics and functions. Project scope is measured against the project management plan and product range is measured against product requirement. The relationship between product and project scope is that, in order for project results to meet the requirements of the product scope, project work needs to be made to meet the requirements of the project scope. The basis for defining the scope of the project is product scope. So the answer is A."
-      },
-      {
-        "tag": "Validate Scope",
-        "topic": "Formal acceptance of deliverables",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Validate completed deliverables with the customer or appropriate stakeholders after quality control.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 23,
-        "text": "What is the process of reviewing deliverables to ensure satisfaction and formal acceptance?",
-        "choices": [
-          "Control Scope",
-          "Quality control",
-          "Change control",
-          "Validate Scope"
-        ],
-        "correct": 3,
-        "explanation": "Correct answer: D. See PMBOK (version 4), chap. 5, sect. 5.4, foreword: Verification is the process of formal acceptance of deliverables that have been completed. The scope of verification includes reviewing deliverables with clients or sponsors to ensure that deliverables are fully completed and obtain formal acceptances from clients or sponsors."
-      },
-      {
-        "tag": "Collect Requirements",
-        "topic": "Requirements documentation and traceability",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Elicit, document, and trace stakeholder requirements before defining scope or building the WBS.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 24,
-        "text": "The Control Scope process is intended ().?",
-        "choices": [
-          "Oversight of project scope status, change of management scope baseline",
-          "Make sure all the work is done, and on that basis, do as much as you can",
-          "Possible impact of changes in monitoring scope on project progress, cost and quality",
-          "Ensure that only authorized persons are eligible to submit requests for scope changes"
-        ],
-        "correct": 0,
-        "explanation": "Correct answer: A. A. Correct answers. The control scope is designed to compare the actual situation of the scope with the planned requirements, to detect and analyse deviations and to request necessary changes. The ultimate aim is to effectively manage the scope benchmark changes. There's a logical error in the last half of this statement. C. This is part of the overall change control process. Any person may submit a request for a change of scope. See: PMBOK Guide, p. 125. Tests and answer techniques: Control Scope process."
-      },
-      {
-        "tag": "Scope Management",
-        "topic": "PMP scope-management scenario",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 25,
-        "text": "Both departments often clash over conflicting objectives in order to identify conflicting needs and objectives. The project manager should?",
-        "choices": [
-          "Standard quality control process implemented for all sectors",
-          "Identification of standard conflict resolution plans to be implemented throughout the project period",
-          "Executing of changes",
-          "Understanding the interests and priorities of stakeholders, recording needs in writing and issuing notifications"
-        ],
-        "correct": 3,
-        "explanation": "Correct answer: D. See PMBOK Guide (version 4), chap. 5, sect. 5.1 foreword: Collection of requirement is the process of defining and documenting the needs of the stakeholders in order to achieve the project objectives. The solution to the targeted conflict is to identify the needs of the constituents."
-      },
-      {
-        "tag": "Project Charter",
-        "topic": "Charter and early planning inputs",
-        "chapterId": "pmbok-ch04-integration-management",
-        "domain": "Process",
-        "decisionRule": "Use the project charter and stakeholder register as key inputs before requirements and scope planning.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 26,
-        "text": "Which of the following inputs into the requirement collection process? ( )?",
-        "choices": [
-          "Project statement of work",
-          "scope management plan",
-          "Register of stakeholders",
-          "Managerial strategy"
-        ],
-        "correct": 2,
-        "explanation": "Correct answer: C. A. This is an input into the project charter development process. Despite the fact that the project scope management plan is to be used, this input did not appear in the PMBOK guidelines. C. Correct answer. Collect Requirements refers to collecting the needs of the dryers, who need to be consulted in the register. D. The collection of requirement process is primarily about understanding the needs of the stakeholders, who are not yet required to manage them. See: PMBOK Guide, p. 105. Tests and answer techniques: input into the process of Collect Requirements."
-      },
-      {
-        "tag": "Define Scope",
-        "topic": "Project scope statement and boundaries",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Use the project scope statement to define project boundaries, deliverables, exclusions, assumptions, and constraints.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 27,
-        "text": "Project deliverables include the product, service or outcome of the project and the output of subordinate results. This subsidiary result should be recorded as?",
-        "choices": [
-          "Needs management plan",
-          "Scope management plan",
-          "Project scope statement",
-          "Project acceptance standards"
-        ],
-        "correct": 2,
-        "explanation": "Correct answer: C. The project scope statement details deliverables and the work required to create them. Results are also seen as deliverables and included in project scope statements. It includes matters such as project management reports and documents. The deliverables in the project scope statement could be described either in summary or in detail."
-      },
-      {
-        "tag": "Scope Management",
-        "topic": "PMP scope-management scenario",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 28,
-        "text": "At what stage of the project is the least costly change to take place?",
-        "choices": [
-          "Starting phase",
-          "Organization and preparation phase",
-          "Executing phase",
-          "Closure phase"
-        ],
-        "correct": 0,
-        "explanation": "Correct answer: A. See section 2.2.1 of chapter 2 of the PMBOK Guide (version 4) on knowledge of the characteristics of the life cycle of the project: The cost of change and correction of errors is usually significantly higher when the project is nearing completion."
-      },
-      {
-        "tag": "Create WBS",
-        "topic": "WBS and decomposition",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 29,
-        "text": "A project manager has just been assigned to a new project and has received a project scope statement. What should the project manager do first?",
-        "choices": [
-          "Create the WBS and WBS dictionary and establish the scope baseline",
-          "Confirm that all stakeholder requirements are included in the project scope",
-          "Establish the project management team",
-          "Develop the project management plan"
-        ],
-        "correct": 1,
-        "explanation": "Correct answer: B. Because the project manager did not lead the creation of the scope statement, the first step is to confirm its quality and make sure stakeholder requirements have been considered before creating the WBS."
-      },
-      {
-        "tag": "Collect Requirements",
-        "topic": "Requirements documentation and traceability",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Elicit, document, and trace stakeholder requirements before defining scope or building the WBS.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 30,
-        "text": "A parking lot can accommodate 1,000 vehicles. The owner of the garage has just initiated a retrofit project to upgrade the vehicle access management system and the parking guide system. In order to ensure the successful implementation of projects, detailed requirements must be documented. As project manager, what should you do? ( )?",
-        "choices": [
-          "Encourage early involvement of project managers",
-          "Project objectives based on needs",
-          "Real-time monitoring of changes in requirement",
-          "Regular project progress review meetings"
-        ],
-        "correct": 0,
-        "explanation": "Correct answer: A. A. Correct answers. An important input into the process of Collect Requirements is the register of stakeholders. Only early involvement of those involved can effectively Collect Requirements. The objectives of the project are defined in the project charter, while the process of developing the project charter precedes the collection of needs. C. The concept does not address requirement change management. D. It is irrelevant. See: PMBOK Guide, p. 106. Tests and answer techniques: input into the process of Collect Requirements. Although B makes sense, A is closer to what is contained in the PMBOK Guide. As the point of knowledge examined was input into the process of Collect Requirements, option A was selected. For some topics, it's important to judge the points of knowledge."
-      },
-      {
-        "tag": "Collect Requirements",
-        "topic": "Requirements documentation and traceability",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Elicit, document, and trace stakeholder requirements before defining scope or building the WBS.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 31,
-        "text": "As an expert, Wang was invited to respond to the questionnaire, and his reply could only be given to the moderator to remain anonymous.?",
-        "choices": [
-          "Brainstorms",
-          "Delphi technology",
-          "Compassion",
-          "Nominal group technology"
-        ],
-        "correct": 1,
-        "explanation": "Correct answer: B. See chapter 5.1.2.4 of the P MlBOK Guide (version 4): Delphi technology is answered by a group of selected experts who will provide feedback on the results of each round of requirement collection. The expert's answer can only be given to the moderator to keep it anonymous."
-      },
-      {
-        "tag": "Create WBS",
-        "topic": "WBS and decomposition",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 32,
-        "text": "Control accounts used mainly for?",
-        "choices": [
-          "Allocation of resources",
-          "General",
-          "Elements in work breakdown structure",
-          "Decomposition"
-        ],
-        "correct": 2,
-        "explanation": "Correct answer: C. See chapter 5.5.3.3.1 of PMBOK (4th ed.): Control accounts are placed at the specified management nodes in the work breakdown structure."
-      },
-      {
-        "tag": "Create WBS",
-        "topic": "WBS and decomposition",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 33,
-        "text": "Which of the following items relates the work packages to organizational units and describes the project organization?",
-        "choices": [
-          "work breakdown structure",
-          "Responsibilities distribution matrix",
-          "List of materials",
-          "Organization breakdown structure"
-        ],
-        "correct": 3,
-        "explanation": "Correct answer: D. See the glossary of terms in the PMBOK Guide (version 4): Organizational work breakdown structure is a hierarchical description of the project organization in order to link the work package to the corresponding implementing department."
-      },
-      {
-        "tag": "Control Scope",
-        "topic": "Scope baseline and change control",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Compare work against the scope baseline, analyze variance, and route changes through integrated change control.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 34,
-        "text": "Which statement is false? Progressive elaboration of project scope...",
-        "choices": [
-          "is a characteristic of projects that accompanies the concepts of temporary and unique",
-          "means developing in steps. It not should be",
-          "Onfused with scope creep. C. ...signals a weak spot in the scope",
-          "Efinition process, caused by incomplete contracts and specifications. D.. ...when properly managed, integrates elaboration of project and deliverable specifications"
-        ],
-        "correct": 2,
-        "explanation": "Correct answer: C. PMBOK2008 P112。."
-      },
-      {
-        "tag": "Collect Requirements",
-        "topic": "Requirements documentation and traceability",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Elicit, document, and trace stakeholder requirements before defining scope or building the WBS.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 35,
-        "text": "Which of the following techniques is the BEST way to determine project objectives？",
-        "choices": [
-          "Delphi",
-          "Earned value",
-          "Expert interviews",
-          "Pareto"
-        ],
-        "correct": 0,
-        "explanation": "Correct answer: A. Option A is a method that is judged by specific experts and can be used during the project start-up process to obtain the expectations of the project manager regarding the project objectives."
-      },
-      {
-        "tag": "Control Scope",
-        "topic": "Scope baseline and change control",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Compare work against the scope baseline, analyze variance, and route changes through integrated change control.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 36,
-        "text": "Which of the following processes will be directly input into the Control Scope?",
-        "choices": [
-          "Collect Requirements",
-          "Validate Scope",
-          "Reporting on performance",
-          "Development of project charters"
-        ],
-        "correct": 0,
-        "explanation": "Correct answer: A. The best answer is Collect Requirements, based on the PMP scope-management logic tested in this question."
-      },
-      {
-        "tag": "Create WBS",
-        "topic": "WBS and decomposition",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 37,
-        "text": "Your have prepared the scope statement and the WBS for your project. You also have an approved project plan. Your project is now under way, but you recognize that, given the nature of project work, scope change is inevitable. You also are aware of the danger of scope creep, having suffered the consequences of it recently. To avoid a similar experience, you meet with your team and decide to establish a project scope change control system. This is –",
-        "choices": [
-          "A collection of formal, documented procedures to define the steps",
-          "Y which official project documents may be",
-          "Hanged B. A",
-          "Ocumented process used to apply technical and administrative direction and surveillance to identify and document functional and physical characteristics of items, record and report change, control change, and audit the items and system to verify conformance to requirements C. A set of procedures by which project scope may be changed, including the paperwork, tracking systems, and approval levels necessary for authorizing change D. Mandatory for use on projects so that the scope management plan cannot be changed without prior review and sign-off"
-        ],
-        "correct": 2,
-        "explanation": "Correct answer: C. Explanation: Option C is the definition of a range change control procedure. Reference: PMBOK2004 CH P104 5.5.2.1."
-      },
-      {
-        "tag": "Scope Management",
-        "topic": "PMP scope-management scenario",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 38,
-        "text": "Demand analysis is often difficult in R & D projects. Clients may not really know what they want, and their ideas may change over time and over time. Faced with greater uncertainty about the needs of clients, what would be the preferred approach for project managers of R & D projects to Collect Requirements? ( )?",
-        "choices": [
-          "Brainstorms",
-          "Observation",
-          "Prototype",
-          "Nominal group technology"
-        ],
-        "correct": 2,
-        "explanation": "Correct answer: C. A. Although the Brainstorm method is used as a group innovative technology for Collect Requirements processes, it is irrelevant. B. While observation is a tool for Collect Requirements, it is irrelevant. C. Correct answer. Prototypes are used to create a functional prototype of a product before it is actually manufactured and to obtain feedback on the requirement in order to gradually identify the needs of the client. D. While notional group technology is used as a group innovative technology for Collect Requirements, it is irrelevant. See pp. 108-109 of the PMBOK Guide. Tests and answer techniques: Tools and techniques for Collect Requirements: Prototype."
-      },
-      {
-        "tag": "Define Scope",
-        "topic": "Project scope statement and boundaries",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Use the project scope statement to define project boundaries, deliverables, exclusions, assumptions, and constraints.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 39,
-        "text": "A complete and thorough product description is critical to the development of a concise scope statement. This description should include all but which of the following:",
-        "choices": [
-          "Detailed enough to support later project planning",
-          "Detailed budget and functionality information",
-          "Relationship between the product/service being created and the business need",
-          "Strategic alignment with corporate objectives"
-        ],
-        "correct": 1,
-        "explanation": "Correct answer: B. Explanation: The subject is the content of the project statement of work: business needs, strategic plan, product scope description. Reference: PMBOK2008 P75."
-      },
-      {
-        "tag": "Collect Requirements",
-        "topic": "Requirements documentation and traceability",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Elicit, document, and trace stakeholder requirements before defining scope or building the WBS.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 40,
-        "text": "What is the process for the project team to learn about the needs of the faculty by enabling the stakeholders to fill out the questionnaire?",
-        "choices": [
-          "Collect Requirements",
-          "Define Scope",
-          "Validate Scope",
-          "Control Scope"
-        ],
-        "correct": 0,
-        "explanation": "Correct answer: A. See the preamble to chapter 5, section 5.1, of the PMBOK Guide (version 4): Collect Requirements is the process of defining and documenting the needs of stakeholders in order to achieve project objectives."
-      },
-      {
-        "tag": "Scope Management",
-        "topic": "PMP scope-management scenario",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 41,
-        "text": "Which statement describes best why you should document assumptions?",
-        "choices": [
-          "Assumptions might prove to",
-          "E wrong. Knowing which assumptions were incorrect allows baseline adjustments in",
-          "Ase of project crisis. B. Assumption analysis is a valuable tool and technique of Risk Identification",
-          "Uring documentation review in a risk identification workshop. C.Assumptions limit the project management team s options for decision making because they can not be controlled by the team. D. In case of schedule or budget overruns, the documentation of assumptions supports a clear assignment of responsibility"
-        ],
-        "correct": 1,
-        "explanation": "Correct answer: B. Hypothetical analysis is a tool for the risk identification process; option C is about constraints; option D is about ex post facto responsibilities, not good. Reference: PMBOK2008 P419."
-      },
-      {
-        "tag": "Scope Management",
-        "topic": "PMP scope-management scenario",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 42,
-        "text": "Systems engineering, value engineering, value analysis and system analysis are frequently used ().?",
-        "choices": [
-          "Option identification",
-          "Identification of deliverables",
-          "Analysis of project constraints",
-          "Product analysis"
-        ],
-        "correct": 3,
-        "explanation": "Correct answer: D. A. Not related to the subject matter, the option is to identify different implementation options for the project, i.e. more than two options available for the submission of the project product. It is irrelevant and does not have the term “deliverable identification”. C. Systems General Engineering, Value Engineering etc. are techniques for product analysis and are not relevant to project constraint analysis. D. Correct answer. The purpose of the analysis is to clarify the scope of the product and the techniques for analysing the product, such as system engineering, value engineering, value analysis, etc. See: PMBOK Guide, p. 114. Tests and answer techniques: Product analysis techniques. Value engineering, value analysis, etc. are technologies related to the range of products, and the best is the pursuit of value for money. Only D is directly related to the range of products."
-      },
-      {
-        "tag": "Scope Management",
-        "topic": "PMP scope-management scenario",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 43,
-        "text": "The time required to complete a project is often called a project.?",
-        "choices": [
-          "Executing time",
-          "Life cycle",
-          "Operation Time",
-          "Key Path"
-        ],
-        "correct": 1,
-        "explanation": "Correct answer: B. The best answer is Life cycle, based on the PMP scope-management logic tested in this question."
-      },
-      {
-        "tag": "Create WBS",
-        "topic": "WBS and decomposition",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 44,
-        "text": "The definition of activities is the process of identifying specific actions to be taken in order to complete .?",
-        "choices": [
-          "Project deliverables",
-          "work breakdown structure",
-          "Work Pack",
-          "WBS Dictionary"
-        ],
-        "correct": 0,
-        "explanation": "Correct answer: A. The best answer is Project deliverables, based on the PMP scope-management logic tested in this question."
-      },
-      {
-        "tag": "Scope Management",
-        "topic": "PMP scope-management scenario",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 45,
-        "text": "Zhang, the project manager for a project, was confronted with the fact that the performance of the product did not meet the expected quality standards but was accepted by the client, indicating what activities had been carried out?",
-        "choices": [
-          "Offset Analysis",
-          "Return to work",
-          "Quality audit",
-          "Validate Scope"
-        ],
-        "correct": 3,
-        "explanation": "Correct answer: D. See PMBOK Guide (version 4), chap. 5, sect. 5.4, foreword: Verification is the process of formal acceptance of deliverables completed by the project. Client acceptance implies verification coverage."
-      },
-      {
-        "tag": "Define Scope",
-        "topic": "Project scope statement and boundaries",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Use the project scope statement to define project boundaries, deliverables, exclusions, assumptions, and constraints.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 46,
-        "text": "Option identification is usually useful in defining project scope. One of the technologies available is?",
-        "choices": [
-          "Sensitivity analysis",
-          "Decision Tree",
-          "Mathematical Model",
-          "Horizontal thinking"
-        ],
-        "correct": 3,
-        "explanation": "Correct answer: D. Horizontal thinking, brainstorms and twinning are examples of generic management techniques that can be used to generate different approaches to project implementation and implementation."
-      },
-      {
-        "tag": "Scope Management",
-        "topic": "PMP scope-management scenario",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 47,
-        "text": "As a project manager, you are aware that project information can be presented using different kinds of breakdown structures. In this context, all the following statements are correct EXCEPT:",
-        "choices": [
-          "Resource",
-          "Reakdown Structure provides hierarchically organized depiction of resources to be used on the project. B. Organization Breakdown Structure provides a hierarchically organized depiction of the project organization",
-          "Bill of Materials presents a hierarchical tabulation of financial bills and other project financials",
-          "Risk Breakdown Structure is a hierarchically organized depiction of the identified project risks arranged by risk category"
-        ],
-        "correct": 2,
-        "explanation": "Correct answer: C. BOM is a list of elements used to show a product, excluding financial information. The other three options are right. Reference: PMBOK2008 P280 RBS; P220 0BS Resource Disaggregation Structure."
-      },
-      {
-        "tag": "Project Charter",
-        "topic": "Charter and early planning inputs",
-        "chapterId": "pmbok-ch04-integration-management",
-        "domain": "Process",
-        "decisionRule": "Use the project charter and stakeholder register as key inputs before requirements and scope planning.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 48,
-        "text": "Which of the following are not inputs for project initiation?",
-        "choices": [
-          "Description of the product or service",
-          "Organizational strategic plan",
-          "Project selection plan",
-          "project charter"
-        ],
-        "correct": 3,
-        "explanation": "Correct answer: D. The project charter is output."
-      },
-      {
-        "tag": "Scope Management",
-        "topic": "PMP scope-management scenario",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 49,
-        "text": "While there are different tools and technologies available to inform your collection of project needs, the method of supporting progressive detail is:?",
-        "choices": [
-          "Concept/thinking guide",
-          "Compassion",
-          "Prototype",
-          "Joint application design anchor meeting"
-        ],
-        "correct": 2,
-        "explanation": "Correct answer: C. The prototype captures early feedback on requirement by providing a practical model of the product prior to its manufacture. Thereafter, stakeholders can experience this model rather than explore abstract requirement statements. This approach supports progressive detail as it is used in modelling, user experience, feedback generation, and the iterative cycle of prototype amendments."
-      },
-      {
-        "tag": "Create WBS",
-        "topic": "WBS and decomposition",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 50,
-        "text": "Environmental factors include:?",
-        "choices": [
-          "Organizational culture",
-          "Infrastructure",
-          "Political atmosphere and stakeholder risk tolerance",
-          "All the above"
-        ],
-        "correct": 3,
-        "explanation": "Correct answer: D. See chapter 1, section 1.8, of the PMBOK Guide (version 4): enterprise environmental factors (enterprise environmental factors): Any internal or external environmental factors surrounding the project or affecting its success or failure; from any or all of the project participants. Environmental factors can be divided into two main categories, internal and external. Internal (6): Organizationalization, structure and processes, infrastructure; current human resources situation, personnel management system, corporate work authorization system, communication channels available in the organization. External (6): Government or industry standards, market conditions, political atmosphere, human exposure, business database, project management information system. The answer is therefore D. Relevant knowledge points: see chapter 2, section 2.4.3 of the PMBOK Guide (version 4), organizational process assets: Any or all process-related assets can come from any or all participating organizations and can be used to help the project succeed. Including formal and informal plans, policies, procedures and guidance, complete schedules, risk data and earned value data, and project team members usually have the responsibility to update and supplement the assets of the organizational process as necessary throughout the project. This can be summarized in two main categories. 1) Processes and Procedures: Templates, processes, standards, policies, procedures, including safety and health policies, quality policies and procedures, standard process definitions, work guide manuals, financial control procedures, change control procedures, risk control procedures, work authorization procedures, work breakdown structure templates, risk templates, contract templates, etc. 2) Knowledge sharing: historical information and lessons learned, archives, including project files, financial databases, problem and deficiency management data Library."
-      },
-      {
-        "tag": "Scope Management",
-        "topic": "PMP scope-management scenario",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 51,
-        "text": "You are working on a new drug development project that has the effect of improving human sleep and promoting height growth. New drug products are about to be clinically tested. At that time, product tests were divided into three stages in greater detail, namely three first-stage and four second-stage and five third-stage tests. What is the example of this practice? ( )?",
-        "choices": [
-          "Quality function expansion in product life cycle",
-          "Definition of project activities based on a broken down structure",
-          "Careful risk management",
-          "Progressive detail in the project life cycle"
-        ],
-        "correct": 3,
-        "explanation": "Correct answer: D. The idea is not directly related to the function that the analytical product should have. B. Irrelevance of the title. C. It can be a manifestation of prudent risk management, but this option is less targeted than D. D. Correct answer. Initially, the product testing was an overall phase, then subdivided into three stages. This is in line with the incremental and detailed approach (rolling planning approach). Tests and answer techniques: Progressive fine-tuning of the project, rolling approach to planning."
-      },
-      {
-        "tag": "Scope Management",
-        "topic": "PMP scope-management scenario",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 52,
-        "text": "Here's what's wrong with requirement.?",
-        "choices": [
-          "Demand can be qualitative or quantitative",
-          "Needs need to be endorsed by key stakeholders to be used as a baseline",
-          "Need to be recorded",
-          "Only clear needs can serve as benchmarks"
-        ],
-        "correct": 0,
-        "explanation": "Correct answer: A. The needs in scope management differ from the concept of needs in general and should focus on the following points (see, for example, PMBOK Guide, 4th ed., chap. 5, sect. 5.1, foreword, and sect. 5.1.3.1, requirement paper)."
-      },
-      {
-        "tag": "Scope Management",
-        "topic": "PMP scope-management scenario",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 53,
-        "text": "Which of the following items is not the point where the project and operation intersect with the product life cycle?",
-        "choices": [
-          "At the end of the project",
-          "Developing, upgrading or increasing production of new products Time",
-          "In improving the operation or product development process",
-          "When appointing the operations manager as project manager"
-        ],
-        "correct": 3,
-        "explanation": "Correct answer: D. See chapter 1, section 1.5 of the PMBOK Guide (version 4): Projects and operations can intersect at different points in the life cycle of the product, including the end of the project, improvements in the operation or product development process when new products are developed, the product upgrades or increases production, before the product is out of operation (product life cycle end)."
-      },
-      {
-        "tag": "Define Scope",
-        "topic": "Project scope statement and boundaries",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Use the project scope statement to define project boundaries, deliverables, exclusions, assumptions, and constraints.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 54,
-        "text": "Which of the following baselines can be used to assess whether the requested changes or additional work are included within the project boundary?",
-        "choices": [
-          "Project management plan",
-          "Project scope statement",
-          "scope management plan",
-          "WBS dictionary"
-        ],
-        "correct": 1,
-        "explanation": "Correct answer: B. The project boundary normally identifies what is included in the project and clearly indicates what is not included in the project where the stakeholder may assume that a particular product, service or outcome will be part of the project. The project boundary is described as part of a detailed project scope statement."
-      },
-      {
-        "tag": "Create WBS",
-        "topic": "WBS and decomposition",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 55,
-        "text": "You work in the pharmaceutical industry. Your project involves clinical trials of a drug called Fentastic, which is used to raise high memory and stimulate hair growth. During the implementation of the project, the pilot process of the product was further defined into three phases, four tests in the first phase, five tests in the second phase and six tests in the third phase. This is one of the following jobs.?",
-        "choices": [
-          "Quality extension",
-          "Matching of the break-up structure (WBS) with project activities",
-          "Value analysis",
-          "Step into the description of the product"
-        ],
-        "correct": 3,
-        "explanation": "Correct answer: D. The best answer is Step into the description of the product, based on the PMP scope-management logic tested in this question."
-      },
-      {
-        "tag": "Create WBS",
-        "topic": "WBS and decomposition",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 56,
-        "text": "When you started creating a work breakdown structure for your project, you soon realized that it was too complicated to be done on a single piece of paper. You then started using a work breakdown structure numbering system to",
-        "choices": [
-          "Determine the complexity of the project",
-          "Determine the level at which individual WBS elements are found",
-          "Help in automating the WBS using appropriate software",
-          "Present justification for the project"
-        ],
-        "correct": 1,
-        "explanation": "Correct answer: B. Code of accounts, the code system used for each component of the single identification work breakdown structure, shows intuitively the level of a WBS element. Reference: PMBOK2008 P421."
-      },
-      {
-        "tag": "Create WBS",
-        "topic": "WBS and decomposition",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 57,
-        "text": "What can be produced by the process of creating a work breakdown structure?",
-        "choices": [
-          "Project schedule",
-          "Team outsourcing",
-          "Project completion date",
-          "Risk list"
-        ],
-        "correct": 1,
-        "explanation": "Correct answer: B. The elements in the WBS include all the scope of work of the project, which is not necessarily homemade, and some require outsourcing."
-      },
-      {
-        "tag": "Scope Management",
-        "topic": "PMP scope-management scenario",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 58,
-        "text": "Which of the following knowledge areas will affect scope management?",
-        "choices": [
-          "Integrated management",
-          "Quality management",
-          "Communications management",
-          "Procurement management"
-        ],
-        "correct": 3,
-        "explanation": "Correct answer: D. The best answer is Procurement management, based on the PMP scope-management logic tested in this question."
-      },
-      {
-        "tag": "Validate Scope",
-        "topic": "Formal acceptance of deliverables",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Validate completed deliverables with the customer or appropriate stakeholders after quality control.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 59,
-        "text": "A key feature of the Validate Scope is:?",
-        "choices": [
-          "Improved cost estimates",
-          "Client acceptance of project work",
-          "Improved planned estimates of progress",
-          "Improved project management information systems"
-        ],
-        "correct": 1,
-        "explanation": "Correct answer: B. The scope of verification is to be accepted by the client or sponsor."
-      },
-      {
-        "tag": "Create WBS",
-        "topic": "WBS and decomposition",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 60,
-        "text": "Construction 1.1.0 Excavation 1.1.1 Detection 1.1.2 Digging pit 1.2.0 Preparation of foundation 1.2.1 Framework for construction of work packages in the WBS List?",
-        "choices": [
-          "Construction",
-          "Digging",
-          "Base preparation",
-          "None of them"
-        ],
-        "correct": 3,
-        "explanation": "Correct answer: D. The best answer is None of them, based on the PMP scope-management logic tested in this question."
-      },
-      {
-        "tag": "Create WBS",
-        "topic": "WBS and decomposition",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 61,
-        "text": "A new project manager is being mentored by a more experienced certified project management professional (PMP). The new project manager is finding it difficult to find enough time to manage the project because the product and project scope are being progressively elaborated. The PMP mentions that the basic tools for project management, such as a work breakdown structure, can be used during project executing to assist the project. For which of the following can a work breakdown structure be used?",
-        "choices": [
-          "Communicating with the customer",
-          "Showing calendar dates for each work package",
-          "Showing the functional managers for each team member",
-          "Showing the business need for the project"
-        ],
-        "correct": 0,
-        "explanation": "Correct answer: A. The WBS visually organizes project deliverables and can support communication with customers and stakeholders about what the project includes."
-      },
-      {
-        "tag": "Create WBS",
-        "topic": "WBS and decomposition",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 62,
-        "text": "A large project was broken down into 10 sub-projects, and the project manager collected specific information on all the work packages of the 10 sub-projects, which constituted?",
-        "choices": [
-          "Project scope statement",
-          "Scope baseline",
-          "WBS dictionary",
-          "work breakdown structure"
-        ],
-        "correct": 2,
-        "explanation": "Correct answer: C. See the PMBOK Guide section on the WBS dictionary. The WBS dictionary provides detailed information about each work package, including description, responsible organization, and control account informationtructure is a document produced in the creation of the work breakdown structure and used to support the work breakdown structure. The Dictionary of the work breakdown structure provides a more detailed description of the work decomposition components (including work packages and control accounts)."
-      },
-      {
-        "tag": "Scope Management",
-        "topic": "PMP scope-management scenario",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 63,
-        "text": "You led a team to develop a methodology for project selection and prioritization. The team is considering various management issues, including financial returns, market shares and public awareness. The most important criteria for establishing project selection models are:?",
-        "choices": [
-          "Capacity",
-          "Realistic",
-          "Easy to use",
-          "Cost"
-        ],
-        "correct": 1,
-        "explanation": "Correct answer: B. The model should reflect the objectives of the company and its managers; take into account the availability of the organization's equipment, funds and personnel constraints; incorporate risk factors — the technical risks of performance, cost and time, and the market risk of the customer returning the goods."
-      },
-      {
-        "tag": "Scope Management",
-        "topic": "PMP scope-management scenario",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 64,
-        "text": "While there are different tools and technologies available to inform your collection of project needs, the method of supporting progressive detail is:?",
-        "choices": [
-          "Concept/thinking guide",
-          "Compassion",
-          "Prototype",
-          "Joint application design anchor meeting"
-        ],
-        "correct": 2,
-        "explanation": "Correct answer: C. The prototype captures early feedback on requirement by providing a practical model of the product prior to its manufacture. Thereafter, stakeholders can experience this model rather than explore abstract requirement statements. This approach supports progressive detail as it is used in modelling, user experience, feedback generation, and the iterative cycle of prototype amendments."
-      },
-      {
-        "tag": "Scope Management",
-        "topic": "PMP scope-management scenario",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 65,
-        "text": "One project is an ideal environment for the implementation of targeted management techniques, as?",
-        "choices": [
-          "Project management includes setting organizational objectives",
-          "A matrix management environment is usually used for projects",
-          "The responsibility of the project manager is defined by corporate objectives",
-          "All projects should be goal-oriented"
-        ],
-        "correct": 3,
-        "explanation": "Correct answer: D. The best answer is All projects should be goal-oriented, based on the PMP scope-management logic tested in this question."
-      },
-      {
-        "tag": "Control Scope",
-        "topic": "Scope baseline and change control",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Compare work against the scope baseline, analyze variance, and route changes through integrated change control.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 66,
-        "text": "What is the process of monitoring the scope status of projects and products, changes in managing changes to the scope baseline?",
-        "choices": [
-          "Project quality management",
-          "Define Scope",
-          "Validate Scope",
-          "Control Scope"
-        ],
-        "correct": 3,
-        "explanation": "Correct answer: D. See the preamble to chapter 5.5 of the PMBOK Guide (version 4): Control is the process of monitoring the scope status of projects and products, management scope baseline changes."
-      },
-      {
-        "tag": "Create WBS",
-        "topic": "WBS and decomposition",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 67,
-        "text": "Which of the following items defines the work packages?",
-        "choices": [
-          "work breakdown structure",
-          "project charter",
-          "Scope statement",
-          "schedule"
-        ],
-        "correct": 0,
-        "explanation": "Correct answer: A. See chapter 5, section 5.3.2.1 of the PMBOK Guide (version 4): “work packages are the bottom layer of the work breakdown structure.”."
-      },
-      {
-        "tag": "Scope Management",
-        "topic": "PMP scope-management scenario",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 68,
-        "text": "You are the project manager for the development of a new type of power plant. Your project is making fast progress, and it is getting nearer to the day of product acceptance. Which technique will be most important for product acceptance?",
-        "choices": [
-          "Inspection",
-          "Audit",
-          "Impact analysis",
-          "Team review"
-        ],
-        "correct": 0,
-        "explanation": "Correct answer: A. Inspection is a tool for verifying the scope and the process is used to obtain acceptance of results from stakeholders. Reference: PMBOK2008 P124."
-      },
-      {
-        "tag": "Collect Requirements",
-        "topic": "Requirements documentation and traceability",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Elicit, document, and trace stakeholder requirements before defining scope or building the WBS.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 69,
-        "text": "Which of the following statements is false",
-        "choices": [
-          "If the project is terminated early, the Verify Scope is not necessary",
-          "Quality",
-          "Ontrol is primarily concerned with meeting the quality requirements specified for the",
-          "Eliverables C. Verify Scope primarily concerned with Acceptance of the deliverables D. Quality control is generally performed before Verify Scope"
-        ],
-        "correct": 0,
-        "explanation": "Correct answer: A. “If the project is terminated earlier, the project Validate Scope process shall identify and document the level and extent of completion.” Reference: PMBOK2008 P123."
-      },
-      {
-        "tag": "Project Charter",
-        "topic": "Charter and early planning inputs",
-        "chapterId": "pmbok-ch04-integration-management",
-        "domain": "Process",
-        "decisionRule": "Use the project charter and stakeholder register as key inputs before requirements and scope planning.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 70,
-        "text": "Which of the following processes will not be directly exported from the project scope statement?",
-        "choices": [
-          "Development of project charters",
-          "Development of schedules",
-          "Planning risk management",
-          "Order of activities"
-        ],
-        "correct": 0,
-        "explanation": "Correct answer: A. The best answer is Development of project charters, based on the PMP scope-management logic tested in this question."
-      },
-      {
-        "tag": "Scope Management",
-        "topic": "PMP scope-management scenario",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 71,
-        "text": "The project was going well when all of a sudden there were changes to the project coming from multiple stakeholders. After all the changes were determined, the project manager spent time with all the stakeholders to find out why there were changes and to discover any more. The project work has quieted down when a team member casually mentions to the project manager that the team member added functionality to a product of the project. Do not worry they say, \"I did not impact time, cost or quality!\" What should a project manager do FIRST?",
-        "choices": [
-          "Ask the team member how the need for the functionality was determined",
-          "Hold a meeting to review the team member’s",
-          "Ompleted work. C. Look for other added functionality",
-          "Ask the team member how he knows there is no time, cost or quality impact"
-        ],
-        "correct": 3,
-        "explanation": "Correct answer: D. This is about gold plating, which means \"a small increase in scale, initiated by team members,\" and the project manager needs to avoid it. Closer to it is the spread of scope: uncontrolled changes, usually from customers. Reference: PMBOK2008 P125."
-      },
-      {
-        "tag": "Define Scope",
-        "topic": "Project scope statement and boundaries",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Use the project scope statement to define project boundaries, deliverables, exclusions, assumptions, and constraints.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 72,
-        "text": "In your project, you are in the process of defining the project scope. You will be using all the following tool:",
-        "choices": [
-          "Expert Judgment - to determine the details to",
-          "E included in the scope statement. B. Project Management Methodology - to aid in developing and",
-          "Ontrolling the changes to the preliminary project plan. C. Project Management Information System - to support generation of a preliminary project scope statement",
-          "Earned Value Technique - to measure performance of the project as it moves from project initiation through project closure"
-        ],
-        "correct": 0,
-        "explanation": "Correct answer: A. PMBOK2008 114。."
-      },
-      {
-        "tag": "Define Scope",
-        "topic": "Project scope statement and boundaries",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Use the project scope statement to define project boundaries, deliverables, exclusions, assumptions, and constraints.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 73,
-        "text": "Which of the following statements on product and project scopes is correct? ( )?",
-        "choices": [
-          "Project scope services to product range",
-          "Changes in the scope of the project necessarily result in changes in the range of products",
-          "Changes in product ranges are bound to result in changes in project scopes",
-          "Product range for project encirclement"
-        ],
-        "correct": 0,
-        "explanation": "Correct answer: A. A. Correct answers. Once product ranges have been clarified, the work required to submit the product can be identified to ensure submission of the required product. It is not inevitable that changes will occur, for example, by adding a supplementary project work that may have no impact on the functioning of the product. C. Change is not inevitable, although it is likely to occur. That's not logical. Tests and answer techniques: Project scope and product range."
-      },
-      {
-        "tag": "Scope Management",
-        "topic": "PMP scope-management scenario",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 74,
-        "text": "Demand analysis is often difficult in R & D projects. Clients may not really know what they want, and their ideas may change over time and over time. Faced with greater uncertainty about client needs, what would be the preferred approach for project managers of R & D projects to Collect Requirements? ( )?",
-        "choices": [
-          "Brainstorms",
-          "Observation",
-          "Prototype",
-          "Nominal group technology"
-        ],
-        "correct": 2,
-        "explanation": "Correct answer: C. A. Although the Brainstorm method is used as a group innovative technology for Collect Requirements processes, it is irrelevant. B. While observation is a tool for Collect Requirements, it is irrelevant. C. Correct answer. Prototypes are used to create a functional prototype of a product before it is actually manufactured and to obtain feedback on the requirement in order to gradually identify the needs of the client. D. While notional group technology is used as a group innovative technology for Collect Requirements, it is irrelevant. See pp. 108-109 of the PMBOK Guide. Tests and answer techniques: Tools and techniques for Collect Requirements: Prototype."
-      },
-      {
-        "tag": "Define Scope",
-        "topic": "Project scope statement and boundaries",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Use the project scope statement to define project boundaries, deliverables, exclusions, assumptions, and constraints.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 75,
-        "text": "Which of the following examples of requests for change arising from external events?",
-        "choices": [
-          "Wrong definition of project scope due to government regulation of old versions of documents",
-          "Secondary risks associated with the implementation of the programme of change measures",
-          "Changes in the environment applicable to the current project",
-          "Because the suppliers have developed new technologies that allow us to replace the original three sets with individual components"
-        ],
-        "correct": 2,
-        "explanation": "Correct answer: C. The best answer is Changes in the environment applicable to the current project, based on the PMP scope-management logic tested in this question."
-      },
-      {
-        "tag": "Scope Management",
-        "topic": "PMP scope-management scenario",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 76,
-        "text": "The construction phase of a new software product is near completion. The next phase is testing and implementation. The project is two weeks ahead of schedule. What should the project manager be MOST concerned with before moving on to the final phase?",
-        "choices": [
-          "Verify Scope",
-          "Quality",
-          "Ontrol C. Performance reports",
-          "Cost control"
-        ],
-        "correct": 0,
-        "explanation": "Correct answer: A. The Validate Scope is carried out before the end of each phase of the project. Reference: PMBOK2008 P123."
-      },
-      {
-        "tag": "Create WBS",
-        "topic": "WBS and decomposition",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 77,
-        "text": "You want to structure the project into an independent work package to be implemented by the members of the team on each date. The bag is...?",
-        "choices": [
-          "Deliverables at the lowest level of the work breakdown structure",
-          "Tasks with unique symbols",
-          "Level of reporting requested",
-          "Tasks assigned to more than one organizational unit"
-        ],
-        "correct": 0,
-        "explanation": "Correct answer: A. A deliverable work package at the lowest level of the work breakdown structure is the lowest or smallest unit in which work is divided in the project or work breakdown structure. work packages can be scheduled, costed and monitored."
-      },
-      {
-        "tag": "Control Scope",
-        "topic": "Scope baseline and change control",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Compare work against the scope baseline, analyze variance, and route changes through integrated change control.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 78,
-        "text": "Which of the following is CORRECT in regard to the Control Scope Process?",
-        "choices": [
-          "Effective scope definition can lead to a more complete project scope statement",
-          "The Control Scope process must be done before scope planning",
-          "The Control Scope process must be integrated with other control processes",
-          "Controlling the schedule is the most effective way of controlling scope"
-        ],
-        "correct": 2,
-        "explanation": "Correct answer: C. Control Scope should be integrated with other control processes because scope, schedule, cost, quality, and change control affect one another."
-      },
-      {
-        "tag": "Collect Requirements",
-        "topic": "Requirements documentation and traceability",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Elicit, document, and trace stakeholder requirements before defining scope or building the WBS.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 79,
-        "text": "The main reason for project failure?",
-        "choices": [
-          "Lack of project-type or strong matrix structure, poor definition of scope and lack of project plans",
-          "Lack of support and commitment from line managers, disharmony of project teams and lack of leadership on the part of project managers",
-          "Poor targeting of clients, fragmentation of project teams and lack of communication with clients throughout the project process",
-          "Organizational structure factors, poor targeting of clients, inappropriate project-specific requirements, and poor planning and control"
-        ],
-        "correct": 3,
-        "explanation": "Correct answer: D. The organizational structure of the item in option A, the disharmony of the team in option B and the fragmentation of the work position in option C are not necessary causes for the project to fail."
-      },
-      {
-        "tag": "Scope Management",
-        "topic": "PMP scope-management scenario",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 80,
-        "text": "All of the following are tools for scope verification except:",
-        "choices": [
-          "Product reviews",
-          "Audits",
-          "Walkthroughs",
-          "Sensitivity analysis"
-        ],
-        "correct": 3,
-        "explanation": "Correct answer: D. Product reviews, audits, and walkthroughs are inspection-oriented techniques used for scope verification or Validate Scope. Sensitivity analysis is a quantitative risk analysis tool."
-      },
-      {
-        "tag": "Create WBS",
-        "topic": "WBS and decomposition",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 81,
-        "text": "Which product analysis techniques are not included?",
-        "choices": [
-          "Value engineering",
-          "Value analysis",
-          "System analysis",
-          "List of materials"
-        ],
-        "correct": 3,
-        "explanation": "Correct answer: D. Product analysis technologies vary according to the area of application, and each area of application usually has a well-established methodology for translating project objectives into tangible deliverables and needs. Other product analysis techniques include product decomposition, requirement analysis, and systems engineering. Project Management Association, Project Management Knowledge System Guide, 2008, p. 114."
-      },
-      {
-        "tag": "Project Charter",
-        "topic": "Charter and early planning inputs",
-        "chapterId": "pmbok-ch04-integration-management",
-        "domain": "Process",
-        "decisionRule": "Use the project charter and stakeholder register as key inputs before requirements and scope planning.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 82,
-        "text": "Which of the following inputs is the collection of requirement? ( )?",
-        "choices": [
-          "Project statement of work",
-          "project charter",
-          "Managerial strategy",
-          "Procurement statement of work"
-        ],
-        "correct": 1,
-        "explanation": "Correct answer: B. A. Project statement of work is an input for the development of the project charter. B. Correct answer. Project managers Collect Requirements according to the project charter and the register of stakeholders and form requirements documentation, requirements management plans and requirement tracking matrices. C. The people management strategy is not input to the collection of requirement, but to manage the expectations of the people involved. The statement of procurement activities is intended to plan the output of the procurement process and to be used in the implementation of the procurement process as part of the procurement documents. See: PMBOK Guide, p. 105. Tests and answer techniques: input into the process of Collect Requirements."
-      },
-      {
-        "tag": "Create WBS",
-        "topic": "WBS and decomposition",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 83,
-        "text": "Li has taken over an information system project that has just entered development and finds that the project has no work breakdown structure. What is the best choice?",
-        "choices": [
-          "Continue the project while starting to develop the WBS",
-          "Stop the project until the WBS is completed",
-          "Refer to the WBS dictionary for detailed support",
-          "Escalate the issue to senior management"
-        ],
-        "correct": 1,
-        "explanation": "Correct answer: B. Without a WBS, the team lacks the basis for scheduling, cost estimating, and control at the work-package level. The WBS should be completed before continuing detailed execution work."
-      },
-      {
-        "tag": "Define Scope",
-        "topic": "Project scope statement and boundaries",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Use the project scope statement to define project boundaries, deliverables, exclusions, assumptions, and constraints.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 84,
-        "text": "What should be done before undertaking the five processes of project scope management?",
-        "choices": [
-          "Planning risk management",
-          "Project quality management",
-          "Project cost management",
-          "Develop a scope management plan"
-        ],
-        "correct": 3,
-        "explanation": "Correct answer: D. The five project scope management processes should be preceded by scope planning. This planning process is part of the process of developing a project management plan (Develop Project Management Plan), which will produce a scope management plan (Scope Management Plan) to guide the definition, recording, verification, management and control of the scope of the project. See chapter 5, chapeau of the PMBOK Guide (version 4). So the answer is D."
-      },
-      {
-        "tag": "Collect Requirements",
-        "topic": "Requirements documentation and traceability",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Elicit, document, and trace stakeholder requirements before defining scope or building the WBS.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 85,
-        "text": "The function of the request document is?",
-        "choices": [
-          "Describe how needs are analysed, documented and managed",
-          "Describe how changes in products, services or outcomes are initiated",
-          "Describe how the needs of the various singles will meet the operational needs associated with the project",
-          "Tracking needs throughout the project life cycle"
-        ],
-        "correct": 2,
-        "explanation": "Correct answer: C. Analysis: The knowledge points related to the requirements documentation are described below (see the PMBOK Guide (version 4), chapter 5, section 5.1.3.1, for the needs paper). 1) Demand documents: Describe how individual needs will meet the operational needs associated with the project (BusinnessNeed). 2) The content of the request document is gradually refined. At first, there might be only general requirements, and then, as information increases, it will be refined. 3) More important elements of the request document are: . ? trackable operational objectives and objectives (Businness and Project, Projects for Traceability). #Functionual Requirements It can be a list of needs for text or a model. #Quality requests #Acceptance test. Impacts to other entities inside or outside the executing organization So the answer is c."
-      },
-      {
-        "tag": "Scope Management",
-        "topic": "PMP scope-management scenario",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 86,
-        "text": "The time required to complete a project is often called a project.?",
-        "choices": [
-          "Executing time",
-          "Life cycle",
-          "Operation Time",
-          "Key Path"
-        ],
-        "correct": 1,
-        "explanation": "Correct answer: B. The best answer is Life cycle, based on the PMP scope-management logic tested in this question."
-      },
-      {
-        "tag": "Scope Management",
-        "topic": "PMP scope-management scenario",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 87,
-        "text": "Validate Scope?",
-        "choices": [
-          "Improving cost and programme accuracy is particularly important for projects using innovative technologies and processes",
-          "It was the last activity of the client before the project was handed over",
-          "Document the characteristics of the products and services produced during project implementation",
-          "There are areas for quality control"
-        ],
-        "correct": 3,
-        "explanation": "Correct answer: D. The best answer is There are areas for quality control, based on the PMP scope-management logic tested in this question."
-      },
-      {
-        "tag": "Scope Management",
-        "topic": "PMP scope-management scenario",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 88,
-        "text": "An example of value-added change for an environmental governance project is:?",
-        "choices": [
-          "Re-engineering projects forced by a new or revised government rule",
-          "Using a technology that didn't appear at the time of the initial setting, it could reduce the cost of the project",
-          "Defines the scope of the project using a material list, which includes all parts and components",
-          "An essential feature missing from the rectification design system"
-        ],
-        "correct": 1,
-        "explanation": "Correct answer: B. Change in value added means beneficial change."
-      },
-      {
-        "tag": "Collect Requirements",
-        "topic": "Requirements documentation and traceability",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Elicit, document, and trace stakeholder requirements before defining scope or building the WBS.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 89,
-        "text": "What is the process for the project team to learn about the needs of the faculty by enabling the stakeholders to fill out the questionnaire?",
-        "choices": [
-          "Collect Requirements",
-          "Define Scope",
-          "Validate Scope",
-          "Control Scope"
-        ],
-        "correct": 0,
-        "explanation": "Correct answer: A. See the preamble to chapter 5, section 5.1, of the PMBOK Guide (version 4): Collect Requirements is the process of defining and documenting the needs of stakeholders in order to achieve project objectives."
-      },
-      {
-        "tag": "Create WBS",
-        "topic": "WBS and decomposition",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 90,
-        "text": "A new project manager has asked you for advice on creating a work breakdown structure. After you explain the process to her, she asks you what software she should use to create the WBS and what she should do with it when she is finished creating it. You might respond that it is not the picture that is the most valuable result of creating a WBS. It is:",
-        "choices": [
-          "A bar chart",
-          "Team buy-in",
-          "Activities",
-          "A list of risks"
-        ],
-        "correct": 1,
-        "explanation": "Correct answer: B. The value of creating the WBS is not just the diagram. The collaborative process helps the team reach shared understanding and buy-in around project deliverables."
-      },
-      {
-        "tag": "Collect Requirements",
-        "topic": "Requirements documentation and traceability",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Elicit, document, and trace stakeholder requirements before defining scope or building the WBS.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 91,
-        "text": "The following statement of the requirements traceability matrix is incorrect:?",
-        "choices": [
-          "Helps to ensure that each need is met at the end of the project",
-          "Only needs are tracked in planning and implementation",
-          "Provide a framework for managing product scope changes",
-          "Linked requirement to requirement source"
-        ],
-        "correct": 1,
-        "explanation": "Correct answer: B. See chapter 5, section 5.1.3-3 of the PM:BOK Guide (version 4): The requirements traceability matrix is a table linking requirement to requirement source to track requirement throughout the life cycle of the project."
-      },
-      {
-        "tag": "Create WBS",
-        "topic": "WBS and decomposition",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 92,
-        "text": "Xiao Li is the project manager for a project, and recently he's had a lot of project plating in the project team. Kim's worried, in order to make sure there's no gold plating happening, which documents are the most helpful?",
-        "choices": [
-          "Scope management plan",
-          "project charter",
-          "WBS Dictionary",
-          "Risk management plan"
-        ],
-        "correct": 2,
-        "explanation": "Correct answer: C. See chapter 5, section 5.3.3.2 of the PMBOK Guide (version 4): The Dictionary of work breakdown structures provides a more detailed description of work breakdown structure components (including work packages and control accounts)."
-      },
-      {
-        "tag": "Scope Management",
-        "topic": "PMP scope-management scenario",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 93,
-        "text": "You are the project manager for the development of a new type of power plant. Your project is making fast progress, and it is getting nearer to the day of product acceptance. Which technique will be most important for product acceptance?",
-        "choices": [
-          "Inspection",
-          "Audit",
-          "Impact analysis",
-          "Team review"
-        ],
-        "correct": 0,
-        "explanation": "Correct answer: A. Inspection is a tool for verifying the scope and the process is used to obtain acceptance of results from stakeholders. Reference: PMBOK2008 P124."
-      },
-      {
-        "tag": "Collect Requirements",
-        "topic": "Requirements documentation and traceability",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Elicit, document, and trace stakeholder requirements before defining scope or building the WBS.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 94,
-        "text": "Which document should be consulted in order to develop the project scope statement and to understand the project approval requirements?",
-        "choices": [
-          "project charter",
-          "Organizational process assets",
-          "Request File",
-          "work breakdown structure"
-        ],
-        "correct": 0,
-        "explanation": "Correct answer: A. See chapter 5, section 5.2.1.1 of the PMBOK Guide (version 4): The project charter contains a general description of the characteristics of the project and product, as well as the project approval requirements."
-      },
-      {
-        "tag": "Create WBS",
-        "topic": "WBS and decomposition",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 95,
-        "text": "The result of the process of creating a work breakdown structure is?",
-        "choices": [
-          "Project schedule",
-          "Group unity",
-          "Project completion date",
-          "Risk list"
-        ],
-        "correct": 1,
-        "explanation": "Correct answer: B. The result of creating the WBS process is the PMBOK: WBS, WBS Dictionary, scope baseline, etc. The four options are incorrect. In fact, this is a team-building exercise, a team-building exercise, a tool in the team-building process, with the phrase, \"How to plan an activity that is well organized, while not intended for team-building,\" so the correct answer is B."
-      },
-      {
-        "tag": "Scope Management",
-        "topic": "PMP scope-management scenario",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 96,
-        "text": "Validate Scope?",
-        "choices": [
-          "Improved accuracy of costs and progress arrangements, particularly for projects using innovative technologies",
-          "It's the last activity before it's transferred to the client",
-          "The characteristics of the product or service that the project undertakes to create are documented in writing",
-          "Different from quality control, since verification ranges relate to acceptance of work results rather than correctness"
-        ],
-        "correct": 3,
-        "explanation": "Correct answer: D. The best answer is Different from quality control, since verification ranges relate to acceptance of work results rather than correctness, based on the PMP scope-management logic tested in this question."
-      },
-      {
-        "tag": "Create WBS",
-        "topic": "WBS and decomposition",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 97,
-        "text": "Deliverable oriented hierarchical decomposition of the work to be executed by the project team is called",
-        "choices": [
-          "Project Scope Management Plan",
-          "Requirements",
-          "Work breakdown structure",
-          "Design"
-        ],
-        "correct": 2,
-        "explanation": "Correct answer: C. The WBS (work breakdown structure) is a results-oriented hierarchy of work used to organize and define the scope of projects. Reference: PMBOK2008 P116."
-      },
-      {
-        "tag": "Scope Management",
-        "topic": "PMP scope-management scenario",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 98,
-        "text": "A restriction (e.g. limited budget) that affects the performance of the project is also called a(an):",
-        "choices": [
-          "Constraint",
-          "Assumption",
-          "Kill point",
-          "Risk"
-        ],
-        "correct": 0,
-        "explanation": "Correct answer: A. PMBOK2008 P115。."
-      },
-      {
-        "tag": "Create WBS",
-        "topic": "WBS and decomposition",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 99,
-        "text": "The WBS coding system allows project staff to do which of the following?",
-        "choices": [
-          "Estimate the cost of WBS elements",
-          "Provide project justification",
-          "Identify the level at which a WBS element is located",
-          "Use it directly as the project management plan"
-        ],
-        "correct": 2,
-        "explanation": "Correct answer: C. WBS codes identify components in the work breakdown structure and help the team locate and manage WBS elements at the appropriate level."
-      },
-      {
-        "tag": "Create WBS",
-        "topic": "WBS and decomposition",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 100,
-        "text": "Collect Requirements is crucial in project scope management, as it will form the basis for which?",
-        "choices": [
-          "Scope management plan",
-          "work breakdown structure",
-          "schedule",
-          "Scope change control system"
-        ],
-        "correct": 1,
-        "explanation": "Correct answer: B. Collect Requirements is the process of defining and documenting stakeholder needs to meet project objectives. It also addresses the definition and documentation of the needs of stakeholders to achieve the objectives of the project. Requirements form the basis of the work breakdown structure, and in addition, costs, schedule and quality planning are requirement-based."
-      },
-      {
-        "tag": "Create WBS",
-        "topic": "WBS and decomposition",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 101,
-        "text": "Which of the following is an output of the Collect Requirements process?",
-        "choices": [
-          "Requirements traceability matrix",
-          "Project scope statement",
-          "Work breakdown structure",
-          "Change requests"
-        ],
-        "correct": 0,
-        "explanation": "Correct answer: A. PMBOK2008 P111。."
-      },
-      {
-        "tag": "Collect Requirements",
-        "topic": "Requirements documentation and traceability",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Elicit, document, and trace stakeholder requirements before defining scope or building the WBS.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 102,
-        "text": "Since you have previously been the manager of the software project, you are pleased to be appointed as the project manager of the new system integration project. The project is intended to replace the existing domestic air traffic control system. You found the requirements traceability matrix useful for the software project and decided to use it in this system integration project. Using this matrix helps to ensure that every need is met?",
-        "choices": [
-          "Improving quality and supporting organizational quality policies",
-          "It adds value to business by linking it to operational and project objectives",
-          "Achieving a certain level of service, performance, security, assurance and compliance",
-          "Demonstrated impact on other areas of the organization and external entities of the implementing organization"
-        ],
-        "correct": 1,
-        "explanation": "Correct answer: B. The requirements traceability matrix is a table linking requirement and requirement sources to track requirement throughout the project life cycle. This approach links each requirement to operational and project objectives and helps to ensure that each requirement adds value. It also tracks needs within the life cycle of the project to ensure that the requirements listed in the request document are delivered at the end of the project."
-      },
-      {
-        "tag": "Create WBS",
-        "topic": "WBS and decomposition",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 103,
-        "text": "What is wrong with the extent of the WBS breakdown?",
-        "choices": [
-          "Until the person responsible can be appointed or outsourced",
-          "Until we can reliably estimate progress",
-          "Until it's done by one person",
-          "Straight to a reliable estimate of costs"
-        ],
-        "correct": 2,
-        "explanation": "Correct answer: C. work packages may be assigned to individuals or organizations and may not be performed by one person."
-      },
-      {
-        "tag": "Scope Management",
-        "topic": "PMP scope-management scenario",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 104,
-        "text": "Which of the following is the output of the Validate Scope?",
-        "choices": [
-          "Deliverables from acceptance and inspection",
-          "Scope baseline",
-          "Quality control measurements",
-          "Recognized deliverables"
-        ],
-        "correct": 0,
-        "explanation": "Correct answer: A. See PMBOK Guide (version 4) Chapter 5, Section 5.4.3 Validate Scope: Output."
-      },
-      {
-        "tag": "Project Charter",
-        "topic": "Charter and early planning inputs",
-        "chapterId": "pmbok-ch04-integration-management",
-        "domain": "Process",
-        "decisionRule": "Use the project charter and stakeholder register as key inputs before requirements and scope planning.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 105,
-        "text": "You're a project manager, managing a virtual team in five different countries around the world. Based on past experience, you know, these team members respond to their functional managers' demands much more positively than they do to you. Considering this, you decided to prepare one.?",
-        "choices": [
-          "A memorandum for team members to remind them that they now work for the project manager",
-          "project charter",
-          "A memorandum for functional managers to remind them of your authority over their employees",
-          "Human resources management plan"
-        ],
-        "correct": 1,
-        "explanation": "Correct answer: B. Authority and authority given to project managers in project charters."
-      },
-      {
-        "tag": "Create WBS",
-        "topic": "WBS and decomposition",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 106,
-        "text": "What processes directly affect the creation of work breakdown structures?",
-        "choices": [
-          "Definition Scope, Control Scope",
-          "Scope of definition, Collect Requirements",
-          "Control Scope, check range",
-          "Collect Requirements, Validate Scope"
-        ],
-        "correct": 1,
-        "explanation": "Correct answer: B. The best answer is Scope of definition, Collect Requirements, based on the PMP scope-management logic tested in this question."
-      },
-      {
-        "tag": "Scope Management",
-        "topic": "PMP scope-management scenario",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 107,
-        "text": "Your company is going to the new field. Now the government has issued an invitation to bid on a historic study, and you companies have put in a bid, and the bid has been successful. And you were appointed as the project manager for the first historical research project in the government department. Unfortunately, however, the results of your work do not meet the Government's standards for historic research. The Chairman of the company had just received official notification from the signatories of the government agency and the project would therefore be suspended immediately. Now you have to...?",
-        "choices": [
-          "Hand over to the technical representatives of contract management the results achieved during the period from inception to present",
-          "Record lessons learned and index records",
-          "Identification of the level and extent of work achieved by the project",
-          "Close the project office and reassign all project members to new positions Let's go"
-        ],
-        "correct": 2,
-        "explanation": "Correct answer: C. We'll have to finish the project."
-      },
-      {
-        "tag": "Create WBS",
-        "topic": "WBS and decomposition",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 108,
-        "text": "A new project manager is planning a complex hardware installation project. The team consists of 15people who are experts in their fields. The project manager does not want to manage the project in the detailed level. How far should be decompose the work?",
-        "choices": [
-          "As small as possible",
-          "Ecause the work is",
-          "Omplex B. as large as possible because he is",
-          "Ealing with experts C. to1000-hur tasks because it is proper for check-in period D. to about 80-hour tasks because it is proper for check-in period"
-        ],
-        "correct": 3,
-        "explanation": "Correct answer: D. WBS should be deciphered: costs and time can be reliably estimated, IT industry practice: 80 hours rule."
-      },
-      {
-        "tag": "Define Scope",
-        "topic": "Project scope statement and boundaries",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Use the project scope statement to define project boundaries, deliverables, exclusions, assumptions, and constraints.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 109,
-        "text": "Which of the following is wrong?",
-        "choices": [
-          "Uncontrolled changes are usually called project scope chickens. Delay",
-          "One manifestation of the spread is gold plating",
-          "There's no big difference between spread and gradual refinement",
-          "The spread sometimes reduces client satisfaction. degrees"
-        ],
-        "correct": 2,
-        "explanation": "Correct answer: C. See PMBOK (4th ed.), Chapter 5.5 foreword: Uncontrollable changes are commonly referred to as project scope spreading, detailing is within the range and does not produce scope spreading."
-      },
-      {
-        "tag": "Define Scope",
-        "topic": "Project scope statement and boundaries",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Use the project scope statement to define project boundaries, deliverables, exclusions, assumptions, and constraints.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 110,
-        "text": "Project scope:?",
-        "choices": [
-          "Only important at the beginning of the project",
-          "It doesn't matter when the contract or other documents authorizing the project are approved",
-          "It should be managed and controlled from the conceptual stage to the end of the project",
-          "It is a matter of managing through change control steps during the project implementation phase"
-        ],
-        "correct": 2,
-        "explanation": "Correct answer: C. The project scope is important."
-      },
-      {
-        "tag": "Validate Scope",
-        "topic": "Formal acceptance of deliverables",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Validate completed deliverables with the customer or appropriate stakeholders after quality control.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 111,
-        "text": "What was the result of the verification of the scope?",
-        "choices": [
-          "Improved results of work",
-          "Improved estimates of progress",
-          "Deliverables",
-          "Official acceptance of the project manager"
-        ],
-        "correct": 3,
-        "explanation": "Correct answer: D. See the preamble to chapter 5.4 of the PMBOK Guide (version 4): Verification includes reviewing deliverables with clients or sponsors to ensure that deliverables are successfully achieved and obtain formal acceptances from customers or sponsors."
-      },
-      {
-        "tag": "Control Scope",
-        "topic": "Scope baseline and change control",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Compare work against the scope baseline, analyze variance, and route changes through integrated change control.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 112,
-        "text": "One of the stakeholders on the project contacts the project manager to discuss some additional scope they would like to add to the project. The project manager asks for details in writing and then works through the Control Scope process. What should the project manager do NEXT when the evaluation of the requested scope is completed?",
-        "choices": [
-          "Ask the stakeholder if there are any more changes expected",
-          "Complete integrated",
-          "Hange control. C. Make sure the impact of the change is understood by the stakeholder",
-          "Find out the root cause of why the scope was not discovered during project planning"
-        ],
-        "correct": 1,
-        "explanation": "Correct answer: B. Control scope needs to ensure that all change requests are processed through the implementation of the overall change control process. Reference: PMBOK2008 P125."
-      },
-      {
-        "tag": "Create WBS",
-        "topic": "WBS and decomposition",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 113,
-        "text": "What is the best way to organize and define the overall scope of the project?",
-        "choices": [
-          "Scope statement",
-          "Responsibilities distribution matrix",
-          "project charter",
-          "work breakdown structure"
-        ],
-        "correct": 3,
-        "explanation": "Correct answer: D. See foreword of chapter 5, section 5.3, of the PMBOK Guide (version 4): decomposition of work structure and."
-      },
-      {
-        "tag": "Validate Scope",
-        "topic": "Formal acceptance of deliverables",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Validate completed deliverables with the customer or appropriate stakeholders after quality control.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 114,
-        "text": "Throughout the project process, which of the following processes is the acquisition of a formal acceptance by the client of the completed project scope and the corresponding deliverables? ( )?",
-        "choices": [
-          "Closure of project or phase",
-          "Closure of procurement",
-          "Executing of quality control",
-          "Validate Scope"
-        ],
-        "correct": 3,
-        "explanation": "Correct answer: D. A. The project or phase closure process involves the handover of deliverables that have been accepted and accepted. B. Discrepancies. C. Executing of quality control processes that focus on the correctness of deliverables (meeting quality requirements). Correct response. The Validate Scope process is designed to review deliverables with clients or sponsors to ensure that deliverables are successfully achieved and that they are formally accepted and accepted. See: PMBOK Guide, p. 123. Tests and answer techniques: Verification of scope process."
-      },
-      {
-        "tag": "Define Scope",
-        "topic": "Project scope statement and boundaries",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Use the project scope statement to define project boundaries, deliverables, exclusions, assumptions, and constraints.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 115,
-        "text": "Clients have increased your project scope by 52 per cent, increasing your cost estimates threefold. Now you have to change the planned start and end dates in the approved project plan. The next step should be?",
-        "choices": [
-          "Development of new schedules",
-          "Revise the schedule baseline",
-          "Increased resources",
-          "Revision of the project scope document"
-        ],
-        "correct": 0,
-        "explanation": "Correct answer: A. By scope statement, changes in project scope have led to changes in project start-up end dates, and the development of new schedules is a common way of revising progress. The reformulation of progress benchmarks can only be used as a last resort to control progress."
-      },
-      {
-        "tag": "Create WBS",
-        "topic": "WBS and decomposition",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 116,
-        "text": "Which of the following items does not explain the work breakdown structure used by the project?",
-        "choices": [
-          "Progress schedule",
-          "Cost estimates",
-          "Quality control",
-          "Risk management"
-        ],
-        "correct": 2,
-        "explanation": "Correct answer: C. See the preamble to chapter 5, section 5.3, of the PMBOK Guide (version 4), which provides for scheduling work packages, estimating costs and implementing controls. Progress schedules, cost estimates, risk management, etc. are to be performed according to WBS, while quality controls are not to be performed according to WBS, which is not included in the quality control process input."
-      },
-      {
-        "tag": "Scope Management",
-        "topic": "PMP scope-management scenario",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 117,
-        "text": "One project is an ideal environment for the implementation of targeted management techniques, as?",
-        "choices": [
-          "Project management includes setting organizational objectives",
-          "A matrix management environment is usually used for projects",
-          "The responsibility of the project manager is defined by corporate objectives",
-          "All projects should be goal-oriented"
-        ],
-        "correct": 3,
-        "explanation": "Correct answer: D. The best answer is All projects should be goal-oriented, based on the PMP scope-management logic tested in this question."
-      },
-      {
-        "tag": "Collect Requirements",
-        "topic": "Requirements documentation and traceability",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Elicit, document, and trace stakeholder requirements before defining scope or building the WBS.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 118,
-        "text": "If the scope of the project is to be verified, it must?",
-        "choices": [
-          "Ensure that the definition of scope reflects changes in the project charter",
-          "Defining the causes of identified problems",
-          "Verification of project schedules",
-          "Introduction of regular inspections, reviews and inspections"
-        ],
-        "correct": 3,
-        "explanation": "Correct answer: D. See chapter 5.4.2 of the .PMBOK Guide (version 4): Inspection refers to measurement, review and validation activities to determine whether work and deliverables meet requirements and product acceptance standards. Inspections are sometimes called censorship, product review, auditing and inspection."
-      },
-      {
-        "tag": "Validate Scope",
-        "topic": "Formal acceptance of deliverables",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Validate completed deliverables with the customer or appropriate stakeholders after quality control.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 119,
-        "text": "Which of the following BEST describes the Verify Scope process?",
-        "choices": [
-          "It provides assurances that the deliverable meets the specifications, is an input to the project management plan, and is an output of Perform Quality Control",
-          "It ensures that the deliverable is",
-          "Ompleted on time ensures customer acceptance, and show that the",
-          "Eliverable meets specifications. C. It ensures customer acceptance, shows that the deliverable meets specifications, and provides a chance for differences of opinion to come to light D. It is an output of Perform Quality Control, occurs before Define Scope, and ensures customer acceptance"
-        ],
-        "correct": 2,
-        "explanation": "Correct answer: C. Since the project management plan was completed before the Validate Scope process, option A was not appropriate. The scope of the authentication is not about time, not just acceptance, option B is inappropriate. Option D is clearly wrong. Reference: PMBOK2008 P123."
-      },
-      {
-        "tag": "Define Scope",
-        "topic": "Project scope statement and boundaries",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Use the project scope statement to define project boundaries, deliverables, exclusions, assumptions, and constraints.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 120,
-        "text": "The following tools and techniques could be used to document the project scope statement, except?",
-        "choices": [
-          "Value engineering, value analysis",
-          "Expert judgement",
-          "Templates, tables, standards",
-          "Systems engineering, systems analysis"
-        ],
-        "correct": 2,
-        "explanation": "Correct answer: C. See the scope of definition in chapter 5, section 5.2.2, of the PMBOK Guide (version 4): Tools and techniques."
-      },
-      {
-        "tag": "Define Scope",
-        "topic": "Project scope statement and boundaries",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Use the project scope statement to define project boundaries, deliverables, exclusions, assumptions, and constraints.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 121,
-        "text": "The project scope change control system is:?",
-        "choices": [
-          "A collection of formal steps for defining changes to official project documents",
-          "A documented process for the application of technical or administrative directives and supervision to identify and record mission functions and physical characteristics. And record and report changes, control changes, and audit assignments and systems to review compliance",
-          "A set of steps to change the scope of the project, including the documentation, tracking system and level of approval required to authorize changes",
-          "The scope management plan cannot be changed until the project has been reviewed and approved"
-        ],
-        "correct": 2,
-        "explanation": "Correct answer: C. The best answer is A set of steps to change the scope of the project, including the documentation, tracking system and level of approval required to authorize changes, based on the PMP scope-management logic tested in this question."
-      },
-      {
-        "tag": "Control Scope",
-        "topic": "Scope baseline and change control",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Compare work against the scope baseline, analyze variance, and route changes through integrated change control.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 122,
-        "text": "Which of the following processes will be directly input into the Control Scope?",
-        "choices": [
-          "Project quality management",
-          "Direct and manage project implementation",
-          "Planning risk management",
-          "Project cost management"
-        ],
-        "correct": 1,
-        "explanation": "Correct answer: B. The best answer is Direct and manage project implementation, based on the PMP scope-management logic tested in this question."
-      },
-      {
-        "tag": "Create WBS",
-        "topic": "WBS and decomposition",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 123,
-        "text": "A WBS dictionary is a document which...",
-        "choices": [
-          "describes technical terms used for scope management",
-          "describes the details for each",
-          "Omponent in the WBS. C. ...translates essential NBS terms for global project teams",
-          "helps translating functional into technical requirements. WBS"
-        ],
-        "correct": 1,
-        "explanation": "Correct answer: B. The Dictionary of the work breakdown structure is a supporting document for the work breakdown structure, detailing each component. Reference: PMBOK2008 P121."
-      },
-      {
-        "tag": "Create WBS",
-        "topic": "WBS and decomposition",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 124,
-        "text": "In the top-down breakdown of the work breakdown structure, this will result ().?",
-        "choices": [
-          "Reduced accuracy of estimates",
-          "Increase in estimated accuracy",
-          "Management itself is cheaper",
-          "Missing from certain jobs"
-        ],
-        "correct": 1,
-        "explanation": "Correct answer: B. A. The accuracy of estimates should be increased rather than reduced. B. Correct answer. Job work breakdown structures are the result of the layering of big targets into smaller ones, which improves the accuracy of estimates. C. The breakdown can increase the effectiveness of management, but can increase the volume of management work and lead to increased costs for management itself. Therefore, fragmentation is not as fine as possible. There is no automatic link to the title. See: PMBOK Guide, p. 120. Tests and answer techniques: Job work breakdown structure. Note: Do not confuse “top-down” with “top-down methodologies”."
-      },
-      {
-        "tag": "Control Scope",
-        "topic": "Scope baseline and change control",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Compare work against the scope baseline, analyze variance, and route changes through integrated change control.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 125,
-        "text": "The Validate Scope process is intended ().?",
-        "choices": [
-          "Formal acceptance and acceptance deliverables",
-          "Review of the validity of project scope documents",
-          "Check technical validity of deliverables",
-          "Discrepancies in project scope were identified and changes in project scope baseline managed"
-        ],
-        "correct": 0,
-        "explanation": "Correct answer: A. A. Correct answers. This option is not relevant to the Validate Scope process. This is the implementation of the quality control process. This is the process of control. See: PMBOK Guide, p. 123. Tests and answers Skills: Verification of scope process. Care is taken to distinguish between the Validate Scope process and the implementation of the quality control process and the control scope process."
-      },
-      {
-        "tag": "Scope Management",
-        "topic": "PMP scope-management scenario",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 126,
-        "text": "In a new product R & D project, the R & D team, together with the project manager, lists all the functions that the new product can perform and the potential needs of the target user. Due to limited resources, the R & D team has to prioritize the extent to which functions meet user needs. Which of the following tools should be used by the R & D team? ( )?",
-        "choices": [
-          "Joint application development",
-          "Brainstorms",
-          "Delphi technology",
-          "Quality extension"
-        ],
-        "correct": 3,
-        "explanation": "Correct answer: D. A. Joint application development is a technology that is widely used in the software development industry, emphasizing users and development teams to identify project needs without emphasizing the integration and sequencing of functions. B. Brainstorms should have been completed because all functions and needs had been listed. C. Delphi technology does not emphasize combining functions and needs and sequencing functions. D. Correct answer. Quality function development emphasizes combining functions and needs to determine the extent to which the functions meet the needs in order to prioritize functions. See: PMBOK refers to South 107. Tests and answer techniques: Tools and techniques for Collect Requirements: Quality functions are developed (as part of a pilot workshop)."
-      },
-      {
-        "tag": "Create WBS",
-        "topic": "WBS and decomposition",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 127,
-        "text": "Which of the following processes does not require the use of outputs from any other planning process? ( )?",
-        "choices": [
-          "Collect Requirements",
-          "Define Scope",
-          "Development of schedules",
-          "Budgeting"
-        ],
-        "correct": 0,
-        "explanation": "Correct answer: A. A. Correct answers. The requirement collection process is the first in the planning process group. It needs two outcomes from the start-up process, namely the project charter and the register of stakeholders. B. The scoping process requires the use of the output of the collection requirement process (requirements documentation). C. The progress planning process requires the use of a variety of outputs from other planning processes, such as project scope statements, work breakdown structures, progress network maps, etc. D. The budgeting process also requires outputs from other planning processes, such as scope baseline, project schedules, cost estimates of activities, etc. See: PMBOK Guide, p. 105. Examination and answer techniques: input into the process of Collect Requirements."
-      },
-      {
-        "tag": "Scope Management",
-        "topic": "PMP scope-management scenario",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 128,
-        "text": "The following description of the project is correct except?",
-        "choices": [
-          "Generating unique products",
-          "Unique way of operating",
-          "Cross-functional work",
-          "Phase control"
-        ],
-        "correct": 1,
-        "explanation": "Correct answer: B. Analysis: See chapter 1, section 1.5, of the PMBOK Guide (version 4): Operations are an organizational function that produces the same products through ongoing activities or provides duplicate services, projects require project management, while operations require business process or operations management. Operating is a continuous effort to produce repetitive results, using allocated resources to carry out essentially constant operations in accordance with institutionalized standards throughout the product life cycle. Operating to sustain the organization's long-term operation, it will not end with the achievement of its current objectives, but will continue to support the organization's strategic plan in accordance with the new directives. Unlike the continuity of the camp, projects (with teams and often with opportunities) are temporary and have clear endpoints. In the examination, the equivalent of the words \" operate, operate, and run \" is actually Operation, since in PMBOK, Project, and Operation are two different categories of work. So it can be said that the operation can be managed in a project manner, but it cannot be said that the project is a special form of operation. So answer B. Other knowledge points involved in this question. Common features of the project and operation: - people do it. Constraints, including resource constraints. :: Need to plan, implement and monitor. To achieve the organization ' s objectives or strategic plan. The connection. Projects and operations can intersect at different points in the product life cycle: at the end of the project. When new products are developed, upgraded or increased. In improving the operational or product development process. Before the product is out of operation (product life cycle end). At every point in time, deliverables and knowledge shift between project and operational questions as the related work is completed. Towards the end of the project, resources were transferred from the project to operation and, when the project began, from operation to the project. Different projects require resources of varying magnitude from the operational department. Depending on the nature of the project, its deliverables may change or affect established operations."
-      },
-      {
-        "tag": "Control Scope",
-        "topic": "Scope baseline and change control",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Compare work against the scope baseline, analyze variance, and route changes through integrated change control.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 129,
-        "text": "What documentation should be reviewed before considering the closure of a project to ensure that the scope of the project is met?",
-        "choices": [
-          "Project scope statement",
-          "Project management plan",
-          "Project closure checklist",
-          "Scope management plan"
-        ],
-        "correct": 1,
-        "explanation": "Correct answer: B. The scope of the project is measured according to the project management plan. The project scope statement and scope baseline are a subset of project management plans. However, with the exception of the coverage component, the master plan and all benchmarks (costs and progress) will be fully met."
-      },
-      {
-        "tag": "Scope Management",
-        "topic": "PMP scope-management scenario",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 130,
-        "text": "You are managing a project where you have to deal with team members from different teams. Your observation is some of the team members from sales are aggressive and their thoughts and decisions are Marjory influencing the team decisions. You want to collect the information regarding the project risks and record them in risk register. Which of the following statement is true?",
-        "choices": [
-          "You are doing risk identification process and the",
-          "Est technique to use here is Delphi techniques B. You are in Risk Planning process and the best method technique here is brainstorming",
-          "You are in Risk Identification process and best method technique here is Brainstorming",
-          "You are in Risk Planning process and the best technique here is Nominal group techniques"
-        ],
-        "correct": 0,
-        "explanation": "Correct answer: A. Characteristics of the Delphi approach: back-to-back can avoid being influenced by others. Reference: PMBOK2008 P108."
-      },
-      {
-        "tag": "Project Environment",
-        "topic": "Enterprise environmental factors and organizational process assets",
-        "chapterId": "pmbok-ch02-project-environment",
+        "tag": "Benefits and value realization",
         "domain": "Business Environment",
-        "decisionRule": "Use enterprise environmental factors and organizational process assets as context and inputs when planning project work.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 131,
-        "text": "Examples of organizational process assets that affect the management of a given day range are:?",
+        "topic": "Benefits and value realization",
+        "approach": "Hybrid",
+        "difficulty": "Hard",
+        "decisionRule": "protect benefit integrity by reconciling local incentives with the approved enterprise outcome.",
+        "text": "Regional managers receive bonuses for activating a new sales platform, while the business case measures profitable repeat purchases. Activation is ahead of target, but several regions are discounting heavily to inflate usage and eroding margin. What should the project manager do first?",
         "choices": [
-          "Personnel policy",
-          "Market business",
-          "Project files from previous projects",
-          "Organizational culture"
-        ],
-        "correct": 2,
-        "explanation": "Correct answer: C. organizational process assets include formal and informal policies, procedures and guidance that affect project scope management. One example is the project files originating from previous projects, which may be stored in the knowledge base of lessons learned."
-      },
-      {
-        "tag": "Create WBS",
-        "topic": "WBS and decomposition",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 132,
-        "text": "In addition to which of the following, are the correct descriptions of the “grassroots ESTATE”?",
-        "choices": [
-          "Its accuracy ranges from -5% to +10%",
-          "It's called engineering",
-          "It's mainly for the first level of the work breakdown structure",
-          "It might take months to prepare it"
-        ],
-        "correct": 2,
-        "explanation": "Correct answer: C. Estimates are classified according to correctness and timing of their preparation. Grass-roots or engineering-type estimates are defined estimates, which can be prepared when detailed project information is available. These estimates will use the work package level of the break-down structure."
-      },
-      {
-        "tag": "Create WBS",
-        "topic": "WBS and decomposition",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 133,
-        "text": "A project member has reported to you that the mandate of his terms of reference is no longer valid and suggested that the scope of his work be revised. In order to make this change, which of the following documents should be consulted?",
-        "choices": [
-          "project charter",
-          "Scope management plan",
-          "Cost management plan",
-          "Job work breakdown structure and dictionary"
-        ],
-        "correct": 3,
-        "explanation": "Correct answer: D. work breakdown structures and dictionaries can serve as a frame of reference and as a reference document for changes."
-      },
-      {
-        "tag": "Collect Requirements",
-        "topic": "Requirements documentation and traceability",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Elicit, document, and trace stakeholder requirements before defining scope or building the WBS.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 134,
-        "text": "Which tools reflect progressive and detailed concepts?",
-        "choices": [
-          "Interviews",
-          "Prototype",
-          "Lead seminar",
-          "Questionnaire"
+          "Keep activation reporting unchanged and ask finance to monitor margin after project closure",
+          "Show the conflicting measures to the benefit owner and align incentives and reporting with repeat-purchase value",
+          "Pause scheduled regional deployments and seek bonus-plan revision before analyzing local effects",
+          "Add a mandatory sales-training work package to the deployment schedule using contingency funds"
         ],
         "correct": 1,
-        "explanation": "Correct answer: B. See chapter 5, section 5.1.2.8 of the PMBOK Guide (version 4), “Prototype approach consistent with the concept of progressive detail”."
+        "explanation": "The local activation incentive is driving behavior that undermines the approved enterprise benefit, so the benefit owner needs integrated evidence and aligned measures. Deferred finance monitoring allows distortion to continue, a broad deployment pause selects a response before analysis and authorization, and training assumes a capability problem without addressing the incentive conflict.",
+        "chapterId": "pmbok-ch11-risk-management"
       },
       {
-        "tag": "Project Charter",
-        "topic": "Charter and early planning inputs",
-        "chapterId": "pmbok-ch04-integration-management",
-        "domain": "Process",
-        "decisionRule": "Use the project charter and stakeholder register as key inputs before requirements and scope planning.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 135,
-        "text": "Which of the following inputs is the collection of requirement? ( )?",
+        "tag": "Team leadership",
+        "domain": "People",
+        "topic": "Team leadership",
+        "approach": "Agile",
+        "difficulty": "Easy",
+        "decisionRule": "let the team own an improvement experiment and its evidence.",
+        "text": "Retrospectives identify the same slow test-environment setup every sprint, but the team expects the agile coach to prescribe a solution. What should the coach do?",
         "choices": [
-          "Project statement of work",
-          "project charter",
-          "Managerial strategy",
-          "Procurement statement of work"
+          "Select a commercial automation tool and require the team to adopt it immediately",
+          "Escalate the repeated issue because a retrospective should solve every impediment",
+          "Remove environment setup from the definition of done for the next release",
+          "Help the team choose a small improvement experiment, owner, and measure for the next sprint"
+        ],
+        "correct": 3,
+        "explanation": "A bounded experiment builds self-management and produces evidence about whether the improvement works. Prescribing a tool bypasses team analysis, escalation is not yet necessary, and weakening the definition of done disguises the setup problem instead of improving the team's way of working.",
+        "chapterId": "pmbok-ch09-resource-management"
+      },
+      {
+        "tag": "Integration and change control",
+        "domain": "Process",
+        "topic": "Integration and change control",
+        "approach": "Agile",
+        "difficulty": "Medium",
+        "decisionRule": "optimize delivery across dependencies instead of maximizing isolated component output.",
+        "text": "Three product teams meet their local iteration goals, yet the integrated release slips because interface work is discovered only during monthly integration. What should the program lead do next?",
+        "choices": [
+          "Increase each team's iteration commitment so integration work receives more capacity",
+          "Create a separate integration team responsible for repairing all interface defects",
+          "Measure team velocity against a common target and reward the highest performer",
+          "Make dependencies visible and coordinate shared integration work earlier in the delivery cadence"
+        ],
+        "correct": 3,
+        "explanation": "Local goals are succeeding while late dependency discovery delays the system, so shared visibility and earlier integration address the actual constraint. Larger commitments add load, a repair team entrenches handoffs, and velocity comparison rewards local output rather than usable integrated value.",
+        "chapterId": "pmbok-ch04-integration-management"
+      },
+      {
+        "tag": "Benefits and value realization",
+        "domain": "Business Environment",
+        "topic": "Benefits and value realization",
+        "approach": "Agile",
+        "difficulty": "Medium",
+        "decisionRule": "treat a benefit threshold as a decision trigger rather than a delivery quota.",
+        "text": "A pilot marketplace reaches its adoption threshold two months early, but support costs per transaction remain above the limit in the business case. What should the product leader recommend?",
+        "choices": [
+          "Scale nationally because early adoption proves the marketplace is valuable",
+          "End the pilot because one financial threshold was missed at the first review",
+          "Add more seller features before investigating the cost pattern",
+          "Review both adoption and cost evidence with governance before deciding whether and how to scale"
+        ],
+        "correct": 3,
+        "explanation": "The pilot produced mixed evidence against two business-case conditions, so governance should make an informed scaling decision using both. Adoption alone does not establish sustainable value, immediate termination ignores learning and options, and more features commit resources before the support-cost driver is understood.",
+        "chapterId": "pmbok-ch02-project-environment"
+      },
+      {
+        "tag": "Team leadership",
+        "domain": "People",
+        "topic": "Team leadership",
+        "approach": "Hybrid",
+        "difficulty": "Medium",
+        "decisionRule": "adapt leadership to team maturity while preserving governance boundaries.",
+        "text": "An experienced analytics squad joins a bank transformation and requests authority to select its iteration practices, while the program requires fixed monthly risk evidence. How should the project manager lead the squad?",
+        "choices": [
+          "Delegate working-method decisions to the squad while defining the required risk evidence and review boundaries",
+          "Require the squad to use the program office's detailed task plan because governance is fixed",
+          "Let the squad decide whether monthly risk evidence is useful after its first release",
+          "Ask the program sponsor to approve each iteration practice selected by the squad"
+        ],
+        "correct": 0,
+        "explanation": "The mature squad can own its working methods while still satisfying nonnegotiable governance outputs. A detailed imposed plan wastes its capability, optional risk evidence violates the program constraint, and sponsor approval of routine team practices creates unnecessary decision delay.",
+        "chapterId": "pmbok-ch03-project-manager-role"
+      },
+      {
+        "tag": "Integration and change control",
+        "domain": "Process",
+        "topic": "Integration and change control",
+        "approach": "Hybrid",
+        "difficulty": "Easy",
+        "decisionRule": "implement an authorized change coherently across predictive and adaptive work.",
+        "text": "An approved change moves a release date and alters both a vendor milestone and two agile team priorities. What should the project manager do next?",
+        "choices": [
+          "Update the integrated plans and backlog ordering, then communicate the new dependencies",
+          "Update only the master schedule because team backlogs are managed independently",
+          "Let the vendor follow its original date until the next contract status meeting",
+          "Ask each delivery group to interpret the approval and adjust its own commitments"
+        ],
+        "correct": 0,
+        "explanation": "The authorized change crosses delivery models, so the schedule, commercial milestone, backlog priorities, and dependency communications must remain coherent. Updating only one artifact, delaying vendor alignment, or leaving interpretation to each group risks incompatible commitments.",
+        "chapterId": "pmbok-ch04-integration-management"
+      },
+      {
+        "tag": "Benefits and value realization",
+        "domain": "Business Environment",
+        "topic": "Benefits and value realization",
+        "approach": "Predictive",
+        "difficulty": "Easy",
+        "decisionRule": "assign operational accountability for benefit tracking before transition is complete.",
+        "text": "A warehouse project will hand a new routing capability to operations next week. The sponsor asks who will verify the expected reduction in travel time after the project closes. What should the project manager identify?",
+        "choices": [
+          "The operational benefit owner and the agreed measurement schedule",
+          "The vendor technician who configured the routing equipment",
+          "The scheduler who reported completion of installation activities",
+          "The project accountant who approved the final supplier payment"
+        ],
+        "correct": 0,
+        "explanation": "Operational outcomes need a named benefit owner and timing for measurement after transition. The technician owns neither business adoption nor outcomes, the scheduler tracks delivery, and payment approval confirms a financial transaction rather than reduced warehouse travel time.",
+        "chapterId": "pmbok-ch02-project-environment"
+      },
+      {
+        "tag": "Team leadership",
+        "domain": "People",
+        "topic": "Team leadership",
+        "approach": "Predictive",
+        "difficulty": "Easy",
+        "decisionRule": "model the behavior expected from the team and correct contrary signals promptly.",
+        "text": "A project manager asks a public-infrastructure team to report safety concerns immediately, then routinely postpones meetings where those concerns are discussed. What is the most effective corrective action?",
+        "choices": [
+          "Ask the safety officer to consolidate concerns for the next scheduled risk review",
+          "Prioritize timely safety reviews and explain the changed behavior to the team",
+          "Add a standing safety agenda item without closing concerns from the postponed meetings",
+          "Reissue the reporting-channel guidance and monitor the volume of new submissions"
         ],
         "correct": 1,
-        "explanation": "Correct answer: B. A. Project statement of work is an input for the development of the project charter. B. Correct answer. Project managers Collect Requirements according to the project charter and the register of stakeholders and form requirements documentation, requirements management plans and requirement tracking matrices. C. The people management strategy is not input to the collection of requirement, but to manage the expectations of the people involved. The statement of procurement activities is intended to plan the output of the procurement process and to be used in the implementation of the procurement process as part of the procurement documents. See: PMBOK Guide, p. 105. Tests and answer techniques: input into the process of Collect Requirements."
+        "explanation": "Leadership credibility depends on matching actions to stated priorities, so the project manager must review the existing concerns promptly and make the changed behavior visible. Consolidating them for a later risk review delays response and transfers ownership, a standing agenda item lacks closure on the backlog, and reissuing channel guidance measures reporting rather than demonstrating that reported concerns receive action.",
+        "chapterId": "pmbok-ch03-project-manager-role"
       },
       {
-        "tag": "Scope Management",
-        "topic": "PMP scope-management scenario",
-        "chapterId": "pmbok-ch05-scope-management",
+        "tag": "Integration and change control",
         "domain": "Process",
-        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
+        "topic": "Integration and change control",
         "approach": "Predictive",
         "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 136,
-        "text": "Which of the following criteria needs to be met in order to be clear on project objectives?",
+        "decisionRule": "verify closure evidence and unresolved obligations before formally ending a phase.",
+        "text": "All planned engineering work is reported complete, but two supplier claims remain open and the customer acceptance record is missing from the repository. The steering committee wants to close the phase. What should the project manager do?",
         "choices": [
-          "Communication by the project manager",
-          "By all members",
-          "Quantifiable",
-          "Inform all project stakeholders"
-        ],
-        "correct": 2,
-        "explanation": "Correct answer: C. See chapter 5, section 5.2.3 of the PMBOK Guide (version 3): Project objectives should be measurable."
-      },
-      {
-        "tag": "Scope Management",
-        "topic": "PMP scope-management scenario",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 137,
-        "text": "You are managing a telecommunications project, and as a result of a new regulation recently introduced by the Government, you have had to change the scope of the original project. Several changes have been made to project objectives. You updated the technical and planning documents used in the project. Your next move is:?",
-        "choices": [
-          "Official notification to the department",
-          "Modification of the corporate knowledge management system",
-          "Formal recognition of scope changes from project sponsors and clients",
-          "Prepare a performance report"
-        ],
-        "correct": 0,
-        "explanation": "Correct answer: A. The process of option C is first notified."
-      },
-      {
-        "tag": "Create WBS",
-        "topic": "WBS and decomposition",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 138,
-        "text": "What is wrong with the extent of the WBS breakdown?",
-        "choices": [
-          "Until the person responsible can be appointed or outsourced",
-          "Until we can reliably estimate progress",
-          "Until it's done by one person",
-          "Straight to a reliable estimate of costs"
-        ],
-        "correct": 2,
-        "explanation": "Correct answer: C. work packages may be assigned to individuals or organizations and may not be performed by one person."
-      },
-      {
-        "tag": "Project Charter",
-        "topic": "Charter and early planning inputs",
-        "chapterId": "pmbok-ch04-integration-management",
-        "domain": "Process",
-        "decisionRule": "Use the project charter and stakeholder register as key inputs before requirements and scope planning.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 139,
-        "text": "Which document states what is to be accomplished and what deliverables need to be produced?",
-        "choices": [
-          "Project management plan",
-          "．Project",
-          "Harter C. project scope statement",
-          "．Performance report"
-        ],
-        "correct": 2,
-        "explanation": "Correct answer: C. The scope statement is used to describe the results of the project and the related work to be accomplished. Reference: PMBOK2008 P115."
-      },
-      {
-        "tag": "Create WBS",
-        "topic": "WBS and decomposition",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 140,
-        "text": "The scoping process is intended ().?",
-        "choices": [
-          "Develop a scope management plan",
-          "Development of project scope statements",
-          "Development of project statement of work",
-          "Development of work breakdown structures"
+          "Close the phase and transfer the claims and acceptance record to operations",
+          "Verify acceptance and resolve or formally disposition open obligations before phase closure",
+          "Archive the technical records now and reopen the phase if either claim succeeds",
+          "Ask the steering committee to declare administrative completion despite the missing evidence"
         ],
         "correct": 1,
-        "explanation": "Correct answer: B. A. Scope management plans should be prepared prior to the scoping process. B. Correct answer. The purpose of the process is to determine the product and project scopes and to prepare a project scope statement. C. Project statement of work is the first document to emerge from the project, covering product scope, strategic plan, operational needs, and is used to express the overall requirements of the project by its sponsors. D. Job work breakdown structures are the output of the process of creating work breakdown structures. See: PMBOK Guide page 112. Tests and answer techniques: the output of the scoping process. The scope includes both product and project scopes, not A, C only product ranges, and D works after project scope determination."
+        "explanation": "Reported engineering completion is insufficient while acceptance evidence and supplier obligations remain unresolved. The project manager should confirm and disposition them before closure. Transferring, archiving, or declaring completion would conceal unfinished contractual and acceptance work rather than close it deliberately.",
+        "chapterId": "pmbok-ch04-integration-management"
       },
       {
-        "tag": "Create WBS",
-        "topic": "WBS and decomposition",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 141,
-        "text": "When can the scope benchmark be changed?",
+        "tag": "Benefits and value realization",
+        "domain": "Business Environment",
+        "topic": "Benefits and value realization",
+        "approach": "Agile",
+        "difficulty": "Easy",
+        "decisionRule": "prefer a small test of an uncertain value assumption before expanding investment.",
+        "text": "A nonprofit believes text reminders will improve attendance at health appointments, but it has no evidence from its client population. What should the project leader propose first?",
         "choices": [
-          "Once it's made, it can't change",
-          "When the project manager thinks it can change",
-          "After the request for change is granted",
-          "When clients lower project allocations"
-        ],
-        "correct": 2,
-        "explanation": "Correct answer: C. See chapter 5, section 5.5.3.4 of the PMBOK Guide (version 4): If approved change requests have an impact on the scope of the items, the scope statement, the work breakdown structure and the WBS dictionary will need to be revised and issued to reflect these approved changes. The change is subject to the approval of the change request."
-      },
-      {
-        "tag": "Define Scope",
-        "topic": "Project scope statement and boundaries",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Use the project scope statement to define project boundaries, deliverables, exclusions, assumptions, and constraints.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 142,
-        "text": "Which of the following is the output of the defined range?",
-        "choices": [
-          "project charter",
-          "Request File",
-          "work breakdown structure",
-          "Project scope statement"
-        ],
-        "correct": 3,
-        "explanation": "Correct answer: D. See scope of definition in chapter 5, section 5.2.3 of the PMBOK Guide (version 4): Output."
-      },
-      {
-        "tag": "Create WBS",
-        "topic": "WBS and decomposition",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 143,
-        "text": "Job work breakdown structures can be used?",
-        "choices": [
-          "Communication tools with clients",
-          "Show schedule of work packages",
-          "The status of the team",
-          "Expressing operational requirements"
-        ],
-        "correct": 0,
-        "explanation": "Correct answer: A. WBS can be used as a communication tool to facilitate communication and consensus among team members and stakeholders."
-      },
-      {
-        "tag": "Scope Management",
-        "topic": "PMP scope-management scenario",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 144,
-        "text": "Increasing resources on the critical path activities may not always shorten the length of the project because:",
-        "choices": [
-          "No activities are time-dependent or resource-dependent",
-          "Activities are always scheduled with optimal number of resources",
-          "The Project Manager always selects original resources with the highest skill levels",
-          "Adding more resources may create additional work and produce inefficiencies"
-        ],
-        "correct": 3,
-        "explanation": "Correct answer: D. The best answer is Adding more resources may create additional work and produce inefficiencies, based on the PMP scope-management logic tested in this question."
-      },
-      {
-        "tag": "Scope Management",
-        "topic": "PMP scope-management scenario",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 145,
-        "text": "The most difficult thing for a project team that is both an investor and an implementer at the end-of-stage review meeting is?",
-        "choices": [
-          "Budget allocation for the next phase",
-          "Approval of the next phase of scope changes",
-          "Approval of budget increases for the next phase",
-          "Cancel Item"
-        ],
-        "correct": 3,
-        "explanation": "Correct answer: D. Whether or not to cancel the project is the greatest contradiction between the investor and the project team."
-      },
-      {
-        "tag": "Scope Management",
-        "topic": "PMP scope-management scenario",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 146,
-        "text": "Which of the following is true?",
-        "choices": [
-          "Discounted cash flow analysis is the least precise of the cash flow techniques as it doe not consider the time value of money",
-          "NPV is the least precise of the",
-          "Ash flow analysis techniques as it assumes reinvestment as the",
-          "Iscount rate C. Payback period is the least precise of the cash flow analysis techniques as it does not consider the time value of money D. IRR is the least precise of the cash flow analysis techniques because it assumes reinvestment at the cost of capital"
-        ],
-        "correct": 2,
-        "explanation": "Correct answer: C. The recovery period here is the static recovery period, which analyzes the cost recovery at the end without taking into account the time value of the currency. Payback hands does not consider the time value of money and is somewhere the last promise of all the cash low analytical technologies."
-      },
-      {
-        "tag": "Create WBS",
-        "topic": "WBS and decomposition",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 147,
-        "text": "Except...?",
-        "choices": [
-          "Providing a framework for the organization and implementation of project activities",
-          "Similar to organizational chart",
-          "Stepping up a project in sequence, delineating it",
-          "It's a progress tool"
-        ],
-        "correct": 3,
-        "explanation": "Correct answer: D. The best answer is It's a progress tool, based on the PMP scope-management logic tested in this question."
-      },
-      {
-        "tag": "Define Scope",
-        "topic": "Project scope statement and boundaries",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Use the project scope statement to define project boundaries, deliverables, exclusions, assumptions, and constraints.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 148,
-        "text": "The documents used to describe the objectives, work content, deliverables and final products of the project are:?",
-        "choices": [
-          "project charter",
-          "Product Description",
-          "Scope statement",
-          "work breakdown structure"
-        ],
-        "correct": 2,
-        "explanation": "Correct answer: C. The best answer is Scope statement, based on the PMP scope-management logic tested in this question."
-      },
-      {
-        "tag": "Create WBS",
-        "topic": "WBS and decomposition",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 149,
-        "text": "Scope description:?",
-        "choices": [
-          "Excludes project objectives such as cost, progress, or quality criteria",
-          "A statement of project assumptions and constraints",
-          "Development of documents to serve as the basis for the preparation of the PERT/CPM network",
-          "Description of WBS Structure"
+          "Procure an enterprise messaging platform for every regional clinic",
+          "Run a limited experiment with an agreed attendance measure and privacy safeguards",
+          "Add reminder delivery counts to the benefits register as realized outcomes",
+          "Wait for another organization to prove the same assumption conclusively"
         ],
         "correct": 1,
-        "explanation": "Correct answer: B. The best answer is A statement of project assumptions and constraints, based on the PMP scope-management logic tested in this question."
+        "explanation": "A limited, measured experiment can test the local benefit assumption while containing cost and privacy exposure. Enterprise procurement scales uncertainty, delivery counts are outputs rather than attendance outcomes, and external evidence may inform but cannot replace responsible learning in this population.",
+        "chapterId": "pmbok-ch02-project-environment"
       },
       {
-        "tag": "Control Scope",
-        "topic": "Scope baseline and change control",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Compare work against the scope baseline, analyze variance, and route changes through integrated change control.",
-        "approach": "Predictive",
+        "tag": "Conflict management",
+        "domain": "People",
+        "topic": "Conflict management",
+        "approach": "Agile",
         "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 150,
-        "text": "It is important in Control Scope to determine the causes of unacceptable deviations for the scope baseline. Which item supports this analysis?",
+        "decisionRule": "make the substantive disagreement discussable before choosing a resolution.",
+        "text": "A UX designer and an accessibility specialist argue repeatedly during backlog refinement, while other team members have begun avoiding items that require both perspectives. What should the project manager do first?",
         "choices": [
-          "Analysis of root causes",
-          "Control Chart",
-          "Inspection",
-          "Project performance measurement results"
-        ],
-        "correct": 3,
-        "explanation": "Correct answer: D. variance analysis is a tool and technology for Control Scope. The results of the project performance measurement are used to assess the extent of the deviation, to determine the cause of the deviation and to determine whether corrective measures are required."
-      },
-      {
-        "tag": "Scope Management",
-        "topic": "PMP scope-management scenario",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 151,
-        "text": "Which of the following items is not the point where the project and operation intersect with the product life cycle?",
-        "choices": [
-          "At the end of the project",
-          "Developing, upgrading or increasing production of new products Time",
-          "In improving the operation or product development process",
-          "When appointing the operations manager as project manager"
-        ],
-        "correct": 3,
-        "explanation": "Correct answer: D. See chapter 1, section 1.5 of the PMBOK Guide (version 4): Projects and operations can intersect at different points in the life cycle of the product, including the end of the project, improvements in the operation or product development process when new products are developed, the product upgrades or increases production, before the product is out of operation (product life cycle end)."
-      },
-      {
-        "tag": "Create WBS",
-        "topic": "WBS and decomposition",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 152,
-        "text": "All of the following are parts of the scope baseline EXCEPT the:",
-        "choices": [
-          "Scope management plan",
-          "Project scope statement",
-          "Work breakdown structure",
-          "WBS Dictionary"
-        ],
-        "correct": 0,
-        "explanation": "Correct answer: A. PMBOK2008 P122。."
-      },
-      {
-        "tag": "Define Scope",
-        "topic": "Project scope statement and boundaries",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Use the project scope statement to define project boundaries, deliverables, exclusions, assumptions, and constraints.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 153,
-        "text": "It would be helpful to make clear in the project scope statement what is not included in the project ().?",
-        "choices": [
-          "Project completed on time",
-          "Project completed within budget",
-          "Project completed within defined parameters",
-          "Managing the expectations of those involved in the project"
-        ],
-        "correct": 3,
-        "explanation": "Correct answer: D. There is no substantive link to the subject matter. There is no substantive link to the subject. C. There is no substantive link to the title. D. Correct answer. Some jobs should be explicitly excluded from the project scope statement if the stakeholders may mistakenly think they are part of the project, so that they do not have unreasonable expectations about the project. See: PMBOK Guide, page 115. Point of view and answer techniques: exclusionary responsibilities in project scope statements, expectations of managers."
-      },
-      {
-        "tag": "Scope Management",
-        "topic": "PMP scope-management scenario",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 154,
-        "text": "The most difficult thing for a project team that is both an investor and an implementer at the end-of-stage review meeting is?",
-        "choices": [
-          "Budget allocation for the next phase",
-          "Approval of the next phase of scope changes",
-          "Approval of budget increases for the next phase",
-          "Cancel Item"
-        ],
-        "correct": 3,
-        "explanation": "Correct answer: D. Whether or not to cancel the project is the greatest contradiction between the investor and the project team."
-      },
-      {
-        "tag": "Create WBS",
-        "topic": "WBS and decomposition",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 155,
-        "text": "A prerequisite of effective time management is:",
-        "choices": [
-          "Knowing the dictated project completion date",
-          "Having the most advanced software package for project planning, scheduling, and control",
-          "Having a good project WBS that identifies major deliverables, tasks, and responsible people",
-          "Having a well-staffed scheduling department"
+          "Assign the disputed items to whichever specialist has more organizational seniority",
+          "Separate the specialists and ask them to document competing designs independently",
+          "Facilitate a focused conversation to identify interests, evidence, and shared acceptance criteria",
+          "Defer all disputed items until the rest of the product backlog is completed"
         ],
         "correct": 2,
-        "explanation": "Correct answer: C. The WBS provides the basis for defining activities, so effective schedule management depends on a sound WBS."
+        "explanation": "A facilitated discussion exposes the needs beneath their positions and gives the team objective criteria for resolving the product tradeoff. Seniority is not evidence, separate designs may entrench positions, and indefinite deferral allows interpersonal avoidance to dictate product priority.",
+        "chapterId": "pmbok-ch09-resource-management"
       },
       {
-        "tag": "Collect Requirements",
-        "topic": "Requirements documentation and traceability",
-        "chapterId": "pmbok-ch05-scope-management",
+        "tag": "Scope and requirements",
         "domain": "Process",
-        "decisionRule": "Elicit, document, and trace stakeholder requirements before defining scope or building the WBS.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 156,
-        "text": "Which of the following documents defines the content that requires formal change control?",
+        "topic": "Scope and requirements",
+        "approach": "Agile",
+        "difficulty": "Hard",
+        "decisionRule": "repair ambiguous acceptance criteria collaboratively before choosing rework or escalation.",
+        "text": "A stakeholder rejects a story at review even though every written test passes; the phrase 'near real time' was never quantified, and the stakeholder expected a much faster refresh. What should the team leader do first?",
         "choices": [
-          "Configuration management plan",
-          "Change management plan",
-          "Scope management plan",
-          "Requirements traceability matrix"
-        ],
-        "correct": 0,
-        "explanation": "Correct answer: A. See chapter 5, section 5.5.1.1, of the PMBOK Guide (version 4). The configuration management plan defines the configuration item, defines the content that requires a formal change control and sets out the change control process for these configuration items and content."
-      },
-      {
-        "tag": "Create WBS",
-        "topic": "WBS and decomposition",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 157,
-        "text": "Which of the following scenarios would require a revision of the work breakdown structure?",
-        "choices": [
-          "Additional resources allocated",
-          "New project product outcomes defined",
-          "Changed project constraints",
-          "Defined dependency level"
-        ],
-        "correct": 1,
-        "explanation": "Correct answer: B. The best answer is New project product outcomes defined, based on the PMP scope-management logic tested in this question."
-      },
-      {
-        "tag": "Control Scope",
-        "topic": "Scope baseline and change control",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Compare work against the scope baseline, analyze variance, and route changes through integrated change control.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 158,
-        "text": "Projects have been completed, but clients are reluctant to approve deliverables and repeated negotiations with clients have been inconclusive. What can the project manager do best?",
-        "choices": [
-          "Analysis of client needs, enhancement of product functionality and negotiation with clients",
-          "Get clients to propose scope changes",
-          "Preparation of an archive of the debate papers for possible legal proceedings",
-          "Re-profiling the acceptance and inspection criteria for deliverables"
-        ],
-        "correct": 1,
-        "explanation": "Correct answer: B. See PMBOK Guide (version 4), chapter 5, section 5.4.3.2. “deliverable results that have been completed but not formally accepted and the reasons for their non-acceptance shall be recorded and appropriate requests for change made.” The first step in the client's change should be a change request."
-      },
-      {
-        "tag": "Define Scope",
-        "topic": "Project scope statement and boundaries",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Use the project scope statement to define project boundaries, deliverables, exclusions, assumptions, and constraints.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 159,
-        "text": "One of the key tools and techniques used in the scope definition is:?",
-        "choices": [
-          "Templates, tables, and standards",
-          "Decomposition",
-          "Expert judgement",
-          "Project management methodology"
+          "Treat the passing tests as acceptance and ask the product owner to overrule the stakeholder",
+          "Estimate the faster refresh implementation and begin it in the next iteration",
+          "Clarify the measurable need with the stakeholder and product owner, then update acceptance criteria",
+          "Escalate the rejection because the stakeholder participated in the original refinement session"
         ],
         "correct": 2,
-        "explanation": "Correct answer: C. Expert judgement to analyse the information needed to develop the project scope statement. It is used in any technical detail."
+        "explanation": "The rejection arises from an unquantified requirement, so the parties must establish a measurable shared expectation before deciding what work is needed. Test passage proves only the ambiguous criteria, immediate rework assumes the solution, and escalation assigns blame without repairing the requirement.",
+        "chapterId": "pmbok-ch05-scope-management"
       },
       {
-        "tag": "Scope Management",
-        "topic": "PMP scope-management scenario",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 160,
-        "text": "Important aspects of products include maintenance and day-to-day operations, which should ()?",
+        "tag": "Compliance",
+        "domain": "Business Environment",
+        "topic": "Compliance",
+        "approach": "Hybrid",
+        "difficulty": "Hard",
+        "decisionRule": "contain a known compliance exposure and obtain qualified interpretation before choosing remediation.",
+        "text": "During a hybrid clinical-data migration, an auditor notes that the approved retention schedule for this organization conflicts with deletion rules configured in the latest increment. Records have not yet been deleted. What should the project manager do first?",
         "choices": [
-          "Included as an activity in the project ' s break-down structure",
-          "Not as part of the project",
-          "As part of a large project",
-          "Do not separate from the project life cycle into separate phases"
-        ],
-        "correct": 1,
-        "explanation": "Correct answer: B. See section 1.2 of chapter 1 of the PMBOK Guide (version 4), where maintenance and day-to-day operations are operational and not projects, so the answer is B."
-      },
-      {
-        "tag": "Scope Management",
-        "topic": "PMP scope-management scenario",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 161,
-        "text": "Job performance information includes the following, except which ones?",
-        "choices": [
-          "Results of staff training",
-          "Approved and incurred costs",
-          "Resource utilization data",
-          "Deliverables completed"
-        ],
-        "correct": 0,
-        "explanation": "Correct answer: A. Job performance information is any data or information describing work achievements, including costs, quality and performance of progress. The staff training schedule is an administrative service not directly related to the achievement of work."
-      },
-      {
-        "tag": "Create WBS",
-        "topic": "WBS and decomposition",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 162,
-        "text": "The scope baseline consists of the following:?",
-        "choices": [
-          "Request File",
-          "Scope statement",
-          "work breakdown structure",
-          "WBS dictionary"
-        ],
-        "correct": 0,
-        "explanation": "Correct answer: A. Analysis: The scope baseline is an integral part of the project management plan and includes the following (see the scope baseline in chapter 5.3.3 3 of the PMBOK Guidelines (version 4). 1) project scope statement: ? Product scope description. ? Project deliverables. ~Acceptance standards for products. 2) Disaggregation of work (WBS): ? Defines each deliverables. ? Disaggregate deliverables into work packages. 3) WBS dictionary (WBS dictionary): a detailed description of the work and technical documentation of the elements of each work breakdown structure. So the answer is A."
-      },
-      {
-        "tag": "Validate Scope",
-        "topic": "Formal acceptance of deliverables",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Validate completed deliverables with the customer or appropriate stakeholders after quality control.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 163,
-        "text": "You are the project manager for a project to upgrade your human resources benefits system for the past seven months. The programmers on your team are 75 percent of the way through the programming and testing work of this project when the board hires a new Vice President of Human Resources. Within days, the programmers are taken off the project one-by-one to work on the Vice President s new priority Recognition Project. Why would you perform Verify Scope for this scenario?",
-        "choices": [
-          "It determines the correctness and completion of all the work",
-          "It documents the level and degree of",
-          "Ompletion C. It",
-          "Etermines if the project results comply with quality standards D. It documents the correctness of the work according to stakeholder’s expectations"
-        ],
-        "correct": 1,
-        "explanation": "Correct answer: B. The Validate Scope is carried out before the end of the project and, in the case of an irregular closure of the project, the content and extent of the work performed is recorded."
-      },
-      {
-        "tag": "Collect Requirements",
-        "topic": "Requirements documentation and traceability",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Elicit, document, and trace stakeholder requirements before defining scope or building the WBS.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 164,
-        "text": "In addition to which, the following statements dealing with Validate Scope and quality control are correct?",
-        "choices": [
-          "Two processes could be implemented in parallel",
-          "Both processes use inspection as a tool and technology",
-          "Validate Scope is concerned with acceptance of deliverables and quality control is concerned with meeting quality requirements for deliverables",
-          "Validate Scope usually takes place before quality control"
-        ],
-        "correct": 3,
-        "explanation": "Correct answer: D. The Validate Scope focuses on the acceptance and approval of project deliverables, which must be met if they are to be approved. Quality control (QC) is a way of ensuring compliance with the requirement, which is why QC is usually completed before the Validate Scope."
-      },
-      {
-        "tag": "Collect Requirements",
-        "topic": "Requirements documentation and traceability",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Elicit, document, and trace stakeholder requirements before defining scope or building the WBS.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 165,
-        "text": "The deliverables had been completed and what should be done to make the project acceptable to clients?",
-        "choices": [
-          "Conducting measurement, review and verification activities",
-          "Decomposition project deliverables into smaller, more manageable components",
-          "Assess the extent of deviation from the range baseline",
-          "Observe how individuals work and implement processes"
-        ],
-        "correct": 0,
-        "explanation": "Correct answer: A. See chapter 5, section 5.4.2.1 of the PMBOK Guide (version 4), “inspection refers to activities such as measurement, review and verification to determine whether work and deliverables meet requirements and product acceptance standards”."
-      },
-      {
-        "tag": "Define Scope",
-        "topic": "Project scope statement and boundaries",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Use the project scope statement to define project boundaries, deliverables, exclusions, assumptions, and constraints.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 166,
-        "text": "Which of the following items needs to be carefully coordinated in the progressive detail of product characteristics in the project?",
-        "choices": [
-          "Appropriate definition of project scope",
-          "Project stakeholder",
-          "Scope change control system",
-          "Client strategic plan"
-        ],
-        "correct": 0,
-        "explanation": "Correct answer: A. The progressive detail of the project specifications needs to be carefully coordinated with an appropriate definition of scope, especially in the case of project execution under contract. Where the scope of the project (work to be performed) is properly defined, the scope of the project remains unchanged even if the product characteristics are progressively refined. Project Management Association, Project Management Knowledge System Guide, 2008, pp. 7 and 112."
-      },
-      {
-        "tag": "Project Charter",
-        "topic": "Charter and early planning inputs",
-        "chapterId": "pmbok-ch04-integration-management",
-        "domain": "Process",
-        "decisionRule": "Use the project charter and stakeholder register as key inputs before requirements and scope planning.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 167,
-        "text": "At what stage of life did the project charter come up?",
-        "choices": [
-          "Planning",
-          "Feasibility study",
-          "Executing",
-          "Initiating"
-        ],
-        "correct": 3,
-        "explanation": "Correct answer: D. The best answer is Initiating, based on the PMP scope-management logic tested in this question."
-      },
-      {
-        "tag": "Scope Management",
-        "topic": "PMP scope-management scenario",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 168,
-        "text": "As project complexity increases, what happens to the level of scope uncertainty?",
-        "choices": [
-          "It remains unchanged",
-          "It decreases",
-          "It decreases first and then increases",
-          "It increases"
-        ],
-        "correct": 3,
-        "explanation": "Correct answer: D. More complex projects usually carry greater uncertainty, including uncertainty around scope and related risks."
-      },
-      {
-        "tag": "Scope Management",
-        "topic": "PMP scope-management scenario",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 169,
-        "text": "What are the main sources of conflict at the project implementation and completion stages?",
-        "choices": [
-          "schedule",
-          "Technical issues",
-          "Personality",
-          "Cost"
-        ],
-        "correct": 0,
-        "explanation": "Correct answer: A. Analysis: See Dr. Kozna's Project Management: A System Approach to Planning, Progress and Control, the most important source of conflict in each phase of the project: • Initiating-up or concept — project priorities. • Development or planning — project priorities. Executing or enforcement — progress. • End or end — progress. So the answer is A."
-      },
-      {
-        "tag": "Define Scope",
-        "topic": "Project scope statement and boundaries",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Use the project scope statement to define project boundaries, deliverables, exclusions, assumptions, and constraints.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 170,
-        "text": "Which of the following statements on product and project scopes is correct? ( )?",
-        "choices": [
-          "Project scope services to product range",
-          "Changes in the scope of the project necessarily result in changes in the range of products",
-          "Changes in product ranges are bound to result in changes in project scopes",
-          "Product range for project encirclement"
-        ],
-        "correct": 0,
-        "explanation": "Correct answer: A. A. Correct answers. Once product ranges have been clarified, the work required to submit the product can be identified to ensure submission of the required product. It is not inevitable that changes will occur, for example, by adding a supplementary project work that may have no impact on the functioning of the product. C. Change is not inevitable, although it is likely to occur. That's not logical. Tests and answer techniques: Project scope and product range."
-      },
-      {
-        "tag": "Project Charter",
-        "topic": "Charter and early planning inputs",
-        "chapterId": "pmbok-ch04-integration-management",
-        "domain": "Process",
-        "decisionRule": "Use the project charter and stakeholder register as key inputs before requirements and scope planning.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 171,
-        "text": "Which of the following processes will not be directly exported from the project scope statement?",
-        "choices": [
-          "Development of project charters",
-          "Development of schedules",
-          "Planning risk management",
-          "Order of activities"
-        ],
-        "correct": 0,
-        "explanation": "Correct answer: A. The best answer is Development of project charters, based on the PMP scope-management logic tested in this question."
-      },
-      {
-        "tag": "Scope Management",
-        "topic": "PMP scope-management scenario",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Follow the scope-management process sequence: collect requirements, define scope, create WBS, validate scope, and control scope.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 172,
-        "text": "When should Validate Scope be done?",
-        "choices": [
-          "At the end of the project",
-          "At the beginning of the project",
-          "At the end of each phase of the project",
-          "During the planning processes"
+          "Accept the increment because the automated tests passed its documented requirements",
+          "Apply a temporary general retention hold to the migration dataset until project closure",
+          "Prevent affected deletions, document the gap, and engage the designated records and compliance authorities",
+          "Ask the product owner to rank the issue against other backlog work at the next routine review"
         ],
         "correct": 2,
-        "explanation": "Correct answer: C. The Validate Scope is a process to obtain recognition of results from stakeholders. The process is different from the stage, and the process needs to take place at each stage. Reference: PMBOK2008 P123."
+        "explanation": "The scenario establishes an organization-specific approved retention conflict and no deletion yet, so targeted containment preserves options while qualified authorities direct remediation. Passing tests do not prove compliance, a general hold may exceed what the schedule authorizes or requires, and routine prioritization gives a known control gap insufficient urgency and authority.",
+        "chapterId": "pmbok-ch11-risk-management"
       },
       {
-        "tag": "Define Scope",
-        "topic": "Project scope statement and boundaries",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Use the project scope statement to define project boundaries, deliverables, exclusions, assumptions, and constraints.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 173,
-        "text": "Which process group was the project scope statement created?",
+        "tag": "Conflict management",
+        "domain": "People",
+        "topic": "Conflict management",
+        "approach": "Hybrid",
+        "difficulty": "Hard",
+        "decisionRule": "resolve role conflict at the lowest effective level without compromising safety.",
+        "text": "During a factory retrofit, an agile controls team wants to test increments on operating equipment, but the predictive commissioning lead refuses any access before formal readiness approval. Both cite legitimate obligations. What should the project manager do?",
         "choices": [
-          "Initiating",
-          "Planning",
-          "Executing",
-          "Monitor"
-        ],
-        "correct": 1,
-        "explanation": "Correct answer: B. The best answer is Planning, based on the PMP scope-management logic tested in this question."
-      },
-      {
-        "tag": "Define Scope",
-        "topic": "Project scope statement and boundaries",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Use the project scope statement to define project boundaries, deliverables, exclusions, assumptions, and constraints.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 174,
-        "text": "Your team has been working on a contract for three years. Yesterday you were informed that your client had exhausted all his resources and would terminate the contract because of the buyer's convenience. The first thing you have to do is...?",
-        "choices": [
-          "Submit work products up to then to client representatives",
-          "Document lessons learned",
-          "Level and extent of completed work established and documented",
-          "Closure of the project office and reassignment of all personnel"
-        ],
-        "correct": 2,
-        "explanation": "Correct answer: C. The establishment and written recording of the level and extent of work done is part of the verification of the formal acceptance project scope. If the project is terminated before completion, the degree of completion of the project shall be determined and recorded."
-      },
-      {
-        "tag": "Create WBS",
-        "topic": "WBS and decomposition",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 175,
-        "text": "Which of the following is NOT an input to the initiating process group?",
-        "choices": [
-          "Company processes",
-          "Company",
-          "Ulture C. Historical WBSs",
-          "Project scope statement"
+          "Authorize an offline replica test and defer operating-equipment access until formal readiness",
+          "Follow the current readiness gate and place earlier test access on the next governance agenda",
+          "Prepare the feedback and safety impacts for the sponsor to select the governing approach",
+          "Bring both leads together to define a safe test boundary and an approval path that serves both needs"
         ],
         "correct": 3,
-        "explanation": "Correct answer: D. The scope description is the output of the scope defined by the Planning Process Group. Reference: PMBOK2008 P115."
+        "explanation": "The competing positions reflect valid feedback and safety interests, so collaborative problem solving should create controlled access and explicit approvals. Replica testing provides feedback but may not test the operating interface, waiting for the next governance cycle protects safety but loses near-term learning, and sponsor selection escalates before the leads attempt an integrated boundary.",
+        "chapterId": "pmbok-ch09-resource-management"
       },
       {
-        "tag": "Collect Requirements",
-        "topic": "Requirements documentation and traceability",
-        "chapterId": "pmbok-ch05-scope-management",
+        "tag": "Scope and requirements",
         "domain": "Process",
-        "decisionRule": "Elicit, document, and trace stakeholder requirements before defining scope or building the WBS.",
+        "topic": "Scope and requirements",
+        "approach": "Hybrid",
+        "difficulty": "Medium",
+        "decisionRule": "trace a mandatory requirement into every delivery representation before execution continues.",
+        "text": "A contractual accessibility requirement appears in the predictive scope baseline but is absent from the agile team's backlog and release tests. Development of the affected screens starts next week. What should the project manager do next?",
+        "choices": [
+          "Let development start because the signed scope baseline remains legally controlling",
+          "Add a generic accessibility task after the screens have been implemented",
+          "Ask the customer to remove the requirement from the contract to protect the release",
+          "Trace the requirement to affected backlog items, tests, ownership, and release acceptance"
+        ],
+        "correct": 3,
+        "explanation": "The requirement is mandatory but missing from the team's actionable scope and evidence, so traceability must be restored before development creates avoidable rework. The baseline alone does not guide execution, a late generic task lacks coverage, and contract removal is not justified by an internal translation gap.",
+        "chapterId": "pmbok-ch05-scope-management"
+      },
+      {
+        "tag": "Compliance",
+        "domain": "Business Environment",
+        "topic": "Compliance",
         "approach": "Predictive",
         "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 176,
-        "text": "The relationship between the Validate Scope process and the implementation of the quality control process is ().?",
+        "decisionRule": "translate a newly identified jurisdictional requirement into assessed project impacts and authorized changes.",
+        "text": "A company compliance specialist confirms that a permit is required in the jurisdiction selected for a new distribution center, but the approved schedule contains no permit activity. What should the project manager do next?",
         "choices": [
-          "Qualified deliverables for quality verification",
-          "Quality checks can only be carried out if deliverables are verified by scope to meet requirements",
-          "Quality checks or scope checks should be performed on the basis of specific needs",
-          "Quality checks and scope checks can normally be performed simultaneously"
+          "Begin site work because the requirement was discovered after baseline approval",
+          "Ask the contractor to obtain the permit without updating project responsibilities",
+          "Add an informal milestone and absorb any delay within existing float",
+          "Assess scope, schedule, cost, and risk impacts and route the required changes through governance"
+        ],
+        "correct": 3,
+        "explanation": "The requirement is a confirmed fact for the selected jurisdiction, so it must be integrated into plans through the project's authorized process. Baseline timing does not remove the obligation, informal delegation leaves accountability unclear, and quietly consuming float hides material impacts from decision makers.",
+        "chapterId": "pmbok-ch02-project-environment"
+      },
+      {
+        "tag": "Conflict management",
+        "domain": "People",
+        "topic": "Conflict management",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "decisionRule": "address a stakeholder conflict through direct, interest-based engagement first.",
+        "text": "A municipal project faces opposition from a neighborhood representative who demands nighttime work stop, while the contractor says daytime restrictions will delay the opening. What should the project manager do first?",
+        "choices": [
+          "Meet with both parties to explore underlying constraints and feasible schedule alternatives",
+          "Enforce the contractor's approved schedule because it forms part of the contract",
+          "Ask the mayor to overrule the neighborhood representative before further discussion",
+          "Suspend all work until every affected resident provides written consent"
         ],
         "correct": 0,
-        "explanation": "Correct answer: A. A. Correct answers. Executing of the quality control process is `confirmed deliverables' and `confirmed deliverables' are submitted to the Validate Scope process for acceptance. B. Quality control usually followed by Validate Scope. C. Generally perform quality control and then Validate Scope. Quality control is usually followed by Validate Scope; in some cases these two tasks can be performed simultaneously. See: PMBOK Guide, p. 123. Points and answer techniques: The relationship between quality control and Validate Scope."
+        "explanation": "Direct interest-based discussion can reveal options such as sequencing, noise controls, or limited work windows while preserving relationships. Simply enforcing the schedule ignores community impact, political escalation is premature, and requiring unanimous resident consent creates an impractical condition not established in the scenario.",
+        "chapterId": "pmbok-ch13-stakeholder-management"
       },
       {
-        "tag": "Create WBS",
-        "topic": "WBS and decomposition",
-        "chapterId": "pmbok-ch05-scope-management",
+        "tag": "Scope and requirements",
         "domain": "Process",
-        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
+        "topic": "Scope and requirements",
         "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 177,
-        "text": "Which output of Collect Requirements directly affects the creation of work breakdown structures?",
+        "difficulty": "Easy",
+        "decisionRule": "stop unauthorized enhancement and compare it with approved scope before disposition.",
+        "text": "During an inspection, the project manager finds that an engineer has added premium controls that are not in the approved requirements and were not requested by the customer. What should happen next?",
         "choices": [
-          "Requirements traceability matrix",
-          "project charter",
-          "Request File",
-          "Needs management plan"
+          "Stop further enhancement and evaluate the deviation against the approved scope and change process",
+          "Keep the controls because higher quality increases customer satisfaction without changing scope",
+          "Ask the customer to accept the controls informally during the next status meeting",
+          "Update the scope baseline to reflect the completed engineering improvement"
         ],
-        "correct": 2,
-        "explanation": "Correct answer: C. The best answer is Request File, based on the PMP scope-management logic tested in this question."
+        "correct": 0,
+        "explanation": "The premium controls are unauthorized work, so the project manager should prevent further divergence and determine their disposition through scope and change controls. Perceived quality does not justify gold plating, informal acceptance lacks authority, and retrospective baseline revision bypasses approval.",
+        "chapterId": "pmbok-ch05-scope-management"
       },
       {
-        "tag": "Create WBS",
-        "topic": "WBS and decomposition",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
+        "tag": "Compliance",
+        "domain": "Business Environment",
+        "topic": "Compliance",
         "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 178,
-        "text": "Which of the following documents is not input to the validation scope process?",
+        "difficulty": "Easy",
+        "decisionRule": "record applicable compliance obligations with clear ownership and verification evidence.",
+        "text": "A safety officer provides the project with the organization's approved inspection requirements for commissioning a new production line. What should the project manager do with them?",
         "choices": [
-          "Project management plan",
-          "Recognized deliverables",
-          "Requirements traceability matrix",
-          "RACI Allocation Matrix"
+          "Incorporate the requirements, accountable owners, and evidence into relevant project plans",
+          "Store the document with lessons learned for use after commissioning is complete",
+          "Treat the inspections as operational work outside the project boundary",
+          "Allow each supplier to decide which inspections apply to its equipment"
         ],
-        "correct": 3,
-        "explanation": "Correct answer: D. The best answer is RACI Allocation Matrix, based on the PMP scope-management logic tested in this question."
+        "correct": 0,
+        "explanation": "Confirmed organizational inspection requirements should be planned, owned, and supported by evidence before commissioning. Archiving them postpones action, labeling them operational does not address the project transition, and supplier discretion cannot replace the organization's defined applicability and accountability.",
+        "chapterId": "pmbok-ch02-project-environment"
       },
       {
-        "tag": "Collect Requirements",
-        "topic": "Requirements documentation and traceability",
-        "chapterId": "pmbok-ch05-scope-management",
-        "domain": "Process",
-        "decisionRule": "Elicit, document, and trace stakeholder requirements before defining scope or building the WBS.",
-        "approach": "Predictive",
-        "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 179,
-        "text": "At the conceptual stage of the project life cycle, management expressed the wish that the benefits of each new project should outweigh the development costs. These are the following examples of what:?",
+        "tag": "Conflict management",
+        "domain": "People",
+        "topic": "Conflict management",
+        "approach": "Agile",
+        "difficulty": "Hard",
+        "decisionRule": "do not confuse temporary harmony with resolution of a recurring value conflict.",
+        "text": "Two product managers repeatedly trade features between releases to avoid open disagreement, but their unresolved market priorities cause engineers to rework architecture each quarter. What should the product portfolio manager do next?",
         "choices": [
-          "Assumptions",
-          "Constraints",
-          "Selection of items by constraint optimization",
-          "A technical requirement"
+          "Formalize the feature trades in the release plan and track the resulting rework risk",
+          "Facilitate a decision using agreed product goals, market evidence, and explicit priority authority",
+          "Fund an architecture buffer for the most likely priority changes in later releases",
+          "Ask the product sponsor to select the next release priority from the existing business case"
         ],
         "correct": 1,
-        "explanation": "Correct answer: B. The best answer is Constraints, based on the PMP scope-management logic tested in this question."
+        "explanation": "The feature trades postpone the underlying priority conflict, so the portfolio manager should anchor a durable decision in shared goals, current evidence, and clear authority. Formalizing trades makes risk visible without resolving it, an architecture buffer mitigates rework rather than priorities, and a sponsor choice from the old business case omits the shared criteria and current market evidence needed for sustained alignment.",
+        "chapterId": "pmbok-ch13-stakeholder-management"
       },
       {
-        "tag": "Create WBS",
-        "topic": "WBS and decomposition",
-        "chapterId": "pmbok-ch05-scope-management",
+        "tag": "Scope and requirements",
         "domain": "Process",
-        "decisionRule": "Break project scope into deliverable-oriented work packages before detailed schedule and cost planning.",
-        "approach": "Predictive",
+        "topic": "Scope and requirements",
+        "approach": "Agile",
         "difficulty": "Medium",
-        "sourceSet": "pmp-classic-180-scope",
-        "sourceQuestionNumber": 180,
-        "text": "The project manager already has a project charter and a register of stakeholders, and what should be done next?",
+        "decisionRule": "evaluate an urgent request against the iteration goal through the product and team roles.",
+        "text": "Two days into an iteration, a key account manager asks a developer to insert an urgent export feature, but the feature is unrelated to the iteration goal. What should the scrum master facilitate?",
         "choices": [
-          "Develop the project management plan",
-          "Create work breakdown structure",
-          "Control Scope",
-          "Collect Requirements"
+          "Have the developer swap out an equal-sized item without involving the rest of the team",
+          "Bring the request to the product owner and developers to assess ordering and the iteration goal",
+          "Refuse to record the feature until the current iteration has been completed",
+          "Add the feature immediately because key-account retention outweighs the planned goal"
+        ],
+        "correct": 1,
+        "explanation": "The request may carry value, but it conflicts with the current goal and arrived through an individual developer. Product ownership and the developers should transparently assess the tradeoff. A private swap hides impact, refusal delays visibility, and immediate insertion ignores team focus and capacity.",
+        "chapterId": "pmbok-ch05-scope-management"
+      },
+      {
+        "tag": "Compliance",
+        "domain": "Business Environment",
+        "topic": "Compliance",
+        "approach": "Agile",
+        "difficulty": "Medium",
+        "decisionRule": "make compliance acceptance evidence part of iterative delivery rather than a late separate review.",
+        "text": "A fintech team plans to demonstrate payment features every sprint, while the organization's control function currently reviews transaction evidence only before release. What should the project leader propose?",
+        "choices": [
+          "Release each increment before review because sprint completion indicates acceptance",
+          "Collaborate with control specialists to define incremental evidence and review points",
+          "Move all control work to a final hardening sprint after feature development",
+          "Replace demonstrations with written status reports until the full product is complete"
+        ],
+        "correct": 1,
+        "explanation": "Early collaboration can embed appropriate evidence in acceptance and reveal gaps while change is less costly. Sprint completion alone does not authorize release, a final control sprint defers essential learning, and written reports remove useful product inspection without solving the evidence timing problem.",
+        "chapterId": "pmbok-ch11-risk-management"
+      },
+      {
+        "tag": "Conflict management",
+        "domain": "People",
+        "topic": "Conflict management",
+        "approach": "Hybrid",
+        "difficulty": "Easy",
+        "decisionRule": "use an agreed escalation path when direct collaboration has reached impasse.",
+        "text": "A nonprofit program's legal lead and delivery lead have met twice but remain deadlocked over releasing a donor portal with an unresolved consent clause. The issue now threatens a public commitment. What should the project manager do?",
+        "choices": [
+          "Release the portal because the delivery lead owns the committed date",
+          "Remove the consent feature without informing the donor steering group",
+          "Escalate the documented options and impacts through the agreed governance path",
+          "Ask the two leads to keep meeting without a decision deadline"
+        ],
+        "correct": 2,
+        "explanation": "Direct resolution has been attempted and the issue exceeds the team's authority, so a timely governance decision using documented impacts is appropriate. Shipping despite legal concern is reckless, silently changing scope violates transparency, and indefinite discussion leaves the external commitment unmanaged.",
+        "chapterId": "pmbok-ch13-stakeholder-management"
+      },
+      {
+        "tag": "Scope and requirements",
+        "domain": "Process",
+        "topic": "Scope and requirements",
+        "approach": "Hybrid",
+        "difficulty": "Hard",
+        "decisionRule": "resolve contradictory requirement authority and traceability before selecting a design.",
+        "text": "A policy document requires seven-year data retention, while a signed customer workshop record requires deletion after three years. Both are referenced by the hybrid program, and the sponsor wants development to choose the cheaper design now. What should the project manager do first?",
+        "choices": [
+          "Use the signed workshop record because it contains the customer's most recent direction",
+          "Implement seven-year retention because policy requirements always outrank customer needs",
+          "Trace the conflict to source, authority, compliance impact, and an accountable resolution decision",
+          "Design both retention modes and postpone the operating choice until deployment"
+        ],
+        "correct": 2,
+        "explanation": "The two authoritative-looking sources conflict on a consequential retention rule, so provenance, governing authority, compliance impact, and decision ownership must be established first. Recency alone is insufficient, policy precedence cannot be assumed without context, and building both modes spends money before the requirement is resolved.",
+        "chapterId": "pmbok-ch05-scope-management"
+      },
+      {
+        "tag": "Compliance",
+        "domain": "Business Environment",
+        "topic": "Compliance",
+        "approach": "Hybrid",
+        "difficulty": "Hard",
+        "decisionRule": "distinguish supplier assurance from project verification of an applicable control.",
+        "text": "For a public-sector records project, the contract requires the integrator to provide accessibility test evidence before acceptance. The integrator instead submits a signed statement that its standard platform is accessible and requests milestone approval. What should the project manager do?",
+        "choices": [
+          "Approve the milestone because the supplier has formally accepted liability for its statement",
+          "Commission an independent accessibility review before requesting the contract evidence from the integrator",
+          "Accept the statement provisionally and schedule evidence collection after operational launch",
+          "Apply the contractual acceptance criteria and obtain the required test evidence before recommending approval"
         ],
         "correct": 3,
-        "explanation": "Correct answer: D. The project charter and stakeholder register are key inputs to Collect Requirements, so the next step is to collect requirements."
+        "explanation": "The scenario gives a specific contractual evidence condition, so a supplier assertion does not satisfy acceptance. Liability language does not replace verification, an independent review adds work before enforcing the evidence obligation, and provisional acceptance moves a known gap into operations contrary to the agreed control point.",
+        "chapterId": "pmbok-ch12-procurement-management"
+      },
+      {
+        "tag": "Conflict management",
+        "domain": "People",
+        "topic": "Conflict management",
+        "approach": "Predictive",
+        "difficulty": "Hard",
+        "decisionRule": "separate factual disagreement from personal attribution before deciding corrective action.",
+        "text": "After a laboratory validation fails, the quality manager blames technician discipline while the engineering manager claims the test protocol is ambiguous. Their teams stop sharing records. What should the project manager do first?",
+        "choices": [
+          "Ask quality to refresh technician training while engineering reviews the protocol separately",
+          "Commission an independent specialist to revise the protocol before restoring record sharing",
+          "Escalate the failed validation and request separate corrective-action plans from both managers",
+          "Convene a fact-based review of the protocol, execution records, and handoffs with both managers"
+        ],
+        "correct": 3,
+        "explanation": "A joint evidence review distinguishes process ambiguity from execution variance and reopens information flow before blame hardens. Parallel training and protocol review preserve the competing assumptions, independent revision changes the artifact before establishing the cause, and separate corrective plans formalize positions without the shared evidence needed to integrate a response.",
+        "chapterId": "pmbok-ch04-integration-management"
+      },
+      {
+        "tag": "Scope and requirements",
+        "domain": "Process",
+        "topic": "Scope and requirements",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "decisionRule": "convert an apparently small scope request into assessed and authorized baseline change.",
+        "text": "The customer asks a site supervisor to move three installed sensors, calling the request minor, but cable routes and validation records would also change. What should the project manager do?",
+        "choices": [
+          "Authorize the supervisor to move the sensors within the remaining installation contingency",
+          "Ask quality staff to update validation records after the physical move is complete",
+          "Decline the move because installed items cannot be changed without contract termination",
+          "Document and assess the request, then obtain the required change decision before moving them"
+        ],
+        "correct": 3,
+        "explanation": "The requested move has physical, documentation, and validation effects, regardless of the customer's 'minor' label. It therefore needs integrated assessment and authorization. Contingency does not approve scope, after-the-fact records enable uncontrolled work, and outright refusal bypasses evaluation.",
+        "chapterId": "pmbok-ch05-scope-management"
+      },
+      {
+        "tag": "Compliance",
+        "domain": "Business Environment",
+        "topic": "Compliance",
+        "approach": "Agile",
+        "difficulty": "Medium",
+        "decisionRule": "update working agreements and evidence when an authorized policy changes during delivery.",
+        "text": "The organization's privacy office issues an approved policy update requiring a new consent record for customer research. A research sprint begins tomorrow. What should the project leader do?",
+        "choices": [
+          "Use the previous consent method until the current release roadmap is complete",
+          "Ask researchers to interpret the policy independently for each interview",
+          "Work with the privacy owner and team to update acceptance, workflow, and traceable evidence before research",
+          "Pause the entire product indefinitely because privacy policies can continue changing"
+        ],
+        "correct": 2,
+        "explanation": "The policy update is an approved organizational fact and applies before the planned research, so the workflow and evidence need an accountable update. Continuing the old method ignores it, individual interpretation creates inconsistency, and an indefinite product pause is disproportionate to integrating a defined requirement.",
+        "chapterId": "pmbok-ch02-project-environment"
+      },
+      {
+        "tag": "Conflict management",
+        "domain": "People",
+        "topic": "Conflict management",
+        "approach": "Agile",
+        "difficulty": "Easy",
+        "decisionRule": "reinforce team working agreements when debate becomes disrespectful.",
+        "text": "During sprint planning, a developer interrupts a tester and dismisses the tester's estimates as uninformed. The team charter requires respectful challenge. What should the scrum master do?",
+        "choices": [
+          "Pause the exchange, restate the working agreement, and invite the tester to explain the estimate",
+          "Ignore the interruption because robust technical debate improves agile decisions",
+          "End planning and send the developer directly to human resources",
+          "Accept the developer's estimate because coding experience is more relevant"
+        ],
+        "correct": 0,
+        "explanation": "Immediate, proportionate intervention protects participation and uses the team's own agreement to redirect the conversation. Ignoring disrespect damages safety, an immediate human-resources referral is excessive for the stated event, and privileging the developer's estimate repeats the dismissal instead of examining evidence.",
+        "chapterId": "pmbok-ch04-integration-management"
+      },
+      {
+        "tag": "Scope and requirements",
+        "domain": "Process",
+        "topic": "Scope and requirements",
+        "approach": "Agile",
+        "difficulty": "Easy",
+        "decisionRule": "make acceptance expectations testable before a backlog item enters delivery.",
+        "text": "A high-priority backlog item describes a faster checkout experience but contains no measurable acceptance criteria, and the team is about to plan the next iteration. What should happen first?",
+        "choices": [
+          "Refine the item with the product owner and relevant stakeholders into testable acceptance criteria",
+          "Estimate the item at the maximum size so ambiguity is included in the forecast",
+          "Start development and let the review meeting determine whether checkout is fast enough",
+          "Split the item by technical layer without clarifying the customer outcome"
+        ],
+        "correct": 0,
+        "explanation": "The item lacks a testable statement of value, so refinement should establish measurable acceptance before commitment. A larger estimate does not remove ambiguity, review-time discovery invites rework, and technical splitting can preserve the same unclear outcome.",
+        "chapterId": "pmbok-ch05-scope-management"
+      },
+      {
+        "tag": "Compliance",
+        "domain": "Business Environment",
+        "topic": "Compliance",
+        "approach": "Predictive",
+        "difficulty": "Easy",
+        "decisionRule": "escalate a suspected breach through the organization's established reporting channel while preserving facts.",
+        "text": "A project coordinator discovers that required supplier screening evidence is missing for one subcontractor under the organization's procurement policy. What should the project manager do first?",
+        "choices": [
+          "Ignore the gap because the prime supplier remains accountable for all subcontractors",
+          "Create replacement screening evidence from the subcontractor's public website",
+          "Document the finding and use the designated procurement and compliance reporting process",
+          "Terminate the prime contract immediately without reviewing the facts or authority"
+        ],
+        "correct": 2,
+        "explanation": "A missing required record is a factual control gap that should be preserved and routed to the designated authorities. Public information is not equivalent to required screening, prime accountability does not justify ignoring evidence, and immediate termination assumes both breach severity and decision authority.",
+        "chapterId": "pmbok-ch12-procurement-management"
+      },
+      {
+        "tag": "Conflict management",
+        "domain": "People",
+        "topic": "Conflict management",
+        "approach": "Hybrid",
+        "difficulty": "Medium",
+        "decisionRule": "resolve scarce-resource conflict against transparent project priorities and authority.",
+        "text": "Two workstream leads need the same cybersecurity architect this week. One task protects a fixed regulatory gate; the other validates a high-value product hypothesis. Informal negotiation has failed. What should the project manager do next?",
+        "choices": [
+          "Split the architect's time equally so both leads perceive the outcome as fair",
+          "Apply documented priorities and decision authority, then communicate the tradeoff and impacts",
+          "Give the architect the choice so the project manager remains neutral",
+          "Add both tasks to the architect's workload and recover any delay through overtime"
+        ],
+        "correct": 1,
+        "explanation": "When informal negotiation fails, transparent criteria and established authority should determine the allocation while impacts are made visible. Equal time may satisfy neither need, delegating the conflict to the architect avoids accountability, and overloading a scarce specialist creates quality and sustainability risks.",
+        "chapterId": "pmbok-ch04-integration-management"
+      },
+      {
+        "tag": "Scope and requirements",
+        "domain": "Process",
+        "topic": "Scope and requirements",
+        "approach": "Hybrid",
+        "difficulty": "Medium",
+        "decisionRule": "reconcile the accepted increment with the governing phase scope before claiming completion.",
+        "text": "An agile team completes a reporting feature against its tests, but a predictive phase-gate checklist expects an operator guide that was never represented in the backlog. The gate is tomorrow. What should the project manager do?",
+        "choices": [
+          "Ask the gate reviewers to accept the feature because product tests prove functional completion",
+          "Reconcile the guide requirement with the approved scope, then plan or authorize the missing work",
+          "Create a placeholder guide and mark the gate checklist complete pending later documentation",
+          "Remove the guide from the checklist because the agile team did not estimate it"
+        ],
+        "correct": 1,
+        "explanation": "The mismatch may reflect a genuine scope-translation gap, so the approved scope must establish whether the guide is required and how to disposition it. Functional tests do not prove transition completeness, a placeholder misstates status, and team estimation does not determine governing scope.",
+        "chapterId": "pmbok-ch05-scope-management"
+      },
+      {
+        "tag": "Compliance",
+        "domain": "Business Environment",
+        "topic": "Compliance",
+        "approach": "Agile",
+        "difficulty": "Medium",
+        "decisionRule": "maintain traceable compliance evidence at the pace of iterative change.",
+        "text": "An insurance product team changes underwriting rules frequently, but its approved model documentation is updated only at quarterly release reviews. Internal assurance cannot trace several decisions to the deployed configuration. What should the project leader establish?",
+        "choices": [
+          "A freeze on underwriting changes until the next quarterly review",
+          "Versioned decision records and evidence integrated with each relevant product change",
+          "A verbal confirmation from the product owner after every daily coordination meeting",
+          "A separate assurance backlog that the delivery team cannot view"
+        ],
+        "correct": 1,
+        "explanation": "Versioned records created with relevant changes restore traceability between decisions, configuration, and approved evidence. A blanket freeze may be unnecessary, verbal confirmation is not durable evidence, and an isolated assurance backlog weakens collaboration and does not tie documentation to deployed change.",
+        "chapterId": "pmbok-ch02-project-environment"
+      },
+      {
+        "tag": "Conflict management",
+        "domain": "People",
+        "topic": "Conflict management",
+        "approach": "Predictive",
+        "difficulty": "Easy",
+        "decisionRule": "select collaboration when the relationship and technical outcome both matter.",
+        "text": "A museum renovation architect and curator disagree about protecting a historic wall while routing new climate controls. Both outcomes are essential. Which conflict approach should the project manager encourage?",
+        "choices": [
+          "Withdraw from the issue until one specialist changes position voluntarily",
+          "Force the architect's solution because construction responsibility carries more authority",
+          "Collaborate to develop an option that satisfies preservation and environmental requirements",
+          "Compromise by meeting only half of each documented requirement"
+        ],
+        "correct": 2,
+        "explanation": "Collaboration is appropriate because the relationship and both mandatory outcomes matter, and an integrative design may satisfy them together. Withdrawal delays a necessary decision, forcing ignores curatorial needs, and splitting requirements treats compliance and preservation as negotiable without evidence that either can be reduced.",
+        "chapterId": "pmbok-ch04-integration-management"
+      },
+      {
+        "tag": "Schedule",
+        "domain": "Process",
+        "topic": "Schedule",
+        "approach": "Predictive",
+        "difficulty": "Hard",
+        "decisionRule": "analyze critical-path recovery choices and secondary impacts before committing resources.",
+        "text": "A critical-path design activity is ten days late, and an executive asks the project manager to add engineers immediately. The remaining work has specialist dependencies and may not benefit from additional staff. What should the project manager do first?",
+        "choices": [
+          "Add the available engineers and measure whether the activity recovers after one week",
+          "Fast-track all successor activities that do not have mandatory external approvals",
+          "Analyze the network, resource constraints, recovery options, costs, and risks before recommending action",
+          "Move the contractual completion date by ten days and submit a baseline change"
+        ],
+        "correct": 2,
+        "explanation": "The activity is critical, but specialist dependencies make the proposed crashing response uncertain, so network and resource analysis must compare feasible recovery options first. Adding staff may not compress work, broad fast-tracking creates risk without analysis, and moving the date assumes recovery is impossible.",
+        "chapterId": "pmbok-ch06-schedule-management"
+      },
+      {
+        "tag": "Compliance",
+        "domain": "Business Environment",
+        "topic": "Compliance",
+        "approach": "Hybrid",
+        "difficulty": "Hard",
+        "decisionRule": "preserve evidence and seek authorized direction when a local practice conflicts with a project control.",
+        "text": "On a multinational facilities project, a regional manager asks the team to omit small facilitation payments from expense descriptions, calling them customary. The organization's approved conduct policy prohibits undisclosed payments, and none has been made. What should the project manager do first?",
+        "choices": [
+          "Document the request, prevent the proposed payments, and consult the designated ethics or compliance channel",
+          "Refer the expense-description question to regional finance without restricting the proposed payments",
+          "Obtain the regional manager's written rationale and defer the question to the next steering review",
+          "Ask the sponsor to suspend all regional procurement pending a project-led investigation"
+        ],
+        "correct": 0,
+        "explanation": "The facts establish a proposed conflict with an approved organizational policy and no payment yet, making prevention, documentation, and qualified escalation appropriate. A later steering review delays the designated route, finance referral alone leaves the conduct exposure active, and a broad sponsor suspension selects consequences before authorized specialists assess the facts.",
+        "chapterId": "pmbok-ch11-risk-management"
+      },
+      {
+        "tag": "Team performance",
+        "domain": "People",
+        "topic": "Team performance",
+        "approach": "Agile",
+        "difficulty": "Medium",
+        "decisionRule": "interpret a team metric through delivery evidence before treating it as a target.",
+        "text": "A sponsor notices that an agile team's velocity declined after it began pairing on complex security stories, although escaped defects also declined. The sponsor asks for individual productivity targets. What should the project manager do?",
+        "choices": [
+          "Set story-point quotas for each developer to restore the prior velocity",
+          "Stop pairing until the team reaches its earlier output level",
+          "Exclude security stories from velocity because their estimates are unusually uncertain",
+          "Review value, quality, and flow trends with the sponsor and team before changing the practice"
+        ],
+        "correct": 3,
+        "explanation": "Velocity alone cannot show whether performance worsened, especially when quality improved on complex work. Individual quotas misuse a team estimate, stopping pairing discards a possible cause of fewer defects, and excluding difficult work manipulates the metric rather than explaining delivery outcomes.",
+        "chapterId": "pmbok-ch09-resource-management"
+      },
+      {
+        "tag": "Schedule",
+        "domain": "Process",
+        "topic": "Schedule",
+        "approach": "Agile",
+        "difficulty": "Medium",
+        "decisionRule": "use flow evidence to remove waiting rather than pressuring delivery estimates.",
+        "text": "A team's completed story count has fallen for three iterations because items wait several days for a shared integration environment, while active coding time remains stable. What should the scrum master do next?",
+        "choices": [
+          "Increase story-point targets so developers compensate for the unavailable environment",
+          "Shorten the iteration to make environment delays visible more frequently",
+          "Exclude waiting items from the team's metrics until the environment becomes available",
+          "Measure the queue and work with owners to reduce or schedule the environment constraint"
+        ],
+        "correct": 3,
+        "explanation": "Stable coding time and visible environment waits identify a system constraint, so measuring and reducing that queue improves delivery flow. Higher targets add pressure without capacity, shorter iterations do not create access, and excluding waits hides the delay customers actually experience.",
+        "chapterId": "pmbok-ch06-schedule-management"
+      },
+      {
+        "tag": "Organizational change",
+        "domain": "Business Environment",
+        "topic": "Organizational change",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "decisionRule": "assess adoption readiness as part of transition rather than equating installation with change.",
+        "text": "A hospital scheduling system is technically ready, but unit supervisors have not assigned time for staff practice and the launch date is four weeks away. What should the project manager do next?",
+        "choices": [
+          "Launch as planned and let supervisors address learning during normal operations",
+          "Add more technical testing because adoption problems usually result from defects",
+          "Ask the vendor to own all workforce communication until stabilization",
+          "Assess readiness with unit leaders and agree on adoption actions, owners, and measures"
+        ],
+        "correct": 3,
+        "explanation": "Technical readiness does not establish operational adoption, and the identified practice gap needs shared assessment and accountable actions. Launching transfers avoidable disruption, more technical testing addresses a different risk, and assigning workforce change to the vendor removes ownership from operational leaders who must sustain the new behavior.",
+        "chapterId": "pmbok-ch02-project-environment"
+      },
+      {
+        "tag": "Team performance",
+        "domain": "People",
+        "topic": "Team performance",
+        "approach": "Hybrid",
+        "difficulty": "Hard",
+        "decisionRule": "treat sustained overtime as a system signal and restore a sustainable operating model.",
+        "text": "A global payments team has met three release dates through repeated weekend work. Defects, sick leave, and handoff delays are now increasing, but the next contractual milestone is near. What should the project manager do first?",
+        "choices": [
+          "Analyze workload and flow with the team, then agree immediate scope or capacity adjustments",
+          "Secure temporary capacity for the milestone and review sustainable workload after the release",
+          "Request that the sponsor remove low-value scope based on the current defect trend",
+          "Strengthen defect triage and sick-leave coverage for the remaining milestone work"
+        ],
+        "correct": 0,
+        "explanation": "Rising defects, absence, and delays show that overtime is no longer protecting performance, so workload and capacity need immediate analysis with the team before an adjustment is selected. Temporary staff defer sustainability, sponsor scope reduction is chosen without team flow analysis, and stronger triage and coverage manage symptoms while leaving excess demand intact.",
+        "chapterId": "pmbok-ch09-resource-management"
+      },
+      {
+        "tag": "Schedule",
+        "domain": "Process",
+        "topic": "Schedule",
+        "approach": "Hybrid",
+        "difficulty": "Easy",
+        "decisionRule": "connect iterative forecasts and fixed milestones through visible dependencies.",
+        "text": "A regulatory submission has a fixed date, while the evidence needed for it will be produced across four agile iterations. What should the project manager establish?",
+        "choices": [
+          "An integrated release forecast showing evidence dependencies, review time, and the fixed milestone",
+          "Separate schedules so the agile team is not influenced by the regulatory deadline",
+          "A single iteration containing all evidence work immediately before the submission date",
+          "A schedule reserve held outside both the roadmap and regulatory milestone plan"
+        ],
+        "correct": 0,
+        "explanation": "The fixed submission depends on iterative evidence, so one visible forecast must connect increments, review lead time, and the milestone. Separate schedules obscure dependency, deferring all evidence concentrates risk, and invisible reserve cannot support transparent coordination.",
+        "chapterId": "pmbok-ch06-schedule-management"
+      },
+      {
+        "tag": "Organizational change",
+        "domain": "Business Environment",
+        "topic": "Organizational change",
+        "approach": "Predictive",
+        "difficulty": "Easy",
+        "decisionRule": "identify affected groups and readiness needs before finalizing a change rollout.",
+        "text": "A merger project will replace separate travel-approval processes with one shared workflow. The technical plan is drafted, but affected employee groups have not been mapped. What should the project manager do?",
+        "choices": [
+          "Identify affected groups, impacts, and readiness needs with change and business leaders",
+          "Finalize the workflow before employees can introduce additional preferences",
+          "Send one announcement after configuration is complete and measure message delivery",
+          "Ask the software supplier to decide which groups require change support"
+        ],
+        "correct": 0,
+        "explanation": "The process change affects people across the merged organization, so impact and readiness analysis should shape the rollout. Freezing design first may miss operational needs, message delivery is not adoption, and the supplier lacks accountable knowledge of internal roles and change consequences.",
+        "chapterId": "pmbok-ch02-project-environment"
+      },
+      {
+        "tag": "Team performance",
+        "domain": "People",
+        "topic": "Team performance",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "decisionRule": "close a verified capability gap before attributing variance to motivation.",
+        "text": "A newly hired estimator produces inconsistent quantities on a highway project. The approved estimating method differs from the tool used at the estimator's previous employer. What should the project manager do next?",
+        "choices": [
+          "Reduce the estimator's performance rating before the next quantity submission",
+          "Arrange targeted training and supervised practice on the approved method",
+          "Transfer all estimating work permanently to the senior engineer",
+          "Change the project's estimating method to match the new employee's prior tool"
+        ],
+        "correct": 1,
+        "explanation": "The scenario identifies a specific knowledge gap, making targeted development and observed practice the proportionate response. A negative rating assumes unwillingness, permanent transfer prevents capability growth and overloads the senior engineer, and changing the project method for one person's familiarity may violate approved controls.",
+        "chapterId": "pmbok-ch09-resource-management"
+      },
+      {
+        "tag": "Schedule",
+        "domain": "Process",
+        "topic": "Schedule",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "decisionRule": "diagnose constraints and viable recovery before changing an approved schedule.",
+        "text": "A newly imposed external inspection date creates twelve days of negative float in the approved schedule. No recovery analysis has yet been performed. What should the project manager do next?",
+        "choices": [
+          "Direct every near-critical activity to work overtime until float becomes positive",
+          "Analyze constraints and schedule-compression options, then route any baseline impact for approval",
+          "Replace the external date with the baseline date in stakeholder reports",
+          "Apply all remaining contingency reserve to the inspection milestone immediately"
+        ],
+        "correct": 1,
+        "explanation": "Negative float signals a conflict requiring network and recovery analysis before a response or baseline decision. Universal overtime ignores activity characteristics, reporting the old date hides reality, and consuming reserve without evaluating paths may not address the constrained sequence.",
+        "chapterId": "pmbok-ch06-schedule-management"
+      },
+      {
+        "tag": "Organizational change",
+        "domain": "Business Environment",
+        "topic": "Organizational change",
+        "approach": "Agile",
+        "difficulty": "Hard",
+        "decisionRule": "investigate behavior and reinforcement before increasing change communication.",
+        "text": "A new case-management practice has been demonstrated, trained, and endorsed by executives, yet experienced agents keep using personal spreadsheets. Interviews show that supervisors still reward daily case volume, while the new practice initially slows work to improve resolution quality. What should the project leader do next?",
+        "choices": [
+          "Repeat mandatory training and publish attendance results to the steering committee",
+          "Work with operational leaders to align measures, supervisor behaviors, and adoption support with the intended outcome",
+          "Restrict spreadsheet access and manage remaining workarounds through supervisor performance reviews",
+          "Extend the pilot until agents independently adopt the new practice under current incentives"
+        ],
+        "correct": 1,
+        "explanation": "The evidence identifies a reinforcement conflict, not an awareness gap, so operating measures and leadership behavior must support the desired quality outcome. More training repeats a completed intervention, tool restriction applies enforcement before resolving incentives, and extending the pilot preserves the condition driving nonadoption.",
+        "chapterId": "pmbok-ch11-risk-management"
+      },
+      {
+        "tag": "Team performance",
+        "domain": "People",
+        "topic": "Team performance",
+        "approach": "Agile",
+        "difficulty": "Hard",
+        "decisionRule": "improve the conditions behind uneven participation instead of optimizing visible activity.",
+        "text": "A remote product team completes sprint goals, but retrospective data show that two developers handle nearly all production incidents and cannot finish planned learning work. What should the team leader do?",
+        "choices": [
+          "Reserve the next sprint's learning allocation as contingency for production incidents",
+          "Create a dedicated responder rotation led by the two experts and review it next release",
+          "Facilitate skills sharing and redesign the support rotation with the whole team",
+          "Adjust capacity forecasts for incident duty and protect other members' sprint commitments"
+        ],
+        "correct": 2,
+        "explanation": "Cross-training and a redesigned rotation address the concentration of operational knowledge while preserving sustainable delivery. Converting learning time to contingency deepens the gap, a rotation still led by the same experts retains dependence, and capacity forecasting describes the load but does not distribute incident skill or ownership.",
+        "chapterId": "pmbok-ch09-resource-management"
+      },
+      {
+        "tag": "Schedule",
+        "domain": "Process",
+        "topic": "Schedule",
+        "approach": "Agile",
+        "difficulty": "Hard",
+        "decisionRule": "reforecast from current capacity and uncertainty when team composition invalidates historical velocity.",
+        "text": "A product team promises a release date using its average velocity, but two experienced members have left and three new members join next week. The sponsor asks whether the date remains credible. What should the project leader do?",
+        "choices": [
+          "Keep the date because averaging several iterations already smooths staffing variation",
+          "Reduce the forecast velocity by the exact percentage of experienced members who left",
+          "Reforecast with current capacity, onboarding effects, dependencies, and a transparent uncertainty range",
+          "Wait for three iterations of new velocity data before discussing the date with the sponsor"
+        ],
+        "correct": 2,
+        "explanation": "The composition change weakens the historical velocity assumption, so a current, range-based forecast should expose onboarding and dependency uncertainty now. An old average ignores structural change, headcount percentages do not map directly to throughput, and waiting withholds material schedule information.",
+        "chapterId": "pmbok-ch06-schedule-management"
+      },
+      {
+        "tag": "Organizational change",
+        "domain": "Business Environment",
+        "topic": "Organizational change",
+        "approach": "Hybrid",
+        "difficulty": "Hard",
+        "decisionRule": "use representative adoption evidence before authorizing an enterprise rollout.",
+        "text": "A hybrid procurement transformation reports strong adoption from a pilot staffed by volunteers, but the enterprise rollout includes remote teams with different approval authority and limited connectivity. The sponsor wants immediate deployment based on pilot satisfaction. What should the project manager recommend first?",
+        "choices": [
+          "Proceed because volunteer satisfaction is sufficient evidence of organizational readiness",
+          "Use remote managers' readiness attestations and keep the current enterprise deployment date",
+          "Test critical workflow and authority assumptions with representative remote groups, then update the rollout decision",
+          "Transfer rollout accountability to local managers while preserving the existing enterprise schedule"
+        ],
+        "correct": 2,
+        "explanation": "The pilot population did not represent known authority and connectivity conditions, so targeted evidence should inform the rollout decision. Pilot satisfaction cannot establish broader readiness, manager attestations do not test critical remote workflows, and local delegation without schedule reassessment transfers rather than manages the identified exposure.",
+        "chapterId": "pmbok-ch11-risk-management"
+      },
+      {
+        "tag": "Team performance",
+        "domain": "People",
+        "topic": "Team performance",
+        "approach": "Hybrid",
+        "difficulty": "Easy",
+        "decisionRule": "use team-owned measures that connect working behavior to outcomes.",
+        "text": "A consumer-goods launch team wants to know whether its new daily cross-functional huddle is reducing late packaging decisions. What should the project manager recommend?",
+        "choices": [
+          "Agree on a short trial and track decision lead time and late packaging changes",
+          "Count meeting attendance because full participation proves the huddle is effective",
+          "Continue the huddle for the full project before collecting any performance data",
+          "Measure each participant's speaking time to ensure equal individual contribution"
+        ],
+        "correct": 0,
+        "explanation": "A time-boxed trial with outcome-related measures can show whether the huddle improves the targeted decision flow. Attendance is an activity measure, delayed evaluation prevents adaptation, and equal speaking time does not demonstrate faster decisions or fewer packaging changes.",
+        "chapterId": "pmbok-ch09-resource-management"
+      },
+      {
+        "tag": "Schedule",
+        "domain": "Process",
+        "topic": "Schedule",
+        "approach": "Hybrid",
+        "difficulty": "Medium",
+        "decisionRule": "resolve cross-model dependency timing in an integrated schedule before optimizing local plans.",
+        "text": "A supplier's predictive hardware delivery is scheduled after the agile team's final integration iteration, although both workstream plans individually show on-time completion. What should the project manager do?",
+        "choices": [
+          "Ask the agile team to mark integration complete using a simulated component",
+          "Keep both plans because each workstream owner approved its own dates",
+          "Move the supplier milestone earlier without analyzing contract or feasibility impacts",
+          "Review the shared dependency and resequence or escalate options in the integrated schedule"
+        ],
+        "correct": 3,
+        "explanation": "Local schedules conceal an impossible integration sequence, so the cross-workstream dependency must be analyzed in the integrated schedule. Simulation cannot establish final completion, local approval does not resolve system timing, and unilateral milestone movement ignores contractual feasibility.",
+        "chapterId": "pmbok-ch06-schedule-management"
+      },
+      {
+        "tag": "Organizational change",
+        "domain": "Business Environment",
+        "topic": "Organizational change",
+        "approach": "Agile",
+        "difficulty": "Medium",
+        "decisionRule": "make change leadership visible and iterative when operating roles are evolving.",
+        "text": "A business unit is adopting cross-functional product teams, but functional managers give staff conflicting priorities between product work and legacy reporting. What should the project leader do?",
+        "choices": [
+          "Let each employee choose priorities based on personal development goals",
+          "Ask product owners to negotiate capacity separately with every functional manager each sprint",
+          "Track the conflicts as delivery risks without changing management behavior",
+          "Facilitate an accountable leadership agreement on priorities, roles, escalation, and transition feedback"
+        ],
+        "correct": 3,
+        "explanation": "The change crosses management boundaries and requires a shared leadership system for priorities, roles, and learning. Individual choice cannot resolve organizational authority, repeated bilateral negotiation is unstable, and risk tracking makes the conflict visible without creating the decisions needed for adoption.",
+        "chapterId": "pmbok-ch03-project-manager-role"
+      },
+      {
+        "tag": "Team performance",
+        "domain": "People",
+        "topic": "Team performance",
+        "approach": "Predictive",
+        "difficulty": "Hard",
+        "decisionRule": "revise team development actions when performance evidence disproves the original diagnosis.",
+        "text": "A project manager arranged presentation training after client workshops received poor ratings. Ratings remain low, while recordings show experts answer accurately but avoid confirming whether client concerns were understood. What should happen next?",
+        "choices": [
+          "Ask the training provider to add client-specific presentation exercises to the course",
+          "Reassess the gap and coach active listening and confirmation techniques using the recordings",
+          "Pair the experts with client relationship managers to lead the next workshops",
+          "Collect written client questions before each workshop and revise the presentation agenda"
+        ],
+        "correct": 1,
+        "explanation": "New evidence shows the issue is listening and confirmation rather than presentation mechanics, so the development response must change. More tailored presentation exercises still target the wrong skill, relationship managers may compensate without developing the experts, and advance written questions improve preparation but do not establish whether concerns were understood during discussion.",
+        "chapterId": "pmbok-ch09-resource-management"
+      },
+      {
+        "tag": "Schedule",
+        "domain": "Process",
+        "topic": "Schedule",
+        "approach": "Predictive",
+        "difficulty": "Easy",
+        "decisionRule": "validate resource availability before approving an activity schedule.",
+        "text": "Estimators provide activity durations for a laboratory installation, but the draft schedule assumes specialists are available during a known facility shutdown. What should the project manager do first?",
+        "choices": [
+          "Reconcile the estimates with resource calendars and the shutdown before baselining the schedule",
+          "Baseline the dates and treat specialist unavailability as a future schedule risk",
+          "Ask specialists to reserve overtime during the shutdown without consulting facility management",
+          "Remove the shutdown from the calendar because installation work is project critical"
+        ],
+        "correct": 0,
+        "explanation": "The known shutdown directly invalidates the availability assumption, so resource calendars and durations must be reconciled before approval. Baselining a known conflict is avoidable, overtime may be impossible, and project priority does not erase a facility constraint.",
+        "chapterId": "pmbok-ch06-schedule-management"
+      },
+      {
+        "tag": "Organizational change",
+        "domain": "Business Environment",
+        "topic": "Organizational change",
+        "approach": "Predictive",
+        "difficulty": "Easy",
+        "decisionRule": "include sustainment ownership and adoption measures in the transition plan.",
+        "text": "A new maintenance procedure has passed acceptance testing, and the project will close after handover. What should the project manager confirm with the operations manager before closure?",
+        "choices": [
+          "Ownership of reinforcement, support, and adoption measures after transition",
+          "That every project team member remains available until adoption reaches perfection",
+          "That the procedure document replaces all supervisor coaching during operations",
+          "That technical acceptance automatically closes every organizational change activity"
+        ],
+        "correct": 0,
+        "explanation": "Sustained change requires operational ownership for reinforcement, support, and outcome monitoring after the project ends. Retaining the entire temporary team is unnecessary, a document cannot replace local leadership, and technical acceptance does not by itself establish use of the new procedure.",
+        "chapterId": "pmbok-ch02-project-environment"
+      },
+      {
+        "tag": "Team performance",
+        "domain": "People",
+        "topic": "Team performance",
+        "approach": "Agile",
+        "difficulty": "Easy",
+        "decisionRule": "make impediments visible and let the team inspect its delivery system.",
+        "text": "A mobile-app team carries the same three blocked stories across successive sprints, yet its review meetings focus only on completed demonstrations. What should the scrum master do?",
+        "choices": [
+          "Increase the blocked stories' estimates so the velocity reflects their difficulty",
+          "Remove the stories from the product backlog until external dependencies disappear",
+          "Facilitate inspection of the blockers, aging work, and ownership of next actions",
+          "Ask developers to work on the blocked stories outside normal sprint hours"
+        ],
+        "correct": 2,
+        "explanation": "The team needs transparent inspection of why work remains blocked and who will act on dependencies. Re-estimating does not unblock anything, removing needed work hides demand, and off-hours effort cannot solve external constraints and encourages an unsustainable workaround.",
+        "chapterId": "pmbok-ch04-integration-management"
+      },
+      {
+        "tag": "Schedule",
+        "domain": "Process",
+        "topic": "Schedule",
+        "approach": "Agile",
+        "difficulty": "Medium",
+        "decisionRule": "reduce excessive work in progress and help finish items to restore cycle time.",
+        "text": "Cycle time has doubled while the number of developers and incoming requests remains stable; the board shows most people starting new items whenever testing queues grow. What should the scrum master encourage?",
+        "choices": [
+          "Increase the testing estimate for every future backlog item",
+          "Honor work-in-progress limits and swarm on aging items before starting more work",
+          "Add a separate expedite lane for every item waiting in testing",
+          "Measure individual utilization and assign new work to anyone below full capacity"
+        ],
+        "correct": 1,
+        "explanation": "The board shows excess starts and a growing testing queue, so limiting work and helping finish aging items addresses flow. Larger estimates do not change the queue, ubiquitous expediting destroys priority, and utilization targets encourage still more partially completed work.",
+        "chapterId": "pmbok-ch06-schedule-management"
+      },
+      {
+        "tag": "Organizational change",
+        "domain": "Business Environment",
+        "topic": "Organizational change",
+        "approach": "Agile",
+        "difficulty": "Medium",
+        "decisionRule": "adapt change support using direct feedback from affected users.",
+        "text": "After two releases of a new inventory workflow, store associates complete tasks correctly but report that supervisor coaching arrives too late to help during peak shifts. What should the project leader do next?",
+        "choices": [
+          "Keep the rollout plan unchanged because task accuracy meets acceptance criteria",
+          "Review the feedback with operations and adjust coaching timing and support experiments",
+          "Replace the associates who report difficulty with users from the original pilot",
+          "Add more product features so the workflow becomes self-explanatory"
+        ],
+        "correct": 1,
+        "explanation": "Correct task execution is encouraging, but timely support affects sustainable adoption under real operating conditions. Preserving the plan ignores actionable feedback, replacing users hides rather than resolves the condition, and additional features assume a product cause without examining the identified coaching gap.",
+        "chapterId": "pmbok-ch09-resource-management"
+      },
+      {
+        "tag": "Team performance",
+        "domain": "People",
+        "topic": "Team performance",
+        "approach": "Hybrid",
+        "difficulty": "Medium",
+        "decisionRule": "align performance feedback with the outcomes and behaviors the integrated team controls.",
+        "text": "In a hospital rollout, functional managers assess staff only on departmental output, while the project depends on collaborative ward readiness. Team members therefore defer integration work. What should the project manager do?",
+        "choices": [
+          "Create a separate ranking and publish which individuals complete the most integration tasks",
+          "Accept the functional measures because only line managers can evaluate employees",
+          "Escalate every deferred task to the hospital director for individual resolution",
+          "Work with functional managers to include agreed project collaboration and readiness outcomes in feedback"
+        ],
+        "correct": 3,
+        "explanation": "Coordinating evaluation criteria with functional managers aligns incentives to the integrated results the project needs. A competing public ranking harms cooperation, accepting the mismatch leaves the cause intact, and repeated executive escalation manages symptoms one task at a time.",
+        "chapterId": "pmbok-ch04-integration-management"
+      },
+      {
+        "tag": "Cost",
+        "domain": "Process",
+        "topic": "Cost",
+        "approach": "Hybrid",
+        "difficulty": "Hard",
+        "decisionRule": "forecast total exposure across contract commitments, adaptive consumption, and pending changes.",
+        "text": "A hybrid project reports spending on plan, but the fixed-price vendor has submitted a likely change claim and the agile team is consuming cloud capacity faster than assumed. What should the project manager do next?",
+        "choices": [
+          "Keep the current estimate because neither future cost has been invoiced",
+          "Use the agile team's current burn rate as the new estimate for the whole project",
+          "Update the estimate at completion using remaining work, cloud trends, and claim exposure",
+          "Transfer the likely claim to management reserve and leave the cost forecast unchanged"
+        ],
+        "correct": 2,
+        "explanation": "Current spending omits two credible future drivers, so the estimate at completion must incorporate remaining work, consumption trends, and probabilistic claim exposure. Invoice timing is irrelevant to forecast, team burn covers only one component, and reserve classification does not remove expected cost from the outlook.",
+        "chapterId": "pmbok-ch07-cost-management"
+      },
+      {
+        "tag": "Organizational change",
+        "domain": "Business Environment",
+        "topic": "Organizational change",
+        "approach": "Hybrid",
+        "difficulty": "Hard",
+        "decisionRule": "reconcile stakeholder influence and operational evidence before changing the adoption strategy.",
+        "text": "A respected regional director publicly supports a new service model but privately tells supervisors to preserve the old escalation path until quarterly targets improve. Usage dashboards show mixed workflows, while employee surveys report confusion. What should the project manager do first?",
+        "choices": [
+          "Record the old path as a regional transition exception and continue monitoring usage trends",
+          "Issue an enterprise directive for the new path and monitor regional exceptions through the dashboard",
+          "Wait for quarterly targets because the director has greater local authority than the project team",
+          "Validate the evidence with the director and operational leaders, then align sponsorship behavior and transition decisions"
+        ],
+        "correct": 3,
+        "explanation": "The conflicting leadership signals are supported by both usage and employee evidence, so direct validation and aligned sponsorship decisions come first. Recording an exception legitimizes an unapproved contradiction, a directive leaves sponsorship behavior unresolved, and waiting allows mixed practices to harden without addressing the leadership cause.",
+        "chapterId": "pmbok-ch13-stakeholder-management"
+      },
+      {
+        "tag": "Team performance",
+        "domain": "People",
+        "topic": "Team performance",
+        "approach": "Predictive",
+        "difficulty": "Easy",
+        "decisionRule": "assess team effectiveness against agreed objectives using multiple relevant indicators.",
+        "text": "A project board asks whether a procurement-transition team is performing effectively. The team meets dates, but suppliers report frequent clarification loops and employees report avoidable rework. What should the project manager provide?",
+        "choices": [
+          "An assessment combining milestone, rework, supplier-feedback, and team-development evidence",
+          "Only the schedule report because approved milestones define project performance",
+          "A list of the individuals involved in the largest number of clarification loops",
+          "A statement that the team is effective because no formal complaint has been filed"
+        ],
+        "correct": 0,
+        "explanation": "A balanced assessment tests effectiveness against delivery, quality, stakeholder, and team evidence rather than one favorable indicator. Schedule alone hides rework, naming individuals skips causal analysis, and absence of formal complaints does not invalidate the feedback already described.",
+        "chapterId": "pmbok-ch04-integration-management"
+      },
+      {
+        "tag": "Cost",
+        "domain": "Process",
+        "topic": "Cost",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "decisionRule": "use a bottom-up forecast when future cost conditions differ from past performance.",
+        "text": "Cost performance has been favorable, but the only remaining procurement must use a newly announced material price that is forty percent higher than the baseline assumption. How should the project manager forecast?",
+        "choices": [
+          "Apply the favorable cumulative cost index to all remaining work",
+          "Keep the approved budget at completion as the most stable forecast",
+          "Exclude the price increase until a purchase order has been signed",
+          "Estimate the remaining procurement with the new price and combine it with actual costs"
+        ],
+        "correct": 3,
+        "explanation": "The known future price condition differs from historical performance, making a bottom-up estimate of remaining procurement more informative. Applying the old index assumes continuity, the budget is not a forecast, and waiting for commitment delays recognition of available cost evidence.",
+        "chapterId": "pmbok-ch07-cost-management"
+      },
+      {
+        "tag": "Governance",
+        "domain": "Business Environment",
+        "topic": "Governance",
+        "approach": "Hybrid",
+        "difficulty": "Medium",
+        "decisionRule": "clarify decision rights when iterative delivery and stage-gate oversight intersect.",
+        "text": "A hybrid capital project uses monthly product demonstrations, but the steering committee assumes each demonstration authorizes changes to the approved investment baseline. Team members receive conflicting directions afterward. What should the project manager do?",
+        "choices": [
+          "Stop demonstrations until the next formal investment gate",
+          "Treat all steering committee comments as approved baseline changes",
+          "Document decision rights, review purposes, and change routes with the committee and team",
+          "Ask workstream leads to interpret each comment for their own deliverables"
+        ],
+        "correct": 2,
+        "explanation": "The conflict comes from ambiguous governance interfaces, so participants need explicit decision rights and routes for different review types. Stopping demonstrations removes useful feedback, treating comments as approvals bypasses controls, and local interpretation increases inconsistency across the project.",
+        "chapterId": "pmbok-ch02-project-environment"
+      },
+      {
+        "tag": "Emotional intelligence",
+        "domain": "People",
+        "topic": "Emotional intelligence",
+        "approach": "Agile",
+        "difficulty": "Medium",
+        "decisionRule": "regulate the immediate reaction and seek meaning before responding to criticism.",
+        "text": "At a sprint review, a major customer says the increment shows that the team does not understand its business. The product lead becomes visibly defensive. What should the project manager do first?",
+        "choices": [
+          "Acknowledge the concern, ask for concrete examples, and keep the discussion focused on learning",
+          "Defend the team by listing every requirement the customer previously approved",
+          "End the review and request that future feedback be submitted only in writing",
+          "Promise to replace the product lead before confirming the source of dissatisfaction"
+        ],
+        "correct": 0,
+        "explanation": "Acknowledging emotion without accepting a vague conclusion creates space for specific evidence and learning. A defensive requirements recital escalates the exchange, ending live feedback reduces collaboration, and promising a personnel change before understanding the concern is impulsive and unsupported.",
+        "chapterId": "pmbok-ch03-project-manager-role"
+      },
+      {
+        "tag": "Cost",
+        "domain": "Process",
+        "topic": "Cost",
+        "approach": "Agile",
+        "difficulty": "Easy",
+        "decisionRule": "compare expenditure with completed value and unfinished inventory before adjusting funding.",
+        "text": "A product team is using its quarterly budget faster than expected while many started features remain unfinished. What should the product leader review first?",
+        "choices": [
+          "Compare spend with completed value, work in progress, and the ordered remaining backlog",
+          "Request more funding because a stable team should never reduce its delivery capacity",
+          "Freeze all vendor invoices until every started feature has reached production",
+          "Reduce quality activities by the same percentage as the budget overrun"
+        ],
+        "correct": 0,
+        "explanation": "Rapid spend combined with unfinished inventory requires visibility into delivered value, work in progress, and remaining priorities before a funding decision. More funding assumes value, frozen invoices ignore obligations, and proportional quality cuts create risk without addressing the spending cause.",
+        "chapterId": "pmbok-ch07-cost-management"
+      },
+      {
+        "tag": "Governance",
+        "domain": "Business Environment",
+        "topic": "Governance",
+        "approach": "Predictive",
+        "difficulty": "Easy",
+        "decisionRule": "route an exception to the authority defined by the governance framework.",
+        "text": "A project forecast exceeds the tolerance assigned to the project manager, and the governance plan names the portfolio board as the exception authority. What should the project manager do?",
+        "choices": [
+          "Ask the team to reduce quality criteria until the forecast appears acceptable",
+          "Use management reserve without disclosure to restore the forecast within tolerance",
+          "Prepare the exception evidence and request a decision from the portfolio board",
+          "Wait until the next phase closes because forecasts are not final results"
+        ],
+        "correct": 2,
+        "explanation": "The defined tolerance has been exceeded and the portfolio board holds exception authority, so it needs evidence for a decision. Undisclosed reserve use obscures governance, lowering quality is an unauthorized tradeoff, and waiting defeats the purpose of an early exception threshold.",
+        "chapterId": "pmbok-ch02-project-environment"
+      },
+      {
+        "tag": "Emotional intelligence",
+        "domain": "People",
+        "topic": "Emotional intelligence",
+        "approach": "Hybrid",
+        "difficulty": "Hard",
+        "decisionRule": "read behavioral changes as data and inquire privately without diagnosing the person.",
+        "text": "A previously outspoken clinical lead becomes silent after a contentious governance meeting, approves every decision quickly, and stops raising patient-safety tradeoffs. No complaint has been made. What should the project manager do?",
+        "choices": [
+          "Ask the lead in writing to document patient-safety objections before the next gate",
+          "Meet privately, describe the observed change, and invite the lead's perspective and concerns",
+          "Ask the governance chair whether recent meeting dynamics explain the reduced participation",
+          "Add an independent safety reviewer to upcoming approvals while monitoring participation"
+        ],
+        "correct": 1,
+        "explanation": "A private, observation-based inquiry demonstrates empathy and may uncover safety or relationship concerns without making an unsupported attribution. A written request asks for output without exploring the change, asking the chair investigates through a third party first, and adding a reviewer protects coverage but bypasses the lead whose withdrawal needs to be understood.",
+        "chapterId": "pmbok-ch03-project-manager-role"
+      },
+      {
+        "tag": "Cost",
+        "domain": "Process",
+        "topic": "Cost",
+        "approach": "Hybrid",
+        "difficulty": "Medium",
+        "decisionRule": "match a known cost need to the approved reserve purpose and authority.",
+        "text": "A known integration risk occurs and its planned contingency is insufficient. The sponsor tells the project manager to use management reserve immediately, but governance approval is required for that reserve. What should the project manager do?",
+        "choices": [
+          "Charge the excess directly to the cost baseline because the risk was already identified",
+          "Update the forecast and seek the required approval for additional reserve or corrective action",
+          "Move unused contingency from unrelated risks without consulting their owners",
+          "Defer recording the excess until the next baseline review can absorb it"
+        ],
+        "correct": 1,
+        "explanation": "The risk is known, its planned funding is short, and management reserve has explicit authority, so the forecast and governance decision must be updated. Direct charging bypasses control, silently borrowing weakens other responses, and delayed recording makes the outlook inaccurate.",
+        "chapterId": "pmbok-ch07-cost-management"
+      },
+      {
+        "tag": "Governance",
+        "domain": "Business Environment",
+        "topic": "Governance",
+        "approach": "Agile",
+        "difficulty": "Medium",
+        "decisionRule": "combine team autonomy with transparent boundaries and escalation conditions.",
+        "text": "An empowered product team can release low-risk improvements without a committee, but no one agrees when customer-impacting changes require executive review. What should the project leader establish?",
+        "choices": [
+          "Executive approval for every backlog refinement decision",
+          "Explicit decision boundaries, risk thresholds, and escalation paths for releases",
+          "A rotating team vote to decide whether executive involvement is necessary",
+          "A release freeze until executives can attend every product demonstration"
+        ],
+        "correct": 1,
+        "explanation": "Clear boundaries and thresholds preserve delegated autonomy while ensuring material exposure reaches the proper authority. Approval of every refinement decision removes useful delegation, a team vote cannot define executive accountability, and a general freeze is disproportionate to resolving governance criteria.",
+        "chapterId": "pmbok-ch02-project-environment"
+      },
+      {
+        "tag": "Emotional intelligence",
+        "domain": "People",
+        "topic": "Emotional intelligence",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "decisionRule": "recognize personal triggers before choosing a proportionate response.",
+        "text": "A sponsor questions the project manager's forecast in front of the steering committee. The forecast is supported, but the project manager feels an urge to challenge the sponsor's own missed decisions. What should the project manager do?",
+        "choices": [
+          "Challenge the sponsor immediately so the committee sees that accountability is mutual",
+          "Withdraw the forecast until the sponsor provides a private apology",
+          "Pause, explain the forecast assumptions calmly, and arrange follow-up on decision delays separately",
+          "Ask the team to answer all further forecast questions to avoid personal conflict"
+        ],
+        "correct": 2,
+        "explanation": "Self-awareness and regulation allow the project manager to defend the evidence without retaliating, while preserving a later conversation about sponsor actions. Public counterattack shifts focus, withdrawing sound data is coercive, and transferring all questions to the team avoids rather than manages the leadership relationship.",
+        "chapterId": "pmbok-ch03-project-manager-role"
+      },
+      {
+        "tag": "Cost",
+        "domain": "Process",
+        "topic": "Cost",
+        "approach": "Predictive",
+        "difficulty": "Hard",
+        "decisionRule": "distinguish genuine efficiency from favorable variance caused by deferred expensive work.",
+        "text": "A project shows a strong favorable cost variance at midyear, but several high-cost commissioning activities planned for this period were moved later without an approved rebaseline. The sponsor wants to release the apparent savings. What should the project manager do first?",
+        "choices": [
+          "Release the favorable variance because actual cost is below the time-phased baseline",
+          "Rebaseline the deferred activities so current cost performance remains favorable",
+          "Reforecast remaining work by time period and isolate timing variance from true cost efficiency",
+          "Hold the full favorable variance as management reserve without changing the forecast"
+        ],
+        "correct": 2,
+        "explanation": "Deferred expensive work can create apparent savings without reducing total cost, so a time-phased estimate to complete must separate timing from efficiency. Releasing funds is premature, rebaselining to preserve performance distorts control, and relabeling variance as reserve avoids rather than answers the forecast question.",
+        "chapterId": "pmbok-ch07-cost-management"
+      },
+      {
+        "tag": "Governance",
+        "domain": "Business Environment",
+        "topic": "Governance",
+        "approach": "Hybrid",
+        "difficulty": "Hard",
+        "decisionRule": "complete designated gate evidence or expose its absence to the named exception authority.",
+        "text": "A sponsor wants the project manager to request an investment-gate waiver because a strategic launch date is near. The required resilience test is incomplete, although supplier simulations and the delivery team's internal review are favorable. The governance plan names the investment board as exception authority. What should the project manager do first?",
+        "choices": [
+          "Complete the required test, or expose its absence and residual risk to the investment board for an exception decision",
+          "Defer the gate decision to its next scheduled cycle even if the missing evidence becomes available sooner",
+          "Request the waiver now because multiple technical sources indicate acceptable performance",
+          "Ask the supplier to certify the product and treat that certification as the gate decision"
+        ],
+        "correct": 0,
+        "explanation": "The gate names a required resilience test, and no equivalent evidence path is stated. The project manager should complete that test; if gate timing prevents completion, the missing evidence and residual risk must be explicit to the investment board as exception authority. Immediate waiver relies on incomplete substitutes, fixed-cycle deferral ignores possible earlier completion, and supplier certification replaces neither the required test nor the board's decision.",
+        "chapterId": "pmbok-ch11-risk-management"
+      },
+      {
+        "tag": "Emotional intelligence",
+        "domain": "People",
+        "topic": "Emotional intelligence",
+        "approach": "Agile",
+        "difficulty": "Hard",
+        "decisionRule": "combine empathy with accountability when distress affects team commitments.",
+        "text": "A developer who recently experienced a family emergency misses stand-ups and leaves paired work unfinished. Teammates are sympathetic but are quietly absorbing the work and becoming frustrated. How should the team leader respond?",
+        "choices": [
+          "Quietly reduce the developer's allocation and ask the pairing partner to cover unfinished work",
+          "Ask human resources about leave options before discussing capacity with the developer",
+          "Reassign the paired work for this sprint and revisit support when the emergency stabilizes",
+          "Speak privately about capacity and support, then transparently rebalance commitments with the team"
+        ],
+        "correct": 3,
+        "explanation": "A private capacity conversation respects the person's circumstances while allowing commitments and workload to be adjusted openly. Quiet allocation changes conceal impacts from both parties, consulting human resources first assumes a remedy before hearing the developer, and unilateral sprint reassignment handles work temporarily without establishing support or a transparent team commitment.",
+        "chapterId": "pmbok-ch03-project-manager-role"
+      },
+      {
+        "tag": "Cost",
+        "domain": "Process",
+        "topic": "Cost",
+        "approach": "Agile",
+        "difficulty": "Medium",
+        "decisionRule": "evaluate incremental value and whole-life cost before ordering a costly feature.",
+        "text": "The product owner proposes moving a computationally expensive recommendation feature ahead of simpler retention improvements. Both are optional, and operating cost would persist after release. What should the team do?",
+        "choices": [
+          "Prioritize the recommendation feature because it has greater technical complexity",
+          "Divide its estimate among future iterations so no single iteration exceeds budget",
+          "Treat operating cost as an operations concern outside product prioritization",
+          "Compare expected value, delivery and operating cost, risk, and opportunity cost before ordering"
+        ],
+        "correct": 3,
+        "explanation": "The ordering decision involves optional alternatives and persistent operating cost, so expected value and whole-life economics should be compared. Complexity does not imply value, splitting estimates does not reduce cost, and excluding operations hides a material consequence of the product choice.",
+        "chapterId": "pmbok-ch07-cost-management"
+      },
+      {
+        "tag": "Governance",
+        "domain": "Business Environment",
+        "topic": "Governance",
+        "approach": "Hybrid",
+        "difficulty": "Medium",
+        "decisionRule": "maintain one traceable decision record across multiple delivery cadences.",
+        "text": "A program has quarterly funding gates and two-week product reviews. Decisions from product reviews are recorded in chat, while gate decisions are stored in a portfolio system, causing conflicting instructions. What should the program manager implement?",
+        "choices": [
+          "A rule that only quarterly decisions can influence product work",
+          "Separate decision logs because the two forums serve different audiences",
+          "A weekly meeting that repeats every decision to all program employees",
+          "An integrated, traceable decision record with authority and affected artifacts identified"
+        ],
+        "correct": 3,
+        "explanation": "Different forums can retain their purposes while decisions share traceable authority, rationale, and impact information. Ignoring product-review decisions undermines adaptation, separate logs preserve conflict, and repeating decisions verbally adds overhead without establishing a reliable source of record.",
+        "chapterId": "pmbok-ch02-project-environment"
+      },
+      {
+        "tag": "Emotional intelligence",
+        "domain": "People",
+        "topic": "Emotional intelligence",
+        "approach": "Hybrid",
+        "difficulty": "Easy",
+        "decisionRule": "adapt communication to the listener's emotional state without concealing facts.",
+        "text": "A department manager learns that automation will change several employees' duties and begins asking rapid, repetitive questions during a readiness workshop. What should the project manager do?",
+        "choices": [
+          "Acknowledge the concern, slow the discussion, and clarify impacts and available transition support",
+          "Continue the prepared slides because changing pace would reward disruptive behavior",
+          "Assure the manager that no employee will be affected, even though role design is incomplete",
+          "Ask security to remove the manager so the remaining attendees can finish the workshop"
+        ],
+        "correct": 0,
+        "explanation": "Recognizing anxiety and adapting the conversation helps the manager process accurate information and engage constructively. Rigidly continuing ignores the audience, unsupported reassurance damages trust, and removal escalates a concerned stakeholder's behavior without first attempting a respectful response.",
+        "chapterId": "pmbok-ch03-project-manager-role"
+      },
+      {
+        "tag": "Cost",
+        "domain": "Process",
+        "topic": "Cost",
+        "approach": "Hybrid",
+        "difficulty": "Easy",
+        "decisionRule": "incorporate an approved scope change into authorized cost baselines and forecasts.",
+        "text": "A scope change adding a data archive has been approved with additional funding. What should the project manager do next regarding cost information?",
+        "choices": [
+          "Update the authorized cost baseline, funding needs, and forecast for the approved work",
+          "Track the archive outside project cost reports because it was not in the original baseline",
+          "Wait until archive invoices arrive before reflecting the additional funding",
+          "Add the funding only to management reserve so baseline performance remains comparable"
+        ],
+        "correct": 0,
+        "explanation": "Approval includes scope and funding, so controlled cost records and forecasts should now reflect the archive. Off-book tracking and delayed recognition make reports incomplete, while management reserve is not a substitute for authorized baseline budget for defined work.",
+        "chapterId": "pmbok-ch07-cost-management"
+      },
+      {
+        "tag": "Governance",
+        "domain": "Business Environment",
+        "topic": "Governance",
+        "approach": "Predictive",
+        "difficulty": "Easy",
+        "decisionRule": "use the approved escalation route when a decision exceeds delegated authority.",
+        "text": "A project manager can approve vendor substitutions up to a stated financial and operational impact. A proposed substitute exceeds both thresholds. What should the project manager do?",
+        "choices": [
+          "Submit the assessed substitution to the named authority for a decision",
+          "Divide the substitution into smaller approvals that remain below each threshold",
+          "Approve it because the project manager remains accountable for delivery",
+          "Ask the vendor to choose and record the result as a technical clarification"
+        ],
+        "correct": 0,
+        "explanation": "Both delegated thresholds are exceeded, so the designated authority must decide using assessed impacts. Splitting the approval evades governance, delivery accountability does not expand authorization, and relabeling a material substitution as clarification transfers a decision the vendor does not own.",
+        "chapterId": "pmbok-ch02-project-environment"
+      },
+      {
+        "tag": "Emotional intelligence",
+        "domain": "People",
+        "topic": "Emotional intelligence",
+        "approach": "Predictive",
+        "difficulty": "Hard",
+        "decisionRule": "test an attribution against evidence before letting it drive a people decision.",
+        "text": "A project manager believes a quiet engineer is resisting the project because the engineer rarely speaks in executive meetings. Written risk analyses from the engineer are detailed and timely. What should the project manager do?",
+        "choices": [
+          "Add verbal participation as a development objective for the next performance checkpoint",
+          "Check the assumption with the engineer and agree on effective ways to contribute in the meeting context",
+          "Invite the engineer to present the next risk summary with coaching support",
+          "Route the written analyses through an experienced executive communicator"
+        ],
+        "correct": 1,
+        "explanation": "The written work contradicts the assumption of resistance, so the project manager should examine personal attribution and discuss contribution preferences and meeting needs. A verbal-development objective assumes a deficiency, a coached presentation selects a remedy before understanding the engineer's view, and routing analysis through another communicator sidelines useful expertise rather than agreeing an effective contribution method.",
+        "chapterId": "pmbok-ch03-project-manager-role"
+      },
+      {
+        "tag": "Quality",
+        "domain": "Process",
+        "topic": "Quality",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "decisionRule": "investigate a nonrandom process signal even when individual results remain within limits.",
+        "text": "Seven consecutive measurements on a control chart rise toward the upper control limit, although none exceeds it and all inspected units currently meet specification. What should the project manager do?",
+        "choices": [
+          "Accept the trend because every unit remains within specification limits",
+          "Investigate the nonrandom pattern and process conditions before defects occur",
+          "Widen the control limits to reflect the recent measurements",
+          "Reject all seven units because an upward trend proves they are defective"
+        ],
+        "correct": 1,
+        "explanation": "A sustained run can signal process instability before an individual point crosses a limit, so the team should investigate conditions. Specification compliance does not erase the signal, limits should not be widened to hide it, and the pattern alone does not make conforming units defective.",
+        "chapterId": "pmbok-ch08-quality-management"
+      },
+      {
+        "tag": "Governance",
+        "domain": "Business Environment",
+        "topic": "Governance",
+        "approach": "Agile",
+        "difficulty": "Medium",
+        "decisionRule": "inspect governance effectiveness and adapt controls without removing accountability.",
+        "text": "A product governance forum requires a lengthy document for every experiment, delaying low-cost learning, although major release decisions receive useful scrutiny. What should the product leader propose?",
+        "choices": [
+          "Remove the forum because agile teams are accountable for all product decisions",
+          "Use the same document but complete it only after each experiment ends",
+          "Tailor evidence and review levels by risk while retaining explicit decision ownership",
+          "Classify all experiments as operational work outside product governance"
+        ],
+        "correct": 2,
+        "explanation": "Risk-based tailoring can protect accountable oversight while reducing disproportionate delay for small experiments. Removing governance confuses agility with unrestricted authority, retrospective paperwork weakens timely decisions, and relabeling work avoids rather than improves the established governance system.",
+        "chapterId": "pmbok-ch02-project-environment"
+      },
+      {
+        "tag": "Emotional intelligence",
+        "domain": "People",
+        "topic": "Emotional intelligence",
+        "approach": "Agile",
+        "difficulty": "Easy",
+        "decisionRule": "notice exclusion signals and create room for the affected person to participate.",
+        "text": "During an energetic design workshop, three senior members talk over a junior data analyst who has twice tried to mention a privacy constraint. What should the facilitator do?",
+        "choices": [
+          "Let the discussion continue because senior members are accountable for the design",
+          "Ask the analyst to email the concern after the workshop to preserve momentum",
+          "Pause the discussion and invite the analyst to explain the privacy constraint",
+          "End the workshop and report all three senior members for formal discipline"
+        ],
+        "correct": 2,
+        "explanation": "The facilitator should respond to the visible exclusion and bring potentially critical information into the decision now. Continuing privileges hierarchy, deferring to email separates the analyst from the live reasoning, and formal discipline is disproportionate before a direct facilitation intervention.",
+        "chapterId": "pmbok-ch03-project-manager-role"
+      },
+      {
+        "tag": "Quality",
+        "domain": "Process",
+        "topic": "Quality",
+        "approach": "Agile",
+        "difficulty": "Hard",
+        "decisionRule": "use escaped-defect evidence to improve the delivery system, not merely add a final inspection step.",
+        "text": "A team consistently meets its definition of done, yet production defects have increased after three releases. Reviews show that most defects arise from interactions between services owned by different teams. What should the project leader do first?",
+        "choices": [
+          "Add a separate hardening iteration after every three delivery iterations",
+          "Raise unit-test coverage targets for the team with the most escaped defects",
+          "Analyze cross-service causes with the teams and adapt integration tests and completion policies",
+          "Extend the current definition of done by adding a manager approval to each story"
+        ],
+        "correct": 2,
+        "explanation": "The evidence locates defects at cross-service interactions, so joint root-cause analysis should improve integration practices and system-level completion policies. A hardening iteration delays feedback, unit coverage may miss interfaces, and manager approval adds a gate without supplying the missing technical evidence.",
+        "chapterId": "pmbok-ch08-quality-management"
+      },
+      {
+        "tag": "Governance",
+        "domain": "Business Environment",
+        "topic": "Governance",
+        "approach": "Hybrid",
+        "difficulty": "Hard",
+        "decisionRule": "resolve overlapping authority before acting on a material strategic tradeoff.",
+        "text": "A product council authorizes a feature sequence that depends on infrastructure spending, but the investment board has deferred that spending. Both bodies are acting within their charters, and the next iteration starts tomorrow. What should the program manager do first?",
+        "choices": [
+          "Follow the product council because its decision is more recent and directly concerns features",
+          "Escalate the dependency with impacts to the defined coordinating authority and obtain a reconciled decision",
+          "Start the sequence using temporary infrastructure and seek funding after demonstrating progress",
+          "Ask delivery leads to choose a temporary sequence that keeps both chartered decisions technically open"
+        ],
+        "correct": 1,
+        "explanation": "The issue is a legitimate cross-governance dependency, not misconduct by either body, so a coordinating authority must reconcile the decisions with impact evidence. Recency does not establish precedence, temporary infrastructure commits resources before funding authorization, and a delivery workaround still acts before chartered authority is reconciled.",
+        "chapterId": "pmbok-ch02-project-environment"
+      },
+      {
+        "tag": "Emotional intelligence",
+        "domain": "People",
+        "topic": "Emotional intelligence",
+        "approach": "Hybrid",
+        "difficulty": "Medium",
+        "decisionRule": "repair trust by naming impact and listening, not by defending intent.",
+        "text": "A project manager jokes about an operations team's slow approvals during a joint demo. Operations representatives become reserved and stop offering implementation advice. What should the project manager do next?",
+        "choices": [
+          "Explain that the comment was humorous and ask everyone to be less sensitive",
+          "Ignore the reaction because operations still attends required meetings",
+          "Ask the sponsor to reassure operations that the project manager meant no harm",
+          "Acknowledge the comment's impact, apologize directly, and invite operations' concerns"
+        ],
+        "correct": 3,
+        "explanation": "A direct acknowledgment and genuine listening address the relationship damage regardless of the project manager's intent. Defending the joke dismisses impact, mere attendance does not indicate engagement, and using the sponsor as an intermediary avoids personal accountability for repairing trust.",
+        "chapterId": "pmbok-ch03-project-manager-role"
+      },
+      {
+        "tag": "Quality",
+        "domain": "Process",
+        "topic": "Quality",
+        "approach": "Hybrid",
+        "difficulty": "Medium",
+        "decisionRule": "complete mandatory quality evidence before presenting regulated work for gate acceptance.",
+        "text": "Automated tests pass for a medical-device increment, but required traceability records for two safety requirements are incomplete. The next governance gate is this afternoon. What should the project manager do?",
+        "choices": [
+          "Present the passing tests and complete traceability records after gate approval",
+          "Ask governance to accept verbal confirmation from the responsible developers",
+          "Remove the two requirements from the increment without updating its scope",
+          "Complete or formally disposition the missing evidence before requesting gate acceptance"
+        ],
+        "correct": 3,
+        "explanation": "Passing automated tests do not replace mandatory traceability evidence, so the gap must be completed or transparently dispositioned before the gate decision. Post-approval completion and verbal assurance weaken evidence, while silent scope removal creates an uncontrolled deviation.",
+        "chapterId": "pmbok-ch08-quality-management"
+      },
+      {
+        "tag": "Sustainability and social impact",
+        "domain": "Business Environment",
+        "topic": "Sustainability and social impact",
+        "approach": "Hybrid",
+        "difficulty": "Medium",
+        "decisionRule": "translate approved sustainability outcomes into delivery criteria and accountable measures.",
+        "text": "A mixed-use development business case includes a target for reducing construction waste, but work packages mention only cost and schedule. What should the project manager do next?",
+        "choices": [
+          "Report waste only after construction so delivery teams retain flexibility",
+          "Ask each contractor to define an independent waste target after award",
+          "Treat the target as corporate reporting outside project acceptance",
+          "Integrate the target, measurement method, ownership, and relevant acceptance evidence into delivery plans"
+        ],
+        "correct": 3,
+        "explanation": "The approved project outcome needs operational criteria, ownership, and evidence to influence delivery. End-of-project reporting is too late to guide choices, independent targets may not satisfy the business case, and corporate reporting responsibility does not remove the project's role in producing measurable results.",
+        "chapterId": "pmbok-ch02-project-environment"
+      },
+      {
+        "tag": "Stakeholder engagement",
+        "domain": "People",
+        "topic": "Stakeholder engagement",
+        "approach": "Predictive",
+        "difficulty": "Easy",
+        "decisionRule": "identify influence, interest, and expectations before choosing engagement actions.",
+        "text": "A new environmental agency is created midway through a coastal engineering project and may influence upcoming permits. The agency is not in the stakeholder register. What should the project manager do first?",
+        "choices": [
+          "Analyze the agency's authority and expectations, then update stakeholder information and engagement plans",
+          "Wait until the agency contacts the project because its exact interest is still unknown",
+          "Send the full technical archive without first identifying what information the agency needs",
+          "Ask the sponsor to exclude the agency because project planning is already complete"
+        ],
+        "correct": 0,
+        "explanation": "A newly relevant stakeholder should be identified and analyzed before tailored engagement begins. Waiting risks permit surprises, sending an undifferentiated archive is not purposeful engagement, and a sponsor cannot simply remove a legally influential agency from the stakeholder environment.",
+        "chapterId": "pmbok-ch13-stakeholder-management"
+      },
+      {
+        "tag": "Quality",
+        "domain": "Process",
+        "topic": "Quality",
+        "approach": "Predictive",
+        "difficulty": "Easy",
+        "decisionRule": "remove a recurring defect's cause rather than repeatedly repairing its symptom.",
+        "text": "Final inspection finds the same wiring defect for the fourth week, and every affected unit has been reworked successfully. What should the project manager do next?",
+        "choices": [
+          "Perform root-cause analysis and implement a preventive process improvement",
+          "Continue rework because inspection is successfully protecting the customer",
+          "Increase the acceptable defect threshold to match observed production performance",
+          "Replace the inspectors because they are reporting too many repeated defects"
+        ],
+        "correct": 0,
+        "explanation": "Repeated successful rework shows containment but not prevention, so root-cause analysis should change the producing process. Continuing repair accepts waste, loosening the threshold hides poor quality, and replacing inspectors attacks detection rather than the recurring wiring cause.",
+        "chapterId": "pmbok-ch08-quality-management"
+      },
+      {
+        "tag": "Sustainability and social impact",
+        "domain": "Business Environment",
+        "topic": "Sustainability and social impact",
+        "approach": "Predictive",
+        "difficulty": "Easy",
+        "decisionRule": "include identified community effects in project impact and stakeholder planning.",
+        "text": "A logistics project will reroute nighttime trucks past a residential area, and the approved impact assessment identifies noise as a material community concern. What should the project manager do?",
+        "choices": [
+          "Plan mitigation, engagement, ownership, and monitoring for the identified noise impact",
+          "Wait for residents to submit complaints after the new route begins operating",
+          "Exclude the concern because route efficiency is the primary project benefit",
+          "Ask drivers to choose quieter streets individually during each shift"
+        ],
+        "correct": 0,
+        "explanation": "The approved assessment already identifies a material impact, so mitigation and monitoring should be integrated with accountable engagement. Waiting makes response reactive, efficiency does not erase social effects, and individual driver discretion creates inconsistent routing without managing the community concern.",
+        "chapterId": "pmbok-ch02-project-environment"
+      },
+      {
+        "tag": "Stakeholder engagement",
+        "domain": "People",
+        "topic": "Stakeholder engagement",
+        "approach": "Agile",
+        "difficulty": "Medium",
+        "decisionRule": "remove practical barriers to frequent feedback from the real decision maker.",
+        "text": "A retail product owner delegates each sprint review to an analyst who can explain results but cannot change priorities, release timing, or stakeholder tradeoffs. Feedback waits several days for decisions, causing rework. What should the scrum master do?",
+        "choices": [
+          "Ask the analyst to record feedback and defer product decisions to backlog refinement",
+          "Work with the product owner to adjust review timing and clarify delegable product decisions",
+          "Collect prioritized stakeholder feedback before the review for the analyst to apply",
+          "Use the definition of done to decide which review feedback enters the next sprint"
+        ],
+        "correct": 1,
+        "explanation": "A sprint review is collaborative inspection and adaptation, not a product-owner acceptance gate, but timely product decisions still require accountable authority. Recording feedback until refinement preserves delay, a prepared priority list cannot cover emerging tradeoffs, and the definition of done establishes increment quality rather than product priority, release timing, or stakeholder choices.",
+        "chapterId": "pmbok-ch13-stakeholder-management"
+      },
+      {
+        "tag": "Quality",
+        "domain": "Process",
+        "topic": "Quality",
+        "approach": "Agile",
+        "difficulty": "Medium",
+        "decisionRule": "compare disputed output with shared quality criteria before assigning rework.",
+        "text": "At a review, a stakeholder says the new search results are unacceptable even though the item passes its documented relevance threshold. The stakeholder cites a user segment not discussed during refinement. What should the product leader do first?",
+        "choices": [
+          "Direct immediate rework because stakeholder feedback always supersedes acceptance criteria",
+          "Examine the criterion and new segment evidence with the stakeholder, then update the backlog",
+          "Reject the feedback because passing criteria makes the released behavior final",
+          "Increase the relevance threshold without testing effects on other user segments"
+        ],
+        "correct": 1,
+        "explanation": "The output meets the shared threshold, but the newly identified segment may reveal a real quality need, so evidence and criteria should be examined before rework. Automatic rework bypasses prioritization, rejection discards learning, and a unilateral threshold change may harm other users.",
+        "chapterId": "pmbok-ch08-quality-management"
+      },
+      {
+        "tag": "Sustainability and social impact",
+        "domain": "Business Environment",
+        "topic": "Sustainability and social impact",
+        "approach": "Agile",
+        "difficulty": "Medium",
+        "decisionRule": "test accessibility outcomes with affected users throughout iterative development.",
+        "text": "A public information service meets its technical accessibility checklist, but early users with low vision struggle to complete the highest-value journey. What should the product team do next?",
+        "choices": [
+          "Close the issue because the technical checklist has been completed",
+          "Engage representative users, revise outcome criteria, and test improvements in upcoming increments",
+          "Replace user testing with a larger automated scan of every page",
+          "Post instructions explaining that some journeys remain difficult on small screens"
+        ],
+        "correct": 1,
+        "explanation": "The real-user evidence shows that technical conformance alone has not produced the intended inclusive outcome, so criteria and increments should adapt. Closing ignores evidence, more automation may miss usability barriers, and instructions transfer the burden to affected users instead of improving access.",
+        "chapterId": "pmbok-ch02-project-environment"
+      },
+      {
+        "tag": "Stakeholder engagement",
+        "domain": "People",
+        "topic": "Stakeholder engagement",
+        "approach": "Hybrid",
+        "difficulty": "Hard",
+        "decisionRule": "engage legitimate local voices early enough to shape both delivery and relationship outcomes.",
+        "text": "A renewable-energy program has national approval, but an Indigenous council says route planning ignored seasonal access to culturally significant land. Survey work is scheduled to begin next week. What should the program manager do first?",
+        "choices": [
+          "Proceed with surveys outside mapped cultural areas while legal confirms consultation status",
+          "Ask public affairs to brief the council on approved mitigation and record objections",
+          "Pause affected survey activity and engage council representatives on impacts, protocols, and alternatives",
+          "Have the field vendor draft an alternate access route for council review before surveying"
+        ],
+        "correct": 2,
+        "explanation": "The council has raised a material impact and consultation gap, so affected work should pause while authorized representatives shape a respectful path forward. Proceeding outside mapped areas assumes the disputed boundary is reliable, a mitigation briefing invites reaction rather than participation, and a vendor route proposal selects a technical response before agreeing impacts and cultural protocols.",
+        "chapterId": "pmbok-ch13-stakeholder-management"
+      },
+      {
+        "tag": "Quality",
+        "domain": "Process",
+        "topic": "Quality",
+        "approach": "Hybrid",
+        "difficulty": "Hard",
+        "decisionRule": "use interface evidence to locate shared quality responsibility before invoking remedies.",
+        "text": "A supplier component passes every contractual incoming test, but fails when connected to an iteratively developed controller. Both parties claim the other's design caused the incompatibility. What should the project manager do first?",
+        "choices": [
+          "Reject the component and issue a supplier nonconformance under the warranty clause",
+          "Have the software team build an adapter because changing code is faster than replacement",
+          "Run a joint interface and requirement analysis, preserve evidence, and identify the actual gap",
+          "Escalate liability to legal counsel before allowing the technical teams to exchange designs"
+        ],
+        "correct": 2,
+        "explanation": "Incoming conformance and integration failure point to an unresolved interface, so joint evidence must establish whether requirements, hardware, software, or tests contain the gap. Immediate rejection assumes supplier fault, an adapter selects remediation before causation, and legal escalation before technical analysis impedes fact finding.",
+        "chapterId": "pmbok-ch08-quality-management"
+      },
+      {
+        "tag": "Sustainability and social impact",
+        "domain": "Business Environment",
+        "topic": "Sustainability and social impact",
+        "approach": "Hybrid",
+        "difficulty": "Hard",
+        "decisionRule": "compare whole-life evidence before accepting a sustainability tradeoff.",
+        "text": "A supplier proposes lower-cost equipment with less embodied carbon, but preliminary data show higher operating energy over its expected life. The project has approved cost and carbon objectives, and neither option has complete lifecycle data. What should the project manager do first?",
+        "choices": [
+          "Select the lower embodied-carbon option because manufacturing impact occurs first",
+          "Retain the original equipment and record the alternative for a post-project lifecycle review",
+          "Obtain comparable lifecycle evidence and present the cost-carbon tradeoff to the authorized decision makers",
+          "Update total cost from current energy estimates and ask the sponsor to choose without further carbon analysis"
+        ],
+        "correct": 2,
+        "explanation": "The decision affects two approved objectives and current evidence is incomplete across the equipment lifecycle, so comparable analysis should precede authorization. Focusing only on embodied carbon ignores operations, deferring the alternative loses a current value opportunity, and a cost-only sponsor decision omits evidence needed for the approved carbon objective.",
+        "chapterId": "pmbok-ch11-risk-management"
+      },
+      {
+        "tag": "Stakeholder engagement",
+        "domain": "People",
+        "topic": "Stakeholder engagement",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "decisionRule": "tailor engagement when observed stakeholder behavior differs from the desired state.",
+        "text": "A finance director categorized as supportive has skipped three design approvals and now questions assumptions already documented in workshops. The delay is affecting the baseline. What should the project manager do?",
+        "choices": [
+          "Reclassify the director as resistant and increase the frequency of written decision reminders",
+          "Ask the deputy finance controller to issue provisional approvals within delegated limits",
+          "Escalate the missed approvals and schedule impact with the prior workshop record",
+          "Meet with the director to understand the change, then update engagement actions and approval arrangements"
+        ],
+        "correct": 3,
+        "explanation": "Engagement assessment must reflect actual behavior, and direct inquiry may reveal workload, unresolved concerns, or an ineffective approval format. Reclassification and reminders interpret the behavior before understanding it, provisional delegation addresses timing but not reopened assumptions, and escalation is premature before a direct conversation tests the cause and workable approval arrangement.",
+        "chapterId": "pmbok-ch13-stakeholder-management"
+      },
+      {
+        "tag": "Quality",
+        "domain": "Process",
+        "topic": "Quality",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "decisionRule": "shift effort toward prevention when late inspection reveals avoidable quality cost.",
+        "text": "Inspection reliably catches dimensional defects, but correction after assembly is consuming most of the quality budget. Process data shows the defects begin during an earlier setup step. What should the project manager recommend?",
+        "choices": [
+          "Increase final inspection sampling so no dimensional defect escapes",
+          "Move the correction budget into additional warranty reserve",
+          "Accept the rework because the current inspection protects external quality",
+          "Improve setup controls and prevention while monitoring whether appraisal and failure costs fall"
+        ],
+        "correct": 3,
+        "explanation": "The known origin is an early setup step and late correction is expensive, so prevention there should reduce total quality cost. More final inspection improves detection only, warranty reserve does not improve production, and accepting rework institutionalizes avoidable internal failure cost.",
+        "chapterId": "pmbok-ch08-quality-management"
+      },
+      {
+        "tag": "Sustainability and social impact",
+        "domain": "Business Environment",
+        "topic": "Sustainability and social impact",
+        "approach": "Hybrid",
+        "difficulty": "Medium",
+        "decisionRule": "make social-impact commitments traceable through procurement and transition.",
+        "text": "A workforce program promises local apprenticeships in its approved funding case, but the draft supplier statement of work contains no reporting or placement expectations. What should the project manager do?",
+        "choices": [
+          "Count supplier employees who already live locally as completed apprenticeships",
+          "Leave the promise with corporate affairs because procurement focuses on deliverables",
+          "Ask bidders to describe any community activity after contract award",
+          "Align procurement criteria, evidence, and ownership with the approved apprenticeship outcome"
+        ],
+        "correct": 3,
+        "explanation": "The approved social outcome depends on supplier delivery, so procurement must make expectations, evidence, and ownership explicit. Existing employees are not necessarily apprentices, corporate reporting cannot create placements, and post-award voluntary descriptions provide neither comparable selection evidence nor a binding delivery basis.",
+        "chapterId": "pmbok-ch12-procurement-management"
+      },
+      {
+        "tag": "Stakeholder engagement",
+        "domain": "People",
+        "topic": "Stakeholder engagement",
+        "approach": "Agile",
+        "difficulty": "Hard",
+        "decisionRule": "convert conflicting stakeholder preferences into transparent product choices and feedback loops.",
+        "text": "For an education platform, teachers prioritize accessibility, district buyers prioritize reporting, and students prioritize mobile speed. Each group claims to represent the customer, and backlog decisions are stalling. What should the product leader do?",
+        "choices": [
+          "Facilitate shared outcome criteria, clarify product decision authority, and test assumptions with each group",
+          "Allocate initial capacity evenly among the groups and compare adoption after release",
+          "Ask the product owner to rank requests using the current revenue model",
+          "Prioritize district reporting first and schedule teacher and student discovery afterward"
+        ],
+        "correct": 0,
+        "explanation": "Shared outcomes, explicit authority, and direct validation make competing needs visible and support coherent product decisions. Equal capacity postpones the value judgment until after release, the revenue model narrows evidence to the purchaser, and reporting-first sequencing delays accessibility and user-performance learning that may change the product direction.",
+        "chapterId": "pmbok-ch13-stakeholder-management"
+      },
+      {
+        "tag": "Quality",
+        "domain": "Process",
+        "topic": "Quality",
+        "approach": "Agile",
+        "difficulty": "Easy",
+        "decisionRule": "preserve agreed completion quality while renegotiating scope or timing transparently.",
+        "text": "To meet a release date, developers propose skipping regression tests required by the team's definition of done for the final two stories. What should the product leader do?",
+        "choices": [
+          "Keep the quality policy and negotiate scope or release options instead of labeling untested work done",
+          "Approve the exception because the team can run regression tests immediately after release",
+          "Mark the stories done but exclude them from the release notes until testing finishes",
+          "Let each developer decide whether the untested change is low enough risk to release"
+        ],
+        "correct": 0,
+        "explanation": "The stories lack agreed regression evidence, so they should not be represented as done; scope or timing should be made transparent. Deferred testing transfers risk to users, hidden release status misleads stakeholders, and individual discretion replaces a shared quality policy.",
+        "chapterId": "pmbok-ch08-quality-management"
+      },
+      {
+        "tag": "Sustainability and social impact",
+        "domain": "Business Environment",
+        "topic": "Sustainability and social impact",
+        "approach": "Predictive",
+        "difficulty": "Easy",
+        "decisionRule": "plan resource stewardship against an approved project outcome.",
+        "text": "A renovation charter includes a target to reuse suitable interior materials, but the demolition plan does not identify who will assess or store recovered items. What should the project manager do?",
+        "choices": [
+          "Add assessment, handling, ownership, and measurement activities to the relevant plans",
+          "Assume the demolition contractor will reuse materials whenever convenient",
+          "Remove the target because reuse decisions belong only to facility operations",
+          "Measure purchased material cost and infer reuse after the project is complete"
+        ],
+        "correct": 0,
+        "explanation": "The approved reuse target needs planned work, accountable ownership, and direct measurement before demolition removes the opportunity. Contractor convenience is not a control, operational involvement does not eliminate project responsibilities, and purchase cost cannot reliably establish which materials were recovered and reused.",
+        "chapterId": "pmbok-ch09-resource-management"
+      },
+      {
+        "tag": "Stakeholder engagement",
+        "domain": "People",
+        "topic": "Stakeholder engagement",
+        "approach": "Hybrid",
+        "difficulty": "Easy",
+        "decisionRule": "involve operational stakeholders before a handover decision becomes irreversible.",
+        "text": "A logistics system is technically ready for deployment, but warehouse supervisors have not reviewed the new exception workflow they will operate. What should the project manager do next?",
+        "choices": [
+          "Deploy on schedule because technical acceptance proves operational readiness",
+          "Arrange a hands-on workflow review and capture supervisor feedback before deployment approval",
+          "Send supervisors the user manual after deployment so they learn from actual use",
+          "Ask the sponsor to accept operational risk without informing the supervisors"
+        ],
+        "correct": 1,
+        "explanation": "The supervisors' operational knowledge and adoption are needed before approving deployment, so a focused hands-on review is appropriate. Technical acceptance alone is insufficient, post-deployment manuals delay engagement, and sponsor risk acceptance without the affected operators' input hides a preventable readiness gap.",
+        "chapterId": "pmbok-ch13-stakeholder-management"
+      },
+      {
+        "tag": "Risk and uncertainty",
+        "domain": "Process",
+        "topic": "Risk and uncertainty",
+        "approach": "Hybrid",
+        "difficulty": "Medium",
+        "decisionRule": "record, assess, and assign newly discovered uncertainty before selecting a response.",
+        "text": "During an iteration review, a vendor reveals that a future platform update may break an interface used by both the agile product and a baselined reporting system. The update date is uncertain. What should the project manager do first?",
+        "choices": [
+          "Fund a replacement interface immediately from management reserve",
+          "Record and assess the threat with both workstreams, then assign an owner and response",
+          "Ask the agile team to absorb the uncertainty because its backlog is adaptable",
+          "Wait for the vendor's confirmed release date before adding the threat to project records"
+        ],
+        "correct": 1,
+        "explanation": "The vendor information creates a cross-workstream uncertain event, so it should be recorded, analyzed, owned, and prepared for response. Immediate replacement precedes exposure analysis, assigning it only to the agile team misses the reporting system, and waiting discards useful early warning.",
+        "chapterId": "pmbok-ch11-risk-management"
+      },
+      {
+        "tag": "Sustainability and social impact",
+        "domain": "Business Environment",
+        "topic": "Sustainability and social impact",
+        "approach": "Agile",
+        "difficulty": "Medium",
+        "decisionRule": "incorporate affected-community evidence into product adaptation and impact decisions.",
+        "text": "A city mobility pilot reduces average travel time, but disability advocates report that one routing change makes a key transfer less reliable for wheelchair users. What should the project leader do next?",
+        "choices": [
+          "Preserve the route because the average travel-time benefit is statistically positive",
+          "Review disaggregated evidence with affected users and authorities, then adapt the pilot and measures",
+          "End all mobility experiments because different user groups have competing needs",
+          "Ask advocates to propose a final route without operational feasibility analysis"
+        ],
+        "correct": 1,
+        "explanation": "Average improvement can conceal a material distributional impact, so affected-user evidence and accountable operational input should guide adaptation. Preserving the route ignores the identified consequence, ending all learning is disproportionate, and delegating the final design to one group omits feasibility and decision authority.",
+        "chapterId": "pmbok-ch13-stakeholder-management"
+      },
+      {
+        "tag": "Stakeholder engagement",
+        "domain": "People",
+        "topic": "Stakeholder engagement",
+        "approach": "Predictive",
+        "difficulty": "Hard",
+        "decisionRule": "preserve governance independence while engaging an influential sponsor constructively.",
+        "text": "An executive sponsor asks the project manager to exclude an internal auditor from early discussions because the auditor may slow a confidential acquisition-integration project. Audit review is mandatory before the next gate. What should the project manager do?",
+        "choices": [
+          "Delay auditor contact until gate preparation, then provide the complete evidence package",
+          "Engage the audit liaison under confidentiality terms and brief the sponsor after defining scope",
+          "Explain the governance need and agree with both parties on secure, timely auditor involvement",
+          "Ask legal counsel to define minimum disclosure before scheduling auditor participation"
+        ],
+        "correct": 2,
+        "explanation": "Mandatory independent review must be protected, while confidentiality can be handled through secure and proportionate engagement agreed with both key parties. Waiting until gate preparation creates late rework risk, defining audit scope before sponsor alignment preserves review but sequences transparency poorly, and a legal disclosure opinion may help later but defers the immediate engagement design unnecessarily.",
+        "chapterId": "pmbok-ch13-stakeholder-management"
+      },
+      {
+        "tag": "Risk and uncertainty",
+        "domain": "Process",
+        "topic": "Risk and uncertainty",
+        "approach": "Predictive",
+        "difficulty": "Hard",
+        "decisionRule": "distinguish forecast-based preparation from execution after a verified trigger under existing authority.",
+        "text": "A low-probability flood risk has an approved response to relocate stored equipment when an official river gauge crosses a defined threshold. Yesterday's forecast prompted the risk owner to stage trucks, and the latest official gauge reading has crossed the defined threshold; no damage has occurred. What should the project manager do?",
+        "choices": [
+          "Continue monitoring because preparation is complete and no physical damage has occurred",
+          "Ask the sponsor for fresh approval before the assigned owner begins the planned relocation",
+          "Record the verified trigger and have the assigned owner execute the pre-authorized relocation",
+          "Open a damage issue and replace the relocation response with recovery planning"
+        ],
+        "correct": 2,
+        "explanation": "The forecast justified staging trucks but did not authorize relocation; the official gauge crossing now satisfies the trigger, and the approved response supplies execution authority. Continued monitoring delays an active response, fresh sponsor approval duplicates existing authority, and opening a damage issue assumes an impact that has not occurred while abandoning prevention.",
+        "chapterId": "pmbok-ch11-risk-management"
+      },
+      {
+        "tag": "External environment and market change",
+        "domain": "Business Environment",
+        "topic": "External environment and market change",
+        "approach": "Hybrid",
+        "difficulty": "Hard",
+        "decisionRule": "reassess strategic and delivery assumptions when external evidence changes demand.",
+        "text": "A competitor launches a free service while a hybrid customer-platform project is halfway through delivery. New research shows the project's premium features still matter to a smaller regulated segment, but the original volume forecast is no longer credible. What should the project manager do first?",
+        "choices": [
+          "Accelerate the original roadmap before the competitor captures additional customers",
+          "Narrow the roadmap to the regulated segment based only on the current research sample",
+          "Continue approved delivery until actual post-launch sales disprove the original forecast",
+          "Update market and benefit assumptions with product and governance leaders before adapting investment and scope"
+        ],
+        "correct": 3,
+        "explanation": "The external event invalidates a central volume assumption while evidence identifies a possible narrower value proposition, so accountable leaders need an updated basis for adaptation. Acceleration compounds the old bet, narrowing immediately converts preliminary evidence into an unauthorized strategy, and waiting spends further investment against a forecast already shown unreliable.",
+        "chapterId": "pmbok-ch11-risk-management"
+      },
+      {
+        "tag": "Stakeholder engagement",
+        "domain": "People",
+        "topic": "Stakeholder engagement",
+        "approach": "Agile",
+        "difficulty": "Easy",
+        "decisionRule": "show stakeholders how their feedback changed the product to sustain participation.",
+        "text": "Call-center agents contributed many ideas during discovery but stopped attending demos because they never hear what happened to their suggestions. What should the project manager do?",
+        "choices": [
+          "Require attendance because agents were formally designated as key stakeholders",
+          "Replace agents with their manager so only one person needs progress information",
+          "Collect more suggestions through an anonymous survey before each demo",
+          "Close the feedback loop by showing decisions, rationale, and upcoming opportunities to test changes"
+        ],
+        "correct": 3,
+        "explanation": "Visible disposition of feedback demonstrates that participation matters even when every suggestion is not adopted. Compulsory attendance does not create engagement, replacing users weakens direct insight, and collecting still more input without explaining prior decisions repeats the reason agents disengaged.",
+        "chapterId": "pmbok-ch13-stakeholder-management"
+      },
+      {
+        "tag": "Risk and uncertainty",
+        "domain": "Process",
+        "topic": "Risk and uncertainty",
+        "approach": "Agile",
+        "difficulty": "Medium",
+        "decisionRule": "reduce technical uncertainty with a timeboxed experiment before making a large commitment.",
+        "text": "The team cannot tell whether an unfamiliar search technology can meet the required response time, and building the full feature would consume most of the next release. What should the product leader do?",
+        "choices": [
+          "Commit the complete feature and add schedule reserve for possible rework",
+          "Choose the technology preferred by the most experienced developer",
+          "Estimate the feature at the largest allowable backlog size and begin delivery",
+          "Run a timeboxed experiment with explicit performance evidence, then update the product decision"
+        ],
+        "correct": 3,
+        "explanation": "The uncertainty is technical feasibility and the full commitment is expensive, so a focused experiment should generate decision evidence quickly. Reserve accepts avoidable exposure, expert preference is not performance proof, and a larger estimate quantifies effort without reducing uncertainty.",
+        "chapterId": "pmbok-ch11-risk-management"
+      },
+      {
+        "tag": "External environment and market change",
+        "domain": "Business Environment",
+        "topic": "External environment and market change",
+        "approach": "Hybrid",
+        "difficulty": "Medium",
+        "decisionRule": "use external signals as triggers for integrated review rather than isolated schedule reactions.",
+        "text": "Port congestion is increasing lead-time variability for equipment needed by a factory upgrade, although current deliveries remain on schedule. What should the project manager do?",
+        "choices": [
+          "Ignore the signal until a confirmed shipment misses its contractual date",
+          "Order duplicate equipment immediately from every available supplier",
+          "Assess exposure, response options, and decision triggers with procurement and project stakeholders",
+          "Shorten installation testing to create more schedule reserve"
+        ],
+        "correct": 2,
+        "explanation": "The external trend is an emerging uncertainty that warrants integrated assessment before it becomes an issue. Waiting loses response time, indiscriminate duplicate orders commit cost without analysis, and shortening testing trades quality for schedule before the actual exposure and available options are understood.",
+        "chapterId": "pmbok-ch02-project-environment"
+      },
+      {
+        "tag": "Stakeholder engagement",
+        "domain": "People",
+        "topic": "Stakeholder engagement",
+        "approach": "Hybrid",
+        "difficulty": "Medium",
+        "decisionRule": "plan engagement around a stakeholder's real decision cadence and information needs.",
+        "text": "A university provost supports a campus transformation but reviews decisions only at quarterly councils, while delivery teams need guidance every two weeks. What should the project manager do?",
+        "choices": [
+          "Agree on delegated decision thresholds and concise interim briefings that fit the provost's governance cadence",
+          "Send daily technical status reports so the provost has enough detail to respond faster",
+          "Let teams make every strategic decision until the next quarterly council",
+          "Delay all work requiring guidance because formal councils are the only valid engagement channel"
+        ],
+        "correct": 0,
+        "explanation": "Delegated thresholds and tailored briefings connect delivery speed to the provost's legitimate governance rhythm. Daily technical detail is unlikely to solve access, unrestricted team decisions exceed authority, and delaying every decision sacrifices progress when a clear delegation model can provide control.",
+        "chapterId": "pmbok-ch13-stakeholder-management"
+      },
+      {
+        "tag": "Risk and uncertainty",
+        "domain": "Process",
+        "topic": "Risk and uncertainty",
+        "approach": "Hybrid",
+        "difficulty": "Easy",
+        "decisionRule": "analyze a secondary risk created by a planned response before implementation.",
+        "text": "A risk owner reports that the planned backup supplier would shorten outage exposure but could introduce a new data-residency concern. What should the project manager do?",
+        "choices": [
+          "Add and analyze the secondary risk before approving the supplier response",
+          "Ignore the concern because the original outage risk has the higher expected impact",
+          "Cancel the backup response and accept the original risk without further analysis",
+          "Record the data concern only if the backup supplier is eventually activated"
+        ],
+        "correct": 0,
+        "explanation": "The response itself may create a distinct data-residency exposure, so that secondary risk needs analysis before activation. Relative impact does not erase it, cancellation is premature, and delaying documentation until activation removes the chance to design a safer response.",
+        "chapterId": "pmbok-ch11-risk-management"
+      },
+      {
+        "tag": "External environment and market change",
+        "domain": "Business Environment",
+        "topic": "External environment and market change",
+        "approach": "Predictive",
+        "difficulty": "Easy",
+        "decisionRule": "record and assess a relevant external change against project assumptions.",
+        "text": "A newly announced industry standard may affect an interface planned for a product launching next year. The organization's standards specialist confirms that applicability is still being evaluated. What should the project manager do first?",
+        "choices": [
+          "Exclude the announcement because applicability has not yet been confirmed",
+          "Redesign the interface immediately to every provision in the announced standard",
+          "Record the uncertainty, assign an owner, and define an assessment and decision trigger",
+          "Ask the customer to accept any future incompatibility before evaluation finishes"
+        ],
+        "correct": 2,
+        "explanation": "Applicability remains uncertain, but the timing and interface relevance justify explicit ownership, evaluation, and a trigger. Immediate redesign treats uncertainty as a settled requirement, exclusion loses visibility, and seeking customer acceptance before impact analysis does not manage the emerging external condition.",
+        "chapterId": "pmbok-ch02-project-environment"
+      },
+      {
+        "tag": "Stakeholder engagement",
+        "domain": "People",
+        "topic": "Stakeholder engagement",
+        "approach": "Predictive",
+        "difficulty": "Easy",
+        "decisionRule": "verify stakeholder satisfaction directly rather than infer it from contract compliance.",
+        "text": "A consulting project has delivered every contractual report on time, yet client representatives rarely comment and decline optional review sessions. How should the project manager assess engagement?",
+        "choices": [
+          "Assume engagement is sufficient because all contractual deliverables were accepted",
+          "Ask client representatives about usefulness, concerns, and preferred review methods",
+          "Increase report length so silence cannot be attributed to missing detail",
+          "Record the client as resistant because optional sessions were declined"
+        ],
+        "correct": 1,
+        "explanation": "Direct inquiry tests whether accepted outputs are useful and whether the current review method fits stakeholder needs. Contract acceptance alone does not prove active engagement, longer reports may worsen access, and labeling resistance without understanding the behavior is an unsupported attribution.",
+        "chapterId": "pmbok-ch13-stakeholder-management"
+      },
+      {
+        "tag": "Risk and uncertainty",
+        "domain": "Process",
+        "topic": "Risk and uncertainty",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "decisionRule": "reforecast remaining exposure and follow reserve authority after planned contingency is exhausted.",
+        "text": "A threat response uses all of its contingency reserve, yet related work remains exposed to additional variation. Management reserve requires portfolio approval. What should the project manager do next?",
+        "choices": [
+          "Continue spending against the exhausted contingency until the work package finishes",
+          "Reassess residual exposure, update forecasts, and seek the required funding or response decision",
+          "Remove the remaining threat from the risk register because the planned response was executed",
+          "Transfer contingency from unrelated threats and notify their owners after project completion"
+        ],
+        "correct": 1,
+        "explanation": "Execution of the response did not remove the remaining variation, so residual exposure and forecast effects must support the authorized next decision. Overspending bypasses control, closing the threat misstates exposure, and silently reallocating other contingency weakens responses without accountable approval.",
+        "chapterId": "pmbok-ch11-risk-management"
+      },
+      {
+        "tag": "External environment and market change",
+        "domain": "Business Environment",
+        "topic": "External environment and market change",
+        "approach": "Agile",
+        "difficulty": "Medium",
+        "decisionRule": "adapt product learning to validated shifts in customer behavior.",
+        "text": "Usage research shows that customers now complete most account tasks on mobile devices, while the product backlog still prioritizes desktop-only enhancements from last year's strategy. What should the project leader do?",
+        "choices": [
+          "Finish the desktop roadmap because previously approved priorities protect strategic consistency",
+          "Review the evidence with the product owner and stakeholders and reorder learning and delivery",
+          "Move every desktop item to mobile without testing customer outcomes",
+          "Let developers select device support based on technical preference"
+        ],
+        "correct": 1,
+        "explanation": "Validated behavior has changed a product assumption, so transparent review and backlog adaptation are appropriate. Completing the old roadmap ignores current value evidence, converting every item assumes feature equivalence without learning, and developer preference cannot replace accountable product prioritization.",
+        "chapterId": "pmbok-ch11-risk-management"
+      },
+      {
+        "tag": "Communication",
+        "domain": "People",
+        "topic": "Communication",
+        "approach": "Agile",
+        "difficulty": "Medium",
+        "decisionRule": "choose a richer communication channel when ambiguity requires immediate exchange.",
+        "text": "A distributed team debates a complex architecture decision through a long messaging thread. Responses cross, assumptions multiply, and no one can state the current proposal. What should the team leader do?",
+        "choices": [
+          "Ask everyone to stop responding until the architect publishes a final decision",
+          "Move the thread to a shared archive and allow another day for written comments",
+          "Convene an interactive visual session, resolve assumptions, and record the resulting decision",
+          "Forward the entire thread to the sponsor and request a technical ruling"
+        ],
+        "correct": 2,
+        "explanation": "A high-ambiguity technical issue needs synchronous, visual, two-way communication followed by a durable record. Unilateral architect closure bypasses perspectives, more asynchronous comments sustain confusion, and sponsor escalation transfers a technical collaboration problem to someone unlikely to hold the required detail.",
+        "chapterId": "pmbok-ch10-communications-management"
+      },
+      {
+        "tag": "Risk and uncertainty",
+        "domain": "Process",
+        "topic": "Risk and uncertainty",
+        "approach": "Agile",
+        "difficulty": "Hard",
+        "decisionRule": "evaluate correlated exposure at system level rather than trusting declining item counts.",
+        "text": "A risk burndown chart shows fewer open risks each iteration, but the remaining authentication, hosting, and monitoring risks all depend on the same cloud provider. Leaders conclude that total exposure is falling. What should the project leader do first?",
+        "choices": [
+          "Accept the trend because closing risk items demonstrates effective mitigation",
+          "Split each provider-related risk into smaller entries to improve monitoring precision",
+          "Analyze shared-cause correlation and aggregate exposure, then adjust responses and reporting",
+          "Transfer every remaining risk to the cloud provider through the service agreement"
+        ],
+        "correct": 2,
+        "explanation": "Fewer entries can conceal concentration because all remaining threats share one provider, so aggregate and correlated exposure must be assessed. Item closure alone is not sufficient evidence, splitting entries worsens the count illusion, and contractual transfer cannot eliminate operational or reputational residual risk.",
+        "chapterId": "pmbok-ch11-risk-management"
+      },
+      {
+        "tag": "External environment and market change",
+        "domain": "Business Environment",
+        "topic": "External environment and market change",
+        "approach": "Hybrid",
+        "difficulty": "Hard",
+        "decisionRule": "verify the scope and timing of an external rule before selecting a project response.",
+        "text": "A trade bulletin reports that a proposed import restriction could affect specialized components. One supplier recommends immediate bulk purchase, while another says existing contracts may qualify for a transition provision. The organization's counsel has not yet assessed the published proposal. What should the project manager do first?",
+        "choices": [
+          "Obtain qualified applicability analysis, assess scenarios, and prepare options for the authorized decision makers",
+          "Assume the transition provision applies and preserve current procurement plans",
+          "Authorize the bulk purchase because inventory eliminates the most visible schedule exposure",
+          "Fund a domestic-component redesign from contingency while qualified applicability analysis proceeds"
+        ],
+        "correct": 0,
+        "explanation": "The restriction is proposed and its project applicability is unresolved, so qualified interpretation and scenario impacts should precede commitment. Bulk purchase selects one costly response on supplier advice, assumed transition coverage lacks verification, and funded redesign commits contingency before necessity and alternatives are established.",
+        "chapterId": "pmbok-ch12-procurement-management"
+      },
+      {
+        "tag": "Communication",
+        "domain": "People",
+        "topic": "Communication",
+        "approach": "Hybrid",
+        "difficulty": "Hard",
+        "decisionRule": "balance speed, accuracy, and authorization during sensitive incident communication.",
+        "text": "A data breach may affect customers during a staged platform release. Facts are incomplete, social media speculation is growing, and only the incident spokesperson may make public statements. What should the project manager do first?",
+        "choices": [
+          "Draft a holding statement from the engineering assessment for spokesperson approval",
+          "Complete a rapid impact assessment before external communication while briefing governance",
+          "Ask customer support to use the existing breach FAQ with potentially affected accounts",
+          "Activate the incident communication path, provide verified facts to the spokesperson, and set update times"
+        ],
+        "correct": 3,
+        "explanation": "The approved incident path enables timely, consistent communication while distinguishing verified facts from unknowns and promising updates. A holding statement alone omits the wider response cadence, completing impact analysis before activation delays the authorized path, and an existing FAQ may not match verified breach facts or the spokesperson-only communication constraint.",
+        "chapterId": "pmbok-ch10-communications-management"
+      },
+      {
+        "tag": "Risk and uncertainty",
+        "domain": "Process",
+        "topic": "Risk and uncertainty",
+        "approach": "Hybrid",
+        "difficulty": "Medium",
+        "decisionRule": "evaluate an opportunity's value, probability, constraints, and ownership before pursuing it.",
+        "text": "A research partner offers early access to a component that could improve product performance, but using it would require a procurement exception and additional validation. What should the project manager do?",
+        "choices": [
+          "Accept the component immediately because opportunities should be exploited before competitors act",
+          "Reject it because procurement exceptions are incompatible with hybrid delivery",
+          "Let the product owner order it without including validation or procurement work",
+          "Assess probability, value, validation effort, and procurement constraints, then assign an opportunity owner"
+        ],
+        "correct": 3,
+        "explanation": "The offer is an uncertain upside with explicit validation and procurement implications, so an evidence-based opportunity assessment and owner are required. Immediate acceptance ignores costs, automatic rejection ignores potential value, and product ordering alone cannot authorize procurement or quality obligations.",
+        "chapterId": "pmbok-ch11-risk-management"
+      },
+      {
+        "tag": "External environment and market change",
+        "domain": "Business Environment",
+        "topic": "External environment and market change",
+        "approach": "Hybrid",
+        "difficulty": "Medium",
+        "decisionRule": "connect environmental scanning to explicit project decisions and owners.",
+        "text": "A renewable-energy program tracks policy, commodity, and community signals in separate workstreams, but no forum evaluates their combined effect on release priorities and capital gates. What should the program manager establish?",
+        "choices": [
+          "Independent response plans so each workstream can move without coordination",
+          "A larger monthly report containing every external article collected by the teams",
+          "A policy that only confirmed events may influence forecasts or priorities",
+          "An integrated review with owners, thresholds, and routes to product and investment decisions"
+        ],
+        "correct": 3,
+        "explanation": "Separate scanning creates information but not coordinated decisions, so signals need owners, thresholds, and connections to both delivery and funding governance. Independent plans can conflict, article volume is not analysis, and waiting for certainty prevents timely responses to material uncertainty.",
+        "chapterId": "pmbok-ch02-project-environment"
+      },
+      {
+        "tag": "Communication",
+        "domain": "People",
+        "topic": "Communication",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "decisionRule": "tailor content and format to the receiver's decisions rather than the sender's available detail.",
+        "text": "The steering committee complains that a forty-page weekly engineering report does not reveal which decisions threaten the refinery turnaround date. What should the project manager do?",
+        "choices": [
+          "Redesign the report around required decisions, impacts, owners, and concise supporting indicators",
+          "Add all raw engineering logs so committee members can perform their own analysis",
+          "Continue the approved format because changing it could create inconsistent historical records",
+          "Stop written reporting and rely on informal conversations with individual committee members"
+        ],
+        "correct": 0,
+        "explanation": "The communication should enable the committee's governance decisions, with detail available as support rather than obscuring action. More raw data increases overload, format history is not a reason to preserve ineffectiveness, and informal individual conversations remove a consistent shared record.",
+        "chapterId": "pmbok-ch10-communications-management"
+      },
+      {
+        "tag": "Risk and uncertainty",
+        "domain": "Process",
+        "topic": "Risk and uncertainty",
+        "approach": "Predictive",
+        "difficulty": "Easy",
+        "decisionRule": "manage a realized threat as an issue while executing its planned contingency.",
+        "text": "A customs delay listed in the risk register occurs and holds critical equipment at the border. An approved contingency plan identifies an alternate shipment route. What should the project manager do?",
+        "choices": [
+          "Record the realized issue and activate the approved alternate route with its owner",
+          "Leave the entry as an open risk until the equipment reaches the project site",
+          "Develop an entirely new response before using the approved contingency plan",
+          "Close the risk record and let procurement manage the delay outside the project"
+        ],
+        "correct": 0,
+        "explanation": "The uncertain event has occurred, so it is now an issue and the prepared contingency should be executed and tracked. Keeping only risk status obscures current impact, redesign delays action without evidence, and delegating it outside project visibility breaks integrated control.",
+        "chapterId": "pmbok-ch11-risk-management"
+      },
+      {
+        "tag": "External environment and market change",
+        "domain": "Business Environment",
+        "topic": "External environment and market change",
+        "approach": "Predictive",
+        "difficulty": "Easy",
+        "decisionRule": "revisit assumptions when a confirmed economic condition changes the project case.",
+        "text": "A confirmed exchange-rate movement raises the forecast cost of imported equipment beyond the business case tolerance. What should the project manager do next?",
+        "choices": [
+          "Update the forecast and business-case impacts for review by the designated authority",
+          "Keep the original forecast because exchange rates are outside project control",
+          "Reduce installation scope without evaluating operational or benefit consequences",
+          "Record the variance only after the equipment invoices are paid"
+        ],
+        "correct": 0,
+        "explanation": "An external condition has changed a forecast beyond the established tolerance, so decision makers need updated project and business-case evidence. Lack of control does not remove impact, unilateral scope reduction is unauthorized, and waiting for invoices delays a decision the forecast is intended to support.",
+        "chapterId": "pmbok-ch02-project-environment"
+      },
+      {
+        "tag": "Communication",
+        "domain": "People",
+        "topic": "Communication",
+        "approach": "Agile",
+        "difficulty": "Hard",
+        "decisionRule": "verify shared meaning when the same term drives different delivery expectations.",
+        "text": "A product owner says a feature is ready for pilot, while operations understands ready to mean fully supportable at scale. Both used the same dashboard status and now blame each other. What should the project manager do first?",
+        "choices": [
+          "Use the product owner's pilot definition now and treat scale readiness as a later gate",
+          "Facilitate agreement on explicit readiness criteria and update the shared information radiator",
+          "Add separate pilot and scale-readiness fields to the dashboard before agreeing ownership",
+          "Ask the sponsor to approve an enterprise readiness definition for the governance glossary"
+        ],
+        "correct": 1,
+        "explanation": "The conflict arises from unverified meaning, so explicit shared criteria and a corrected visible status prevent recurrence. Applying the product definition unilaterally defers operational alignment, adding dashboard fields improves labels without agreeing criteria or ownership, and a sponsor-defined glossary is slower and less collaborative than resolving the concrete pilot decision with those doing the work.",
+        "chapterId": "pmbok-ch10-communications-management"
+      },
+      {
+        "tag": "Risk and uncertainty",
+        "domain": "Process",
+        "topic": "Risk and uncertainty",
+        "approach": "Agile",
+        "difficulty": "Hard",
+        "decisionRule": "turn an acknowledged knowledge gap into bounded learning and an updated delivery decision.",
+        "text": "For three refinements, developers have labeled a privacy-preserving analytics item 'too unknown to estimate.' A legal interpretation is available, but no one has tested whether the proposed design preserves useful results. What should the product leader do next?",
+        "choices": [
+          "Hold a cross-functional estimation workshop and use documented assumptions to forecast the full item",
+          "Create a timeboxed technical and data experiment with success criteria, then refine the item",
+          "Split the item into privacy, analytics, and interface stories, then estimate each using analogous work",
+          "Complete a privacy architecture review and refine compliance acceptance criteria before estimating the item"
+        ],
+        "correct": 1,
+        "explanation": "The unresolved uncertainty is whether the compliant design preserves useful results, so a bounded experiment should generate empirical evidence before estimating or committing. An estimation workshop clarifies assumptions but cannot validate output utility, splitting decomposes work without proving the cross-cutting design, and an architecture review strengthens compliance evidence without testing analytical usefulness.",
+        "chapterId": "pmbok-ch11-risk-management"
+      },
+      {
+        "tag": "Strategic alignment",
+        "domain": "Business Environment",
+        "topic": "Strategic alignment",
+        "approach": "Agile",
+        "difficulty": "Medium",
+        "decisionRule": "reconnect product priorities to strategy when local demand dominates the backlog.",
+        "text": "A product backlog is filled with urgent requests from the loudest regional sales teams, while the organization's current strategy emphasizes retention in underserved customer segments. What should the product leader do?",
+        "choices": [
+          "Give every region equal backlog capacity regardless of strategic contribution",
+          "Complete urgent sales requests first because urgency is an objective priority measure",
+          "Use strategy-linked outcomes and evidence with the product owner to reassess ordering",
+          "Ask developers to choose requests that can be delivered with the least effort"
+        ],
+        "correct": 2,
+        "explanation": "Backlog order should connect available evidence and product outcomes to the organization's current strategic intent. Equal allocation ignores value differences, stakeholder urgency alone is not strategic alignment, and development effort cannot substitute for accountable product and portfolio choices.",
+        "chapterId": "pmbok-ch02-project-environment"
+      },
+      {
+        "tag": "Communication",
+        "domain": "People",
+        "topic": "Communication",
+        "approach": "Hybrid",
+        "difficulty": "Easy",
+        "decisionRule": "protect confidential information while ensuring authorized recipients can act.",
+        "text": "A merger project includes confidential staffing decisions. Workstream leads need dependency dates but are not authorized to see employee names. How should the project manager communicate?",
+        "choices": [
+          "Share the full staffing file because dependency management requires complete transparency",
+          "Withhold all schedule information until the merger is publicly announced",
+          "Provide authorized, need-to-know timing and role information without personal details",
+          "Let each workstream lead ask employees directly whether their roles will change"
+        ],
+        "correct": 2,
+        "explanation": "Need-to-know communication can provide actionable dependency information while preserving confidentiality and access controls. Full disclosure exceeds authorization, total withholding prevents planning, and direct questioning invites rumors and places employees in a sensitive process they may not be permitted to discuss.",
+        "chapterId": "pmbok-ch10-communications-management"
+      },
+      {
+        "tag": "Risk and uncertainty",
+        "domain": "Process",
+        "topic": "Risk and uncertainty",
+        "approach": "Hybrid",
+        "difficulty": "Hard",
+        "decisionRule": "evaluate residual interface exposure after contractual transfer of one risk component.",
+        "text": "A vendor contract transfers hardware replacement cost if reliability falls below target, and the steering committee therefore marks reliability risk closed. However, replacement would still interrupt the agile service and require internal data recovery. What should the project manager do?",
+        "choices": [
+          "Keep the risk closed because the vendor now owns the defined reliability consequence",
+          "Increase contract damages so every internal interruption can be financially reimbursed",
+          "Analyze and assign residual service and recovery exposure, then update responses and reporting",
+          "Create an issue for future interruption even though no reliability failure has occurred"
+        ],
+        "correct": 2,
+        "explanation": "The contract transfers replacement cost but not the stated service interruption and recovery effects, so residual risk remains and needs ownership. Closure overstates transfer, higher damages may compensate but not restore service, and an uncertain future interruption is not yet an issue.",
+        "chapterId": "pmbok-ch11-risk-management"
+      },
+      {
+        "tag": "Strategic alignment",
+        "domain": "Business Environment",
+        "topic": "Strategic alignment",
+        "approach": "Hybrid",
+        "difficulty": "Hard",
+        "decisionRule": "surface changed strategic assumptions before optimizing a delivery plan.",
+        "text": "A data-center consolidation remains within budget, but the board has approved a cloud-first strategy after a divestiture reduced the need for owned capacity. Existing contracts have termination costs, and some regulated workloads may still need dedicated infrastructure. What should the program manager do first?",
+        "choices": [
+          "Accelerate construction to preserve the value of money already spent",
+          "Reassess strategic fit, workload constraints, benefits, and exit options for a governance decision",
+          "Issue contract termination notices to preserve exit options, subject to later governance confirmation",
+          "Continue the baseline until the dedicated-workload analysis proves the entire facility unnecessary"
+        ],
+        "correct": 1,
+        "explanation": "The new strategy and reduced demand materially change the program case, while workload and contract facts create genuine options and constraints. Acceleration is sunk-cost reasoning, termination notices commit before impact analysis and authority, and continuing requires proof against cancellation instead of promptly reconsidering strategic fit with complete evidence.",
+        "chapterId": "pmbok-ch02-project-environment"
+      },
+      {
+        "tag": "Communication",
+        "domain": "People",
+        "topic": "Communication",
+        "approach": "Predictive",
+        "difficulty": "Hard",
+        "decisionRule": "treat repeated message failure as a communication-system problem requiring feedback.",
+        "text": "Safety bulletins are translated and emailed to all shipyard crews, yet inspections show repeated misunderstanding among temporary workers. Delivery receipts confirm that the messages arrived. What should the project manager do next?",
+        "choices": [
+          "Improve specialist terminology in the translation and resend it with acknowledgment tracking",
+          "Ask supervisors to conduct toolbox talks and submit signed completion records",
+          "Assign bilingual safety champions to temporary crews for the next work phase",
+          "Use demonstrations and teach-back with the crews, then confirm comprehension through observation"
+        ],
+        "correct": 3,
+        "explanation": "Receipt is not comprehension, so demonstration, teach-back, and observation provide direct feedback about whether critical behavior was understood. Better translation still relies on acknowledgment rather than meaning, signed toolbox talks confirm attendance but not comprehension, and bilingual champions provide support without verifying that each worker can apply the instruction.",
+        "chapterId": "pmbok-ch10-communications-management"
+      },
+      {
+        "tag": "Procurement",
+        "domain": "Process",
+        "topic": "Procurement",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "decisionRule": "establish contract facts and follow agreed remedies before imposing a commercial response.",
+        "text": "A supplier misses a delivery milestone and the buyer wants to deduct liquidated damages immediately. The supplier claims the project provided a required specification late. What should the project manager do first?",
+        "choices": [
+          "Deduct damages because the signed delivery milestone is objectively late",
+          "Accept the supplier claim because any buyer delay excuses the full milestone",
+          "Terminate the contract and obtain replacement goods from the next bidder",
+          "Review notices, responsibilities, causation, and contract procedures with procurement before acting"
+        ],
+        "correct": 3,
+        "explanation": "The missed milestone is disputed by a claimed buyer-caused delay, so contract records, causation, and notice procedures must establish the appropriate remedy. Automatic damages or acceptance assumes liability, while termination is disproportionate before entitlement and cure provisions are examined.",
+        "chapterId": "pmbok-ch12-procurement-management"
+      },
+      {
+        "tag": "Strategic alignment",
+        "domain": "Business Environment",
+        "topic": "Strategic alignment",
+        "approach": "Hybrid",
+        "difficulty": "Medium",
+        "decisionRule": "translate strategic objectives into testable project selection and continuation criteria.",
+        "text": "Executives describe a transformation project as strategically important, but its charter contains only delivery milestones and no link to the strategy's customer-trust objective. What should the project manager facilitate?",
+        "choices": [
+          "A schedule acceleration workshop to demonstrate commitment to the strategy",
+          "A communications campaign repeating that the project is strategically important",
+          "A feature comparison with competitors regardless of the approved strategy",
+          "Agreement on strategy-linked outcomes, measures, assumptions, and review thresholds"
+        ],
+        "correct": 3,
+        "explanation": "Strategic labels need explicit outcomes, measures, assumptions, and review criteria to guide decisions and demonstrate contribution. Schedule acceleration concerns pace, repetition does not create traceability, and competitor features may be informative but do not define the organization's customer-trust objective.",
+        "chapterId": "pmbok-ch02-project-environment"
+      },
+      {
+        "tag": "Communication",
+        "domain": "People",
+        "topic": "Communication",
+        "approach": "Agile",
+        "difficulty": "Easy",
+        "decisionRule": "make frequently changing work status visible at the point of collaboration.",
+        "text": "Marketing repeatedly asks developers which experiment is live because the release status spreadsheet is updated only at the end of each week. What should the project manager recommend?",
+        "choices": [
+          "Create a shared, current visual board showing experiment state, owner, and next decision",
+          "Ask marketing to wait for the weekly spreadsheet to avoid interrupting developers",
+          "Have each developer send separate daily emails describing individual activity",
+          "Give marketing access to source-code commits and let them infer release status"
+        ],
+        "correct": 0,
+        "explanation": "A current shared visual source answers the recurring coordination need without repeated interruption and can show business-relevant state. Waiting preserves stale information, individual emails fragment the picture, and raw code activity does not reliably communicate whether an experiment is live or awaiting a decision.",
+        "chapterId": "pmbok-ch13-stakeholder-management"
+      },
+      {
+        "tag": "Procurement",
+        "domain": "Process",
+        "topic": "Procurement",
+        "approach": "Agile",
+        "difficulty": "Easy",
+        "decisionRule": "define service outcomes and acceptance evidence before selecting an external product.",
+        "text": "An agile team needs an external mapping service and has identified several subscription vendors. What should the product leader establish before vendor selection?",
+        "choices": [
+          "Required service outcomes, security and reliability criteria, acceptance evidence, and commercial constraints",
+          "The vendor with the largest advertised feature catalog and longest market history",
+          "A complete internal design that every vendor must implement without variation",
+          "A one-year subscription with the lowest initial price before technical evaluation"
+        ],
+        "correct": 0,
+        "explanation": "Selection needs a shared definition of service outcomes, nonfunctional requirements, evidence, and commercial boundaries. Feature volume and history do not prove fit, an internal design may overconstrain solutions, and lowest initial price ignores technical and whole-life value.",
+        "chapterId": "pmbok-ch12-procurement-management"
+      },
+      {
+        "tag": "Strategic alignment",
+        "domain": "Business Environment",
+        "topic": "Strategic alignment",
+        "approach": "Predictive",
+        "difficulty": "Easy",
+        "decisionRule": "escalate a confirmed strategy conflict through portfolio governance.",
+        "text": "A portfolio review reveals that a facilities project supports a business line the organization has formally decided to exit. What should the project manager do?",
+        "choices": [
+          "Provide current impacts and options to the portfolio authority for a continuation decision",
+          "Complete the project because its charter predates the exit decision",
+          "Cancel all contracts personally before additional costs are incurred",
+          "Remove references to the business line and preserve the approved project scope"
+        ],
+        "correct": 0,
+        "explanation": "The formal strategy decision undermines the project's alignment, but the authorized portfolio body should decide continuation using current impacts and options. The earlier charter does not override current strategy, personal cancellation exceeds authority, and relabeling does not change the project's actual purpose.",
+        "chapterId": "pmbok-ch02-project-environment"
+      },
+      {
+        "tag": "Communication",
+        "domain": "People",
+        "topic": "Communication",
+        "approach": "Hybrid",
+        "difficulty": "Medium",
+        "decisionRule": "address damaging rumors with timely facts and a credible path for unknowns.",
+        "text": "Employees hear that a new scheduling system will eliminate flexible shifts, although policy decisions are still open. Rumors are reducing participation in user testing. What should the change project manager do?",
+        "choices": [
+          "Remain silent until every policy is final so no message needs correction",
+          "State what is decided and undecided, explain the decision process, and invite questions",
+          "Deny that any shift will change even though policy options remain under review",
+          "Remove concerned employees from testing because their feedback may be biased"
+        ],
+        "correct": 1,
+        "explanation": "Timely communication can distinguish facts from uncertainty and show how employees can engage, which reduces the vacuum feeding rumors. Silence allows speculation to harden, unsupported denial risks trust, and excluding concerned users removes valuable feedback and reinforces suspicion.",
+        "chapterId": "pmbok-ch13-stakeholder-management"
+      },
+      {
+        "tag": "Procurement",
+        "domain": "Process",
+        "topic": "Procurement",
+        "approach": "Hybrid",
+        "difficulty": "Medium",
+        "decisionRule": "align commercial structure with incremental learning, acceptance, and controlled change.",
+        "text": "A program must outsource a complex service whose high-level outcome is clear, but detailed user behavior will be discovered through iterative pilots. Procurement proposes one fixed specification and acceptance event at the end. What should the project manager recommend?",
+        "choices": [
+          "Accept the single event because fixed acceptance gives the buyer maximum price certainty",
+          "Structure incremental outcomes, evidence, collaboration rules, and an authorized change mechanism",
+          "Use a cost-reimbursable contract without any performance objectives until pilots finish",
+          "Keep pilots internal and hide their findings from the seller until final acceptance"
+        ],
+        "correct": 1,
+        "explanation": "The outcome is known but detailed behavior will emerge, so the commercial model should preserve incremental evidence and controlled adaptation. End-only acceptance concentrates discovery risk, unbounded reimbursement lacks value controls, and withholding learning prevents the seller from delivering the evolving need.",
+        "chapterId": "pmbok-ch12-procurement-management"
+      },
+      {
+        "tag": "Strategic alignment",
+        "domain": "Business Environment",
+        "topic": "Strategic alignment",
+        "approach": "Agile",
+        "difficulty": "Medium",
+        "decisionRule": "use outcome reviews to maintain alignment as strategy and product evidence evolve.",
+        "text": "A customer-service product contributes to a strategic self-service objective, but recent releases mainly automate internal reporting because those stories are easier to complete. What should the project leader do next?",
+        "choices": [
+          "Increase velocity targets so the team can complete both types of work",
+          "Review outcome contribution with the product owner and reorder work toward the strategic objective",
+          "Keep the backlog unchanged because internal automation also produces efficiency",
+          "Assign customer-facing stories directly to individual developers outside sprint planning"
+        ],
+        "correct": 1,
+        "explanation": "Ease of completion has displaced the stated strategic outcome, so product ordering should be reassessed using contribution evidence. Velocity does not resolve priority, incidental efficiency does not establish alignment, and direct assignment bypasses accountable product decisions and team planning.",
+        "chapterId": "pmbok-ch03-project-manager-role"
+      },
+      {
+        "tag": "Communication",
+        "domain": "People",
+        "topic": "Communication",
+        "approach": "Predictive",
+        "difficulty": "Easy",
+        "decisionRule": "confirm that an urgent verbal agreement is captured and understood by all responsible parties.",
+        "text": "During a site walk, the client verbally approves relocating a drainage inlet and the contractor plans to act that afternoon. Several affected designers were absent. What should the project manager do next?",
+        "choices": [
+          "Let the contractor proceed because verbal communication is faster than project documentation",
+          "Wait for the next monthly meeting and then ask whether anyone objects",
+          "Document the agreement, verify authority and impacts, and distribute it through the agreed channel",
+          "Ask the contractor to decide whether the absent designers need to know"
+        ],
+        "correct": 2,
+        "explanation": "A prompt record, authority check, impact review, and distribution prevent an informal exchange from becoming uncontrolled work. Immediate action may bypass change controls, a monthly wait is too slow for the planned work, and the contractor should not determine communication needs for affected design owners.",
+        "chapterId": "pmbok-ch13-stakeholder-management"
+      },
+      {
+        "tag": "Procurement",
+        "domain": "Process",
+        "topic": "Procurement",
+        "approach": "Predictive",
+        "difficulty": "Hard",
+        "decisionRule": "preserve evidence and verify contractual authority before resolving an alleged verbal change.",
+        "text": "A seller submits a substantial invoice for extra foundation work, citing verbal approval from a site engineer. The engineer confirms discussing the work but lacks delegated contract authority, and the work is already buried. What should the project manager do first?",
+        "choices": [
+          "Reject the invoice because the engineer lacked authority and therefore no work occurred contractually",
+          "Pay the invoice to preserve the relationship, then seek retrospective funding approval",
+          "Preserve site evidence and review scope, notices, authority, causation, and dispute procedures",
+          "Direct the seller to uncover the foundation so the extra work can be reinspected"
+        ],
+        "correct": 2,
+        "explanation": "Completed buried work and disputed authority require a factual, contractual record before entitlement is determined. Immediate rejection may ignore benefit or constructive-change facts, payment bypasses approval, and destructive reinspection is premature when contemporaneous evidence and contract procedures may resolve the claim.",
+        "chapterId": "pmbok-ch12-procurement-management"
+      },
+      {
+        "tag": "Strategic alignment",
+        "domain": "Business Environment",
+        "topic": "Strategic alignment",
+        "approach": "Hybrid",
+        "difficulty": "Hard",
+        "decisionRule": "present comparable portfolio value evidence before reallocating shared capacity.",
+        "text": "A strategically sponsored cyber-resilience program requests scarce specialists from a revenue project. Both initiatives have approved benefits, but only the resilience program has newly quantified the enterprise exposure it reduces. What should the portfolio-facing program manager do first?",
+        "choices": [
+          "Transfer the specialists using the new exposure estimate and notify the revenue sponsor afterward",
+          "Preserve current assignments because both projects already received approval",
+          "Provide comparable benefits, exposure, timing, and capacity impacts to portfolio governance for reprioritization",
+          "Split each specialist's time equally so neither sponsor loses visible progress"
+        ],
+        "correct": 2,
+        "explanation": "The new exposure evidence may change portfolio value, but shared-capacity allocation requires comparable impacts and authorized reprioritization. Unilateral transfer uses incomplete comparison and bypasses authority, prior approvals can be revisited, and equal splitting optimizes political balance without showing that either initiative receives viable specialist capacity.",
+        "chapterId": "pmbok-ch02-project-environment"
+      },
+      {
+        "tag": "Coaching and mentoring",
+        "domain": "People",
+        "topic": "Coaching and mentoring",
+        "approach": "Agile",
+        "difficulty": "Medium",
+        "decisionRule": "coach through questions that help the learner own the next experiment.",
+        "text": "A new iteration manager asks the agile coach to provide the exact words for addressing a team that chronically overcommits. The manager understands the metrics but lacks confidence. What should the coach do?",
+        "choices": [
+          "Take over the next retrospective and demonstrate expert facilitation without involving the manager",
+          "Provide a mandatory script and require the manager to follow it word for word",
+          "Escalate the overcommitment because a trained iteration manager should already solve it",
+          "Ask the manager to diagnose the pattern, rehearse options, and choose a facilitation experiment"
+        ],
+        "correct": 3,
+        "explanation": "Guided diagnosis, rehearsal, and a learner-owned experiment build judgment and confidence for future situations. Taking over creates dependence, a rigid script suppresses adaptation, and escalation treats a development need as failure rather than using the manager's existing knowledge as a foundation.",
+        "chapterId": "pmbok-ch09-resource-management"
+      },
+      {
+        "tag": "Procurement",
+        "domain": "Process",
+        "topic": "Procurement",
+        "approach": "Agile",
+        "difficulty": "Medium",
+        "decisionRule": "evaluate a vendor shortcut across value, security, adaptability, and exit cost.",
+        "text": "A vendor offers a proprietary component that would accelerate the next release, but it requires customer data in the vendor's format and has no tested export path. What should the product leader do?",
+        "choices": [
+          "Adopt it because earlier release value outweighs future architecture concerns",
+          "Reject all proprietary components because agile products require open-source dependencies",
+          "Ask the vendor to promise a future export feature after the purchase is signed",
+          "Assess release value, security, total cost, lock-in, and exit evidence before deciding"
+        ],
+        "correct": 3,
+        "explanation": "The shortcut may add near-term value but creates explicit data and exit exposure, so the decision needs whole-life evidence. Speed alone is incomplete, blanket rejection is unjustified, and an unsupported future promise does not establish a viable exit path.",
+        "chapterId": "pmbok-ch12-procurement-management"
+      },
+      {
+        "tag": "AI and data governance",
+        "domain": "Business Environment",
+        "topic": "AI and data governance",
+        "approach": "Hybrid",
+        "difficulty": "Medium",
+        "decisionRule": "assign accountable human review and traceable evidence for AI-supported project decisions.",
+        "text": "A project office uses an AI system to suggest which troubled initiatives should receive recovery funding. Leaders currently see a ranked list but cannot trace the data, assumptions, or human approval behind each recommendation. What should the portfolio manager establish?",
+        "choices": [
+          "Automatic funding for the highest-ranked initiatives to remove political influence",
+          "A larger historical dataset without changing how recommendations are reviewed",
+          "Vendor ownership of every funding outcome produced by the system",
+          "Documented data lineage, validation, decision criteria, and accountable human approval"
+        ],
+        "correct": 3,
+        "explanation": "Funding is an accountable governance decision, so AI-supported recommendations need traceable inputs, validation, criteria, and named human approval. Automation does not remove bias or accountability, more data alone does not create traceability, and vendor responsibility cannot replace organizational decision ownership.",
+        "chapterId": "pmbok-ch02-project-environment"
+      },
+      {
+        "tag": "Coaching and mentoring",
+        "domain": "People",
+        "topic": "Coaching and mentoring",
+        "approach": "Hybrid",
+        "difficulty": "Hard",
+        "decisionRule": "give specific, timely feedback on observable behavior and jointly plan practice.",
+        "text": "A technically strong workstream lead dominates planning, answers questions directed to others, and later complains that team members show no initiative. The lead asks for promotion advice. How should the project manager respond?",
+        "choices": [
+          "Describe the observed behaviors and impacts, seek the lead's view, and agree on delegated facilitation practices",
+          "Recommend a trial deputy-lead assignment with team feedback before the promotion decision",
+          "Rotate planning facilitation among team members while the workstream lead observes",
+          "Share the leadership competency model and ask the lead for a self-assessment"
+        ],
+        "correct": 0,
+        "explanation": "Concrete behavior-impact feedback paired with dialogue and practice gives the lead an actionable development path. A trial assignment tests promotion readiness before addressing the observed cause, rotating facilitators changes the meeting but gives the lead no direct feedback, and a competency self-assessment is useful reflection yet may not connect the specific conduct to declining initiative.",
+        "chapterId": "pmbok-ch09-resource-management"
+      },
+      {
+        "tag": "Procurement",
+        "domain": "Process",
+        "topic": "Procurement",
+        "approach": "Hybrid",
+        "difficulty": "Easy",
+        "decisionRule": "verify all commercial obligations and records before closing a procurement.",
+        "text": "A supplier's deliverables have been accepted and final payment is requested, but warranty documents and claim-release records are not yet in the repository. What should the project manager do?",
+        "choices": [
+          "Verify required records and unresolved obligations, then complete formal procurement closure",
+          "Approve final payment because deliverable acceptance automatically closes every obligation",
+          "Transfer missing commercial records to operations and close the procurement immediately",
+          "Keep the procurement open until the entire product life cycle has ended"
+        ],
+        "correct": 0,
+        "explanation": "Deliverable acceptance is important, but explicit warranty and claim records remain part of commercial closure, so they must be verified and dispositioned. Automatic payment or transfer can lose leverage and evidence, while waiting for the product life cycle exceeds normal contract closure needs.",
+        "chapterId": "pmbok-ch12-procurement-management"
+      },
+      {
+        "tag": "AI and data governance",
+        "domain": "Business Environment",
+        "topic": "AI and data governance",
+        "approach": "Predictive",
+        "difficulty": "Easy",
+        "decisionRule": "verify AI-generated project information before using it as an authoritative record.",
+        "text": "A generative assistant drafts meeting minutes that include a decision no attendee remembers making. The project manager has the recording and approved decision log. What should the project manager do?",
+        "choices": [
+          "Verify the draft against source evidence and obtain human confirmation before updating records",
+          "Publish the draft because automated minutes reduce individual recollection errors",
+          "Delete the recording so team members focus on the generated summary",
+          "Let the assistant revise the decision log without participant review"
+        ],
+        "correct": 0,
+        "explanation": "The generated statement conflicts with attendee recollection, so authoritative sources and accountable human confirmation are required before the record changes. Automatic publication treats generated text as evidence, deleting sources removes traceability, and unattended revision compounds the same verification failure.",
+        "chapterId": "pmbok-ch02-project-environment"
+      },
+      {
+        "tag": "Coaching and mentoring",
+        "domain": "People",
+        "topic": "Coaching and mentoring",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "decisionRule": "use mentoring to transfer contextual judgment, not to make the mentee's decisions.",
+        "text": "A junior project manager preparing a first vendor negotiation asks a senior mentor which concession to offer. Several commercial options are acceptable within authority limits. What should the mentor do?",
+        "choices": [
+          "Select the concession because the mentor has more negotiation experience",
+          "Share relevant experience, explore criteria and consequences, and let the junior manager decide",
+          "Attend the negotiation and answer every vendor question on the junior manager's behalf",
+          "Decline to discuss the negotiation because mentoring must remain purely informal"
+        ],
+        "correct": 1,
+        "explanation": "The mentor should transfer experience and decision reasoning while preserving the mentee's accountability within approved limits. Choosing the concession or taking over the meeting prevents capability growth, while refusing relevant guidance misunderstands mentoring and wastes a legitimate learning opportunity.",
+        "chapterId": "pmbok-ch09-resource-management"
+      },
+      {
+        "tag": "Procurement",
+        "domain": "Process",
+        "topic": "Procurement",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "decisionRule": "apply disclosed evaluation criteria consistently and preserve the source-selection record.",
+        "text": "Two bids meet all mandatory requirements. One has a lower purchase price, while the other scores higher on the published maintenance and reliability criteria. What should the selection team do?",
+        "choices": [
+          "Select the lower purchase price because mandatory compliance makes other criteria optional",
+          "Apply the published weighting to documented evidence and record the resulting selection decision",
+          "Negotiate privately with the higher-scoring bidder before completing the formal evaluation",
+          "Change the weighting toward purchase price now that bid amounts are known"
+        ],
+        "correct": 1,
+        "explanation": "Both bids are compliant, so the disclosed weighted criteria should distinguish value consistently and create an auditable decision. Lowest purchase price ignores published factors, premature negotiation may compromise fairness, and changing weights after seeing bids biases source selection.",
+        "chapterId": "pmbok-ch12-procurement-management"
+      },
+      {
+        "tag": "AI and data governance",
+        "domain": "Business Environment",
+        "topic": "AI and data governance",
+        "approach": "Agile",
+        "difficulty": "Medium",
+        "decisionRule": "apply privacy-purpose limits before using operational data to train an AI capability.",
+        "text": "A product team wants to use customer-support transcripts to improve an AI search feature. The organization's data steward says the transcripts were collected for case resolution and has not approved the new training purpose. What should the project leader do first?",
+        "choices": [
+          "Copy the transcripts into the development environment because the project already owns access",
+          "Engage the data steward and privacy owner to assess purpose, permissions, minimization, and safeguards",
+          "Remove customer names and assume every remaining field is approved for training",
+          "Ask developers to use a small transcript sample without documenting the experiment"
+        ],
+        "correct": 1,
+        "explanation": "Existing access for case resolution does not establish approved use for model improvement, so accountable data and privacy owners must assess purpose and safeguards. Copying data expands use prematurely, removing names may not eliminate sensitive information, and an undocumented sample still creates an unapproved use.",
+        "chapterId": "pmbok-ch02-project-environment"
+      },
+      {
+        "tag": "Coaching and mentoring",
+        "domain": "People",
+        "topic": "Coaching and mentoring",
+        "approach": "Agile",
+        "difficulty": "Hard",
+        "decisionRule": "address a repeated skill gap with evidence, support, and explicit improvement expectations.",
+        "text": "A tester misses subtle accessibility defects despite prior informal tips. Pairing records show progress on basic checks but recurring gaps on keyboard navigation. The release has sufficient time for focused development. What should the team leader do?",
+        "choices": [
+          "Assign current accessibility review to a senior tester and schedule development after release",
+          "Extend pairing on live stories and rely on peer feedback when keyboard defects appear",
+          "Agree on focused coaching, practice cases, review checkpoints, and a measurable improvement expectation",
+          "Enroll the tester in a general accessibility course and reassess after the next release"
+        ],
+        "correct": 2,
+        "explanation": "A specific, supported improvement plan matches the demonstrated keyboard-navigation gap and makes progress observable within the available time. Senior review protects the release but postpones development, informal pairing lacks focused cases and checkpoints, and a general course is less targeted and defers evidence of improvement until after another release.",
+        "chapterId": "pmbok-ch09-resource-management"
+      },
+      {
+        "tag": "Planning and adaptation",
+        "domain": "Process",
+        "topic": "Planning and adaptation",
+        "approach": "Agile",
+        "difficulty": "Hard",
+        "decisionRule": "adapt a roadmap when validated evidence invalidates a key planning assumption.",
+        "text": "An annual roadmap assumes users will self-configure complex workflows, but two validated pilots show that most target users abandon setup without guided support. Funding governance meets next week. What should the product leader do?",
+        "choices": [
+          "Continue the roadmap until annual planning because two pilots are not production releases",
+          "Add more self-configuration features so users have greater control over setup",
+          "Present the evidence and revise outcomes, options, sequencing, and forecasts through governance",
+          "Remove the target users from product metrics so the original assumption remains measurable"
+        ],
+        "correct": 2,
+        "explanation": "The pilots directly invalidate a roadmap assumption about target-user behavior, so transparent evidence should drive adaptation at the available governance decision. Waiting wastes learning, adding features reinforces the failed premise, and changing metrics conceals rather than resolves the product risk.",
+        "chapterId": "pmbok-ch01-introduction"
+      },
+      {
+        "tag": "AI and data governance",
+        "domain": "Business Environment",
+        "topic": "AI and data governance",
+        "approach": "Hybrid",
+        "difficulty": "Hard",
+        "decisionRule": "test for consequential bias with representative evidence and preserve human accountability before scaling.",
+        "text": "An AI scheduling pilot recommends fewer high-visibility assignments for contractors than employees. The vendor reports strong overall prediction accuracy, while the project team has not analyzed recommendation patterns by worker group or documented override decisions. The sponsor wants enterprise rollout. What should the project manager recommend first?",
+        "choices": [
+          "Proceed because overall accuracy is the most objective measure of scheduling quality",
+          "Make recommendations the default and ask managers to document exceptions during enterprise rollout",
+          "Remove contractor status from reports but retain the current model and rollout plan",
+          "Analyze representative group outcomes, validate causes and controls, and define traceable human review before rollout"
+        ],
+        "correct": 3,
+        "explanation": "The observed group pattern may create consequential allocation bias that aggregate accuracy conceals, so disaggregated validation, controls, and accountable review are needed before scale. Overall accuracy is incomplete evidence, default rollout tests controls on affected workers prematurely, and hiding status from reports reduces oversight without proving the model no longer uses correlated signals.",
+        "chapterId": "pmbok-ch02-project-environment"
+      },
+      {
+        "tag": "Coaching and mentoring",
+        "domain": "People",
+        "topic": "Coaching and mentoring",
+        "approach": "Hybrid",
+        "difficulty": "Easy",
+        "decisionRule": "create a deliberate knowledge-transfer relationship before a critical transition.",
+        "text": "A veteran commissioning manager will retire before the final two plants start up, and a capable deputy has never led emergency handover decisions. What should the project manager do?",
+        "choices": [
+          "Wait until the retirement date because the deputy already meets the formal job description",
+          "Ask the veteran to write a general lessons-learned memo during the final week",
+          "Hire an external manager to avoid placing development demands on the deputy",
+          "Establish mentoring through shadowed decisions, simulations, and progressively delegated authority"
+        ],
+        "correct": 3,
+        "explanation": "Progressive, experiential mentoring transfers tacit judgment and lets the deputy demonstrate readiness before the transition. Waiting accepts avoidable continuity risk, a final memo cannot capture decision practice, and external hiring bypasses a capable successor without first developing the identified gap.",
+        "chapterId": "pmbok-ch03-project-manager-role"
+      },
+      {
+        "tag": "Planning and adaptation",
+        "domain": "Process",
+        "topic": "Planning and adaptation",
+        "approach": "Hybrid",
+        "difficulty": "Medium",
+        "decisionRule": "use progressive detail while preserving visible milestones, assumptions, and interfaces.",
+        "text": "A hybrid program has fixed regulatory gates, but detailed functionality beyond the first two increments depends on user feedback. Executives request a useful integrated plan now. What should the project manager provide?",
+        "choices": [
+          "A fully detailed activity plan for all increments based on the most likely feedback",
+          "Only the next iteration backlog because distant regulatory gates are outside team control",
+          "Separate predictive and agile plans with no shared assumptions until scope stabilizes",
+          "A rolling-wave plan with detailed near-term work, gate milestones, interfaces, assumptions, and review points"
+        ],
+        "correct": 3,
+        "explanation": "Fixed gates need long-range visibility while future functions depend on learning, so rolling-wave planning balances both. False detail embeds guesses, a backlog alone omits external commitments, and disconnected plans hide cross-model assumptions and dependencies.",
+        "chapterId": "pmbok-ch01-introduction"
+      },
+      {
+        "tag": "AI and data governance",
+        "domain": "Business Environment",
+        "topic": "AI and data governance",
+        "approach": "Hybrid",
+        "difficulty": "Medium",
+        "decisionRule": "design meaningful human oversight around the limits of AI-generated risk signals.",
+        "text": "An AI service flags project risks from status reports, but it often misses emerging supplier concerns discussed only in workshops. Executives want the flag list to replace monthly risk reviews. What should the program manager propose?",
+        "choices": [
+          "Replace workshops because structured status reports are easier for the service to analyze",
+          "Treat unflagged projects as low risk unless an issue has already occurred",
+          "Use the flags as one input, retain accountable human review, and monitor known coverage limits",
+          "Add more risk categories and allow the service to approve responses automatically"
+        ],
+        "correct": 2,
+        "explanation": "The service has a demonstrated information boundary, so its signals can support but not replace accountable risk identification and judgment. Removing workshops discards relevant evidence, treating silence as low risk confuses absence of detection with absence of exposure, and automatic response approval exceeds the validated capability.",
+        "chapterId": "pmbok-ch02-project-environment"
+      },
+      {
+        "tag": "Coaching and mentoring",
+        "domain": "People",
+        "topic": "Coaching and mentoring",
+        "approach": "Agile",
+        "difficulty": "Medium",
+        "decisionRule": "help the team discover its own answer when it has the knowledge and authority.",
+        "text": "A mature data team asks the project manager to settle how many experiments it should run concurrently. Flow data and customer priorities are visible to the team. What should the project manager do?",
+        "choices": [
+          "Coach the team to interpret the data, select a limit, and inspect the result",
+          "Set the concurrency limit alone because resource decisions belong to management",
+          "Ask the sponsor to prescribe a limit that will maximize visible activity",
+          "Allow unlimited experiments because mature teams do not need operating constraints"
+        ],
+        "correct": 0,
+        "explanation": "The team possesses both evidence and authority, so coaching it to choose and inspect a limit strengthens its decision capability. A manager-imposed limit is unnecessary, sponsor prescription is remote from the work, and unlimited concurrency ignores the flow problem the team is trying to solve.",
+        "chapterId": "pmbok-ch03-project-manager-role"
+      },
+      {
+        "tag": "Planning and adaptation",
+        "domain": "Process",
+        "topic": "Planning and adaptation",
+        "approach": "Predictive",
+        "difficulty": "Easy",
+        "decisionRule": "involve the people who understand and will perform the work in planning it.",
+        "text": "The project manager is preparing a detailed migration plan, but the database specialists who will perform the work have not reviewed the estimates or sequence. What should happen next?",
+        "choices": [
+          "Engage the specialists to validate activities, estimates, dependencies, assumptions, and risks",
+          "Finalize the plan first so specialists can comment on one stable version",
+          "Ask the sponsor to approve the estimates because specialist time is expensive",
+          "Use durations from the previous project without checking this migration's constraints"
+        ],
+        "correct": 0,
+        "explanation": "The specialists hold execution knowledge that is missing from the draft, so their participation improves feasibility and ownership before approval. A finalized plan anchors weak assumptions, sponsor approval cannot replace expertise, and historical durations need contextual validation.",
+        "chapterId": "pmbok-ch01-introduction"
+      },
+      {
+        "tag": "Coaching and mentoring",
+        "domain": "People",
+        "topic": "Coaching and mentoring",
+        "approach": "Hybrid",
+        "difficulty": "Medium",
+        "decisionRule": "agree on coaching boundaries so development support does not replace formal accountability.",
+        "text": "A functional manager asks the project manager to coach an analyst on stakeholder presentations, then asks for confidential details of every coaching conversation for the annual appraisal. What should the project manager do?",
+        "choices": [
+          "Provide full conversation notes because the functional manager owns the appraisal",
+          "Agree upfront on development goals and progress reporting while protecting personal coaching dialogue",
+          "Refuse all coaching because line management and projects must never share development goals",
+          "Coach the analyst secretly and tell the manager only after the appraisal is complete"
+        ],
+        "correct": 1,
+        "explanation": "Clear boundaries can support legitimate progress reporting without turning a developmental relationship into covert performance surveillance. Full notes inhibit candor, refusing collaboration wastes aligned support, and secret coaching damages transparency with both the analyst and functional manager.",
+        "chapterId": "pmbok-ch03-project-manager-role"
+      },
+      {
+        "tag": "Planning and adaptation",
+        "domain": "Process",
+        "topic": "Planning and adaptation",
+        "approach": "Agile",
+        "difficulty": "Medium",
+        "decisionRule": "plan for sustainable effective capacity rather than theoretical full utilization.",
+        "text": "A release plan assumes every team member spends one hundred percent of each iteration on planned feature work, although production support and refinement are recurring responsibilities. What should the scrum master recommend?",
+        "choices": [
+          "Keep full utilization and treat support requests as individual overtime",
+          "Use observed effective capacity and variability, leaving space for recurring responsibilities",
+          "Remove refinement from the iteration because backlog work is not product delivery",
+          "Increase story-point values until the plan matches the desired release date"
+        ],
+        "correct": 1,
+        "explanation": "Known support and refinement reduce effective feature capacity, so observed availability and variability should inform a sustainable plan. Overtime masks demand, removing refinement damages readiness, and changing estimates to fit a date corrupts rather than improves forecasting.",
+        "chapterId": "pmbok-ch01-introduction"
+      },
+      {
+        "tag": "Coaching and mentoring",
+        "domain": "People",
+        "topic": "Coaching and mentoring",
+        "approach": "Agile",
+        "difficulty": "Medium",
+        "decisionRule": "adapt coaching to evidence of mastery and withdraw support progressively.",
+        "text": "After three releases, a product analyst independently facilitates discovery sessions and handles difficult stakeholder questions well. The assigned mentor still attends every session and answers first. What should happen next?",
+        "choices": [
+          "Continue the arrangement because expert presence can only improve stakeholder confidence",
+          "Replace the analyst's development goal with more observation of the mentor",
+          "Review readiness with the analyst and mentor, then reduce support while retaining periodic feedback",
+          "End the mentoring relationship immediately without discussing future development needs"
+        ],
+        "correct": 2,
+        "explanation": "Evidence shows growing mastery, so a jointly planned reduction in support preserves autonomy while maintaining useful feedback. Constant expert intervention now limits ownership, more observation ignores demonstrated skill, and abrupt termination misses a healthy transition and any next development goals.",
+        "chapterId": "pmbok-ch03-project-manager-role"
+      },
+      {
+        "tag": "Planning and adaptation",
+        "domain": "Process",
+        "topic": "Planning and adaptation",
+        "approach": "Hybrid",
+        "difficulty": "Hard",
+        "decisionRule": "design one planning system around interfaces, evidence, and appropriate planning horizons.",
+        "text": "A construction workstream uses approved phase plans, while an iterative controls workstream reprioritizes every two weeks. Repeated commissioning conflicts occur because each group plans its interfaces at a different level and time horizon. What should the project manager do?",
+        "choices": [
+          "Require the iterative team to freeze its complete backlog through commissioning",
+          "Let each workstream optimize independently and add schedule reserve at integration points",
+          "Create integrated interface milestones, ownership, evidence, and synchronized replanning cadences",
+          "Replace phase planning with iteration planning across construction and external permits"
+        ],
+        "correct": 2,
+        "explanation": "The recurring conflict comes from unsynchronized interface planning, so shared milestones, evidence, owners, and cadences connect the different horizons. A frozen backlog removes useful adaptation, reserve does not create coordination, and applying one method everywhere ignores construction and permit constraints.",
+        "chapterId": "pmbok-ch01-introduction"
+      },
+      {
+        "tag": "Virtual and cross-cultural collaboration",
+        "domain": "People",
+        "topic": "Virtual and cross-cultural collaboration",
+        "approach": "Hybrid",
+        "difficulty": "Medium",
+        "decisionRule": "design time-zone practices with the team and distribute inconvenience fairly.",
+        "text": "A global engineering team schedules every live coordination meeting for headquarters morning, requiring the Asia-based specialists to attend late at night. Attendance remains high, but their participation and response quality are falling. What should the project manager do?",
+        "choices": [
+          "Keep the schedule because headquarters includes the largest number of participants",
+          "Replace live meetings with headquarters recordings and remove all real-time interaction",
+          "Ask the Asia specialists to submit more detailed notes before each late meeting",
+          "Co-design rotating meeting times and asynchronous handoffs while preserving essential overlap"
+        ],
+        "correct": 3,
+        "explanation": "Rotating inconvenience and strengthening asynchronous handoffs support inclusion without losing necessary real-time collaboration. Majority convenience alone externalizes fatigue, recordings eliminate useful exchange, and more preparation from the disadvantaged group adds burden without correcting the inequitable schedule.",
+        "chapterId": "pmbok-ch10-communications-management"
+      },
+      {
+        "tag": "Planning and adaptation",
+        "domain": "Process",
+        "topic": "Planning and adaptation",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "decisionRule": "make uncertainty visible and progressively elaborate plans as reliable information emerges.",
+        "text": "Executives request exact task dates for a late project phase whose design depends on test results six months away. They need a credible portfolio forecast now. What should the project manager do?",
+        "choices": [
+          "Provide exact dates using the current best-case design so the portfolio can commit",
+          "Refuse to provide any dates until the test results are available",
+          "Use the prior project's detailed schedule without changing its assumptions",
+          "Provide range-based milestones, explicit assumptions, and planned points for progressive elaboration"
+        ],
+        "correct": 3,
+        "explanation": "The design dependency prevents credible task-level precision, but portfolio decisions still need bounded information, so ranges, assumptions, and elaboration points are appropriate. Exact dates create false certainty, no forecast withholds useful information, and copied detail hides contextual uncertainty.",
+        "chapterId": "pmbok-ch04-integration-management"
+      },
+      {
+        "tag": "Virtual and cross-cultural collaboration",
+        "domain": "People",
+        "topic": "Virtual and cross-cultural collaboration",
+        "approach": "Agile",
+        "difficulty": "Medium",
+        "decisionRule": "make differing communication norms explicit before interpreting silence as agreement.",
+        "text": "In virtual retrospectives, team members from one regional office rarely challenge proposals in the group call but send substantial concerns afterward. The facilitator assumes they are disengaged. What should the facilitator do?",
+        "choices": [
+          "Discuss participation preferences and add structured silent input and round-robin review",
+          "Require every person to debate spontaneously or record nonparticipation in performance feedback",
+          "Ignore later concerns because only statements made during the retrospective are valid",
+          "Assign the regional office a separate retrospective with no cross-team discussion"
+        ],
+        "correct": 0,
+        "explanation": "Structured written and round-robin participation accommodates different norms while keeping the whole team in one learning process. Forced spontaneous debate confuses style with commitment, rejecting later input loses evidence, and permanently separate retrospectives reduce shared understanding and integration.",
+        "chapterId": "pmbok-ch10-communications-management"
+      },
+      {
+        "tag": "Planning and adaptation",
+        "domain": "Process",
+        "topic": "Planning and adaptation",
+        "approach": "Agile",
+        "difficulty": "Easy",
+        "decisionRule": "order backlog work by transparent value, risk, and dependency evidence.",
+        "text": "The product backlog is currently ordered by which stakeholder complained most recently, and the team cannot explain why the next items matter. What should the product owner do?",
+        "choices": [
+          "Reorder the backlog using transparent value, risk, dependency, and learning considerations",
+          "Keep the order because recent complaints are the most current customer evidence",
+          "Ask developers to choose items solely by technical convenience at each planning event",
+          "Give every stakeholder an equal number of items in the next release"
+        ],
+        "correct": 0,
+        "explanation": "Recent complaints alone do not establish relative product value, so explicit decision factors should make ordering understandable and adaptable. Recency can bias priorities, technical convenience omits outcomes, and equal allocation ignores differences in value, risk, and dependency.",
+        "chapterId": "pmbok-ch05-scope-management"
+      },
+      {
+        "tag": "Virtual and cross-cultural collaboration",
+        "domain": "People",
+        "topic": "Virtual and cross-cultural collaboration",
+        "approach": "Hybrid",
+        "difficulty": "Medium",
+        "decisionRule": "build trust through visible commitments and reliable follow-through, not surveillance.",
+        "text": "A remotely formed research consortium has never worked together. Members repeatedly ask whether partners are progressing and propose mandatory webcam monitoring throughout the workday. What should the project manager recommend?",
+        "choices": [
+          "Adopt continuous monitoring because new virtual teams need proof of individual effort",
+          "Create transparent team commitments, short coordination cadences, and visible completed outcomes",
+          "Let each institution report only to its own manager to preserve local trust",
+          "Delay collaborative work until an in-person meeting can be funded"
+        ],
+        "correct": 1,
+        "explanation": "Trust grows when members make clear commitments, expose relevant progress, and reliably deliver outcomes. Continuous monitoring measures presence and signals distrust, institution-only reporting preserves silos, and postponing work treats physical colocation as a prerequisite despite available collaborative practices.",
+        "chapterId": "pmbok-ch10-communications-management"
+      },
+      {
+        "tag": "Planning and adaptation",
+        "domain": "Process",
+        "topic": "Planning and adaptation",
+        "approach": "Hybrid",
+        "difficulty": "Medium",
+        "decisionRule": "reconcile inconsistent planning artifacts through clear ownership and a shared source of truth.",
+        "text": "The release roadmap, master schedule, and supplier plan show three different dates for the same integration event, and teams are using whichever date protects their local commitment. What should the project manager do first?",
+        "choices": [
+          "Select the earliest date so every workstream retains maximum schedule pressure",
+          "Bring artifact owners together to resolve the authoritative date, assumptions, and update responsibilities",
+          "Report all three dates to stakeholders until actual progress identifies the most realistic one",
+          "Let the supplier plan govern because external commitments are harder to change"
+        ],
+        "correct": 1,
+        "explanation": "The conflict is a planning-control and ownership problem, so the owners must reconcile the integrated event and future update responsibility. Choosing earliest or supplier dates lacks analysis, while reporting incompatible dates perpetuates ambiguity rather than creating an accountable source of truth.",
+        "chapterId": "pmbok-ch06-schedule-management"
+      },
+      {
+        "tag": "Virtual and cross-cultural collaboration",
+        "domain": "People",
+        "topic": "Virtual and cross-cultural collaboration",
+        "approach": "Agile",
+        "difficulty": "Medium",
+        "decisionRule": "confirm shared meaning when language fluency and specialist vocabulary intersect.",
+        "text": "A multilingual software team agrees in a video call to freeze an interface, but two members later implement changes because they understood freeze to mean discourage rather than prohibit. What should the scrum master do?",
+        "choices": [
+          "Require only native speakers to participate in future interface decisions",
+          "Ask the two members to reverse their work without discussing the misunderstanding",
+          "Define key terms visually, use examples, and have participants confirm the decision in their own words",
+          "Move all technical decisions to email because written language is always unambiguous"
+        ],
+        "correct": 2,
+        "explanation": "Visual definitions, examples, and confirmation reveal differences in meaning before work proceeds. Excluding non-native speakers wastes expertise, silent reversal leaves the cause intact, and email can preserve the same ambiguous term without the feedback needed to test comprehension.",
+        "chapterId": "pmbok-ch10-communications-management"
+      },
+      {
+        "tag": "Delivery and acceptance",
+        "domain": "Process",
+        "topic": "Delivery and acceptance",
+        "approach": "Predictive",
+        "difficulty": "Hard",
+        "decisionRule": "verify end-to-end transition readiness before treating signed output acceptance as closure.",
+        "text": "A customer has signed technical acceptance for a new dispatch system, but operations has not completed failover rehearsal and cannot yet support overnight incidents. The sponsor wants immediate project closure. What should the project manager do first?",
+        "choices": [
+          "Close the project because customer signature proves all delivery obligations are complete",
+          "Transfer the open rehearsal and support gap to operations as post-project improvement work",
+          "Check transition and closure criteria, then resolve or formally disposition the readiness gap",
+          "Revoke the customer's technical acceptance until operations confirms full staffing"
+        ],
+        "correct": 2,
+        "explanation": "Technical acceptance is signed, but the explicit failover and support gap may prevent sustainable transition, so governing closure criteria must determine its disposition. Signature alone may not cover readiness, silent transfer hides unfinished obligations, and revoking valid technical acceptance confuses output acceptance with operational transition.",
+        "chapterId": "pmbok-ch05-scope-management"
+      },
+      {
+        "tag": "Virtual and cross-cultural collaboration",
+        "domain": "People",
+        "topic": "Virtual and cross-cultural collaboration",
+        "approach": "Hybrid",
+        "difficulty": "Medium",
+        "decisionRule": "address remote relationship strain directly with evidence and a shared collaboration reset.",
+        "text": "Two country teams exchange technically correct handoff documents but increasingly describe each other as careless in private chats. Minor clarifications now wait until formal weekly meetings. What should the project manager do next?",
+        "choices": [
+          "Increase document templates because interpersonal concerns disappear when forms are complete",
+          "Route all handoffs through the project manager to prevent direct friction",
+          "Move one country's work to a supplier so the teams no longer depend on each other",
+          "Facilitate a joint review of recent handoffs, impacts, assumptions, and quicker contact agreements"
+        ],
+        "correct": 3,
+        "explanation": "A joint evidence-based reset addresses deteriorating trust and establishes faster interaction around the real handoffs. More forms do not repair attribution, routing everything through the project manager creates a bottleneck, and removing dependency through outsourcing is disproportionate and avoids the collaboration issue.",
+        "chapterId": "pmbok-ch10-communications-management"
+      },
+      {
+        "tag": "Delivery and acceptance",
+        "domain": "Process",
+        "topic": "Delivery and acceptance",
+        "approach": "Agile",
+        "difficulty": "Medium",
+        "decisionRule": "complete agreed security evidence before representing an increment as releasable.",
+        "text": "The product owner likes a payment feature at review, but a security test listed in its acceptance criteria has not run because the test environment was unavailable. What should the team do?",
+        "choices": [
+          "Release the feature because product-owner satisfaction outweighs one delayed technical test",
+          "Mark it accepted and create a future backlog item for the missing security evidence",
+          "Remove the security criterion because the environment constraint was outside team control",
+          "Keep the feature incomplete or unreleasable until the criterion is tested or formally changed"
+        ],
+        "correct": 3,
+        "explanation": "The agreed security evidence is missing, so favorable review feedback does not establish completion or release readiness. Deferring the test transfers exposure, removing the criterion needs an authorized product and risk decision, and an external environment constraint explains delay but does not supply evidence.",
+        "chapterId": "pmbok-ch08-quality-management"
+      },
+      {
+        "tag": "Virtual and cross-cultural collaboration",
+        "domain": "People",
+        "topic": "Virtual and cross-cultural collaboration",
+        "approach": "Agile",
+        "difficulty": "Medium",
+        "decisionRule": "onboard remote members through relationships, context, and early supported contribution.",
+        "text": "A developer joins a mature virtual team and receives repository access and recorded meetings, but contributes little and asks basic questions privately after two sprints. What should the team leader do?",
+        "choices": [
+          "Pair the developer with rotating teammates, explain team context, and select a supported starter outcome",
+          "Send additional recordings and wait another two sprints before involving teammates",
+          "Assign an independent complex feature so the developer must learn the system quickly",
+          "Reduce the developer's meeting access until technical knowledge reaches the team's level"
+        ],
+        "correct": 0,
+        "explanation": "Remote onboarding requires social connections, contextual knowledge, and a safe path to meaningful contribution, which pairing and a bounded outcome provide. More passive material does not build relationships, a complex solo assignment raises failure risk, and reduced access further isolates the new member.",
+        "chapterId": "pmbok-ch10-communications-management"
+      },
+      {
+        "tag": "Delivery and acceptance",
+        "domain": "Process",
+        "topic": "Delivery and acceptance",
+        "approach": "Hybrid",
+        "difficulty": "Easy",
+        "decisionRule": "confirm acceptance and transition evidence before expanding a successful pilot.",
+        "text": "A pilot release meets its documented outcome target and users report that the workflow is ready for wider use. What should the project manager do next?",
+        "choices": [
+          "Confirm acceptance and transition criteria, capture evidence, and authorize the planned next stage",
+          "Scale immediately because positive user feedback replaces formal transition checks",
+          "Close the project because the pilot has already demonstrated customer value",
+          "Repeat the pilot until every user gives the workflow the same satisfaction rating"
+        ],
+        "correct": 0,
+        "explanation": "The pilot has encouraging outcome evidence, so the next step is to confirm the agreed acceptance and transition conditions before staged expansion. Feedback alone may omit readiness obligations, pilot success is not necessarily project closure, and unanimous satisfaction is not a reasonable substitute for defined criteria.",
+        "chapterId": "pmbok-ch05-scope-management"
+      },
+      {
+        "tag": "Virtual and cross-cultural collaboration",
+        "domain": "People",
+        "topic": "Virtual and cross-cultural collaboration",
+        "approach": "Hybrid",
+        "difficulty": "Medium",
+        "decisionRule": "integrate cultural and local-calendar knowledge into one transparent delivery plan.",
+        "text": "Regional teams independently planned user training, overlooking that one country's launch overlaps a major holiday and another requires local-language accreditation. The integrated milestone is now at risk. What should the project manager do?",
+        "choices": [
+          "Hold every region to the original dates because local constraints should have been raised earlier",
+          "Bring regional leads together to revise dependencies, ownership, and locally valid readiness criteria",
+          "Cancel localization so all regions can use the headquarters training package",
+          "Let each region choose a launch date without updating the integrated program plan"
+        ],
+        "correct": 1,
+        "explanation": "Joint replanning incorporates legitimate regional constraints into one controlled delivery picture and clarifies who owns readiness. Enforcing infeasible dates ignores known facts, canceling localization may invalidate adoption or accreditation, and uncoordinated regional dates hide cross-program dependencies rather than integrating them.",
+        "chapterId": "pmbok-ch04-integration-management"
+      },
+      {
+        "tag": "Delivery and acceptance",
+        "domain": "Process",
+        "topic": "Delivery and acceptance",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "decisionRule": "verify conformance internally before requesting formal customer acceptance.",
+        "text": "A contractor reports a facility deliverable complete, but the project team has not checked it against the approved requirements. The customer is available for acceptance tomorrow. What should the project manager do first?",
+        "choices": [
+          "Ask the customer to inspect it because formal acceptance also serves as quality control",
+          "Verify the deliverable against requirements, correct defects as needed, then seek acceptance",
+          "Obtain conditional acceptance and complete internal verification during the warranty period",
+          "Close the work package based on the contractor's completion certification"
+        ],
+        "correct": 1,
+        "explanation": "Contractor completion has not yet been verified against requirements, so internal conformance evidence should precede customer acceptance. Making the customer discover defects shifts quality control, conditional acceptance transfers known uncertainty, and contractor certification alone does not establish project validation.",
+        "chapterId": "pmbok-ch05-scope-management"
+      },
+      {
+        "tag": "Negotiation and decision making",
+        "domain": "People",
+        "topic": "Negotiation and decision making",
+        "approach": "Agile",
+        "difficulty": "Medium",
+        "decisionRule": "negotiate from shared value and constraints rather than positional feature counts.",
+        "text": "A product owner and operations manager disagree over whether the next sprint should add customer features or automate a fragile deployment step. Both have credible evidence. What should the project manager facilitate?",
+        "choices": [
+          "Divide sprint capacity equally without examining the relative outcomes",
+          "Let the product owner decide because the backlog is exclusively a product concern",
+          "Compare customer value, operational risk, and timing, then agree on the best combined option",
+          "Ask developers to work overtime so neither party needs to make a tradeoff"
+        ],
+        "correct": 2,
+        "explanation": "An interests-and-evidence discussion can reveal sequencing or a combined outcome that protects both value and reliability. Equal capacity may be arbitrary, product ownership does not erase operational risk, and overtime avoids prioritization while transferring the conflict's cost to the team.",
+        "chapterId": "pmbok-ch03-project-manager-role"
+      },
+      {
+        "tag": "Delivery and acceptance",
+        "domain": "Process",
+        "topic": "Delivery and acceptance",
+        "approach": "Agile",
+        "difficulty": "Hard",
+        "decisionRule": "use outcome evidence to revisit the product hypothesis after output acceptance.",
+        "text": "Stakeholders accept every increment of a self-service support product, yet four weeks after release customers still call the service center at the previous rate. Usage analytics show that users abandon the new flow at the identity step. What should the product leader do next?",
+        "choices": [
+          "Continue the roadmap because stakeholder acceptance confirms the product is delivering value",
+          "Train service-center agents to direct every caller back to the new self-service flow",
+          "Investigate the identity-step evidence with users and adapt the outcome hypothesis and backlog",
+          "Increase the number of increments delivered each iteration to accelerate benefit realization"
+        ],
+        "correct": 2,
+        "explanation": "Accepted outputs have not changed the target behavior, and analytics identify a likely abandonment point, so the team should test that evidence and adapt the product hypothesis. Acceptance is not outcome realization, redirecting callers treats a symptom, and more output does not address the failed user journey.",
+        "chapterId": "pmbok-ch08-quality-management"
+      },
+      {
+        "tag": "Negotiation and decision making",
+        "domain": "People",
+        "topic": "Negotiation and decision making",
+        "approach": "Hybrid",
+        "difficulty": "Medium",
+        "decisionRule": "use explicit decision criteria when expert opinions remain divided after exploration.",
+        "text": "Three architects evaluate two cloud designs and remain evenly divided after prototypes. One design costs less; the other recovers faster and has stronger regulatory evidence. A decision is due today. What should the project manager do?",
+        "choices": [
+          "Delay the decision until all architects voluntarily reach unanimous agreement",
+          "Select the least expensive design because cost is the only objective measure",
+          "Take an unrecorded vote and omit dissent to present a unified team",
+          "Apply agreed weighted criteria and decision authority, documenting tradeoffs and dissent"
+        ],
+        "correct": 3,
+        "explanation": "When exploration does not create consensus, transparent criteria and established authority support a timely, traceable decision. Waiting for unanimity may be impossible, cost alone ignores recovery and compliance, and an unrecorded vote conceals decision rationale and relevant dissent.",
+        "chapterId": "pmbok-ch03-project-manager-role"
+      },
+      {
+        "tag": "Delivery and acceptance",
+        "domain": "Process",
+        "topic": "Delivery and acceptance",
+        "approach": "Hybrid",
+        "difficulty": "Medium",
+        "decisionRule": "satisfy contractual service-acceptance evidence before authorizing external deployment.",
+        "text": "An increment passes internal product checks, but the outsourced hosting agreement requires a documented recovery test before production deployment. The hosting supplier has not scheduled that test. What should the project manager do?",
+        "choices": [
+          "Deploy internally approved code and complete the supplier test during normal operations",
+          "Remove recovery testing from the agreement because product checks already passed",
+          "Accept the supplier's verbal assurance that recovery procedures were tested previously",
+          "Coordinate the required test and evidence, then obtain the authorized deployment decision"
+        ],
+        "correct": 3,
+        "explanation": "Internal product checks do not fulfill the explicit contractual recovery condition, so the supplier test and evidence must precede authorized deployment. Testing in operation exposes users, unilateral removal changes the agreement, and prior verbal assurance is not the required acceptance record.",
+        "chapterId": "pmbok-ch12-procurement-management"
+      },
+      {
+        "tag": "Negotiation and decision making",
+        "domain": "People",
+        "topic": "Negotiation and decision making",
+        "approach": "Agile",
+        "difficulty": "Medium",
+        "decisionRule": "clarify the decision rule before inviting participation so consultation is not mistaken for consensus.",
+        "text": "A team workshop gathers options for changing its support model. After discussion, several members insist that any decision requires unanimity, although the service owner remains accountable for operational coverage. What should the facilitator do?",
+        "choices": [
+          "Continue discussion until every participant supports one option regardless of urgency",
+          "Clarify the service owner's decision authority, consultation criteria, and how concerns will be addressed",
+          "Let the loudest team members decide because they show the strongest commitment",
+          "Cancel the workshop and have the sponsor design the support model alone"
+        ],
+        "correct": 1,
+        "explanation": "Participants need to know how input informs the accountable decision and how legitimate concerns will be handled. Unanimity was not established and may stall action, volume is not authority, and sponsor takeover discards the service owner's accountability and the team's useful operating knowledge.",
+        "chapterId": "pmbok-ch03-project-manager-role"
+      },
+      {
+        "tag": "Delivery and acceptance",
+        "domain": "Process",
+        "topic": "Delivery and acceptance",
+        "approach": "Predictive",
+        "difficulty": "Easy",
+        "decisionRule": "repair a documented nonconformance before resubmitting a rejected deliverable.",
+        "text": "The customer rejects a training package because two required maintenance procedures are missing, and the omission is confirmed against the approved acceptance checklist. What should the project manager do next?",
+        "choices": [
+          "Record the nonconformance, complete the missing procedures, verify them, and resubmit",
+          "Ask the customer to accept the package because the remaining material is usable",
+          "Change the acceptance checklist so it matches the delivered training package",
+          "Escalate the rejection to the sponsor before allowing any corrective work"
+        ],
+        "correct": 0,
+        "explanation": "The rejection is supported by an approved criterion and a confirmed omission, so correction, verification, and resubmission are the proper sequence. Partial usability does not meet scope, changing criteria hides the gap, and escalation is unnecessary before straightforward corrective action.",
+        "chapterId": "pmbok-ch08-quality-management"
+      },
+      {
+        "tag": "Negotiation and decision making",
+        "domain": "People",
+        "topic": "Negotiation and decision making",
+        "approach": "Hybrid",
+        "difficulty": "Medium",
+        "decisionRule": "maintain ethical and governance boundaries while seeking alternative negotiating value.",
+        "text": "A licensing partner offers a critical discount if the project manager privately shares a competitor's confidential bid range. Budget pressure is severe, and the partner says no record is necessary. What should the project manager do?",
+        "choices": [
+          "Share only an approximate range because the discount benefits the project",
+          "Ask a team member without procurement authority to provide the information instead",
+          "End all negotiation and blacklist the licensing partner without documenting the request",
+          "Refuse the request, document it appropriately, and negotiate using authorized commercial information"
+        ],
+        "correct": 3,
+        "explanation": "Confidentiality and procurement integrity are nonnegotiable boundaries, while legitimate pricing and value terms remain available for discussion. An approximate range still discloses protected information, using an intermediary remains unethical, and undocumented immediate blacklisting bypasses proportionate organizational review.",
+        "chapterId": "pmbok-ch03-project-manager-role"
+      },
+      {
+        "tag": "Delivery and acceptance",
+        "domain": "Process",
+        "topic": "Delivery and acceptance",
+        "approach": "Agile",
+        "difficulty": "Medium",
+        "decisionRule": "establish frequent acceptance evidence when delayed validation would amplify rework.",
+        "text": "A customer representative insists on signing off only after six months, although the team will deliver usable increments every three weeks and the requirements are expected to evolve. What should the project leader propose?",
+        "choices": [
+          "Keep end-only signoff and archive review feedback as nonbinding suggestions",
+          "Agree incremental review and acceptance evidence while preserving any required final authorization",
+          "Let developers accept each increment because they understand the evolving requirements best",
+          "Freeze requirements for six months so final signoff has a stable comparison point"
+        ],
+        "correct": 1,
+        "explanation": "Frequent usable increments and evolving needs make delayed validation costly, so incremental evidence should complement any legally required final authorization. Treating feedback as nonbinding loses learning, developers cannot replace customer validation, and freezing needs sacrifices adaptive value merely to simplify signoff.",
+        "chapterId": "pmbok-ch05-scope-management"
+      },
+      {
+        "tag": "Negotiation and decision making",
+        "domain": "People",
+        "topic": "Negotiation and decision making",
+        "approach": "Agile",
+        "difficulty": "Medium",
+        "decisionRule": "build a decision coalition by connecting stakeholder interests to a shared outcome.",
+        "text": "A city-services app needs one identity standard, but transit, libraries, and recreation departments favor their existing systems. None can impose a decision on the others. What should the project manager do?",
+        "choices": [
+          "Allow three identity systems because avoiding negotiation preserves departmental relationships",
+          "Ask the software vendor to choose whichever integration is easiest to build",
+          "Facilitate shared citizen outcomes, constraints, and evidence to negotiate a cross-department standard",
+          "Escalate each department separately until one executive agrees to overrule the others"
+        ],
+        "correct": 2,
+        "explanation": "A coalition based on citizen outcomes and transparent constraints can create commitment to a shared standard without unilateral authority. Three systems preserve fragmentation, vendor convenience is not public value, and fragmented escalation encourages political positioning instead of a joint decision.",
+        "chapterId": "pmbok-ch13-stakeholder-management"
+      },
+      {
+        "tag": "Delivery and acceptance",
+        "domain": "Process",
+        "topic": "Delivery and acceptance",
+        "approach": "Hybrid",
+        "difficulty": "Hard",
+        "decisionRule": "trace acceptance to every enabling deliverable needed for usable end-to-end value.",
+        "text": "A hybrid claims platform meets functional tests and the configured software is ready, but production benefits depend on migrating historical policies. Migration ownership appears in neither the predictive work breakdown structure nor the agile backlog. What should the project manager do first?",
+        "choices": [
+          "Accept the platform now and let operations plan migration after project closure",
+          "Add migration stories directly to the next iteration without checking scope or funding",
+          "Trace the end-to-end acceptance and transition gap, assess impacts, and obtain an authorized plan",
+          "Delay functional acceptance until every historical policy has been manually reviewed"
+        ],
+        "correct": 2,
+        "explanation": "The platform cannot realize its stated production value without migration, and no delivery system owns that work, so end-to-end traceability and authorized impact resolution come first. Operations transfer conceals a gap, direct backlog insertion bypasses scope and funding, and blanket manual review assumes an unproven solution.",
+        "chapterId": "pmbok-ch08-quality-management"
+      },
+      {
+        "tag": "Negotiation and decision making",
+        "domain": "People",
+        "topic": "Negotiation and decision making",
+        "approach": "Hybrid",
+        "difficulty": "Medium",
+        "decisionRule": "reopen negotiation when new stakeholder evidence changes the assumptions supporting an agreement.",
+        "text": "A hospital and software supplier agreed to train super-users after configuration ends. Pilot nurses now show that late training will miss workflow defects, while the supplier says earlier involvement requires scarce specialists. What should the project manager do next?",
+        "choices": [
+          "Enforce the original agreement because reopening it would weaken negotiating credibility",
+          "Require the nurses to document defects after launch so the supplier schedule remains intact",
+          "Move all configuration decisions to the supplier because its specialists are scarce",
+          "Share the pilot evidence and negotiate targeted early sessions, priorities, and resource tradeoffs"
+        ],
+        "correct": 3,
+        "explanation": "The pilot provides material new evidence, so a focused renegotiation can target the workflows where early specialist access has the most value. Rigid enforcement ignores changed assumptions, post-launch discovery raises adoption risk, and supplier-only decisions exclude the clinicians who understand operational fit.",
+        "chapterId": "pmbok-ch13-stakeholder-management"
+      },
+      {
+        "tag": "Measurement and forecasting",
+        "domain": "Process",
+        "topic": "Measurement and forecasting",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "decisionRule": "combine performance indexes with known future drivers instead of extrapolating one metric.",
+        "text": "A project has a schedule performance index of 0.90 and a cost performance index of 1.10, while a critical future procurement is now quoted above plan. What should the project manager report?",
+        "choices": [
+          "That favorable cost efficiency offsets schedule delay, so overall performance is on target",
+          "Only the two current indexes because forecasts would mix measured and uncertain information",
+          "The baseline completion date and budget because neither has yet been formally changed",
+          "An integrated forecast using current performance, remaining network logic, and the new procurement estimate"
+        ],
+        "correct": 3,
+        "explanation": "The indexes describe past performance, while the future procurement and remaining schedule logic materially affect the outlook, so the forecast must combine them. Offsetting unlike indexes is invalid, excluding forecasts withholds decision information, and baselines are reference points rather than current predictions.",
+        "chapterId": "pmbok-ch07-cost-management"
+      },
+      {
+        "tag": "Measurement and forecasting",
+        "domain": "Process",
+        "topic": "Measurement and forecasting",
+        "approach": "Agile",
+        "difficulty": "Easy",
+        "decisionRule": "use velocity for a stable team's planning rather than cross-team productivity comparison.",
+        "text": "A director asks which of four teams is most productive by comparing their velocity numbers, although each team estimates with its own scale. How should the agile lead respond?",
+        "choices": [
+          "Use each team's own empirical data for forecasting and choose outcome measures for broader comparison",
+          "Convert all story points to hours so velocity becomes comparable across teams",
+          "Rank teams by velocity but exclude their first two iterations from the calculation",
+          "Require one shared point scale and recalculate all historical velocity values"
+        ],
+        "correct": 0,
+        "explanation": "Team-specific estimation scales make cross-team velocity rankings invalid, while each team's trend can still support its forecast. Hour conversion does not standardize uncertainty, excluding early data leaves different scales, and retroactive shared points create false precision rather than outcome comparison.",
+        "chapterId": "pmbok-ch06-schedule-management"
+      },
+      {
+        "tag": "Measurement and forecasting",
+        "domain": "Process",
+        "topic": "Measurement and forecasting",
+        "approach": "Hybrid",
+        "difficulty": "Medium",
+        "decisionRule": "express a volatile delivery forecast as an evidence-based range with dependencies.",
+        "text": "Executives request one release date, but recent throughput varies widely and a final deployment depends on an external certification window. What should the project manager provide?",
+        "choices": [
+          "The average-throughput date without caveats so executives can make one decision",
+          "A probability-informed date range showing throughput assumptions and certification dependency",
+          "The latest possible date because conservative commitments preserve stakeholder trust",
+          "No forecast until throughput stabilizes and certification has been completed"
+        ],
+        "correct": 1,
+        "explanation": "Observed variability and an external window make a single date misleading, so a range with probability and dependency assumptions supports informed decisions. An uncaveated average hides uncertainty, a worst-case promise is not analysis, and withholding all forecasts discards useful evidence.",
+        "chapterId": "pmbok-ch06-schedule-management"
+      },
+      {
+        "tag": "Measurement and forecasting",
+        "domain": "Process",
+        "topic": "Measurement and forecasting",
+        "approach": "Predictive",
+        "difficulty": "Hard",
+        "decisionRule": "replace subjective percent-complete claims with objective progress evidence before forecasting.",
+        "text": "A work-package leader reports engineering as eighty percent complete based on hours spent, but only half of the independently verifiable drawings have passed review. The optimistic percentage drives the current completion forecast. What should the project manager do first?",
+        "choices": [
+          "Keep the reported percentage because the work-package leader owns the estimate",
+          "Average the hours-based and drawing-based percentages to balance both perspectives",
+          "Apply the agreed objective measurement rule and reforecast from verified progress and remaining work",
+          "Mark the package fifty percent complete and retain the existing forecast date"
+        ],
+        "correct": 2,
+        "explanation": "Hours spent are not evidence of usable completion, while reviewed drawings are independently verifiable, so the agreed measurement basis should drive both status and forecast. Ownership does not validate optimism, averaging incompatible measures lacks meaning, and changing status without reforecasting leaves the consequence hidden.",
+        "chapterId": "pmbok-ch07-cost-management"
+      },
+      {
+        "tag": "Measurement and forecasting",
+        "domain": "Process",
+        "topic": "Measurement and forecasting",
+        "approach": "Agile",
+        "difficulty": "Medium",
+        "decisionRule": "connect expenditure to released outcomes and unfinished inventory before changing capacity.",
+        "text": "A product's cumulative spending is on budget, but the released-value curve has flattened while unfinished features continue to accumulate. The product owner proposes adding another team. What should the product leader do first?",
+        "choices": [
+          "Add the team because on-budget spending demonstrates sound cost control",
+          "Reduce the reported scope so the released-value curve rises proportionally",
+          "Increase feature starts to give the new team enough parallel work",
+          "Analyze flow, completion bottlenecks, delivered outcomes, and cost of delay before adding capacity"
+        ],
+        "correct": 3,
+        "explanation": "On-budget spending is not sufficient when value has flattened and unfinished inventory grows, so the system bottleneck and outcome economics need diagnosis. More people may add queues, redefining scope manipulates measurement, and additional starts intensify the observed flow problem.",
+        "chapterId": "pmbok-ch07-cost-management"
+      },
+      {
+        "tag": "Measurement and forecasting",
+        "domain": "Process",
+        "topic": "Measurement and forecasting",
+        "approach": "Hybrid",
+        "difficulty": "Easy",
+        "decisionRule": "supplement completed milestones with leading measures of readiness and value.",
+        "text": "All build milestones are green, but training completion and customer onboarding rates are falling before launch. What should the project manager do?",
+        "choices": [
+          "Report both delivery progress and leading readiness measures, then forecast their outcome impact",
+          "Keep the dashboard green because training and onboarding belong to operations",
+          "Replace milestone measures entirely with customer satisfaction after launch",
+          "Delay reporting readiness until either metric becomes a confirmed launch issue"
+        ],
+        "correct": 0,
+        "explanation": "The build is progressing, but falling readiness measures are early evidence that launch value may be constrained, so both views belong in the forecast. Exclusion creates a false green picture, post-launch satisfaction arrives too late, and waiting forfeits time for corrective action.",
+        "chapterId": "pmbok-ch07-cost-management"
+      },
+      {
+        "tag": "Measurement and forecasting",
+        "domain": "Process",
+        "topic": "Measurement and forecasting",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "decisionRule": "report unfavorable variance transparently with cause, forecast, and response options.",
+        "text": "A sponsor asks the project manager to omit an unfavorable cost variance from this month's report because a recovery proposal will be reviewed next month. What should the project manager do?",
+        "choices": [
+          "Omit it temporarily because reporting a variance before a solution creates unnecessary concern",
+          "Report the variance, its cause and forecast effect, and the status of recovery options",
+          "Change the reporting threshold so the variance is not material this month",
+          "Report only actual spending and defer all variance analysis until the proposal decision"
+        ],
+        "correct": 1,
+        "explanation": "The variance already exists and affects decision information, so transparent reporting should include cause, outlook, and developing responses. Temporary omission and threshold changes distort governance, while actual spending without variance context prevents stakeholders from understanding performance and choices.",
+        "chapterId": "pmbok-ch07-cost-management"
+      },
+      {
+        "tag": "Agile flow and backlog",
+        "domain": "Process",
+        "topic": "Agile flow and backlog",
+        "approach": "Agile",
+        "difficulty": "Hard",
+        "decisionRule": "restore explicit expedite policy and decision authority when urgency overwhelms flow.",
+        "text": "Every senior stakeholder now labels requests as expedited, the expedite lane contains nine items, and standard work rarely finishes. The service policy defines only one expedite item at a time but names no authority for exceptions. What should the product leader do first?",
+        "choices": [
+          "Increase team capacity reserved for expedited work until the current lane is empty",
+          "Ask developers to select the most technically urgent expedite item each morning",
+          "Reinforce the limit and convene stakeholders to define exception evidence and decision authority",
+          "Convert all standard items to fixed-date work so stakeholders cannot call them expedited"
+        ],
+        "correct": 2,
+        "explanation": "The existing limit has been defeated by missing exception authority, so policy, evidence, and accountable prioritization must be repaired. Reserved capacity treats the symptom, developer selection lacks business authority, and relabeling standard work manipulates classes without resolving competing urgency.",
+        "chapterId": "pmbok-ch06-schedule-management"
+      },
+      {
+        "tag": "Agile flow and backlog",
+        "domain": "Process",
+        "topic": "Agile flow and backlog",
+        "approach": "Hybrid",
+        "difficulty": "Medium",
+        "decisionRule": "align supplier and product work through shared ordering, dependencies, and completion evidence.",
+        "text": "A vendor manages contractual configuration items in one list while the internal team orders related user stories in another. Items regularly reach review without the matching vendor configuration. What should the project manager do?",
+        "choices": [
+          "Hold internal reviews only after the vendor reports its entire contractual scope complete",
+          "Add schedule reserve to each user story that might need a vendor configuration",
+          "Let the vendor prioritize by contract value and the team prioritize by user value independently",
+          "Create shared dependency visibility, coordinated ordering, and integrated completion criteria"
+        ],
+        "correct": 3,
+        "explanation": "The two work systems repeatedly deliver unmatched components, so dependencies, ordering, and completion evidence need shared visibility. End-only review delays learning, generic reserve does not coordinate work, and independent priorities preserve the exact mismatch causing incomplete increments.",
+        "chapterId": "pmbok-ch05-scope-management"
+      },
+      {
+        "tag": "Agile flow and backlog",
+        "domain": "Process",
+        "topic": "Agile flow and backlog",
+        "approach": "Predictive",
+        "difficulty": "Easy",
+        "decisionRule": "make a recurring work queue visible and limit starts to downstream capacity.",
+        "text": "A predictive maintenance project has hundreds of small approved work orders, but crews start many jobs and then wait for the same inspection group. How should the project manager improve flow?",
+        "choices": [
+          "Visualize the queue, set work-in-progress limits, and pull work based on inspection capacity",
+          "Start every approved order so no crew appears idle while inspections are pending",
+          "Increase each activity duration to include the longest historical inspection wait",
+          "Prioritize work only by the date on which each order received approval"
+        ],
+        "correct": 0,
+        "explanation": "The shared inspection group constrains completion while excess starts create queues, so visual pull and work-in-progress limits match demand to capacity. More starts worsen delay, padded durations do not change flow, and approval age alone ignores value and constraint readiness.",
+        "chapterId": "pmbok-ch06-schedule-management"
+      },
+      {
+        "tag": "Agile flow and backlog",
+        "domain": "Process",
+        "topic": "Agile flow and backlog",
+        "approach": "Agile",
+        "difficulty": "Medium",
+        "decisionRule": "protect the iteration goal while making product tradeoffs transparent.",
+        "text": "The product owner repeatedly changes priority among stories already in progress, and developers abandon partially finished work several times per iteration. Delivery of the iteration goal is declining. What should the scrum master facilitate?",
+        "choices": [
+          "Freeze the entire product backlog until the release has been delivered",
+          "Use the iteration goal to discuss tradeoffs and limit changes to started work with the team",
+          "Allow developers to finish any item they personally consider most valuable",
+          "Increase the iteration length so priority changes occur less often relative to delivery time"
+        ],
+        "correct": 1,
+        "explanation": "Repeated switching of started work is undermining the shared goal, so product tradeoffs and change policy should be discussed transparently with the team. Freezing the whole backlog removes adaptation, individual choice fragments value, and a longer iteration may increase rather than reduce exposure to switching.",
+        "chapterId": "pmbok-ch05-scope-management"
+      },
+      {
+        "tag": "Agile flow and backlog",
+        "domain": "Process",
+        "topic": "Agile flow and backlog",
+        "approach": "Hybrid",
+        "difficulty": "Hard",
+        "decisionRule": "measure and manage end-to-end integration flow rather than local definitions of completion.",
+        "text": "Teams meet their local definitions of done, but integrated features wait three weeks for a shared release-train test window. Managers propose raising each team's velocity target to recover the launch date. What should the project leader do?",
+        "choices": [
+          "Raise velocity targets only for teams whose features have the shortest integration waits",
+          "Expand each team's definition of done to include a reservation for the future test window",
+          "Make system work in progress visible and improve integration cadence, capacity, and swarming policies",
+          "Add more features to each test window so its fixed setup cost is spread across output"
+        ],
+        "correct": 2,
+        "explanation": "The three-week shared test queue is the system constraint, so end-to-end work visibility and integration capacity or cadence should be improved. Local velocity adds inventory, a reservation is not integrated evidence, and larger batches may spread setup cost while increasing delay and failure scope.",
+        "chapterId": "pmbok-ch06-schedule-management"
+      },
+      {
+        "tag": "Agile flow and backlog",
+        "domain": "Process",
+        "topic": "Agile flow and backlog",
+        "approach": "Predictive",
+        "difficulty": "Medium",
+        "decisionRule": "limit upstream starts when downstream analysis capacity is the persistent constraint.",
+        "text": "Requirements requests enter a predictive analysis process faster than analysts can validate them, and sponsors complain that high-value requests disappear in a large queue. What should the project manager do?",
+        "choices": [
+          "Hire request coordinators to enter submissions faster and improve sponsor responsiveness",
+          "Accept every request but remove its submission date from the visible queue",
+          "Require analysts to split attention evenly across all waiting requests each week",
+          "Set intake and work-in-progress policies tied to analyst capacity and explicit ordering criteria"
+        ],
+        "correct": 3,
+        "explanation": "Uncontrolled intake exceeds validation capacity and obscures high-value work, so explicit ordering and work-in-progress policies address both problems. Faster entry enlarges the queue, hidden dates reduce transparency, and broad multitasking slows completion without making priorities clearer.",
+        "chapterId": "pmbok-ch06-schedule-management"
+      },
+      {
+        "tag": "Agile flow and backlog",
+        "domain": "Process",
+        "topic": "Agile flow and backlog",
+        "approach": "Agile",
+        "difficulty": "Easy",
+        "decisionRule": "refine or remove stale backlog items so future choices remain usable.",
+        "text": "Half the product backlog has not been reviewed for a year, and many items refer to a retired architecture. What should the product owner do?",
+        "choices": [
+          "Refine, reorder, split, or remove stale items with appropriate team and stakeholder input",
+          "Keep every item because deletion would lose the history of stakeholder requests",
+          "Move all old items to the top so the team clears them before accepting new work",
+          "Ask developers to implement old items exactly as written to preserve original intent"
+        ],
+        "correct": 0,
+        "explanation": "The retired architecture makes many old items unreliable for future decisions, so refinement or removal should restore a coherent backlog while useful history can remain elsewhere. Indefinite retention creates noise, age does not establish value, and literal implementation ignores changed technical context.",
+        "chapterId": "pmbok-ch04-integration-management"
+      },
+      {
+        "tag": "Issue and knowledge management",
+        "domain": "Process",
+        "topic": "Issue and knowledge management",
+        "approach": "Hybrid",
+        "difficulty": "Medium",
+        "decisionRule": "track the active issue while replacing repeated workarounds with root-cause ownership.",
+        "text": "A nightly data-transfer failure has recurred four times, and operations restores service with the same manual workaround each morning. No owner is investigating why it happens. What should the project manager do next?",
+        "choices": [
+          "Accept the workaround as the standard operating procedure because service is restored quickly",
+          "Record and assign the recurring issue, analyze root cause, and track a durable resolution",
+          "Add the failure as a future risk because the next occurrence remains uncertain",
+          "Escalate directly to the steering committee before gathering technical evidence"
+        ],
+        "correct": 1,
+        "explanation": "The failure has repeatedly occurred and only its symptom is contained, so it needs issue ownership, root-cause evidence, and a durable resolution. Standardizing the workaround accepts recurring loss, risk-only treatment misclassifies an active problem, and immediate escalation lacks the available diagnostic step.",
+        "chapterId": "pmbok-ch04-integration-management"
+      },
+      {
+        "tag": "Issue and knowledge management",
+        "domain": "Process",
+        "topic": "Issue and knowledge management",
+        "approach": "Predictive",
+        "difficulty": "Hard",
+        "decisionRule": "convert critical tacit knowledge into demonstrated organizational capability before departure.",
+        "text": "The only engineer who can calibrate a specialized instrument will leave in two weeks. A procedure exists, but replacement staff have never performed the work and the next calibration is on the critical path. What should the project manager do first?",
+        "choices": [
+          "Ask the engineer to expand the procedure and let replacements use it at the next calibration",
+          "Contract the departing engineer for on-call support after the employment end date",
+          "Schedule paired practice and observed teach-back, then update the procedure with discovered gaps",
+          "Add schedule reserve around the next calibration and record expertise loss as a risk"
+        ],
+        "correct": 2,
+        "explanation": "A document exists but capability has not been demonstrated, and departure is imminent, so paired performance and teach-back should expose tacit gaps while transfer remains possible. More writing alone is untested, later contracting is uncertain, and reserve plus risk recording does not transfer the critical skill.",
+        "chapterId": "pmbok-ch04-integration-management"
+      },
+      {
+        "tag": "Issue and knowledge management",
+        "domain": "Process",
+        "topic": "Issue and knowledge management",
+        "approach": "Hybrid",
+        "difficulty": "Medium",
+        "decisionRule": "turn a resolved issue into accessible learning and a preventive process update.",
+        "text": "A release delay caused by an undocumented vendor dependency has been resolved, but the same planning gap could affect two remaining releases. What should the project manager do next?",
+        "choices": [
+          "Close the issue because the delayed release no longer needs corrective action",
+          "Keep the lesson within the affected team until the project retrospective",
+          "Add more schedule reserve to both releases without changing planning practices",
+          "Capture the lesson, update dependency checks and planning artifacts, and share it with affected teams"
+        ],
+        "correct": 3,
+        "explanation": "Resolution removed the immediate delay, but the stated planning gap remains reusable knowledge, so checks, artifacts, and affected teams should be updated now. Closure alone loses prevention, delayed sharing permits recurrence, and added reserve absorbs rather than corrects the dependency blind spot.",
+        "chapterId": "pmbok-ch04-integration-management"
+      },
+      {
+        "tag": "Issue and knowledge management",
+        "domain": "Process",
+        "topic": "Issue and knowledge management",
+        "approach": "Hybrid",
+        "difficulty": "Easy",
+        "decisionRule": "preserve an issue decision and its rationale in shared project records.",
+        "text": "A technical issue was resolved during a video call, but the selected option, owner, and rationale were never recorded and another workstream is still using the old assumption. What should the project manager do?",
+        "choices": [
+          "Update the issue and decision records, confirm ownership, and communicate the resolved assumption",
+          "Leave the call as sufficient evidence because all technical leads attended",
+          "Reopen the technical analysis so the other workstream can make an independent choice",
+          "Wait for the next status report before documenting a decision that is already implemented"
+        ],
+        "correct": 0,
+        "explanation": "The decision is implemented but unavailable to a dependent workstream, so shared records, rationale, ownership, and communication must be restored. Attendance is not durable knowledge, duplicate analysis can create divergence, and waiting prolongs the conflicting assumption.",
+        "chapterId": "pmbok-ch04-integration-management"
+      },
+      {
+        "tag": "Issue and knowledge management",
+        "domain": "Process",
+        "topic": "Issue and knowledge management",
+        "approach": "Predictive",
+        "difficulty": "Hard",
+        "decisionRule": "reconcile conflicting lessons by validating context and evidence before institutionalizing guidance.",
+        "text": "Two completed projects offer opposite lessons about early supplier involvement: one reports major design savings, while the other reports loss of competitive leverage. Governance asks for one rule to add to the delivery handbook. What should the project manager recommend?",
+        "choices": [
+          "Adopt the lesson from the project with the larger budget because its evidence is more consequential",
+          "Compare context, evidence, contract strategy, and outcomes with experts, then document conditional guidance",
+          "Record both lessons without interpretation and let each future project manager choose privately",
+          "Exclude both lessons because contradictory experience cannot support organizational knowledge"
+        ],
+        "correct": 1,
+        "explanation": "The opposite outcomes likely depend on context such as market structure, design uncertainty, and contract strategy, so evidence should produce conditional guidance rather than a universal rule. Budget size does not establish validity, unexamined storage shifts the problem to individuals, and contradiction is a reason to analyze rather than discard learning.",
+        "chapterId": "pmbok-ch04-integration-management"
       }
     ],
     "examConfig": {
@@ -26574,17 +26114,17 @@ const examCatalog = [
         {
           "domain": "People",
           "weight": 33,
-          "practiceCount": 298
+          "practiceCount": 353
         },
         {
           "domain": "Process",
           "weight": 41,
-          "practiceCount": 546
+          "practiceCount": 438
         },
         {
           "domain": "Business Environment",
           "weight": 26,
-          "practiceCount": 225
+          "practiceCount": 278
         }
       ],
       "chapterTargets": [
@@ -26593,91 +26133,91 @@ const examCatalog = [
           "chapterNumber": 1,
           "chapterTitle": "Introduction",
           "domain": "Process",
-          "practiceCount": 60
+          "practiceCount": 65
         },
         {
           "chapterId": "pmbok-ch02-project-environment",
           "chapterNumber": 2,
           "chapterTitle": "Project Environment",
           "domain": "Business Environment",
-          "practiceCount": 45
+          "practiceCount": 84
         },
         {
           "chapterId": "pmbok-ch03-project-manager-role",
           "chapterNumber": 3,
           "chapterTitle": "Role of the Project Manager",
           "domain": "People",
-          "practiceCount": 30
+          "practiceCount": 50
         },
         {
           "chapterId": "pmbok-ch04-integration-management",
           "chapterNumber": 4,
           "chapterTitle": "Project Integration Management",
           "domain": "Process",
-          "practiceCount": 135
+          "practiceCount": 142
         },
         {
           "chapterId": "pmbok-ch05-scope-management",
           "chapterNumber": 5,
           "chapterTitle": "Project Scope Management",
           "domain": "Process",
-          "practiceCount": 255
+          "practiceCount": 96
         },
         {
           "chapterId": "pmbok-ch06-schedule-management",
           "chapterNumber": 6,
           "chapterTitle": "Project Schedule Management",
           "domain": "Process",
-          "practiceCount": 81
+          "practiceCount": 85
         },
         {
           "chapterId": "pmbok-ch07-cost-management",
           "chapterNumber": 7,
           "chapterTitle": "Project Cost Management",
           "domain": "Process",
-          "practiceCount": 50
+          "practiceCount": 62
         },
         {
           "chapterId": "pmbok-ch08-quality-management",
           "chapterNumber": 8,
           "chapterTitle": "Project Quality Management",
           "domain": "Process",
-          "practiceCount": 64
+          "practiceCount": 73
         },
         {
           "chapterId": "pmbok-ch09-resource-management",
           "chapterNumber": 9,
           "chapterTitle": "Project Resource Management",
           "domain": "People",
-          "practiceCount": 99
+          "practiceCount": 104
         },
         {
           "chapterId": "pmbok-ch10-communications-management",
           "chapterNumber": 10,
           "chapterTitle": "Project Communications Management",
           "domain": "People",
-          "practiceCount": 63
+          "practiceCount": 73
         },
         {
           "chapterId": "pmbok-ch11-risk-management",
           "chapterNumber": 11,
           "chapterTitle": "Project Risk Management",
           "domain": "Process",
-          "practiceCount": 63
+          "practiceCount": 81
         },
         {
           "chapterId": "pmbok-ch12-procurement-management",
           "chapterNumber": 12,
           "chapterTitle": "Project Procurement Management",
           "domain": "Process",
-          "practiceCount": 60
+          "practiceCount": 72
         },
         {
           "chapterId": "pmbok-ch13-stakeholder-management",
           "chapterNumber": 13,
           "chapterTitle": "Project Stakeholder Management",
           "domain": "People",
-          "practiceCount": 64
+          "practiceCount": 82
         }
       ]
     },
