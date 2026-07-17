@@ -41,9 +41,12 @@ AI prompts：
 ## 执行规则
 
 - X 可以每天发 1 条。每 2-3 天带一次链接，其余发备考经验或方法。
-- Reddit 每天只做 1-2 个动作。优先评论，不要每天开新帖。
-- Reddit 顶帖最多安排 2 次：第 8 天和第 15 天。其他时间只在相关帖子下评论。
-- Reddit 带链接时必须透明：说明这是自己在做/整理的免费工具，不伪装成路人推荐。
+- Day 8 顶帖被筛选后，不删除、不修改后重发，也不在其他社区复制发布相同内容。
+- Day 9-15 进入 Reddit 恢复期：每天最多发 1 条有针对性的英文评论，不发顶帖，不主动带链接。
+- 只有对方明确询问免费练习资源时，才可以透明说明这是自己在做的免费工具并提供链接。
+- 每次 Reddit 评论发布 10-30 分钟后，都要通过直接 URL 或退出账号后的页面确认仍然公开可见。
+- Day 8 帖子先通过 Modmail 请求管理员审核，等待至少 72 小时；管理员未回复也不要重复发布。
+- 下一次 Reddit 顶帖移到 15 天计划之后，并且必须同时满足：邮箱已验证、r/PMP 至少有 5 条公开可见的正常评论、距离本次过滤至少 5-7 天。
 - 如果某天找不到合适 Reddit 讨论，就跳过 Reddit，不要硬发。
 - 每天发之前先看当天话题是否和页面一致。不要在 mock exam 页文字未确认时强推具体时间细节。
 
@@ -308,15 +311,15 @@ For a short study window, I would not try to touch everything equally. I would p
 - Reddit comment URL: https://www.reddit.com/r/pmp/comments/1uljoii/success_story_passed_pmp_with_atatat_after_7/oxu6v41/
 - 互动/备注: 2026-07-16 补发。X 原计划文案为 315 字符，超过单帖限制；已压缩为 273 字符并保留窄提示词、7 天弱项计划、练习/复盘和链接。Reddit 在近期 PMP 复习经验帖下评论，未附链接。
 
-### Day 8 - 2026-07-13 - Reddit 反馈帖
+### Day 8 - 2026-07-13 - Reddit 反馈帖尝试
 
-目标：发一次不硬广的反馈帖，先问需求，不直接塞链接。
+目标：完成一次不带链接的反馈帖尝试；帖子被筛选后，停止重复发布并请求管理员人工审核。
 
 X：
 
-- [ ] 发布下面文案。
-- [ ] 不带链接。
-- [ ] 发布后记录 URL：
+- [x] 发布下面文案。
+- [x] 不带链接。
+- [x] 发布后记录 URL：
 
 ```text
 Question for PMP/CAPM prep:
@@ -330,10 +333,13 @@ I am leaning toward review quality. More volume helps only after you know what w
 
 Reddit：
 
-- [ ] 在 r/PMP 发顶帖。
-- [ ] 不带链接。
-- [ ] 标题使用下面标题。
-- [ ] 发出后记录 URL。
+- [x] 已在 r/PMP 手动尝试发顶帖。
+- [x] 不带链接。
+- [x] 标题使用下面标题。
+- [x] 发出后记录 URL。
+- [ ] 通过 r/PMP 的 Modmail 请求管理员审核原帖。
+- [x] 帖子被过滤后未删除，也未重复发布。
+- [ ] 等待管理员回复；72 小时内不补发。
 
 标题：
 
@@ -358,12 +364,29 @@ When you get stuck during PMP prep, what helps more?
 My guess is that missed-question review matters more than raw question volume, but I may be over-weighting my own study style.
 ```
 
+Modmail 文案：
+
+```text
+Subject: Post caught by Reddit filters
+
+Hi mods,
+
+My post appears to have been removed by Reddit's filters:
+
+https://www.reddit.com/r/pmp/comments/1uynjqa/what_matters_more_when_you_are_stuck_more/
+
+It was intended as a genuine PMP study discussion and does not contain any links. Could you please let me know whether it can be approved, or if I should change anything before posting again?
+
+Thanks.
+```
+
 结果记录：
 
-- X URL:
-- Reddit post URL:
-- 评论反馈:
+- X URL: https://x.com/xingyunMG/status/2077938423734870372
+- Reddit post URL: https://www.reddit.com/r/pmp/comments/1uynjqa/what_matters_more_when_you_are_stuck_more/
+- 评论反馈: 帖子发布后被 Reddit 筛选器移除，未形成公开反馈。
 - 有人要链接时回复的链接:
+- 执行备注: 2026-07-17 补发。X 已发布，227 字符，不带链接；Reddit 顶帖由用户手动发布，标题、正文和作者均符合计划，但随后被 Reddit 筛选器移除。当前不重复发布，先继续评论互动和账号暖场。
 
 ### Day 9 - 2026-07-14 - Mistake review prompts
 
@@ -387,12 +410,15 @@ https://starrycesium.com/prompts/pmp-mistake-review-prompts.html
 
 Reddit：
 
-- [ ] 找 Day 8 反馈帖的评论，优先回复自然讨论。
-- [ ] 如果有人问 AI prompts 或错题复盘，再给链接。
-- [ ] 回复模板：
+- [ ] 确认 Reddit 账号邮箱已经验证。
+- [ ] 查看 Day 8 的 Modmail 是否有管理员回复；没有回复时不重发原帖。
+- [ ] 找 1 个关于 missed questions、mock review 或 Study Hall 分数的近期帖子。
+- [ ] 根据帖子内容写 1 条评论，不带任何链接，不提 PassGrid。
+- [ ] 发布 10-30 分钟后确认评论公开可见，并记录 URL。
+- [ ] 评论参考：
 
 ```text
-This is close to how I review misses. I try to separate "I did not know the concept" from "I knew the concept but chose the wrong action." I also put together a small list of prompts for that kind of review here: https://starrycesium.com/prompts/pmp-mistake-review-prompts.html
+I try to separate "I did not know the concept" from "I knew the concept but chose the wrong action." The second type usually needs a decision rule or a missed clue, not another explanation of the whole topic.
 ```
 
 结果记录：
@@ -423,7 +449,8 @@ In scenario questions, this matters because the next step changes. You do not pl
 Reddit：
 
 - [ ] 找 risk、issue、change control、scenario questions 相关帖子。
-- [ ] 评论下面内容，不带链接。
+- [ ] 只在内容确实相关时评论下面内容，不带链接，不提 PassGrid。
+- [ ] 发布 10-30 分钟后确认评论公开可见，并记录 URL。
 
 ```text
 Risk vs issue sounds easy until it appears in a scenario. If it already happened, manage it as an issue. If it may happen, plan a response as a risk. A lot of wrong answers come from treating an active problem like a future uncertainty.
@@ -461,7 +488,8 @@ https://starrycesium.com/prompts/pmp-research-prompts.html
 Reddit：
 
 - [ ] 找 exam update、new exam、outdated materials 相关帖子。
-- [ ] 评论下面内容，不带链接，除非对方需要核查方法。
+- [ ] 评论下面内容，不带链接，不提 PassGrid。
+- [ ] 发布 10-30 分钟后确认评论公开可见，并记录 URL。
 
 ```text
 For exam changes, I would separate official-source checks from Reddit summaries. Reddit is useful for experience, but dates matter. If a post or video does not say which exam version it is talking about, I would be careful using it as a study decision.
@@ -502,7 +530,8 @@ https://starrycesium.com/prompts/pmp-exam-operations-prompts.html
 Reddit：
 
 - [ ] 找 online exam、Pearson VUE、test center、break rules 相关帖子。
-- [ ] 评论下面内容，可按上下文带链接。
+- [ ] 评论下面内容，不带链接，不提 PassGrid。
+- [ ] 发布 10-30 分钟后确认评论公开可见，并记录 URL。
 
 ```text
 For online exams, I would spend more time checking the room, ID, internet, desk, and break rules than people expect. A good study plan can still get derailed by exam-day logistics.
@@ -543,7 +572,8 @@ https://starrycesium.com/prompts/project-manager-ai-prompts.html
 Reddit：
 
 - [ ] 找 r/projectmanagement 或 r/PMP 中关于实际 PM 工作、status reports、stakeholders、risk 的帖子。
-- [ ] 评论下面内容，不带链接，除非对方明确问 AI prompts。
+- [ ] 评论下面内容，不带链接，不提 PassGrid。
+- [ ] 发布 10-30 分钟后确认评论公开可见，并记录 URL。
 
 ```text
 For PM work, the prompt usually matters less than the context you give it. I get better outputs when I include the audience, decision needed, risks, constraints, and the tone of the update before asking AI to draft anything.
@@ -584,7 +614,8 @@ https://starrycesium.com/prompts/pmp-career-value-prompts.html
 Reddit：
 
 - [ ] 找 PMP vs CAPM、career switch、resume、is PMP worth it 相关帖子。
-- [ ] 评论下面内容，可按上下文带链接。
+- [ ] 评论下面内容，不带链接，不提 PassGrid。
+- [ ] 发布 10-30 分钟后确认评论公开可见，并记录 URL。
 
 ```text
 I would choose based on current experience and target role. CAPM can make sense if you need the foundation and do not yet have enough project experience. PMP makes more sense when you can connect your work history to actual project leadership and want the credential for PM roles.
@@ -596,9 +627,9 @@ I would choose based on current experience and target role. CAPM can make sense 
 - Reddit comment URL:
 - 互动/备注:
 
-### Day 15 - 2026-07-20 - 总结与第二次反馈帖
+### Day 15 - 2026-07-20 - 总结与继续暖场
 
-目标：收口 15 天推广，明确要反馈，允许链接出现。
+目标：用 X 收口 15 天推广；Reddit 继续正常互动，不在账号恢复期强行发第二个顶帖。
 
 X：
 
@@ -622,38 +653,46 @@ https://starrycesium.com/
 
 Reddit：
 
-- [ ] 在 r/PMP 发反馈帖。
-- [ ] 标题使用下面标题。
-- [ ] 正文可以带链接，因为这是透明反馈帖，不伪装推荐。
-- [ ] 发出后记录 URL。
-
-标题：
-
-```text
-Looking for blunt feedback on a free PMP/CAPM practice site
-```
-
-正文：
+- [ ] 不发顶帖，不重复 Day 8 的内容。
+- [ ] 找 1 个关于 free practice、weak areas 或 mistake review 的近期帖子。
+- [ ] 留下 1 条针对原帖的英文评论，不带链接，不提 PassGrid。
+- [ ] 发布 10-30 分钟后确认评论公开可见，并记录 URL。
+- [ ] 统计 Day 9-15 在 r/PMP 公开可见的评论数量。
+- [ ] 记录管理员是否回复 Day 8 的 Modmail。
+- [ ] 评论参考：
 
 ```text
-I have been working on a free PMP/CAPM practice site and would appreciate blunt feedback from people preparing now.
-
-The current version has practice questions, local browser progress, missed-question review, a PMP mock exam, and AI prompts for study planning / mistake review.
-
-It is not meant to replace Study Hall or official PMI materials. I am trying to make it useful for drilling weak areas and reviewing mistakes.
-
-Site:
-https://starrycesium.com/
-
-If something feels misleading, unnecessary, or not useful for actual prep, I would rather know early.
+For extra practice, I would focus less on the total number of questions and more on whether the set exposes a specific weak area. Afterward, review why the wrong option felt reasonable before moving to another set.
 ```
 
 结果记录：
 
 - X URL:
-- Reddit post URL:
-- 评论反馈:
-- 需要改进的问题:
+- Reddit comment URL:
+- Day 9-15 公开可见评论数:
+- Modmail 结果:
+- 下一次顶帖是否满足条件: 否 / 是
+
+## 15 天后的 Reddit 顶帖恢复条件
+
+只有下面项目全部完成，才安排下一次 r/PMP 顶帖：
+
+- [ ] Reddit 账号邮箱已经验证。
+- [ ] 距离 Day 8 帖子被过滤至少 5-7 天。
+- [ ] r/PMP 已有至少 5 条公开可见、内容各不相同的正常评论。
+- [ ] 已记录管理员对 Day 8 Modmail 的回复；无回复也已等待至少 72 小时。
+- [ ] 最近的评论没有继续被过滤。
+- [ ] 新顶帖不带链接、不提 PassGrid、不使用投票式或市场调研式选项列表。
+
+满足条件后的首个顶帖：
+
+```text
+Title: When you review missed PMP questions, what actually helps you improve?
+
+I keep noticing that doing more questions does not always fix the same weak areas. For people who improved their scores, what made the biggest difference: reviewing explanations, grouping mistakes by topic, or retaking mixed sets later?
+```
+
+如果这个新帖再次被过滤：停止继续发顶帖，通过 Modmail 询问原因，后续只保留自然评论互动。
 
 ## 每日复盘记录
 
@@ -668,7 +707,9 @@ If something feels misleading, unnecessary, or not useful for actual prep, I wou
 ## 风险提醒
 
 - Reddit 不要用“有人用过这个网站吗”的伪装口吻。
-- Reddit 不要连续多天发带链接顶帖。
+- Day 8 被过滤的帖子不要删除后重发，也不要换标题复制发布。
+- Day 9-15 不发 Reddit 顶帖，不主动放网站链接。
+- 每条 Reddit 评论都要检查公开可见性，只有自己登录后可见不算完成。
 - 如果有人质疑广告，直接说明这是自己在做的免费工具，并询问具体哪里不有用。
 - 如果页面临时 404 或出现旧文案，当天不要推该页面，换成不带链接的方法帖。
 - X 可以更直接，但也不要连续多天只发同一个首页链接。
