@@ -609,9 +609,12 @@
   ```powershell
   node _private/test-pmp-2026-refresh-contract.mjs
   node _private/test-pmp-2026-data-segment.mjs
+  node _private/test-pmp-2026-coverage.mjs
+  node _private/test-pmp-question-quality-cli.mjs
+  node _private/build-pmp-2026-coverage.mjs --check
   node _private/verify-pmp-2026-refresh.mjs --require-report
   node _private/verify-pmp-capm-phase.mjs
-  node _private/verify-pmp-question-quality.mjs
+  node _private/verify-pmp-question-quality.mjs --practice-only
   node _private/verify-question-bank-structure.mjs
   node _private/verify-project-bank-scale.mjs
   node _private/validate-question-bank.mjs --ci
@@ -625,7 +628,7 @@
   - Contract and data-segment tests print PASS.
   - Focused refresh verifier prints PASS with 230 refreshed questions.
   - PMP/CAPM phase verifier passes all question records.
-  - Focused PMP quality verifier passes all PMP questions.
+  - The quality CLI regression proves the default still checks the complete PMP bank, while explicit `--practice-only` passes all 1,069 practice questions.
   - Bank structure and 1,069-question scale checks pass.
   - CI validator exits `0` with no duplicate-text or mojibake failure.
   - Question-bank SEO and Phase 1 GEO checks remain PASS.
@@ -680,7 +683,7 @@
 
 - [ ] **Step 4: Run final verification from a clean command sequence**
 
-  Repeat the Task 8 Step 3 command list after all review corrections. Record exact PASS summaries and current `git status --short`. Do not state completion if any required command exits non-zero or the worktree contains an unexplained file.
+  Repeat the Task 8 Step 3 command list after all review corrections, including the coverage unit test, quality CLI regression, deterministic coverage `--check`, and explicit quality `--practice-only` run. Record exact PASS summaries and current `git status --short`. Do not state completion if any required command exits non-zero or the worktree contains an unexplained file.
 
 - [ ] **Step 5: Commit review corrections only if needed**
 

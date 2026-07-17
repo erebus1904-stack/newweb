@@ -87,6 +87,8 @@ The refreshed 230-question segment must satisfy all of the following:
 
 Existing project-wide validators remain authoritative. The focused refresh verifier adds stricter checks for the replaced block and exact final-domain counts; it does not weaken existing assertions to make the data pass.
 
+The PMP question-quality CLI retains its complete-bank default. Refresh regression uses the explicit `--practice-only` mode so the 180 historical mock questions remain untouched and their existing quality debt remains visible in default mode.
+
 ## Coverage and reporting
 
 The generated coverage report will include:

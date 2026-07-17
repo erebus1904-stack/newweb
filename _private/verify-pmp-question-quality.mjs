@@ -11,7 +11,10 @@ if (!pmp) {
   process.exit(1);
 }
 
-const questionsToCheck = pmp.questions.filter((question) => question.bankType !== "exam");
+const practiceOnly = process.argv.includes("--practice-only");
+const questionsToCheck = practiceOnly
+  ? pmp.questions.filter((question) => question.bankType !== "exam")
+  : pmp.questions;
 const bannedChoicePatterns = [
   /ignore the constraint/i,
   /select the most extreme/i,
@@ -88,4 +91,5 @@ if (failures.length) {
   process.exit(1);
 }
 
-console.log(`PASS all ${questionsToCheck.length} PMP practice questions meet the focused quality bar.`);
+const scopeLabel = practiceOnly ? "PMP practice questions" : "PMP questions";
+console.log(`PASS all ${questionsToCheck.length} ${scopeLabel} meet the focused quality bar.`);

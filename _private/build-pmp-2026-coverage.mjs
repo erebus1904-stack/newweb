@@ -89,17 +89,17 @@ function findCoverageGaps(practiceQuestions, refreshedQuestions) {
     }
   }
 
-  const topicCounts = countBy(practiceQuestions, "topic");
+  const topicCounts = countBy(refreshedQuestions, "topic");
   const topicNames = Object.keys(topicCounts);
   if (topicNames.length < MINIMUM_TOPIC_COUNT) {
     gaps.push(`Topics: expected at least ${MINIMUM_TOPIC_COUNT}, found ${topicNames.length}.`);
   }
-  if (practiceQuestions.length > 0) {
+  if (refreshedQuestions.length > 0) {
     for (const topic of topicNames.sort(compareNames)) {
       const count = topicCounts[topic];
-      if (count / practiceQuestions.length > MAX_TOPIC_SHARE) {
+      if (count / refreshedQuestions.length > MAX_TOPIC_SHARE) {
         gaps.push(
-          `Topic ${topic}: ${percentage(count, practiceQuestions.length).toFixed(2)}% exceeds the 15.00% limit.`,
+          `Topic ${topic}: ${percentage(count, refreshedQuestions.length).toFixed(2)}% exceeds the 15.00% limit.`,
         );
       }
     }
