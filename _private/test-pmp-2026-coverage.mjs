@@ -4,7 +4,7 @@ import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import vm from "node:vm";
 
-import { buildCoverage } from "./build-pmp-2026-coverage.mjs";
+import { buildCoverage, reportContentIsCurrent } from "./build-pmp-2026-coverage.mjs";
 import { REFRESH_COUNT, REFRESH_START } from "./pmp-2026-refresh/contract.mjs";
 
 const privateDirectory = dirname(fileURLToPath(import.meta.url));
@@ -59,4 +59,16 @@ if (
 }
 
 assert.deepEqual(failures, []);
+
+assert.equal(
+  reportContentIsCurrent("first line\r\nsecond line\r\n", "first line\nsecond line\n"),
+  true,
+  "coverage report checks must accept Git's CRLF checkout of deterministic LF content",
+);
+assert.equal(
+  reportContentIsCurrent("first line\nchanged line\n", "first line\nsecond line\n"),
+  false,
+  "coverage report checks must still reject semantic changes",
+);
+
 console.log("PASS PMP 2026 coverage tests use the refreshed 230-question block for topic gaps.");

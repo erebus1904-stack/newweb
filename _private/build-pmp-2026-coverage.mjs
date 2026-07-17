@@ -196,9 +196,15 @@ function expectedFiles() {
   ];
 }
 
+export function reportContentIsCurrent(actual, expected) {
+  const normalizeLineEndings = (value) => value.replace(/\r\n/g, "\n");
+  return normalizeLineEndings(actual) === normalizeLineEndings(expected);
+}
+
 function checkReports(files) {
   const stale = files.filter(
-    ({ path, content }) => !existsSync(path) || readFileSync(path, "utf8") !== content,
+    ({ path, content }) =>
+      !existsSync(path) || !reportContentIsCurrent(readFileSync(path, "utf8"), content),
   );
   if (stale.length === 0) {
     console.log("PASS coverage reports are current.");
