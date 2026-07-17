@@ -1,5 +1,6 @@
 import { readFileSync } from "node:fs";
 import vm from "node:vm";
+import { FINAL_CHAPTER_TARGETS, FINAL_DOMAIN_TARGETS } from "./pmp-2026-refresh/contract.mjs";
 
 const code = readFileSync("data.js", "utf8");
 const context = {};
@@ -121,21 +122,19 @@ function checkPmpChapterTargets() {
   const pmp = getExam("pmp");
   const chapters = pmp?.examConfig?.chapterTargets || [];
   expect(chapters.length === 13, "PMP has 13 PMBOK chapter practice targets");
-  expect(chapters.reduce((sum, chapter) => sum + chapter.practiceCount, 0) === 839, "PMP chapter practice targets total 839 questions");
-  for (const chapter of chapters) {
-    const count = getPracticeQuestions(pmp).filter((question) => question.chapterId === chapter.chapterId).length;
-    expect(count === chapter.practiceCount, `PMP ${chapter.chapterTitle} has ${chapter.practiceCount} chapter questions`);
+  expect(chapters.reduce((sum, chapter) => sum + chapter.practiceCount, 0) === 1069, "PMP chapter practice targets total 1069 questions");
+  for (const [chapterId, expectedCount] of Object.entries(FINAL_CHAPTER_TARGETS)) {
+    const chapter = chapters.find((item) => item.chapterId === chapterId);
+    const actualCount = getPracticeQuestions(pmp).filter((question) => question.chapterId === chapterId).length;
+    expect(chapter?.practiceCount === expectedCount, `PMP ${chapterId} practice target is ${expectedCount}`);
+    expect(actualCount === expectedCount, `PMP ${chapterId} has ${expectedCount} chapter questions`);
   }
 }
 
 checkExam(
   "pmp",
-  839,
-  {
-    People: 277,
-    Process: 344,
-    "Business Environment": 218,
-  }
+  1069,
+  FINAL_DOMAIN_TARGETS,
 );
 checkPmpChapterTargets();
 

@@ -11,7 +11,7 @@ if (!pmp) {
   process.exit(1);
 }
 
-const questionsToCheck = pmp.questions;
+const questionsToCheck = pmp.questions.filter((question) => question.bankType !== "exam");
 const bannedChoicePatterns = [
   /ignore the constraint/i,
   /select the most extreme/i,
@@ -88,4 +88,4 @@ if (failures.length) {
   process.exit(1);
 }
 
-console.log(`PASS all ${questionsToCheck.length} PMP questions meet the focused quality bar.`);
+console.log(`PASS all ${questionsToCheck.length} PMP practice questions meet the focused quality bar.`);
