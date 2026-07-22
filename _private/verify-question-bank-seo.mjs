@@ -37,8 +37,11 @@ const checks = [
   {
     file: "pmp-mock-exam.html",
     requiredText: [
-      "230-minute limit",
-      "03:50:00",
+      "240-minute limit",
+      "04:00:00",
+      "PT4H",
+      "first 80 minutes",
+      "first 160 minutes",
       "Pacing checkpoints"
     ],
     requiredLinks: [
@@ -128,8 +131,8 @@ for (const check of checks) {
 }
 
 const mockScript = fs.readFileSync("mock-exam.js", "utf8");
-if (!mockScript.includes("const DURATION_SECONDS = 230 * 60;")) {
-  failures.push("mock-exam.js: PMP mock duration should be 230 minutes.");
+if (!mockScript.includes("const DURATION_SECONDS = 240 * 60;")) {
+  failures.push("mock-exam.js: PMP mock duration should be 240 minutes.");
 }
 
 if (failures.length) {

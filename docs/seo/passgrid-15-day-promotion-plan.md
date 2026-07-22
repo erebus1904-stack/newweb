@@ -394,38 +394,33 @@ Thanks.
 
 X：
 
-- [ ] 发布下面文案。
-- [ ] 带链接：`https://starrycesium.com/prompts/pmp-mistake-review-prompts.html`
-- [ ] 发布后记录 URL：
+- [x] 发布下面文案。
+- [x] 带链接：`https://starrycesium.com/prompts/pmp-mistake-review-prompts.html`
+- [x] 发布后记录 URL：
 
 ```text
-A useful AI prompt after a missed PMP question:
-
-"Tell me why my answer was tempting, why it was not best, what clue I missed, and what decision rule I should remember."
-
-That is better than asking AI to just explain the correct answer.
-
-https://starrycesium.com/prompts/pmp-mistake-review-prompts.html
+Try this after a missed PMP question: Why was my answer tempting? Why was it not best? What clue did I miss? What rule should I remember next time? More useful than asking AI to explain the correct answer. https://starrycesium.com/prompts/pmp-mistake-review-prompts.html
 ```
 
 Reddit：
 
-- [ ] 确认 Reddit 账号邮箱已经验证。
-- [ ] 查看 Day 8 的 Modmail 是否有管理员回复；没有回复时不重发原帖。
-- [ ] 找 1 个关于 missed questions、mock review 或 Study Hall 分数的近期帖子。
-- [ ] 根据帖子内容写 1 条评论，不带任何链接，不提 PassGrid。
-- [ ] 发布 10-30 分钟后确认评论公开可见，并记录 URL。
-- [ ] 评论参考：
+- [x] 确认 Reddit 账号邮箱已经验证。
+- [x] 查看 Day 8 的 Modmail 是否有管理员回复；当前没有回复，未重发原帖。
+- [x] 找 1 个关于 missed questions、mock review 或 Study Hall 分数的近期帖子。
+- [x] 根据帖子内容写 1 条评论，不带任何链接，不提 PassGrid。
+- [x] 发布约 10 分钟后重新读取评论，并记录 URL。
+
+实际评论：
 
 ```text
-I try to separate "I did not know the concept" from "I knew the concept but chose the wrong action." The second type usually needs a decision rule or a missed clue, not another explanation of the whole topic.
+I try to separate not knowing the concept from knowing it but choosing the wrong action. The second type usually needs a decision rule or a missed clue, not another explanation of the whole topic.
 ```
 
 结果记录：
 
-- X URL:
-- Reddit reply URL:
-- 互动/备注:
+- X URL: https://x.com/xingyunMG/status/2078385647115764034
+- Reddit reply URL: https://www.reddit.com/r/pmp/comments/1u0rzxi/sh_or_other_platforms_wrong_answer_analysis/oy90i00/
+- 互动/备注: 2026-07-18 补发。mistake review prompts 页面返回 200；X 使用 275 字符以内的压缩英文文案并带目标页链接。Reddit 账号邮箱已验证，在一篇询问 AI/系统如何分析错题的帖子下发布 1 条针对性英文评论，不带链接、不提 PassGrid；约 10 分钟后通过帖子读取仍可看到评论，当前分数为 1。公开镜像通道未返回内容，因此只记录“登录读取仍可见”，不视为匿名可见性证明。发布过程中产生的一条不完整 X 短帖已删除，时间线仅保留上述完整版本。
 
 ### Day 10 - 2026-07-15 - Risk vs issue
 
@@ -433,9 +428,9 @@ I try to separate "I did not know the concept" from "I knew the concept but chos
 
 X：
 
-- [ ] 发布下面文案。
-- [ ] 不带链接。
-- [ ] 发布后记录 URL：
+- [x] 发布下面文案。
+- [x] 不带链接。
+- [x] 发布后记录 URL：
 
 ```text
 PMP/CAPM quick check:
@@ -448,19 +443,19 @@ In scenario questions, this matters because the next step changes. You do not pl
 
 Reddit：
 
-- [ ] 找 risk、issue、change control、scenario questions 相关帖子。
-- [ ] 只在内容确实相关时评论下面内容，不带链接，不提 PassGrid。
-- [ ] 发布 10-30 分钟后确认评论公开可见，并记录 URL。
+- [x] 找 risk、issue、change control、scenario questions 相关帖子。
+- [x] 只在内容确实相关时评论，不带链接，不提 PassGrid。
+- [x] 发布约 10 分钟后重新读取目标帖子和账号评论记录，并记录 URL。
 
 ```text
-Risk vs issue sounds easy until it appears in a scenario. If it already happened, manage it as an issue. If it may happen, plan a response as a risk. A lot of wrong answers come from treating an active problem like a future uncertainty.
+I would separate the current condition from the project impact. The supplier being over capacity is happening now, but the impact on the project, a late delivery, has not happened yet. Classify what you are being asked to manage: if the impact may happen, treat it as a risk; once the delivery is actually late, it becomes an issue.
 ```
 
 结果记录：
 
-- X URL:
-- Reddit comment URL:
-- 互动/备注:
+- X URL: https://x.com/xingyunMG/status/2078657557305123144
+- Reddit comment URL: https://www.reddit.com/r/pmp/comments/1ucz2mv/still_struggling_with_certain_risk_vs_issue/oyef4c9/
+- 互动/备注: 2026-07-19 补发。X 发布 risk vs issue 快速判断文案，不带链接。Reddit 选择了一篇询问“当前条件可能导致未来风险”如何判断的帖子，根据上下文改写评论，区分当前条件与尚未发生的项目影响；不带链接、不提 PassGrid。发布约 10 分钟后，目标帖子和账号评论记录仍能看到该评论，当前分数为 1。执行前 OpenCLI 浏览器桥接一度断开，启动 Chrome 后恢复连接；未产生重复帖子或评论。
 
 ### Day 11 - 2026-07-16 - Official-source research prompts
 
@@ -468,38 +463,29 @@ Risk vs issue sounds easy until it appears in a scenario. If it already happened
 
 X：
 
-- [ ] 发布下面文案。
-- [ ] 带链接：`https://starrycesium.com/prompts/pmp-research-prompts.html`
-- [ ] 发布后记录 URL：
+- [x] 发布下面文案。
+- [x] 带链接：`https://starrycesium.com/prompts/pmp-research-prompts.html`
+- [x] 发布后记录 URL。
 
 ```text
-For PMP prep, I would not ask AI "what changed on the exam?" and trust the answer.
-
-Use AI to organize official-source checks instead:
-- PMI page
-- exam content outline
-- Pearson VUE rules
-- date of the source
-- what changed vs what is just commentary
-
-https://starrycesium.com/prompts/pmp-research-prompts.html
+For PMP prep, don't ask AI what changed on the exam and trust the answer. Use it to organize official-source checks: PMI page, exam content outline, Pearson VUE rules, source date, and confirmed changes vs commentary. https://starrycesium.com/prompts/pmp-research-prompts.html
 ```
 
 Reddit：
 
-- [ ] 找 exam update、new exam、outdated materials 相关帖子。
-- [ ] 评论下面内容，不带链接，不提 PassGrid。
-- [ ] 发布 10-30 分钟后确认评论公开可见，并记录 URL。
+- [x] 找 exam update、new exam、outdated materials 相关帖子。
+- [x] 评论下面内容，不带链接，不提 PassGrid。
+- [x] 发布 10-30 分钟后确认评论公开可见，并记录 URL。
 
 ```text
-For exam changes, I would separate official-source checks from Reddit summaries. Reddit is useful for experience, but dates matter. If a post or video does not say which exam version it is talking about, I would be careful using it as a study decision.
+I'd keep two separate lists here: changes confirmed in the current PMI Exam Content Outline, and candidate observations from Reddit. The date matters because anything from before July 9 may describe the previous version. If a course or video doesn't say which ECO/version it follows, I wouldn't use it to decide what to study.
 ```
 
 结果记录：
 
-- X URL:
-- Reddit comment URL:
-- 互动/备注:
+- X URL: https://x.com/xingyunMG/status/2079370499612905907
+- Reddit comment URL: https://www.reddit.com/r/pmp/comments/1urveh6/anyone_taken_the_new_pmp_exam_after_the_july_2026/oys9317/
+- 互动/备注: 2026-07-21 补发。research prompts 页面返回 200；X 使用 276 字符英文压缩文案并带链接。Reddit 评论发布在新版考试变化讨论帖中，不带链接、不提 PassGrid；约 10 分钟后从原帖和账号评论列表复查均公开可见，当前分数 1。
 
 ### Day 12 - 2026-07-17 - Exam operations prompts
 
@@ -507,41 +493,29 @@ For exam changes, I would separate official-source checks from Reddit summaries.
 
 X：
 
-- [ ] 发布下面文案。
-- [ ] 带链接：`https://starrycesium.com/prompts/pmp-exam-operations-prompts.html`
-- [ ] 发布后记录 URL：
+- [x] 发布下面文案。
+- [x] 带链接：`https://starrycesium.com/prompts/pmp-exam-operations-prompts.html`
+- [x] 发布后记录 URL。
 
 ```text
-PMP prep is not only study material.
-
-Before exam day, check:
-- ID name match
-- Pearson VUE setup
-- desk/room rules
-- break timing
-- internet stability
-- what happens after each section
-
-Boring checks, but they reduce avoidable stress.
-
-https://starrycesium.com/prompts/pmp-exam-operations-prompts.html
+PMP prep isn't only study material. Before exam day: verify your ID name, run the Pearson VUE setup check, review desk/room and break rules, and test your internet. Boring checks, but they prevent avoidable stress. https://starrycesium.com/prompts/pmp-exam-operations-prompts.html
 ```
 
 Reddit：
 
-- [ ] 找 online exam、Pearson VUE、test center、break rules 相关帖子。
-- [ ] 评论下面内容，不带链接，不提 PassGrid。
-- [ ] 发布 10-30 分钟后确认评论公开可见，并记录 URL。
+- [x] 找 online exam、Pearson VUE、test center、break rules 相关帖子。
+- [x] 评论下面内容，不带链接，不提 PassGrid。
+- [x] 发布 10-30 分钟后确认评论公开可见，并记录 URL。
 
 ```text
-For online exams, I would spend more time checking the room, ID, internet, desk, and break rules than people expect. A good study plan can still get derailed by exam-day logistics.
+If both options are practical, I'd choose based on which risk you prefer. A test center removes home internet and room/proctoring setup risk; online removes travel and lets you use breaks at home. For online, run the OnVUE system test on the exact device and network, verify your ID name, clear the desk, and read the break rules before exam day.
 ```
 
 结果记录：
 
-- X URL:
-- Reddit comment URL:
-- 互动/备注:
+- X URL: https://x.com/xingyunMG/status/2079779300027601131
+- Reddit comment URL: https://www.reddit.com/r/pmp/comments/1tyyds0/pmp_exam_in_lahore_pakistan_test_center_or_online/oz0eki8/
+- 互动/备注: 2026-07-22 补发。exam operations prompts 页面返回 200；X 使用 280 字符英文压缩文案并带链接，首次调用超时后确认未发布，再延长等待时间成功发布，无重复帖子。Reddit 评论发布在考点与线上考试选择讨论帖中，不带链接、不提 PassGrid；约 10 分钟后从原帖和账号评论列表复查均公开可见，当前分数 1。
 
 ### Day 13 - 2026-07-18 - Project manager AI prompts
 

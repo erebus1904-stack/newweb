@@ -1,8 +1,27 @@
-import { existsSync, readFileSync } from "node:fs";
+import { existsSync, readFileSync, readdirSync } from "node:fs";
+import path from "node:path";
 import { publicUrl, seoPages } from "./seo-page-map.mjs";
 
 const sitemap = readFileSync("sitemap.xml", "utf8");
 const failures = [];
+const publicHtmlDirectories = [".", "guides", "programs", "prompts"];
+const mappedPaths = new Set(seoPages.map((page) => page.path));
+
+const publicHtmlPaths = publicHtmlDirectories.flatMap((directory) =>
+  readdirSync(directory, { withFileTypes: true })
+    .filter((entry) => entry.isFile() && entry.name.endsWith(".html"))
+    .map((entry) => path.posix.join(directory === "." ? "" : directory, entry.name))
+);
+
+for (const pagePath of publicHtmlPaths) {
+  const html = readFileSync(pagePath, "utf8");
+  if (!mappedPaths.has(pagePath)) {
+    failures.push(`${pagePath} is a public HTML page missing from seo-page-map.mjs`);
+  }
+  if (/href=["'](?:\.\.\/|\.\/)?index\.html(?:[?#][^"']*)?["']/i.test(html)) {
+    failures.push(`${pagePath} links to index.html instead of the canonical homepage /`);
+  }
+}
 
 for (const page of seoPages) {
   if (!existsSync(page.path)) {
