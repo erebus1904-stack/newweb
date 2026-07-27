@@ -523,41 +523,29 @@ If both options are practical, I'd choose based on which risk you prefer. A test
 
 X：
 
-- [ ] 发布下面文案。
-- [ ] 带链接：`https://starrycesium.com/prompts/project-manager-ai-prompts.html`
-- [ ] 发布后记录 URL：
+- [x] 发布下面文案。
+- [x] 带链接：`https://starrycesium.com/prompts/project-manager-ai-prompts.html`
+- [x] 发布后记录 URL。
 
 ```text
-AI prompts for project managers work better when they start with context:
-
-- project goal
-- stakeholders
-- constraints
-- current issue
-- decision needed
-- output format
-
-"Write a status update" is vague.
-"Turn these notes into a risk-aware stakeholder update" is useful.
-
-https://starrycesium.com/prompts/project-manager-ai-prompts.html
+AI prompts for PMs need context: goal, audience, constraints, current issue, decision, and output format. Asking AI to write a status update is vague. Asking it to turn notes into a risk-aware stakeholder update is useful. https://starrycesium.com/prompts/project-manager-ai-prompts.html
 ```
 
 Reddit：
 
-- [ ] 找 r/projectmanagement 或 r/PMP 中关于实际 PM 工作、status reports、stakeholders、risk 的帖子。
-- [ ] 评论下面内容，不带链接，不提 PassGrid。
-- [ ] 发布 10-30 分钟后确认评论公开可见，并记录 URL。
+- [x] 找 r/projectmanagement 或 r/PMP 中关于实际 PM 工作、status reports、stakeholders、risk 的帖子。
+- [x] 评论下面内容，不带链接，不提 PassGrid。
+- [x] 发布 10-30 分钟后确认评论公开可见，并记录 URL。
 
 ```text
-For PM work, the prompt usually matters less than the context you give it. I get better outputs when I include the audience, decision needed, risks, constraints, and the tone of the update before asking AI to draft anything.
+I'd separate ownership of inputs from ownership of the report. Let each workstream owner update their item by a cutoff, but keep the schema, RAG definitions, and final summary under one owner. For the AI step, give it the audience, decisions needed, risks, constraints, and output format, then require a human check against the source updates. That makes the board shared without making the final message ownerless.
 ```
 
 结果记录：
 
-- X URL:
-- Reddit comment URL:
-- 互动/备注:
+- X URL: https://x.com/xingyunMG/status/2080120030252106094
+- Reddit comment URL: https://www.reddit.com/r/projectmanagement/comments/1taz829/am_i_doing_this_right_status_reports/oz7frgi/
+- 互动/备注: 2026-07-23 补发。project manager AI prompts 页面返回 200；X 使用最终无引号英文版本并带链接，原始文本 287 字符，但网址按 X 固定链接长度计入，平台正常接受；发布前两次失败均复查确认未形成重复帖子。Reddit 评论发布在 AI 汇总状态报告及报告责任归属讨论帖中，不带链接、不提 PassGrid；超过 10 分钟后从原帖和账号评论列表复查均公开可见，当前分数 1。
 
 ### Day 14 - 2026-07-19 - Career value prompts
 
@@ -565,41 +553,29 @@ For PM work, the prompt usually matters less than the context you give it. I get
 
 X：
 
-- [ ] 发布下面文案。
-- [ ] 带链接：`https://starrycesium.com/prompts/pmp-career-value-prompts.html`
-- [ ] 发布后记录 URL：
+- [x] 发布下面文案。
+- [x] 带链接：`https://starrycesium.com/prompts/pmp-career-value-prompts.html`
+- [x] 发布后记录 URL。
 
 ```text
-PMP vs CAPM is partly a career question.
-
-Before choosing, write down:
-- current role
-- actual project experience
-- target jobs
-- timeline
-- budget
-- whether you need foundation learning or credibility for PM roles
-
-Then the decision is less abstract.
-
-https://starrycesium.com/prompts/pmp-career-value-prompts.html
+PMP vs CAPM is partly a career decision. Compare your role, project experience, target jobs, timeline, budget, and whether you need foundation learning or credibility for PM roles. That makes the choice less abstract. https://starrycesium.com/prompts/pmp-career-value-prompts.html
 ```
 
 Reddit：
 
-- [ ] 找 PMP vs CAPM、career switch、resume、is PMP worth it 相关帖子。
-- [ ] 评论下面内容，不带链接，不提 PassGrid。
-- [ ] 发布 10-30 分钟后确认评论公开可见，并记录 URL。
+- [x] 找 PMP vs CAPM、career switch、resume、is PMP worth it 相关帖子。
+- [x] 评论下面内容，不带链接，不提 PassGrid。
+- [x] 发布 10-30 分钟后确认评论公开可见，并记录 URL。
 
 ```text
-I would choose based on current experience and target role. CAPM can make sense if you need the foundation and do not yet have enough project experience. PMP makes more sense when you can connect your work history to actual project leadership and want the credential for PM roles.
+Given the work you described, I wouldn't treat CAPM as proof that you're ready for a TPM role. It can help with PM vocabulary and signal intent, but your stronger evidence is the cross-functional prioritization, process improvement, and mentoring you've already done. I'd rewrite those as project outcomes on your resume, then sample 20 target TPM/EPM postings. If CAPM appears repeatedly, it may be worth the cost; if they mainly ask for delivery ownership and technical depth, build stronger examples of those instead.
 ```
 
 结果记录：
 
-- X URL:
-- Reddit comment URL:
-- 互动/备注:
+- X URL: https://x.com/xingyunMG/status/2080526360205046012
+- Reddit comment URL: https://www.reddit.com/r/pmp/comments/1u6lth0/handson_engineer_into_tech_program_managementcapm/ozfha2b/
+- 互动/备注: 2026-07-24 补发。career value prompts 页面返回 200；X 使用 280 字符英文压缩文案并带链接。Reddit 评论发布在软件工程背景转 TPM/EPM、评估 CAPM 求职价值的讨论帖中，不带链接、不提 PassGrid；约 10 分钟后从原帖和账号评论列表复查均公开可见，当前分数 1。
 
 ### Day 15 - 2026-07-20 - 总结与继续暖场
 
@@ -607,63 +583,54 @@ I would choose based on current experience and target role. CAPM can make sense 
 
 X：
 
-- [ ] 发布下面文案。
-- [ ] 带链接：`https://starrycesium.com/`
-- [ ] 发布后记录 URL：
+- [x] 发布下面文案。
+- [x] 带链接：`https://starrycesium.com/`
+- [x] 发布后记录 URL：
 
 ```text
-I have been turning PassGrid into a small free PMP/CAPM prep site:
-
-- practice questions
-- local progress
-- missed-question review
-- PMP mock exam
-- AI prompts for study and review
-
-Still improving it. Feedback from people studying now is the useful part.
-
-https://starrycesium.com/
+I have been building PassGrid into a small free PMP/CAPM prep site: practice questions, local progress, missed-question review, a mock exam, and AI prompts for study. Still improving it. Feedback from people studying now is the useful part. https://starrycesium.com/
 ```
 
 Reddit：
 
-- [ ] 不发顶帖，不重复 Day 8 的内容。
-- [ ] 找 1 个关于 free practice、weak areas 或 mistake review 的近期帖子。
-- [ ] 留下 1 条针对原帖的英文评论，不带链接，不提 PassGrid。
-- [ ] 发布 10-30 分钟后确认评论公开可见，并记录 URL。
-- [ ] 统计 Day 9-15 在 r/PMP 公开可见的评论数量。
-- [ ] 记录管理员是否回复 Day 8 的 Modmail。
-- [ ] 评论参考：
+- [x] 不发顶帖，不重复 Day 8 的内容。
+- [x] 找 1 个关于 free practice、weak areas 或 mistake review 的近期帖子。
+- [x] 留下 1 条针对原帖的英文评论，不带链接，不提 PassGrid。
+- [x] 发布 10-30 分钟后确认评论公开可见，并记录 URL。
+- [x] 统计 Day 9-15 在 r/PMP 公开可见的评论数量。
+- [x] 记录管理员是否回复 Day 8 的 Modmail。
+- [x] 实际评论：
 
 ```text
-For extra practice, I would focus less on the total number of questions and more on whether the set exposes a specific weak area. Afterward, review why the wrong option felt reasonable before moving to another set.
+I'd separate the retake work into three buckets: pacing, comprehension, and decision sequencing. More questions won't tell you which one is failing unless you tag each miss. For every wrong or slow question, note whether you reread it, got stuck between two options, or chose the right action at the wrong time. Then drill the largest bucket first and use a timed mixed set to see whether it improves.
 ```
 
 结果记录：
 
-- X URL:
-- Reddit comment URL:
-- Day 9-15 公开可见评论数:
-- Modmail 结果:
-- 下一次顶帖是否满足条件: 否 / 是
+- X URL: https://x.com/xingyunMG/status/2081743563709468901
+- Reddit comment URL: https://www.reddit.com/r/pmp/comments/1uujvec/not_sure_what_to_do_after_failing_on_my_first/p02asxa/
+- Day 9-15 公开可见评论数: r/PMP 共 6 条；Day 13 发布在 r/projectmanagement，不计入此数。
+- Modmail 结果: Day 9 记录为“无回复”，但 Day 8 的“已发送 Modmail”未勾选；2026-07-27 复查时旧私人消息页已归档，当前聊天列表也没有可见的 r/PMP 会话，因此无法确认 Modmail 曾成功发出，本次未重复发送。
+- 下一次顶帖是否满足条件: 否。Modmail 的发送和等待状态尚未可靠确认，其余条件已满足。
+- 互动/备注: 2026-07-27 补发。X 动态发布后已从账号时间线确认公开可见。Reddit 评论针对重考时的时间管理、题意理解和决策顺序问题，不带链接、不提 PassGrid；发布超过 10 分钟后从原帖和账号评论列表复查均公开可见，当前分数 1。
 
 ## 15 天后的 Reddit 顶帖恢复条件
 
 只有下面项目全部完成，才安排下一次 r/PMP 顶帖：
 
-- [ ] Reddit 账号邮箱已经验证。
-- [ ] 距离 Day 8 帖子被过滤至少 5-7 天。
-- [ ] r/PMP 已有至少 5 条公开可见、内容各不相同的正常评论。
+- [x] Reddit 账号邮箱已经验证。
+- [x] 距离 Day 8 帖子被过滤至少 5-7 天。
+- [x] r/PMP 已有至少 5 条公开可见、内容各不相同的正常评论。
 - [ ] 已记录管理员对 Day 8 Modmail 的回复；无回复也已等待至少 72 小时。
-- [ ] 最近的评论没有继续被过滤。
-- [ ] 新顶帖不带链接、不提 PassGrid、不使用投票式或市场调研式选项列表。
+- [x] 最近的评论没有继续被过滤。
+- [x] 新顶帖不带链接、不提 PassGrid、不使用投票式或市场调研式选项列表。
 
 满足条件后的首个顶帖：
 
 ```text
 Title: When you review missed PMP questions, what actually helps you improve?
 
-I keep noticing that doing more questions does not always fix the same weak areas. For people who improved their scores, what made the biggest difference: reviewing explanations, grouping mistakes by topic, or retaking mixed sets later?
+I keep noticing that doing more questions does not always fix the same weak areas. For people who improved their scores, what did you change in the way you reviewed a miss, and how did you tell whether that change was working?
 ```
 
 如果这个新帖再次被过滤：停止继续发顶帖，通过 Modmail 询问原因，后续只保留自然评论互动。
@@ -672,11 +639,11 @@ I keep noticing that doing more questions does not always fix the same weak area
 
 每天执行完填这 5 项：
 
-- 日期：
-- X 是否发布：
-- Reddit 是否执行：
-- 当天链接：
-- 反馈/下一步：
+- 日期：2026-07-27
+- X 是否发布：是
+- Reddit 是否执行：是，发布 1 条自然评论，未发顶帖。
+- 当天链接：https://x.com/xingyunMG/status/2081743563709468901；https://www.reddit.com/r/pmp/comments/1uujvec/not_sure_what_to_do_after_failing_on_my_first/p02asxa/
+- 反馈/下一步：Day 9-15 在 r/PMP 共 6 条公开评论；先确认或补发 Day 8 Modmail，再从确认发送之时起等待至少 72 小时，期间不发新的 r/PMP 顶帖。
 
 ## 风险提醒
 
