@@ -10,7 +10,7 @@ export const seoPages = [
   { path: "prompts/pmp-career-value-prompts.html", lastmod: "2026-07-05", index: true, schema: ["LearningResource", "Article", "BreadcrumbList"] },
   { path: "prompts/project-manager-ai-prompts.html", lastmod: "2026-07-06", index: true, schema: ["LearningResource", "Article", "BreadcrumbList"] },
   { path: "practice.html", lastmod: "2026-07-04", index: true, schema: ["LearningResource", "BreadcrumbList", "ItemList"] },
-  { path: "pmp-questions.html", lastmod: "2026-07-06", index: true, schema: ["LearningResource", "BreadcrumbList", "ItemList"] },
+  { path: "pmp-questions.html", lastmod: "2026-07-27", index: true, schema: ["LearningResource", "BreadcrumbList", "ItemList"] },
   { path: "pmp-mock-exam.html", lastmod: "2026-07-22", index: true, schema: ["LearningResource", "BreadcrumbList"] },
   { path: "capm-questions.html", lastmod: "2026-07-06", index: true, schema: ["LearningResource", "BreadcrumbList", "ItemList"] },
   { path: "blog.html", lastmod: "2026-07-16", index: true, schema: [] },
@@ -25,7 +25,7 @@ export const seoPages = [
   { path: "guides/pmp-study-plan.html", lastmod: "2026-06-15", index: true, schema: ["Article", "BreadcrumbList"] },
   { path: "guides/pmp-situational-questions.html", lastmod: "2026-06-15", index: true, schema: ["Article", "BreadcrumbList"] },
   { path: "guides/pmp-agile-hybrid-predictive.html", lastmod: "2026-06-15", index: true, schema: ["Article", "BreadcrumbList"] },
-  { path: "guides/pmp-change-control.html", lastmod: "2026-06-15", index: true, schema: ["Article", "BreadcrumbList"] },
+  { path: "guides/pmp-change-control.html", lastmod: "2026-07-27", index: true, schema: ["Article", "BreadcrumbList"] },
   { path: "guides/pmp-change-approval-scope-evm-patterns.html", lastmod: "2026-07-08", index: true, schema: ["Article", "BreadcrumbList"] },
   { path: "guides/pmp-risk-issues.html", lastmod: "2026-06-15", index: true, schema: ["Article", "BreadcrumbList"] },
   { path: "guides/pmp-stakeholder-communication.html", lastmod: "2026-06-15", index: true, schema: ["Article", "BreadcrumbList"] },
@@ -46,7 +46,7 @@ export const seoPages = [
   { path: "guides/capm-next-step-scenario-questions.html", lastmod: "2026-06-18", index: true, schema: ["Article", "BreadcrumbList"] },
   { path: "guides/capm-study-materials-plan.html", lastmod: "2026-06-22", index: true, schema: ["Article", "BreadcrumbList"] },
   { path: "guides/capm-mistake-review-method.html", lastmod: "2026-06-23", index: true, schema: ["Article", "BreadcrumbList"] },
-  { path: "guides/capm-online-vs-test-center.html", lastmod: "2026-06-24", index: true, schema: ["Article", "BreadcrumbList"] },
+  { path: "guides/capm-online-vs-test-center.html", lastmod: "2026-07-27", index: true, schema: ["Article", "BreadcrumbList"] },
   { path: "guides/capm-to-pmp-study-bridge.html", lastmod: "2026-06-29", index: true, schema: ["Article", "BreadcrumbList"] }
 ];
 
