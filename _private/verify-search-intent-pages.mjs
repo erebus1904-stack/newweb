@@ -7,12 +7,19 @@ const pageContracts = [
   {
     path: "guides/capm-online-vs-test-center.html",
     canonical: "https://starrycesium.com/guides/capm-online-vs-test-center.html",
+    lastmod: "2026-08-03",
     requiredText: [
       "How to Schedule the CAPM Exam",
       "Schedule your CAPM exam in five steps",
-      "Check Pearson VUE seat availability before booking",
+      "Find CAPM exam locations and check Pearson VUE seat availability",
+      "CAPM exam locations are selected through Pearson VUE after you enter the scheduling process from your PMI account.",
       "Choose online testing or a test center",
-      "Confirm the current policy before you change an appointment"
+      "Confirm the current policy before you change an appointment",
+      "Reviewed: August 3, 2026",
+      "Published by PassGrid Editorial Team",
+      "Sources:",
+      "PMI CAPM certification page",
+      "Pearson VUE PMI testing page"
     ],
     requiredLinks: [
       "https://www.pmi.org/certifications/certified-associate-capm/",
@@ -22,6 +29,7 @@ const pageContracts = [
   {
     path: "guides/pmp-change-control.html",
     canonical: "https://starrycesium.com/guides/pmp-change-control.html",
+    lastmod: "2026-07-27",
     requiredText: [
       "Change-control decision table",
       "Five PMP change-control scenarios",
@@ -44,6 +52,16 @@ function articleNode(html) {
   return null;
 }
 
+function hasAnchorWithText(html, href, text) {
+  const anchors = html.matchAll(/<a\b([^>]*)>([\s\S]*?)<\/a>/gi);
+  for (const [, attributes, content] of anchors) {
+    const hrefMatch = attributes.match(/\bhref=(['"])(.*?)\1/i);
+    const visibleText = content.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
+    if (hrefMatch?.[2] === href && visibleText.includes(text)) return true;
+  }
+  return false;
+}
+
 for (const contract of pageContracts) {
   const html = readFileSync(contract.path, "utf8");
 
@@ -62,15 +80,52 @@ for (const contract of pageContracts) {
   const article = articleNode(html);
   if (!article) {
     failures.push(`${contract.path}: missing Article JSON-LD`);
-  } else if (article.dateModified !== "2026-07-27") {
-    failures.push(`${contract.path}: Article dateModified should be 2026-07-27`);
+  } else if (article.dateModified !== contract.lastmod) {
+    failures.push(`${contract.path}: Article dateModified should be ${contract.lastmod}`);
   }
 
   const pageMapEntry = seoPages.find((page) => page.path === contract.path);
   if (!pageMapEntry) {
     failures.push(`${contract.path}: missing from seo-page-map.mjs`);
-  } else if (pageMapEntry.lastmod !== "2026-07-27") {
-    failures.push(`${contract.path}: page-map lastmod should be 2026-07-27`);
+  } else if (pageMapEntry.lastmod !== contract.lastmod) {
+    failures.push(`${contract.path}: page-map lastmod should be ${contract.lastmod}`);
+  }
+}
+
+const capmScheduling = readFileSync("guides/capm-online-vs-test-center.html", "utf8");
+const scheduleSectionIndex = capmScheduling.indexOf("Schedule your CAPM exam in five steps");
+const deliveryVisualIndex = capmScheduling.indexOf('<figure class="article-visual"');
+if (scheduleSectionIndex === -1 || deliveryVisualIndex === -1 || scheduleSectionIndex > deliveryVisualIndex) {
+  failures.push("guides/capm-online-vs-test-center.html: scheduling steps should appear before the delivery comparison");
+}
+
+const capmLinkContracts = [
+  {
+    path: "blog.html",
+    href: './guides/capm-online-vs-test-center.html',
+    text: "How to schedule the CAPM exam"
+  },
+  {
+    path: "programs/capm.html",
+    href: '../guides/capm-online-vs-test-center.html',
+    text: "Find Pearson VUE CAPM locations or choose online testing"
+  },
+  {
+    path: "guides/capm-exam-timing-strategy.html",
+    href: '../guides/capm-online-vs-test-center.html',
+    text: "Find a Pearson VUE CAPM exam location or choose online testing"
+  },
+  {
+    path: "capm-questions.html",
+    href: './guides/capm-online-vs-test-center.html',
+    text: "schedule the CAPM exam"
+  }
+];
+
+for (const contract of capmLinkContracts) {
+  const html = readFileSync(contract.path, "utf8");
+  if (!hasAnchorWithText(html, contract.href, contract.text)) {
+    failures.push(`${contract.path}: missing CAPM scheduling link with anchor text "${contract.text}"`);
   }
 }
 
