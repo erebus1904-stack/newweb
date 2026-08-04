@@ -8,6 +8,7 @@ const pmpGuides = [
   "guides/pmp-risk-issues.html",
   "guides/pmp-stakeholder-communication.html",
   "guides/pmp-2026-exam-version.html",
+  "guides/pmi-advanced-certification-pmp-impact.html",
   "guides/pmp-next-best-action.html",
   "guides/pmp-delivery-approaches.html",
   "guides/pmp-agile-roles.html",
