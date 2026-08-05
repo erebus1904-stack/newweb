@@ -46,11 +46,15 @@ const pages = [
   },
   {
     file: "guides/pmp-2026-exam-version.html",
+    reviewDate: "2026-08-05",
+    reviewLabel: "August 5, 2026",
     checks: [
       [/on or after July 9, 2026/i, "missing post-launch exam-date answer"],
       [/People[^<]*33%/i, "missing July 2026 People weighting"],
       [/Process[^<]*41%/i, "missing July 2026 Process weighting"],
       [/Business Environment[^<]*26%/i, "missing July 2026 Business Environment weighting"],
+      [/Early questions after the July 2026 exam launch/i, "missing post-launch candidate questions"],
+      [/community source, not as evidence/i, "missing boundary for trainer observations"],
       [/What older materials still teach well/i, "missing older-materials boundary"],
       [/PassGrid coverage/i, "missing PassGrid coverage statement"]
     ]
@@ -69,16 +73,18 @@ const pages = [
 for (const page of pages) {
   const html = readRequired(page.file);
   if (!html) continue;
+  const reviewDate = page.reviewDate ?? "2026-07-16";
+  const reviewLabel = page.reviewLabel ?? "July 16, 2026";
 
   const commonChecks = [
     [/<section class="answer-first"/, "missing answer-first block"],
-    [/Last reviewed:\s*<time datetime="2026-07-16">July 16, 2026<\/time>/i, "missing visible last-reviewed date"],
+    [new RegExp(`Last reviewed:\\s*<time datetime="${reviewDate}">${reviewLabel}<\\/time>`, "i"), "missing visible last-reviewed date"],
     [/<section class="legal-section source-notes"/, "missing sources and verification section"],
     [/Sources and verification/i, "missing sources heading"],
     [/href="https:\/\/www\.pmi\.org\//i, "missing official PMI source link"],
     [/"@type": "Article"/, "missing Article JSON-LD"],
     [/"@type": "BreadcrumbList"/, "missing BreadcrumbList JSON-LD"],
-    [/"dateModified": "2026-07-16"/, "missing current dateModified"],
+    [new RegExp(`"dateModified": "${reviewDate}"`), "missing current dateModified"],
     [/class="legal-section related-guides"/, "missing related guides section"]
   ];
 

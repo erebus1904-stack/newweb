@@ -353,18 +353,19 @@ When two PMP answers both look reasonable, what usually decides it for you?
 - one clue in the wording
 ```
 
-- [ ] 发布 X 顶层帖子。
-- [ ] 不带链接。
-- [ ] 不使用虚假的“很多人都问”表述。
-- [ ] 回复每条具体反馈。
-- [ ] 将反馈归类为 action / ownership / context / wording / other。
+- [x] 发布 X 顶层帖子。
+- [x] 不带链接。
+- [x] 不使用虚假的“很多人都问”表述。
+- [x] 回复每条具体反馈。
+- [x] 将反馈归类为 action / ownership / context / wording / other。
 
 结果记录：
 
-- X URL：
-- 24 小时展示：
-- 回复数量：
-- 反馈分类：
+- 发布状态：`已完成。OpenCLI 更新至 1.8.6 后提交成功；公开时间线确认只有一条。`
+- X URL：`https://x.com/xingyunMG/status/2084978795199750388`
+- 24 小时展示：`待 Day 8 记录`（发布后初始为 0）
+- 回复数量：`0`（发布后初始数据）
+- 反馈分类：`暂无反馈`
 
 ### Day 8 - 2026-08-05 - 中期复盘
 
