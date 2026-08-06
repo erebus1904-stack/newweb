@@ -32,7 +32,7 @@ export const seoPages = [
   { path: "guides/pmp-scenario-patterns-foundation.html", lastmod: "2026-07-07", index: true, schema: ["Article", "BreadcrumbList"] },
   { path: "guides/pmp-vs-capm.html", lastmod: "2026-07-16", index: true, schema: ["Article", "BreadcrumbList"] },
   { path: "guides/pmp-2026-exam-version.html", lastmod: "2026-08-05", index: true, schema: ["Article", "BreadcrumbList"] },
-  { path: "guides/pmi-advanced-certification-pmp-impact.html", lastmod: "2026-08-05", index: true, schema: ["Article", "BreadcrumbList"] },
+  { path: "guides/pmi-advanced-certification-pmp-impact.html", lastmod: "2026-08-06", index: true, schema: ["Article", "BreadcrumbList"] },
   { path: "guides/pmp-online-vs-test-center.html", lastmod: "2026-07-16", index: true, schema: ["Article", "BreadcrumbList"] },
   { path: "guides/pmp-next-best-action.html", lastmod: "2026-06-15", index: true, schema: ["Article", "BreadcrumbList"] },
   { path: "guides/pmp-delivery-approaches.html", lastmod: "2026-06-15", index: true, schema: ["Article", "BreadcrumbList"] },

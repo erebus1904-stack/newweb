@@ -22,22 +22,22 @@ const pmpHub = read("programs/pmp.html");
 const seoMap = read("_private/seo-page-map.mjs");
 const sitemap = read("sitemap.xml");
 
-requireMatch(article, /<title>PMI Advanced Certification: Will It Weaken the PMP\? \| PassGrid<\/title>/, "Article title is missing or inaccurate.");
-requireMatch(article, /<h1>PMI Advanced Certification: Will It Weaken the PMP\?<\/h1>/, "Article H1 is missing or inaccurate.");
+requireMatch(article, /<title>PMI Advanced Certification Pilot and PMP Value \| PassGrid<\/title>/, "Article title is missing or inaccurate.");
+requireMatch(article, /<h1>Could PMI's Advanced Certification Pilot Weaken the PMP\?<\/h1>/, "Article H1 is missing or inaccurate.");
 requireMatch(article, new RegExp(`<link rel="canonical" href="${publicUrl.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}"`), "Article canonical is missing.");
 requireMatch(article, /Project Professional Advanced Certification/, "Article does not use PMI's confirmed certification name.");
 requireMatch(article, /limited-access pilot/i, "Article does not clearly describe limited pilot access.");
 requireMatch(article, /not (?:yet )?a broadly available certification/i, "Article does not distinguish the pilot from a public certification.");
 requireMatch(article, /My view: the PMP is likely to be affected/i, "Article does not state the requested editorial position.");
 requireMatch(article, /What would change this view/i, "Article does not explain what future evidence could change its conclusion.");
-requireMatch(article, /Last reviewed:\s*<time datetime="2026-08-05">August 5, 2026<\/time>/, "Visible review date is missing.");
+requireMatch(article, /Last reviewed:\s*<time datetime="2026-08-06">August 6, 2026<\/time>/, "Visible review date is missing.");
 requireMatch(article, /https:\/\/www\.pmi\.org\/zh-cn\/future-50\/sitecore\/content\/pmiheadless\/home\/whats-next/, "Official PMI source is missing.");
 requireMatch(article, /https:\/\/www\.reddit\.com\/r\/pmp\/comments\/1oxzv2j\/not_a_fan_of_the_new_pmp_advanced_certification\//, "Reddit discussion source is missing.");
 requireMatch(article, /https:\/\/www\.reddit\.com\/r\/pmp\/comments\/1tf67xi\/pmis_new_advanced_pmp_cert_is_coming_is_this_the\//, "August 2026 market-saturation discussion source is missing.");
 requireMatch(article, /"@type": "Article"/, "Article JSON-LD is missing.");
 requireMatch(article, /"@type": "BreadcrumbList"/, "BreadcrumbList JSON-LD is missing.");
 requireMatch(article, /"datePublished": "2026-08-04"/, "Article publication date is missing from JSON-LD.");
-requireMatch(article, /"dateModified": "2026-08-05"/, "Article modification date is missing from JSON-LD.");
+requireMatch(article, /"dateModified": "2026-08-06"/, "Article modification date is missing from JSON-LD.");
 requireMatch(article, /<figure class="article-visual"/, "Article visual is missing.");
 requireMatch(article, /<section class="answer-first"/, "Answer-first summary is missing.");
 requireMatch(article, /<section class="legal-section source-notes"/, "Source notes are missing.");
@@ -45,8 +45,8 @@ requireMatch(article, /<section class="legal-section related-guides"/, "Related 
 
 requireMatch(blog, /\.\/guides\/pmi-advanced-certification-pmp-impact\.html/, "Blog does not link the article.");
 requireMatch(pmpHub, /\.\.\/guides\/pmi-advanced-certification-pmp-impact\.html/, "PMP Hub does not link the article.");
-requireMatch(seoMap, /guides\/pmi-advanced-certification-pmp-impact\.html", lastmod: "2026-08-05", index: true, schema: \["Article", "BreadcrumbList"\]/, "SEO page map entry is missing.");
-requireMatch(sitemap, new RegExp(`<loc>${publicUrl.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}</loc><lastmod>2026-08-05</lastmod>`), "Sitemap entry is missing or stale.");
+requireMatch(seoMap, /guides\/pmi-advanced-certification-pmp-impact\.html", lastmod: "2026-08-06", index: true, schema: \["Article", "BreadcrumbList"\]/, "SEO page map entry is missing.");
+requireMatch(sitemap, new RegExp(`<loc>${publicUrl.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}</loc><lastmod>2026-08-06</lastmod>`), "Sitemap entry is missing or stale.");
 
 if (failures.length) {
   failures.forEach((failure) => console.error(`FAIL ${failure}`));
