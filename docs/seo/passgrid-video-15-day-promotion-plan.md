@@ -393,18 +393,22 @@ When two PMP answers both look reasonable, what usually decides it for you?
 
 ### Day 9 - 2026-08-06 - AI 学习顾虑调研
 
-- [ ] 搜索 `"PMP" ("AI" OR "ChatGPT") ("study" OR "review")`。
-- [ ] 记录用户对准确性、来源和过度依赖的顾虑。
-- [ ] 有具体问题时最多回复 1 条。
-- [ ] 回复中强调验证思路，不宣传工具。
-- [ ] 准备 Day 10 文案。
+- [x] 搜索 `"PMP" ("AI" OR "ChatGPT") ("study" OR "review")`。
+- [x] 记录用户对准确性、来源和过度依赖的顾虑。
+- [x] 有具体问题时最多回复 1 条。
+- [x] 回复中强调验证思路，不宣传工具。
+- [x] 准备 Day 10 文案。
 
 结果记录：
 
-- 是否回复：
-- 回复 URL：
-- 用户顾虑：
-- 可验证的方法：
+- 执行日期：`2026-08-07`
+- 渠道状态：`X 组合检索与窄查询均因 Browser Bridge 未连接而超时，X 网页检索也未能加载；随后改用 r/pmp 公开讨论做只读补充，不将 Reddit 调研变成推广。`
+- 是否回复：`否。X 未返回可核验讨论；Reddit 只读，不评论、不私信。`
+- 回复 URL：`无`
+- 用户顾虑：`AI 生成题通常比真实考试或 Study Hall 简单，容易高估准备程度；复杂情境题中可能误判 PMI mindset 和细微语境；回答语气确定但缺少可靠来源，甚至与 PMI 官方答案冲突；把 AI 当答案裁判会造成过度依赖。`
+- 讨论样本：`https://www.reddit.com/r/pmp/comments/1oos7ho/`、`https://www.reddit.com/r/pmp/comments/1r5p1a6/`、`https://www.reddit.com/r/pmp/comments/1t1bs1j/`、`https://www.reddit.com/r/pmp/comments/1sulp6r/`、`https://www.reddit.com/r/pmp/comments/1u816qa/`
+- 可验证的方法：`先提供 PMI/Study Hall 原题、官方答案和官方解释，再让 AI 重述关键线索、归类错因和汇总重复弱项；AI 与官方材料冲突时以官方材料为准；不使用 AI 自生成题的分数判断考试准备度。`
+- Day 10 文案：`已准备。已核对 script.js 和页面说明，练习进度及错题通过浏览器 localStorage 保存，跨设备不自动同步，现有英文文案与产品行为一致。`
 
 ### Day 10 - 2026-08-07 - 产品取舍说明
 
@@ -418,18 +422,20 @@ That removes account setup and keeps practice free, but progress does not follow
 I prefer stating that limitation clearly.
 ```
 
-- [ ] 发布 X 顶层帖子。
-- [ ] 不带链接。
-- [ ] 不承诺跨设备同步。
-- [ ] 如有人提出同步需求，记录为产品反馈。
-- [ ] 发布后检查公开可见。
+- [x] 发布 X 顶层帖子。
+- [x] 不带链接。
+- [x] 不承诺跨设备同步。
+- [x] 如有人提出同步需求，记录为产品反馈。
+- [x] 发布后检查公开可见。
 
 结果记录：
 
-- X URL：
-- 24 小时展示：
-- 回复：
-- 是否有人需要跨设备：
+- 执行日期：`2026-08-09`
+- X URL：`https://x.com/xingyunMG/status/2086282519838957921`
+- 发布状态：`已公开验证。全文完整，无链接、媒体、hashtag 或跨设备同步承诺。首次提交只保留了第一段，已删除后改为单段完整文案重新发布；公开时间线只保留最终版本。`
+- 24 小时展示：`待 Day 11 记录`
+- 点赞 / 回复 / 转发：`0 / 0 / 0`（发布后初始数据）
+- 是否有人需要跨设备：`否。发布前通知中没有相关反馈，发布后初始回复为 0。`
 
 ### Day 11 - 2026-08-08 - AI prompts 引流准备
 
