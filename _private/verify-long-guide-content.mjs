@@ -10,6 +10,8 @@ const pmpGuides = [
   "guides/pmp-2026-exam-version.html",
   "guides/pmp-2026-exam-experience.html",
   "guides/ai-pmp-capm-study-without-cheating.html",
+  "guides/pmp-exam-retake-protection.html",
+  "guides/pmp-exam-dumps-security.html",
   "guides/pmi-advanced-certification-pmp-impact.html",
   "guides/udemy-60-pmp-pdus-renewal.html",
   "guides/pmp-next-best-action.html",
