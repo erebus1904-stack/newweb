@@ -56,9 +56,14 @@ requireMatch(security, /accidentally (?:open|see|receive|encounter)|accidental e
 requireMatch(security, /data forensics/i, "Exam security guide does not cover PMI data forensics.");
 requireMatch(security, /invalidat|revoke|restriction|legal action/i, "Exam security guide does not explain possible sanctions.");
 requireMatch(security, /report[^.]{0,180}(?:PMI|exam security)/i, "Exam security guide does not explain how to report suspected dumps.");
+requireMatch(security, /<h2>Can you really get PMP certified in 3 days\?<\/h2>/i, "Exam security guide does not answer the three-day certification claim.");
+requireMatch(security, /already (?:eligible|approved)[^.]{0,180}(?:three-day|3-day|three days)/i, "Exam security guide does not distinguish short final review by an eligible candidate.");
+requireMatch(security, /(?:100%|guaranteed)[^.]{0,180}(?:proxy|exam dump|confidential|misleading|warning)/i, "Exam security guide does not identify guaranteed three-day marketing risks.");
 requireMatch(security, /"@type": "Article"/, "Exam security guide Article schema is missing.");
 requireMatch(security, /"@type": "BreadcrumbList"/, "Exam security guide BreadcrumbList schema is missing.");
 requireMatch(security, /"datePublished": "2026-08-28"/, "Exam security guide publication date is missing.");
+requireMatch(security, /"dateModified": "2026-08-31"/, "Exam security guide update date is missing.");
+requireMatch(security, /Last reviewed: <time datetime="2026-08-31">August 31, 2026<\/time>/, "Exam security guide visible review date is missing.");
 requireMatch(security, /<section class="legal-section source-notes"/, "Exam security guide source notes are missing.");
 requireNoMatch(security, /tiktok\.com|pmp_dumps|"@type": "(?:FAQPage|ClaimReview)"/i, "Exam security guide links to suspicious accounts or uses unsupported FAQPage/ClaimReview schema.");
 
@@ -76,10 +81,10 @@ for (const path of [retakePath, securityPath]) {
 }
 
 requireMatch(seoMap, /guides\/pmp-exam-retake-protection\.html", lastmod: "2026-08-28", index: true, schema: \["Article", "BreadcrumbList"\]/, "SEO map is missing the retake guide.");
-requireMatch(seoMap, /guides\/pmp-exam-dumps-security\.html", lastmod: "2026-08-28", index: true, schema: \["Article", "BreadcrumbList"\]/, "SEO map is missing the exam security guide.");
+requireMatch(seoMap, /guides\/pmp-exam-dumps-security\.html", lastmod: "2026-08-31", index: true, schema: \["Article", "BreadcrumbList"\]/, "SEO map is missing the updated exam security guide.");
 requireMatch(seoMap, /guides\/ai-pmp-capm-study-without-cheating\.html", lastmod: "2026-08-28", index: true, schema: \["Article", "BreadcrumbList"\]/, "SEO map does not show the AI guide update.");
 requireMatch(sitemap, new RegExp(`<loc>${retakeUrl.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}</loc><lastmod>2026-08-28</lastmod>`), "Sitemap is missing the retake guide.");
-requireMatch(sitemap, new RegExp(`<loc>${securityUrl.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}</loc><lastmod>2026-08-28</lastmod>`), "Sitemap is missing the exam security guide.");
+requireMatch(sitemap, new RegExp(`<loc>${securityUrl.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}</loc><lastmod>2026-08-31</lastmod>`), "Sitemap is missing the updated exam security guide.");
 
 if (failures.length) {
   failures.forEach((failure) => console.error(`FAIL ${failure}`));
