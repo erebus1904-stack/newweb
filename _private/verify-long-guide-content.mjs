@@ -9,6 +9,8 @@ const pmpGuides = [
   "guides/pmp-stakeholder-communication.html",
   "guides/pmp-2026-exam-version.html",
   "guides/pmp-2026-exam-experience.html",
+  "guides/pmp-35-hour-training-rules-2026.html",
+  "guides/pm-prepcast-closing-2026.html",
   "guides/ai-pmp-capm-study-without-cheating.html",
   "guides/pmp-exam-retake-protection.html",
   "guides/pmp-exam-dumps-security.html",

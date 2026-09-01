@@ -46,15 +46,15 @@ const pages = [
   },
   {
     file: "guides/pmp-2026-exam-version.html",
-    reviewDate: "2026-08-05",
-    reviewLabel: "August 5, 2026",
+    reviewDate: "2026-09-01",
+    reviewLabel: "September 1, 2026",
     checks: [
       [/on or after July 9, 2026/i, "missing post-launch exam-date answer"],
       [/People[^<]*33%/i, "missing July 2026 People weighting"],
       [/Process[^<]*41%/i, "missing July 2026 Process weighting"],
       [/Business Environment[^<]*26%/i, "missing July 2026 Business Environment weighting"],
-      [/Early questions after the July 2026 exam launch/i, "missing post-launch candidate questions"],
-      [/community source, not as evidence/i, "missing boundary for trainer observations"],
+      [/post-launch format observations/i, "missing route to post-launch format observations"],
+      [/official ECO as the final scope authority/i, "missing official-scope boundary"],
       [/What older materials still teach well/i, "missing older-materials boundary"],
       [/PassGrid coverage/i, "missing PassGrid coverage statement"]
     ]

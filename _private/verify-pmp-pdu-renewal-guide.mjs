@@ -40,6 +40,7 @@ requireMatch(guide, /remaining 11 Education PDUs/i, "Flexible Education allocati
 requireMatch(guide, /Giving Back[\s\S]{0,220}(?:Maximum |Up to )?25/i, "Giving Back maximum is missing.");
 requireMatch(guide, /Work as a Practitioner[\s\S]{0,220}(?:Maximum |Up to )?8/i, "Practitioner maximum is missing.");
 requireMatch(guide, /35 training hours[^.]{0,180}(?:application|eligibility|apply)/i, "Guide does not distinguish initial PMP training from renewal Education PDUs.");
+requireMatch(guide, /\.\/pmp-35-hour-training-rules-2026\.html/, "Guide does not link the current PMP training-rule guide.");
 requireMatch(guide, /third-party provider courses?[^.]{0,180}(?:eligible|count|accepted|qualify)/i, "Third-party course eligibility is not explained.");
 requireMatch(guide, /not (?:automatically|automatic approval|pre-approved)/i, "Guide does not reject automatic validity claims.");
 requireMatch(guide, /Certification Requirements System \(CCRS\)/, "CCRS is not defined.");
@@ -54,13 +55,14 @@ requireMatch(guide, /https:\/\/ccrs\.pmi\.org\/info\/earnpdus/, "Official PMI CC
 requireMatch(guide, /"@type": "Article"/, "Article JSON-LD is missing.");
 requireMatch(guide, /"@type": "BreadcrumbList"/, "BreadcrumbList JSON-LD is missing.");
 requireMatch(guide, /"datePublished": "2026-08-10"/, "Publication date is missing from JSON-LD.");
+requireMatch(guide, /"dateModified": "2026-09-01"/, "Modification date is stale in JSON-LD.");
 requireNoMatch(guide, /"@type": "FAQPage"/, "FAQPage schema should not be used for this guide.");
 
 requireMatch(blog, /\.\/guides\/udemy-60-pmp-pdus-renewal\.html/, "Blog does not link the guide.");
 requireMatch(pmpHub, /\.\.\/guides\/udemy-60-pmp-pdus-renewal\.html/, "PMP Hub does not link the guide.");
 requireMatch(longGuideCheck, /"guides\/udemy-60-pmp-pdus-renewal\.html"/, "Long-guide validation does not include the guide.");
-requireMatch(seoMap, /guides\/udemy-60-pmp-pdus-renewal\.html", lastmod: "2026-08-10", index: true, schema: \["Article", "BreadcrumbList"\]/, "SEO page map entry is missing.");
-requireMatch(sitemap, new RegExp(`<loc>${publicUrl.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}</loc><lastmod>2026-08-10</lastmod>`), "Sitemap entry is missing or stale.");
+requireMatch(seoMap, /guides\/udemy-60-pmp-pdus-renewal\.html", lastmod: "2026-09-01", index: true, schema: \["Article", "BreadcrumbList"\]/, "SEO page map entry is missing.");
+requireMatch(sitemap, new RegExp(`<loc>${publicUrl.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}</loc><lastmod>2026-09-01</lastmod>`), "Sitemap entry is missing or stale.");
 
 if (failures.length) {
   failures.forEach((failure) => console.error(`FAIL ${failure}`));
