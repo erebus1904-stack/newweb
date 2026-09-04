@@ -46,12 +46,12 @@ requireMatch(exam, /<h2>Is PMI Study Hall aligned with the new 2026 PMP exam\?<\
 requireMatch(exam, /Essentials[^.]{0,220}(?:before 8 July 2026|before July 9, 2026)/i, "PMP exam experience does not identify the legacy Essentials product wording.");
 requireMatch(exam, /Study Hall Plus[^.]{0,220}(?:aligned with|aligned to)[^.]{0,100}(?:2026|Exam Content Outline|ECO)/i, "PMP exam experience does not identify the new-exam Plus product wording.");
 requireMatch(exam, /September 4[^.]{0,220}(?:community|candidate|user)[^.]{0,120}(?:report|reported|notice|prompt)/i, "PMP exam experience does not label the September 4 claim as community evidence.");
-requireMatch(exam, /PMI has not[^.]{0,220}(?:September 4|reset|update scope)/i, "PMP exam experience does not state what PMI has not publicly confirmed.");
+requireMatch(exam, /(?:PMI has not|There is no public)[^.]{0,220}(?:September 4|reset|update scope)/i, "PMP exam experience does not state what PMI has not publicly confirmed.");
 requireMatch(exam, /"@type": "Article"/, "PMP exam experience Article schema is missing.");
 requireMatch(exam, /"@type": "BreadcrumbList"/, "PMP exam experience BreadcrumbList schema is missing.");
 requireMatch(exam, /"datePublished": "2026-08-09"/, "PMP exam experience publication date is missing.");
-requireMatch(exam, /"dateModified": "2026-09-01"/, "PMP exam experience update date is missing.");
-requireMatch(exam, /Last reviewed: <time datetime="2026-09-01">September 1, 2026<\/time>/, "PMP exam experience visible review date is missing.");
+requireMatch(exam, /"dateModified": "2026-09-04"/, "PMP exam experience update date is missing.");
+requireMatch(exam, /Last reviewed: <time datetime="2026-09-04">September 4, 2026<\/time>/, "PMP exam experience visible review date is missing.");
 if (/"@type": "FAQPage"/.test(exam)) failures.push("PMP exam experience should not use FAQPage schema.");
 requireMatch(exam, /<section class="legal-section source-notes"/, "PMP exam experience source notes are missing.");
 requireMatch(exam, /<section class="legal-section related-guides"/, "PMP exam experience related links are missing.");
@@ -92,9 +92,9 @@ for (const path of [examPath, aiPath]) {
 }
 
 requireMatch(capmHub, /\.\.\/guides\/ai-pmp-capm-study-without-cheating\.html/, "CAPM Hub does not link the AI study guide.");
-requireMatch(seoMap, /guides\/pmp-2026-exam-experience\.html", lastmod: "2026-09-01", index: true, schema: \["Article", "BreadcrumbList"\]/, "SEO map is missing the updated PMP exam experience page.");
+requireMatch(seoMap, /guides\/pmp-2026-exam-experience\.html", lastmod: "2026-09-04", index: true, schema: \["Article", "BreadcrumbList"\]/, "SEO map is missing the updated PMP exam experience page.");
 requireMatch(seoMap, /guides\/ai-pmp-capm-study-without-cheating\.html", lastmod: "2026-08-28", index: true, schema: \["Article", "BreadcrumbList"\]/, "SEO map is missing the AI study page.");
-requireMatch(sitemap, new RegExp(`<loc>${examUrl.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}</loc><lastmod>2026-09-01</lastmod>`), "Sitemap is missing the updated PMP exam experience page.");
+requireMatch(sitemap, new RegExp(`<loc>${examUrl.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}</loc><lastmod>2026-09-04</lastmod>`), "Sitemap is missing the updated PMP exam experience page.");
 requireMatch(sitemap, new RegExp(`<loc>${aiUrl.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}</loc><lastmod>2026-08-28</lastmod>`), "Sitemap is missing the AI study page.");
 
 if (failures.length) {
