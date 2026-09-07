@@ -39,7 +39,7 @@ export const seoPages = [
   { path: "guides/ai-pmp-capm-study-without-cheating.html", lastmod: "2026-08-28", index: true, schema: ["Article", "BreadcrumbList"] },
   { path: "guides/pmp-exam-retake-protection.html", lastmod: "2026-08-28", index: true, schema: ["Article", "BreadcrumbList"] },
   { path: "guides/pmp-exam-dumps-security.html", lastmod: "2026-08-31", index: true, schema: ["Article", "BreadcrumbList"] },
-  { path: "guides/pmi-advanced-certification-pmp-impact.html", lastmod: "2026-08-06", index: true, schema: ["Article", "BreadcrumbList"] },
+  { path: "guides/pmi-advanced-certification-pmp-impact.html", lastmod: "2026-09-07", index: true, schema: ["Article", "BreadcrumbList"] },
   { path: "guides/udemy-60-pmp-pdus-renewal.html", lastmod: "2026-09-01", index: true, schema: ["Article", "BreadcrumbList"] },
   { path: "guides/pmp-online-vs-test-center.html", lastmod: "2026-07-16", index: true, schema: ["Article", "BreadcrumbList"] },
   { path: "guides/pmp-next-best-action.html", lastmod: "2026-06-15", index: true, schema: ["Article", "BreadcrumbList"] },
