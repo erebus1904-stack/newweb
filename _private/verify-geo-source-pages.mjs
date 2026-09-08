@@ -61,11 +61,14 @@ const pages = [
   },
   {
     file: "guides/pmp-online-vs-test-center.html",
+    reviewDate: "2026-09-08",
+    reviewLabel: "September 8, 2026",
     checks: [
       [/Online exam may fit/i, "missing online-fit decision"],
       [/test center may fit/i, "missing test-center-fit decision"],
       [/Pearson VUE/i, "missing Pearson VUE attribution"],
-      [/system test/i, "missing official system-test check"]
+      [/system test/i, "missing official system-test check"],
+      [/href="https:\/\/www\.pearsonvue\.com\/us\/en\/pmi\/onvue\.html"/, "missing program-specific OnVUE source"]
     ]
   }
 ];
