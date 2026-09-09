@@ -52,15 +52,15 @@ requireMatch(examExperience, /As of September 4, 2026/i, "Exam experience guide 
 requireMatch(examExperience, /public[^.]{0,180}Study Hall[^.]{0,220}180-question/i, "Exam experience guide omits the current public Study Hall product facts.");
 requireMatch(examExperience, /no public[^.]{0,120}(?:September 4|dated)[^.]{0,160}(?:changelog|release note)/i, "Exam experience guide does not distinguish public product facts from the reported September 4 rollout.");
 requireMatch(examExperience, /\.\/pmp-exam-breaks-40-70-70\.html/, "Exam experience guide does not link the focused break guide.");
-requireMatch(examExperience, /"dateModified": "2026-09-04"/, "Exam experience guide modification date is stale.");
+requireMatch(examExperience, /"dateModified": "2026-09-09"/, "Exam experience guide modification date is stale.");
 requireMatch(onlineVsCenter, /\.\/pmp-exam-breaks-40-70-70\.html/, "Online-vs-test-center guide does not link the break guide.");
 requireMatch(blog, /\.\/guides\/pmp-exam-breaks-40-70-70\.html/, "Blog does not link the break guide.");
 requireMatch(pmpHub, /\.\.\/guides\/pmp-exam-breaks-40-70-70\.html/, "PMP Hub does not link the break guide.");
 requireMatch(longGuideCheck, /"guides\/pmp-exam-breaks-40-70-70\.html"/, "Long-guide validation does not include the break guide.");
 requireMatch(seoMap, /guides\/pmp-exam-breaks-40-70-70\.html", lastmod: "2026-09-04", index: true, schema: \["Article", "BreadcrumbList"\]/, "SEO map is missing the break guide.");
-requireMatch(seoMap, /guides\/pmp-2026-exam-experience\.html", lastmod: "2026-09-04", index: true, schema: \["Article", "BreadcrumbList"\]/, "SEO map has a stale exam-experience date.");
+requireMatch(seoMap, /guides\/pmp-2026-exam-experience\.html", lastmod: "2026-09-09", index: true, schema: \["Article", "BreadcrumbList"\]/, "SEO map has a stale exam-experience date.");
 requireMatch(sitemap, new RegExp(`<loc>${guideUrl.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}</loc><lastmod>2026-09-04</lastmod>`), "Sitemap is missing the break guide.");
-requireMatch(sitemap, /<loc>https:\/\/starrycesium\.com\/guides\/pmp-2026-exam-experience\.html<\/loc><lastmod>2026-09-04<\/lastmod>/, "Sitemap has a stale exam-experience date.");
+requireMatch(sitemap, /<loc>https:\/\/starrycesium\.com\/guides\/pmp-2026-exam-experience\.html<\/loc><lastmod>2026-09-09<\/lastmod>/, "Sitemap has a stale exam-experience date.");
 
 if (failures.length) {
   failures.forEach((failure) => console.error(`FAIL ${failure}`));

@@ -19,6 +19,11 @@ Subsequent targeted reviews are dated per source below; they do not imply a fres
 | `PEARSON-PMI-ONVUE` | Pearson VUE | PMI-specific equipment, room, check-in, conduct, and technical-recovery instructions | https://www.pearsonvue.com/us/en/pmi/onvue.html | 2026-09-08 | `guides/pmp-online-vs-test-center.html` | Recheck every 30 days and on any operational-policy change. Documentation advice is editorial; never promise refunds or unrestricted device switching. |
 | `PMI-ADVANCED-PILOT` | Project Management Institute | Published pilot label and path; no confirmed APL acronym or dashboard-entry interpretation | https://www.pmi.org/whats-next | 2026-09-08 | `guides/pmi-advanced-certification-pmp-impact.html` | Recheck on official naming, application, fee, or access announcements. Community screenshots do not establish enrollment or a link to this pilot. |
 
+## September 9, 2026 targeted review
+
+- `guides/pmp-35-hour-training-rules-2026.html`: both https://www.pmi.org/certifications/project-management-pmp and https://www.pmi.org/certifications/project-management-pmp/new-exam state December 1, 2026 for the live-training provider rule. The New Exam notice also confirms self-paced and pre-change completed-training routes. This records agreement observed today, not a newly announced policy or an authenticated webpage publication date.
+- `guides/pmp-2026-exam-experience.html`: https://www.pmi.org/-/media/pmi/documents/public/pdf/certifications/pminextstudyhallfeatures-1.pdf?rev=d176cd2886ff49c4b2048ae9f4c8315a, page 6, contains the non-predictive warning and 60% user observation. It does not identify a July 2026 exam cohort or validate a new-exam threshold. Product-rollout observations retain their September 4 review date.
+
 ## Claim-handling rules
 
 1. Attribute eligibility, exam structure, scheduling, identification, delivery, and proctoring claims to PMI or Pearson VUE.
