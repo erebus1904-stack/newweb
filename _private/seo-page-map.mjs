@@ -33,7 +33,7 @@ export const seoPages = [
   { path: "guides/pmp-vs-capm.html", lastmod: "2026-07-16", index: true, schema: ["Article", "BreadcrumbList"] },
   { path: "guides/pmp-2026-exam-version.html", lastmod: "2026-09-01", index: true, schema: ["Article", "BreadcrumbList"] },
   { path: "guides/pmp-2026-exam-experience.html", lastmod: "2026-09-09", index: true, schema: ["Article", "BreadcrumbList"] },
-  { path: "guides/pmp-exam-breaks-40-70-70.html", lastmod: "2026-09-10", index: true, schema: ["Article", "BreadcrumbList"] },
+  { path: "guides/pmp-exam-breaks-40-70-70.html", lastmod: "2026-09-11", index: true, schema: ["Article", "BreadcrumbList"] },
   { path: "guides/pmp-application-without-project-manager-title.html", lastmod: "2026-09-10", index: true, schema: ["Article", "BreadcrumbList"] },
   { path: "guides/pmp-35-hour-training-rules-2026.html", lastmod: "2026-09-09", index: true, schema: ["Article", "BreadcrumbList"] },
   { path: "guides/pm-prepcast-closing-2026.html", lastmod: "2026-09-01", index: true, schema: ["Article", "BreadcrumbList"] },
@@ -54,7 +54,7 @@ export const seoPages = [
   { path: "guides/capm-agile-scrum-kanban.html", lastmod: "2026-06-16", index: true, schema: ["Article", "BreadcrumbList"] },
   { path: "guides/capm-business-analysis-study.html", lastmod: "2026-06-17", index: true, schema: ["Article", "BreadcrumbList"] },
   { path: "guides/capm-next-step-scenario-questions.html", lastmod: "2026-06-18", index: true, schema: ["Article", "BreadcrumbList"] },
-  { path: "guides/capm-study-materials-plan.html", lastmod: "2026-08-09", index: true, schema: ["Article", "BreadcrumbList"] },
+  { path: "guides/capm-study-materials-plan.html", lastmod: "2026-09-11", index: true, schema: ["Article", "BreadcrumbList"] },
   { path: "guides/capm-mistake-review-method.html", lastmod: "2026-06-23", index: true, schema: ["Article", "BreadcrumbList"] },
   { path: "guides/capm-online-vs-test-center.html", lastmod: "2026-08-03", index: true, schema: ["Article", "BreadcrumbList"] },
   { path: "guides/capm-to-pmp-study-bridge.html", lastmod: "2026-06-29", index: true, schema: ["Article", "BreadcrumbList"] }

@@ -46,8 +46,11 @@ requireMatch(guide, /https:\/\/www\.reddit\.com\/r\/pmp\/comments\/1w6gt5b\/2_bu
 requireMatch(guide, /"@type": "Article"/, "Break guide Article schema is missing.");
 requireMatch(guide, /"@type": "BreadcrumbList"/, "Break guide BreadcrumbList schema is missing.");
 requireMatch(guide, /"datePublished": "2026-09-04"/, "Break guide publication date is missing.");
-requireMatch(guide, /"dateModified": "2026-09-10"/, "Break guide modification date is stale.");
-requireMatch(guide, /Last reviewed: <time datetime="2026-09-10">September 10, 2026<\/time>/, "Break guide visible review date is stale.");
+requireMatch(guide, /"dateModified": "2026-09-11"/, "Break guide modification date is stale.");
+requireMatch(guide, /Last reviewed: <time datetime="2026-09-11">September 11, 2026<\/time>/, "Break guide visible review date is stale.");
+requireMatch(guide, /40-70-70 or 60-60-60: which information should you use\?/i, "Break guide omits the competing split comparison.");
+requireMatch(guide, /60-60-60[^.]{0,220}not[^.]{0,140}(?:guaranteed|fixed)[^.]{0,100}(?:current|2026) ECO/i, "Do not treat 60-60-60 as a current guaranteed split.");
+requireMatch(guide, /not evidence[^.]{0,140}another[^.]{0,80}policy change/i, "Explain why conflicting posts do not establish another policy change.");
 for (const postId of ["1wazla6", "1wbohhg", "1wahguz"]) {
   requireMatch(guide, new RegExp(`href="https://www\\.reddit\\.com/r/pmp/comments/${postId}/`), `Break guide is missing the visible ${postId} source.`);
 }
@@ -66,9 +69,9 @@ requireMatch(onlineVsCenter, /\.\/pmp-exam-breaks-40-70-70\.html/, "Online-vs-te
 requireMatch(blog, /\.\/guides\/pmp-exam-breaks-40-70-70\.html/, "Blog does not link the break guide.");
 requireMatch(pmpHub, /\.\.\/guides\/pmp-exam-breaks-40-70-70\.html/, "PMP Hub does not link the break guide.");
 requireMatch(longGuideCheck, /"guides\/pmp-exam-breaks-40-70-70\.html"/, "Long-guide validation does not include the break guide.");
-requireMatch(seoMap, /guides\/pmp-exam-breaks-40-70-70\.html", lastmod: "2026-09-10", index: true, schema: \["Article", "BreadcrumbList"\]/, "SEO map is missing the current break guide.");
+requireMatch(seoMap, /guides\/pmp-exam-breaks-40-70-70\.html", lastmod: "2026-09-11", index: true, schema: \["Article", "BreadcrumbList"\]/, "SEO map is missing the current break guide.");
 requireMatch(seoMap, /guides\/pmp-2026-exam-experience\.html", lastmod: "2026-09-09", index: true, schema: \["Article", "BreadcrumbList"\]/, "SEO map has a stale exam-experience date.");
-requireMatch(sitemap, new RegExp(`<loc>${guideUrl.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}</loc><lastmod>2026-09-10</lastmod>`), "Sitemap is missing the current break guide.");
+requireMatch(sitemap, new RegExp(`<loc>${guideUrl.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}</loc><lastmod>2026-09-11</lastmod>`), "Sitemap is missing the current break guide.");
 requireMatch(sitemap, /<loc>https:\/\/starrycesium\.com\/guides\/pmp-2026-exam-experience\.html<\/loc><lastmod>2026-09-09<\/lastmod>/, "Sitemap has a stale exam-experience date.");
 
 if (failures.length) {
