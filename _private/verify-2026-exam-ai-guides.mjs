@@ -69,9 +69,22 @@ requireMatch(ai, /verify[^.]{0,100}official (?:PMI )?sources/i, "AI study guide 
 requireMatch(ai, /"@type": "Article"/, "AI study guide Article schema is missing.");
 requireMatch(ai, /"@type": "BreadcrumbList"/, "AI study guide BreadcrumbList schema is missing.");
 requireMatch(ai, /"datePublished": "2026-08-09"/, "AI study guide publication date is missing.");
-requireMatch(ai, /"dateModified": "2026-08-28"/, "AI study guide update date is missing.");
+requireMatch(ai, /"dateModified": "2026-09-15"/, "AI study guide update date is missing.");
+requireMatch(ai, /Last reviewed: <time datetime="2026-09-15">September 15, 2026<\/time>/, "AI study guide visible date is stale.");
 requireMatch(ai, /<section class="legal-section source-notes"/, "AI study guide source notes are missing.");
 requireMatch(ai, /<section class="legal-section related-guides"/, "AI study guide related links are missing.");
+const sharingSection = ai.match(/<section\b[^>]*id="sharing-practice-questions"[^>]*>([\s\S]*?)<\/section>/)?.[1] || "";
+const sharingText = sharingSection.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ");
+for (const label of ["Original practice", "Licensed practice", "Confidential exam content"]) {
+  requireMatch(sharingSection, new RegExp(`<th scope="row">${label}</th>`), `AI sharing table is missing ${label}.`);
+}
+requireMatch(sharingSection, /href="https:\/\/www\.pmi\.org\/terms"/, "Put the intellectual-property source beside the sharing answer.");
+requireMatch(sharingSection, /href="https:\/\/www\.pmi\.org\/certifications\/certification-resources\/exam-security"/, "Put the exam-security source beside the distinct live-content rule.");
+requireMatch(sharingText, /(?:Rewording|Changing words)[^.]{0,100}(?:does not|not)[^.]{0,120}permission/i, "Do not imply that rewording grants permission.");
+requireMatch(sharingText, /PassGrid original example/i, "Add an explicitly original concept-only example.");
+requireMatch(ai, /id="ai-answer-disagreement"/, "Add the AI versus Study Hall answer-dispute question.");
+requireMatch(ai, /disagreement[^.]{0,100}(?:does not|not)[^.]{0,100}(?:right|correct)/i, "Do not decide correctness from disagreement alone.");
+requireMatch(ai, /(?:support|feedback)[^.]{0,140}(?:channel|private)/i, "Send unresolved product questions through the appropriate private channel.");
 
 requireMatch(materialGuide, /<h2>How deeply should you study a 35-hour PMP course\?<\/h2>/, "PMP material guide is missing 35-hour course guidance.");
 requireMatch(materialGuide, /Starting (?:on )?December 1, 2026/i, "PMP material guide does not state the confirmed live-training rule date.");
@@ -93,9 +106,9 @@ for (const path of [examPath, aiPath]) {
 
 requireMatch(capmHub, /\.\.\/guides\/ai-pmp-capm-study-without-cheating\.html/, "CAPM Hub does not link the AI study guide.");
 requireMatch(seoMap, /guides\/pmp-2026-exam-experience\.html", lastmod: "2026-09-09", index: true, schema: \["Article", "BreadcrumbList"\]/, "SEO map is missing the updated PMP exam experience page.");
-requireMatch(seoMap, /guides\/ai-pmp-capm-study-without-cheating\.html", lastmod: "2026-08-28", index: true, schema: \["Article", "BreadcrumbList"\]/, "SEO map is missing the AI study page.");
+requireMatch(seoMap, /guides\/ai-pmp-capm-study-without-cheating\.html", lastmod: "2026-09-15", index: true, schema: \["Article", "BreadcrumbList"\]/, "SEO map is missing the AI study page.");
 requireMatch(sitemap, new RegExp(`<loc>${examUrl.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}</loc><lastmod>2026-09-09</lastmod>`), "Sitemap is missing the updated PMP exam experience page.");
-requireMatch(sitemap, new RegExp(`<loc>${aiUrl.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}</loc><lastmod>2026-08-28</lastmod>`), "Sitemap is missing the AI study page.");
+requireMatch(sitemap, new RegExp(`<loc>${aiUrl.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}</loc><lastmod>2026-09-15</lastmod>`), "Sitemap is missing the AI study page.");
 
 if (failures.length) {
   failures.forEach((failure) => console.error(`FAIL ${failure}`));

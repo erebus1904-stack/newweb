@@ -77,7 +77,7 @@ requireMatch(ai, /not calibrated by PMI/i, "AI guide does not explain that AI pr
 requireMatch(ai, /(?:85%|90%)[^.]{0,120}(?:cannot|can't)[^.]{0,100}predict/i, "AI guide does not reject 85-90% as a CAPM result predictor.");
 requireMatch(ai, /\.\/pmp-exam-dumps-security\.html/, "AI guide does not link the exam security guide.");
 requireMatch(ai, /\.\.\/programs\/capm\.html/, "AI guide does not link the CAPM Hub.");
-requireMatch(ai, /"dateModified": "2026-08-28"/, "AI guide modification date was not updated.");
+requireMatch(ai, /"dateModified": "2026-09-15"/, "AI guide modification date was not updated.");
 
 for (const path of [retakePath, securityPath]) {
   requireMatch(blog, new RegExp(`\\./${path.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}`), `Blog does not link ${path}.`);
@@ -87,7 +87,7 @@ for (const path of [retakePath, securityPath]) {
 
 requireMatch(seoMap, /guides\/pmp-exam-retake-protection\.html", lastmod: "2026-08-28", index: true, schema: \["Article", "BreadcrumbList"\]/, "SEO map is missing the retake guide.");
 requireMatch(seoMap, /guides\/pmp-exam-dumps-security\.html", lastmod: "2026-09-14", index: true, schema: \["Article", "BreadcrumbList"\]/, "SEO map is missing the updated exam security guide.");
-requireMatch(seoMap, /guides\/ai-pmp-capm-study-without-cheating\.html", lastmod: "2026-08-28", index: true, schema: \["Article", "BreadcrumbList"\]/, "SEO map does not show the AI guide update.");
+requireMatch(seoMap, /guides\/ai-pmp-capm-study-without-cheating\.html", lastmod: "2026-09-15", index: true, schema: \["Article", "BreadcrumbList"\]/, "SEO map does not show the AI guide update.");
 requireMatch(sitemap, new RegExp(`<loc>${retakeUrl.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}</loc><lastmod>2026-08-28</lastmod>`), "Sitemap is missing the retake guide.");
 requireMatch(sitemap, new RegExp(`<loc>${securityUrl.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}</loc><lastmod>2026-09-14</lastmod>`), "Sitemap is missing the updated exam security guide.");
 

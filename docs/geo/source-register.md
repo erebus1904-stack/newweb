@@ -6,6 +6,8 @@ Verified date for this review: **2026-07-16**
 
 Subsequent targeted reviews are dated per source below; they do not imply a fresh review of unrelated claims.
 
+For every user-supplied daily monitoring assessment, follow the [daily SEO and GEO protocol](daily-seo-geo-review.md). Include a Chinese GEO assessment, exact update/hold decision, and evidence-based measurement status alongside SEO.
+
 ## Source records
 
 | Source ID | Publisher | Supported claim | Official URL | Verified | Used by | Review trigger |
@@ -19,6 +21,15 @@ Subsequent targeted reviews are dated per source below; they do not imply a fres
 | `PEARSON-PMI-ONVUE` | Pearson VUE | PMI-specific equipment, room, check-in, conduct, and technical-recovery instructions | https://www.pearsonvue.com/us/en/pmi/onvue.html | 2026-09-08 | `guides/pmp-online-vs-test-center.html` | Recheck every 30 days and on any operational-policy change. Documentation advice is editorial; never promise refunds or unrestricted device switching. |
 | `PMI-ADVANCED-PILOT` | Project Management Institute | Published pilot label and path; no confirmed APL acronym or dashboard-entry interpretation | https://www.pmi.org/whats-next | 2026-09-10 | `guides/pmi-advanced-certification-pmp-impact.html` | Recheck on official naming, application, fee, or access announcements. Community screenshots do not establish enrollment or a link to this pilot. |
 | `PMI-PMP-APPLICATION-EXPERIENCE` | Project Management Institute | Job title is not decisive; qualifying work must involve actual professional project leadership | https://www.pmi.org/blog/pmp-application-experience | 2026-09-10 | `guides/pmp-application-without-project-manager-title.html` | Recheck when eligibility guidance changes; never convert examples into approval guarantees. |
+
+## September 15, 2026 targeted review
+
+- `guides/pmp-35-hour-training-rules-2026.html`: https://www.pmi.org/certifications/project-management-pmp and https://www.pmi.org/certifications/project-management-pmp/new-exam still support the active CAPM training route, December 1 live-provider restrictions, self-paced eligibility, and completed-training transition. This is a clarification, not a newly announced rule. Active CAPM does not remove other PMP eligibility conditions; the fictional course purchase check is PassGrid advice, not provider approval.
+- https://www.pmi.org/-/media/pmi/documents/public/pdf/certifications/ccr-certification-requirements-handbook.pdf is labelled April 2026. Pages 4, 6, and 15 support the PMP three-year 60-PDU cycle, at least 35 Education PDUs, and exclusion of activities before certification. Course marketing for different audiences does not establish that pre-PMP training can be reused as later PMP renewal credit. No individual course was audited.
+- `guides/ai-pmp-capm-study-without-cheating.html`: https://www.pmi.org/terms sections 3.1-3.3 supports general intellectual-property, personal-use and permission boundaries. https://www.pmi.org/certifications/certification-resources/exam-security separately covers confidential exam content and reporting. The current product-specific Study Hall agreement was not independently inspected; no claim is made that any community screenshot was an authenticated licensed or live item. Rewording does not create authorization, and AI disagreement is not proof of which answer is correct. The concept-only example and private support workflow are editorial advice, not legal determinations.
+- Source access during assessment: the agent-reach Jina route failed on the unavailable local proxy; the web tool successfully retrieved PMI and Google primary pages. No new social counts or AI citation results were independently established. The AI guide's older study-scope references retain their August 28 review, explicitly noted on the page.
+- GEO guidance checked at https://developers.google.com/search/docs/appearance/ai-features, https://developers.google.com/search/docs/fundamentals/ai-optimization-guide, and https://developers.google.com/search/updates. No special Google AI markup is required; FAQ rich results are discontinued. Apply Google-specific rules only to Google. The weekly observation template is empty, not a zero-result baseline; do not infer search volume or citations from social activity.
+- Only the two training and AI guide modification dates change. Keep their URLs, titles, publication dates, and existing Article/BreadcrumbList. No new public article, schedule, or deployment is created.
 
 ## September 14, 2026 targeted review
 

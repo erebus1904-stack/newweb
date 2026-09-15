@@ -20,6 +20,20 @@ const sitemap = readRequired("sitemap.xml");
 const blog = readRequired("blog.html");
 const pmpHub = readRequired("programs/pmp.html");
 const capmHub = readRequired("programs/capm.html");
+const dailyReview = readRequired("docs/geo/daily-seo-geo-review.md");
+const weeklyReview = readRequired("docs/seo/search-console-weekly-review.md");
+
+for (const heading of ["Daily report", "Fixed discovery questions", "Observation log", "Measurement limits"]) {
+  requirePattern(dailyReview, new RegExp(`^## ${heading}$`, "m"), `daily GEO protocol missing ${heading}`);
+}
+requirePattern(dailyReview, /user-supplied daily monitoring/i, "daily GEO protocol must define the user-supplied trigger");
+requirePattern(dailyReview, /Chinese/i, "daily SEO and GEO assessments must be in Chinese");
+requirePattern(dailyReview, /unbranded/i, "GEO discovery prompts must not lead with the site brand");
+requirePattern(dailyReview, /Exact cited URL/, "GEO observations must retain the actual cited URL");
+requirePattern(dailyReview, /not measured/i, "GEO observations must not invent a zero baseline");
+requirePattern(dailyReview, /URL-fed[^.]{0,120}(?:not|separate)/i, "GEO protocol must distinguish URL-fed checks from discovery");
+requirePattern(weeklyReview, /\.\.\/geo\/daily-seo-geo-review\.md/, "weekly review must link the daily SEO/GEO protocol");
+requirePattern(sourceRegister, /daily-seo-geo-review\.md/, "source register must link the daily SEO/GEO protocol");
 
 for (const sourceId of [
   "PMI-PMP-CERT",
