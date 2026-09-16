@@ -87,9 +87,12 @@ requireMatch(ai, /disagreement[^.]{0,100}(?:does not|not)[^.]{0,100}(?:right|cor
 requireMatch(ai, /(?:support|feedback)[^.]{0,140}(?:channel|private)/i, "Send unresolved product questions through the appropriate private channel.");
 
 requireMatch(materialGuide, /<h2>How deeply should you study a 35-hour PMP course\?<\/h2>/, "PMP material guide is missing 35-hour course guidance.");
-requireMatch(materialGuide, /Starting (?:on )?December 1, 2026/i, "PMP material guide does not state the confirmed live-training rule date.");
-requireMatch(materialGuide, /Authorized Training Partner \(ATP\)/, "PMP material guide does not name eligible live-training providers.");
-requireMatch(materialGuide, /self-paced courses? may still come from any organization/i, "PMP material guide does not distinguish self-paced training.");
+const materialDateSplit = materialGuide.match(/<section\b[^>]*id="july-vs-december"[^>]*>([\s\S]*?)<\/section>/)?.[1] || "";
+const materialDateSplitText = materialDateSplit.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ");
+requireMatch(materialDateSplit, /<h2[^>]*>Did the PMP exam change in July or December 2026\?<\/h2>/, "PMP material guide is missing the July-versus-December clarification.");
+requireMatch(materialDateSplitText, /December 1, 2026[^.]{0,220}(?:live|instructor-led)[^.]{0,180}(?:does not|not)[^.]{0,100}(?:exam|exam format)/i, "PMP material guide does not limit the December date to live training rather than the exam.");
+requireMatch(materialDateSplitText, /eligible live training providers/i, "PMP material guide does not identify the affected training-provider route.");
+requireMatch(materialDateSplitText, /self-paced training remains a separate route/i, "PMP material guide does not distinguish the self-paced route.");
 requireMatch(materialGuide, /\.\/pmp-35-hour-training-rules-2026\.html/, "PMP material guide does not link the detailed training-rule guide.");
 requireMatch(materialGuide, /\.\/pmp-2026-exam-experience\.html/, "PMP material guide does not link the new exam experience guide.");
 requireMatch(capmMaterialGuide, /<h2>Build a resource-neutral CAPM study stack<\/h2>/, "CAPM material guide is missing the resource-neutral stack.");

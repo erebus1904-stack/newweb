@@ -31,7 +31,7 @@ export const seoPages = [
   { path: "guides/pmp-stakeholder-communication.html", lastmod: "2026-06-15", index: true, schema: ["Article", "BreadcrumbList"] },
   { path: "guides/pmp-scenario-patterns-foundation.html", lastmod: "2026-07-07", index: true, schema: ["Article", "BreadcrumbList"] },
   { path: "guides/pmp-vs-capm.html", lastmod: "2026-07-16", index: true, schema: ["Article", "BreadcrumbList"] },
-  { path: "guides/pmp-2026-exam-version.html", lastmod: "2026-09-01", index: true, schema: ["Article", "BreadcrumbList"] },
+  { path: "guides/pmp-2026-exam-version.html", lastmod: "2026-09-16", index: true, schema: ["Article", "BreadcrumbList"] },
   { path: "guides/pmp-2026-exam-experience.html", lastmod: "2026-09-09", index: true, schema: ["Article", "BreadcrumbList"] },
   { path: "guides/pmp-exam-breaks-40-70-70.html", lastmod: "2026-09-11", index: true, schema: ["Article", "BreadcrumbList"] },
   { path: "guides/pmp-application-without-project-manager-title.html", lastmod: "2026-09-10", index: true, schema: ["Article", "BreadcrumbList"] },

@@ -80,10 +80,18 @@ requireMatch(prepcast, /"@type": "BreadcrumbList"/, "PrepCast guide BreadcrumbLi
 requireMatch(prepcast, /"datePublished": "2026-09-01"/, "PrepCast guide publication date is missing.");
 requireNoMatch(prepcast, /"@type": "(?:FAQPage|Product|Offer)"/, "PrepCast guide uses unsupported FAQPage, Product, or Offer schema.");
 
-requireMatch(examVersion, /Starting (?:on )?December 1, 2026/i, "Existing PMP material guide still lacks the confirmed training date.");
 requireNoMatch(examVersion, /PMI has not announced the specific start date/i, "Existing PMP material guide still contains the outdated date warning.");
 requireMatch(examVersion, /\.\/pmp-35-hour-training-rules-2026\.html/, "Existing PMP material guide does not link the detailed training rule guide.");
-requireMatch(examVersion, /"dateModified": "2026-09-01"/, "Existing PMP material guide modification date is stale.");
+const dateSplit = examVersion.match(/<section\b[^>]*id="july-vs-december"[^>]*>([\s\S]*?)<\/section>/)?.[1] || "";
+const dateSplitText = dateSplit.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ");
+requireMatch(dateSplit, /<h2[^>]*>Did the PMP exam change in July or December 2026\?<\/h2>/, "PMP material guide needs a direct July-versus-December question.");
+requireMatch(dateSplitText, /July 2026[^.]{0,180}(?:exam|ECO)[^.]{0,180}December 1, 2026/i, "PMP material guide must put the two dates in one direct answer.");
+requireMatch(dateSplitText, /December 1, 2026[^.]{0,180}(?:live|instructor-led)[^.]{0,180}(?:does not|not)[^.]{0,100}(?:exam|exam format)/i, "December must be limited to the live-training rule, not the exam update.");
+requireMatch(dateSplit, /href="https:\/\/www\.pmi\.org\/certifications\/project-management-pmp\/new-exam"/, "Date comparison must cite the official PMI new-exam page beside the answer.");
+requireMatch(dateSplit, /href="\.\/pmp-35-hour-training-rules-2026\.html"/, "Date comparison must route detailed training questions to the existing guide.");
+requireMatch(examVersion, /"dateModified": "2026-09-16"/, "Existing PMP material guide modification date is stale.");
+requireMatch(examVersion, /Last reviewed: <time datetime="2026-09-16">September 16, 2026<\/time>/, "Existing PMP material guide visible review date is stale.");
+requireNoMatch(examVersion, /"@type": "FAQPage"/, "PMP material guide should not add FAQPage schema for this update.");
 
 requireMatch(examExperience, /cannot predict[^.]{0,180}(?:60%|60 percent)/i, "Exam experience guide does not combine the non-predictive warning with PMI's 60% observation.");
 requireMatch(examExperience, /most users[^.]{0,180}(?:60%|60 percent)[^.]{0,140}(?:successful|passed)/i, "Exam experience guide omits PMI's published 60% observation.");
@@ -104,10 +112,11 @@ for (const path of [trainingPath, prepcastPath]) {
 
 requireMatch(seoMap, /guides\/pmp-35-hour-training-rules-2026\.html", lastmod: "2026-09-15", index: true, schema: \["Article", "BreadcrumbList"\]/, "SEO map is missing the training guide.");
 requireMatch(seoMap, /guides\/pm-prepcast-closing-2026\.html", lastmod: "2026-09-01", index: true, schema: \["Article", "BreadcrumbList"\]/, "SEO map is missing the PrepCast guide.");
-requireMatch(seoMap, /guides\/pmp-2026-exam-version\.html", lastmod: "2026-09-01", index: true, schema: \["Article", "BreadcrumbList"\]/, "SEO map has a stale PMP material-guide date.");
+requireMatch(seoMap, /guides\/pmp-2026-exam-version\.html", lastmod: "2026-09-16", index: true, schema: \["Article", "BreadcrumbList"\]/, "SEO map has a stale PMP material-guide date.");
 requireMatch(seoMap, /guides\/pmp-2026-exam-experience\.html", lastmod: "2026-09-09", index: true, schema: \["Article", "BreadcrumbList"\]/, "SEO map has a stale PMP experience-guide date.");
 requireMatch(seoMap, /guides\/udemy-60-pmp-pdus-renewal\.html", lastmod: "2026-09-01", index: true, schema: \["Article", "BreadcrumbList"\]/, "SEO map has a stale PMP PDU-guide date.");
 requireMatch(sitemap, new RegExp(`<loc>${trainingUrl.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}</loc><lastmod>2026-09-15</lastmod>`), "Sitemap is missing the training guide.");
+requireMatch(sitemap, /<loc>https:\/\/starrycesium\.com\/guides\/pmp-2026-exam-version\.html<\/loc><lastmod>2026-09-16<\/lastmod>/, "Sitemap has a stale PMP material-guide date.");
 requireMatch(sitemap, new RegExp(`<loc>${prepcastUrl.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}</loc><lastmod>2026-09-01</lastmod>`), "Sitemap is missing the PrepCast guide.");
 
 if (failures.length) {

@@ -32,6 +32,7 @@ requirePattern(dailyReview, /unbranded/i, "GEO discovery prompts must not lead w
 requirePattern(dailyReview, /Exact cited URL/, "GEO observations must retain the actual cited URL");
 requirePattern(dailyReview, /not measured/i, "GEO observations must not invent a zero baseline");
 requirePattern(dailyReview, /URL-fed[^.]{0,120}(?:not|separate)/i, "GEO protocol must distinguish URL-fed checks from discovery");
+requirePattern(dailyReview, /When did the PMP exam change in 2026, and what changes on December 1, 2026\?/, "GEO protocol must include the July-versus-December discovery question");
 requirePattern(weeklyReview, /\.\.\/geo\/daily-seo-geo-review\.md/, "weekly review must link the daily SEO/GEO protocol");
 requirePattern(sourceRegister, /daily-seo-geo-review\.md/, "source register must link the daily SEO/GEO protocol");
 
@@ -60,8 +61,8 @@ const pages = [
   },
   {
     file: "guides/pmp-2026-exam-version.html",
-    reviewDate: "2026-09-01",
-    reviewLabel: "September 1, 2026",
+    reviewDate: "2026-09-16",
+    reviewLabel: "September 16, 2026",
     checks: [
       [/on or after July 9, 2026/i, "missing post-launch exam-date answer"],
       [/People[^<]*33%/i, "missing July 2026 People weighting"],

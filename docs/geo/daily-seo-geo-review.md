@@ -41,6 +41,7 @@ Version 1, September 15, 2026. These are unbranded English prompts: do not inclu
 | G04 | Can I post PMI Study Hall question screenshots online or upload them to an AI tool? | `guides/ai-pmp-capm-study-without-cheating.html` |
 | G05 | What should I do when an AI explanation disagrees with a PMI Study Hall answer? | `guides/ai-pmp-capm-study-without-cheating.html` |
 | G06 | How should I choose between a 30, 60, or 90-day PMP study plan? | `guides/pmp-study-plan.html` |
+| G07 | When did the PMP exam change in 2026, and what changes on December 1, 2026? | `guides/pmp-2026-exam-version.html` |
 
 ## Observation log
 
