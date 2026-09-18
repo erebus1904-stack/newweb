@@ -23,7 +23,7 @@ const officialSources = [
 ];
 
 check(html.includes(`<link rel="canonical" href="${publicUrl(path)}"`), "Keep the existing canonical URL.");
-check(html.includes("<title>How to Choose CAPM Study Materials | PassGrid</title>"), "Keep the established title.");
+check(html.includes("<title>CAPM Study Materials: Can a PMP Course Count? | PassGrid</title>"), "Keep CAPM study materials and the PMP-course question in the title.");
 check(/<section class="answer-first"/.test(body), "Add a visible answer-first section.");
 check(/Do you need PMBOK 8 for the CAPM exam\?/i.test(text), "Add the focused PMBOK 8 question.");
 check(/not found[^.]{0,160}(?:PMI requirement|mandatory)/i.test(text), "State the limit of the PMBOK 8 requirement evidence.");
