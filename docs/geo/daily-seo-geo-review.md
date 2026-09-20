@@ -43,8 +43,12 @@ Version 1, September 15, 2026. These are unbranded English prompts: do not inclu
 | G06 | How should I choose between a 30, 60, or 90-day PMP study plan? | `guides/pmp-study-plan.html` |
 | G07 | When did the PMP exam change in 2026, and what changes on December 1, 2026? | `guides/pmp-2026-exam-version.html` |
 | G08 | Can a PMP prep course count toward CAPM's 23 hours of project management education, and what may it miss? | `guides/capm-study-materials-plan.html` |
+| G09 | Do PMP project management experience requirements vary by education level, and how are overlapping months counted? | `guides/pmp-application-without-project-manager-title.html` |
+| G10 | How can I check the quality of AI-generated CAPM practice questions? | `guides/ai-pmp-capm-study-without-cheating.html` |
 
 September 18, 2026: added G08 version 1; G01-G07 wording and versions remain unchanged. This addition is not a discovery measurement.
+
+September 20, 2026: added G09 and G10 version 1; earlier prompts remain unchanged. No citation measurement was performed.
 
 ## Observation log
 

@@ -69,8 +69,8 @@ requireMatch(ai, /verify[^.]{0,100}official (?:PMI )?sources/i, "AI study guide 
 requireMatch(ai, /"@type": "Article"/, "AI study guide Article schema is missing.");
 requireMatch(ai, /"@type": "BreadcrumbList"/, "AI study guide BreadcrumbList schema is missing.");
 requireMatch(ai, /"datePublished": "2026-08-09"/, "AI study guide publication date is missing.");
-requireMatch(ai, /"dateModified": "2026-09-15"/, "AI study guide update date is missing.");
-requireMatch(ai, /Last reviewed: <time datetime="2026-09-15">September 15, 2026<\/time>/, "AI study guide visible date is stale.");
+requireMatch(ai, /"dateModified": "2026-09-20"/, "AI study guide update date is missing.");
+requireMatch(ai, /Last reviewed: <time datetime="2026-09-20">September 20, 2026<\/time>/, "AI study guide visible date is stale.");
 requireMatch(ai, /<section class="legal-section source-notes"/, "AI study guide source notes are missing.");
 requireMatch(ai, /<section class="legal-section related-guides"/, "AI study guide related links are missing.");
 const sharingSection = ai.match(/<section\b[^>]*id="sharing-practice-questions"[^>]*>([\s\S]*?)<\/section>/)?.[1] || "";
@@ -109,9 +109,9 @@ for (const path of [examPath, aiPath]) {
 
 requireMatch(capmHub, /\.\.\/guides\/ai-pmp-capm-study-without-cheating\.html/, "CAPM Hub does not link the AI study guide.");
 requireMatch(seoMap, /guides\/pmp-2026-exam-experience\.html", lastmod: "2026-09-09", index: true, schema: \["Article", "BreadcrumbList"\]/, "SEO map is missing the updated PMP exam experience page.");
-requireMatch(seoMap, /guides\/ai-pmp-capm-study-without-cheating\.html", lastmod: "2026-09-15", index: true, schema: \["Article", "BreadcrumbList"\]/, "SEO map is missing the AI study page.");
+requireMatch(seoMap, /guides\/ai-pmp-capm-study-without-cheating\.html", lastmod: "2026-09-20", index: true, schema: \["Article", "BreadcrumbList"\]/, "SEO map is missing the AI study page.");
 requireMatch(sitemap, new RegExp(`<loc>${examUrl.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}</loc><lastmod>2026-09-09</lastmod>`), "Sitemap is missing the updated PMP exam experience page.");
-requireMatch(sitemap, new RegExp(`<loc>${aiUrl.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}</loc><lastmod>2026-09-15</lastmod>`), "Sitemap is missing the AI study page.");
+requireMatch(sitemap, new RegExp(`<loc>${aiUrl.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}</loc><lastmod>2026-09-20</lastmod>`), "Sitemap is missing the AI study page.");
 
 if (failures.length) {
   failures.forEach((failure) => console.error(`FAIL ${failure}`));
