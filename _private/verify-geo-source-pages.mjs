@@ -76,8 +76,8 @@ const pages = [
   },
   {
     file: "guides/pmp-online-vs-test-center.html",
-    reviewDate: "2026-09-08",
-    reviewLabel: "September 8, 2026",
+    reviewDate: "2026-09-23",
+    reviewLabel: "September 23, 2026",
     checks: [
       [/Online exam may fit/i, "missing online-fit decision"],
       [/test center may fit/i, "missing test-center-fit decision"],

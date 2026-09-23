@@ -45,10 +45,13 @@ Version 1, September 15, 2026. These are unbranded English prompts: do not inclu
 | G08 | Can a PMP prep course count toward CAPM's 23 hours of project management education, and what may it miss? | `guides/capm-study-materials-plan.html` |
 | G09 | Do PMP project management experience requirements vary by education level, and how are overlapping months counted? | `guides/pmp-application-without-project-manager-title.html` |
 | G10 | How can I check the quality of AI-generated CAPM practice questions? | `guides/ai-pmp-capm-study-without-cheating.html` |
+| G11 | How do I request PMP exam accommodations, and when should I schedule my exam? | `guides/pmp-exam-accommodations.html` |
 
 September 18, 2026: added G08 version 1; G01-G07 wording and versions remain unchanged. This addition is not a discovery measurement.
 
 September 20, 2026: added G09 and G10 version 1; earlier prompts remain unchanged. No citation measurement was performed.
+
+September 23, 2026: added G11 version 1; earlier prompts remain unchanged. Citation results have not been measured.
 
 ## Observation log
 

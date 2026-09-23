@@ -20,7 +20,7 @@ requireMatch(html, /fictional example/i, "Original examples must be labeled as f
 requireMatch(html, /overlapping months[^.]{0,80}once/i, "Overlapping-month counting rule is missing.");
 requireMatch(html, /Five months, not seven/i, "The worked timeline example is missing.");
 requireMatch(html, /audit instructions/i, "The official audit-instructions boundary is missing.");
-requireMatch(html, /Last reviewed: <time datetime="2026-09-20">September 20, 2026<\/time>/, "Visible review date is missing.");
+requireMatch(html, /Last reviewed: <time datetime="2026-09-23">September 23, 2026<\/time>/, "Visible review date is missing.");
 requireMatch(html, /<figure class="article-visual"/, "The timeline visual is missing.");
 
 for (const source of [
@@ -45,14 +45,14 @@ for (const match of html.matchAll(/<script\b[^>]*type="application\/ld\+json"[^>
   }
 }
 const article = nodes.find((node) => node["@type"] === "Article");
-if (!article || article.url !== url || article.datePublished !== "2026-09-10" || article.dateModified !== "2026-09-20") {
+if (!article || article.url !== url || article.datePublished !== "2026-09-10" || article.dateModified !== "2026-09-23") {
   failures.push("Article identity or publication dates are incorrect.");
 }
 if (!nodes.some((node) => node["@type"] === "BreadcrumbList")) failures.push("BreadcrumbList is missing.");
 if (nodes.some((node) => ["FAQPage", "ClaimReview"].includes(node["@type"]))) failures.push("Do not add FAQPage or ClaimReview to this guide.");
 const page = seoPages.find((page) => page.path === path);
-if (!page?.index || page.lastmod !== "2026-09-20") failures.push("SEO map is missing the current indexable guide.");
-if (!read("sitemap.xml").includes(`<loc>${url}</loc><lastmod>2026-09-20</lastmod>`)) failures.push("Sitemap is missing the guide.");
+if (!page?.index || page.lastmod !== "2026-09-23") failures.push("SEO map is missing the current indexable guide.");
+if (!read("sitemap.xml").includes(`<loc>${url}</loc><lastmod>2026-09-23</lastmod>`)) failures.push("Sitemap is missing the guide.");
 if (!read("blog.html").includes(`href="./${path}"`)) failures.push("Blog discovery link is missing.");
 if (!read("programs/pmp.html").includes(`href="../${path}"`)) failures.push("PMP Hub discovery link is missing.");
 if (!read("_private/verify-long-guide-content.mjs").includes(`"${path}"`)) failures.push("Long-guide coverage is missing.");
