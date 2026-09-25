@@ -43,6 +43,9 @@ for (const swapped of [
 ]) check(!hasCurrentDomainWeights(swapped), `Domain-weight validator must reject swapped weights: ${swapped}`);
 for (const id of ["week-1", "week-2", "week-3", "week-4", "recovery-plan"]) check(body.includes(`id="${id}"`), `Missing milestone section ${id}.`);
 check(/Business Environment[^.]{0,260}(?:governance|compliance|value)/i.test(text), "Give Business Environment explicit task coverage.");
+const businessTasks = body.match(/<section class="legal-section"[^>]*id="business-environment-tasks"[\s\S]*?<\/section>/)?.[0] || "";
+check((businessTasks.match(/<tbody>[\s\S]*?<\/tbody>/)?.[0].match(/<tr>/g) || []).length === 8, "Map all eight Business Environment ECO tasks to diagnostics.");
+check(/Original practice scenario/.test(body) && /external regulation/i.test(text) && /change control/i.test(text), "Add an original Business Environment decision scenario.");
 check((text.match(/Checkpoint:/g) || []).length === 4, "Give each of the four weeks a checkpoint.");
 check(/180 questions[^.]{0,80}240 minutes/i.test(text), "Include current full-length practice totals.");
 check(/first week[^.]{0,130}(?:Study Hall|practice)/i.test(text), "Explain early practice rather than waiting until all learning is complete.");
