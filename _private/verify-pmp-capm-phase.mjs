@@ -37,6 +37,14 @@ if (pmp) {
 }
 
 expect(existsSync("programs/capm.html"), "CAPM program page exists");
+const capmHub = read("programs/capm.html");
+const capmReview = read("guides/capm-mistake-review-method.html");
+const retakeSection = capmHub.match(/<section\b[^>]*id="capm-retake"[^>]*>[\s\S]*?<\/section>/)?.[0] || "";
+expect(/three attempts/i.test(retakeSection) && /one-year eligibility period/i.test(retakeSection), "CAPM retake section explains the attempt limit and eligibility window");
+expect(/one year from (?:the date of )?(?:your )?last exam/i.test(retakeSection), "CAPM retake section explains the wait after three failed attempts");
+expect(/reapply/i.test(retakeSection) && /expires/i.test(retakeSection), "CAPM retake section explains expired eligibility");
+expect(retakeSection.includes("https://www.pmi.org/-/media/pmi/documents/public/pdf/certifications/capm-exam-content-outline-english.pdf"), "CAPM retake section cites the official ECO");
+expect(capmReview.includes("../programs/capm.html#capm-retake"), "CAPM mistake guide links to retake rules");
 
 const home = read("index.html");
 const pmpCenter = read("programs/pmp.html");

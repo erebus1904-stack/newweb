@@ -19,7 +19,7 @@ export const seoPages = [
   { path: "privacy.html", lastmod: "2026-07-04", index: true, schema: [] },
   { path: "terms.html", lastmod: "2026-07-04", index: true, schema: [] },
   { path: "programs/pmp.html", lastmod: "2026-09-23", index: true, schema: ["LearningResource", "BreadcrumbList", "ItemList"] },
-  { path: "programs/capm.html", lastmod: "2026-09-01", index: true, schema: ["LearningResource", "BreadcrumbList", "ItemList"] },
+  { path: "programs/capm.html", lastmod: "2026-09-26", index: true, schema: ["LearningResource", "BreadcrumbList", "ItemList"] },
   { path: "programs/pmp-chapter-practice.html", lastmod: "2026-07-06", index: true, schema: ["LearningResource", "BreadcrumbList", "ItemList"] },
   { path: "drill.html", lastmod: "2026-07-04", index: false, schema: [] },
   { path: "guides/pmp-study-plan.html", lastmod: "2026-09-25", index: true, schema: ["Article", "BreadcrumbList"] },
@@ -36,7 +36,7 @@ export const seoPages = [
   { path: "guides/pmp-exam-breaks-40-70-70.html", lastmod: "2026-09-25", index: true, schema: ["Article", "BreadcrumbList"] },
   { path: "guides/pmp-application-without-project-manager-title.html", lastmod: "2026-09-23", index: true, schema: ["Article", "BreadcrumbList"] },
   { path: "guides/pmp-exam-accommodations.html", lastmod: "2026-09-23", index: true, schema: ["Article", "BreadcrumbList"] },
-  { path: "guides/pmp-35-hour-training-rules-2026.html", lastmod: "2026-09-15", index: true, schema: ["Article", "BreadcrumbList"] },
+  { path: "guides/pmp-35-hour-training-rules-2026.html", lastmod: "2026-09-26", index: true, schema: ["Article", "BreadcrumbList"] },
   { path: "guides/pm-prepcast-closing-2026.html", lastmod: "2026-09-01", index: true, schema: ["Article", "BreadcrumbList"] },
   { path: "guides/ai-pmp-capm-study-without-cheating.html", lastmod: "2026-09-20", index: true, schema: ["Article", "BreadcrumbList"] },
   { path: "guides/pmp-exam-retake-protection.html", lastmod: "2026-08-28", index: true, schema: ["Article", "BreadcrumbList"] },
@@ -56,7 +56,7 @@ export const seoPages = [
   { path: "guides/capm-business-analysis-study.html", lastmod: "2026-06-17", index: true, schema: ["Article", "BreadcrumbList"] },
   { path: "guides/capm-next-step-scenario-questions.html", lastmod: "2026-06-18", index: true, schema: ["Article", "BreadcrumbList"] },
   { path: "guides/capm-study-materials-plan.html", lastmod: "2026-09-18", index: true, schema: ["Article", "BreadcrumbList"] },
-  { path: "guides/capm-mistake-review-method.html", lastmod: "2026-06-23", index: true, schema: ["Article", "BreadcrumbList"] },
+  { path: "guides/capm-mistake-review-method.html", lastmod: "2026-09-26", index: true, schema: ["Article", "BreadcrumbList"] },
   { path: "guides/capm-online-vs-test-center.html", lastmod: "2026-08-03", index: true, schema: ["Article", "BreadcrumbList"] },
   { path: "guides/capm-to-pmp-study-bridge.html", lastmod: "2026-06-29", index: true, schema: ["Article", "BreadcrumbList"] }
 ];
