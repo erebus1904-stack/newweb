@@ -55,7 +55,7 @@ export const seoPages = [
   { path: "guides/capm-agile-scrum-kanban.html", lastmod: "2026-06-16", index: true, schema: ["Article", "BreadcrumbList"] },
   { path: "guides/capm-business-analysis-study.html", lastmod: "2026-06-17", index: true, schema: ["Article", "BreadcrumbList"] },
   { path: "guides/capm-next-step-scenario-questions.html", lastmod: "2026-06-18", index: true, schema: ["Article", "BreadcrumbList"] },
-  { path: "guides/capm-study-materials-plan.html", lastmod: "2026-09-18", index: true, schema: ["Article", "BreadcrumbList"] },
+  { path: "guides/capm-study-materials-plan.html", lastmod: "2026-09-30", index: true, schema: ["Article", "BreadcrumbList"] },
   { path: "guides/capm-mistake-review-method.html", lastmod: "2026-09-26", index: true, schema: ["Article", "BreadcrumbList"] },
   { path: "guides/capm-online-vs-test-center.html", lastmod: "2026-08-03", index: true, schema: ["Article", "BreadcrumbList"] },
   { path: "guides/capm-to-pmp-study-bridge.html", lastmod: "2026-06-29", index: true, schema: ["Article", "BreadcrumbList"] }

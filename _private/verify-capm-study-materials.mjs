@@ -31,6 +31,15 @@ check(/Seventh Edition[^.]{0,200}reference/i.test(text), "Identify PMBOK Seventh
 check(/not require[^.]{0,100}every book/i.test(text), "Explain that reading every listed book is not required.");
 check(/does not mean[^.]{0,150}must buy[^.]{0,100}Seventh Edition/i.test(text), "Do not replace a supposed Eighth Edition mandate with a Seventh Edition purchase mandate.");
 check(/ECO, reference books, and education hours/i.test(text), "Distinguish scope, references, and education.");
+const universitySection = html.match(/<section class="legal-section" id="university-course-hours">([\s\S]*?)<\/section>/)?.[1] || "";
+const universityText = universitySection.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ");
+check(/Can university courses count toward CAPM's 23 education hours\?/i.test(universityText), "Add a direct answer to the university-course question.");
+check(/university\/college academic and continuing education programs/i.test(universityText), "Name the provider category listed in the CAPM ECO.");
+check(/23 hours of specific project management instruction/i.test(universityText), "Count qualifying instruction, not total course duration.");
+check(/60-hour course[^.]{0,150}not automatically/i.test(universityText), "Explain why a 60-hour course is not automatically eligible.");
+check(/completed by the time of the exam/i.test(universityText), "Preserve the CAPM ECO completion deadline.");
+check(/syllabus/i.test(universityText) && /completion record/i.test(universityText), "List evidence to retain for a university course.");
+check(universitySection.includes('href="https://www.pmi.org/-/media/pmi/documents/public/pdf/certifications/capm-exam-content-outline-english.pdf"'), "Cite the PMI ECO beside the university-course answer.");
 for (const weight of ["36%", "17%", "20%", "27%"]) {
   check(text.includes(weight), `Missing current CAPM domain weight ${weight}.`);
 }
