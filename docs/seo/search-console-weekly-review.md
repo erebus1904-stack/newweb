@@ -2,6 +2,12 @@
 
 Use this checklist once per week after the PMP prompt and practice pages have been indexed. The goal is to turn Search Console data into specific page updates, not to collect metrics without action.
 
+## GEO Companion Review
+
+Use the [daily SEO and GEO protocol](../geo/daily-seo-geo-review.md) for every assessment of user-provided monitoring. Include GEO citation value and a reasoned update/hold decision even when there is no new policy. This is not an unattended scheduled task.
+
+During a weekly review, keep fixed-question AI citation observations separate from Search Console and analytics. Record actual cited URLs, accuracy, platform conditions, and evidence in the protocol's observation log. Until measured, leave the baseline as "not measured". Confirm deployment and indexing before judging local content edits. Google AI-feature performance is included in Web results, not a separate GEO total in this checklist.
+
 ## Review Date
 
 - Week reviewed:
