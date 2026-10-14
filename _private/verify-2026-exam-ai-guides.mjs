@@ -42,6 +42,8 @@ requireMatch(exam, /first scheduled break follows the case-study section/i, "PMP
 requireMatch(exam, /second break occurs roughly midway/i, "PMP exam experience does not explain the second break.");
 requireMatch(exam, /candidate reports? (?:are|is) not representative/i, "PMP exam experience does not limit candidate-report claims.");
 requireMatch(exam, /no official (?:Study Hall )?(?:passing|safe )?score threshold/i, "PMP exam experience does not reject an unofficial Study Hall cutoff.");
+requireMatch(exam, /scores? from different (?:practice )?providers?[^.]{0,120}(?:not directly comparable|cannot be directly compared)/i, "The guide must warn against cross-provider score conversion.");
+requireMatch(exam, /first attempt[^.]{0,180}(?:repeat|retake)[^.]{0,180}(?:timed|timing)|(?:repeat|retake)[^.]{0,180}first attempt[^.]{0,180}(?:timed|timing)/i, "The score-comparison checklist must distinguish first attempts, repeats, and timing.");
 requireMatch(exam, /<h2>Is PMI Study Hall aligned with the new 2026 PMP exam\?<\/h2>/, "PMP exam experience is missing the current Study Hall alignment question.");
 requireMatch(exam, /Essentials[^.]{0,220}(?:before 8 July 2026|before July 9, 2026)/i, "PMP exam experience does not identify the legacy Essentials product wording.");
 requireMatch(exam, /Study Hall Plus[^.]{0,220}(?:aligned with|aligned to)[^.]{0,100}(?:2026|Exam Content Outline|ECO)/i, "PMP exam experience does not identify the new-exam Plus product wording.");
@@ -50,8 +52,8 @@ requireMatch(exam, /(?:PMI has not|There is no public)[^.]{0,220}(?:September 4|
 requireMatch(exam, /"@type": "Article"/, "PMP exam experience Article schema is missing.");
 requireMatch(exam, /"@type": "BreadcrumbList"/, "PMP exam experience BreadcrumbList schema is missing.");
 requireMatch(exam, /"datePublished": "2026-08-09"/, "PMP exam experience publication date is missing.");
-requireMatch(exam, /"dateModified": "2026-09-29"/, "PMP exam experience update date is missing.");
-requireMatch(exam, /Last reviewed: <time datetime="2026-09-29">September 29, 2026<\/time>/, "PMP exam experience visible review date is missing.");
+requireMatch(exam, /"dateModified": "2026-10-14"/, "PMP exam experience update date is missing.");
+requireMatch(exam, /Last reviewed: <time datetime="2026-10-14">October 14, 2026<\/time>/, "PMP exam experience visible review date is missing.");
 if (/"@type": "FAQPage"/.test(exam)) failures.push("PMP exam experience should not use FAQPage schema.");
 requireMatch(exam, /<section class="legal-section source-notes"/, "PMP exam experience source notes are missing.");
 requireMatch(exam, /<section class="legal-section related-guides"/, "PMP exam experience related links are missing.");
@@ -108,9 +110,9 @@ for (const path of [examPath, aiPath]) {
 }
 
 requireMatch(capmHub, /\.\.\/guides\/ai-pmp-capm-study-without-cheating\.html/, "CAPM Hub does not link the AI study guide.");
-requireMatch(seoMap, /guides\/pmp-2026-exam-experience\.html", lastmod: "2026-09-29", index: true, schema: \["Article", "BreadcrumbList"\]/, "SEO map is missing the updated PMP exam experience page.");
+requireMatch(seoMap, /guides\/pmp-2026-exam-experience\.html", lastmod: "2026-10-14", index: true, schema: \["Article", "BreadcrumbList"\]/, "SEO map is missing the updated PMP exam experience page.");
 requireMatch(seoMap, /guides\/ai-pmp-capm-study-without-cheating\.html", lastmod: "2026-09-20", index: true, schema: \["Article", "BreadcrumbList"\]/, "SEO map is missing the AI study page.");
-requireMatch(sitemap, new RegExp(`<loc>${examUrl.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}</loc><lastmod>2026-09-29</lastmod>`), "Sitemap is missing the updated PMP exam experience page.");
+requireMatch(sitemap, new RegExp(`<loc>${examUrl.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}</loc><lastmod>2026-10-14</lastmod>`), "Sitemap is missing the updated PMP exam experience page.");
 requireMatch(sitemap, new RegExp(`<loc>${aiUrl.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}</loc><lastmod>2026-09-20</lastmod>`), "Sitemap is missing the AI study page.");
 
 if (failures.length) {
