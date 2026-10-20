@@ -20,6 +20,21 @@ const sitemap = readRequired("sitemap.xml");
 const blog = readRequired("blog.html");
 const pmpHub = readRequired("programs/pmp.html");
 const capmHub = readRequired("programs/capm.html");
+const dailyReview = readRequired("docs/geo/daily-seo-geo-review.md");
+const weeklyReview = readRequired("docs/seo/search-console-weekly-review.md");
+
+for (const heading of ["Daily report", "Fixed discovery questions", "Observation log", "Measurement limits"]) {
+  requirePattern(dailyReview, new RegExp(`^## ${heading}$`, "m"), `daily GEO protocol missing ${heading}`);
+}
+requirePattern(dailyReview, /user-supplied daily monitoring/i, "daily GEO protocol must define the user-supplied trigger");
+requirePattern(dailyReview, /Chinese/i, "daily SEO and GEO assessments must be in Chinese");
+requirePattern(dailyReview, /unbranded/i, "GEO discovery prompts must not lead with the site brand");
+requirePattern(dailyReview, /Exact cited URL/, "GEO observations must retain the actual cited URL");
+requirePattern(dailyReview, /not measured/i, "GEO observations must not invent a zero baseline");
+requirePattern(dailyReview, /URL-fed[^.]{0,120}(?:not|separate)/i, "GEO protocol must distinguish URL-fed checks from discovery");
+requirePattern(dailyReview, /When did the PMP exam change in 2026, and what changes on December 1, 2026\?/, "GEO protocol must include the July-versus-December discovery question");
+requirePattern(weeklyReview, /\.\.\/geo\/daily-seo-geo-review\.md/, "weekly review must link the daily SEO/GEO protocol");
+requirePattern(sourceRegister, /daily-seo-geo-review\.md/, "source register must link the daily SEO/GEO protocol");
 
 for (const sourceId of [
   "PMI-PMP-CERT",
@@ -46,8 +61,8 @@ const pages = [
   },
   {
     file: "guides/pmp-2026-exam-version.html",
-    reviewDate: "2026-09-01",
-    reviewLabel: "September 1, 2026",
+    reviewDate: "2026-09-16",
+    reviewLabel: "September 16, 2026",
     checks: [
       [/on or after July 9, 2026/i, "missing post-launch exam-date answer"],
       [/People[^<]*33%/i, "missing July 2026 People weighting"],
@@ -61,13 +76,18 @@ const pages = [
   },
   {
     file: "guides/pmp-online-vs-test-center.html",
-    reviewDate: "2026-09-08",
-    reviewLabel: "September 8, 2026",
+    reviewDate: "2026-10-20",
+    reviewLabel: "October 20, 2026",
     checks: [
       [/Online exam may fit/i, "missing online-fit decision"],
       [/test center may fit/i, "missing test-center-fit decision"],
       [/Pearson VUE/i, "missing Pearson VUE attribution"],
       [/system test/i, "missing official system-test check"],
+      [/id="test-center-check-in"/, "missing test-center check-in section"],
+      [/PMI Eligibility ID/, "missing PMI Eligibility ID requirement"],
+      [/confirmation number[^.]{0,100}may be requested/i, "missing conditional appointment confirmation detail"],
+      [/(?:does not list|do not list)[^.]{0,100}work email/i, "missing bounded work-email answer"],
+      [/href="https:\/\/www\.pmi\.org\/-\/media\/pmi\/documents\/public\/pdf\/certifications\/generic-certification-handbook\.pdf"/, "missing visible PMI handbook source"],
       [/href="https:\/\/www\.pearsonvue\.com\/us\/en\/pmi\/onvue\.html"/, "missing program-specific OnVUE source"]
     ]
   }

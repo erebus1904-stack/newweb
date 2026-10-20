@@ -35,7 +35,11 @@ requireMatch(article, /Not publicly confirmed/, "Article does not label open que
 requireMatch(article, /Community debate/, "Article does not separate community opinion from facts.");
 requireMatch(article, /My view: the PMP is likely to be affected/i, "Article does not state the requested editorial position.");
 requireMatch(article, /What would change this view/i, "Article does not explain what future evidence could change its conclusion.");
-requireMatch(article, /Last reviewed:\s*<time datetime="2026-09-08">September 8, 2026<\/time>/, "Visible review date is missing.");
+requireMatch(article, /Last reviewed:\s*<time datetime="2026-09-10">September 10, 2026<\/time>/, "Visible review date is missing.");
+requireMatch(article, /at least two user self-reports, not two verified pilot accounts/i, "APL reports must not be described as verified pilot accounts.");
+requireMatch(article, /second user[^.]{0,150}error/i, "APL application-error report is missing.");
+requireMatch(article, /has not publicly launched APL or confirmed its connection/i, "APL launch and identity boundary is missing.");
+if (/Single-user dashboard report|"@type": "ClaimReview"/.test(article)) failures.push("APL evidence count or schema is incorrect.");
 requireMatch(article, /https:\/\/www\.pmi\.org\/whats-next/, "Official PMI source is missing.");
 requireMatch(article, /https:\/\/www\.pmi\.org\/certifications/, "Official PMI certification catalog source is missing.");
 requireMatch(article, /https:\/\/www\.reddit\.com\/r\/pmp\/comments\/1oxzv2j\/not_a_fan_of_the_new_pmp_advanced_certification\//, "Reddit discussion source is missing.");
@@ -44,7 +48,7 @@ requireMatch(article, /https:\/\/www\.reddit\.com\/r\/pmp\/comments\/1w82gjk\/ad
 requireMatch(article, /"@type": "Article"/, "Article JSON-LD is missing.");
 requireMatch(article, /"@type": "BreadcrumbList"/, "BreadcrumbList JSON-LD is missing.");
 requireMatch(article, /"datePublished": "2026-08-04"/, "Article publication date is missing from JSON-LD.");
-requireMatch(article, /"dateModified": "2026-09-08"/, "Article modification date is missing from JSON-LD.");
+requireMatch(article, /"dateModified": "2026-09-10"/, "Article modification date is missing from JSON-LD.");
 requireMatch(article, /Frequently asked questions/, "Visible FAQ section is missing.");
 requireMatch(article, /Update log/, "Visible update log is missing.");
 if (/"@type": "FAQPage"/.test(article)) failures.push("Article must not use FAQPage structured data.");
@@ -55,8 +59,8 @@ requireMatch(article, /<section class="legal-section related-guides"/, "Related 
 
 requireMatch(blog, /\.\/guides\/pmi-advanced-certification-pmp-impact\.html/, "Blog does not link the article.");
 requireMatch(pmpHub, /\.\.\/guides\/pmi-advanced-certification-pmp-impact\.html/, "PMP Hub does not link the article.");
-requireMatch(seoMap, /guides\/pmi-advanced-certification-pmp-impact\.html", lastmod: "2026-09-08", index: true, schema: \["Article", "BreadcrumbList"\]/, "SEO page map entry is missing.");
-requireMatch(sitemap, new RegExp(`<loc>${publicUrl.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}</loc><lastmod>2026-09-08</lastmod>`), "Sitemap entry is missing or stale.");
+requireMatch(seoMap, /guides\/pmi-advanced-certification-pmp-impact\.html", lastmod: "2026-09-10", index: true, schema: \["Article", "BreadcrumbList"\]/, "SEO page map entry is missing.");
+requireMatch(sitemap, new RegExp(`<loc>${publicUrl.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}</loc><lastmod>2026-09-10</lastmod>`), "Sitemap entry is missing or stale.");
 
 if (failures.length) {
   failures.forEach((failure) => console.error(`FAIL ${failure}`));
