@@ -76,13 +76,18 @@ const pages = [
   },
   {
     file: "guides/pmp-online-vs-test-center.html",
-    reviewDate: "2026-09-23",
-    reviewLabel: "September 23, 2026",
+    reviewDate: "2026-10-20",
+    reviewLabel: "October 20, 2026",
     checks: [
       [/Online exam may fit/i, "missing online-fit decision"],
       [/test center may fit/i, "missing test-center-fit decision"],
       [/Pearson VUE/i, "missing Pearson VUE attribution"],
       [/system test/i, "missing official system-test check"],
+      [/id="test-center-check-in"/, "missing test-center check-in section"],
+      [/PMI Eligibility ID/, "missing PMI Eligibility ID requirement"],
+      [/confirmation number[^.]{0,100}may be requested/i, "missing conditional appointment confirmation detail"],
+      [/(?:does not list|do not list)[^.]{0,100}work email/i, "missing bounded work-email answer"],
+      [/href="https:\/\/www\.pmi\.org\/-\/media\/pmi\/documents\/public\/pdf\/certifications\/generic-certification-handbook\.pdf"/, "missing visible PMI handbook source"],
       [/href="https:\/\/www\.pearsonvue\.com\/us\/en\/pmi\/onvue\.html"/, "missing program-specific OnVUE source"]
     ]
   }

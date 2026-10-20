@@ -43,7 +43,7 @@ export const seoPages = [
   { path: "guides/pmp-exam-dumps-security.html", lastmod: "2026-09-14", index: true, schema: ["Article", "BreadcrumbList"] },
   { path: "guides/pmi-advanced-certification-pmp-impact.html", lastmod: "2026-09-10", index: true, schema: ["Article", "BreadcrumbList"] },
   { path: "guides/udemy-60-pmp-pdus-renewal.html", lastmod: "2026-09-01", index: true, schema: ["Article", "BreadcrumbList"] },
-  { path: "guides/pmp-online-vs-test-center.html", lastmod: "2026-09-23", index: true, schema: ["Article", "BreadcrumbList"] },
+  { path: "guides/pmp-online-vs-test-center.html", lastmod: "2026-10-20", index: true, schema: ["Article", "BreadcrumbList"] },
   { path: "guides/pmp-next-best-action.html", lastmod: "2026-06-15", index: true, schema: ["Article", "BreadcrumbList"] },
   { path: "guides/pmp-delivery-approaches.html", lastmod: "2026-06-15", index: true, schema: ["Article", "BreadcrumbList"] },
   { path: "guides/pmp-agile-roles.html", lastmod: "2026-06-15", index: true, schema: ["Article", "BreadcrumbList"] },
